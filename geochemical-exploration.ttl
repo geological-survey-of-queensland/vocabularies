@@ -1,0 +1,85 @@
+@prefix : <http://test.linked.data.gov.au/def/gsq-geochemical-exploration#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://test.linked.data.gov.au/def/gsq-geochemical-exploration> a owl:Ontology .
+
+:ConceptScheme a skos:ConceptScheme;
+  dct:created "2019-02-06T11:07:20.065+10:00"^^xsd:dateTime;
+  skos:prefLabel "GSQ Geochemical Exploration Keywords"@en .
+
+:Sampling a skos:Concept;
+  dct:created "2019-02-06T11:07:42.981+10:00"^^xsd:dateTime;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Sampling"@en;
+  skos:topConceptOf :GSQ_Geochemical_Exploration_Keywords .
+
+:Bulk_Sampling a skos:Concept;
+  dct:created "2019-02-06T11:08:00.958+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Bulk Sampling"@en .
+
+:Gas_Sampling a skos:Concept;
+  dct:created "2019-02-06T11:08:17.443+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Gas Sampling"@en .
+
+:Grab_Sampling a skos:Concept;
+  dct:created "2019-02-06T11:08:29.653+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Grab Sampling"@en .
+
+:Ground_Water_Sampling a skos:Concept;
+  dct:created "2019-02-06T11:08:48.581+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Ground Water Sampling"@en .
+
+:Heavy_Mineral_Sampling a skos:Concept;
+  dct:created "2019-02-06T11:09:06.078+10:00"^^xsd:dateTime;
+  dct:modified "2019-02-06T11:09:55.613+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Heavy Mineral Sampling"@en .
+
+:Panning a skos:Concept;
+  dct:created "2019-02-06T11:09:20.293+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Panning"@en .
+
+:Rock_Chip_Sampling a skos:Concept;
+  dct:created "2019-02-06T11:09:35.149+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Rock Chip Sampling"@en .
+
+:Soil_Sampling a skos:Concept;
+  dct:created "2019-02-06T11:10:18.955+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Soil Sampling"@en .
+
+:Stream_Sampling a skos:Concept;
+  dct:created "2019-02-06T11:10:27.127+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Stream Sampling"@en .
+
+:Stream_Sediment_Sampling a skos:Concept;
+  dct:created "2019-02-06T11:10:39.894+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Stream Sediment Sampling"@en .
+
+:Tailings_Sampling a skos:Concept;
+  dct:created "2019-02-06T11:11:00.288+10:00"^^xsd:dateTime;
+  skos:broader :Sampling;
+  skos:inScheme :GSQ_Geochemical_Exploration_Keywords;
+  skos:prefLabel "Tailings Sampling"@en .
