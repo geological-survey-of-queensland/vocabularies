@@ -30,11 +30,11 @@ This code repository's content are licensed under the [Creative Commons Attribut
 
 ## Contacts
 *Vocabularies owner*:  
-**David Crosswell**  
+**Mark Gordon**  
 Geological Survey of Quensland  
 Department of Natural Resources, Mines and Energy  
 Brisbane, QLD, Australia  
-<david.crosswell@dnrme.qld.gov.au>  
+<mark.gordon@dnrme.qld.gov.au>  
 
 
 *Vocabulary collector*:  
