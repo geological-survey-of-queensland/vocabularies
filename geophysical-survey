@@ -1,0 +1,72 @@
+@prefix : <http://test.linked.data.gov.au/def/gsq-geophysical-survey#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://test.linked.data.gov.au/def/gsq-geophysical-survey> a owl:Ontology .
+
+:ConceptScheme a skos:ConceptScheme;
+  dct:created "2019-02-06T10:44:40.696+10:00"^^xsd:dateTime;
+  skos:prefLabel "GSQ Geophysical Surveys Keywords"@en .
+
+:Data_Processing a skos:Concept;
+  dct:created "2019-02-06T10:44:57.750+10:00"^^xsd:dateTime;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "Data Processing"@en;
+  skos:topConceptOf :ConceptScheme .
+
+:Geophysical_Interpretation a skos:Concept;
+  dct:created "2019-02-06T10:46:00.160+10:00"^^xsd:dateTime;
+  skos:broader :Data_Processing;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "Geophysical Interpretation"@en .
+
+:Geophysical_Logs a skos:Concept;
+  dct:created "2019-02-06T10:46:13.424+10:00"^^xsd:dateTime;
+  skos:broader :Data_Processing;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "Geophysical Logs"@en .
+
+:Reinterpretation a skos:Concept;
+  dct:created "2019-02-06T10:52:55.895+10:00"^^xsd:dateTime;
+  skos:broader :Data_Processing;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "Reinterpretation"@en .
+
+:Seismic_Reflection_Methods a skos:Concept;
+  dct:created "2019-02-06T10:53:26.186+10:00"^^xsd:dateTime;
+  skos:broader :Data_Processing;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "Seismic Reflection Methods"@en .
+
+:Seismic_Refraction_Methods a skos:Concept;
+  dct:created "2019-02-06T10:53:38.729+10:00"^^xsd:dateTime;
+  skos:broader :Data_Processing;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "Seismic Refraction Methods"@en .
+
+:EM_Surveys a skos:Concept;
+  dct:created "2019-02-06T10:53:56.000+10:00"^^xsd:dateTime;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "EM Surveys"@en;
+  skos:topConceptOf :ConceptScheme .
+
+:Afmag_Surveys a skos:Concept;
+  dct:created "2019-02-06T10:54:11.900+10:00"^^xsd:dateTime;
+  skos:broader :EM_Surveys;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "Afmag Surveys"@en .
+
+:Transient_EM_Surveys a skos:Concept;
+  dct:created "2019-02-06T10:54:25.021+10:00"^^xsd:dateTime;
+  skos:broader :EM_Surveys;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "Transient EM Surveys"@en .
+
+:VLF_EM_Surveys a skos:Concept;
+  dct:created "2019-02-06T10:54:36.043+10:00"^^xsd:dateTime;
+  skos:broader :EM_Surveys;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "VLF EM Surveys"@en .
