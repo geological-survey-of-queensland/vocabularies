@@ -1,4 +1,5 @@
 # GSQ Vocabularies
+## Description
 A collection of GSQ's vocabularies, formulated using SKOS, seriealised as RDF (turtle) files.
 
 These are the source files for GSQ's vocabularies. The vocabularies appear online at their namespace locations which are given in their data, for example the vocab "GSQ Geophysical Surveys" has the following content:
