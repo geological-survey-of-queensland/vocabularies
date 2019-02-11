@@ -1,18 +1,12 @@
-@prefix : <http://linked.data.gov.au/def/gsq-method-type#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix : <http://test.linked.data.gov.au/def/gsq-method-type#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
-@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://test.linked.data.gov.au/def/gsq-method-type> a owl:Ontology .
 
-:GSQ_Method_Type> a skos:ConceptScheme;
+:ConceptScheme a skos:ConceptScheme;
   dct:created "2019-01-29T20:54:26.064+10:00"^^xsd:dateTime;
   skos:prefLabel "GSQ Method Type"@en .
 
@@ -380,13 +374,13 @@
   skos:inScheme :ConceptScheme;
   skos:prefLabel "Repeat Formation Test"@en .
 
-:Drilling> dct:modified "2019-01-30T12:52:16.623+10:00"^^xsd:dateTime;
+:Drilling dct:modified "2019-01-30T12:52:16.623+10:00"^^xsd:dateTime;
   skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod/drilling> .
 
-:Auger_Drilling> dct:modified "2019-01-30T12:54:33.006+10:00"^^xsd:dateTime;
+:Auger_Drilling dct:modified "2019-01-30T12:54:33.006+10:00"^^xsd:dateTime;
   skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod/auger> .
 
-:Percussion_Drilling> skos:exactMatch
+:Percussion_Drilling skos:exactMatch
     <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod/percussion_drilling> .
 
 :Specimen_Collection a skos:Concept;
