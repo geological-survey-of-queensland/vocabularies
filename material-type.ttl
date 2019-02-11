@@ -1,0 +1,20 @@
+@prefix : <http://linked.data.gov.au/def/gsq-material-type#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/gsq-material-type> a owl:Ontology .
+
+:ConceptScheme a skos:ConceptScheme;
+  dct:created "2019-01-29T21:31:06.562+10:00"^^xsd:dateTime;
+  skos:prefLabel "GSQ Material Type"@en .
+
+:Rock a skos:Concept;
+  dct:created "2019-01-29T21:31:20.404+10:00"^^xsd:dateTime;
+  dct:modified "2019-01-30T12:07:02.907+10:00"^^xsd:dateTime;
+  skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/rock>;
+  skos:inScheme :GSQ_Material_Type;
+  skos:prefLabel "Rock"@en;
+  skos:topConceptOf :ConceptScheme .
