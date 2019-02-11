@@ -1,0 +1,132 @@
+@prefix : <http://test.linked.data.gov.au/def/test-rock-types/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://test.linked.data.gov.au/def/test-rock-types> a owl:Ontology .
+
+:anorthosite a skos:Concept;
+  dct:created "2018-12-16T20:58:59.703+10:00"^^xsd:dateTime;
+  skos:broader :igneous;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Anorthosite"@en .
+
+:aplite a skos:Concept;
+  dct:created "2018-12-16T20:59:13.592+10:00"^^xsd:dateTime;
+  skos:broader :igneous;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Aplite"@en .
+
+:basalt a skos:Concept;
+  dct:created "2018-12-16T20:59:31.063+10:00"^^xsd:dateTime;
+  skos:broader :igneous;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Basalt"@en .
+
+:pahoehoe a skos:Concept;
+  dct:created "2018-12-16T21:00:12.356+10:00"^^xsd:dateTime;
+  skos:broader :basalt;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Pahoehoe"@en .
+
+:igneous a skos:Concept;
+  dct:created "2018-12-16T20:57:08.764+10:00"^^xsd:dateTime;
+  dct:modified "2018-12-20T10:41:23.106+10:00"^^xsd:dateTime;
+  skos:definition "Igneous rock (derived from the Latin word igneus, meaning of fire, from ignis meaning fire) is formed through the cooling and solidification of magma or lava"@en;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "igneous"@en;
+  skos:topConceptOf :conceptScheme .
+
+:conceptScheme a skos:ConceptScheme;
+  dct:created "2018-12-16T20:56:11.415+10:00"^^xsd:dateTime;
+  dct:modified "2018-12-19T10:40:39.204+10:00"^^xsd:dateTime;
+  dct:source "https://en.wikipedia.org/wiki/Rock_(geology)"^^xsd:anyURI;
+  skos:prefLabel "Test Rock Types Concept Scheme"@en .
+
+:metamorphic a skos:Concept;
+  dct:created "2018-12-16T20:57:23.137+10:00"^^xsd:dateTime;
+  dct:modified "2018-12-20T10:42:29.784+10:00"^^xsd:dateTime;
+  skos:definition "Metamorphic rocks are formed by subjecting any rock typeâ€”sedimentary rock, igneous rock or another older metamorphic rockâ€”to different temperature and pressure conditions than those in which the original rock was formed."@en;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "metamorphic"@en;
+  skos:topConceptOf :conceptScheme .
+
+:sedimentary a skos:Concept;
+  dct:created "2018-12-16T20:57:55.662+10:00"^^xsd:dateTime;
+  dct:modified "2018-12-19T17:18:54.294+10:00"^^xsd:dateTime;
+  skos:definition "Types of rock that are formed by the deposition and subsequent cementation of mineral or organic particles on the floor of oceans or other bodies of water at the Earth's surface"@en;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "sedimentary"@en;
+  skos:topConceptOf :conceptScheme .
+
+:adakite a skos:Concept;
+  dct:created "2018-12-16T20:58:11.810+10:00"^^xsd:dateTime;
+  skos:broader :igneous;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Adakite"@en .
+
+:andesite a skos:Concept;
+  dct:created "2018-12-16T20:58:26.711+10:00"^^xsd:dateTime;
+  skos:broader :igneous;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Andesite"@en .
+
+:alkali-feldspar-granite a skos:Concept;
+  dct:created "2018-12-16T20:58:45.766+10:00"^^xsd:dateTime;
+  skos:broader :igneous;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Alkali feldspar granite"@en .
+
+<http://pid.geoscience.gov.au/def/voc/test-rock-types/'a'a> a skos:Concept;
+  dct:created "2018-12-16T20:59:52.812+10:00"^^xsd:dateTime;
+  skos:broader :basalt;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "'A'a"@en .
+
+:basaltic-trachyandesite a skos:Concept;
+  dct:created "2018-12-16T21:01:08.596+10:00"^^xsd:dateTime;
+  skos:broader :igneous;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Basaltic trachyandesite"@en .
+
+:Mugearitem a skos:Concept;
+  dct:created "2018-12-16T21:01:43.431+10:00"^^xsd:dateTime;
+  skos:broader :basaltic-trachyandesite;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Mugearite"@en .
+
+:shoshonite a skos:Concept;
+  dct:created "2018-12-16T21:02:02.625+10:00"^^xsd:dateTime;
+  skos:broader :basaltic-trachyandesite;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Shoshonite"@en .
+
+dct:source a owl:OntologyProperty;
+  dct:created "2018-12-19T10:36:44.783+10:00"^^xsd:dateTime .
+
+:argillite a skos:Concept;
+  dct:created "2018-12-19T16:18:07.331+10:00"^^xsd:dateTime;
+  skos:broader :sedimentary;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Argillite"@en .
+
+:arkose a skos:Concept;
+  dct:created "2018-12-19T16:18:23.776+10:00"^^xsd:dateTime;
+  skos:broader :sedimentary;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Arkose"@en .
+
+:banded-iron-formation a skos:Concept;
+  dct:created "2018-12-20T10:39:31.757+10:00"^^xsd:dateTime;
+  dct:modified "2018-12-20T10:40:09.697+10:00"^^xsd:dateTime;
+  skos:broader :sedimentary;
+  skos:definition "Distinctive layered units of iron-rich sedimentary rock that are almost always of Precambrian age"@en;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Banded iron formation"@en .
+
+:Fake1 a skos:Concept;
+  dct:created "2018-12-20T11:47:05.643+10:00"^^xsd:dateTime;
+  skos:broader :pahoehoe;
+  skos:inScheme :conceptScheme;
+  skos:prefLabel "Fake1"@en .
