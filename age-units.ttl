@@ -1,0 +1,30 @@
+@prefix : <http://test.linked.data.gov.au/def/gsq-age-units#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://test.linked.data.gov.au/def/gsq-age-units> a owl:Ontology .
+
+:ConceptScheme a skos:ConceptScheme;
+  dct:created "2019-02-12T12:06:51.310+10:00"^^xsd:dateTime;
+  skos:prefLabel "Age Units"@en .
+
+:one a skos:Concept;
+  dct:created "2019-02-12T12:07:07.390+10:00"^^xsd:dateTime;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "One"@en;
+  skos:topConceptOf :ConceptScheme .
+
+:two a skos:Concept;
+  dct:created "2019-02-12T12:07:20.911+10:00"^^xsd:dateTime;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "Two"@en;
+  skos:topConceptOf :ConceptScheme .
+
+:three a skos:Concept;
+  dct:created "2019-02-12T12:07:54.281+10:00"^^xsd:dateTime;
+  skos:broader :c_0d0f568e;
+  skos:inScheme :ConceptScheme;
+  skos:prefLabel "Three"@en .
