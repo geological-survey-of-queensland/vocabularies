@@ -60,7 +60,6 @@ sudo chmod u+x vb_start.sh
 #       Redirect the server's Port 80 to VB's port
 #
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 1979
-
 ```
 
 ### 1.2. VocPrez setup
@@ -118,6 +117,9 @@ deactivate
 #
 sudo nano /etc/apache2/sites-available/vocabs.gsq.cat.conf
 ```
+
+#### vocabs.gsq.cat.conf
+```
 <VirtualHost *:80>
         ServerName vocabs.gsq.cat
 
@@ -136,9 +138,14 @@ sudo nano /etc/apache2/sites-available/vocabs.gsq.cat.conf
         ProxyPreserveHost On
 </VirtualHost>
 ```
+
+```
 sudo a2ensite vocabs.gsq.cat.conf
 
-sudo nano /etc/apache2/sites-available/vocabs.gsq.cat.conf
+sudo nano /etc/apache2/sites-available/vocbench.gsq.cat.conf
+```
+
+#### vocbench.gsq.cat.conf
 ```
 <VirtualHost *:80>
         ServerName vocbench.gsq.cat
@@ -146,6 +153,8 @@ sudo nano /etc/apache2/sites-available/vocabs.gsq.cat.conf
         ProxyPass / http://127.0.0.1:1979/vocbench3/
         ProxyPassReverse / http://127.0.0.1:1979/vocbench3/
 </VirtualHost>
+```
+
 ```
 sudo a2ensite vocbench.gsq.cat.conf
 
