@@ -32,6 +32,7 @@ sudo apt install -y openjdk-8-jdk
 wget https://bitbucket.org/art-uniroma2/vocbench3/downloads/vocbench3-5.0.0_full.zip
 sudo apt install unzip
 unzip vocbench3-5.0.0_full.zip
+sudo chown -R ubuntu SemanticTurkeyData
 
 #
 #       Set Java options for Karaf
@@ -47,13 +48,16 @@ nano semanticturkey-5.0/bin/setenv
 
 
 #
-#       VB start file
+#       VB start/stop files
 #
-sudo chmod u+x semanticturkey-5.0/bin/start
 nano vb_start.sh
-# > sh /home/ubuntu/semanticturkey-5.0/bin/karaf server
+# > sh /home/ubuntu/semanticturkey-5.0/bin/karaf server 2>&1 &
 # > echo "Starting Vocbench"
 sudo chmod u+x vb_start.sh
+
+nano vb_stop.sh
+# > sudo kill `ps aux | grep karaf | awk 'NR==1{split($0,a," "); print a[2]}'`
+# > echo "Stopping VocBench"
 
 
 #
