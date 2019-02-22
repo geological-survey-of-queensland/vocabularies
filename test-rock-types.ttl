@@ -1,5 +1,6 @@
 @prefix : <http://test.linked.data.gov.au/def/test-rock-types/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc:   <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -42,7 +43,10 @@
   dct:created "2018-12-16T20:56:11.415+10:00"^^xsd:dateTime;
   dct:modified "2018-12-19T10:40:39.204+10:00"^^xsd:dateTime;
   dct:source "https://en.wikipedia.org/wiki/Rock_(geology)"^^xsd:anyURI;
-  skos:prefLabel "Test Rock Types Concept Scheme"@en .
+  skos:prefLabel "Test Rock Types Concept Scheme"@en ;
+  owl:versionInfo "v1.0" ;
+  dc:creator "Nicholas J. Car" ;
+  dct:creator <https://orcid.org/0000-0002-8742-7730> .
 
 :metamorphic a skos:Concept;
   dct:created "2018-12-16T20:57:23.137+10:00"^^xsd:dateTime;
