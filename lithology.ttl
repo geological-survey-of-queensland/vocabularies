@@ -1,11 +1,1397 @@
-@prefix : <http://test.linked.data.gov.au/def/gsq-lithology#> .
+@prefix : <http://test.linked.data.gov.au/def/gsq-lithology/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lith: <http://resource.geosciml.org/classifier/cgi/lithology/> .
 
 <http://test.linked.data.gov.au/def/gsq-lithology> a owl:Ontology .
 
 :ConceptScheme a skos:ConceptScheme;
   dct:created "2019-01-29T15:07:14.470+10:00"^^xsd:dateTime;
-  skos:prefLabel "GSQ Lithology"@en .
+  skos:prefLabel "GSQ Lithology"@en ;
+  dct:source "MERLIN" .
+
+#: a skos:Concept ;
+#    skos:altLabel "ORE" ;
+#    skos:prefLabel "" .
+
+:adamellite a skos:Concept ;
+    skos:altLabel "ADML" ;
+    skos:broader :quartz-monzonite ;
+    skos:prefLabel "Adamellite" .
+
+:agglomerate a skos:Concept ;
+    skos:altLabel "AGLM" ;
+    skos:broader :pyroclastics ;
+    skos:prefLabel "Agglomerate" .
+
+:alaskite a skos:Concept ;
+    skos:altLabel "ALSK" ;
+    skos:broader :granitoid ;
+    skos:exactMatch :leucogranite ;
+    skos:prefLabel "Alaskite" .
+
+:albitite a skos:Concept ;
+    skos:altLabel "ALBT" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Albitite" .
+
+:alginite a skos:Concept ;
+    skos:altLabel "ALGIN" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Alginite" .
+
+:alluvium a skos:Concept ;
+    skos:altLabel "ALLV" ;
+    skos:broader :miscellaneous-unconsolidated-sediments ;
+    skos:prefLabel "Alluvium" .
+
+:andesite a skos:Concept ;
+    skos:altLabel "ANDS" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:andesite ;
+    skos:prefLabel "Andesite" .
+
+:anorthosite a skos:Concept ;
+    skos:altLabel "ANST" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:anorthosite ;
+    skos:prefLabel "Anorthosite" .
+
+:aplite a skos:Concept ;
+    skos:altLabel "APLT" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Aplite" .
+
+:arenite-mudrock a skos:Concept ;
+    skos:altLabel "ARMU" ;
+    skos:broader :arenite , :mudrock ;
+    skos:prefLabel "Arenite-Mudrock" .
+
+:arenite-rudite a skos:Concept ;
+    skos:altLabel "ARRU" ;
+    skos:broader :arenite,
+        :rudite ;
+    skos:prefLabel "Arenite-Rudite" .
+
+:argillite a skos:Concept ;
+    skos:altLabel "ARGL" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Argillite" .
+
+:arkose a skos:Concept ;
+    skos:altLabel "ARKS" ;
+    skos:broader :sedimentary-rock ;
+    skos:closeMatch lith:generic_sandstone ;
+    skos:prefLabel "Arkose" .
+
+:banded-iron-formation a skos:Concept ;
+    skos:altLabel "BIF" ;
+    skos:broader :sedimentary-rock ;
+    skos:closeMatch lith:iron_rich_sedimentary_rock ;
+    skos:prefLabel "Banded-Iron-Formation" .
+
+:baryte a skos:Concept ;
+    skos:altLabel "BARY" ;
+    skos:prefLabel "Baryte" .
+
+:basalt a skos:Concept ;
+    skos:altLabel "BSLT" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:basalt ;
+    skos:prefLabel "Basalt" .
+
+:basaltic-andesite a skos:Concept ;
+    skos:altLabel "BSAN" ;
+    skos:broader :andesite , :basalt ;
+    skos:prefLabel "Basaltic Andesite" .
+
+:bauxite a skos:Concept ;
+    skos:altLabel "BAUX" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:bauxite ;
+    skos:prefLabel "Bauxite" .
+
+:billy-pref-silcrete-calcrete a skos:Concept ;
+    skos:altLabel "BILY" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Billy (Pref. Silcrete/Calcrete)" .
+
+:boundstone a skos:Concept ;
+    skos:altLabel "BDST" ;
+    skos:broader :limestone ;
+    skos:exactMatch lith:boundstone ;
+    skos:prefLabel "Boundstone" .
+
+:broken-formation a skos:Concept ;
+    skos:altLabel "BKFM" ;
+    skos:prefLabel "Broken Formation" .
+
+:calc-silicate a skos:Concept ;
+    skos:altLabel "CASI" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Calc-Silicate" .
+
+:calcarenite a skos:Concept ;
+    skos:altLabel "CAAR" ;
+    skos:broader :sedimentary-rock ;
+    skos:closeMatch lith:generic_sandstone ;
+    skos:prefLabel "Calcarenite" .
+
+:calcilutite a skos:Concept ;
+    skos:altLabel "CALU" ;
+    skos:broader :limestone ;
+    skos:prefLabel "Calcilutite" .
+
+:calcirudite a skos:Concept ;
+    skos:altLabel "CLRD" ;
+    skos:broader :limestone ;
+    skos:prefLabel "Calcirudite" .
+
+:calcite a skos:Concept ;
+    skos:altLabel "CALC" ;
+    skos:broader :calcrete ;
+    skos:prefLabel "Calcite" .
+
+:caliche a skos:Concept ;
+    skos:altLabel "CACH" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Caliche" .
+
+:carbonates-limestone-or-dolomite a skos:Concept ;
+    skos:altLabel "CARB" ;
+    skos:broader :sedimentary-rock ;
+    skos:closeMatch lith:limestone ;
+    skos:prefLabel "Carbonates (Limestone Or Dolomite)" .
+
+:cataclasite a skos:Concept ;
+    skos:altLabel "CTCL" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Cataclasite" .
+
+:charcoal a skos:Concept ;
+    skos:altLabel "CHCL" ;
+    skos:prefLabel "Charcoal" .
+
+:chert a skos:Concept ;
+    skos:altLabel "CHRT" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Chert" .
+
+:chromitite a skos:Concept ;
+    skos:altLabel "CRMT" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Chromitite" .
+
+:clay a skos:Concept ;
+    skos:altLabel "CLAY" ;
+    skos:broader :mud ;
+    skos:exactMatch lith:clay ;
+    skos:prefLabel "Clay" .
+
+:claystone a skos:Concept ;
+    skos:altLabel "CLST" ;
+    skos:broader :mudstone ;
+    skos:exactMatch lith:claystone ;
+    skos:prefLabel "Claystone" .
+
+:clinopyroxenite a skos:Concept ;
+    skos:altLabel "CPXT" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Clinopyroxenite" .
+
+:coked-coal a skos:Concept ;
+    skos:altLabel "COKE" ;
+    skos:broader :coal ;
+    skos:prefLabel "Coked Coal" .
+
+:colluvium a skos:Concept ;
+    skos:altLabel "COLL" ;
+    skos:broader :saprolite ;
+    skos:closeMatch lith:unconsolidated_material ;
+    skos:prefLabel "Colluvium" .
+
+:composite-coal-sample a skos:Concept ;
+    skos:altLabel "CCOAL" ;
+    skos:broader :coal ;
+    skos:prefLabel "Composite Coal Sample" .
+
+:concretion a skos:Concept ;
+    skos:altLabel "CONC" ;
+    skos:broader :saprolite ;
+    skos:prefLabel "Concretion" .
+
+:conglomerate a skos:Concept ;
+    skos:altLabel "CGLM" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:clastic_conglomerate ;
+    skos:prefLabel "Conglomerate" .
+
+:coquinite a skos:Concept ;
+    skos:altLabel "COQT" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Coquinite" .
+
+:dacite a skos:Concept ;
+    skos:altLabel "DACT" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:dacite ;
+    skos:prefLabel "Dacite" .
+
+:deep-weathering-profile a skos:Concept ;
+    skos:altLabel "DWP" ;
+    skos:broader :saprolite ;
+    skos:prefLabel "Deep Weathering Profile" .
+
+:diamictite a skos:Concept ;
+    skos:altLabel "DMCT" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:diamictite ;
+    skos:prefLabel "Diamictite" .
+
+:diatomite a skos:Concept ;
+    skos:altLabel "DIAT" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Diatomite" .
+
+:diorite a skos:Concept ;
+    skos:altLabel "DIOR" ;
+    skos:broader :dioritoid ;
+    skos:exactMatch lith:diorite ;
+    skos:prefLabel "Diorite" .
+
+:dolerite a skos:Concept ;
+    skos:altLabel "DOLR" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:doleritic_rock ;
+    skos:prefLabel "Dolerite" .
+
+:dolostone a skos:Concept ;
+    skos:altLabel "DLST" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:dolostone ;
+    skos:hiddenLabel "dolomite" ;
+    skos:prefLabel "Dolostone" .
+
+:dunite a skos:Concept ;
+    skos:altLabel "DUNT" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch :peridotite ;
+    skos:prefLabel "Dunite" .
+
+:dyke a skos:Concept ;
+    skos:altLabel "DYKE" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Dyke" .
+
+:earthy-lime a skos:Concept ;
+    skos:altLabel "ELIM" ;
+    skos:broader :sedimentary-rock ;
+    skos:closeMatch lith:impure_limestone ;
+    skos:prefLabel "Earthy Lime" .
+
+:eluvium a skos:Concept ;
+    skos:altLabel "ELUV" ;
+    skos:broader :miscellaneous-unconsolidated-sediments ;
+    skos:prefLabel "Eluvium" .
+
+:epiclastics a skos:Concept ;
+    skos:altLabel "EPIC" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Epiclastics" .
+
+:epidosite a skos:Concept ;
+    skos:altLabel "EPST" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Epidosite" .
+
+:exhalite a skos:Concept ;
+    skos:altLabel "EXHA" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Exhalite" .
+
+:feldspar-porphyry a skos:Concept ;
+    skos:altLabel "FSPO" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:porphyry ;
+    skos:prefLabel "Feldspar Porphyry" .
+
+:felsic-lava a skos:Concept ;
+    skos:altLabel "FLAV" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:rhyolite ;
+    skos:prefLabel "Felsic Lava" .
+
+:felsic-volcaniclastic-rock-excluding-ignimbrite a skos:Concept ;
+    skos:altLabel "FVCL" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:fragmental_igneous_material ;
+    skos:prefLabel "Felsic Volcaniclastic Rock (Excluding Ignimbrite)" .
+
+:felsite a skos:Concept ;
+    skos:altLabel "FLST" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:rhyolite ;
+    skos:prefLabel "Felsite" .
+
+:felsites-lavas-clastics-high-level-intrusives a skos:Concept ;
+    skos:altLabel "FELS" ;
+    skos:prefLabel "Felsites (Lavas, Clastics & High-Level Intrusives)" .
+
+:ferricrete a skos:Concept ;
+    skos:altLabel "FECT" ;
+    skos:prefLabel "Ferricrete" .
+
+:garnetite a skos:Concept ;
+    skos:altLabel "GARN" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Garnetite" .
+
+:gneiss a skos:Concept ;
+    skos:altLabel "GNSS" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:gneiss ;
+    skos:prefLabel "Gneiss" .
+
+:gossan a skos:Concept ;
+    skos:altLabel "GOSS" ;
+    skos:prefLabel "Gossan" .
+
+:gouge a skos:Concept ;
+    skos:altLabel "GOUG" ;
+    skos:prefLabel "Gouge" .
+
+:grainstone a skos:Concept ;
+    skos:altLabel "GSTN" ;
+    skos:broader :limestone ;
+    skos:exactMatch lith:grainstone ;
+    skos:prefLabel "Grainstone" .
+
+:granodiorite a skos:Concept ;
+    skos:altLabel "GRDI" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Granodiorite" .
+
+:granophyre a skos:Concept ;
+    skos:altLabel "GRNP" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Granophyre" .
+
+:granulite a skos:Concept ;
+    skos:altLabel "GRNL" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:granulite ;
+    skos:prefLabel "Granulite" .
+
+:grapestone a skos:Concept ;
+    skos:altLabel "GPST" ;
+    skos:broader :limestone ;
+    skos:prefLabel "Grapestone" .
+
+:graphite a skos:Concept ;
+    skos:altLabel "GRAP" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Graphite" .
+
+:gravel a skos:Concept ;
+    skos:altLabel "GRVL" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:gravel ;
+    skos:prefLabel "Gravel" .
+
+:greenschist a skos:Concept ;
+    skos:altLabel "GNSC" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Greenschist" .
+
+:greenstone a skos:Concept ;
+    skos:altLabel "GNST" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Greenstone" .
+
+:greisen a skos:Concept ;
+    skos:altLabel "GREI" ;
+    skos:broader :pegmatite ;
+    skos:prefLabel "Greisen" .
+
+:greywacke a skos:Concept ;
+    skos:altLabel "GYWK" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Greywacke" .
+
+:grits a skos:Concept ;
+    skos:altLabel "GRIT" ;
+    skos:broader :sandstone ;
+    skos:prefLabel "Grits" .
+
+:grus-decomposed-granite a skos:Concept ;
+    skos:altLabel "GRUS" ;
+    skos:prefLabel "Grus (Decomposed Granite)" .
+
+:gypsum a skos:Concept ;
+    skos:altLabel "GPSM" ;
+    skos:broader :evaporite ;
+    skos:prefLabel "Gypsum" .
+
+:harzburgite a skos:Concept ;
+    skos:altLabel "HARZ" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Harzburgite" .
+
+:hornblendite a skos:Concept ;
+    skos:altLabel "HBLT" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:hornblendite ;
+    skos:prefLabel "Hornblendite" .
+
+:hornfels a skos:Concept ;
+    skos:altLabel "HFLS" ;
+    skos:broader :granofels ;
+    skos:exactMatch lith:hornfels ;
+    skos:prefLabel "Hornfels" .
+
+:ignimbrite a skos:Concept ;
+    skos:altLabel "IGNM" ;
+    skos:broader :tuff ;
+    skos:prefLabel "Ignimbrite" .
+
+:intrusive-rock-unspecified a skos:Concept ;
+    skos:altLabel "INTR" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Intrusive Rock (Unspecified)" .
+
+:ironstone a skos:Concept ;
+    skos:altLabel "FEST" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Ironstone" .
+
+:ironstone-oolite a skos:Concept ;
+    skos:altLabel "FOOL" ;
+    skos:broader :sedimentary-rock ;
+    skos:closeMatch lith:iron_rich_sedimentary_rock ;
+    skos:prefLabel "Ironstone Oolite" .
+
+:jasper a skos:Concept ;
+    skos:altLabel "JASP" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Jasper" .
+
+:jaspilite a skos:Concept ;
+    skos:altLabel "JSPT" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Jaspilite" .
+
+:kaolin a skos:Concept ;
+    skos:altLabel "KAO" ;
+    skos:prefLabel "Kaolin" .
+
+:keratophyre a skos:Concept ;
+    skos:altLabel "KPHR" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Keratophyre" .
+
+:laminite a skos:Concept ;
+    skos:altLabel "LMNT" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Laminite" .
+
+:lamprophyre a skos:Concept ;
+    skos:altLabel "LAMP" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Lamprophyre" .
+
+:laterite a skos:Concept ;
+    skos:altLabel "LATR" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Laterite" .
+
+:latite a skos:Concept ;
+    skos:altLabel "LATT" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:latite ;
+    skos:prefLabel "Latite" .
+
+:lava a skos:Concept ;
+    skos:altLabel "LAVA" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Lava" .
+
+:lherzolite a skos:Concept ;
+    skos:altLabel "LHRZ" ;
+    skos:broader :peridotite ;
+    skos:prefLabel "Lherzolite" .
+
+:lignite a skos:Concept ;
+    skos:altLabel "LGNT" ;
+    skos:broader :coal ;
+    skos:exactMatch lith:lignite ;
+    skos:prefLabel "Lignite" .
+
+:limonite a skos:Concept ;
+    skos:altLabel "LIMT" ;
+    skos:prefLabel "Limonite" .
+
+:listwaenite a skos:Concept ;
+    skos:altLabel "LIST" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Listwaenite" .
+
+:loam a skos:Concept ;
+    skos:altLabel "LOAM" ;
+    skos:broader :soil ;
+    skos:prefLabel "Loam" .
+
+:mafic-lava a skos:Concept ;
+    skos:altLabel "MLAV" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:basalt ;
+    skos:prefLabel "Mafic Lava" .
+
+:mafic-volcaniclastic-rock-excluding-ignimbrite a skos:Concept ;
+    skos:altLabel "MVCL" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Mafic Volcaniclastic Rock (Excluding Ignimbrite)" .
+
+:mafites-lavas-clastics-high-level-intrusives a skos:Concept ;
+    skos:altLabel "MAFI" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Mafites (Lavas, Clastics & High-Level Intrusives)" .
+
+:magnesite a skos:Concept ;
+    skos:altLabel "MGST" ;
+    skos:prefLabel "Magnesite" .
+
+:man-made-deposits-tailings-land-fill-mine-dumps-etc a skos:Concept ;
+    skos:altLabel "MANM" ;
+    skos:prefLabel "Man-Made Deposits (Tailings, Land-Fill, Mine Dumps Etc)" .
+
+:marble a skos:Concept ;
+    skos:altLabel "MRBL" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:marble ;
+    skos:prefLabel "Marble" .
+
+:marl a skos:Concept ;
+    skos:altLabel "MARL" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Marl" .
+
+:massive-sulphide-ore a skos:Concept ;
+    skos:altLabel "MSUL" ;
+    skos:prefLabel "Massive Sulphide Ore" .
+
+:melange a skos:Concept ;
+    skos:altLabel "MLNG" ;
+    skos:broader :breccia ;
+    skos:prefLabel "Melange" .
+
+:metamorphosed-felsites a skos:Concept ;
+    skos:altLabel "MFEL" ;
+    skos:prefLabel "Metamorphosed Felsites" .
+
+:metamorphosed-mafites a skos:Concept ;
+    skos:altLabel "MMAF" ;
+    skos:broader :metamorphic-rock ;
+    skos:prefLabel "Metamorphosed Mafites" .
+
+:metamorphosed-sedimentary-rocks a skos:Concept ;
+    skos:altLabel "MSED" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Metamorphosed Sedimentary Rocks" .
+
+:metasomatite a skos:Concept ;
+    skos:altLabel "MSOM" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:metasomatic_rock ;
+    skos:prefLabel "Metasomatite" .
+
+:micrite a skos:Concept ;
+    skos:altLabel "MCRT" ;
+    skos:broader :sedimentary-rock ;
+    skos:closeMatch lith:limestone ;
+    skos:prefLabel "Micrite" .
+
+:microdiorite a skos:Concept ;
+    skos:altLabel "MCDI" ;
+    skos:broader :dioritoid ;
+    skos:closeMatch lith:diorite ;
+    skos:prefLabel "Microdiorite" .
+
+:microgranite a skos:Concept ;
+    skos:altLabel "MCGR" ;
+    skos:broader :microgranitoid ;
+    skos:closeMatch lith:granite ;
+    skos:prefLabel "Microgranite" .
+
+:microgranodiorite a skos:Concept ;
+    skos:altLabel "MCGD" ;
+    skos:broader :dioritoid , :granitoid ;
+    skos:closeMatch lith:granodiorite ;
+    skos:prefLabel "Microgranodiorite" .
+
+:micromonzonite a skos:Concept ;
+    skos:altLabel "MCMZ" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:monzonite ;
+    skos:prefLabel "Micromonzonite" .
+
+:microperthite a skos:Concept ;
+    skos:altLabel "MCPH" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Microperthite" .
+
+:microsyenite a skos:Concept ;
+    skos:altLabel "MCSY" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:syenitic_rock ;
+    skos:prefLabel "Microsyenite" .
+
+:microtonalite a skos:Concept ;
+    skos:altLabel "MCTO" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:tonalite ;
+    skos:prefLabel "Microtonalite" .
+
+:migmatite a skos:Concept ;
+    skos:altLabel "MIGM" ;
+    skos:broader :metamorphic-rock ;
+    skos:exactMatch lith:migmatite ;
+    skos:prefLabel "Migmatite" .
+
+:mixed-mafites-and-felsites-mainly-volcanics a skos:Concept ;
+    skos:altLabel "MMFV" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Mixed Mafites And Felsites (Mainly Volcanics)" .
+
+:mixed-metamorphosed-felsites-sedimentary-rocks a skos:Concept ;
+    skos:altLabel "MMFS" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Mixed Metamorphosed Felsites & Sedimentary Rocks" .
+
+:mixed-metamorphosed-mafic-felsic-volcanic-sedimentary-rx a skos:Concept ;
+    skos:altLabel "MMVS" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Mixed Metamorphosed Mafic & Felsic Volcanic & Sedimentary Rx" .
+
+:mixed-metamorphosed-mafites-felsites a skos:Concept ;
+    skos:altLabel "MMMF" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Mixed Metamorphosed Mafites & Felsites" .
+
+:mixed-metamorphosed-mafites-sedimentary-rocks a skos:Concept ;
+    skos:altLabel "MMMS" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Mixed Metamorphosed Mafites & Sedimentary Rocks" .
+
+:mixed-sedimentary-rocks-and-felsites a skos:Concept ;
+    skos:altLabel "MSFV" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Mixed Sedimentary Rocks And Felsites" .
+
+:mixed-sedimentary-rocks-and-mafites a skos:Concept ;
+    skos:altLabel "MSMV" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Mixed Sedimentary Rocks And Mafites" .
+
+:mixed-siliciclastic-carbonate-rocks a skos:Concept ;
+    skos:altLabel "MSIC" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Mixed Siliciclastic/Carbonate Rocks" .
+
+:mixed-volcanic-and-sedimentary-rocks a skos:Concept ;
+    skos:altLabel "MVOS" ;
+    skos:prefLabel "Mixed Volcanic And Sedimentary Rocks" .
+
+:monzodiorite a skos:Concept ;
+    skos:altLabel "MODI" ;
+    skos:broader :dioritoid ;
+    skos:exactMatch lith:monzodiorite ;
+    skos:prefLabel "Monzodiorite" .
+
+:monzogabbro a skos:Concept ;
+    skos:altLabel "MOGB" ;
+    skos:broader :gabbroid ;
+    skos:exactMatch lith:monzogabbro ;
+    skos:prefLabel "Monzogabbro" .
+
+:monzogranite a skos:Concept ;
+    skos:altLabel "MOGR" ;
+    skos:broader :granite ;
+    skos:exactMatch lith:monzogranite ;
+    skos:prefLabel "Monzogranite" .
+
+:monzonite a skos:Concept ;
+    skos:altLabel "MONZ" ;
+    skos:broader :syenitoid ;
+    skos:exactMatch lith:monzonite ;
+    skos:prefLabel "Monzonite" .
+
+:monzosyenite a skos:Concept ;
+    skos:altLabel "MOSY" ;
+    skos:broader :monzonite , :syenitoid ;
+    skos:prefLabel "Monzosyenite" .
+
+:mudrock a skos:Concept ;
+    skos:altLabel "MURO" ;
+    skos:broader :mudstone ;
+    skos:exactMatch lith:silicate_mudstone ;
+    skos:prefLabel "Mudrock" .
+
+:mudrock-rudite a skos:Concept ;
+    skos:altLabel "MURU" ;
+    skos:broader :rudite ;
+    skos:prefLabel "Mudrock-Rudite" .
+
+:mylonite a skos:Concept ;
+    skos:altLabel "MYLN" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Mylonite" .
+
+:nephelinite a skos:Concept ;
+    skos:altLabel "NEPH" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Nephelinite" .
+
+:obsidian a skos:Concept ;
+    skos:altLabel "OBSD" ;
+    skos:broader :volcanic-glass ;
+    skos:prefLabel "Obsidian" .
+
+:oil-shale a skos:Concept ;
+    skos:altLabel "OSHL" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Oil Shale" .
+
+:oolite a skos:Concept ;
+    skos:altLabel "OOLT" ;
+    skos:broader :limestone ;
+    skos:prefLabel "Oolite" .
+
+:organic-rock a skos:Concept ;
+    skos:altLabel "ORGA" ;
+    skos:prefLabel "Organic Rock" .
+
+:orthopyroxenite a skos:Concept ;
+    skos:altLabel "OPXT" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Orthopyroxenite" .
+
+:orthoquartzite a skos:Concept ;
+    skos:altLabel "OQTZ" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Orthoquartzite" .
+
+:packstone a skos:Concept ;
+    skos:altLabel "PKST" ;
+    skos:broader :limestone ;
+    skos:prefLabel "Packstone" .
+
+:palaeosol a skos:Concept ;
+    skos:altLabel "PSOL" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Palaeosol" .
+
+:para-amphibolite a skos:Concept ;
+    skos:altLabel "PAMP" ;
+    skos:broader :amphibolite ;
+    skos:prefLabel "Para-Amphibolite" .
+
+:peat a skos:Concept ;
+    skos:altLabel "PEAT" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:peat ;
+    skos:prefLabel "Peat" .
+
+:pelite a skos:Concept ;
+    skos:altLabel "PELT" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Pelite" .
+
+:peperite a skos:Concept ;
+    skos:altLabel "PPRT" ;
+    skos:prefLabel "Peperite" .
+
+:perlite a skos:Concept ;
+    skos:altLabel "PERL" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Perlite" .
+
+:perthite a skos:Concept ;
+    skos:altLabel "PERT" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Perthite" .
+
+:phonolite a skos:Concept ;
+    skos:altLabel "PHON" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:phonolilte ;
+    skos:prefLabel "Phonolite" .
+
+:phosphorite a skos:Concept ;
+    skos:altLabel "PHOS" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:phosphorite ;
+    skos:prefLabel "Phosphorite" .
+
+:phyllite a skos:Concept ;
+    skos:altLabel "PHYL" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:phyllite ;
+    skos:prefLabel "Phyllite" .
+
+:phyllonite a skos:Concept ;
+    skos:altLabel "PHLN" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:phyllonite ;
+    skos:prefLabel "Phyllonite" .
+
+:pitchstone a skos:Concept ;
+    skos:altLabel "PCST" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Pitchstone" .
+
+:poorly-consolidated-sediments a skos:Concept ;
+    skos:altLabel "PCON" ;
+    skos:broader :miscellaneous-unconsolidated-sediments ;
+    skos:prefLabel "Poorly Consolidated Sediments" .
+
+:porcellanite a skos:Concept ;
+    skos:altLabel "PCLN" ;
+    skos:broader :duricrust ;
+    skos:prefLabel "Porcellanite" .
+
+:porphyrite a skos:Concept ;
+    skos:altLabel "PORT" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:porphyry ;
+    skos:prefLabel "Porphyrite" .
+
+:porphyry a skos:Concept ;
+    skos:altLabel "PORP" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:porphyry ;
+    skos:prefLabel "Porphyry" .
+
+:psammite a skos:Concept ;
+    skos:altLabel "PSAM" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Psammite" .
+
+:psammopelite a skos:Concept ;
+    skos:altLabel "PSPE" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Psammopelite" .
+
+:psephite a skos:Concept ;
+    skos:altLabel "PSEP" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Psephite" .
+
+:pseudoconglomerate a skos:Concept ;
+    skos:altLabel "PSCG" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Pseudoconglomerate" .
+
+:pyrite a skos:Concept ;
+    skos:altLabel "PYRI" ;
+    skos:prefLabel "Pyrite" .
+
+:pyroxenite a skos:Concept ;
+    skos:altLabel "PXNT" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:pyroxenite ;
+    skos:prefLabel "Pyroxenite" .
+
+:quartz a skos:Concept ;
+    skos:altLabel "QTZ" ;
+    skos:prefLabel "Quartz" .
+
+:quartz-diorite a skos:Concept ;
+    skos:altLabel "QDIO" ;
+    skos:broader :dioritoid ;
+    skos:exactMatch lith:quartz_diorite ;
+    skos:prefLabel "Quartz Diorite" .
+
+:quartz-feldspar-porphyry a skos:Concept ;
+    skos:altLabel "QFPO" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Quartz-Feldspar Porphyry" .
+
+:quartz-gabbro a skos:Concept ;
+    skos:altLabel "QGAB" ;
+    skos:broader :gabbroid ;
+    skos:exactMatch lith:quartz_gabbro ;
+    skos:prefLabel "Quartz Gabbro" .
+
+:quartz-latite a skos:Concept ;
+    skos:altLabel "QLAT" ;
+    skos:exactMatch lith:quartz_latite ;
+    skos:prefLabel "Quartz Latite" .
+
+:quartz-microdiorite a skos:Concept ;
+    skos:altLabel "QMDI" ;
+    skos:broader :igneous-rock ;
+    skos:closeMatch lith:quartz_diorite ;
+    skos:prefLabel "Quartz Microdiorite" .
+
+:quartz-monzodiorite a skos:Concept ;
+    skos:altLabel "QMZD" ;
+    skos:broader :dioritoid ;
+    skos:exactMatch lith:quartz_monzodiorite ;
+    skos:prefLabel "Quartz Monzodiorite" .
+
+:quartz-syenite a skos:Concept ;
+    skos:altLabel "QSYN" ;
+    skos:broader :syenitoid ;
+    skos:exactMatch lith:quartz_syenite ;
+    skos:prefLabel "Quartz Syenite" .
+
+:quartzite a skos:Concept ;
+    skos:altLabel "QTZT" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:quartzite ;
+    skos:prefLabel "Quartzite" .
+
+:record-entered-by-mistake a skos:Concept ;
+    skos:altLabel "ERROR" ;
+    skos:prefLabel "Record Entered By Mistake" .
+
+:redrock a skos:Concept ;
+    skos:altLabel "REDR" ;
+    skos:broader lith:metasomatic_rock ;
+    skos:prefLabel "Redrock" .
+
+:regolith a skos:Concept ;
+    skos:altLabel "REGO" ;
+    skos:broader :saprolite ;
+    skos:prefLabel "Regolith" .
+
+:rhyodacite a skos:Concept ;
+    skos:altLabel "RHDA" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Rhyodacite" .
+
+:rhyolite a skos:Concept ;
+    skos:altLabel "RHLT" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:rhyolite ;
+    skos:prefLabel "Rhyolite" .
+
+:rodingite a skos:Concept ;
+    skos:altLabel "RODI" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Rodingite" .
+
+:sand a skos:Concept ;
+    skos:altLabel "SAND" ;
+    skos:exactMatch lith:sand ;
+    skos:prefLabel "Sand" .
+
+:serpentinite a skos:Concept ;
+    skos:altLabel "SERP" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:serpentinite ;
+    skos:prefLabel "Serpentinite" .
+
+:shale a skos:Concept ;
+    skos:altLabel "SHLE" ;
+    skos:broader :mudstone ;
+    skos:exactMatch lith:shale ;
+    skos:prefLabel "Shale" .
+
+:siderite a skos:Concept ;
+    skos:altLabel "SIDE" ;
+    skos:prefLabel "Siderite" .
+
+:silcrete a skos:Concept ;
+    skos:altLabel "SICT" ;
+    skos:broader :duricrust ;
+    skos:prefLabel "Silcrete" .
+
+:siliceous-rock a skos:Concept ;
+    skos:altLabel "SILI" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Siliceous Rock" .
+
+:silt a skos:Concept ;
+    skos:altLabel "SILT" ;
+    skos:exactMatch lith:silt ;
+    skos:prefLabel "Silt" .
+
+:siltstone a skos:Concept ;
+    skos:altLabel "SLST" ;
+    skos:broader :mudstone ;
+    skos:exactMatch lith:siltstone ;
+    skos:prefLabel "Siltstone" .
+
+:sinter a skos:Concept ;
+    skos:altLabel "SINT" ;
+    skos:prefLabel "Sinter" .
+
+:skarn a skos:Concept ;
+    skos:altLabel "SKRN" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:skarn ;
+    skos:hiddenLabel "exoskarn tactite" ;
+    skos:prefLabel "Skarn" .
+
+:slate a skos:Concept ;
+    skos:altLabel "SLAT" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:slate ;
+    skos:prefLabel "Slate" .
+
+:soapstone a skos:Concept ;
+    skos:altLabel "SPST" ;
+    skos:broader :schist ;
+    skos:hiddenLabel "soaprock#steatite" ;
+    skos:prefLabel "Soapstone" .
+
+:spilite a skos:Concept ;
+    skos:altLabel "SPIL" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:spilite ;
+    skos:prefLabel "Spilite" .
+
+:subgreywacke a skos:Concept ;
+    skos:altLabel "SGYW" ;
+    skos:prefLabel "Subgreywacke" .
+
+:syenite a skos:Concept ;
+    skos:altLabel "SYEN" ;
+    skos:broader :syenitoid ;
+    skos:exactMatch lith:syenite ;
+    skos:prefLabel "Syenite" .
+
+:syenogranite a skos:Concept ;
+    skos:altLabel "SYGR" ;
+    skos:broader :granite ;
+    skos:exactMatch lith:syenogranite ;
+    skos:prefLabel "Syenogranite" .
+
+:teschenite a skos:Concept ;
+    skos:altLabel "TESC" ;
+    skos:broader :gabbro ;
+    skos:prefLabel "Teschenite" .
+
+:till a skos:Concept ;
+    skos:altLabel "TILL" ;
+    skos:prefLabel "Till" .
+
+:tillite a skos:Concept ;
+    skos:altLabel "TILI" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Tillite" .
+
+:tonstein a skos:Concept ;
+    skos:altLabel "TONS" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Tonstein" .
+
+:tourmalinite a skos:Concept ;
+    skos:altLabel "TOUR" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Tourmalinite" .
+
+:trachyandesite a skos:Concept ;
+    skos:altLabel "TAND" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Trachyandesite" .
+
+:trachybasalt a skos:Concept ;
+    skos:altLabel "TBAS" ;
+    skos:broader :basalt , :trachyte ;
+    skos:prefLabel "Trachybasalt" .
+
+:trachyte a skos:Concept ;
+    skos:altLabel "TRAC" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:trachyte ;
+    skos:prefLabel "Trachyte" .
+
+:travertine a skos:Concept ;
+    skos:altLabel "TRAV" ;
+    skos:broader :limestone ;
+    skos:exactMatch lith:travertine ;
+    skos:prefLabel "Travertine" .
+
+:tremolite a skos:Concept ;
+    skos:altLabel "TREM" ;
+    skos:prefLabel "Tremolite" .
+
+:trondhjemite a skos:Concept ;
+    skos:altLabel "TRON" ;
+    skos:broader :tonalite ;
+    skos:prefLabel "Trondhjemite" .
+
+:tufa a skos:Concept ;
+    skos:altLabel "TUFA" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Tufa" .
+
+:ultramafic-rock a skos:Concept ;
+    skos:altLabel "UMAF" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Ultramafic Rock" .
+
+:unknown a skos:Concept ;
+    skos:altLabel "UNKN" ;
+    skos:prefLabel "Unknown" .
+
+:unspecified-rock a skos:Concept ;
+    skos:altLabel "UNSP" ;
+    skos:prefLabel "Unspecified Rock" .
+
+:vein-type-unspecified a skos:Concept ;
+    skos:altLabel "VEIN" ;
+    skos:prefLabel "Vein (Type Unspecified)" .
+
+:volcanic-ash a skos:Concept ;
+    skos:altLabel "VOAS" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Volcanic Ash" .
+
+:volcanic-rock a skos:Concept ;
+    skos:altLabel "VOLC" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Volcanic Rock" .
+
+:volcaniclastics a skos:Concept ;
+    skos:altLabel "VOCL" ;
+    skos:broader :sedimentary-rock ;
+    skos:closeMatch lith:fragmental_igneous_rock ;
+    skos:prefLabel "Volcaniclastics" .
+
+:wackestone a skos:Concept ;
+    skos:altLabel "WKST" ;
+    skos:broader :limestone ;
+    skos:closeMatch lith:impure_limestone ;
+    skos:prefLabel "Wackestone" .
+
+:water-bodies a skos:Concept ;
+    skos:altLabel "WATER" ;
+    skos:prefLabel "Water Bodies" .
+
+:welded-tuff a skos:Concept ;
+    skos:altLabel "WETU" ;
+    skos:broader :tuff ;
+    skos:prefLabel "Welded Tuff" .
+
+:wrigglite a skos:Concept ;
+    skos:altLabel "WRIG" ;
+    skos:broader :metamorphic-rocks ;
+    skos:prefLabel "Wrigglite" .
+
+:xenolith-unspecified-composition a skos:Concept ;
+    skos:altLabel "XENL" ;
+    skos:prefLabel "Xenolith (Unspecified Composition)" .
+
+:zeolite a skos:Concept ;
+    skos:altLabel "ZEOL" ;
+    skos:closeMatch lith:residual_material ;
+    skos:prefLabel "Zeolite" .
+
+:amphibolite a skos:Concept ;
+    skos:altLabel "AMPH" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:amphibolite ;
+    skos:prefLabel "Amphibolite" .
+
+:arenite a skos:Concept ;
+    skos:altLabel "ARNT" ;
+    skos:broader :sandstone ;
+    skos:closeMatch :psammite ;
+    skos:exactMatch lith:arenite ;
+    skos:prefLabel "Arenite" .
+
+:breccia a skos:Concept ;
+    skos:altLabel "BREC" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:breccia ;
+    skos:prefLabel "Breccia" .
+
+:calcrete a skos:Concept ;
+    skos:altLabel "CACT" ;
+    skos:broader :duricrust ;
+    skos:prefLabel "Calcrete" .
+
+:evaporite a skos:Concept ;
+    skos:altLabel "EVAP" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:evaporite ;
+    skos:prefLabel "Evaporite" .
+
+:gabbro a skos:Concept ;
+    skos:altLabel "GBBR" ;
+    skos:broader :gabbroid ;
+    skos:exactMatch lith:gabbro ;
+    skos:prefLabel "Gabbro" .
+
+:granofels a skos:Concept ;
+    skos:altLabel "GRFL" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:granofels ;
+    skos:prefLabel "Granofels" .
+
+:leucogranite a skos:Concept ;
+    skos:altLabel "LCGR" ;
+    skos:broader :leucogranitoid ;
+    skos:exactMatch :alaskite ;
+    skos:prefLabel "Leucogranite" .
+
+:leucogranitoid a skos:Concept ;
+    skos:altLabel "LGRT" ;
+    skos:broader :granitoid ;
+    skos:prefLabel "Leucogranitoid" .
+
+:microgranitoid a skos:Concept ;
+    skos:altLabel "MCGT" ;
+    skos:broader :granitoid ;
+    skos:closeMatch lith:granitoid ;
+    skos:prefLabel "Microgranitoid" .
+
+:mud a skos:Concept ;
+    skos:altLabel "MUD" ;
+    skos:exactMatch lith:mud ;
+    skos:prefLabel "Mud" .
+
+:pegmatite a skos:Concept ;
+    skos:altLabel "PEGM" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:pegmatite ;
+    skos:prefLabel "Pegmatite" .
+
+:quartz-monzonite a skos:Concept ;
+    skos:altLabel "QMON" ;
+    skos:broader :syenitoid ;
+    skos:exactMatch lith:quartz_monzonite ;
+    skos:prefLabel "Quartz Monzonite" .
+
+:schist a skos:Concept ;
+    skos:altLabel "SCHT" ;
+    skos:broader :metamorphic-rocks ;
+    skos:exactMatch lith:schist ;
+    skos:prefLabel "Schist" .
+
+:soil a skos:Concept ;
+    skos:altLabel "SOIL" ;
+    skos:closeMatch lith:residual_material ;
+    skos:prefLabel "Soil" .
+
+:tonalite a skos:Concept ;
+    skos:altLabel "TONL" ;
+    skos:broader :granitoid ;
+    skos:exactMatch lith:tonalite ;
+    skos:prefLabel "Tonalite" .
+
+:volcanic-glass a skos:Concept ;
+    skos:altLabel "GLSS" ;
+    skos:broader :igneous-rock ;
+    skos:prefLabel "Volcanic Glass" .
+
+:granite a skos:Concept ;
+    skos:altLabel "GRNT" ;
+    skos:broader :granitoid ;
+    skos:exactMatch lith:granite ;
+    skos:prefLabel "Granite" .
+
+:peridotite a skos:Concept ;
+    skos:altLabel "PRDT" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:peridotite ;
+    skos:prefLabel "Peridotite" .
+
+:pyroclastics a skos:Concept ;
+    skos:altLabel "PYRO" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:pyroclastic_material ;
+    skos:prefLabel "Pyroclastics" .
+
+:rudite a skos:Concept ;
+    skos:altLabel "RUDT" ;
+    skos:broader :sedimentary-rock ;
+    skos:prefLabel "Rudite" .
+
+:sandstone a skos:Concept ;
+    skos:altLabel "SDST" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:clastic_sandstone ;
+    skos:prefLabel "Sandstone" .
+
+:tuff a skos:Concept ;
+    skos:altLabel "TUFF" ;
+    skos:broader :pyroclastics ;
+    skos:prefLabel "Tuff" .
+
+:coal a skos:Concept ;
+    skos:altLabel "COAL" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:coal ;
+    skos:prefLabel "Coal" .
+
+:duricrust a skos:Concept ;
+    skos:altLabel "DURI" ;
+    skos:exactMatch lith:duricrust ;
+    skos:prefLabel "Duricrust" .
+
+:gabbroid a skos:Concept ;
+    skos:altLabel "GBRD" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:gabbroid ;
+    skos:prefLabel "Gabbroid" .
+
+:miscellaneous-unconsolidated-sediments a skos:Concept ;
+    skos:altLabel "UCON" ;
+    skos:exactMatch lith:unconsolidated_material ;
+    skos:prefLabel "Miscellaneous Unconsolidated Sediments" .
+
+:mudstone a skos:Concept ;
+    skos:altLabel "MDST" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:clastic_mudstone ;
+    skos:prefLabel "Mudstone" .
+
+:saprolite a skos:Concept ;
+    skos:altLabel "SAPR" ;
+    skos:exactMatch lith:residual_material ;
+    skos:prefLabel "Saprolite" .
+
+:syenitoid a skos:Concept ;
+    skos:altLabel "SYTD" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:syenitoid ;
+    skos:prefLabel "Syenitoid" .
+
+:dioritoid a skos:Concept ;
+    skos:altLabel "DITD" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:dioritoid ;
+    skos:prefLabel "Dioritoid" .
+
+:granitoid a skos:Concept ;
+    skos:altLabel "GRTD" ;
+    skos:broader :igneous-rock ;
+    skos:exactMatch lith:granitoid ;
+    skos:prefLabel "Granitoid" .
+
+:limestone a skos:Concept ;
+    skos:altLabel "LMST" ;
+    skos:broader :sedimentary-rock ;
+    skos:exactMatch lith:limestone ;
+    skos:prefLabel "Limestone" .
+
+:metamorphic-rocks a skos:Concept ;
+    skos:altLabel "METS" ;
+    skos:exactMatch lith:metamorphic_rock ;
+    skos:prefLabel "Metamorphic Rocks" .
+
+:sedimentary-rock a skos:Concept ;
+    skos:altLabel "SEDS" ;
+    skos:exactMatch lith:sedimentary_rock ;
+    skos:prefLabel "Sedimentary Rock" .
+
+:igneous-rock a skos:Concept ;
+    skos:altLabel "IGNE" ;
+    skos:exactMatch lith:igneous_rock ;
+    skos:prefLabel "Igneous Rock" .
