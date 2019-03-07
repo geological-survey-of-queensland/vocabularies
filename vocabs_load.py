@@ -6,14 +6,17 @@ import rdflib
 import _config as config
 
 
-# curl -X POST\
-#     http://192.0.2.1:7200/rest/repositories\
-#     -H 'Content-Type: multipart/form-data'\
-#     -F "config=@repo-config.ttl"
+# create-repos or load-data
+def map_from_vocab_files(func):
+    if func == 'create-repos':
+        print('Creating Repos')
+        print()
+    elif func == 'load-data':
+        print('Loading Data')
+        print()
 
-def create_repositories_from_vocabs_files():
     for file in os.listdir('.'):
-        if file.endswith('.ttl'):
+        if file.startswith('gsq-') and file.endswith('.ttl'):
             g = rdflib.Graph().parse(file, format='turtle')
             print(file + " " + str(len(g)))
 
@@ -32,10 +35,14 @@ def create_repositories_from_vocabs_files():
                 vocab_id = r['uri'].split('/')[-1]
                 label = r['pl']
 
-                print()
-                print('Creating...')
-                print(label)
-                create_repository('repo-config.ttl.template', config.GRAPHDB_USR, config.GRAPHDB_PWD, base_url, vocab_id, label)
+                if func == 'create-repos':
+                    print()
+                    print('Creating ' + label)
+                    create_repository('repo-config.ttl.template', base_url, vocab_id, label)
+                elif func == 'load-data':
+                    print()
+                    print('Loading ' + label)
+                    load_vocab_data_from_github(base_url, vocab_id, label)
 
 
 def list_repositories():
@@ -57,31 +64,33 @@ def make_config_file_contents(template_file, base_url, vocab_id, label):
                     .replace('{base_url}', base_url)
 
 
-def create_repository(config_template_file_path, username, password,  base_url, vocab_id, label):
+def create_repository(config_template_file_path, base_url, vocab_id, label):
     config_contents = make_config_file_contents(config_template_file_path,  base_url, vocab_id, label)
 
     r = requests.post(
         config.GRAPHDB_REPOS_URI,
         files={'config': ('config.ttl', config_contents)},
-        auth=(username, password)
+        auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD)
     )
 
     return r.status_code
 
 
-def load_vocab(vocab_id, base_url, vocab_file):
+def load_vocab_data_from_github(vocab_id, base_url, label):
+    named_graph = base_url.rstrip('/')
+    uri = config.GRAPHDB_LOAD_DATA_URI.replace('{repository}', vocab_id)
     r = requests.post(
-        config.GRAPHDB_LOAD_DATA_URI_TEMPLATE.replace('{repository}', vocab_id),
+        uri,
         auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD),
-        headers={'Content-Type': 'application/json'},
-        data={
+        headers={'Content-Type': 'application/json', 'Accept': 'application/json'},
+        json={
             'baseURI': base_url,
-            'context': 'string',
-            'data': open(vocab_file, 'r').read(),
+            'context': named_graph,
+            'data': config.GITHUB_RAW_URI_BASE + vocab_id + '.ttl',
             'forceSerial': True,
-            'format': 'string',
-            'message': 'string',
-            'name': 'age-units.ttl',
+            'format': 'text/turtle',
+            'message': '',
+            'name': label,
             'parserSettings': {
                 'failOnUnknownDataTypes': True,
                 'failOnUnknownLanguageTags': True,
@@ -95,7 +104,7 @@ def load_vocab(vocab_id, base_url, vocab_file):
                 'verifyURISyntax': True
             },
             'replaceGraphs': [
-                base_url
+                named_graph  # same as Context
             ],
             'status': 'PENDING',
             'timestamp': 0,
@@ -110,10 +119,6 @@ def load_vocab(vocab_id, base_url, vocab_file):
 
 
 if __name__ == '__main__':
-    # create_repositories_from_vocabs_files()
-    # print()
-    # print()
-    # print()
-    # print(list_repositories())
+    map_from_vocab_files('create-repos')
+    map_from_vocab_files('load-data')
 
-    print(load_vocab('age-units', 'http://test.linked.data.gov.au/def/gsq-age-unit', 'age-units.ttl'))
