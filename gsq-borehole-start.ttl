@@ -6,41 +6,42 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://test.linked.data.gov.au/def/gsq-borehole-start> a owl:Ontology , skos:ConceptScheme;
+<http://test.linked.data.gov.au/def/gsq-borehole-start> a owl:Ontology ;
+
+:conceptScheme a skos:ConceptScheme;
   dct:source <http://www.opengis.net/doc/geosciml/4.1> ;
   dc:source "The GeoSciML standard" ;
   dct:created "2019-02-19T14:43:40.371+10:00"^^xsd:dateTime;
   skos:prefLabel "Borehole Start"@en .
 
-
 :natural_ground_surface a skos:Concept;
   dct:created "2019-02-19T14:44:09.271+10:00"^^xsd:dateTime;
   dct:modified "2019-02-19T14:47:43.387+10:00"^^xsd:dateTime;
   skos:definition "drilling started from a natural topographic surface";
-  skos:inScheme :ConceptScheme;
+  skos:inScheme :conceptScheme;
   skos:prefLabel "natural ground surface"@en;
-  skos:topConceptOf :ConceptScheme .
+  skos:topConceptOf :conceptScheme .
 
 :open_pit_floor_or_wall a skos:Concept;
   dct:created "2019-02-19T14:44:34.754+10:00"^^xsd:dateTime;
   dct:modified "2019-02-19T14:47:09.302+10:00"^^xsd:dateTime;
   skos:definition "drilling started from the wall of an open pit or quarry";
-  skos:inScheme :ConceptScheme;
+  skos:inScheme :conceptScheme;
   skos:prefLabel "open pit floor or wall"@en;
-  skos:topConceptOf :ConceptScheme .
+  skos:topConceptOf :conceptScheme .
 
 :underground a skos:Concept;
   dct:created "2019-02-19T14:44:41.489+10:00"^^xsd:dateTime;
   dct:modified "2019-02-19T14:46:24.471+10:00"^^xsd:dateTime;
   skos:definition "drilling started from an underground location, such as a driveway, chamber or open-stop";
-  skos:inScheme :ConceptScheme;
+  skos:inScheme :conceptScheme;
   skos:prefLabel "underground"@en;
-  skos:topConceptOf :ConceptScheme .
+  skos:topConceptOf :conceptScheme .
 
 :from_pre-existing_hole a skos:Concept;
   dct:created "2019-02-19T14:44:53.161+10:00"^^xsd:dateTime;
   dct:modified "2019-02-19T14:45:35.599+10:00"^^xsd:dateTime;
   skos:definition "new drill hole (well bore) spudded off the wall of an existing hole";
-  skos:inScheme :ConceptScheme;
+  skos:inScheme :conceptScheme;
   skos:prefLabel "from pre-existing hole"@en;
-  skos:topConceptOf :ConceptScheme .
+  skos:topConceptOf :conceptScheme .

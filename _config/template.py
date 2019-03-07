@@ -1,7 +1,5 @@
-GRAPHDB_REPOS_URI = 'http://------/rest/repositories'
-GRAPHDB_LOAD_DATA_URI_TEMPLATE = 'http://-------/rest/data/import/upload/{repository}/url'
-GRAPHDB_USR = ''
-GRAPHDB_PWD = ''
-
-
-
+GRAPHDB_REPO_URI = 'http://.../rest/repositories'
+GRAPHDB_LOAD_DATA_URI = 'http://.../rest/data/import/upload/.../url'
+GITHUB_RAW_URI_BASE = 'https://...'
+GRAPHDB_USR = '...'
+GRAPHDB_PWD = '...'
