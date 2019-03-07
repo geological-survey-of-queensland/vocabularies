@@ -1,18 +1,17 @@
-@prefix : <http://test.linked.data.gov.au/def/borehole-start#> .
+@prefix : <http://test.linked.data.gov.au/def/gsq-borehole-start/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://test.linked.data.gov.au/def/borehole-start> a owl:Ontology ;
+<http://test.linked.data.gov.au/def/gsq-borehole-start> a owl:Ontology , skos:ConceptScheme;
   dct:source <http://www.opengis.net/doc/geosciml/4.1> ;
-  dc:source "The GeoSciML standard" .
-
-:ConceptScheme a skos:ConceptScheme;
+  dc:source "The GeoSciML standard" ;
   dct:created "2019-02-19T14:43:40.371+10:00"^^xsd:dateTime;
-  skos:prefLabel "start-type"@en .
+  skos:prefLabel "Borehole Start"@en .
+
 
 :natural_ground_surface a skos:Concept;
   dct:created "2019-02-19T14:44:09.271+10:00"^^xsd:dateTime;
