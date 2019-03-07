@@ -8,14 +8,14 @@ import _config as config
 
 # create-repos or load-data
 def load_one_vocab_from_github(vocab_id, base_url, label):
-    # load the vocab
+    namespace = base_url + '/'
     r = requests.post(
         config.GRAPHDB_LOAD_DATA_URI,
         auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD),
         headers={'Content-Type': 'application/json', 'Accept': 'application/json'},
         json={
-            'baseURI': base_url,
-            'context': base_url,
+            'baseURI': namespace,
+            'context': namespace,
             'data': config.GITHUB_RAW_URI_BASE + vocab_id + '.ttl',
             'forceSerial': True,
             'format': 'text/turtle',
@@ -116,7 +116,6 @@ def load_all_vocabs_from_github():
     for file in os.listdir('.'):
         if file.startswith('gsq-') and file.endswith('.ttl'):
             g = rdflib.Graph().parse(file, format='turtle')
-            print(file + " " + str(len(g)))
 
             q = '''
                 PREFIX owl: <http://www.w3.org/2002/07/owl#>
