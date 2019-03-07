@@ -159,7 +159,7 @@ def create_repository(config_template_file_path, base_url, repo_id, repo_label):
     config_contents = make_config_file_contents(config_template_file_path,  base_url, repo_id, repo_label)
 
     r = requests.post(
-        config.GRAPHDB_REPO_URI + '/' + repo_id,
+        config.GRAPHDB_REPO_URI,
         files={'config': ('config.ttl', config_contents)},
         auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD)
     )
@@ -181,6 +181,7 @@ def delete_repo(vocab_id):
 
 
 if __name__ == '__main__':
-    # print(create_repository('repo-config.ttl.template', 'http://test.linked.data.gov.au/def/gsq-vocabs/', 'vocabs', 'GSQ Vocabularies'))
+    # print(delete_repo('vocabs'))
+    # print(create_repository('repo-config.ttl.template', 'http://test.linked.data.gov.au/def/gsq-vocabs/', 'gsq-vocabs', 'GSQ Vocabularies'))
     # load_all_background_onts_from_github()
     load_all_vocabs_from_github()
