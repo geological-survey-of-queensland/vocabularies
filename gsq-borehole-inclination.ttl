@@ -1,4 +1,3 @@
-@prefix : <http://test.linked.data.gov.au/def/gsq-borehole-inclination/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -6,46 +5,48 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://test.linked.data.gov.au/def/gsq-borehole-inclination> a owl:Ontology .
+@prefix bhinc: <http://linked.data.gov.au/def/borehole-inclination/> .
 
-:conceptScheme a skos:ConceptScheme;
+<http://linked.data.gov.au/def/borehole-inclination> a owl:Ontology .
+
+bhinc:conceptScheme a skos:conceptScheme;
   dct:created "2019-02-19T02:15:50.620+10:00"^^xsd:dateTime;
   skos:prefLabel "Borehole Inclination"@en .
 
-:InclinedUp a skos:Concept;
+bhinc:InclinedUp a skos:Concept;
   dct:created "2019-02-19T02:16:30.550+10:00"^^xsd:dateTime;
   dct:modified "2019-02-19T02:18:24.822+10:00"^^xsd:dateTime;
-  skos:broader :Inclined;
-  skos:inScheme :conceptScheme;
+  skos:broader bhinc:Inclined;
+  skos:inScheme bhinc:conceptScheme;
   skos:prefLabel "Inclined Up"@en .
 
-:InclinedDown a skos:Concept;
+bhinc:InclinedDown a skos:Concept;
   dct:created "2019-02-19T02:16:47.508+10:00"^^xsd:dateTime;
   dct:modified "2019-02-19T02:18:11.035+10:00"^^xsd:dateTime;
-  skos:broader :Inclined;
-  skos:inScheme :conceptScheme;
+  skos:broader bhinc:Inclined;
+  skos:inScheme bhinc:conceptScheme;
   skos:prefLabel "Inclined Down"@en .
 
-:Unknown a skos:Concept;
+bhinc:Unknown a skos:Concept;
   dct:created "2019-02-19T02:18:46.421+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bhinc:conceptScheme;
   skos:prefLabel "Unknown"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bhinc:conceptScheme .
 
-:Horizontal a skos:Concept;
+bhinc:Horizontal a skos:Concept;
   dct:created "2019-02-19T02:16:14.791+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bhinc:conceptScheme;
   skos:prefLabel "Horizontal"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bhinc:conceptScheme .
 
-:Inclined a skos:Concept;
+bhinc:Inclined a skos:Concept;
   dct:created "2019-02-19T02:16:58.376+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bhinc:conceptScheme;
   skos:prefLabel "Inclined"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bhinc:conceptScheme .
 
-:Vertical a skos:Concept;
+bhinc:Vertical a skos:Concept;
   dct:created "2019-02-19T02:16:04.857+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bhinc:conceptScheme;
   skos:prefLabel "Vertical"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bhinc:conceptScheme .

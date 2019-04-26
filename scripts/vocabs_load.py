@@ -180,7 +180,4 @@ def delete_repo(vocab_id):
 
 
 if __name__ == '__main__':
-    # print(delete_repo('vocabs'))
-    # print(create_repository('repo-config.ttl.template', 'http://test.linked.data.gov.au/def/gsq-vocabs/', 'gsq-vocabs', 'GSQ Vocabularies'))
-    # load_all_background_onts_from_github()
     load_all_vocabs_from_github()

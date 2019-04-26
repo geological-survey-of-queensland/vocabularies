@@ -1,90 +1,91 @@
-@prefix : <http://test.linked.data.gov.au/def/gsq-mineral-exploration/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://test.linked.data.gov.au/def/gsq-mineral-exploration> a owl:Ontology .
+@prefix minex: <http://linked.data.gov.au/def/mineral-exploration/> .
 
-:conceptScheme a skos:ConceptScheme;
+<http://linked.data.gov.au/def/mineral-exploration> a owl:Ontology .
+
+minex:conceptScheme a skos:ConceptScheme;
   dct:created "2019-01-29T11:01:06.432+10:00"^^xsd:dateTime;
   skos:prefLabel "Mineral Exploration"@en .
 
-:Remote_Sensing a skos:Concept;
+minex:Remote_Sensing a skos:Concept;
   dct:created "2019-02-06T10:27:12.847+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Remote Sensing"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf minex:conceptScheme .
 
-:Aerial_Photography a skos:Concept;
+minex:Aerial_Photography a skos:Concept;
   dct:created "2019-02-06T10:27:31.460+10:00"^^xsd:dateTime;
-  skos:broader :Remote_Sensing;
-  skos:inScheme :conceptScheme;
+  skos:broader minex:Remote_Sensing;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Aerial Photography"@en .
 
-:Landsat a skos:Concept;
+minex:Landsat a skos:Concept;
   dct:created "2019-02-06T10:27:43.674+10:00"^^xsd:dateTime;
-  skos:broader :Remote_Sensing;
-  skos:inScheme :conceptScheme;
+  skos:broader minex:Remote_Sensing;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Landsat"@en .
 
-:Photogeology a skos:Concept;
+minex:Photogeology a skos:Concept;
   dct:created "2019-02-06T10:28:04.843+10:00"^^xsd:dateTime;
-  skos:broader :Remote_Sensing;
-  skos:inScheme :conceptScheme;
+  skos:broader minex:Remote_Sensing;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Photogeology"@en .
 
-:Imagery a skos:Concept;
+minex:Imagery a skos:Concept;
   dct:created "2019-02-06T10:28:20.454+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Imagery"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf minex:conceptScheme .
 
-:Image_Interpretation a skos:Concept;
+minex:Image_Interpretation a skos:Concept;
   dct:created "2019-02-06T10:28:40.946+10:00"^^xsd:dateTime;
-  skos:broader :Imagery;
-  skos:inScheme :conceptScheme;
+  skos:broader minex:Imagery;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Image Interpretation"@en .
 
-:Multispectral_Imagery a skos:Concept;
+minex:Multispectral_Imagery a skos:Concept;
   dct:created "2019-02-06T10:28:59.805+10:00"^^xsd:dateTime;
-  skos:broader :Imagery;
-  skos:inScheme :conceptScheme;
+  skos:broader minex:Imagery;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Multispectral Imagery"@en .
 
-:Photointerpretation a skos:Concept;
+minex:Photointerpretation a skos:Concept;
   dct:created "2019-02-06T10:29:17.121+10:00"^^xsd:dateTime;
-  skos:broader :Imagery;
-  skos:inScheme :conceptScheme;
+  skos:broader minex:Imagery;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Photointerpretation"@en .
 
-:Satellite_Imagery a skos:Concept;
+minex:Satellite_Imagery a skos:Concept;
   dct:created "2019-02-06T10:29:36.162+10:00"^^xsd:dateTime;
-  skos:broader :Imagery;
-  skos:inScheme :conceptScheme;
+  skos:broader minex:Imagery;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Satellite Imagery"@en .
 
-:Surveying a skos:Concept;
+minex:Surveying a skos:Concept;
   dct:created "2019-02-06T10:31:28.046+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Surveying"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf minex:conceptScheme .
 
-:Base_Maps a skos:Concept;
+minex:Base_Maps a skos:Concept;
   dct:created "2019-02-06T10:31:41.159+10:00"^^xsd:dateTime;
-  skos:broader :Surveying;
-  skos:inScheme :conceptScheme;
+  skos:broader minex:Surveying;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Base Maps"@en .
 
-:Tenement_Maps a skos:Concept;
+minex:Tenement_Maps a skos:Concept;
   dct:created "2019-02-06T10:31:53.630+10:00"^^xsd:dateTime;
-  skos:broader :Surveying;
-  skos:inScheme :conceptScheme;
+  skos:broader minex:Surveying;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Tenement Maps"@en .
 
-:Topographic_Surveys a skos:Concept;
+minex:Topographic_Surveys a skos:Concept;
   dct:created "2019-02-06T10:32:05.985+10:00"^^xsd:dateTime;
-  skos:broader :Surveying;
-  skos:inScheme :conceptScheme;
+  skos:broader minex:Surveying;
+  skos:inScheme minex:conceptScheme;
   skos:prefLabel "Topographic Surveys"@en .

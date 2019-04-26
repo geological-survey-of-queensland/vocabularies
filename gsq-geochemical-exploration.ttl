@@ -1,4 +1,3 @@
-@prefix : <http://test.linked.data.gov.au/def/gsq-geochemical-exploration/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -6,81 +5,83 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://test.linked.data.gov.au/def/gsq-geochemical-exploration> a owl:Ontology .
+@prefix gex: <http://linked.data.gov.au/def/geochemical-exploration/> .
 
-:conceptScheme a skos:ConceptScheme;
+<http://linked.data.gov.au/def/geochemical-exploration> a owl:Ontology .
+
+gex:conceptScheme a skos:ConceptScheme;
   dct:created "2019-02-06T11:07:20.065+10:00"^^xsd:dateTime;
   skos:prefLabel "Geochemical Exploration"@en .
 
-:Sampling a skos:Concept;
+gex:Sampling a skos:Concept;
   dct:created "2019-02-06T11:07:42.981+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Sampling"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf gex:conceptScheme .
 
-:Bulk_Sampling a skos:Concept;
+gex:Bulk_Sampling a skos:Concept;
   dct:created "2019-02-06T11:08:00.958+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Bulk Sampling"@en .
 
-:Gas_Sampling a skos:Concept;
+gex:Gas_Sampling a skos:Concept;
   dct:created "2019-02-06T11:08:17.443+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Gas Sampling"@en .
 
-:Grab_Sampling a skos:Concept;
+gex:Grab_Sampling a skos:Concept;
   dct:created "2019-02-06T11:08:29.653+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Grab Sampling"@en .
 
-:Ground_Water_Sampling a skos:Concept;
+gex:Ground_Water_Sampling a skos:Concept;
   dct:created "2019-02-06T11:08:48.581+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Ground Water Sampling"@en .
 
-:Heavy_Mineral_Sampling a skos:Concept;
+gex:Heavy_Mineral_Sampling a skos:Concept;
   dct:created "2019-02-06T11:09:06.078+10:00"^^xsd:dateTime;
   dct:modified "2019-02-06T11:09:55.613+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Heavy Mineral Sampling"@en .
 
-:Panning a skos:Concept;
+gex:Panning a skos:Concept;
   dct:created "2019-02-06T11:09:20.293+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Panning"@en .
 
-:Rock_Chip_Sampling a skos:Concept;
+gex:Rock_Chip_Sampling a skos:Concept;
   dct:created "2019-02-06T11:09:35.149+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Rock Chip Sampling"@en .
 
-:Soil_Sampling a skos:Concept;
+gex:Soil_Sampling a skos:Concept;
   dct:created "2019-02-06T11:10:18.955+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Soil Sampling"@en .
 
-:Stream_Sampling a skos:Concept;
+gex:Stream_Sampling a skos:Concept;
   dct:created "2019-02-06T11:10:27.127+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Stream Sampling"@en .
 
-:Stream_Sediment_Sampling a skos:Concept;
+gex:Stream_Sediment_Sampling a skos:Concept;
   dct:created "2019-02-06T11:10:39.894+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Stream Sediment Sampling"@en .
 
-:Tailings_Sampling a skos:Concept;
+gex:Tailings_Sampling a skos:Concept;
   dct:created "2019-02-06T11:11:00.288+10:00"^^xsd:dateTime;
-  skos:broader :Sampling;
-  skos:inScheme :conceptScheme;
+  skos:broader gex:Sampling;
+  skos:inScheme gex:conceptScheme;
   skos:prefLabel "Tailings Sampling"@en .

@@ -1,4 +1,3 @@
-@prefix : <http://test.linked.data.gov.au/def/gsq-borehole/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -6,50 +5,52 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://test.linked.data.gov.au/def/gsq-borehole> a owl:Ontology .
+@prefix bh: <http://linked.data.gov.au/def/borehole/> .
 
-:conceptScheme a skos:ConceptScheme;
+<http://linked.data.gov.au/def/borehole> a owl:Ontology .
+
+bh:conceptScheme a skos:ConceptScheme;
   dct:created "2019-02-12T15:25:00.297+10:00"^^xsd:dateTime;
   skos:prefLabel "Borehole"@en .
 
-:greenhouse_gas_storage a skos:Concept;
+bh:greenhouse_gas_storage a skos:Concept;
   dct:created "2019-02-12T15:27:52.990+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bh:conceptScheme;
   skos:prefLabel "greenhouse gas storage"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bh:conceptScheme .
 
-:petroleum a skos:Concept;
+bh:petroleum a skos:Concept;
   dct:created "2019-02-12T15:28:11.604+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bh:conceptScheme;
   skos:prefLabel "petroleum"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bh:conceptScheme .
 
-:water a skos:Concept;
+bh:water a skos:Concept;
   dct:created "2019-02-12T15:28:20.477+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bh:conceptScheme;
   skos:prefLabel "water"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bh:conceptScheme .
 
-:stratigraphic a skos:Concept;
+bh:stratigraphic a skos:Concept;
   dct:created "2019-02-12T15:28:29.164+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bh:conceptScheme;
   skos:prefLabel "stratigraphic"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bh:conceptScheme .
 
-:mineral a skos:Concept;
+bh:mineral a skos:Concept;
   dct:created "2019-02-12T15:28:37.833+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bh:conceptScheme;
   skos:prefLabel "mineral"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bh:conceptScheme .
 
-:coal a skos:Concept;
+bh:coal a skos:Concept;
   dct:created "2019-02-12T15:28:57.830+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bh:conceptScheme;
   skos:prefLabel "coal"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bh:conceptScheme .
 
-:coal_seam_gas a skos:Concept;
+bh:coal_seam_gas a skos:Concept;
   dct:created "2019-02-12T15:29:08.256+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme bh:conceptScheme;
   skos:prefLabel "coal seam gas"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf bh:conceptScheme .

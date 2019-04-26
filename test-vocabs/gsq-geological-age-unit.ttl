@@ -1,4 +1,3 @@
-@prefix : <http://test.linked.data.gov.au/def/gsq-age-unit/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -6,27 +5,29 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://test.linked.data.gov.au/def/gsq-age-unit> a owl:Ontology .
+@prefix gage: <http://linked.data.gov.au/def/geological-age-unit/> .
 
-:conceptScheme a skos:ConceptScheme;
+<http://linked.data.gov.au/def/geological-age-unit> a owl:Ontology .
+
+gage:conceptScheme a skos:ConceptScheme;
   dct:created "2019-02-12T12:06:51.310+10:00"^^xsd:dateTime;
   skos:prefLabel "Age Units"@en ;
   rdfs:comment "A vocabulary of units of geological age" .
 
-:one a skos:Concept;
+gage:one a skos:Concept;
   dct:created "2019-02-12T12:07:07.390+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme gage:conceptScheme;
   skos:prefLabel "One"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf gage:conceptScheme .
 
-:two a skos:Concept;
+gage:two a skos:Concept;
   dct:created "2019-02-12T12:07:20.911+10:00"^^xsd:dateTime;
-  skos:inScheme :conceptScheme;
+  skos:inScheme gage:conceptScheme;
   skos:prefLabel "Two"@en;
-  skos:topConceptOf :conceptScheme .
+  skos:topConceptOf gage:conceptScheme .
 
-:three a skos:Concept;
+gage:three a skos:Concept;
   dct:created "2019-02-12T12:07:54.281+10:00"^^xsd:dateTime;
-  skos:broader :c_0d0f568e;
-  skos:inScheme :conceptScheme;
+  skos:broader gage:teo;
+  skos:inScheme gage:conceptScheme;
   skos:prefLabel "Three"@en .
