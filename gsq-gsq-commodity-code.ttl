@@ -11,6 +11,11 @@
 
 <http://linked.data.gov.au/def/gsq-commodity-code> a owl:Ontology .
 
+gsqcc:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-02-27T14:43:40.371000+10:00"^^xsd:dateTime ;
+    skos:prefLabel "GSQ Commodity Code"@en ;
+    dct:description "The Geological Survey of Queensland's codes used to identify geological commodities"@en .
+
 gsqcc:acmite a skos:Concept ;
     skos:altLabel "ACM" ;
     skos:prefLabel "Acmite" ;
@@ -18,7 +23,7 @@ gsqcc:acmite a skos:Concept ;
 
 gsqcc:actinolite a skos:Concept ;
     skos:altLabel "ACT" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#tremolite> ;
+    skos:closeMatch cgicc:tremolite ; ;
     skos:prefLabel "Actinolite" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
@@ -34,7 +39,7 @@ gsqcc:aegirine a skos:Concept ;
 
 gsqcc:agate a skos:Concept ;
     skos:altLabel "AE" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#chalcedony> ;
+    skos:broader gsqcc:chalcedony ;
     skos:exactMatch cgicc:agate ;
     skos:notation "Agt" ;
     skos:prefLabel "Agate" ;
@@ -120,7 +125,7 @@ gsqcc:amblygonite a skos:Concept ;
 
 gsqcc:amethyst a skos:Concept ;
     skos:altLabel "AME" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#quartz-gemstone> ;
+    skos:broader gsqcc:quartz-gemstone ;
     skos:exactMatch cgicc:amethyst ;
     skos:notation "Amt" ;
     skos:prefLabel "Amethyst" ;
@@ -128,7 +133,7 @@ gsqcc:amethyst a skos:Concept ;
 
 gsqcc:amphibole a skos:Concept ;
     skos:altLabel "AMPH" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#asbestos> ;
+    skos:broader gsqcc:asbestos ;
     skos:exactMatch cgicc:asbestos-amphibole ;
     skos:notation "AsbA" ;
     skos:prefLabel "Amphibole" ;
@@ -166,7 +171,7 @@ gsqcc:anglesite a skos:Concept ;
 
 gsqcc:anhydrite a skos:Concept ;
     skos:altLabel "ANHY" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#evaporite> ;
+    skos:broader gsqcc:evaporite ;
     skos:exactMatch cgicc:anhydrite ;
     skos:notation "Anhd" ;
     skos:prefLabel "Anhydrite" ;
@@ -194,7 +199,7 @@ gsqcc:anorthoclase a skos:Concept ;
 
 gsqcc:anthophyllite a skos:Concept ;
     skos:altLabel "APHY" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#amphibole> ;
+    skos:broader gsqcc:amphibole ;
     skos:exactMatch cgicc:anthophyllite ;
     skos:notation "Ant" ;
     skos:prefLabel "Anthophyllite" ;
@@ -202,7 +207,7 @@ gsqcc:anthophyllite a skos:Concept ;
 
 gsqcc:anthracite a skos:Concept ;
     skos:altLabel "CBA" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:exactMatch cgicc:anthracite ;
     skos:notation "Anthr" ;
     skos:prefLabel "Anthracite" ;
@@ -234,7 +239,7 @@ gsqcc:apatite a skos:Concept ;
 
 gsqcc:aquamarine a skos:Concept ;
     skos:altLabel "AQUA" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#beryl> ;
+    skos:broader gsqcc:beryl ;
     skos:exactMatch cgicc:aquamarine ;
     skos:notation "AgM" ;
     skos:prefLabel "Aquamarine" ;
@@ -342,7 +347,7 @@ gsqcc:bauxite a skos:Concept ;
 
 gsqcc:bentonite a skos:Concept ;
     skos:altLabel "BENT" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#fullers-earth> ;
+    skos:broader gsqcc:fullers-earth ;
     skos:exactMatch cgicc:bentonite ;
     skos:notation "Bent" ;
     skos:prefLabel "Bentonite" ;
@@ -355,7 +360,7 @@ gsqcc:bertrandite a skos:Concept ;
 
 gsqcc:beryl a skos:Concept ;
     skos:altLabel "BER" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:beryl ;
     skos:notation "Brl" ;
     skos:prefLabel "Beryl" ;
@@ -414,7 +419,7 @@ gsqcc:bitumen-c170 a skos:Concept ;
 
 gsqcc:black-coal a skos:Concept ;
     skos:altLabel "CB" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:exactMatch cgicc:black-coal ;
     skos:notation "BlcC" ;
     skos:prefLabel "Black Coal" ;
@@ -467,7 +472,7 @@ gsqcc:braunite a skos:Concept ;
 
 gsqcc:brick-clay a skos:Concept ;
     skos:altLabel "BKCY" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#clay> ;
+    skos:broader gsqcc:clay ;
     skos:exactMatch cgicc:brick-clay ;
     skos:notation "Bclay" ;
     skos:prefLabel "Brick Clay" ;
@@ -475,7 +480,7 @@ gsqcc:brick-clay a skos:Concept ;
 
 gsqcc:brine-salt a skos:Concept ;
     skos:altLabel "SALT" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#evaporite> ;
+    skos:broader gsqcc:evaporite ;
     skos:closeMatch cgicc:salt ;
     skos:notation "Salt" ;
     skos:prefLabel "Brine Salt" ;
@@ -510,7 +515,7 @@ gsqcc:brookite a skos:Concept ;
 
 gsqcc:brown-coal a skos:Concept ;
     skos:altLabel "CWB" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:exactMatch cgicc:brown-coal ;
     skos:notation "BrnC" ;
     skos:prefLabel "Brown Coal" ;
@@ -523,7 +528,7 @@ gsqcc:brucite a skos:Concept ;
 
 gsqcc:building-stone a skos:Concept ;
     skos:altLabel "BLST" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#dimension-stone> ;
+    skos:closeMatch cgicc:dimension-stone ; ;
     skos:prefLabel "Building Stone" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
@@ -566,7 +571,7 @@ gsqcc:calc-silicates a skos:Concept ;
 
 gsqcc:calcareous-sand a skos:Concept ;
     skos:altLabel "CSAN" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#sand> ;
+    skos:broader gsqcc:sand ;
     skos:prefLabel "Calcareous Sand" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
@@ -619,7 +624,7 @@ gsqcc:carnotite a skos:Concept ;
 
 gsqcc:cassiterite a skos:Concept ;
     skos:altLabel "CST" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:cassiterite-gemstone ;
     skos:notation "CassGe" ;
     skos:prefLabel "Cassiterite" ;
@@ -642,7 +647,7 @@ gsqcc:cerargyrite a skos:Concept ;
 
 gsqcc:cerium a skos:Concept ;
     skos:altLabel "CE" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:cerium ;
     skos:notation "Ce" ;
     skos:prefLabel "Cerium" ;
@@ -675,7 +680,7 @@ gsqcc:chalcanthite a skos:Concept ;
 
 gsqcc:chalcedony a skos:Concept ;
     skos:altLabel "CHDY" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#silica-gemstone> ;
+    skos:broader gsqcc:silica-gemstone ;
     skos:exactMatch cgicc:chalcedony ;
     skos:notation "Chlce" ;
     skos:prefLabel "Chalcedony" ;
@@ -728,7 +733,7 @@ gsqcc:chenevixite a skos:Concept ;
 
 gsqcc:chert a skos:Concept ;
     skos:altLabel "CHRT" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#silica> ;
+    skos:broader gsqcc:silica ;
     skos:exactMatch cgicc:chert ;
     skos:notation "Chrt" ;
     skos:prefLabel "Chert" ;
@@ -777,7 +782,7 @@ gsqcc:chromium a skos:Concept ;
 
 gsqcc:chrysoberyl a skos:Concept ;
     skos:altLabel "CBE" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:chrysoberyl ;
     skos:notation "CBrl" ;
     skos:prefLabel "Chrysoberyl" ;
@@ -790,7 +795,7 @@ gsqcc:chrysocolla a skos:Concept ;
 
 gsqcc:chrysoprase a skos:Concept ;
     skos:altLabel "CHRY" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#chalcedony> ;
+    skos:broader gsqcc:chalcedony ;
     skos:exactMatch cgicc:chrysoprase ;
     skos:notation "Chrys" ;
     skos:prefLabel "Chrysoprase" ;
@@ -798,7 +803,7 @@ gsqcc:chrysoprase a skos:Concept ;
 
 gsqcc:chrysotile a skos:Concept ;
     skos:altLabel "CHYL" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#asbestos-serpentine> ;
+    skos:broader gsqcc:asbestos-serpentine ;
     skos:exactMatch cgicc:chrysotile ;
     skos:notation "Chr" ;
     skos:prefLabel "Chrysotile" ;
@@ -835,49 +840,49 @@ gsqcc:coal a skos:Concept ;
 
 gsqcc:coal-coking-and-pci-coal a skos:Concept ;
     skos:altLabel "CPC" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:prefLabel "Coal, Coking And Pci Coal" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
 gsqcc:coal-coking-coal a skos:Concept ;
     skos:altLabel "CCOK" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:prefLabel "Coal, Coking Coal" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
 gsqcc:coal-coking-thermal-and-pci a skos:Concept ;
     skos:altLabel "CTP" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:prefLabel "Coal, Coking, Thermal And Pci" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
 gsqcc:coal-noncoking-thermal-coal a skos:Concept ;
     skos:altLabel "CNC" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:prefLabel "Coal Noncoking (Thermal Coal)" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
 gsqcc:coal-other-low-rank-and-coaliferous-materials a skos:Concept ;
     skos:altLabel "CW" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:prefLabel "Coal, Other Low Rank And Coaliferous Materials" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
 gsqcc:coal-pulverised-coal-injection a skos:Concept ;
     skos:altLabel "PCI" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:prefLabel "Coal, Pulverised Coal Injection" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
 gsqcc:coal-thermal-and-coking a skos:Concept ;
     skos:altLabel "THC" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:prefLabel "Coal, Thermal  And Coking" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
 gsqcc:coal-thermal-and-pci a skos:Concept ;
     skos:altLabel "THP" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:prefLabel "Coal, Thermal And Pci" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
@@ -946,7 +951,7 @@ gsqcc:coral a skos:Concept ;
 
 gsqcc:cordierite a skos:Concept ;
     skos:altLabel "CORD" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:iolite ;
     skos:notation "Cord" ;
     skos:prefLabel "Cordierite" ;
@@ -986,7 +991,7 @@ gsqcc:cristobalite a skos:Concept ;
 
 gsqcc:crocidolite a skos:Concept ;
     skos:altLabel "CRC" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#asbestos-amphibole> ;
+    skos:broader gsqcc:asbestos-amphibole ;
     skos:exactMatch cgicc:crocidolite ;
     skos:notation "Cro" ;
     skos:prefLabel "Crocidolite" ;
@@ -1060,13 +1065,13 @@ gsqcc:digenite a skos:Concept ;
 
 gsqcc:diopside a skos:Concept ;
     skos:altLabel "DI" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#enstatite> ;
+    skos:closeMatch cgicc:enstatite ; ;
     skos:prefLabel "Diopside" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
 gsqcc:dioptase a skos:Concept ;
     skos:altLabel "DPT" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:dioptase ;
     skos:notation "Diop" ;
     skos:prefLabel "Dioptase" ;
@@ -1089,7 +1094,7 @@ gsqcc:dyscrasite a skos:Concept ;
 
 gsqcc:dysprosium a skos:Concept ;
     skos:altLabel "DY" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:dysprosium ;
     skos:notation "Dy" ;
     skos:prefLabel "Dysprosium" ;
@@ -1112,7 +1117,7 @@ gsqcc:electrum a skos:Concept ;
 
 gsqcc:emerald a skos:Concept ;
     skos:altLabel "EMD" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#beryl> ;
+    skos:broader gsqcc:beryl ;
     skos:exactMatch cgicc:emerald ;
     skos:notation "Em" ;
     skos:prefLabel "Emerald" ;
@@ -1130,7 +1135,7 @@ gsqcc:enargite a skos:Concept ;
 
 gsqcc:enstatite a skos:Concept ;
     skos:altLabel "ENST" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:diopside-enstatite ;
     skos:notation "Enst" ;
     skos:prefLabel "Enstatite" ;
@@ -1150,7 +1155,7 @@ gsqcc:epsomite a skos:Concept ;
 
 gsqcc:erbium a skos:Concept ;
     skos:altLabel "ER" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:erbium ;
     skos:notation "Er" ;
     skos:prefLabel "Erbium" ;
@@ -1168,7 +1173,7 @@ gsqcc:erythrite a skos:Concept ;
 
 gsqcc:europium a skos:Concept ;
     skos:altLabel "EU" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:europium ;
     skos:notation "Eu" ;
     skos:prefLabel "Europium" ;
@@ -1254,7 +1259,7 @@ gsqcc:forsterite a skos:Concept ;
 
 gsqcc:foundry-sand a skos:Concept ;
     skos:altLabel "SF" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#sand> ;
+    skos:broader gsqcc:sand ;
     skos:exactMatch cgicc:foundry-sand ;
     skos:notation "Fsand" ;
     skos:prefLabel "Foundry Sand" ;
@@ -1282,7 +1287,7 @@ gsqcc:fuchsite a skos:Concept ;
 
 gsqcc:fullers-earth a skos:Concept ;
     skos:altLabel "CF" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#clay> ;
+    skos:broader gsqcc:clay ;
     skos:exactMatch cgicc:fullers-earth ;
     skos:notation "Feart" ;
     skos:prefLabel "Fullers Earth" ;
@@ -1290,7 +1295,7 @@ gsqcc:fullers-earth a skos:Concept ;
 
 gsqcc:gadolinium a skos:Concept ;
     skos:altLabel "GD" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:gadolinium ;
     skos:notation "Gd" ;
     skos:prefLabel "Gadolinium" ;
@@ -1435,7 +1440,7 @@ gsqcc:gummite a skos:Concept ;
 
 gsqcc:gypsum a skos:Concept ;
     skos:altLabel "GYP" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#evaporite> ;
+    skos:broader gsqcc:evaporite ;
     skos:exactMatch cgicc:gypsum ;
     skos:notation "Gp" ;
     skos:prefLabel "Gypsum" ;
@@ -1449,7 +1454,7 @@ gsqcc:halite a skos:Concept ;
 
 gsqcc:halloysite a skos:Concept ;
     skos:altLabel "HLY" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#clay> ;
+    skos:broader gsqcc:clay ;
     skos:exactMatch cgicc:halloysite ;
     skos:notation "Hall" ;
     skos:prefLabel "Halloysite" ;
@@ -1504,7 +1509,7 @@ gsqcc:heulandite a skos:Concept ;
 
 gsqcc:holmium a skos:Concept ;
     skos:altLabel "HO" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:holmium ;
     skos:notation "Ho" ;
     skos:prefLabel "Holmium" ;
@@ -1610,7 +1615,7 @@ gsqcc:jacobsite a skos:Concept ;
 
 gsqcc:jade-jadeite a skos:Concept ;
     skos:altLabel "JD" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:jade ;
     skos:notation "Jade" ;
     skos:prefLabel "Jade / Jadeite" ;
@@ -1640,7 +1645,7 @@ gsqcc:joseite a skos:Concept ;
 
 gsqcc:kaolin-kaolinite a skos:Concept ;
     skos:altLabel "KAO" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#clay> ;
+    skos:broader gsqcc:clay ;
     skos:exactMatch cgicc:kaolin ;
     skos:notation "Kaol" ;
     skos:prefLabel "Kaolin / Kaolinite" ;
@@ -1665,7 +1670,7 @@ gsqcc:labradorite a skos:Concept ;
 
 gsqcc:lanthanum a skos:Concept ;
     skos:altLabel "LAN" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:lanthanum ;
     skos:notation "La" ;
     skos:prefLabel "Lanthanum" ;
@@ -1693,7 +1698,7 @@ gsqcc:lawsonite a skos:Concept ;
 
 gsqcc:lazulite a skos:Concept ;
     skos:altLabel "LZL" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:lazulite ;
     skos:notation "Lz" ;
     skos:prefLabel "Lazulite" ;
@@ -1735,7 +1740,7 @@ gsqcc:leucoxene a skos:Concept ;
 
 gsqcc:lignite a skos:Concept ;
     skos:altLabel "CLIG" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#coal> ;
+    skos:broader gsqcc:coal ;
     skos:exactMatch cgicc:brown-coal ;
     skos:notation "BrnC" ;
     skos:prefLabel "Lignite" ;
@@ -1779,7 +1784,7 @@ gsqcc:lump-silica a skos:Concept ;
 
 gsqcc:lutetium a skos:Concept ;
     skos:altLabel "LU" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:lutetium ;
     skos:notation "Lu" ;
     skos:prefLabel "Lutetium" ;
@@ -1818,7 +1823,7 @@ gsqcc:magnetite a skos:Concept ;
 
 gsqcc:malachite a skos:Concept ;
     skos:altLabel "MAL" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:malachite ;
     skos:notation "Mal" ;
     skos:prefLabel "Malachite" ;
@@ -2022,7 +2027,7 @@ gsqcc:neodiginite a skos:Concept ;
 
 gsqcc:neodymium a skos:Concept ;
     skos:altLabel "ND" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:neodymium ;
     skos:notation "Nd" ;
     skos:prefLabel "Neodymium" ;
@@ -2054,7 +2059,7 @@ gsqcc:niobium-columbium a skos:Concept ;
 
 gsqcc:obsidian a skos:Concept ;
     skos:altLabel "OB" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:obsidian ;
     skos:notation "Obs" ;
     skos:prefLabel "Obsidian" ;
@@ -2062,7 +2067,7 @@ gsqcc:obsidian a skos:Concept ;
 
 gsqcc:ochre a skos:Concept ;
     skos:altLabel "OC" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#iron-oxide> ;
+    skos:broader gsqcc:iron-oxide ;
     skos:exactMatch cgicc:ochre ;
     skos:notation "Ochr" ;
     skos:prefLabel "Ochre" ;
@@ -2070,7 +2075,7 @@ gsqcc:ochre a skos:Concept ;
 
 gsqcc:oil a skos:Concept ;
     skos:altLabel "OIL" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#petroleum> ;
+    skos:narrowMatch cgicc:petroleum ; ;
     skos:exactMatch cgicc:oil ;
     skos:notation "Oil" ;
     skos:prefLabel "Oil" ;
@@ -2090,7 +2095,7 @@ gsqcc:oligoclase a skos:Concept ;
 
 gsqcc:olivine a skos:Concept ;
     skos:altLabel "OLN" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#peridot> ;
+    skos:closeMatch cgicc:peridot ; ;
     skos:exactMatch cgicc:olivine ;
     skos:notation "Olv" ;
     skos:prefLabel "Olivine" ;
@@ -2103,7 +2108,7 @@ gsqcc:olivinite a skos:Concept ;
 
 gsqcc:opal a skos:Concept ;
     skos:altLabel "OP" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#silica-gemstone> ;
+    skos:broader gsqcc:silica-gemstone ;
     skos:exactMatch cgicc:opal ;
     skos:notation "Opal" ;
     skos:prefLabel "Opal" ;
@@ -2150,7 +2155,7 @@ gsqcc:palladium a skos:Concept ;
 
 gsqcc:palygorskite a skos:Concept ;
     skos:altLabel "PG" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#fullers-earth> ;
+    skos:broader gsqcc:fullers-earth ;
     skos:exactMatch cgicc:palygorskite ;
     skos:notation "Palyg" ;
     skos:prefLabel "Palygorskite" ;
@@ -2180,8 +2185,8 @@ gsqcc:periclase a skos:Concept ;
 
 gsqcc:peridot a skos:Concept ;
     skos:altLabel "PERD" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#olivine> ;
+    skos:broader gsqcc:gemstone ;
+    skos:closeMatch cgicc:olivine ; ;
     skos:exactMatch cgicc:olivine-gemstone ;
     skos:notation "OlvGe" ;
     skos:prefLabel "Peridot" ;
@@ -2206,7 +2211,7 @@ gsqcc:petrified-wood a skos:Concept ;
 
 gsqcc:petroleum a skos:Concept ;
     skos:altLabel "PETROL" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#oil> ;
+    skos:broadMatch cgicc:oil ; ;
     skos:prefLabel "Petroleum" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
@@ -2306,7 +2311,7 @@ gsqcc:potassium-potash a skos:Concept ;
 
 gsqcc:pottery-clay a skos:Concept ;
     skos:altLabel "CP" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#clay> ;
+    skos:broader gsqcc:clay ;
     skos:prefLabel "Pottery Clay" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
@@ -2324,7 +2329,7 @@ gsqcc:pozzolan a skos:Concept ;
 
 gsqcc:praseodymium a skos:Concept ;
     skos:altLabel "PR" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:praseodymium ;
     skos:notation "Pr" ;
     skos:prefLabel "Praseodymium" ;
@@ -2337,7 +2342,7 @@ gsqcc:praseodymium-oxide a skos:Concept ;
 
 gsqcc:prehnite a skos:Concept ;
     skos:altLabel "PREH" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:prehnite ;
     skos:notation "Preh" ;
     skos:prefLabel "Prehnite" ;
@@ -2345,7 +2350,7 @@ gsqcc:prehnite a skos:Concept ;
 
 gsqcc:promethium a skos:Concept ;
     skos:altLabel "PM" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:promethium ;
     skos:notation "Pm" ;
     skos:prefLabel "Promethium" ;
@@ -2439,7 +2444,7 @@ gsqcc:quartzite a skos:Concept ;
 
 gsqcc:rare-earth-elements a skos:Concept ;
     skos:altLabel "REE" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earths> ;
+    skos:closeMatch cgicc:rare-earths ; ;
     skos:exactMatch cgicc:rare-earth-element ;
     skos:notation "REE" ;
     skos:prefLabel "Rare Earth Elements" ;
@@ -2447,7 +2452,7 @@ gsqcc:rare-earth-elements a skos:Concept ;
 
 gsqcc:rare-earths a skos:Concept ;
     skos:altLabel "RE" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:closeMatch cgicc:rare-earth-elements ; ;
     skos:prefLabel "Rare Earths" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
@@ -2492,7 +2497,7 @@ gsqcc:rhodolite a skos:Concept ;
 
 gsqcc:rhodonite a skos:Concept ;
     skos:altLabel "RHN" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:rhodonite ;
     skos:notation "Rhod" ;
     skos:prefLabel "Rhodonite" ;
@@ -2520,7 +2525,7 @@ gsqcc:road-pavement-gravel a skos:Concept ;
 
 gsqcc:ruby a skos:Concept ;
     skos:altLabel "RUBY" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:ruby ;
     skos:notation "Rub" ;
     skos:prefLabel "Ruby" ;
@@ -2542,7 +2547,7 @@ gsqcc:rutile a skos:Concept ;
 
 gsqcc:salt a skos:Concept ;
     skos:altLabel "NACL" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#evaporite> ;
+    skos:broader gsqcc:evaporite ;
     skos:exactMatch cgicc:salt ;
     skos:notation "Salt" ;
     skos:prefLabel "Salt" ;
@@ -2550,7 +2555,7 @@ gsqcc:salt a skos:Concept ;
 
 gsqcc:samarium a skos:Concept ;
     skos:altLabel "SM" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:samarium ;
     skos:notation "Sm" ;
     skos:prefLabel "Samarium" ;
@@ -2563,7 +2568,7 @@ gsqcc:samarium-oxide a skos:Concept ;
 
 gsqcc:sand a skos:Concept ;
     skos:altLabel "SD" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#sand-and-gravel> ;
+    skos:broader gsqcc:sand-and-gravel ;
     skos:exactMatch cgicc:sand ;
     skos:notation "Sand" ;
     skos:prefLabel "Sand" ;
@@ -2588,7 +2593,7 @@ gsqcc:sanidine a skos:Concept ;
 
 gsqcc:sapphire a skos:Concept ;
     skos:altLabel "SAPP" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#corundum-gemstone> ;
+    skos:broader gsqcc:corundum-gemstone ;
     skos:exactMatch cgicc:sapphire ;
     skos:notation "Saph" ;
     skos:prefLabel "Sapphire" ;
@@ -2603,7 +2608,7 @@ gsqcc:scandium a skos:Concept ;
 
 gsqcc:scapolite a skos:Concept ;
     skos:altLabel "SCAP" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:scapolite ;
     skos:notation "Scap" ;
     skos:prefLabel "Scapolite" ;
@@ -2732,7 +2737,7 @@ gsqcc:smithsonite a skos:Concept ;
 
 gsqcc:soda-ash a skos:Concept ;
     skos:altLabel "SODA" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#sodium-bicarbonate> ;
+    skos:closeMatch cgicc:sodium-bicarbonate ; ;
     skos:exactMatch cgicc:soda-ash ;
     skos:notation "Natr" ;
     skos:prefLabel "Soda Ash" ;
@@ -2740,7 +2745,7 @@ gsqcc:soda-ash a skos:Concept ;
 
 gsqcc:sodalite a skos:Concept ;
     skos:altLabel "SOD" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:sodalite ;
     skos:notation "Sod" ;
     skos:prefLabel "Sodalite" ;
@@ -2790,7 +2795,7 @@ gsqcc:spinel a skos:Concept ;
 
 gsqcc:spodumene a skos:Concept ;
     skos:altLabel "SPOD" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:spodumene ;
     skos:notation "Spod" ;
     skos:prefLabel "Spodumene" ;
@@ -2881,7 +2886,7 @@ gsqcc:sylvanite a skos:Concept ;
 
 gsqcc:sylvite a skos:Concept ;
     skos:altLabel "SYV" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#evaporite> ;
+    skos:broader gsqcc:evaporite ;
     skos:exactMatch cgicc:sylvite ;
     skos:notation "Sylv" ;
     skos:prefLabel "Sylvite" ;
@@ -2889,7 +2894,7 @@ gsqcc:sylvite a skos:Concept ;
 
 gsqcc:talc-steatite a skos:Concept ;
     skos:altLabel "TC" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#steatite-talc> ;
+    skos:closeMatch cgicc:steatite-talc ; ;
     skos:exactMatch cgicc:talc ;
     skos:notation "Tlc" ;
     skos:prefLabel "Talc (Steatite)" ;
@@ -2936,7 +2941,7 @@ gsqcc:tenorite a skos:Concept ;
 
 gsqcc:terbium a skos:Concept ;
     skos:altLabel "TB" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:terbium ;
     skos:notation "Tb" ;
     skos:prefLabel "Terbium" ;
@@ -2978,7 +2983,7 @@ gsqcc:thorium a skos:Concept ;
 
 gsqcc:thulium a skos:Concept ;
     skos:altLabel "TM" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:thulium ;
     skos:notation "Tm" ;
     skos:prefLabel "Thulium" ;
@@ -3015,7 +3020,7 @@ gsqcc:titanomagnetite a skos:Concept ;
 
 gsqcc:topaz a skos:Concept ;
     skos:altLabel "TPZ" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:topaz ;
     skos:notation "Tpz" ;
     skos:prefLabel "Topaz" ;
@@ -3033,7 +3038,7 @@ gsqcc:torbernite a skos:Concept ;
 
 gsqcc:tourmaline a skos:Concept ;
     skos:altLabel "TOU" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:tourmaline ;
     skos:notation "To" ;
     skos:prefLabel "Tourmaline" ;
@@ -3041,7 +3046,7 @@ gsqcc:tourmaline a skos:Concept ;
 
 gsqcc:tremolite a skos:Concept ;
     skos:altLabel "TREM" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#actinolite> ;
+    skos:closeMatch cgicc:actinolite ; ;
     skos:exactMatch cgicc:tremolite-actinolite ;
     skos:notation "Trem" ;
     skos:prefLabel "Tremolite" ;
@@ -3054,7 +3059,7 @@ gsqcc:tridymite a skos:Concept ;
 
 gsqcc:tungsten a skos:Concept ;
     skos:altLabel "W" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#wolframite> ;
+    skos:closeMatch cgicc:wolframite ; ;
     skos:exactMatch cgicc:tungsten ;
     skos:notation "W" ;
     skos:prefLabel "Tungsten" ;
@@ -3077,7 +3082,7 @@ gsqcc:turgite a skos:Concept ;
 
 gsqcc:turquoise a skos:Concept ;
     skos:altLabel "TQ" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:turquoise ;
     skos:notation "Turq" ;
     skos:prefLabel "Turquoise" ;
@@ -3141,7 +3146,7 @@ gsqcc:vanadium-oxide a skos:Concept ;
 
 gsqcc:variscite a skos:Concept ;
     skos:altLabel "VAS" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:variscite ;
     skos:notation "Varis" ;
     skos:prefLabel "Variscite" ;
@@ -3156,7 +3161,7 @@ gsqcc:vermiculite a skos:Concept ;
 
 gsqcc:vesuvianite a skos:Concept ;
     skos:altLabel "VSV" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:vesuvianite ;
     skos:notation "Vesu" ;
     skos:prefLabel "Vesuvianite" ;
@@ -3194,7 +3199,7 @@ gsqcc:witherite a skos:Concept ;
 
 gsqcc:wolframite a skos:Concept ;
     skos:altLabel "WOLF" ;
-    skos:closeMatch <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#tungsten> ;
+    skos:closeMatch cgicc:tungsten ; ;
     skos:prefLabel "Wolframite" ;
     skos:topConceptOf gsqcc:conceptScheme .
 
@@ -3222,7 +3227,7 @@ gsqcc:xenon a skos:Concept ;
 
 gsqcc:xenotime a skos:Concept ;
     skos:altLabel "XEN" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#gemstone> ;
+    skos:broader gsqcc:gemstone ;
     skos:exactMatch cgicc:xenotime-gemstone ;
     skos:notation "XenoGe" ;
     skos:prefLabel "Xenotime" ;
@@ -3230,7 +3235,7 @@ gsqcc:xenotime a skos:Concept ;
 
 gsqcc:ytterbium a skos:Concept ;
     skos:altLabel "YB" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:ytterbium ;
     skos:notation "Yb" ;
     skos:prefLabel "Ytterbium" ;
@@ -3238,7 +3243,7 @@ gsqcc:ytterbium a skos:Concept ;
 
 gsqcc:yttrium a skos:Concept ;
     skos:altLabel "Y" ;
-    skos:broader <file:///base/data/home/apps/s%7Erdf-translator/2.408516547054015808/#rare-earth-elements> ;
+    skos:broader gsqcc:rare-earth-elements ;
     skos:exactMatch cgicc:yttrium ;
     skos:notation "Y" ;
     skos:prefLabel "Yttrium" ;
@@ -3303,7 +3308,3 @@ gsqcc:zunyite a skos:Concept ;
     skos:altLabel "FIEL" ;
     skos:prefLabel "Zunyite" ;
     skos:topConceptOf gsqcc:conceptScheme .
-
-gsqcc:conceptScheme a skos:ConceptScheme ;
-    dct:created "2019-02-27T14:43:40.371000+10:00"^^xsd:dateTime ;
-    skos:prefLabel "Commodity Code"@en .

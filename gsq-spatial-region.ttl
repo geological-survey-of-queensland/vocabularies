@@ -1,0 +1,40 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix luc: <http://www.ontotext.com/owlim/lucene#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ssdim: <http://linked.data.gov.au/def/spatial-region/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+<http://linked.data.gov.au/def/spatial-region> a owl:Ontology .
+
+ssdim:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-04-09T16:36:38.722000+10:00"^^xsd:dateTime ;
+    skos:prefLabel "Spatial Region"@en ;
+    dct:description "Types of regions of space classified by dimensionality. These classifications are taken from the Basic Formal Ontology's Spatial Region class hierarchy"@en ;
+    skos:usageNote "Use this vocabulary when you want to indicate the spatial dimensionality of something"@en ;
+    dct:source <https://github.com/BFO-ontology/BFO> .
+
+obo:BFO_0000026 a skos:Concept ;
+    skos:prefLabel "one-dimensional spatial region"@en ;
+    skos:altLabel "1D" ;
+    skos:topConceptOf ssdim:conceptScheme .
+
+obo:BFO_0000009 a skos:Concept ;
+    skos:prefLabel "two-dimensional spatial region"@en ;
+    skos:altLabel "2D space" ;
+    skos:topConceptOf ssdim:conceptScheme .
+
+obo:BFO_0000028 a skos:Concept ;
+    skos:prefLabel "three-dimensional spatial region"@en ;
+    skos:altLabel "3D space" ;
+    skos:topConceptOf ssdim:conceptScheme .

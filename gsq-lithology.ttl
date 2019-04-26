@@ -12,6 +12,12 @@
 
 <http://linked.data.gov.au/def/gsq-lithology> a owl:Ontology .
 
+gsqlith:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-01-29T15:07:14.470000+10:00"^^xsd:dateTime ;
+    dct:source "MERLIN" ;
+    skos:prefLabel "GSQ Lithology"@en ;
+    dct:description "Lithology terms recognised by the Geological Survey of Queensland"@en .
+
 gsqlith:adamellite a skos:Concept ;
     skos:altLabel "ADML" ;
     skos:broader gsqlith:quartz-monzonite ;
@@ -1657,8 +1663,3 @@ gsqlith:zeolite a skos:Concept ;
     skos:closeMatch lith:residual_material ;
     skos:inScheme gsqlith:conceptScheme ;
     skos:prefLabel "Zeolite" .
-
-gsqlith:conceptScheme a skos:ConceptScheme ;
-    dct:created "2019-01-29T15:07:14.470000+10:00"^^xsd:dateTime ;
-    dct:source "MERLIN" ;
-    skos:prefLabel "Lithology"@en .

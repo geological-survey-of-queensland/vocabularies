@@ -9,13 +9,23 @@
 
 <http://linked.data.gov.au/def/data-access> a owl:Ontology .
 
+data-access:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-04-03T15:11:58.506000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-09T13:21:38.815000+10:00"^^xsd:dateTime ;
+    dct:description "The Data Access vocabulary defines concepts to declare the access status of a resource"@en ;
+    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
+    dct:source <http://vocabularies.coar-repositories.org/documentation/access_rights/> ;
+    skos:prefLabel "Data Access Rights"@en ;
+    owl:sameAs <> .
+
 data-access:embargoed a skos:Concept ;
     dct:created "2019-04-03T15:16:48.158000+10:00"^^xsd:dateTime ;
     dct:modified "2019-04-12T11:18:36.024000+10:00"^^xsd:dateTime ;
     skos:definition "Embargoed access refers to a resource that is metadata only access until released for open access on a certain date. Embargoes can be required by regulation or policies, or set by the author."@en ;
     skos:inScheme data-access:conceptScheme ;
     skos:prefLabel "Embargoed access"@en ;
-    skos:topConceptOf data-access:conceptScheme .
+    skos:topConceptOf data-access:conceptScheme ;
+    owl:sameAs <http://purl.org/coar/access_right/c_f1cf> .
 
 data-access:metadata-only a skos:Concept ;
     dct:created "2019-04-03T15:18:06.745000+10:00"^^xsd:dateTime ;
@@ -23,7 +33,8 @@ data-access:metadata-only a skos:Concept ;
     skos:definition "Metadata only access refers to a resource in which access is limited to metadata only. The resource itself is described by the metadata, but neither is directly available through the system or platform nor can be referenced to an open access copy in an external journal or trustworthy archive."@en ;
     skos:inScheme data-access:conceptScheme ;
     skos:prefLabel "Metadata only access"@en ;
-    skos:topConceptOf data-access:conceptScheme .
+    skos:topConceptOf data-access:conceptScheme ;
+    owl:sameAs <http://purl.org/coar/access_right/c_14cb> .
 
 data-access:open a skos:Concept ;
     dct:created "2019-04-03T15:13:27.034000+10:00"^^xsd:dateTime ;
@@ -32,7 +43,8 @@ data-access:open a skos:Concept ;
     skos:definition "Open access refers to a resource that is immediately and permanently online, and free for all on the Web, without financial and technical barriers.The resource is either stored in the repository or referenced to an external journal or trustworthy archive."@en ;
     skos:inScheme data-access:conceptScheme ;
     skos:prefLabel "Open access"@en ;
-    skos:topConceptOf data-access:conceptScheme .
+    skos:topConceptOf data-access:conceptScheme ;
+    owl:sameAs <http://purl.org/coar/access_right/c_abf2> .
 
 data-access:restricted a skos:Concept ;
     dct:created "2019-04-03T15:17:16.263000+10:00"^^xsd:dateTime ;
@@ -40,14 +52,8 @@ data-access:restricted a skos:Concept ;
     skos:definition "Restricted access refers to a resource that is available in a system but with some type of restriction for full open access. This type of access can occur in a number of different situations. Some examples are described below: The user must log-in to the system in order to access the resource; The user must send an email to the author or system administrator to access the resource; Access to the resource is restricted to a specific community (e.g. limited to GSQ)"@en ;
     skos:inScheme data-access:conceptScheme ;
     skos:prefLabel "Restricted access"@en ;
-    skos:topConceptOf data-access:conceptScheme .
-
-data-access:conceptScheme a skos:ConceptScheme ;
-    dct:created "2019-04-03T15:11:58.506000+10:00"^^xsd:dateTime ;
-    dct:modified "2019-04-09T13:21:38.815000+10:00"^^xsd:dateTime ;
-    skos:definition "The Access Rights vocabulary defines concepts to declare the access status of a resource."@en ;
-    skos:historyNote "Created from http://vocabularies.coar-repositories.org/documentation/access_rights/ COAR Controlled Vocabularies Interest Group"@en ;
-    skos:prefLabel "Data Access Rights"@en .
+    skos:topConceptOf data-access:conceptScheme ;
+    owl:sameAs <http://purl.org/coar/access_right/c_16ec> .
 
 data-access:open-access-rights a skos:Collection ;
     dct:created "2019-04-12T11:27:05.774000+10:00"^^xsd:dateTime ;

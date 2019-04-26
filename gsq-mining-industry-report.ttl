@@ -8,9 +8,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix minreport: <http://linked.data.gov.au/def/industry-report/> .
+@prefix minreport: <http://linked.data.gov.au/def/mining-industry-report/> .
 
-<http://linked.data.gov.au/def/industry-report> a owl:Ontology .
+<http://linked.data.gov.au/def/mining-industry-report> a owl:Ontology .
+
+minreport:conceptScheme a skos:ConceptScheme ;
+    dc:source "GSQ Systems (GEM)" ;
+    dcterms:created "2019-03-06T10:57:30.681000+10:00"^^xsd:dateTime ;
+    dct:description "Mining industry report types tendered to the Geological Survey of Queensland" ;
+    skos:prefLabel "Mining Industry Report"@en .
 
 minreport:ATP_Other_Report_see_STSURV a skos:Concept ;
     dcterms:created "2019-03-06T12:09:09.317000+10:00"^^xsd:dateTime ;
@@ -440,9 +446,3 @@ minreport:Petroleum a skos:Concept ;
     skos:inScheme minreport:conceptScheme ;
     skos:prefLabel "Petroleum"@en ;
     skos:topConceptOf minreport:conceptScheme .
-
-minreport:conceptScheme a skos:ConceptScheme ;
-    dc:source "GSQ Systems (GEM)" ;
-    dcterms:created "2019-03-06T10:57:30.681000+10:00"^^xsd:dateTime ;
-    rdfs:comment "A vocabulary of Industry Report types" ;
-    skos:prefLabel "Industry Report"@en .
