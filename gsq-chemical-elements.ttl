@@ -1,0 +1,931 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix elements: <http://linked.data.gov.au/def/gsq-elements#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/gsq-elements> a skos:ConceptScheme;
+  dct:description "Chemical Elements"@en;
+  dct:title "Chemical Elements"@en;
+  skos:hasTopConcept elements:Actinium, elements:Alkali%20Metals, elements:Alkaline%20Earth%20Metals,
+    elements:Americium, elements:Berkelium, elements:Bohrium, elements:Cadmium, elements:Californium,
+    elements:Cerium, elements:Chalcogens, elements:Chromium, elements:Cobalt, elements:Coinage%20Metals,
+    elements:Copernicium, elements:Curium, elements:Darmstadtium, elements:Dubnium, elements:Dysprosium,
+    elements:Einsteinium, elements:Erbium, elements:Europium, elements:Fermium, elements:Gadolinium,
+    elements:Hafnium, elements:Halogens, elements:Hassium, elements:Holmium, elements:Iridium,
+    elements:Iron, elements:Lanthanum, elements:Lawrencium, elements:Lutetium, elements:Manganese,
+    elements:Meitnerium, elements:Mendelevium, elements:Mercury, elements:Molybdenum,
+    elements:Neodymium, elements:Neptunium, elements:Nickel, elements:Niobium, elements:Nobelium,
+    elements:Noble%20Gases, elements:Osmium, elements:Palladium, elements:Platinum, elements:Plutonium,
+    elements:Pnictogens, elements:Praseodymium, elements:Promethium, elements:Protactinium,
+    elements:Rhenium, elements:Rhodium, elements:Ruthenium, elements:Rutherfordium, elements:Samarium,
+    elements:Scandium, elements:Seaborgium, elements:Tantalum, elements:Technetium, elements:Terbium,
+    elements:Tetrels, elements:Thorium, elements:Thulium, elements:Titanium, elements:Triels,
+    elements:Tungsten, elements:Uranium, elements:Vanadium, elements:Ytterbium, elements:Yttrium,
+    elements:Zinc, elements:Zirconium .
+
+elements:Alkali%20Metals a skos:Concept;
+  skos:definition "IUPAC group 1, Lithium Group"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:narrower elements:Caesium, elements:Francium, elements:Hydrogen, elements:Lithium,
+    elements:Potassium, elements:Rubidium, elements:Sodium;
+  skos:prefLabel "Alkali Metals"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Alkaline%20Earth%20Metals a skos:Concept;
+  skos:definition "IUPAC group 2, Beryllium Group"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:narrower elements:Barium, elements:Beryllium, elements:Calcium, elements:Magnesium,
+    elements:Radium, elements:Strontium;
+  skos:prefLabel "Alkaline Earth Metals"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Coinage%20Metals a skos:Concept;
+  skos:definition "IUPAC group 11, Copper Group"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:narrower elements:Copper, elements:Gold, elements:Roentgenium, elements:Silver;
+  skos:prefLabel "Coinage Metals"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Triels a skos:Concept;
+  skos:definition "IUPAC group 13, Boron Group"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:narrower elements:Aluminium, elements:Boron, elements:Gallium, elements:Indium,
+    elements:Nihonium, elements:Thallium;
+  skos:prefLabel "Triels"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Tetrels a skos:Concept;
+  skos:definition "IUPAC group 14, Carbon Group"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:narrower elements:Carbon, elements:Flerovium, elements:Germanium, elements:Lead,
+    elements:Silicon, elements:Tin;
+  skos:prefLabel "Tetrels"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Pnictogens a skos:Concept;
+  skos:definition "IUPAC group 15, Nitrogen Group"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:narrower elements:Antimony, elements:Arsenic, elements:Bismuth, elements:Moscovium,
+    elements:Nitrogen, elements:Phosphorus;
+  skos:prefLabel "Pnictogens"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Chalcogens a skos:Concept;
+  skos:definition "IUPAC group 16, Oxygen Group"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:narrower elements:Livermorium, elements:Oxygen, elements:Polonium, elements:Selenium,
+    elements:Sulfur, elements:Tellurium;
+  skos:prefLabel "Chalcogens"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Halogens a skos:Concept;
+  skos:definition "IUPAC group 17, Fluorine Group"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:narrower elements:Astatine, elements:Bromine, elements:Chlorine, elements:Fluorine,
+    elements:Iodine, elements:Tennessine;
+  skos:prefLabel "Halogens"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Noble%20Gases a skos:Concept;
+  skos:definition "IUPAC group 18, Helium or Neon Group"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:narrower elements:Argon, elements:Helium, elements:Krypton, elements:Neon, elements:Oganesson,
+    elements:Radon, elements:Xenon;
+  skos:prefLabel "Noble Gases"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Hydrogen a skos:Concept;
+  skos:broader elements:Alkali%20Metals;
+  skos:definition "Atomic Number: 1"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "H";
+  skos:prefLabel "Hydrogen"@en .
+
+elements:Helium a skos:Concept;
+  skos:broader elements:Noble%20Gases;
+  skos:definition "Atomic Number: 2"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "He";
+  skos:prefLabel "Helium"@en .
+
+elements:Lithium a skos:Concept;
+  skos:broader elements:Alkali%20Metals;
+  skos:definition "Atomic Number: 3"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Li";
+  skos:prefLabel "Lithium"@en .
+
+elements:Beryllium a skos:Concept;
+  skos:broader elements:Alkaline%20Earth%20Metals;
+  skos:definition "Atomic Number: 4"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Be";
+  skos:prefLabel "Beryllium"@en .
+
+elements:Boron a skos:Concept;
+  skos:broader elements:Triels;
+  skos:definition "Atomic Number: 5"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "B";
+  skos:prefLabel "Boron"@en .
+
+elements:Carbon a skos:Concept;
+  skos:broader elements:Tetrels;
+  skos:definition "Atomic Number: 6"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "C";
+  skos:prefLabel "Carbon"@en .
+
+elements:Nitrogen a skos:Concept;
+  skos:broader elements:Pnictogens;
+  skos:definition "Atomic Number: 7"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "N";
+  skos:prefLabel "Nitrogen"@en .
+
+elements:Oxygen a skos:Concept;
+  skos:broader elements:Chalcogens;
+  skos:definition "Atomic Number: 8"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "O";
+  skos:prefLabel "Oxygen"@en .
+
+elements:Fluorine a skos:Concept;
+  skos:broader elements:Halogens;
+  skos:definition "Atomic Number: 9"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "F";
+  skos:prefLabel "Fluorine"@en .
+
+elements:Neon a skos:Concept;
+  skos:broader elements:Noble%20Gases;
+  skos:definition "Atomic Number: 10"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ne";
+  skos:prefLabel "Neon"@en .
+
+elements:Sodium a skos:Concept;
+  skos:broader elements:Alkali%20Metals;
+  skos:definition "Atomic Number: 11"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Na";
+  skos:prefLabel "Sodium"@en .
+
+elements:Magnesium a skos:Concept;
+  skos:broader elements:Alkaline%20Earth%20Metals;
+  skos:definition "Atomic Number: 12"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Mg";
+  skos:prefLabel "Magnesium"@en .
+
+elements:Aluminium a skos:Concept;
+  skos:broader elements:Triels;
+  skos:definition "Atomic Number: 13"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Al";
+  skos:prefLabel "Aluminium"@en .
+
+elements:Silicon a skos:Concept;
+  skos:broader elements:Tetrels;
+  skos:definition "Atomic Number: 14"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Si";
+  skos:prefLabel "Silicon"@en .
+
+elements:Phosphorus a skos:Concept;
+  skos:broader elements:Pnictogens;
+  skos:definition "Atomic Number: 15"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "P";
+  skos:prefLabel "Phosphorus"@en .
+
+elements:Sulfur a skos:Concept;
+  skos:broader elements:Chalcogens;
+  skos:definition "Atomic Number: 16"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "S";
+  skos:prefLabel "Sulfur"@en .
+
+elements:Chlorine a skos:Concept;
+  skos:broader elements:Halogens;
+  skos:definition "Atomic Number: 17"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Cl";
+  skos:prefLabel "Chlorine"@en .
+
+elements:Argon a skos:Concept;
+  skos:broader elements:Noble%20Gases;
+  skos:definition "Atomic Number: 18"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ar";
+  skos:prefLabel "Argon"@en .
+
+elements:Potassium a skos:Concept;
+  skos:broader elements:Alkali%20Metals;
+  skos:definition "Atomic Number: 19"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "K";
+  skos:prefLabel "Potassium"@en .
+
+elements:Calcium a skos:Concept;
+  skos:broader elements:Alkaline%20Earth%20Metals;
+  skos:definition "Atomic Number: 20"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ca";
+  skos:prefLabel "Calcium"@en .
+
+elements:Scandium a skos:Concept;
+  skos:definition "Atomic Number: 21"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Sc";
+  skos:prefLabel "Scandium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Titanium a skos:Concept;
+  skos:definition "Atomic Number: 22"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ti";
+  skos:prefLabel "Titanium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Vanadium a skos:Concept;
+  skos:definition "Atomic Number: 23"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "V";
+  skos:prefLabel "Vanadium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Chromium a skos:Concept;
+  skos:definition "Atomic Number: 24"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Cr";
+  skos:prefLabel "Chromium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Manganese a skos:Concept;
+  skos:definition "Atomic Number: 25"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Mn";
+  skos:prefLabel "Manganese"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Iron a skos:Concept;
+  skos:definition "Atomic Number: 26"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Fe";
+  skos:prefLabel "Iron"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Cobalt a skos:Concept;
+  skos:definition "Atomic Number: 27"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Co";
+  skos:prefLabel "Cobalt"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Nickel a skos:Concept;
+  skos:definition "Atomic Number: 28"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ni";
+  skos:prefLabel "Nickel"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Copper a skos:Concept;
+  skos:broader elements:Coinage%20Metals;
+  skos:definition "Atomic Number: 29"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Cu";
+  skos:prefLabel "Copper"@en .
+
+elements:Zinc a skos:Concept;
+  skos:definition "Atomic Number: 30"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Zn";
+  skos:prefLabel "Zinc"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Gallium a skos:Concept;
+  skos:broader elements:Triels;
+  skos:definition "Atomic Number: 31"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ga";
+  skos:prefLabel "Gallium"@en .
+
+elements:Germanium a skos:Concept;
+  skos:broader elements:Tetrels;
+  skos:definition "Atomic Number: 32"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ge";
+  skos:prefLabel "Germanium"@en .
+
+elements:Arsenic a skos:Concept;
+  skos:broader elements:Pnictogens;
+  skos:definition "Atomic Number: 33"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "As";
+  skos:prefLabel "Arsenic"@en .
+
+elements:Selenium a skos:Concept;
+  skos:broader elements:Chalcogens;
+  skos:definition "Atomic Number: 34"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Se";
+  skos:prefLabel "Selenium"@en .
+
+elements:Bromine a skos:Concept;
+  skos:broader elements:Halogens;
+  skos:definition "Atomic Number: 35"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Br";
+  skos:prefLabel "Bromine"@en .
+
+elements:Krypton a skos:Concept;
+  skos:broader elements:Noble%20Gases;
+  skos:definition "Atomic Number: 36"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Kr";
+  skos:prefLabel "Krypton"@en .
+
+elements:Rubidium a skos:Concept;
+  skos:broader elements:Alkali%20Metals;
+  skos:definition "Atomic Number: 37"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Rb";
+  skos:prefLabel "Rubidium"@en .
+
+elements:Strontium a skos:Concept;
+  skos:broader elements:Alkaline%20Earth%20Metals;
+  skos:definition "Atomic Number: 38"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Sr";
+  skos:prefLabel "Strontium"@en .
+
+elements:Yttrium a skos:Concept;
+  skos:definition "Atomic Number: 39"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Y";
+  skos:prefLabel "Yttrium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Zirconium a skos:Concept;
+  skos:definition "Atomic Number: 40"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Zr";
+  skos:prefLabel "Zirconium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Niobium a skos:Concept;
+  skos:definition "Atomic Number: 41"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Nb";
+  skos:prefLabel "Niobium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Molybdenum a skos:Concept;
+  skos:definition "Atomic Number: 42"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Mo";
+  skos:prefLabel "Molybdenum"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Technetium a skos:Concept;
+  skos:definition "Atomic Number: 43"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Tc";
+  skos:prefLabel "Technetium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Ruthenium a skos:Concept;
+  skos:definition "Atomic Number: 44"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ru";
+  skos:prefLabel "Ruthenium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Rhodium a skos:Concept;
+  skos:definition "Atomic Number: 45"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Rh";
+  skos:prefLabel "Rhodium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Palladium a skos:Concept;
+  skos:definition "Atomic Number: 46"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Pd";
+  skos:prefLabel "Palladium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Silver a skos:Concept;
+  skos:broader elements:Coinage%20Metals;
+  skos:definition "Atomic Number: 47"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ag";
+  skos:prefLabel "Silver"@en .
+
+elements:Cadmium a skos:Concept;
+  skos:definition "Atomic Number: 48"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Cd";
+  skos:prefLabel "Cadmium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Indium a skos:Concept;
+  skos:broader elements:Triels;
+  skos:definition "Atomic Number: 49"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "In";
+  skos:prefLabel "Indium"@en .
+
+elements:Tin a skos:Concept;
+  skos:broader elements:Tetrels;
+  skos:definition "Atomic Number: 50"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Sn";
+  skos:prefLabel "Tin"@en .
+
+elements:Antimony a skos:Concept;
+  skos:broader elements:Pnictogens;
+  skos:definition "Atomic Number: 51"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Sb";
+  skos:prefLabel "Antimony"@en .
+
+elements:Tellurium a skos:Concept;
+  skos:broader elements:Chalcogens;
+  skos:definition "Atomic Number: 52"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Te";
+  skos:prefLabel "Tellurium"@en .
+
+elements:Iodine a skos:Concept;
+  skos:broader elements:Halogens;
+  skos:definition "Atomic Number: 53"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "I";
+  skos:prefLabel "Iodine"@en .
+
+elements:Xenon a skos:Concept;
+  skos:broader elements:Noble%20Gases;
+  skos:definition "Atomic Number: 54"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Xe";
+  skos:prefLabel "Xenon"@en .
+
+elements:Caesium a skos:Concept;
+  skos:broader elements:Alkali%20Metals;
+  skos:definition "Atomic Number: 55"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Cs";
+  skos:prefLabel "Caesium"@en .
+
+elements:Barium a skos:Concept;
+  skos:broader elements:Alkaline%20Earth%20Metals;
+  skos:definition "Atomic Number: 56"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ba";
+  skos:prefLabel "Barium"@en .
+
+elements:Lanthanum a skos:Concept;
+  skos:definition "Atomic Number: 57"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "La";
+  skos:prefLabel "Lanthanum"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Cerium a skos:Concept;
+  skos:definition "Atomic Number: 58"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ce";
+  skos:prefLabel "Cerium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Praseodymium a skos:Concept;
+  skos:definition "Atomic Number: 59"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Pr";
+  skos:prefLabel "Praseodymium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Neodymium a skos:Concept;
+  skos:definition "Atomic Number: 60"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Nd";
+  skos:prefLabel "Neodymium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Promethium a skos:Concept;
+  skos:definition "Atomic Number: 61"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Pm";
+  skos:prefLabel "Promethium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Samarium a skos:Concept;
+  skos:definition "Atomic Number: 62"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Sm";
+  skos:prefLabel "Samarium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Europium a skos:Concept;
+  skos:definition "Atomic Number: 63"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Eu";
+  skos:prefLabel "Europium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Gadolinium a skos:Concept;
+  skos:definition "Atomic Number: 64"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Gd";
+  skos:prefLabel "Gadolinium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Terbium a skos:Concept;
+  skos:definition "Atomic Number: 65"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Tb";
+  skos:prefLabel "Terbium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Dysprosium a skos:Concept;
+  skos:definition "Atomic Number: 66"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Dy";
+  skos:prefLabel "Dysprosium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Holmium a skos:Concept;
+  skos:definition "Atomic Number: 67"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ho";
+  skos:prefLabel "Holmium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Erbium a skos:Concept;
+  skos:definition "Atomic Number: 68"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Er";
+  skos:prefLabel "Erbium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Thulium a skos:Concept;
+  skos:definition "Atomic Number: 69"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Tm";
+  skos:prefLabel "Thulium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Ytterbium a skos:Concept;
+  skos:definition "Atomic Number: 70"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Yb";
+  skos:prefLabel "Ytterbium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Lutetium a skos:Concept;
+  skos:definition "Atomic Number: 71"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Lu";
+  skos:prefLabel "Lutetium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Hafnium a skos:Concept;
+  skos:definition "Atomic Number: 72"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Hf";
+  skos:prefLabel "Hafnium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Tantalum a skos:Concept;
+  skos:definition "Atomic Number: 73"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ta";
+  skos:prefLabel "Tantalum"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Tungsten a skos:Concept;
+  skos:definition "Atomic Number: 74"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "W";
+  skos:prefLabel "Tungsten"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Rhenium a skos:Concept;
+  skos:definition "Atomic Number: 75"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Re";
+  skos:prefLabel "Rhenium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Osmium a skos:Concept;
+  skos:definition "Atomic Number: 76"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Os";
+  skos:prefLabel "Osmium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Iridium a skos:Concept;
+  skos:definition "Atomic Number: 77"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ir";
+  skos:prefLabel "Iridium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Platinum a skos:Concept;
+  skos:definition "Atomic Number: 78"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Pt";
+  skos:prefLabel "Platinum"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Gold a skos:Concept;
+  skos:broader elements:Coinage%20Metals;
+  skos:definition "Atomic Number: 79"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Au";
+  skos:prefLabel "Gold"@en .
+
+elements:Mercury a skos:Concept;
+  skos:definition "Atomic Number: 80"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Hg";
+  skos:prefLabel "Mercury"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Thallium a skos:Concept;
+  skos:broader elements:Triels;
+  skos:definition "Atomic Number: 81"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Tl";
+  skos:prefLabel "Thallium"@en .
+
+elements:Lead a skos:Concept;
+  skos:broader elements:Tetrels;
+  skos:definition "Atomic Number: 82"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Pb";
+  skos:prefLabel "Lead"@en .
+
+elements:Bismuth a skos:Concept;
+  skos:broader elements:Pnictogens;
+  skos:definition "Atomic Number: 83"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Bi";
+  skos:prefLabel "Bismuth"@en .
+
+elements:Polonium a skos:Concept;
+  skos:broader elements:Chalcogens;
+  skos:definition "Atomic Number: 84"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Po";
+  skos:prefLabel "Polonium"@en .
+
+elements:Astatine a skos:Concept;
+  skos:broader elements:Halogens;
+  skos:definition "Atomic Number: 85"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "At";
+  skos:prefLabel "Astatine"@en .
+
+elements:Radon a skos:Concept;
+  skos:broader elements:Noble%20Gases;
+  skos:definition "Atomic Number: 86"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Rn";
+  skos:prefLabel "Radon"@en .
+
+elements:Francium a skos:Concept;
+  skos:broader elements:Alkali%20Metals;
+  skos:definition "Atomic Number: 87"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Fr";
+  skos:prefLabel "Francium"@en .
+
+elements:Radium a skos:Concept;
+  skos:broader elements:Alkaline%20Earth%20Metals;
+  skos:definition "Atomic Number: 88"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ra";
+  skos:prefLabel "Radium"@en .
+
+elements:Actinium a skos:Concept;
+  skos:definition "Atomic Number: 89"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ac";
+  skos:prefLabel "Actinium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Thorium a skos:Concept;
+  skos:definition "Atomic Number: 90"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Th";
+  skos:prefLabel "Thorium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Protactinium a skos:Concept;
+  skos:definition "Atomic Number: 91"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Pa";
+  skos:prefLabel "Protactinium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Uranium a skos:Concept;
+  skos:definition "Atomic Number: 92"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "U";
+  skos:prefLabel "Uranium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Neptunium a skos:Concept;
+  skos:definition "Atomic Number: 93"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Np";
+  skos:prefLabel "Neptunium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Plutonium a skos:Concept;
+  skos:definition "Atomic Number: 94"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Pu";
+  skos:prefLabel "Plutonium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Americium a skos:Concept;
+  skos:definition "Atomic Number: 95"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Am";
+  skos:prefLabel "Americium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Curium a skos:Concept;
+  skos:definition "Atomic Number: 96"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Cm";
+  skos:prefLabel "Curium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Berkelium a skos:Concept;
+  skos:definition "Atomic Number: 97"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Bk";
+  skos:prefLabel "Berkelium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Californium a skos:Concept;
+  skos:definition "Atomic Number: 98"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Cf";
+  skos:prefLabel "Californium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Einsteinium a skos:Concept;
+  skos:definition "Atomic Number: 99"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Es";
+  skos:prefLabel "Einsteinium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Fermium a skos:Concept;
+  skos:definition "Atomic Number: 100"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Fm";
+  skos:prefLabel "Fermium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Mendelevium a skos:Concept;
+  skos:definition "Atomic Number: 101"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Md";
+  skos:prefLabel "Mendelevium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Nobelium a skos:Concept;
+  skos:definition "Atomic Number: 102"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "No";
+  skos:prefLabel "Nobelium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Lawrencium a skos:Concept;
+  skos:definition "Atomic Number: 103"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Lr";
+  skos:prefLabel "Lawrencium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Rutherfordium a skos:Concept;
+  skos:definition "Atomic Number: 104"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Rf";
+  skos:prefLabel "Rutherfordium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Dubnium a skos:Concept;
+  skos:definition "Atomic Number: 105"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Db";
+  skos:prefLabel "Dubnium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Seaborgium a skos:Concept;
+  skos:definition "Atomic Number: 106"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Sg";
+  skos:prefLabel "Seaborgium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Bohrium a skos:Concept;
+  skos:definition "Atomic Number: 107"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Bh";
+  skos:prefLabel "Bohrium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Hassium a skos:Concept;
+  skos:definition "Atomic Number: 108"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Hs";
+  skos:prefLabel "Hassium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Meitnerium a skos:Concept;
+  skos:definition "Atomic Number: 109"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Mt";
+  skos:prefLabel "Meitnerium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Darmstadtium a skos:Concept;
+  skos:definition "Atomic Number: 110"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ds";
+  skos:prefLabel "Darmstadtium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Roentgenium a skos:Concept;
+  skos:broader elements:Coinage%20Metals;
+  skos:definition "Atomic Number: 111"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Rg";
+  skos:prefLabel "Roentgenium"@en .
+
+elements:Copernicium a skos:Concept;
+  skos:definition "Atomic Number: 112"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Cn";
+  skos:prefLabel "Copernicium"@en;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-elements> .
+
+elements:Nihonium a skos:Concept;
+  skos:broader elements:Triels;
+  skos:definition "Atomic Number: 113"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Nh";
+  skos:prefLabel "Nihonium"@en .
+
+elements:Flerovium a skos:Concept;
+  skos:broader elements:Tetrels;
+  skos:definition "Atomic Number: 114"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Fl";
+  skos:prefLabel "Flerovium"@en .
+
+elements:Moscovium a skos:Concept;
+  skos:broader elements:Pnictogens;
+  skos:definition "Atomic Number: 115"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Mc";
+  skos:prefLabel "Moscovium"@en .
+
+elements:Livermorium a skos:Concept;
+  skos:broader elements:Chalcogens;
+  skos:definition "Atomic Number: 116"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Lv";
+  skos:prefLabel "Livermorium"@en .
+
+elements:Tennessine a skos:Concept;
+  skos:broader elements:Halogens;
+  skos:definition "Atomic Number: 117"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Ts";
+  skos:prefLabel "Tennessine"@en .
+
+elements:Oganesson a skos:Concept;
+  skos:broader elements:Noble%20Gases;
+  skos:definition "Atomic Number: 118"@en;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-elements>;
+  skos:notation "Og";
+  skos:prefLabel "Oganesson"@en .
