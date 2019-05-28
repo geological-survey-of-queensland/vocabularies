@@ -48,6 +48,7 @@ def load_one_vocab_from_github(repo_id, vocab_id, base_url, label):
 
 
 def load_all_background_onts_from_github(repo_id):
+    print('Loading background ontologies from GitHub')
     background_onts = [
         {
             'name': 'RDF Ontology',
@@ -73,7 +74,6 @@ def load_all_background_onts_from_github(repo_id):
 
     for ont in background_onts:
         print('Loading {}'.format(ont['name']))
-        print('repo: {}'.format(repo_id))
         r = requests.post(
             config.GRAPHDB_LOAD_DATA_URI.format(repo_id),
             auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD),
@@ -121,6 +121,7 @@ def load_all_background_onts_from_github(repo_id):
 
 
 def load_all_vocabs_from_github(repo_id):
+    print('Loading all vocabs from GitHub')
     for file in os.listdir('.'):
         if file.startswith('gsq-') and file.endswith('.ttl'):
             g = rdflib.Graph().parse(file, format='turtle')
@@ -140,8 +141,8 @@ def load_all_vocabs_from_github(repo_id):
                 base_url = r['uri']
                 name = r['pl']
 
-                print('{} {} {}'.format(vocab_id, base_url, name))
-                #load_one_vocab_from_github(repo_id, vocab_id, base_url, label)
+                print('Loading {} {} {}'.format(vocab_id, base_url, name))
+                load_one_vocab_from_github(repo_id, vocab_id, base_url, name)
 
 
 def list_repositories():
@@ -189,17 +190,5 @@ def create_repo(repo_config):
 
 
 if __name__ == '__main__':
-    repo_id = 'GSQ_Vocabularies_core'
-    repo_name = 'GSQ Vocabularies'
-
-    # delete_repo(repo_id)
-    #
-    # repo_config = make_repo_config_file(
-    #     'repo-config.ttl.template',
-    #     'http://linked.data.gov.au/def/',
-    #     repo_id,
-    #     repo_name
-    # )
-
-    # # load_all_vocabs_from_github()
-    load_all_background_onts_from_github(repo_id)
+    load_all_background_onts_from_github(config.REPO_ID)
+    load_all_vocabs_from_github(config.REPO_ID)
