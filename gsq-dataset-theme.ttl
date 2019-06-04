@@ -6,12 +6,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix gsqtheme: <http://linked.data.gov.au/def/gsq-dataset-theme/> .
+@prefix gsqtheme: <http://linked.data.gov.au/def/geoscience-dataset-theme/> .
 
-<http://linked.data.gov.au/def/gsq-dataset-theme/> a owl:Ontology .
+<http://linked.data.gov.au/def/geoscience-dataset-theme/> a owl:Ontology .
 
 gsqtheme:conceptScheme a skos:ConceptScheme ;
-    skos:prefLabel "GSQ Dataset Theme"@en ;
+    skos:prefLabel "Geoscience Dataset Theme"@en ;
     dcterms:created "2019-03-06T10:57:30.681000+10:00"^^xsd:dateTime .
 
 gsqtheme:industry-reports a skos:Concept ;
@@ -20,6 +20,6 @@ gsqtheme:industry-reports a skos:Concept ;
     skos:topConceptOf gsqtheme:conceptScheme .
 
 gsqtheme:geochemistry-data a skos:Concept ;
-    skos:prefLabel "Geochemistry Data"@en ;
+    skos:prefLabel "Geochemistry data"@en ;
     skos:inScheme gsqtheme:conceptScheme ;
     skos:topConceptOf gsqtheme:conceptScheme .
