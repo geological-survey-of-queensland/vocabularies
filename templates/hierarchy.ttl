@@ -1,0 +1,98 @@
+# a hierarchy of Concepts with one being broader than two others
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix {SHORT_CODE}: <http://linked.data.gov.au/def/{URI_ID}/> .
+
+<http://linked.data.gov.au/def/{URI_ID}> a owl:Ontology .
+
+{SHORT_CODE}:{CONCEPT_1_ID} 
+  a skos:Concept;
+  skos:inScheme {SHORT_CODE}:conceptScheme;
+  skos:prefLabel "{CONCEPT_1_LABEL}"@en ;
+  skos:definition "{CONCEPT_1_DEFINITION}"@en ;
+  dct:source {CONCEPT_1_SOURCE_WEB_ADDRESS_OR_TEXT} .
+
+{SHORT_CODE}:{CONCEPT_2_ID} 
+  a skos:Concept;
+  skos:inScheme {SHORT_CODE}:conceptScheme;
+  skos:prefLabel "{CONCEPT_2_LABEL}"@en ;
+  skos:definition "{CONCEPT_2_DEFINITION}"@en ;
+  dct:source {CONCEPT_2_SOURCE_WEB_ADDRESS_OR_TEXT} ;
+  skos:broader {SHORT_CODE}:{CONCEPT_1_ID} .
+
+{SHORT_CODE}:{CONCEPT_3_ID} 
+  a skos:Concept;
+  skos:inScheme {SHORT_CODE}:conceptScheme;
+  skos:prefLabel "{CONCEPT_3_LABEL}"@en ;
+  skos:definition "{CONCEPT_3_DEFINITION}"@en ;
+  dct:source {CONCEPT_3_SOURCE_WEB_ADDRESS_OR_TEXT} ;
+  skos:broader {SHORT_CODE}:{CONCEPT_1_ID} .
+
+
+# Example vocab - Borehole Inclination - as per template above
+# 
+# @prefix bhinc: <http://linked.data.gov.au/def/borehole-inclination/> .
+# 
+# <http://linked.data.gov.au/def/borehole-inclination> a owl:Ontology .
+# 
+# bhinc:conceptScheme 
+#   a skos:ConceptScheme;
+#   skos:prefLabel "Borehole Inclination"@en ;
+#   dct:description "The ways in which a borehole may be angled with respect to the vertical"@en ;
+#   dct:source <https://www.opengeospatial.org/standards/geosciml> .
+#
+#   or, instead of dct:source with a web address
+#
+#   dct:source "This vocabulary's content is taken entirely from a code list table in the OGC's Geoscience Markup Language (GeoSciML) standard." .
+# 
+# bhinc:Inclined
+#   a skos:Concept;
+#   skos:topConceptOf bhinc:conceptScheme;
+#   skos:prefLabel "Inclined"@en ;
+#   skos:definition "A predomenently horizontal borehole's shaft is angled either up or down." .
+#
+# bhinc:InclinedUp 
+#   a skos:Concept;
+#   skos:inScheme bhinc:conceptScheme;
+#   skos:prefLabel "Inclined Up"@en ;
+#   skos:definition "A predomenently horizontal borehole's shaft is angled at a positive acute angle to the horizontal (up)." ;
+#   skos:braoder bhinc:Inclined .
+#
+# bhinc:InclinedDown
+#   a skos:Concept;
+#   skos:inScheme bhinc:conceptScheme;
+#   skos:prefLabel "Inclined Down"@en ;
+#   skos:definition "A predomenently horizontal borehole's shaft is angled at a negative acute angle to the horizontal (down)." ;
+#   skos:braoder bhinc:Inclined .
+#
+
+# Alternate implementation
+#
+# Here, the same hierarchy as above is expresse with one Concept having two narrower Concept
+#
+#
+# bhinc:Inclined
+#   a skos:Concept;
+#   skos:topConceptOf bhinc:conceptScheme;
+#   skos:prefLabel "Inclined"@en ;
+#   skos:definition "A predomenently horizontal borehole's shaft is angled either up or down." ;
+#   skos:narrower bhinc:InclinedUp , bhinc:InclinedDown .
+#
+# bhinc:InclinedUp 
+#   a skos:Concept;
+#   skos:inScheme bhinc:conceptScheme;
+#   skos:prefLabel "Inclined Up"@en ;
+#   skos:definition "A predomenently horizontal borehole's shaft is angled at a positive acute angle to the horizontal (up)." .
+#
+# bhinc:InclinedDown
+#   a skos:Concept;
+#   skos:inScheme bhinc:conceptScheme;
+#   skos:prefLabel "Inclined Down"@en ;
+#   skos:definition "A predomenently horizontal borehole's shaft is angled at a negative acute angle to the horizontal (down)." .
+#

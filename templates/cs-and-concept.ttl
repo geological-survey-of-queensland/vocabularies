@@ -1,3 +1,5 @@
+# basic vocab ConceptScheme & single Concept, with properties
+
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,15 +13,14 @@
 
 {SHORT_CODE}:conceptScheme 
   a skos:ConceptScheme;
-  dct:title "{VOCAB_TITLE}"@en ;
+  skos:prefLabel "{VOCAB_LABEL}"@en ;
   dct:description "{VOCAB_DESCRIPTION}"@en ;
   dct:source {WHOLE_VOCAB_SOURCE_WEB_ADDRESS_OR_TEXT} .
 
 {SHORT_CODE}:{CONCEPT_1_ID} 
   a skos:Concept;
-  skos:broader {SHORT_CODE}:Inclined;
   skos:inScheme {SHORT_CODE}:conceptScheme;
-  skos:prefLabel "Inclined Up"@en ;
+  skos:prefLabel "{CONCEPT_1_LABEL}"@en ;
   skos:definition "{CONCEPT_1_DEFINITION}"@en ;
   dct:source {CONCEPT_1_SOURCE_WEB_ADDRESS_OR_TEXT} .
 
@@ -32,7 +33,7 @@
 # 
 # {URI_ID}        - the URI segment idenfifying this vocab. Will need to be confrimed by the Linked Data WG 
 #
-# {VOCAB_TITLE}   - a plain-text, short, title for the vocab
+# {VOCAB_LABEL}   - a plain-text, short, label for the vocab
 #
 # {VOCAB_DESCRIPTION} - a plain text description of the vocab. if multi line (with line breaks), enclose in triple quotes ("""...""")
 #
@@ -42,6 +43,8 @@
 #
 # {CONCEPT_1_ID}  - the ID of the concept used to make its web address (URI). 
 #                   May not contain spaces or special characters, e.g for Borehole Inclination's Inclined Up concept it is InclinedUp
+#
+# {CONCEPT_1_LABEL} - a plain-text, short, label for Concept 1
 #
 # {CONCEPT_1_DEFINITION} - textual definition for Concept 1. If multi-line (with line breaks), enclose in triple quotes ("""...""")
 #
@@ -69,14 +72,7 @@
 # 
 # bhinc:InclinedUp 
 #   a skos:Concept;
-#   skos:broader bhinc:Inclined;
 #   skos:inScheme bhinc:conceptScheme;
 #   skos:prefLabel "Inclined Up"@en ;
-#   skos:definition "A predomenently horizontal borehole's shaft is tilted at a positive acute angle to the horizontal (up)."
-# 
-# bhinc:InclinedDown 
-#   a skos:Concept;
-#   skos:broader bhinc:Inclined;
-#   skos:inScheme bhinc:conceptScheme;
-#   skos:prefLabel "Inclined Down"@en ;
-#   skos:definition "A predomenently horizontal borehole's shaft is tilted at a positive acute angle to the horizontal (up)."
+#   skos:definition "A predomenently horizontal borehole's shaft is angled at a positive acute angle to the horizontal (up)."
+#
