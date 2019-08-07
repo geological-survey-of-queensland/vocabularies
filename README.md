@@ -1,6 +1,29 @@
 # GSQ Vocabularies
-## Description
-The Geological Survey of Queensland's (GSQ's) vocabularies, formulated using SKOS, serialised as RDF (turtle) files.
+## Introduction
+The Geological Survey of Queensland (GSQ) publishes vocabularies - a way to describe things and the relationship between things.
+
+A vocabulary is a set of agreed terms:
+* In GSQ, a vocabulary defines the terms used to describe and represent things in the domain of science and data management.
+* Vocabularies align information within a business area or across systems.
+* Vocabularies can be very complex (with thousands of terms) or very simple (describing one or two concepts only).
+
+## How to create a vocabulary
+<img src="vocabulary-build-test-workflow.png" style="width:800px;" alt="Vocabulary build and test process" />  
+**Fig. 1**: Vocabulary build and test process 
+
+1. Select the vocabulary editor of your choice. (We will work with GA on researching and selecting the best editor going forward).
+2. Create the vocabulary using the [SKOS Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/). See also the [SKOS Primer] for the basics(https://www.w3.org/TR/skos-primer/). NOTE: Always first check if there is an international or national vocabulary (see below for links).
+3. Export the 
+4.
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11.
+12. 
+13. 
 
 These are the source files for GSQ's vocabularies. The vocabularies appear online at their namespace locations which are given in their data, for example the vocab "Geophysical Surveys" has the following content:
 
