@@ -29,7 +29,7 @@ A vocabulary is a set of agreed terms:
 1. Select the vocabulary editor of your choice.
 2. Create the vocabulary using the [SKOS Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/). See also the [SKOS Primer](https://www.w3.org/TR/skos-primer/) for the basics. NOTE: Always first check if there is an international or national vocabulary (see below for links).  
     a. Use [Vocbench](www.vocbench.gsq.digital:7200/) to create the vocabulary.  
-    b. Use the Excel template to create the vocabulary. *(Vance can you upload the template to this repository and put the link here)*.  
+    b. Use the Excel template to create the vocabulary - [download Excel template](/blob/test/templates/VOCABULARY_TEMPLATE_v01.xlsx).  
     c. Edit the vocab TTL file in Visual Studio Code. Use the extension [Language Support for RDF related language syntax](https://marketplace.visualstudio.com/items?itemName=fantasticfears.semantic-data-model-language) for formatting support.  
 3. Export the vocabulary to a TTL file. If using Vocbench, it is easier to export the TTL from the Build repository in GraphDB. Follow the [instructions here](http://graphdb.ontotext.com/documentation/standard/exporting-data.html).
 4. Validate the TTL file using the [online Skosify tool](http://demo.seco.tkk.fi/skosify/skosify). Tick the checkboxes *Keep skos:related relationships within the same hierarchy* and *Include skos:narrower relations in output*
