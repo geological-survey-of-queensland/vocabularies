@@ -55,6 +55,12 @@ A vocabulary is a set of agreed terms:
 7. The vocabulary is now published in the Production VocPrez at https://vocabs.gsq.digital. Please note that the vocab will not display in VocPrez until the URI registration at http://linked.data.gov.au is approved. 
 
 
+## See also
+* Research Vocabularies Australia https://vocabs.ands.org.au/
+* Basel Register of Thesauri, Ontologies & Classifications https://bartoc.org/  
+* Best practice in formalizing a SKOS vocabulary https://confluence.csiro.au/public/VOCAB/vocabulary-services/publishing-vocabularies/best-practice-in-formalizing-a-skos-vocabulary  
+
+
 ## Files
 * **ontologies/\*.ttl** - background ontologies needed for vocab inferencing
 * **gsq-\*.ttl** - GSQ vocab files
