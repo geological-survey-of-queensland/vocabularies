@@ -10,7 +10,8 @@ A vocabulary is a set of agreed terms:
 
 ## Vocabulary - how it all hangs together
 <img src="vocabulary_context_diagram.png" style="width:800px;" alt="Vocabulary context diagram" />  
-**Fig. 1: Vocabulary context diagram **
+
+**Fig. 1: Vocabulary context diagram**
 
 1. We use tools such as Vocbench or Excel to create the vocabulary using [SKOS Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference). See also the [SKOS Primer](https://www.w3.org/TR/skos-primer) for the basics.
 2. The native format for a vocabulary is a TTL (turtle) file. This file contains [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) triples - subject > predicate > object statements.
@@ -21,7 +22,8 @@ A vocabulary is a set of agreed terms:
 
 
 ## How to create a vocabulary
-<img src="vocabulary-build-test-workflow.png" style="width:100%;" alt="Vocabulary build and pull process" />  
+<img src="vocabulary-build-pull-workflow.png" style="width:100%;" alt="Vocabulary build and pull process" />  
+
 **Fig. 2: Vocabulary build and pull process**
 
 1. Select the vocabulary editor of your choice.
