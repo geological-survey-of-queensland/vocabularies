@@ -1,0 +1,70 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ssmethod: <http://linked.data.gov.au/def/seismic-sampling-method/> .
+
+<http://linked.data.gov.au/def/seismic-sampling-method> a owl:Ontology .
+
+ssmethod:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-04-09T16:21:15.296000+10:00"^^xsd:dateTime ;
+    skos:prefLabel "Seismic Sampling Method"@en ;
+    dct:description "Methods used to create samples of geological features via seismic waves"@en .
+
+ssmethod:air-gun a skos:Concept ;
+    dct:created "2019-04-09T16:28:03.507000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-09T16:33:56.811000+10:00"^^xsd:dateTime ;
+    skos:hiddenLabel "AIR"@en ;
+    skos:inScheme ssmethod:conceptScheme ;
+    skos:prefLabel "air gun"@en ;
+    skos:topConceptOf ssmethod:conceptScheme .
+
+ssmethod:dynamite a skos:Concept ;
+    dct:created "2019-04-09T16:24:28.344000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-09T16:34:48.537000+10:00"^^xsd:dateTime ;
+    skos:hiddenLabel "DYN"@en ;
+    skos:inScheme ssmethod:conceptScheme ;
+    skos:prefLabel "dynamite"@en ;
+    skos:topConceptOf ssmethod:conceptScheme .
+
+ssmethod:dynamite-and-vibroseis a skos:Concept ;
+    dct:created "2019-04-09T16:31:33.606000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-09T16:34:21.309000+10:00"^^xsd:dateTime ;
+    skos:hiddenLabel "D&V"@en ;
+    skos:inScheme ssmethod:conceptScheme ;
+    skos:prefLabel "dynamite and vibroseis"@en ;
+    skos:topConceptOf ssmethod:conceptScheme .
+
+ssmethod:hydraulic-oil-impactor a skos:Concept ;
+    dct:created "2019-04-09T16:25:43.660000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-09T16:35:46.266000+10:00"^^xsd:dateTime ;
+    skos:hiddenLabel "IMP"@en ;
+    skos:inScheme ssmethod:conceptScheme ;
+    skos:prefLabel "hydraulic oil impactor"@en ;
+    skos:topConceptOf ssmethod:conceptScheme .
+
+ssmethod:mini-sosie-wacker a skos:Concept ;
+    dct:created "2019-04-09T16:26:54.988000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-09T16:33:25.231000+10:00"^^xsd:dateTime ;
+    skos:altLabel "MIN"@en ;
+    skos:inScheme ssmethod:conceptScheme ;
+    skos:prefLabel "Mini-SOSIE or Wacker"@en ;
+    skos:topConceptOf ssmethod:conceptScheme .
+
+ssmethod:shotgun-firearm a skos:Concept ;
+    dct:created "2019-04-09T16:27:28.307000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-11T08:46:48.403000+10:00"^^xsd:dateTime ;
+    skos:inScheme ssmethod:conceptScheme ;
+    skos:prefLabel "shotgun or firearm"@en ;
+    skos:topConceptOf ssmethod:conceptScheme .
+
+ssmethod:vibroseis a skos:Concept ;
+    dct:created "2019-04-09T16:24:50.509000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-09T16:35:15.967000+10:00"^^xsd:dateTime ;
+    skos:altLabel "VIB"@en ;
+    skos:inScheme ssmethod:conceptScheme ;
+    skos:prefLabel "vibroseis"@en ;
+    skos:topConceptOf ssmethod:conceptScheme .

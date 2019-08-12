@@ -1,0 +1,78 @@
+# basic vocab ConceptScheme & single Concept, with properties
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix {SHORT_CODE}: <http://linked.data.gov.au/def/{URI_ID}/> .
+
+<http://linked.data.gov.au/def/{URI_ID}> a owl:Ontology .
+
+{SHORT_CODE}:conceptScheme 
+  a skos:ConceptScheme;
+  skos:prefLabel "{VOCAB_LABEL}"@en ;
+  dct:description "{VOCAB_DESCRIPTION}"@en ;
+  dct:source {WHOLE_VOCAB_SOURCE_WEB_ADDRESS_OR_TEXT} .
+
+{SHORT_CODE}:{CONCEPT_1_ID} 
+  a skos:Concept;
+  skos:inScheme {SHORT_CODE}:conceptScheme;
+  skos:prefLabel "{CONCEPT_1_LABEL}"@en ;
+  skos:definition "{CONCEPT_1_DEFINITION}"@en ;
+  dct:source {CONCEPT_1_SOURCE_WEB_ADDRESS_OR_TEXT} .
+
+  # note that no Concept/Concept relation properties are suggested here (braoder/narrower) as these are to be made in VocBench
+
+
+# Token explanation
+#
+# {SHORT_CODE}    - the short ID of the vocab, used through this document, e.g. bhinc for Borehole Inclination
+# 
+# {URI_ID}        - the URI segment idenfifying this vocab. Will need to be confrimed by the Linked Data WG 
+#
+# {VOCAB_LABEL}   - a plain-text, short, label for the vocab
+#
+# {VOCAB_DESCRIPTION} - a plain text description of the vocab. if multi line (with line breaks), enclose in triple quotes ("""...""")
+#
+# {WHOLE_VOCAB_SOURCE_WEB_ADDRESS_OR_TEXT} - either a web address (like <http://some-web-address.com>, mut enclose in < & >) or text (must enclose in "...")
+#
+#                                            Use this property if you want to indicate a single source for all Concepts
+#
+# {CONCEPT_1_ID}  - the ID of the concept used to make its web address (URI). 
+#                   May not contain spaces or special characters, e.g for Borehole Inclination's Inclined Up concept it is InclinedUp
+#
+# {CONCEPT_1_LABEL} - a plain-text, short, label for Concept 1
+#
+# {CONCEPT_1_DEFINITION} - textual definition for Concept 1. If multi-line (with line breaks), enclose in triple quotes ("""...""")
+#
+# {CONCEPT_1_SOURCE_WEB_ADDRESS_OR_TEXT} - either a web address (like <http://some-web-address.com>, mut enclose in < & >) or text (must enclose in "...")
+#
+#                                          Use this property if you want to indicate a source for just this Concept. May be used with a whole-of-vocab source
+#                                          or used in isolation
+
+
+# Example vocab - Borehole Inclination - as per template above
+# 
+# @prefix bhinc: <http://linked.data.gov.au/def/borehole-inclination/> .
+# 
+# <http://linked.data.gov.au/def/borehole-inclination> a owl:Ontology .
+# 
+# bhinc:conceptScheme 
+#   a skos:ConceptScheme;
+#   skos:prefLabel "Borehole Inclination"@en ;
+#   dct:description "The ways in which a borehole may be angled with respect to the vertical"@en ;
+#   dct:source <https://www.opengeospatial.org/standards/geosciml> .
+#
+#   or, instead of dct:source with a web address
+#
+#   dct:source "This vocabulary's content is taken entirely from a code list table in the OGC's Geoscience Markup Language (GeoSciML) standard." .
+# 
+# bhinc:InclinedUp 
+#   a skos:Concept;
+#   skos:inScheme bhinc:conceptScheme;
+#   skos:prefLabel "Inclined Up"@en ;
+#   skos:definition "A predomenently horizontal borehole's shaft is angled at a positive acute angle to the horizontal (up)."
+#
