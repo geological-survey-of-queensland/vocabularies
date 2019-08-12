@@ -1,0 +1,65 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix data-access: <http://linked.data.gov.au/def/data-access/> .
+
+<http://linked.data.gov.au/def/data-access> a owl:Ontology .
+
+data-access:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-04-03T15:11:58.506000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-09T13:21:38.815000+10:00"^^xsd:dateTime ;
+    dct:description "The Data Access vocabulary defines concepts to declare the access status of a resource"@en ;
+    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
+    dct:source <http://vocabularies.coar-repositories.org/documentation/access_rights/> ;
+    skos:prefLabel "Data Access Rights"@en .
+
+data-access:embargoed a skos:Concept ;
+    dct:created "2019-04-03T15:16:48.158000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-12T11:18:36.024000+10:00"^^xsd:dateTime ;
+    skos:definition "Embargoed access refers to a resource that is metadata only access until released for open access on a certain date. Embargoes can be required by regulation or policies, or set by the author."@en ;
+    skos:inScheme data-access:conceptScheme ;
+    skos:prefLabel "Embargoed access"@en ;
+    skos:topConceptOf data-access:conceptScheme .
+
+data-access:metadata-only a skos:Concept ;
+    dct:created "2019-04-03T15:18:06.745000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-12T11:18:08.499000+10:00"^^xsd:dateTime ;
+    skos:definition "Metadata only access refers to a resource in which access is limited to metadata only. The resource itself is described by the metadata, but neither is directly available through the system or platform nor can be referenced to an open access copy in an external journal or trustworthy archive."@en ;
+    skos:inScheme data-access:conceptScheme ;
+    skos:prefLabel "Metadata only access"@en ;
+    skos:topConceptOf data-access:conceptScheme .
+
+data-access:open a skos:Concept ;
+    dct:created "2019-04-03T15:13:27.034000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-12T11:17:48.998000+10:00"^^xsd:dateTime ;
+    skos:altLabel "Open file"@en ;
+    skos:definition "Open access refers to a resource that is immediately and permanently online, and free for all on the Web, without financial and technical barriers.The resource is either stored in the repository or referenced to an external journal or trustworthy archive."@en ;
+    skos:inScheme data-access:conceptScheme ;
+    skos:prefLabel "Open access"@en ;
+    skos:topConceptOf data-access:conceptScheme .
+
+data-access:restricted a skos:Concept ;
+    dct:created "2019-04-03T15:17:16.263000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-12T11:17:07.208000+10:00"^^xsd:dateTime ;
+    skos:definition "Restricted access refers to a resource that is available in a system but with some type of restriction for full open access. This type of access can occur in a number of different situations. Some examples are described below: The user must log-in to the system in order to access the resource; The user must send an email to the author or system administrator to access the resource; Access to the resource is restricted to a specific community (e.g. limited to GSQ)"@en ;
+    skos:inScheme data-access:conceptScheme ;
+    skos:prefLabel "Restricted access"@en ;
+    skos:topConceptOf data-access:conceptScheme .
+
+data-access:open-access-rights a skos:Collection ;
+    dct:created "2019-04-12T11:27:05.774000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-12T11:27:31.917000+10:00"^^xsd:dateTime ;
+    skos:member data-access:open ;
+    skos:prefLabel "Open access rights"@en .
+
+data-access:closed-access-rights a skos:Collection ;
+    dct:created "2019-04-12T11:21:21.318000+10:00"^^xsd:dateTime ;
+    dct:modified "2019-04-12T11:26:11.204000+10:00"^^xsd:dateTime ;
+    skos:member data-access:embargoed,
+        data-access:metadata-only,
+        data-access:restricted ;
+    skos:prefLabel "Closed access rights"@en .

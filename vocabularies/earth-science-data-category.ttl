@@ -1,0 +1,292 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix earthscicat: <http://linked.data.gov.au/def/earth-science-data-category/> .
+
+<http://linked.data.gov.au/def/earth-science-data-category> a owl:Ontology .
+
+earthscicat:conceptScheme  a skos:ConceptScheme ;
+    skos:prefLabel "Earth Science Data Category"@en ;
+    dcterms:created "2019-06-03T12:11:51.537000+10:00"^^xsd:dateTime ;
+    skos:definition "Earth science or geoscience includes all fields of natural science related to the planet Earth. This is a branch of science dealing with the physical constitution of the Earth and its atmosphere."@en .
+
+earthscicat:aster-data a skos:Concept ;
+    skos:prefLabel "ASTER data"@en ;
+    skos:definition "Advanced Spaceborne Thermal Emission and Reflection Radiometer"@en;
+    skos:inScheme earthscicat:conceptScheme ;
+    skos:topConceptOf earthscicat:conceptScheme .
+
+earthscicat:exploration-geochemistry-data a skos:Concept ;
+    skos:prefLabel "Exploration geochemistry data"@en ;
+    skos:definition "Geochemistry is the study of the chemical processes which form and shape the Earth. The Queensland exploration geochemistry includes information on surface and drillholes. The data is generated from open file exploration reports submitted by mining companies doing mineral exploration work in Queensland."@en ;
+    skos:inScheme earthscicat:conceptScheme ;
+    skos:narrower earthscicat:drillhole-geochemistry-data,
+        earthscicat:surface-geochemistry-data ;
+    skos:topConceptOf earthscicat:conceptScheme .
+
+earthscicat:drillhole-geochemistry-data a skos:Concept ;
+    skos:prefLabel "drillhole geochemistry data"@en ;
+    skos:broader earthscicat:exploration-geochemistry-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:surface-geochemistry-data a skos:Concept ;
+    skos:prefLabel "surface geochemistry data"@en ;
+    skos:broader earthscicat:exploration-geochemistry-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:geophysical-data a skos:Concept ;
+    skos:prefLabel "Geophysical data"@en ;
+    skos:inScheme earthscicat:conceptScheme ;
+    skos:narrower earthscicat:deep-seismic-reflection-surveys,
+        earthscicat:electromagnetic-data,
+        earthscicat:gravity-data,
+        earthscicat:magnetic-data,
+        earthscicat:magnetotellurics-surveys,
+        earthscicat:radiometric-data,
+        earthscicat:seismic-data ;
+    skos:topConceptOf earthscicat:conceptScheme .
+
+earthscicat:deep-seismic-reflection-surveys a skos:Concept ;
+    skos:prefLabel "deep seismic reflection surveys"@en ;
+    skos:broader earthscicat:geophysical-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:electromagnetic-data a skos:Concept ;
+    skos:prefLabel "electromagnetic data"@en ;
+    skos:broader earthscicat:geophysical-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:gravity-data a skos:Concept ;
+    skos:prefLabel "gravity data"@en ;
+    skos:definition "The measure of small changes in gravity due to changes in the density of the rocks which make up the Earth provides a method which makes it possible to remotely map the distribution of different rock types and the structure of the rocks."@en ;
+    skos:broader earthscicat:geophysical-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:magnetic-data a skos:Concept ;
+    skos:prefLabel "magnetic data"@en ;
+    skos:definition "The magnetic method is a non-invasive geophysical method which ultimately measures the magnetic field associated with magnetic minerals in crustal rocks."@en ;
+    skos:broader earthscicat:geophysical-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:magnetotellurics-surveys a skos:Concept ;
+    skos:prefLabel "magnetotellurics surveys"@en ;
+    skos:definition "Magnetotellurics (MT) is a passive geophysical method which uses natural time variations of the Earth's magnetic and electric fields to measure the electrical resistivity of the sub-surface."@en ;
+    skos:broader earthscicat:geophysical-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:radiometric-data a skos:Concept ;
+    skos:prefLabel "radiometric data"@en ;
+    skos:definition "The radiometric, or gamma-ray spectrometric method is a geophysical process used to estimate concentrations of the radioelements potassium, uranium and thorium by measuring the gamma-rays which the radioactive isotopes of these elements emit during radioactive decay."@en ;
+    skos:broader earthscicat:geophysical-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:seismic-data a skos:Concept ;
+    skos:prefLabel "seismic data"@en ;
+    skos:broader earthscicat:geophysical-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:hyperspectral-data a skos:Concept ;
+    skos:prefLabel "Hyperspectral data"@en ;
+    skos:definition "Spectral geology is the measurement and analysis of portions of the electromagnetic spectrum to identify spectrally distinct and physically significant features of different rock types and surface materials, their mineralogy and their alteration signatures."@en;
+    skos:inScheme earthscicat:conceptScheme ;
+    skos:topConceptOf earthscicat:conceptScheme .
+
+earthscicat:mineral-occurrence-data a skos:Concept ;
+    skos:prefLabel "Mineral occurrence data"@en ;
+    skos:inScheme earthscicat:conceptScheme ;
+    skos:narrower earthscicat:geological-observations,
+        earthscicat:mineral-occurrence ;
+    skos:topConceptOf earthscicat:conceptScheme .
+
+earthscicat:geological-observations a skos:Concept ;
+    skos:prefLabel "Geological observations"@en ;
+    skos:broader earthscicat:mineral-occurrence-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:mineral-occurrence a skos:Concept ;
+    skos:prefLabel "Mineral occurrence"@en ;
+    skos:broader earthscicat:mineral-occurrence-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:petroleum-geoscience-data a skos:Concept ;
+    skos:prefLabel "Petroleum geoscience data"@en ;
+    skos:inScheme earthscicat:conceptScheme ;
+    skos:narrower earthscicat:biostratigraphic-data,
+        earthscicat:casing-details,
+        earthscicat:coal-petrology-data,
+        earthscicat:cored-intervals,
+        earthscicat:cuttings-samples,
+        earthscicat:downhole-and-bottomhole-temperatures-data,
+        earthscicat:drill-stem-test-details,
+        earthscicat:extract-geochemistry-data,
+        earthscicat:gas-analysis-data,
+        earthscicat:hole-deviation-data,
+        earthscicat:hydrocarbon-indications,
+        earthscicat:oil-analysis-data,
+        earthscicat:petrophysical-data,
+        earthscicat:plugged-intervals,
+        earthscicat:proximate-analysis-data,
+        earthscicat:pyrolysis-data,
+        earthscicat:sidewall-cores-samples,
+        earthscicat:vitrinite-reflectance-data,
+        earthscicat:water-analysis-data,
+        earthscicat:well-history-details ;
+    skos:topConceptOf earthscicat:conceptScheme .
+
+earthscicat:biostratigraphic-data a skos:Concept ;
+    skos:prefLabel "Biostratigraphic data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:casing-details a skos:Concept ;
+    skos:prefLabel "Casing details"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:coal-petrology-data a skos:Concept ;
+    skos:prefLabel "Coal petrology data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:cored-intervals a skos:Concept ;
+    skos:prefLabel "Cored intervals"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:cuttings-samples a skos:Concept ;
+    skos:prefLabel "Cutting samples"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:downhole-and-bottomhole-temperatures-data a skos:Concept ;
+    skos:prefLabel "Down hole and bottom hole temperatures data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:drill-stem-test-details a skos:Concept ;
+    skos:prefLabel "Drill stem test details"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:extract-geochemistry-data a skos:Concept ;
+    skos:prefLabel "Extract geochemistry data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:gas-analysis-data a skos:Concept ;
+    skos:prefLabel "Gas analysis data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:hole-deviation-data a skos:Concept ;
+    skos:prefLabel "Hole deviation data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:hydrocarbon-indications a skos:Concept ;
+    skos:prefLabel "Hydrocarbon indications"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:oil-analysis-data a skos:Concept ;
+    skos:prefLabel "Oil analysis data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:petrophysical-data a skos:Concept ;
+    skos:prefLabel "Petrophysical data (e.g. Porosity and permeability)"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:plugged-intervals a skos:Concept ;
+    skos:prefLabel "Plugged intervals"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:proximate-analysis-data a skos:Concept ;
+    skos:prefLabel "Proximate analysis data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:pyrolysis-data a skos:Concept ;
+    skos:prefLabel "Pyrolysis data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:sidewall-cores-samples a skos:Concept ;
+    skos:prefLabel "Sidewall cores samples"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:vitrinite-reflectance-data a skos:Concept ;
+    skos:prefLabel "Vitrinite reflectance data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:water-analysis-data a skos:Concept ;
+    skos:prefLabel "Water analysis data"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:well-history-details a skos:Concept ;
+    skos:prefLabel "Well history details"@en ;
+    skos:broader earthscicat:petroleum-geoscience-data ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:queensland-geology a skos:Concept ;
+    skos:prefLabel "Queensland geology"@en ;
+    skos:inScheme earthscicat:conceptScheme ;
+    skos:narrower earthscicat:airborne-magnetic-and-radiometric-images,
+        earthscicat:basement-geology-interpretation,
+        earthscicat:geological-field-observations,
+        earthscicat:geophysical-interpretation,
+        earthscicat:gravity-images,
+        earthscicat:solid-geology-based-on-tectonic-setting,
+        earthscicat:structural-framework ;
+    skos:topConceptOf earthscicat:conceptScheme .
+
+earthscicat:airborne-magnetic-and-radiometric-images a skos:Concept ;
+    skos:prefLabel "Airborne magnetic and radiometric-images"@en ;
+    skos:broader earthscicat:queensland-geology ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:basement-geology-interpretation a skos:Concept ;
+    skos:prefLabel "Basement geology interpretation"@en ;
+    skos:broader earthscicat:queensland-geology ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:geological-field-observations a skos:Concept ;
+    skos:prefLabel "Geological field observations"@en ;
+    skos:broader earthscicat:queensland-geology ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:geophysical-interpretation a skos:Concept ;
+    skos:prefLabel "Geophysical interpretation"@en ;
+    skos:broader earthscicat:queensland-geology ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:gravity-images a skos:Concept ;
+    skos:prefLabel "Gravity images"@en ;
+    skos:broader earthscicat:queensland-geology ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:solid-geology-based-on-tectonic-setting a skos:Concept ;
+    skos:prefLabel "Solid geology based on tectonic setting"@en ;
+    skos:broader earthscicat:queensland-geology ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:structural-framework a skos:Concept ;
+    skos:prefLabel "Structural framework"@en ;
+    skos:broader earthscicat:queensland-geology ;
+    skos:inScheme earthscicat:conceptScheme .
+
+earthscicat:wireline-log-data a skos:Concept ;
+    skos:prefLabel "Wireline log data"@en ;
+    skos:definition "A continuous measurement of formation properties with electrically powered instruments to infer properties and make decisions about drilling and production operations. The record of the measurements, typically a long strip of paper, is also called a log. Measurements include electrical properties (resistivity and conductivity at various frequencies), sonic properties, active and passive nuclear measurements, dimensional measurements of the wellbore, formation fluid sampling, formation pressure measurement, wireline-conveyed sidewall coring tools, and others."@en ;
+    skos:inScheme earthscicat:conceptScheme ;
+    skos:topConceptOf earthscicat:conceptScheme .

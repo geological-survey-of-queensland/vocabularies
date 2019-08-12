@@ -1,0 +1,385 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix smethod: <http://linked.data.gov.au/def/sampling-method/> .
+
+<http://linked.data.gov.au/def/sampling-method> a owl:Ontology .
+
+smethod:conceptScheme a skos:ConceptScheme;
+  dct:created "2019-01-29T20:54:26.064+10:00"^^xsd:dateTime;
+  skos:prefLabel "Sampling Method"@en ;
+  dct:description "Methods used to create samples"@en ;
+  skos:scopeNote "The sorts of samples of most interest to the creators of this vocabulary - the Geological Survey of Queensland - are mining industry samples, such as rocks and oil, however this vocabulary could and should be used to contain methods for all types of samples: data samples, population samples, etc." .
+
+smethod:Percussion_Drilling a skos:Concept;
+  dct:created "2019-01-29T20:56:40.850+10:00"^^xsd:dateTime;
+  dct:modified "2019-01-30T12:56:54.877+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Percussion Drilling"@en ;
+   skos:exactMatch
+      <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod/percussion_drilling> .
+
+smethod:Rotary_Drilling a skos:Concept;
+  dct:created "2019-01-29T20:56:23.159+10:00"^^xsd:dateTime;
+  dct:modified "2019-01-30T12:58:48.816+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod/rotary_drilling>;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Rotary Drilling"@en .
+
+smethod:Rotary_Air_Blow_Drilling a skos:Concept;
+  dct:created "2019-01-29T20:59:16.103+10:00"^^xsd:dateTime;
+  dct:modified "2019-01-30T13:02:01.367+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod/rab_drilling>;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Rotary Air Blow Drilling"@en .
+
+smethod:Drilling a skos:Concept;
+  dct:created "2019-01-29T20:55:29.205+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Collection;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Drilling"@en ;
+  skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod/drilling> .
+
+smethod:Air_Core_Drilling a skos:Concept;
+  dct:created "2019-01-29T20:58:57.684+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Air Core Drilling"@en .
+
+smethod:Reverse_Circulation_Percussion_Drilling a skos:Concept;
+  dct:created "2019-01-29T20:59:58.259+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Reverse Circulation Percussion Drilling"@en .
+
+smethod:Auger_Drilling a skos:Concept;
+  dct:created "2019-01-29T21:00:14.746+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Auger Drilling"@en ;
+  skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod/auger> .
+
+smethod:Diamond_Drilling a skos:Concept;
+  dct:created "2019-01-29T21:00:30.519+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Diamond Drilling"@en .
+
+smethod:Blades_Drilling a skos:Concept;
+  dct:created "2019-01-29T21:00:53.731+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Blades Drilling"@en .
+
+smethod:Hammer_Drilling a skos:Concept;
+  dct:created "2019-01-29T21:01:08.707+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Hammer Drilling"@en .
+
+smethod:Polycrystalline_Diamond_Drilling a skos:Concept;
+  dct:created "2019-01-29T21:01:47.211+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Polycrystalline Diamond Drilling"@en .
+
+smethod:Rock_Roller-Tricone_Drilling a skos:Concept;
+  dct:created "2019-01-29T21:02:18.689+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Rock Roller/Tricone Drilling"@en .
+
+smethod:Under_Reamer_Drilling a skos:Concept;
+  dct:created "2019-01-29T21:02:48.521+10:00"^^xsd:dateTime;
+  skos:broader smethod:Drilling;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Under Reamer Drilling"@en .
+
+smethod:Specimen_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:03:26.131+10:00"^^xsd:dateTime;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Specimen Analysis"@en;
+  skos:topConceptOf smethod:conceptScheme .
+
+smethod:Whole_Rock_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:04:28.352+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Whole Rock Analysis"@en .
+
+smethod:Stream_Sediment_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:04:49.319+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Stream Sediment Analysis"@en .
+
+smethod:Age_Determination a skos:Concept;
+  dct:created "2019-01-29T21:05:16.940+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Age Determination"@en .
+
+smethod:Radiation_Reading a skos:Concept;
+  dct:created "2019-01-29T21:09:58.209+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Radiation Reading"@en .
+
+smethod:Langmuir_Isotherm_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:10:36.579+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Langmuir Isotherm Analysis"@en .
+
+smethod:Ash_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:10:50.891+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Ash Analysis"@en .
+
+smethod:Ash_Fusion_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:11:51.899+10:00"^^xsd:dateTime;
+  dct:modified "2019-01-29T21:12:38.293+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Ash Fusion Analysis"@en .
+
+smethod:Biomarker_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:13:02.644+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Biomarker Analysis"@en .
+
+smethod:Chromatography a skos:Concept;
+  dct:created "2019-01-29T21:13:17.597+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Chromatography"@en .
+
+smethod:Gas_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:13:29.889+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Gas Analysis"@en .
+
+smethod:Petrophysical_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:13:44.962+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Petrophysical Analysis"@en .
+
+smethod:Proximate_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:14:29.081+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Proximate Analysis"@en .
+
+smethod:Pyrolysis_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:15:03.882+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Pyrolysis Analysis"@en .
+
+smethod:Soil_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:15:20.534+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Soil Analysis"@en .
+
+smethod:Point_Count a skos:Concept;
+  dct:created "2019-01-29T21:15:54.641+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Point Count"@en .
+
+smethod:Coal_Petrography a skos:Concept;
+  dct:created "2019-01-29T21:16:12.180+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Coal Petrography"@en .
+
+smethod:Coking_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:16:34.710+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Coking Analysis"@en .
+
+smethod:Condensate_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:16:46.595+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Condensate Analysis"@en .
+
+smethod:Element_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:16:59.631+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Element Analysis"@en .
+
+smethod:Extract_Geochemistry a skos:Concept;
+  dct:created "2019-01-29T21:17:16.253+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Extract Geochemistry"@en .
+
+smethod:Isotope_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:17:37.686+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Isotope Analysis"@en .
+
+smethod:Oil_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:17:50.438+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Oil Analysis"@en .
+
+smethod:Oilshale_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:18:03.470+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Oilshale Analysis"@en .
+
+smethod:Physical_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:18:23.556+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Physical Analysis"@en .
+
+smethod:Thermal_Alteration_Index_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:19:44.656+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Thermal Alteration Index Analysis"@en .
+
+smethod:Thermal_Maturity_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:20:01.366+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Thermal Maturity Analysis"@en .
+
+smethod:Washability_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:20:15.736+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Washability Analysis"@en .
+
+smethod:Water_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:20:28.622+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Water Analysis"@en .
+
+smethod:Ultimate_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:20:45.377+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Ultimate Analysis"@en .
+
+smethod:X-Ray_Diffraction a skos:Concept;
+  dct:created "2019-01-29T21:21:05.729+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "X-Ray Diffraction"@en .
+
+smethod:Paleomagnetic_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:21:31.817+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Paleomagnetic Analysis"@en .
+
+smethod:Petrography a skos:Concept;
+  dct:created "2019-01-29T21:21:51.976+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Petrography"@en .
+
+smethod:Scanning_Electron_Microscopy a skos:Concept;
+  dct:created "2019-01-29T21:23:10.568+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Scanning Electron Microscopy"@en .
+
+smethod:Unknown_Analysis_Type a skos:Concept;
+  dct:created "2019-01-29T21:23:25.337+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Unknown Analysis Type"@en .
+
+smethod:Palynology a skos:Concept;
+  dct:created "2019-01-29T21:23:39.353+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Palynology"@en .
+
+smethod:Coal_Quality_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:23:59.679+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Coal Quality Analysis"@en .
+
+smethod:Limestone_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:24:16.227+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Limestone Analysis"@en .
+
+smethod:X-Ray_Fluorescence_Major-Minor_Element_Scan a skos:Concept;
+  dct:created "2019-01-29T21:24:44.849+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "X-Ray Fluorescence (Major-Minor Element Scan)"@en .
+
+smethod:Fire_Assay a skos:Concept;
+  dct:created "2019-01-29T21:24:54.867+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Fire Assay"@en .
+
+smethod:Geochemistry a skos:Concept;
+  dct:created "2019-01-29T21:25:05.913+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Geochemistry"@en .
+
+smethod:Biostratigraphy a skos:Concept;
+  dct:created "2019-01-29T21:25:55.720+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Biostratigraphy"@en .
+
+smethod:Thermal_Conductivity a skos:Concept;
+  dct:created "2019-01-29T21:26:07.184+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Thermal Conductivity"@en .
+
+smethod:Heat_Flow_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:27:09.108+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Heat Flow Analysis"@en .
+
+smethod:Gas_Desorption_Analysis a skos:Concept;
+  dct:created "2019-01-29T21:27:30.725+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Gas Desorption Analysis"@en .
+
+smethod:Repeat_Formation_Test a skos:Concept;
+  dct:created "2019-01-29T21:27:42.422+10:00"^^xsd:dateTime;
+  skos:broader smethod:Specimen_Analysis;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Repeat Formation Test"@en .
+
+smethod:Specimen_Collection a skos:Concept;
+  dct:created "2019-01-29T21:03:26.131+10:00"^^xsd:dateTime;
+  skos:inScheme smethod:conceptScheme;
+  skos:prefLabel "Specimen Collection"@en;
+  skos:topConceptOf smethod:conceptScheme .

@@ -1,0 +1,71 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix gfoi: <http://linked.data.gov.au/def/geoscience-foi/> .
+
+<http://linked.data.gov.au/def/geoscience-foi> a owl:Ontology .
+
+gfoi:conceptScheme a skos:ConceptScheme ;
+    skos:prefLabel "Geoscience Feature of Interest"@en ;
+    dcterms:created "2019-06-03T12:11:51.537000+10:00"^^xsd:dateTime ;
+    skos:definition "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result, or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+    skos:example "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest."@en .
+
+gfoi:basin a skos:Concept ;
+    skos:prefLabel "basin"@en ;
+    skos:definition "A geological basin is a large low-lying area. Geological basins are one of the two most common places inland which collect sediment (the other is lakes). The type of rocks which form there tell about the palaeoclimate of the continent. The geology is of interest to oil prospectors, hydrologists and palaeontologists."@en ;
+    skos:inScheme gfoi:conceptScheme ;
+    skos:topConceptOf gfoi:conceptScheme .
+
+gfoi:block a skos:Concept ;
+    skos:prefLabel "block"@en ;
+    skos:definition "A geographic grid used for exploration tenure management using the basic unit (a BLOCK) defined as five minutes of latitude by five minutes of longitude. The Blocks are grouped by 1:1 000 000 sheet areas (the basic map unit for description) referred to as Block Identification Map (BIM). Each BIM contains 3456 blocks with the Blocks numbered between 1 and 3456 inclusive. Each Block is divided into 25 subblocks, the sub-unit (a SubBlock) is 1 minute of latitude by 1 minute of longitude. The subblocks are labelled between A and Z, excluding I."@en ;
+    skos:inScheme gfoi:conceptScheme ;
+    skos:topConceptOf gfoi:conceptScheme .
+
+gfoi:borehole a skos:Concept ;
+    skos:prefLabel "borehole"@en ;
+    skos:definition "A borehole is a narrow shaft bored in the ground, either vertically or horizontally. A borehole may be constructed for many different purposes, including the extraction of water, other liquids (such as petroleum) or gases (such as natural gas), as part of a geotechnical investigation, environmental site assessment, mineral exploration, temperature measurement, for geothermal installations, or for underground storage of unwanted substances, e.g. in carbon capture and storage."@en ;
+    skos:inScheme gfoi:conceptScheme ;
+    skos:topConceptOf gfoi:conceptScheme .
+
+gfoi:field-site a skos:Concept ;
+    skos:prefLabel "field site"@en ;
+    skos:inScheme gfoi:conceptScheme ;
+    skos:topConceptOf gfoi:conceptScheme .
+
+gfoi:mapsheet a skos:Concept ;
+    skos:prefLabel "mapsheet"@en ;
+    skos:definition "An individual map or chart either complete in itself or part of a series."@en ;
+    skos:inScheme gfoi:conceptScheme ;
+    skos:topConceptOf gfoi:conceptScheme .
+
+gfoi:mineral-deposit a skos:Concept ;
+    skos:prefLabel "mineral deposit"@en ;
+    skos:definition "Mineral deposits are naturally occurring accumulations or concentrations of metals or minerals of sufficient size and concentration that might, under favourable circumstances, have economic value. Economic concentrations of metals or other mineral commodities are known as ore."@en ;
+    skos:inScheme gfoi:conceptScheme ;
+    skos:topConceptOf gfoi:conceptScheme .
+
+gfoi:mining-permit a skos:Concept ;
+    skos:prefLabel "mining permit"@en ;
+    skos:definition "In general mineral or energy rights in Australia are reserved to the Crown. The acquisition of rights to minerals or energy stems from legislative frameworks in Queensland. These frameworks provide initially for exploration of the resource, and consist of the grant by the Crown in the form of exploration permits, licences or leases. Exploration permits, leases or licences permit works to be undertaken to determine the likely existence of minerals or resources. Actual mining is subject to a further grant of mining or minerals production leases or licences. The legislation also provides for the payment of royalties to the State and to compensate the owners or occupiers of the surface land."@en ;
+    skos:example "ATP1234, ML5678, EPM9876"@en ;
+    skos:inScheme gfoi:conceptScheme ;
+    skos:topConceptOf gfoi:conceptScheme .
+
+gfoi:pipeline a skos:Concept ;
+    skos:prefLabel "pipeline"@en ;
+    skos:definition "A system of pipes to transport liquids and gases typically to a market area for consumption or shipping."@en ;
+    skos:inScheme gfoi:conceptScheme ;
+    skos:topConceptOf gfoi:conceptScheme .
+
+gfoi:place-name a skos:Concept ;
+    skos:prefLabel "place name"@en ;
+    skos:definition "Place Names are names given to natural and artificial geospatial features, such as administrative areas, political regions, mountain ranges, rivers, bays etc."@en ;
+    skos:inScheme gfoi:conceptScheme ;
+    skos:topConceptOf gfoi:conceptScheme .
