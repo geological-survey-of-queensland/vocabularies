@@ -48,7 +48,7 @@ A vocabulary is a set of agreed terms:
 ## How to publish a vocabulary to VocPrez Production
 1. Verify that the URI of the vocabulary is valid and does not collide with an existing URI. URIs are in the format  http://linked.data.gov.au/def/vocabulary-name
 2. If not already done, register the URI of the vocabulary through the console at http://linked.data.gov.au *(John K to add process steps here)*. The registration is reviewed and approved by the managers of the Linked Data Working Group.
-3. Perform a Pull Request from the TEST branch in Github to the MASTER branch.
+3. Perform a Pull Request from the DEV branch in Github to the MASTER branch.
 4. A member of the Data Integrity Team will review your vocabulary and either Approve or Request Changes.
 5. Import the vocabulary TTL file into the Core Repository in the Production Graph DB https://graphdb.gsq.digital using the [instructions here](http://graphdb.ontotext.com/documentation/standard/loading-data-using-the-workbench.html).
 6. Restart the Production VocPrez to refresh the VocPrez cache (we will automate this step).
