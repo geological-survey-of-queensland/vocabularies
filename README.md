@@ -7,6 +7,7 @@ A vocabulary is a set of agreed terms:
 * Vocabularies align information within a business area or across systems.
 * Vocabularies can be very complex (with thousands of terms) or very simple (describing one or two concepts only).
 
+Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Why-Vocabularies%3F)
 
 ## Vocabulary - how it all hangs together
 <img src="vocabulary_context_diagram.png" style="width:800px;" alt="Vocabulary context diagram" />  
@@ -44,6 +45,8 @@ A vocabulary is a set of agreed terms:
 2. Restart the Test VocPrez to refresh the VocPrez cache (we will automate this step).
 3. The vocabulary is now published in the Test VocPrez at https://test.vocabs.gsq.digital
 
+## How to review and validate a vocabulary
+See the instructions at [Vocabulary Review Process](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Vocabulary-Review-Process)
 
 ## How to publish a vocabulary to VocPrez Production
 1. Verify that the URI of the vocabulary is valid and does not collide with an existing URI. URIs are in the format  http://linked.data.gov.au/def/vocabulary-name
