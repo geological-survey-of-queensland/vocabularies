@@ -49,13 +49,12 @@ Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/voca
 See the instructions at [Vocabulary Review Process](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Vocabulary-Review-Process)
 
 ## How to publish a vocabulary to VocPrez Production
-1. Verify that the URI of the vocabulary is valid and does not collide with an existing URI. URIs are in the format  http://linked.data.gov.au/def/vocabulary-name
-2. If not already done, register the URI of the vocabulary through the console at http://linked.data.gov.au *(John K to add process steps here)*. The registration is reviewed and approved by the managers of the Linked Data Working Group.
-3. Perform a Pull Request from the DEV branch in Github to the MASTER branch.
-4. A member of the Data Integrity Team will review your vocabulary and either Approve or Request Changes.
-5. Import the vocabulary TTL file into the Core Repository in the Production Graph DB https://graphdb.gsq.digital using the [instructions here](http://graphdb.ontotext.com/documentation/standard/loading-data-using-the-workbench.html).
-6. Restart the Production VocPrez to refresh the VocPrez cache (we will automate this step).
-7. The vocabulary is now published in the Production VocPrez at https://vocabs.gsq.digital. Please note that the vocab will not display in VocPrez until the URI registration at http://linked.data.gov.au is approved. 
+1. Follow the PID URI Allocations process detailed on the [Linked Data Working Group webpage](http://www.linked.data.gov.au/governance).
+1. Perform a Pull Request from the DEV branch in Github to the MASTER branch.
+1. A member of the Data Integrity Team will review your vocabulary and either Approve or Request Changes.
+1. Import the vocabulary TTL file into the Core Repository in the Production Graph DB https://graphdb.gsq.digital using the [instructions here](http://graphdb.ontotext.com/documentation/standard/loading-data-using-the-workbench.html).
+1. Restart the Production VocPrez to refresh the VocPrez cache (we will automate this step).
+1. The vocabulary is now published in the Production VocPrez at https://vocabs.gsq.digital. Please note that the vocab will not display in VocPrez until the URI registration at http://linked.data.gov.au is approved. 
 
 
 ## See also
