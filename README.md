@@ -7,7 +7,7 @@ A vocabulary is a set of agreed terms:
 * Vocabularies align information within a business area or across systems.
 * Vocabularies can be very complex (with thousands of terms) or very simple (describing one or two concepts only).
 
-Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Why-Vocabularies%3F)
+Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Why-Vocabularies%3F) and more subjects in the [Vocabularies Wiki](https://github.com/geological-survey-of-queensland/vocabularies/wiki).
 
 ## Vocabulary - how it all hangs together
 <img src="vocabulary_context_diagram.png" style="width:800px;" alt="Vocabulary context diagram" />  
