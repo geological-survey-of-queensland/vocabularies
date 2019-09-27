@@ -31,6 +31,13 @@
         :weight-drop ;
     skos:prefLabel "Seismic Sampling Method"@en .
 
+:accelerated-weight-drop a skos:Concept ;
+    skos:altLabel "AWD"@en ;
+    skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released and propelled into the impact point to generate a seismic pulse."@en ;
+    skos:inScheme :conceptScheme ;
+    skos:prefLabel "Accelerated Weight Drop"@en ;
+    skos:topConceptOf :conceptScheme .
+
 :air-gun a skos:Concept ;
     skos:altLabel "Air Pulse"@en ;
     skos:definition "Metal cylinders through which high pressure air is forced through and into the water column. The injection of air into the water creates a pressure pulse that travels through the water and into the subsurface. It is common to have multiple airguns firing at once to create an array."@en ;
@@ -143,6 +150,12 @@
         :weight-drop ;
     skos:prefLabel "Impact"@en .
 
+:vibration a skos:Collection ;
+    skos:definition "A mass is held in contact with the ground and oscillated to put a range of frequencies into the earth."@en ;
+    skos:member :noise-source,
+        :vibroseis ;
+    skos:prefLabel "Vibration"@en .
+
 :offshore a skos:Collection ;
     skos:definition "A seismic source used for data acquisition in offshore seismic surveys"@en ;
     skos:member :air-gun,
@@ -170,10 +183,4 @@
         :vibroseis ;
     skos:prefLabel "Vibration"@en .
 
-:accelerated-weight-drop a skos:Concept ;
-    skos:altLabel "AWD"@en ;
-    skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released and propelled into the impact point to generate a seismic pulse."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Accelerated Weight Drop"@en ;
-    skos:topConceptOf :conceptScheme .
 
