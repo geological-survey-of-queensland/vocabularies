@@ -11,97 +11,100 @@
 <http://linked.data.gov.au/def/seismic-sampling-method> a owl:Ontology .
 
 :conceptScheme a skos:ConceptScheme ;
-    dct:created "2019-09-25T13:53:11+10:00"^^xsd:dateTime ;
+    dct:created "2019-09-27T15:03:40+10:00"^^xsd:dateTime ;
     dct:creator "Geological Survey of Queensland" ;
-    dct:modified "2019-09-25T13:53:11+10:00"^^xsd:dateTime ;
+    dct:modified "2019-09-27T15:03:40+10:00"^^xsd:dateTime ;
     dct:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "The classification of tools used as an energy source that generate a seismic signal for use in seismic survey acquisition."@en ;
+    skos:hasTopConcept :accelerated-weight-drop,
+        :air-gun,
+        :boomer,
+        :dynamite,
+        :firearm,
+        :hammer,
+        :hydraulic-oil-impactor,
+        :noise-source,
+        :plasma-sound-source,
+        :vibroseis,
+        :wacker,
+        :water-gun,
+        :weight-drop ;
     skos:prefLabel "Seismic Sampling Method"@en .
 
 :accelerated-weight-drop a skos:Concept ;
     skos:altLabel "AWD"@en ;
-    skos:broader :impact,
-        :onshore ;
     skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released and propelled into the impact point to generate a seismic pulse."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Accelerated Weight Drop"@en .
+    skos:prefLabel "Accelerated Weight Drop"@en ;
+    skos:topConceptOf :conceptScheme .
 
 :air-gun a skos:Concept ;
     skos:altLabel "Air Pulse"@en ;
-    skos:broader :explosive,
-        :offshore ;
     skos:definition "Metal cylinders through which high pressure air is forced through and into the water column. The injection of air into the water creates a pressure pulse that travels through the water and into the subsurface. It is common to have multiple airguns firing at once to create an array."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Air Gun"@en .
+    skos:prefLabel "Air Gun"@en ;
+    skos:topConceptOf :conceptScheme .
 
 :boomer a skos:Concept ;
     skos:altLabel "Bang Box"@en,
         "Boomers"@en ;
-    skos:broader :explosive,
-        :offshore ;
     skos:definition "Energy is stored in capacitors and discharges through a flat spiral coil with no spark. A copper plate adjacent to the coil flexes away from the coil as the capacitors are discharged. This flexing is transmitted into the water as the seismic pulse. Boomers are towed in a floating sled behind a survey vessel."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Boomer"@en .
+    skos:prefLabel "Boomer"@en ;
+    skos:topConceptOf :conceptScheme .
 
 :dynamite a skos:Concept ;
-    skos:broader :explosive,
-        :onshore ;
     skos:definition "An explosive consisting of nitroglycerine mixed with an absorbent material and typically moulded into sticks. A stick is placed into a shallow borehole and detonated to generate a seismic pulse."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Dynamite"@en .
+    skos:prefLabel "Dynamite"@en ;
+    skos:topConceptOf :conceptScheme .
 
 :firearm a skos:Concept ;
     skos:altLabel "Betsy Gun"@en,
         "Pistol"@en,
         "Shotgun"@en ;
-    skos:broader :explosive,
-        :onshore ;
     skos:definition "A gunpowder-based firearm is discharged in a shallow borehole to generate a seismic pulse."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Firearm"@en .
+    skos:prefLabel "Firearm"@en ;
+    skos:topConceptOf :conceptScheme .
 
 :hammer a skos:Concept ;
     skos:altLabel "Sledge Hammer"@en,
         "Sledgehammer"@en ;
-    skos:broader :impact,
-        :onshore ;
     skos:definition "A large hand-held hammer is used to strike a metal plate on the ground surface to generate a seismic pulse."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Hammer"@en .
+    skos:prefLabel "Hammer"@en ;
+    skos:topConceptOf :conceptScheme .
 
 :hydraulic-oil-impactor a skos:Concept ;
-    skos:broader :impact,
-        :onshore ;
     skos:definition "The transmission of energy wave vibrations into earth strata surrounding a borehole. A hydraulic oscillator acts as a piston and is regulated by a high pressure hydraulic fluid flow into and out of upper and lower chambers surrounding the piston. The device impacts the surrounding strata in the borehole to generate a series of seismic pulses."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Hydraulic Oil Impactor"@en .
+    skos:prefLabel "Hydraulic Oil Impactor"@en ;
+    skos:topConceptOf :conceptScheme .
 
 :noise-source a skos:Concept ;
     skos:altLabel "Passive Source"@en ;
-    skos:broader :onshore,
-        :vibration ;
     skos:definition "The ambient vibrations transmitted in the ground. Measurements are typically taken over relatively long timeframes."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Noise Source"@en .
+    skos:prefLabel "Noise Source"@en ;
+    skos:topConceptOf :conceptScheme .
 
 :plasma-sound-source a skos:Concept ;
     skos:altLabel "Spark Gap"@en,
         "Spark Gap Sound Source"@en,
         "Sparker"@en,
         "Sparkers"@en ;
-    skos:broader :explosive,
-        :offshore ;
     skos:definition "An electric charge is stored in a large high-voltage bank of capacitors and then released in an arc across electrodes in the water. The underwater spark discharge produces a high-pressure plasma and vapor bubble, which expands and displaces the surrounding water. The resulting implosion of water to fill the cavity generates a seismic pulse."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Plasma Sound Source"@en .
+    skos:prefLabel "Plasma Sound Source"@en ;
+    skos:topConceptOf :conceptScheme .
 
 :vibroseis a skos:Concept ;
     skos:altLabel "Vibrator"@en ;
-    skos:broader :onshore,
-        :vibration ;
     skos:definition "A vehicle-mounted system that holds a large mass to the ground surface which is then oscillated to generate vibrations."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Vibroseis"@en .
+    skos:prefLabel "Vibroseis"@en ;
+    skos:topConceptOf :conceptScheme .
 
 :wacker a skos:Concept ;
     skos:altLabel "Compactor"@en,
@@ -111,76 +114,68 @@
         "Sozie"@en,
         "Wacker Packer"@en,
         "Whacker"@en ;
-    skos:broader :impact,
-        :onshore ;
     skos:definition "A vibration-rammer, similar to a large jackhammer with a flat-plated bottom, repeatedly strikes the ground to generate a series of seismic pulses. Engine speed is used to vary the striking rate, resulting in a random impulse transmission."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Wacker"@en .
-
-:water-gun a skos:Concept ;
-    skos:broader :explosive,
-        :offshore ;
-    skos:definition "A piston mechanism forces compressed air into the surrounding water and displaces it. The resulting implosion of water to fill the cavity generates a seismic pulse."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Water Gun"@en .
-
-:weight-drop a skos:Concept ;
-    skos:broader :impact,
-        :onshore ;
-    skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released under the force of gravity with no additional forces applied. The mass strikes the impact point to generate a seismic pulse."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Weight Drop"@en .
-
-:seismic-by-environment a skos:Concept ;
-    skos:broader :seismic-source ;
-    skos:definition "A seismic survey can be conducted onshore or offshore and may be commonly referred to as 'ground' or 'marine' seismic surveys respectively."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Seismic by Environment"@en .
-
-:vibration a skos:Concept ;
-    skos:broader :seismic-by-method ;
-    skos:definition "A mass is held in contact with the ground and oscillated to put a range of frequencies into the earth."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Vibration"@en .
-
-:seismic-by-method a skos:Concept ;
-    skos:broader :seismic-source ;
-    skos:definition "A seismic survey can be defined by the method used to generate the acoustic energy source for that survey."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Seismic by Method"@en .
-
-:seismic-source a skos:Concept ;
-    skos:altLabel "Sampling Source"@en,
-        "Seismic Sampling Source"@en ;
-    skos:definition "A device that generates controlled seismic energy used to perform both reflection and refraction seismic surveys."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Seismic Source"@en ;
+    skos:prefLabel "Wacker"@en ;
     skos:topConceptOf :conceptScheme .
 
-:offshore a skos:Concept ;
-    skos:altLabel "Marine Source"@en ;
-    skos:broader :seismic-by-environment ;
-    skos:definition "A seismic source used for data acquisition in offshore seismic surveys."@en ;
+:water-gun a skos:Concept ;
+    skos:definition "A piston mechanism forces compressed air into the surrounding water and displaces it. The resulting implosion of water to fill the cavity generates a seismic pulse."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Offshore"@en .
+    skos:prefLabel "Water Gun"@en ;
+    skos:topConceptOf :conceptScheme .
 
-:impact a skos:Concept ;
-    skos:broader :seismic-by-method ;
-    skos:definition "A force is used to contact a mass, or striker, with the ground surface to generate a seismic pulse."@en ;
+:weight-drop a skos:Concept ;
+    skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released under the force of gravity with no additional forces applied. The mass strikes the impact point to generate a seismic pulse."@en ;
     skos:inScheme :conceptScheme ;
-    skos:prefLabel "Impact"@en .
+    skos:prefLabel "Weight Drop"@en ;
+    skos:topConceptOf :conceptScheme .
 
-:explosive a skos:Concept ;
-    skos:broader :seismic-by-method ;
+:explosive a skos:Collection ;
     skos:definition "An explosive, or explosive material, is a reactive substance that contains a great amount of potential energy that can produce an explosion if released suddenly, usually accompanied by the production of light, heat, sound, and pressure."@en ;
-    skos:inScheme :conceptScheme ;
+    skos:member :air-gun,
+        :boomer,
+        :dynamite,
+        :firearm,
+        :plasma-sound-source,
+        :water-gun ;
     skos:prefLabel "Explosive"@en .
 
-:onshore a skos:Concept ;
-    skos:altLabel "Ground Source"@en,
-        "Land Source"@en ;
-    skos:broader :seismic-by-environment ;
+:impact a skos:Collection ;
+    skos:definition "A force is used to contact a mass, or striker, with the ground surface to generate a seismic pulse."@en ;
+    skos:member :accelerated-weight-drop,
+        :hammer,
+        :hydraulic-oil-impactor,
+        :wacker,
+        :weight-drop ;
+    skos:prefLabel "Impact"@en .
+
+:vibration a skos:Collection ;
+    skos:definition "A mass is held in contact with the ground and oscillated to put a range of frequencies into the earth."@en ;
+    skos:member :noise-source,
+        :vibroseis ;
+    skos:prefLabel "Vibration"@en .
+
+:offshore a skos:Collection ;
+    skos:definition "A seismic source used for data acquisition in offshore seismic surveys"@en ;
+    skos:member :air-gun,
+        :boomer,
+        :plasma-sound-source,
+        :water-gun ;
+    skos:prefLabel "Offshore"@en .
+
+:onshore a skos:Collection ;
     skos:definition "A seismic source used for data acquisition in onshore seismic surveys."@en ;
-    skos:inScheme :conceptScheme ;
+    skos:member :accelerated-weight-drop,
+        :dynamite,
+        :firearm,
+        :hammer,
+        :hydraulic-oil-impactor,
+        :noise-source,
+        :vibroseis,
+        :wacker,
+        :weight-drop ;
     skos:prefLabel "Onshore"@en .
+
+
 
