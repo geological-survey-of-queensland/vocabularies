@@ -1,0 +1,297 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix minpermit: <http://linked.data.gov.au/def/qld-mining-permit/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/qld-mining-permit> a owl:Ontology .
+
+minpermit:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-03-29"^^xsd:dateTime ;
+    dct:modified "2019-09-23"^^xsd:dateTime ;
+    skos:altLabel "Resource Authority"@en,
+        "Tenure"@en ;
+    skos:definition """In general mineral or energy rights in Australia are reserved to the Crown. The acquisition of rights to minerals or energy stems from legislative frameworks in Queensland. These frameworks provide initially for exploration of the resource, and consist of the grant by the Crown in the form of exploration permits, licences or leases.
+ Exploration permits, leases or licences permit works to be undertaken to determine the likely existence of minerals or resources. Actual mining is subject to a further grant of mining or minerals production leases or licences. 
+The legislation also provides for the payment of royalties to the State and to compensate the owners or occupiers of the surface land."""@en ;
+    skos:hasTopConcept minpermit:AuthorityToProspect,
+        minpermit:DataAcquisitionAuthority,
+        minpermit:ExplorationPermitCoal,
+        minpermit:ExplorationPermitGeothermal,
+        minpermit:ExplorationPermitGreenhouseGas,
+        minpermit:ExplorationPermitMineral,
+        minpermit:GeothermalLease,
+        minpermit:GreenhouseGasLease,
+        minpermit:MineralDevelopmentLicence,
+        minpermit:MiningClaim,
+        minpermit:MiningLease,
+        minpermit:PetroleumFacilityLicence,
+        minpermit:PetroleumLease,
+        minpermit:PetroleumPipelineLicence,
+        minpermit:PetroleumSurveyLicence,
+        minpermit:PotentialCommercialArea,
+        minpermit:PotentialGeothermalCommercialArea,
+        minpermit:PotentialGreenhouseGasStorageCommercialArea,
+        minpermit:ProspectingPermit,
+        minpermit:WaterMonitoringAuthority ;
+    skos:hiddenLabel "Tenement"@en ;
+    skos:prefLabel "Queensland Mining Permit"@en .
+
+minpermit:GeothermalAuthorities a skos:Collection ;
+    skos:altLabel "Geothermal permits"@en ;
+    skos:definition "An appropriate resource authority is required before you can conduct any exploration or production activity for geothermal energy in Queensland. These are issued under Queensland's Geothermal Energy Act 2010."@en ;
+    skos:hiddenLabel "Geothermal tenures"@en ;
+    skos:member minpermit:ExplorationPermitGeothermal,
+        minpermit:GeothermalLease,
+        minpermit:PotentialGeothermalCommercialArea ;
+    skos:prefLabel "Geothermal authorities"@en .
+
+minpermit:GreenhouseGasAuthorities a skos:Collection ;
+    skos:definition "An appropriate resource authority is required before you can conduct any exploration or production activity for greenhouse gas storage areas in Queensland. These are issued under Queensland's Greenhouse Gas Storage Act 2009."@en ;
+    skos:member minpermit:DataAcquisitionAuthority,
+        minpermit:ExplorationPermitGreenhouseGas,
+        minpermit:GreenhouseGasLease,
+        minpermit:PotentialGreenhouseGasStorageCommercialArea ;
+    skos:prefLabel "Greenhouse gas storage authorities"@en .
+
+minpermit:MiningAuthorities a skos:Collection ;
+    skos:altLabel "Mining permits"@en,
+        "Mining tenures"@en ;
+    skos:hiddenLabel "Mining tenements"@en ;
+    skos:member minpermit:ExplorationPermitCoal,
+        minpermit:ExplorationPermitMineral,
+        minpermit:ExplorationPermitSpecial,
+        minpermit:MineralDevelopmentLicence,
+        minpermit:MiningClaim,
+        minpermit:MiningLease,
+        minpermit:WaterMonitoringAuthority ;
+    skos:prefLabel "Mining authorities"@en .
+
+minpermit:PetroleumAndGasAuthority a skos:Collection ;
+    skos:altLabel "Petroleum and gas permit"@en ;
+    skos:definition """An appropriate resource authority is required before you can conduct any exploration or production activity for petroleum and gas in Queensland. These are issued under Queensland's Petroleum and Gas (Production and Safety) Act 2004. 
+
+Petroleum and gas authorities are issued for: 
+
+Exploration - authority to prospect, potential commercial area and petroleum lease 
+
+Production - petroleum lease 
+
+Infrastructure development - petroleum facility licence and petroleum pipeline licence 
+
+Information gathering - petroleum survey licence, water monitoring authority and data acquisition authority."""@en ;
+    skos:member minpermit:AuthorityToProspect,
+        minpermit:DataAcquisitionAuthority,
+        minpermit:PetroleumFacilityLicence,
+        minpermit:PetroleumLease,
+        minpermit:PetroleumPipelineLicence,
+        minpermit:PetroleumSurveyLicence,
+        minpermit:PotentialCommercialArea,
+        minpermit:WaterMonitoringAuthority ;
+    skos:prefLabel "Petroleum and gas resource authority"@en .
+
+minpermit:ProspectingPermit a skos:Concept ;
+    skos:definition """A prospecting permit can be sought for any mineral other than coal. There are 2 types of prospecting permit:
+
+A prospecting permit allows you to prospect, hand-mine and peg a mining lease or mining claim (if marking out is required) on the available land specified in the permit.
+
+Hand-mining means using hand-operated tools, such as jackhammers, picks, shovels, gads, sieves and windlasses."""@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "PP" ;
+    skos:prefLabel "Prospecting Permit"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:AuthorityToProspect a skos:Concept ;
+    skos:altLabel "Exploration Permits for Petroleum (EPP)"@en ;
+    skos:definition """To explore for petroleum, oil, coal seam gas and natural gas in Queensland, you must hold a current authority to prospect (ATP).
+
+An ATP allows you to:
+
+Explore for petroleum
+
+Test for petroleum production
+
+Evaluate the feasibility of petroleum production
+
+Evaluate or test natural underground reservoirs for the storage of petroleum or a prescribed storage gas."""@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "ATP" ;
+    skos:prefLabel "Authority to Prospect"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:ExplorationPermitCoal a skos:Concept ;
+    skos:definition "Exploration permit for coal allows you to use more advanced exploration methods to determine the quantity and quality of coal present."@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "EPC" ;
+    skos:prefLabel "Exploration Permit Coal"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:ExplorationPermitGeothermal a skos:Concept ;
+    skos:definition "An EPG allows you to explore for geothermal resources and evaluate the feasibility of geothermal production, including by production testing."@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "EPG" ;
+    skos:prefLabel "Exploration Permit Geothermal"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:ExplorationPermitGreenhouseGas a skos:Concept ;
+    skos:definition """To search for greenhouse gas (GHG) capture and storage locations in Queensland you need an exploration permit for greenhouse gas (EPQ).
+
+An EPQ allows you to explore for GHG storage reservoirs within the permit area. It also allows you to carry out injection testing (with ministerial approval) and activities necessary for exploration."""@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "EPQ" ;
+    skos:prefLabel "Exploration Permit Greenhouse Gas"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:ExplorationPermitMineral a skos:Concept ;
+    skos:altLabel "Exploration Permit Special (EPS)"@en ;
+    skos:definition """Exploration permits allow you to use more advanced exploration methods to determine the quantity and quality of minerals present.
+
+An exploration permit allows you to prospect, conduct geophysical surveys, drilling, and sampling and testing of materials."""@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "EPM" ;
+    skos:prefLabel "Exploration Permit Mineral"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:GeothermalLease a skos:Concept ;
+    skos:definition "Geothermal leases are long-term authorities to allow the commercial development of the resource. A geothermal lease allows you to carry out a range of activities related to exploration, testing and production of geothermal energy."@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "GL" ;
+    skos:prefLabel "Geothermal Lease"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:GreenhouseGasLease a skos:Concept ;
+    skos:altLabel "Greenhouse gas injection and storage lease"@en ;
+    skos:definition """Greenhouse gas (GHG) injection and storage leases (QLs) are long-term authorities to allow you to commercially develop a storage site.
+
+A QL allows you to:
+
+Explore for GHG storage areas
+
+Evaluate the feasibility of GHG stream storage, including GHG storage injection testing
+
+Compress or otherwise process a GHG stream for GHG stream storage
+
+Store a GHG stream
+
+Monitor and verify the behaviour of the GHG streams."""@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "QL" ;
+    skos:prefLabel "Greenhouse Gas Lease"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:MineralDevelopmentLicence a skos:Concept ;
+    skos:definition """A mineral development licence (MDL) is issued so that you can evaluate the development potential of the defined resource. An MDL can be granted if you hold an exploration permit where there is a significant mineral occurrence of possible economic potential.
+
+Permitted activities: 
+
+The MDL allows you to conduct geoscientific programs (e.g. drilling, seismic surveys), mining feasibility studies, metallurgical testing and marketing, and environmental, engineering and design studies."""@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "MDL" ;
+    skos:prefLabel "Mineral Development Licence"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:MiningClaim a skos:Concept ;
+    skos:definition "This claim is required by small miners to prospect for minerals and hand mine on an area of land of one hectare or less using permitted equipment only."@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "MC" ;
+    skos:prefLabel "Mining Claim"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:MiningLease a skos:Concept ;
+    skos:definition "A mining lease allows you to conduct larger scale mining operations. Mining leases can be issued for any specified mineral. A mining lease allows you to machine-mine for specified minerals and conduct other activities associated with mining or promoting the activity of mining."@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "ML" ;
+    skos:prefLabel "Mining Lease"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:PetroleumFacilityLicence a skos:Concept ;
+    skos:definition """You will require a petroleum facility licence (PFL) for a processing, refining, storage or transport facility if the facility is not already covered by your petroleum lease or pipeline licence.
+
+The PFL will give you the right to construct and operate the facility on 'petroleum facility land'. This is defined as land that you either own or over which you have:
+
+An easement
+
+A written agreement with a landowner to enter to construct and operate the facility on their land
+
+A Part 5 permission."""@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "PFL" ;
+    skos:prefLabel "Petroleum Facility Licence"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:PetroleumLease a skos:Concept ;
+    skos:definition "You can apply for a petroleum lease over an area of your authority to prospect (ATP) if you make a discovery that is currently commercially viable. If the lease is granted, the area is excised from the ATP."@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "PL" ;
+    skos:prefLabel "Petroleum Lease"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:PetroleumPipelineLicence a skos:Concept ;
+    skos:definition """To construct a petroleum pipeline outside the area of your petroleum lease, you need a petroleum pipeline licence (PPL).
+
+The PPL gives you the right to construct and operate the pipeline on designated 'pipeline land.' This is defined as land that you either own or over which you have:
+
+An easement
+
+A written agreement with the landowner to enter to construct and operate the pipeline
+
+A Part 5 permission."""@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "PPL"@en ;
+    skos:prefLabel "Petroleum Pipeline Licence"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:PetroleumSurveyLicence a skos:Concept ;
+    skos:definition "A petroleum survey licence (PSL) gives you the right to enter land to survey the proposed route of a pipeline or the suitability of land for a petroleum facility licence. It can be granted for a maximum of 2 years and only allows you to conduct activities that have a minimal impact on the land. There are no area limitations."@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "PSL" ;
+    skos:prefLabel "Petroleum Survey Licence"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:PotentialCommercialArea a skos:Concept ;
+    skos:definition """You can apply to have an area of your authority to prospect (ATP) declared as a potential commercial area (PCA) so that you can evaluate the potential production and market opportunities for the resource.
+
+The PCA is a way of retaining an area of your ATP beyond its term to provide extra time to commercialise the resource. The maximum term for an ATP is 12 years, while the declaration for the PCA can be for up to 15 years.
+
+When you apply for a PCA, you must include a commercial viability report that shows that the area is likely to be commercially viable within 15 years. You must also include an evaluation program showing how you will overcome any factors inhibiting the commercial viability of the project."""@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "PCA" ;
+    skos:prefLabel "Potential Commercial Area"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:PotentialGeothermalCommercialArea a skos:Concept ;
+    skos:definition """If you discover commercial quantities of geothermal resources, you can apply to have an area of your exploration permit declared as a potential geothermal commercial area (PGA). This will allow you to evaluate the potential production and market opportunities for the resource.
+
+When an area is declared as a potential commercial area, it remains part of the exploration permit.
+
+The land must be brought into production through an application for a production lease within 5 years of the declaration or before the exploration permit expires. If you do not make an application for a lease within the accepted time frame, the potential commercial area lapses and the land ceases to be part of the exploration permit."""@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "PGA" ;
+    skos:prefLabel "Potential Geothermal Commercial Area"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:PotentialGreenhouseGasStorageCommercialArea a skos:Concept ;
+    skos:definition "If you discover a potential storage area, you can apply to have an area of your exploration permit declared as a potential greenhouse gas storage commercial area (PSA). This will allow you to evaluate the areaâ€™s potential and market opportunities.."@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "PSA" ;
+    skos:prefLabel "Potential Greenhouse Gas Storage Commercial Area"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:DataAcquisitionAuthority a skos:Concept ;
+    skos:definition "A data acquisition authority (DAA) authorises you to conduct limited geophysical survey activities and collect data outside the area of your authority to prospect (ATP) or petroleum lease (PL). A DAA is only granted on land that is contiguous to the granted ATP or PL and for activities that are directly relevant to authorised activities of your ATP or PL."@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "DAA" ;
+    skos:prefLabel "Data Acquisition Authority"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
+
+minpermit:WaterMonitoringAuthority a skos:Concept ;
+    skos:definition "As the holder of a mining lease or a mining development licence, you have an obligation to make good any damage you cause to surrounding water bores. You can apply for a water monitoring authority over land outside the area of your lease/licence to comply with your obligations."@en ;
+    skos:inScheme minpermit:conceptScheme ;
+    skos:notation "WMA" ;
+    skos:prefLabel "Water Monitoring Authority"@en ;
+    skos:topConceptOf minpermit:conceptScheme .
