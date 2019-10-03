@@ -67,7 +67,7 @@ See the instructions at [Vocabulary Review Process](https://github.com/geologica
 * **ontologies/\*.ttl** - background ontologies needed for vocab inferencing
 * **gsq-\*.ttl** - GSQ vocab files
 * **vocabs_load.py** - a Python script to load a GraphDB instance with the background ontologies and GSQ vocab files
-* **scripts/** - Python scripts to dump/load a GrpahDB instance with these vocab files
+* **scripts/** - Python scripts to dump/load a GraphDB instance with these vocab files
 
 
 ## License
