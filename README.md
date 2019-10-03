@@ -88,3 +88,9 @@ Geological Survey of Quensland
 Department of Natural Resources, Mines and Energy  
 Brisbane, QLD, Australia    
 <vance.kelly@dnrme.qld.gov.au>  
+
+*Author*:  
+**David Crosswell**  
+Enterprise Architect  
+Cross-Lateral Enterprises   
+<https://crosslateral.com.au>
