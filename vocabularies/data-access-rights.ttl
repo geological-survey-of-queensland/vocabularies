@@ -43,6 +43,12 @@ da:restricted a skos:Concept ;
     skos:inScheme da:conceptScheme ;
     skos:topConceptOf da:conceptScheme .
 
+da:protected a skos:Concept ;
+    skos:prefLabel "Protected access"@en ;
+    skos:definition "Protected access refers to a resource that is stored in a system but is not freely accessible due to specific legal or policy decisions, such as active legal proceedings or minsterial discretion. Access is limited to specific personnel or user groups. "@en ;
+    skos:inScheme da:conceptScheme ;
+    skos:topConceptOf da:conceptScheme .
+
 da:open-access-rights a skos:Collection ;
     skos:prefLabel "Open data access rights"@en ;
     skos:definition "Data that is non-sensitive, freely available, easily discovered and accessed, and published in ways and with licences that allow easy reuse."@en ;
@@ -53,4 +59,5 @@ da:closed-access-rights a skos:Collection ;
     skos:definition "Selective restriction of access to data that is OFFICIAL (low or negligible confidentiality impact), SENSITIVE (moderate confidentiality impact) or PROTECTED (high confidentiality impact)."@en ;
     skos:member da:embargoed,
         da:metadata-only,
+        da:protected,
         da:restricted .
