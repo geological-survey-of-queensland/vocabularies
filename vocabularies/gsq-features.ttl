@@ -1,0 +1,78 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gafeat: <http://linked.data.gov.au/def/gsq-features/> .
+
+<http://linked.data.gov.au/def/gsq-features> a owl:Ontology .
+
+gafeat:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-10-09"^^xsd:date ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:source "Developed by the Geological Survey of Queensland." ;
+    skos:definition "Geological features have properties that are of interest for commercial, environmental and societal reasons. Administrative features are spatial features that are defined and managed by regulatory agencies."@en ;
+    skos:hasTopConcept gafeat:block,
+        gafeat:lithodemicFeature,
+        gafeat:permit,
+        gafeat:placeName,
+        gafeat:resourceAccumulation,
+        gafeat:stratigraphicFeature,
+        gafeat:tectonicStructuralFrameworkFeature,
+        gafeat:subBlock ;
+    skos:prefLabel "GSQ Geoscience and Administrative Features"@en .
+
+gafeat:block a skos:Concept ;
+    skos:definition "A geographic grid used for exploration tenure management using the basic unit (a BLOCK) defined as five minutes of latitude by five minutes of longitude. The Blocks are grouped by 1:1 000 000 sheet areas (the basic map unit for description) referred to as Block Identification Map (BIM). Each BIM contains 3456 blocks with the Blocks numbered between 1 and 3456 inclusive."@en ;
+    skos:inScheme gafeat:conceptScheme ;
+    skos:prefLabel "Block"@en ;
+    skos:topConceptOf gafeat:conceptScheme .
+
+gafeat:lithodemicFeature a skos:Concept ;
+    skos:definition "A lithodemic feature is a three-dimensional, non-stratified body of rock, comprising one or more intrusive, highly-deformed and/or metamorphosed rock types, to which the Law of Superposition is not applicable, although age is an important criterion; contacts with other units may be intrusive, extrusive, tectonic, metamorphic and/or sedimentary."@en ;
+    dct:source "NACSN, 1983, 2005; Kumpulainen, R.A., 2017." ;
+    skos:inScheme gafeat:conceptScheme ;
+    skos:prefLabel "Lithodemic feature"@en ;
+    skos:topConceptOf gafeat:conceptScheme .
+
+gafeat:permit a skos:Concept ;
+    skos:definition "In general mineral or energy rights in Australia are reserved to the Crown. The acquisition of rights to minerals or energy stems from legislative frameworks in Queensland. These frameworks provide initially for exploration of the resource, and consist of the grant by the Crown in the form of exploration permits, licences or leases. Exploration permits, leases or licences permit works to be undertaken to determine the likely existence of minerals or resources. Actual mining is subject to a further grant of mining or minerals production leases or licences. The legislation also provides for the payment of royalties to the State and to compensate the owners or occupiers of the surface land."@en ;
+    skos:example "ATP1234, ML5678, EPM9876"@en ;
+    skos:inScheme gafeat:conceptScheme ;
+    skos:prefLabel "Permit"@en ;
+    skos:topConceptOf gafeat:conceptScheme .
+
+gafeat:placeName a skos:Concept ;
+    skos:definition "Place Names are names given to natural and artificial geospatial features, such as administrative areas, political regions, mountain ranges, rivers, bays etc."@en ;
+    skos:inScheme gafeat:conceptScheme ;
+    skos:prefLabel "Place name"@en ;
+    skos:topConceptOf gafeat:conceptScheme .
+
+gafeat:resourceAccumulation a skos:Concept ;
+    skos:definition "Resource accumulations are naturally occurring accumulations or concentrations of metals, minerals or hydrocarbons of sufficient size and concentration that might, under favourable circumstances, have economic value. Economic concentrations of metals or other mineral commodities are known as ore."@en ;
+    skos:inScheme gafeat:conceptScheme ;
+    skos:prefLabel "Resource accumulation"@en ;
+    skos:topConceptOf gafeat:conceptScheme .
+
+gafeat:stratigraphicFeature a skos:Concept ;
+    skos:definition "A Stratigraphic Feature is one of a number of preferably formalised stratigraphic units—lithostratigraphic, chronostratigraphic, biostratigraphic, sequence stratigraphic, magnetostratigraphic, event stratigraphic, etc.—which assist in the description, classification/subdivision and correlation of generally layered sedimentary rocks that are encompassed by the Law of Superposition."@en ;
+    dct:source "NACSN, 1983, 2005; Kumpulainen, R.A., 2017; ICS." ;
+    skos:inScheme gafeat:conceptScheme ;
+    skos:prefLabel "Stratigraphic feature"@en ;
+    skos:topConceptOf gafeat:conceptScheme .
+
+gafeat:tectonicStructuralFrameworkFeature a skos:Concept ;
+    skos:definition "A Tectonic and Structural Framework Feature is one of the myriad tectonic, tectonostratigraphic or structural entities that collectively constitute the Geological Framework of Queensland. Tectonic elements encompass cratons, orogens, sedimentary basins (including troughs and depressions), provinces—generally older basins of indefinite extent/form that have been strongly tectonised and/or metamorphosed, etc.; tectonostratigraphic elements include nappes, klippen, etc.; and structural elements, synclines, anticlines, faults, grabens, half-grabens, horsts, fold zones, unconformities, peneplains, etc."@en ;
+    dct:source "Classification after Kumpulainen, R.A., 2017." ;
+    skos:inScheme gafeat:conceptScheme ;
+    skos:prefLabel "Tectonic and structural framework feature"@en ;
+    skos:topConceptOf gafeat:conceptScheme .
+
+gafeat:subBlock a skos:Concept ;
+    skos:definition "A geographic grid used for exploration tenure management using the basic unit (a SUB-BLOCK) defined as 1 minute of latitude by 1 minute of longitude. Each Block is divided into 25 sub-blocks. The sub-blocks are labelled between A and Z, excluding I."@en ;
+    skos:inScheme gafeat:conceptScheme ;
+    skos:prefLabel "Sub-block"@en ;
+    skos:topConceptOf gafeat:conceptScheme .
