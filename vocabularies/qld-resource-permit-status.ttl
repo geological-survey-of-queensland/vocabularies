@@ -12,7 +12,7 @@
 
 <http://linked.data.gov.au/def/qld-resource-permit-status> a owl:Ontology .
 
-gmps:ConceptScheme a skos:ConceptScheme ;
+gmps:conceptScheme a skos:ConceptScheme ;
     dct:created "2019-09-13"^^xsd:date ;
     dct:creator "Geological Survey of Queensland" ;
     dct:source "https://myminesonline.business.qld.gov.au" ;
@@ -21,16 +21,14 @@ gmps:ConceptScheme a skos:ConceptScheme ;
         gmps:discarded,
         gmps:granted,
         gmps:non-current,
-        gmps:non-current-unfinalised,
         gmps:not-accepted,
         gmps:prelodgement,
         gmps:submitted ;
     skos:prefLabel "Queensland Resource Permit Status"@en .
 
 gmps:abandoned a skos:Concept ;
-    skos:definition "The application has been abandoned."@en ;
+    skos:definition "The Resource Permit was not granted and has been abandoned by the applicant."@en ;
     skos:broader gmps:application,
-        gmps:non-current ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Abandoned"@en .
 
@@ -40,23 +38,11 @@ gmps:accepted a skos:Concept ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Accepted"@en .
 
-gmps:application-lapsed a skos:Concept ;
-    skos:definition "The application for the Resource Permit has lapsed."@en ;
-    skos:broader gmps:non-current ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Application lapsed"@en .
-
 gmps:awaiting-payment-confirmation a skos:Concept ;
     skos:definition "Payment has been made, but the Department needs confirmation of this."@en ;
     skos:broader gmps:submitted ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Awaiting payment confirmation"@en .
-
-gmps:cancelled a skos:Concept ;   
-    skos:definition "The Resource Permit has been cancelled."@en ;
-    skos:broader gmps:non-current ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Cancelled"@en .
 
 gmps:competing-application a skos:Concept ;
     skos:definition "This application represents a competing application."@en ;
@@ -68,7 +54,6 @@ gmps:competing-application a skos:Concept ;
 gmps:conditionally-surrendered a skos:Concept ;
     skos:definition "The application has been conditionally surrendered."@en ;
     skos:broader gmps:application,
-        gmps:non-current ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Conditionally surrendered"@en .
 
@@ -78,16 +63,9 @@ gmps:conversion-of-ml-to-mc a skos:Concept ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Conversion of ML to MC"@en .
 
-gmps:deemed-abandoned a skos:Concept ;
-    skos:definition "The Resource Permit is deemed to be abandoned."@en ;
-    skos:broader gmps:non-current ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Deemed abandoned"@en .
-
 gmps:expired a skos:Concept ;
     skos:definition "The Resource Permit has expired."@en ;
     skos:broader gmps:granted,
-        gmps:non-current ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Expired"@en .
 
@@ -111,7 +89,7 @@ gmps:on-hold-oil-shale-application a skos:Concept ;
     skos:prefLabel "On-hold oil shale application"@en .
 
 gmps:paid a skos:Concept ;
-    skos:definition "Application payment has been made."@en ;
+    skos:definition "Application payment has been made and confirmation of payment has been received."@en ;
     skos:broader gmps:discarded,
         gmps:submitted ;
     skos:inScheme gmps:conceptScheme ;
@@ -131,10 +109,9 @@ gmps:payment-pending a skos:Concept ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Payment pending"@en .
 
-gmps:preferrer-tenderer a skos:Concept ;
+gmps:preferred-tenderer a skos:Concept ;
     skos:definition "The applicant is the preferred tenderer."@en ;
     skos:broader gmps:application,
-        gmps:non-current ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Preferred Tenderer"@en .
 
@@ -152,37 +129,22 @@ gmps:ranked a skos:Concept ;
 
 gmps:rejected a skos:Concept ;
     skos:definition "The Resource Permit has been rejected."@en ;
-    skos:broader gmps:non-current,
-        gmps:not-accepted,
+    skos:broader gmps:not-accepted,
         gmps:prelodgement ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Rejected"@en .
 
-gmps:renewal-application-rejected a skos:Concept ;
-    skos:definition "The Renewal Application for the Resource Permit has been rejected."@en ;
-    skos:broader gmps:non-current ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Renewal Application rejected"@en .
-
 gmps:renewal-lodged a skos:Concept ;
     skos:definition "The Application of Renewal for the Resource Permit has been lodged."@en ;
     skos:broader gmps:granted,
-        gmps:non-current ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Renewal lodged"@en .
 
 gmps:renewal-withdrawn a skos:Concept ;
     skos:definition "The Application of Renewal for the Resource Permit has been withdrawn."@en ;
     skos:broader gmps:granted,
-        gmps:non-current ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Renewal withdrawn"@en .
-
-gmps:replacement-permit a skos:Concept ;
-    skos:definition "The permit represents a Replacement Permit."@en ;
-    skos:broader gmps:non-current ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Replacement Permit"@en .
 
 gmps:replacement-permit-application a skos:Concept ;
     skos:definition "The application represents a Replacement Permit Application."@en ;
@@ -191,29 +153,15 @@ gmps:replacement-permit-application a skos:Concept ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Repalcement Permit Application"@en .
 
-gmps:sub-blocks-all-relinquished a skos:Concept ;
-    skos:definition "All sub-blocks have been relinquished."@en ;
-    skos:broader gmps:non-current ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Sub-blocks all relinquished"@en .
-
-gmps:surrendered a skos:Concept ;
-    skos:definition "The Resource Permit has been surrendered."@en ;
-    skos:broader gmps:non-current ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Surrendered"@en .
-
 gmps:unfinalised a skos:Concept ;
-    skos:definition "No definition added."@en ;
+    skos:definition "The Resource Permit has been terminated, but there are some outstanding requirements to be completed, to be compliant with the resources legislation."@en ;
     skos:broader gmps:non-current,
-        gmps:non-current-unfinalised ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Unfinalised"@en .
 
 gmps:unsuccessful-application a skos:Concept ;
     skos:definition "The application represents an unsuccessful application."@en ;
     skos:broader gmps:application,
-        gmps:non-current ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Unsuccessful application"@en .
 
@@ -222,12 +170,6 @@ gmps:withdrawn a skos:Concept ;
     skos:broader gmps:non-current ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Withdrawn"@en .
-
-gmps:non-current-unfinalised a skos:Concept ;
-    skos:definition "The Resource Permit is non-current, but still has outstanding issues to be completed (e.g. rent and reports)."@en ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Non-current unfinalised"@en ;
-    skos:topConceptOf gmps:conceptScheme .
 
 gmps:not-accepted a skos:Concept ;
     skos:definition "No definition added."@en ;
