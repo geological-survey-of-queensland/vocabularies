@@ -18,12 +18,8 @@ gmps:conceptScheme a skos:ConceptScheme ;
     dct:source "https://myminesonline.business.qld.gov.au" ;
     skos:definition "The stage in the life cycle of a Queensland Resource Permit."@en ;
     skos:hasTopConcept gmps:application,
-        gmps:discarded,
         gmps:granted,
-        gmps:non-current,
-        gmps:not-accepted,
-        gmps:prelodgement,
-        gmps:submitted ;
+        gmps:non-current ;
     skos:prefLabel "Queensland Resource Permit Status"@en .
 
 gmps:abandoned a skos:Concept ;
@@ -38,21 +34,15 @@ gmps:accepted a skos:Concept ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Accepted"@en .
 
-gmps:awaiting-payment-confirmation a skos:Concept ;
-    skos:definition "Payment has been made, but the Department needs confirmation from the relevant financial institution."@en ;
-    skos:broader gmps:submitted ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Awaiting payment confirmation"@en .
-
 gmps:competing-application a skos:Concept ;
-    skos:definition "This application represents a competing application."@en ;
+    skos:definition "This application represents a competing application that was lodged on the same date for the same mineral."@en ;
     skos:broader gmps:application,
         gmps:granted ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Competing application"@en .
 
 gmps:conditionally-surrendered a skos:Concept ;
-    skos:definition "The application has been conditionally surrendered."@en ;
+    skos:definition "The Resource Permit has been surrendered in favour of a new Resource Permit."@en ;
     skos:broader gmps:application,
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Conditionally surrendered"@en .
@@ -75,39 +65,11 @@ gmps:finalised a skos:Concept ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Finalised"@en .
 
-gmps:in-progress a skos:Concept ;
-    skos:definition "The Application is in-progress."@en ;
-    skos:broader gmps:discarded,
-        gmps:prelodgement ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "In progress"@en .
-
 gmps:on-hold-oil-shale-application a skos:Concept ;
     skos:definition "The oil-shale application has been placed on-hold."@en ;
     skos:broader gmps:application ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "On-hold oil shale application"@en .
-
-gmps:paid a skos:Concept ;
-    skos:definition "Application payment has been made and confirmation of payment has been received."@en ;
-    skos:broader gmps:discarded,
-        gmps:submitted ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Paid"@en .
-
-gmps:payment-authorised a skos:Concept ;
-    skos:definition "Payment authorisation has been requested."@en ;
-    skos:broader gmps:prelodgement,
-        gmps:submitted ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Payment authorised"@en .
-
-gmps:payment-pending a skos:Concept ;
-    skos:definition "Payment is pending."@en ;
-    skos:broader gmps:discarded,
-        gmps:submitted ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Payment pending"@en .
 
 gmps:preferred-tenderer a skos:Concept ;
     skos:definition "The applicant is the preferred tenderer."@en ;
@@ -126,13 +88,6 @@ gmps:ranked a skos:Concept ;
     skos:broader gmps:application ;
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Ranked"@en .
-
-gmps:rejected a skos:Concept ;
-    skos:definition "The Resource Permit has been rejected."@en ;
-    skos:broader gmps:not-accepted,
-        gmps:prelodgement ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Rejected"@en .
 
 gmps:renewal-lodged a skos:Concept ;
     skos:definition "The Application of Renewal for the Resource Permit has been lodged."@en ;
@@ -164,36 +119,6 @@ gmps:unsuccessful-application a skos:Concept ;
     skos:broader gmps:application,
     skos:inScheme gmps:conceptScheme ;
     skos:prefLabel "Unsuccessful application"@en .
-
-gmps:withdrawn a skos:Concept ;
-    skos:definition "The application has been withdrawn."@en ;
-    skos:broader gmps:non-current ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Withdrawn"@en .
-
-gmps:not-accepted a skos:Concept ;
-    skos:definition "No definition added."@en ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Not accepted"@en ;
-    skos:topConceptOf gmps:conceptScheme .
-
-gmps:discarded a skos:Concept ;
-    skos:definition "The application has been discarded from the system."@en ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Discarded"@en ;
-    skos:topConceptOf gmps:conceptScheme .
-
-gmps:prelodgement a skos:Concept ;
-    skos:definition "The application has been started in MyMinesOnline, but has not yet been lodged."@en ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Prelodgement"@en ;
-    skos:topConceptOf gmps:conceptScheme .
-
-gmps:submitted a skos:Concept ;
-    skos:definition "An application has been started in MyMinesOnline, but has not yet been lodged."@en ;
-    skos:inScheme gmps:conceptScheme ;
-    skos:prefLabel "Submitted"@en ;
-    skos:topConceptOf gmps:conceptScheme .
 
 gmps:granted a skos:Concept ;
     skos:definition "The Resource Permit has been approved under the Resource Authority Legislation"@en ;
