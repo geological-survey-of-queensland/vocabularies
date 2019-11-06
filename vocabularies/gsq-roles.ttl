@@ -1,0 +1,80 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gsqr: <http://linked.data.gov.au/def/gsq-roles/> .
+@prefix iso11179: <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities/> .
+@prefix isorole: <http://linked.data.gov.au/def/iso19115-1/RoleCode/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://linked.data.gov.au/def/gsq-roles> a owl:Ontology .
+
+gsqr:conceptScheme a skos:ConceptScheme ;
+    dct:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml> ;
+    skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)"@en ;
+    skos:hasTopConcept gsqr:contractor,
+        iso11179:Submitter,
+        isorole:author,
+        isorole:owner,
+        isorole:publisher ;
+    skos:prefLabel "Geological Survey of Queensland's Agent Roles"@en .
+
+gsqr:QdexReportsRoles a skos:Collection ;
+    skos:definition "A collection of roles used for Agents within the QDEX Reports regime"@en ;
+    skos:member gsqr:contractor,
+        gsqr:driller,
+        gsqr:operator,
+        iso11179:Submitter,
+        isorole:author,
+        isorole:owner,
+        isorole:publisher ;
+    skos:prefLabel "Qdex Reports Roles"@en .
+
+gsqr:driller a skos:Concept ;
+    skos:broader gsqr:contractor ;
+    skos:definition "Driller"@en ;
+    skos:inScheme isorole:conceptScheme ;
+    skos:prefLabel "Contractors who drill bores/wellbores/boreholes etc."@en ;
+    skos:topConceptOf gsqr:conceptScheme .
+
+gsqr:operator a skos:Concept ;
+    skos:broader gsqr:contractor ;
+    skos:definition "Operator"@en ;
+    skos:inScheme isorole:conceptScheme ;
+    skos:prefLabel "Contractors who operate bores/wellbores/boreholes etc., mines, quarries etc."@en ;
+    skos:topConceptOf gsqr:conceptScheme .
+
+iso11179:Submitter a skos:Concept ;
+    skos:altLabel "Lodger" ;
+    skos:definition "A Submitter should be an organizational unit approved by a process defined by the Registration Authority. A Submitter is authorized to identify and report Administered Items suitable for registration. The Submitter can be viewed as a contact for the Submitting Organization."@en ;
+    skos:inScheme iso11179:conceptScheme ;
+    skos:prefLabel "Submitter"@en ;
+    skos:topConceptOf gsqr:conceptScheme,
+        iso11179:conceptScheme ;
+    skos:usageNote "In QDEX Reports, this role has been known as 'Lodger' but 'Submitter' is now the preferred term for it."@en .
+
+isorole:author a skos:Concept ;
+    skos:definition "Party who authored the resource"@en ;
+    skos:inScheme isorole:conceptScheme ;
+    skos:prefLabel "Author"@en ;
+    skos:topConceptOf gsqr:conceptScheme,
+        isorole:conceptScheme .
+
+isorole:owner a skos:Concept ;
+    skos:definition "Party that owns the resource"@en ;
+    skos:inScheme isorole:conceptScheme ;
+    skos:prefLabel "Owner"@en ;
+    skos:topConceptOf gsqr:conceptScheme,
+        isorole:conceptScheme .
+
+isorole:publisher a skos:Concept ;
+    skos:definition "Party who published the resource"@en ;
+    skos:inScheme isorole:conceptScheme ;
+    skos:prefLabel "Publisher"@en ;
+    skos:topConceptOf gsqr:conceptScheme,
+        isorole:conceptScheme .
+
+gsqr:contractor a skos:Concept ;
+    skos:definition "Contractor"@en ;
+    skos:inScheme isorole:conceptScheme ;
+    skos:prefLabel "Contractors are agents who are the recipents of work contracts for other agents, e.g. owners."@en ;
+    skos:scopeNote "Contractors should always act on behalf of (formally: prov:actedObBehalfOf) some other Agent, such as an Owner"@en ;
+    skos:topConceptOf gsqr:conceptScheme .
