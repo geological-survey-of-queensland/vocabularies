@@ -1,0 +1,650 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix grt: <http://linked.data.gov.au/def/georesource-report> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/georesource-report> a owl:Ontology .
+
+grt:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-10-09T11:21:44+10:00"^^xsd:dateTime ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2019-10-24T15:50:36+10:00"^^xsd:dateTime ;
+    dct:source "Developed by the Geological Survey of Queensland." ;
+    skos:definition "The types of reports administered by the GeoResources division of the Department of Natural Resources, Mines and Energy."@en ;
+    skos:prefLabel "Georesource Report"@en .
+
+grt:annual-report a skos:Concept ;
+    skos:definition "A report that is not specifically linked to a permit that describes activities and/or the results of activities, market conditions etc. that occurred over a 12 month interval prior to the completion of that report."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Annual Report"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:any-other-report a skos:Concept ;
+    skos:definition "A report that does not fall under any other category of non-permit reports."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Any Other Report"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:article a skos:Concept ;
+    skos:definition "A piece of writing included with others in a newspaper, magazine, or other publication. Source: Oxford English Dictionary"@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Article"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:collaborative-drilling-initiative-final a skos:Concept ;
+    skos:altLabel "Collaborative Drilling Initiative - Final (Completed)"@en ;
+    skos:definition "A report detailing the activities and results of a project that received support from the Collaborative Exploration Initiative. The details of which have been defined as a part of the terms and conditions of that initiative."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "CEIFIN" ;
+    skos:prefLabel "Collaborative Drilling Initiative - Final"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:collaborative-drilling-initiative-proposals a skos:Concept ;
+    skos:definition "A proposal detailing the activities and results of a project that intend to receive support from the Collaborative Exploration Initiative. The details of which have been defined as a part of the terms and conditions of that initiative."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "CEIPRO" ;
+    skos:prefLabel "Collaborative Drilling Initiative - Proposals"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:collaborative-exploration-initiative-final a skos:Concept ;
+    skos:altLabel "Collaborative Drilling Initiative - Final Report"@en ;
+    skos:definition "A report detailing the activities and results of a project that received support from the Collaborative Drilling Initiative. The details of which have been defined as a part of the terms and conditions of that initiative."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "CDIFIN" ;
+    skos:prefLabel "Collaborative Exploration Initiative - Final"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:commissioned-industry-study-or-report a skos:Concept ;
+    skos:definition "A report that was commissioned wholly or in part by a Queensland Government Department."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Commissioned Industry Study or Report"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:converted-from-qerd a skos:Concept ;
+    skos:definition "A report that was held in the Queensland Energy Resources Database and was subsequently converted into the Queensland Digital Exploration Reports database."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Converted from QERD"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:departmental-drilling a skos:Concept ;
+    skos:definition "A report detailing the activities and results of a project that was undertaken by one of Queensland's Government Departments and focussed on the activity of drilling."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Departmental Drilling"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:geological-survey-of-queensland-publication a skos:Concept ;
+    skos:definition "A publication that has been produced by the Geological Survey of Queensland. Potentially published in other systems, journals etc. Exclusive of the Geological Survey of Queensland Record series."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Geological Survey of Queensland Publication"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:geological-survey-of-queensland-record a skos:Concept ;
+    skos:definition "A publication that has been produced by the Geological Survey of Queensland and has been assigned a designation as a part of the Geological Survey of Queensland's Record series."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Geological Survey of Queensland Record"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:geophysical-survey-report-acquisition a skos:Concept ;
+    skos:altLabel "Acquisition Report"@en ;
+    skos:definition "A report describing the acquisition of geophysics."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Geophysical Survey Report - Acquisition"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:geophysical-survey-report-final a skos:Concept ;
+    skos:definition "A report detailing the activities undertaken and their results, as a part of a geophysical survey."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Geophysical Survey Report - Final"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:geothermal-report-annual-reserves a skos:Concept ;
+    skos:altLabel "Geothermal Annual Reserves Reports"@en ;
+    skos:definition "A report detailing the quantity, quality and other parameters of the Geothermal reserves and resources on an Geothermal Permit."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "GTHARR" ;
+    skos:prefLabel "Geothermal Report - Annual Reserves"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:geothermal-report-production a skos:Concept ;
+    skos:altLabel "Geothermal Production Reports"@en ;
+    skos:definition "A report detailing the production performance of a geothermal well, wells, or field."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "GTHPR" ;
+    skos:prefLabel "Geothermal Report - Production"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:geophysical-survey-report-logistics a skos:Concept ;
+    skos:definition "A report detailing the logistical requirements and procedures that were necessary to undertake an activity."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Geophysical Survey Report - Logistics"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:geothermal-report-injection a skos:Concept ;
+    skos:altLabel "Geothermal Injection Reports"@en ;
+    skos:definition "A report detailing the performance and injected volumes of a geothermal injection well or wells."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "GTHIR" ;
+    skos:prefLabel "Geothermal Report - Injection"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:geothermal-report-injection-testing a skos:Concept ;
+    skos:altLabel "Geothermal Injection Testing Reports"@en ;
+    skos:definition "A report detailing the testing of the injection potential or performance of a geothermal injection well."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "GTHITR" ;
+    skos:prefLabel "Geothermal Report - Injection Testing"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:geothermal-report-production-testing a skos:Concept ;
+    skos:altLabel "Geothermal Production Testing"@en ;
+    skos:definition "A report detailing the testing of the production potential or performance of a geothermal well."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "GTHPT" ;
+    skos:prefLabel "Geothermal Report - Production Testing"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:greenhouse-gas-report-injection a skos:Concept ;
+    skos:altLabel "Greenhouse Gas Injection Report"@en ;
+    skos:definition "A report detailing the performance and injected volumes of a greenhouse gas injection well or wells."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "GHGIR" ;
+    skos:prefLabel "Greenhouse Gas Report - Injection"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:greenhouse-gas-report-storage-capacity a skos:Concept ;
+    skos:altLabel "Greenhouse Gas Stream Storage Capacity Report"@en ;
+    skos:definition "A report detailing the potential greenhouse gas storage capacity within a greenhouse gas storage permit."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "GHGSSC" ;
+    skos:prefLabel "Greenhouse Gas Report - Storage Capacity"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:greenhouse-gas-report-storage-injection a skos:Concept ;
+    skos:altLabel "Greenhouse Gas Storage Injection Report"@en ;
+    skos:definition "A report detailing the performance and injected volumes of a greenhouse gas injection well or wells."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "GHGSIR" ;
+    skos:prefLabel "Greenhouse Gas Report - Storage Injection"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:hydraulic-fracturing-activity-report a skos:Concept ;
+    skos:definition "A report detailing the activities and results of hydraulically fracturing activities conducted in a well. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "HFACR" ;
+    skos:prefLabel "Hydraulic Fracturing Activity Report"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:industry-consultative-report a skos:Concept ;
+    skos:definition "A report produced as the result of a consultative agreement between two agents, which does not directly fall under the Mineral Resource or Petroleum & Gas Acts."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Industry Consultative Report"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:industry-network-initiative-final a skos:Concept ;
+    skos:altLabel "Industry Network Initiative - Final (Completed)"@en ;
+    skos:definition "A report detailing the activities and results of a project that received support from the Industry Network Initiative. The details of which have been defined as a part of the terms and conditions of that initiative."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "INIFIN" ;
+    skos:prefLabel "Industry Network Initiative - Final"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:mine-plan-lodgement a skos:Concept ;
+    skos:definition "A plan of the current and future workings and infrastructure of a mine, as required by the Mineral and Resources Act."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "MPLODG" ;
+    skos:prefLabel "Mine Plan Lodgement"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:permit-report-annual a skos:Concept ;
+    skos:altLabel "Annual Resource Authority Report"@en ;
+    skos:definition "A report that is required to be lodged annually as a part of the obligations of holding tenure over a resource permit."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "ANNUAL" ;
+    skos:prefLabel "Permit Report - Annual"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:permit-report-final a skos:Concept ;
+    skos:altLabel "Final or End of Tenure Report"@en ;
+    skos:definition "A report that is required to be lodged when the tenure over a resource permit ends, detailing the work undertaken on the permit throughout the life of tenure."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "FINAL" ;
+    skos:prefLabel "Permit Report - Final"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:permit-report-final-relinquishment a skos:Concept ;
+    skos:altLabel "Final Relinquishment (MDL)"@en ;
+    skos:definition "A report that is required to be lodged when the tenure over a Mineral Development License ends, detailing the work undertaken on the permit throughout the life of tenure."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "FINREQ" ;
+    skos:prefLabel "Permit Report - Final Relinquishment"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:permit-report-other a skos:Concept ;
+    skos:altLabel "Any Other Resource Authority Report"@en ;
+    skos:definition "A report that does not fall under any other category of permit reports."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Permit Report - Other"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:permit-report-partial-relinquishment a skos:Concept ;
+    skos:altLabel "Partial Relinquishment Report"@en ;
+    skos:definition "A report detailing all the activities a holder has undertaken on a specific region of an exploration permit that has been relinquished. As required by the Mineral Resources Act and as defined by the Reporting Guidelines."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "RELINQ" ;
+    skos:prefLabel "Permit Report - Partial Relinquishment"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:permit-report-mineral-associated-water a skos:Concept ;
+    skos:altLabel "Mineral Associated Water"@en ;
+    skos:definition "A report detailing the total water produced from a Mining Lease, defined as per the Mineral Resources Act."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "MINAW" ;
+    skos:prefLabel "Permit Report - Mineral Associated Water"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:permit-report-six-month a skos:Concept ;
+    skos:altLabel "Six Monthly Exploration Report"@en ;
+    skos:definition "A report detailing the activities undertaken on an exploration permit in the six months prior to the submission of the report. Mostly deprecated in favour of annual reports. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "6MTH" ;
+    skos:prefLabel "Permit Report - Six Month"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:permit-report-surrender a skos:Concept ;
+    skos:altLabel "Surrender Report"@en ;
+    skos:definition "A report that is required to be lodged as a part of the obligations of surrendering tenure over a Coal or Oil Shale Mining Lease. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "SURR" ;
+    skos:prefLabel "Permit Report - Surrender"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:petroleum-report-cumulative-water-production a skos:Concept ;
+    skos:altLabel "Cumulative Prod/CSG Water Readings - Petroleum"@en ;
+    skos:definition "A report detailing the cumulative total of water produced from a well, as mandatory in the Petroleum and Gas Act."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "CUMPRD" ;
+    skos:prefLabel "Petroleum Report - Cumulative Water Production"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:petroleum-report-field-information a skos:Concept ;
+    skos:altLabel "Petroleum Field Reports"@en ;
+    skos:definition "A report detailing the quantity, quality and other parameters of the reserves of petroleum and gas in a petroleum field that may cover one permit, multiple permits, and/or unpermitted areas."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "PETFLD" ;
+    skos:prefLabel "Petroleum Report - Field Information"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:petroleum-report-infrastructure a skos:Concept ;
+    skos:altLabel "Petroleum Infrastructure Reports"@en ;
+    skos:definition "A report detailing the infrastructure installed for the purpose of gathering, processing and storage of petroleum and gas on a permit or permits. Defined in detail as a part of the Petroleum and Gas (Production and Safety) Act."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "PETIR" ;
+    skos:prefLabel "Petroleum Report - Infrastructure"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:petroleum-report-other a skos:Concept ;
+    skos:altLabel "ATP Other Report"@en ;
+    skos:definition "A report that does not fall under any other category of Petroleum permit reports."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "EPPOTH" ;
+    skos:prefLabel "Petroleum Report - Other"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:petroleum-report-transmission a skos:Concept ;
+    skos:altLabel "Transmission Report"@en ;
+    skos:definition "A report that details the petroleum transmission for a Prospective Gas Production Land Reserve (PGPLR), including its number and the area of the lease, the entities who were supplied through the PGPLR and the volumes they were supplied."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "TRANS" ;
+    skos:prefLabel "Petroleum Report - Transmission"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:petroleum-report-non-associated-water a skos:Concept ;
+    skos:altLabel "Petroleum Non-Associated Water"@en ;
+    skos:definition "A report detailing the production of water by a permit holder that was not directly acquired from a petroleum well. Defined as per the Petroleum and Gas Act."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "PETNAW" ;
+    skos:prefLabel "Petroleum Report - Non-Associated Water"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:petroleum-report-production-information a skos:Concept ;
+    skos:altLabel "Petroleum Production Information (Good Practice)"@en ;
+    skos:definition "A report detailing the quantity, quality and other parameters of the production of petroleum and gas products from an ATP as required by the Petroleum and Gas Act and General Provisions. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline. These reports are submitted using the Queensland Government templates."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "PROINF" ;
+    skos:prefLabel "Petroleum Report - Production Information"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:petroleum-report-resource-and-reserves-information a skos:Concept ;
+    skos:altLabel "Petroleum Reserves and Resources Information (Good Practice)"@en ;
+    skos:definition "A report detailing the quantity, quality and other parameters of the reserves of petroleum and gas on an ATP, as required by the Petroleum and Gas Act and General Provisions. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline. These reports are submitted using the Queensland Government templates."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "RESINF" ;
+    skos:prefLabel "Petroleum Report - Resource and Reserves Information"@en ;
+    skos:topConceptOf grt:conceptScheme .
+    
+grt:presentation a skos:Concept ;
+    skos:definition "'A speech or talk in which a new product, idea, or piece of work is shown and explained to an audience. Source: Oxford English Dictionary. This includes speeches, talks, multimedia presentations, and posters.'"@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Presentation"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:production-petroleum a skos:Concept ;
+    skos:definition "A report detailing the quantity, quality and other parameters of the production of petroleum and gas products from an ATP as required by the Petroleum and Gas Act and General Provisions. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "PROD" ;
+    skos:prefLabel "Production (Petroleum)"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:reserves-petroleum a skos:Concept ;
+    skos:definition "A report detailing the quantity, quality and other parameters of the reserves of petroleum and gas on an ATP, as required by the Petroleum and Gas Act and General Provisions. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "RESERV" ;
+    skos:prefLabel "Reserves (Petroleum)"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:queensland-government-mining-journal a skos:Concept ;
+    skos:definition "The Queensland Government Mining Journal was a semi-annual publication that detailed the activities of the Geological Survey of Queensland and significant discoveries, mine openings or other geologically related happenings in the state or even globally."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Queensland Government Mining Journal"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:scientific-or-technical-survey-report a skos:Concept ;
+    skos:definition "A report detailing the activities undertaken and their results, as a part of a scientific or non-geophysical survey. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "STSURV" ;
+    skos:prefLabel "Scientific or Technical Survey Report"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:seismic-survey-report-final a skos:Concept ;
+    skos:altLabel "Seismic Survey Final Report"@en ;
+    skos:definition "A report detailing the acquisition, processing, and interpretation of a seismic survey."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "SSFINL" ;
+    skos:prefLabel "Seismic Survey Report - Final"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:seismic-survey-report-other a skos:Concept ;
+    skos:altLabel "Seismic Survey Report Other"@en ;
+    skos:definition "A report detailing activities related to a seismic survey not described in other seismic survey reports."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "SSOTHR" ;
+    skos:prefLabel "Seismic Survey Report - Other"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:seismic-survey-report-reprocessing a skos:Concept ;
+    skos:altLabel "Seismic Reprocessing Report"@en ;
+    skos:definition "A report detailing the reprocessing and interpretation of a previously reported seismic survey."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "SSREPR" ;
+    skos:prefLabel "Seismic Survey Report - Reprocessing"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:soil-and-land-resources a skos:Concept ;
+    skos:altLabel "Soils & Land Resources"@en ;
+    skos:definition "A series of historical reports detailing Soil and other studies conducted by the Natural Resources group of the Queensland Government. No longer managed in this system."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Soil and Land Resources"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:technical-report a skos:Concept ;
+    skos:definition "A report detailing activities of a highly technical nature that were not conducted as a part of a work programme for a resource permit."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Technical Report"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:thesis a skos:Concept ;
+    skos:definition "A long essay or dissertation involving personal research, written by a candidate for a university degree. Source: Oxford English Dictionary"@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:prefLabel "Thesis"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:water-report-other a skos:Concept ;
+    skos:altLabel "Other Water Reports"@en ;
+    skos:definition "A report detailing activities and results related to a water under the Queensland Water Act not described in other water reports."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "WATOTH" ;
+    skos:prefLabel "Water Report - Other"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:water-report-performance-review a skos:Concept ;
+    skos:altLabel "Performance Review Report"@en ;
+    skos:definition "A report detailing the study of the hydrological properties of a region and the effects of extractive activities."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "WATPRR" ;
+    skos:prefLabel "Water Report - Performance Review"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:well-completion-report a skos:Concept ;
+    skos:definition "A report detailing the activities and results of drilling a well. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "WELCOM" ;
+    skos:prefLabel "Well Completion Report"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:well-or-bore-abandonment-report a skos:Concept ;
+    skos:definition "A report detailing the activities and results of abandoning a well. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "WELAB" ;
+    skos:prefLabel "Well or Bore Abandonment Report"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:well-production-testing-report a skos:Concept ;
+    skos:definition "A report detailing the testing of the production potential or performance of a petroleum well. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "WELTST" ;
+    skos:prefLabel "Well Production Testing Report"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:well-proposal a skos:Concept ;
+    skos:definition "A report detailing the planning and purpose of a well or bore that is yet to be drilled."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "WELPRO" ;
+    skos:prefLabel "Well proposal"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:well-report-other a skos:Concept ;
+    skos:definition "A report detailing the activities or results of a well not described in other well reports."@en ;
+    skos:inScheme grt:conceptScheme ;
+    skos:notation "WELOTH" ;
+    skos:prefLabel "Well Report Other"@en ;
+    skos:topConceptOf grt:conceptScheme .
+
+grt:activity-summary-reports a skos:Collection ;
+    skos:definition "Reports mandated for submission by the Acts or Regulations governing granted resource permits in Queensland that aggregate the details of activities for the entire permit or project during a specific period. Reports are all-of-permit activity summary reports."@en ;    skos:member grt:geothermal-report-annual-reserves,
+        grt:geothermal-report-production,
+        grt:mine-plan-lodgement,
+        grt:permit-report-annual,
+        grt:permit-report-final,
+        grt:permit-report-final-relinquishment,
+        grt:permit-report-mineral-associated-water,
+        grt:permit-report-other,
+        grt:permit-report-partial-relinquishment,
+        grt:permit-report-six-month,
+        grt:permit-report-surrender,
+        grt:petroleum-report-cumulative-water-production,
+        grt:petroleum-report-field-information,
+        grt:petroleum-report-infrastructure,
+        grt:petroleum-report-non-associated-water,
+        grt:petroleum-report-other,
+        grt:petroleum-report-production-information,
+        grt:petroleum-report-resource-and-reserves-information,
+        grt:production-petroleum,
+        grt:reserves-petroleum ;
+    skos:prefLabel "Activity Summary Reports"@en .
+
+grt:departmental-reports a skos:Collection ;
+    skos:definition "Non-Permit reports that were produced by Queensland's Department of Natural Resources, Mines and Energy."@en ;
+    skos:member grt:annual-report,
+        grt:any-other-report,
+        grt:commissioned-industry-study-or-report,
+        grt:departmental-drilling,
+        grt:geological-survey-of-queensland-publication,
+        grt:geological-survey-of-queensland-record,
+        grt:industry-consultative-report,
+        grt:presentation,
+        grt:queensland-government-mining-journal,
+        grt:soil-and-land-resources ;
+    skos:prefLabel "Departmental Reports"@en .
+
+grt:exploration-grants a skos:Collection ;
+    skos:definition "Reports that were funded either fully or partially by a Queensland Government grant in aid of exploration."@en ;
+    skos:member grt:collaborative-drilling-initiative-final,
+        grt:collaborative-drilling-initiative-proposals,
+        grt:collaborative-exploration-initiative-final,
+        grt:industry-network-initiative-final ;
+    skos:prefLabel "Exploration Grants"@en .
+
+grt:external-reports a skos:Collection ;
+    skos:definition "Non-Permit reports that were produced by sources external to Queensland's Department of Natural Resources, Mines and Energy."@en ;
+    skos:member grt:any-other-report,
+        grt:article,
+        grt:presentation,
+        grt:technical-report,
+        grt:thesis ;
+    skos:prefLabel "External Reports"@en .
+
+grt:geophysics-reports a skos:Collection ;
+	skos:definition "Reports that detail the acquisition, results or processing of geophysical data." @en ;
+    skos:member grt:geophysical-survey-report-acquisition,
+        grt:geophysical-survey-report-final,
+        grt:geophysical-survey-report-logistics,
+        grt:seismic-survey-report-final,
+        grt:seismic-survey-report-other,
+        grt:seismic-survey-report-reprocessing ;
+    skos:prefLabel "Geophysics Reports"@en .
+
+grt:geothermal-reports a skos:Collection ;
+    skos:definition "Reports governed by the Geothermal Energy Regulations."@en ;
+    skos:member grt:geothermal-report-annual-reserves,
+        grt:geothermal-report-injection,
+        grt:geothermal-report-injection-testing,
+        grt:geothermal-report-production,
+        grt:geothermal-report-production-testing ;
+    skos:prefLabel "Geothermal Reports"@en .
+	
+grt:greenhouse-gas-reports a skos:Collection ; 
+    skos:definition "Reports pertaining to Greenhouse Gas Storage permits."@en ;
+	skos:member grt:greenhouse-gas-report-injection,
+        grt:greenhouse-gas-report-storage-capacity,
+        grt:greenhouse-gas-report-storage-injection
+    skos:prefLabel "Greenhouse Gas Reports"@en .
+
+grt:non-current-reports a skos:Collection ;
+    skos:definition "Reports that have been superceded or discontinued."@en ;
+    skos:member grt:converted-from-qerd,
+        grt:permit-report-six-month,
+        grt:petroleum-report-field-information,
+        grt:petroleum-report-transmission,
+        grt:well-proposal ;
+    skos:prefLabel "Non-Current Reports"@en .
+
+grt:non-permit-reports a skos:Collection ;
+    skos:definition "Reports that are not required by Acts and/or Regulation in Queensland."@en ;
+    skos:member grt:annual-report,
+        grt:any-other-report,
+        grt:article,
+        grt:commissioned-industry-study-or-report,
+        grt:departmental-drilling,
+        grt:geological-survey-of-queensland-publication,
+        grt:geological-survey-of-queensland-record,
+        grt:industry-consultative-report,
+        grt:presentation,
+        grt:queensland-government-mining-journal,
+        grt:soil-and-land-resources,
+        grt:technical-report,
+        grt:thesis ;
+    skos:prefLabel "Non-Permit Reports"@en .
+
+grt:permit-reports a skos:Collection ;
+    skos:definition "Reports mandated for submission by the Acts or Regulations governing granted resource permits in Queensland that detail any activities undertaken on that permit. Reports include all-of-permit activity summary reports and reports for single activities."@en ;
+    skos:member grt:collaborative-drilling-initiative-final,
+        grt:collaborative-drilling-initiative-proposals,
+        grt:collaborative-exploration-initiative-final,
+        grt:converted-from-qerd,
+        grt:geophysical-survey-report-final,
+        grt:geothermal-report-annual-reserves,
+        grt:geothermal-report-injection,
+        grt:geothermal-report-injection-testing,
+        grt:geothermal-report-production,
+        grt:geothermal-report-production-testing,
+        grt:greenhouse-gas-report-injection,
+        grt:greenhouse-gas-report-storage-capacity,
+        grt:greenhouse-gas-report-storage-injection,
+        grt:hydraulic-fracturing-activity-report,
+        grt:industry-network-initiative-final,
+        grt:mine-plan-lodgement,
+        grt:other-water-reports,
+        grt:performance-review-report,
+        grt:permit-report-annual,
+        grt:permit-report-final,
+        grt:permit-report-final-relinquishment,
+        grt:permit-report-mineral-associated-water,
+        grt:permit-report-other,
+        grt:permit-report-partial-relinquishment,
+        grt:permit-report-six-month,
+        grt:permit-report-surrender,
+        grt:petroleum-report-cumulative-water-production,
+        grt:petroleum-report-field-information,
+        grt:petroleum-report-infrastructure,
+        grt:petroleum-report-non-associated-water,
+        grt:petroleum-report-other,
+        grt:petroleum-report-production-information,
+        grt:petroleum-report-resource-and-reserves-information,
+        grt:petroleum-report-transmission,
+        grt:production-petroleum,
+        grt:reserves-petroleum,
+        grt:scientific-or-technical-survey-report,
+        grt:seismic-survey-report-final,
+        grt:seismic-survey-report-other,
+        grt:seismic-survey-report-reprocessing,
+        grt:well-completion-report,
+        grt:well-or-bore-abandonment-report,
+        grt:well-production-testing-report,
+        grt:well-proposal,
+        grt:well-report-other ;
+    skos:prefLabel "Permit Reports"@en .
+
+grt:petroleum-reports a skos:Collection ;
+    skos:definition "Reports governed by the Petroleum and Gas Act of Queensland."@en ;
+    skos:member grt:hydraulic-fracturing-activity-report,
+        grt:permit-report-surrender,
+        grt:petroleum-report-cumulative-water-production,
+        grt:petroleum-report-infrastructure,
+        grt:petroleum-report-non-associated-water,
+        grt:petroleum-report-other,
+        grt:petroleum-report-production-information,
+        grt:petroleum-report-resource-and-reserves-information,
+        grt:petroleum-report-transmission,
+        grt:production-petroleum,
+        grt:reserves-petroleum,
+        grt:scientific-or-technical-survey-report,
+        grt:well-completion-report,
+        grt:well-or-bore-abandonment-report,
+        grt:well-production-testing-report,
+        grt:well-report-other ;
+    skos:prefLabel "Petroleum Reports"@en .
+
+grt:production-and-reserves-reports a skos:Collection ;
+    skos:definition "Reports that describe the production and/or reserves of a permit or project."@en ;
+    skos:member grt:geothermal-report-annual-reserves,
+        grt:geothermal-report-production,
+        grt:petroleum-report-cumulative-water-production,
+        grt:petroleum-report-production-information,
+        grt:petroleum-report-resource-and-reserves-information,
+        grt:production-petroleum,
+        grt:reserves-petroleum ;
+    skos:prefLabel "Production and Reserves Reports"@en .
+
+grt:water-reports a skos:Collection ;
+    skos:definition "Reports governed by the associated Acts of Queensland pertaining to water resources."@en ;
+    skos:member grt:other-water-reports,
+        grt:performance-review-report,
+        grt:permit-report-mineral-associated-water,
+        grt:petroleum-report-non-associated-water ;
+    skos:prefLabel "Water Reports"@en .
+
