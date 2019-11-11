@@ -1,0 +1,51 @@
+@prefix bhd: <http://linked.data.gov.au/def/borehole-design/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/borehole-design> a owl:Ontology .
+
+bhd:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-10-03T16:24:51+10:00"^^xsd:dateTime ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2019-10-03T16:32:36+10:00"^^xsd:dateTime ;
+    dct:source "Developed by the Geological Survey of Queensland." ;
+    skos:definition "A description of the intended configuration and trajectory of a borehole."@en ;
+    skos:hasTopConcept bhd:deviated,
+        bhd:inclined,
+        bhd:lateral,
+        bhd:vertical ;
+    skos:prefLabel "Borehole Design"@en .
+
+bhd:deviated a skos:Concept ;
+    skos:altLabel "Directional"@en ;
+    skos:definition "A borehole drilled with geosteering equipment with the intent of controlling inclination and/or azimuth on a specified trajectory to intersect a target or targets."@en ;
+    skos:inScheme bhd:conceptScheme ;
+    skos:prefLabel "Deviated"@en ;
+    skos:topConceptOf bhd:conceptScheme .
+
+bhd:inclined a skos:Concept ;
+    skos:altLabel "Slant"@en ;
+    skos:definition "A borehole drilled without geosteering equipment at a non-vertical angle with the intent of maintaining its initial trajectory."@en ;
+    skos:inScheme bhd:conceptScheme ;
+    skos:prefLabel "Inclined"@en ;
+    skos:topConceptOf bhd:conceptScheme .
+
+bhd:lateral a skos:Concept ;
+    skos:altLabel "Horizontal"@en ;
+    skos:definition "A borehole drilled with geosteering equipment with the intent of controlling the trajectory to drill laterally within a targeted stratigraphic interval or intervals."@en ;
+    skos:inScheme bhd:conceptScheme ;
+    skos:prefLabel "Lateral"@en ;
+    skos:topConceptOf bhd:conceptScheme .
+
+bhd:vertical a skos:Concept ;
+    skos:definition "A borehole drilled in a vertical downward direction with the intent of maintaining a vertical trajectory."@en ;
+    skos:inScheme bhd:conceptScheme ;
+    skos:prefLabel "Vertical"@en ;
+    skos:topConceptOf bhd:conceptScheme .
+
