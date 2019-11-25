@@ -34,7 +34,7 @@ Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/voca
     b. Use the Excel template to create the vocabulary - [download Excel SKOS Vocabulary Builder](https://github.com/geological-survey-of-queensland/vocabularies/blob/master/templates/SKOS_Vocabulary_Builder.xlsm).  
     c. Edit the vocab TTL file in Visual Studio Code. Use the extension [Language Support for RDF related language syntax](https://marketplace.visualstudio.com/items?itemName=fantasticfears.semantic-data-model-language) for formatting support.  
 3. Export the vocabulary to a TTL file. If using Vocbench, it is easier to export the TTL from the Build repository in GraphDB. Follow the [instructions here](http://graphdb.ontotext.com/documentation/standard/exporting-data.html).
-4. Validate the TTL file using the [online Skosify tool](http://demo.seco.tkk.fi/skosify/skosify). Tick the checkboxes *Keep skos:related relationships within the same hierarchy* and *Include skos:narrower relations in output*
+4. Validate the TTL file using the [online Skosify tool](http://demo.seco.tkk.fi/skosify/skosify). Tick the checkbox *Keep skos:related relationships within the same hierarchy*, leave the other checkboxes unticked.
 5. Import the TTL file into a development branch in Github. Name your branch *dev-vocabularyName*. See [how-to instructions here](https://guides.github.com/activities/hello-world/). 
 6. Submit a pull request from the development to a review branch *review-vocabularyName* for technical review of file structure and integrity. Select at least One technical reviewer.
 7. When the vocabulary has passed technical review approve the pull request to import the vocabulary into the review branch.
