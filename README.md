@@ -23,7 +23,7 @@ Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/voca
 
 
 ## How to create a vocabulary
-<img src="Vocabulary-Workflow.jpg" style="width:100%;" alt="Vocabulary build and pull process" />  
+<img src="Vocabulary-Process.png" style="width:100%;" alt="Vocabulary build and pull process" />  
 
 **Fig. 2: Vocabulary build and pull process**
 
