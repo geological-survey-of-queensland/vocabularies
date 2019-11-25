@@ -62,9 +62,16 @@ See the instructions at [Vocabulary Review Process](https://github.com/geologica
 
 ## See also
 * Research Vocabularies Australia https://vocabs.ands.org.au/
-* Basel Register of Thesauri, Ontologies & Classifications https://bartoc.org/  
-* Best practice in formalizing a SKOS vocabulary https://confluence.csiro.au/public/VOCAB/vocabulary-services/publishing-vocabularies/best-practice-in-formalizing-a-skos-vocabulary  
-
+* Geoscience Australia http://ldweb.ga.gov.au/def/voc/ga/
+* CGI Vocabularies Register http://resource.geosciml.org/def/voc/
+* EarthResourceML Vocabularies http://resource.geosciml.org/def/voc/ (scroll down)
+* CSIRO Environment Registry http://registry2.it.csiro.au/
+* ISO 19115 https://geo-ide.noaa.gov/wiki/index.php?title=ISO_19115_and_19115-2_CodeList_Dictionaries
+* Basel Register https://bartoc.org/
+* British Geological Survey https://www.bgs.ac.uk/data/vocabularies/home.cfm
+* INSPIRE Code Lists http://inspire.ec.europa.eu/codelist
+* NERC Vocabulary Server http://vocab.nerc.ac.uk/collection/
+* Best practice in formalizing a SKOS vocabulary https://confluence.csiro.au/public/VOCAB/vocabulary-services/publishing-vocabularies/best-practice-in-formalizing-a-skos-vocabulary
 
 ## Files
 * **ontologies/\*.ttl** - background ontologies needed for vocab inferencing
