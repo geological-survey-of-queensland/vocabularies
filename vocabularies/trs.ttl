@@ -1,0 +1,173 @@
+# baseURI: http://linked.data.gov.au/def/trs
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/time
+
+@prefix trs: <http://linked.data.gov.au/def/trs#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/trs>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+.
+trs:conceptScheme a skos:ConceptScheme ;
+    skos:prefLabel "Temporal Reference Systems"@en ;
+    skos:definition "Temporal reference system, such temporal coordinate systems (with origin, directions, and scales), calendar-clock combinations, or a (possibly hierarchical) ordinal system."@en ;
+    skos:historyNote "This vocabulary was established to provide instances of the Time Ontology in OWL's time:TRS class for reference. See <https://www.w3.org/TR/owl-time/#time:TRS> for the time:TRS definition."@en ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:created "2019-10-17"^^xsd:dateTime ;
+    dct:modified "2019-10-18"^^xsd:dateTime ;
+.
+trs:ChineseCalendar
+  a skos:Concept ;
+  a time:TRS ;
+  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Chinese_calendar> ;
+  skos:definition "The traditional China calendar (officially known as the Rural Calendar [農曆; 农历; Nónglì; 'farming calendar']), or Former Calendar (舊曆; 旧历; Jiùlì), Traditional Calendar (老曆; 老历; Lǎolì) or Lunar Calendar (陰曆; 阴历; Yīnlì; 'yin calendar'), is a lunisolar calendar which reckons years, months and days according to astronomical phenomena. It is defined by GB/T 33661-2017, 'Calculation and promulgation of the Chinese calendar' issued by the Standardisation Administration of China on 12 May 2017." ;
+  skos:prefLabel "Chinese Calendar" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:GPSTime
+  a skos:Concept ;
+  a time:TRS ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Global_Positioning_System#Timekeeping> ;
+  skos:definition "GPS time is not corrected to match the rotation of the Earth, so it does not contain leap seconds or other corrections that are periodically added to UTC. GPS time was set to match UTC in 1980, but has since diverged. The lack of corrections means that GPS time remains at a constant offset with International Atomic Time (TAI) (TAI − GPS = 19 seconds)." ;
+  skos:prefLabel "GPS Time" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:GeologicTimescale
+  a skos:Concept ;
+  a time:TRS ;
+  skos:seeAlso "<https://en.wikipedia.org/wiki/Geologic_time_scale>" ;
+  skos:definition "The geologic time scale is a system of chronological dating that relates geological strata (stratigraphy) to time. It is used by geologists, paleontologists, and other Earth scientists to describe the timing and relationships of events that have occurred during Earth's history." ;
+  skos:prefLabel "Geologic timescale" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:GregegorianCalendar
+  a skos:Concept ;
+  a time:TRS ;
+  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Gregorian_calendar> ;
+  skos:definition "The Gregorian calendar is the calendar used in most of the world. It is named after Pope Gregory XIII, who introduced it in October 1582. " ;
+  skos:prefLabel "Gregegorian Calendar" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:HebrewCalendar
+  a skos:Concept ;
+  a time:TRS ;
+  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  rdfs:seeAlso <http://dbpedia.org/resource/Hebrew_calendar> ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Hebrew_calendar> ;
+  skos:altLabel "Jewish Calendar" ;
+  skos:definition "The Hebrew or Jewish calendar (Hebrew: הַלּוּחַ הָעִבְרִי, Ha-Luah ha-Ivri) is a lunisolar calendar used today predominantly for Jewish religious observances. It determines the dates for Jewish holidays and the appropriate public reading of Torah portions, yahrzeits (dates to commemorate the death of a relative), and daily Psalm readings, among many ceremonial uses. In Israel, it is used for religious purposes, provides a time frame for agriculture and is an official calendar for civil purposes, although the latter usage has been steadily declining in favor of the Gregorian calendar. " ;
+  skos:prefLabel "Hebrew Calendar" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:IndianNationalCalendar
+  a skos:Concept ;
+  a time:TRS ;
+  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Indian_national_calendar> ;
+  skos:definition "The Indian national calendar, sometimes called the Shalivahana Shaka calendar is used, alongside the Gregorian calendar, by The Gazette of India, in news broadcasts by All India Radio and in calendars and communications issued by the Government of India." ;
+  skos:prefLabel "Indian National Calendar" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+<http://www.opengis.net/def/trs/BIPM>
+  a skos:Concept ;
+  a time:TRS ;
+  dct:source <http://www.opengis.net/def/trs/BIPM> ;
+  rdfs:seeAlso <https://www.bipm.org/en/bipm/tai/tai> ;
+  skos:altLabel "BIPM" ;
+  skos:altLabel "TAI" ;
+  skos:definition "International Atomic Time (TAI), is a time scale calculated at the Bureau International des Poides et Mesures (BIPM) using data from some two hundred atomic clocks in over fifty national laboratories. TAI is a uniform and stable time scale which does not, therefore, keep in step with the slightly irregular rotation of the Earth. For public and practical purposes it is necessary to have a scale that, in the long term, does. Such a scale is Coordinated Universal Time (UTC), which is identical with TAI except that from time to time a leap second is added to ensure that, when averaged over a year, the Sun crosses the Greenwich meridian at noon UTC to within 0.9 s. The dates of application of the leap second are decided by the International Earth Rotation Service (IERS)." ;
+  skos:prefLabel "International Atomic Time" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:IranianCalendar
+  a skos:Concept ;
+  a time:TRS ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Iranian_calendars> ;
+  skos:definition """The Iranian calendars or Iranian chronology (Persian: گاه‌شماری ایرانی‎, Gāh-Shomāri-ye Irāni) are a succession of calendars invented or used for over two millennia in Iran also known as Persia. One of the longest chronological records in human history, the Iranian calendar has been modified time and time again during its history to suit administrative, climatic, and religious purposes.
+
+As one of the few calendars designed in the era of accurate positional astronomy, the Iranian calendar uses a very complex leap year structure which makes it the most accurate solar calendar in use today.""" ;
+  skos:prefLabel "Iranian Calendar" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:IslamicCalendar
+  a skos:Concept ;
+  a time:TRS ;
+  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  rdfs:seeAlso <https://aa.usno.navy.mil/faq/docs/islamic.php> ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Islamic_calendar> ;
+  skos:definition "The Islamic, Muslim, or Hijri calendar (Arabic: التقويم الهجري‎ at-taqwīm al-hijrī) is a lunar calendar consisting of 12 lunar months in a year of 354 or 355 days. It is used to determine the proper days of Islamic holidays and rituals, such as the annual period of fasting and the proper time for the pilgrimage to Mecca." ;
+  skos:prefLabel "Islamic Calendar" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:JulianCalendar
+  a skos:Concept ;
+  a time:TRS ;
+  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Julian_calendar> ;
+  skos:definition "The Julian calendar, proposed by Julius Caesar in 708 AUC (46 BC/BCE), was a reform of the Roman calendar. It took effect on 1 January 709 AUC (45 BC/BCE), by edict. It was designed with the aid of Greek mathematicians and Greek astronomers such as Sosigenes of Alexandria. " ;
+  skos:prefLabel "Julian Calendar" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:JulianDay
+  a skos:Concept ;
+  a time:TRS ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Julian_day> ;
+  skos:definition """Julian day is the continuous count of days since the beginning of the Julian Period and is used primarily by astronomers, and in software for easily calculating elapsed days between two events (e.g. food production date and sell by date).
+
+The Julian Day Number (JDN) is the integer assigned to a whole solar day in the Julian day count starting from noon Universal time, with Julian day number 0 assigned to the day starting at noon on Monday, January 1, 4713 BC, proleptic Julian calendar (November 24, 4714 BC, in the proleptic Gregorian calendar), a date at which three multi-year cycles started (which are: Indiction, Solar, and Lunar cycles) and which preceded any dates in recorded history. For example, the Julian day number for the day starting at 12:00 UT on January 1, 2000, was 2 451 545. """ ;
+  skos:prefLabel "Julian day" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:MayaCalendar
+  a skos:Concept ;
+  a time:TRS ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Maya_calendar> ;
+  skos:definition "The Maya calendar is a system of calendars used in pre-Columbian Mesoamerica and in many modern communities in the Guatemalan highlands, Veracruz, Oaxaca and Chiapas, Mexico." ;
+  skos:prefLabel "Maya Calendar" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:ParliamentsOfAustraliaTimeline
+  a skos:Concept ;
+  a time:TRS ;
+  dct:source <https://en.wikipedia.org/wiki/Chronology_of_Australian_federal_parliaments> ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Parliament_of_Australia> ;
+  skos:definition """This timeline of Parliaments of Australia starts in 1901 (Gregorian Caledar) when Australia was formed as an country. Epochs within this timeline are parliaments which are formed after elections with the first parliament formed after the first election in 1901 and subsequently numbered 1st, 2nd, 3rd etc. up to (as of October, 2019, Gegorian Calendar) the 44th.""" ;
+  skos:prefLabel "Parliaments of Australia Timeline" ;
+  skos:topConceptOf trs:conceptScheme ;
+    skos:scopeNote "Use this timeline by quoting an epoch within it so, where in an XSD date using the Gregorian Calendar and 3 epochs (year, month, day) e.g. \"1982-11-05\" for the 11th of May, 1982, in Parliaments of Australia, the equivalent epoch (equivalent as in the one occuring on 11th of May, 1982) would simply be \"32\" which is a numerical version of \"32nd Parliament\" which started on the 25th of November, 1980 and ended on the 14–15the December, 1982. Since the start of this timescale in 1901, there have so far been 44 parliament epochs." ;
+.
+trs:SolarHijriCalendar
+  a skos:Concept ;
+  a time:TRS ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Solar_Hijri_calendar> ;
+  skos:definition "The Solar Hijri calendar (Persian: گاه‌شماری هجری خورشیدی‎, romanized: gāh-shomāri-ye hejri-ye khorshidi; Pashto: لمريز لېږدیز کلیز‎), also called the Solar Hejri calendar or Shamsi Hijri calendar, and abbreviated as SH, is the official calendar of Iran and Afghanistan. It begins on the March equinox (Nowruz) as determined by astronomical calculation for the Iran Standard Time meridian (52.5°E, UTC+03:30) and has years of 365 or 366 days." ;
+  skos:prefLabel "Solar Hijri Calendar" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:UNIXTime
+  a skos:Concept ;
+  a time:TRS ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Unix_time> ;
+  skos:definition "Unix time (also known as Epoch time, POSIX time, seconds since the Epoch, or UNIX Epoch time) is a system for describing a point in time. It is the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970, minus leap seconds." ;
+  skos:prefLabel "UNIX Time" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
+trs:UTCTime
+  a skos:Concept ;
+  a time:TRS ;
+  dct:source <https://www.bipm.org/en/bipm-services/timescales/> ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Unix_time> ;
+  skos:definition "The atomic time scale that forms the basis for the coordinated dissemination of standard frequencies and time signals." ;
+  skos:prefLabel "Coordinated Universal Time" ;
+  skos:topConceptOf trs:conceptScheme ;
+.
