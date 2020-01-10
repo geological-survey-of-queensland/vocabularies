@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -11,9 +12,10 @@
 <http://linked.data.gov.au/def/borehole-design> a owl:Ontology .
 
 bhd:conceptScheme a skos:ConceptScheme ;
-    dct:created "2019-10-03T16:24:51+10:00"^^xsd:dateTime ;
-    dct:creator "Geological Survey of Queensland" ;
-    dct:modified "2019-10-03T16:32:36+10:00"^^xsd:dateTime ;
+    dct:created "2019-10-03T16:24:51+10:00"^^xsd:dateTimeStamp ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2019-10-03T16:32:36+10:00"^^xsd:dateTimeStamp ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "A description of the intended configuration and trajectory of a borehole."@en ;
     skos:hasTopConcept bhd:deviated,
@@ -21,6 +23,11 @@ bhd:conceptScheme a skos:ConceptScheme ;
         bhd:lateral,
         bhd:vertical ;
     skos:prefLabel "Borehole Design"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+.
 
 bhd:deviated a skos:Concept ;
     skos:altLabel "Directional"@en ;

@@ -3,6 +3,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -12,8 +13,9 @@
 
 gafeat:conceptScheme a skos:ConceptScheme ;
     dct:created "2019-10-09"^^xsd:date ;
-    dct:creator "Geological Survey of Queensland" ;
-    dct:source "Developed by the Geological Survey of Queensland." ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-01-10"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
     skos:definition "Geological features have properties that are of interest for commercial, environmental and societal reasons. Administrative features are spatial features that are defined and managed by regulatory agencies."@en ;
     skos:hasTopConcept gafeat:block,
         gafeat:lithodemicFeature,
@@ -24,6 +26,11 @@ gafeat:conceptScheme a skos:ConceptScheme ;
         gafeat:tectonicStructuralFrameworkFeature,
         gafeat:subBlock ;
     skos:prefLabel "GSQ Geological and Administrative Features"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+.
 
 gafeat:block a skos:Concept ;
     skos:definition "A Block is an administrative division of the State of Queensland that is used for tenure management. A Block is defined as five minutes of latitude by five minutes of longitude. Blocks are grouped by 1:1,000,000 map sheet areas, the names of which provide the containing Blocks with a four letter prefix (e.g. Clermont 1:1,000,000 provides CLER). Each sheet area contains 3456 Blocks, with the Blocks numbered between 1 and 3456 inclusive. A Block is divided into 25 Sub-Blocks."@en ;

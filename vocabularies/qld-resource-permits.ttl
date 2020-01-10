@@ -5,6 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,7 +14,9 @@
 
 respermit:conceptScheme a skos:ConceptScheme ;
     dct:created "2019-03-29"^^xsd:date ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:modified "2019-09-23"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
     skos:altLabel "Resource Authority"@en,
         "Tenure"@en ;
     skos:definition """In general mineral or energy rights in Australia are reserved to the Crown. The acquisition of rights to minerals or energy stems from legislative frameworks in Queensland. These frameworks provide initially for exploration of the resource, and consist of the grant by the Crown in the form of exploration permits, licences or leases.
@@ -42,6 +45,11 @@ The legislation also provides for the payment of royalties to the State and to c
     skos:hiddenLabel "Tenement"@en,
         "Queensland Mining Permit"@en ;
     skos:prefLabel "Queensland Resource Permit"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+.
 
 respermit:GeothermalAuthorities a skos:Collection ;
     skos:altLabel "Geothermal permits"@en ;

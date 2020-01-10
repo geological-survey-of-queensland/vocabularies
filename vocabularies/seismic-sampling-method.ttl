@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -12,9 +13,9 @@
 
 :conceptScheme a skos:ConceptScheme ;
     dct:created "2019-09-27T15:03:40+10:00"^^xsd:dateTime ;
-    dct:creator "Geological Survey of Queensland" ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:modified "2019-09-27T15:03:40+10:00"^^xsd:dateTime ;
-    dct:source "Developed by the Geological Survey of Queensland." ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
     skos:definition "The classification of tools used as an energy source that generate a seismic signal for use in seismic survey acquisition."@en ;
     skos:hasTopConcept :accelerated-weight-drop,
         :air-gun,
@@ -30,6 +31,11 @@
         :water-gun,
         :weight-drop ;
     skos:prefLabel "Seismic Sampling Method"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+.
 
 :accelerated-weight-drop a skos:Concept ;
     skos:altLabel "AWD"@en ;

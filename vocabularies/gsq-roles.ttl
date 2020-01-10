@@ -3,11 +3,17 @@
 @prefix iso11179: <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities/> .
 @prefix isorole: <http://linked.data.gov.au/def/iso19115-1/RoleCode/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/gsq-roles> a owl:Ontology .
 
 gsqr:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-10-17"^^xsd:date ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-01-10"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml> ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)"@en ;
     skos:hasTopConcept gsqr:contractor,
@@ -16,6 +22,11 @@ gsqr:conceptScheme a skos:ConceptScheme ;
         isorole:owner,
         isorole:publisher ;
     skos:prefLabel "Geological Survey of Queensland's Agent Roles"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+.
 
 gsqr:QdexReportsRoles a skos:Collection ;
     skos:definition "A collection of roles used for Agents within the Georesources Reports regime"@en ;

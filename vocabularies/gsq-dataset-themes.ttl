@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -12,11 +13,17 @@
 
 :conceptScheme a skos:ConceptScheme ;
     dct:created "2019-10-02T15:00:47+10:00"^^xsd:dateTime ;
-    dct:creator "Geological Survey of Queensland" ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:modified "2019-10-09T15:16:00+10:00"^^xsd:dateTime ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "A list of broad thematic descriptions of datasets created, received, and held by the Geological Survey of Queensland."@en ;
     skos:prefLabel "GSQ dataset themes"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+.
 
 :administrative-data a skos:Concept ;
     skos:definition "Ancillary information regarding the administration of Queensland Resources such as administrative boundaries, resource permits, legislation, and information about organisations such as DNRME and GSQ."@en ;

@@ -2,6 +2,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -14,9 +15,16 @@ da:conceptScheme a skos:ConceptScheme ;
     skos:definition "Data access rights control how users and systems access a data resource."@en ;
     skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
     dct:source <http://vocabularies.coar-repositories.org/documentation/access_rights/> ;
-    dct:creator "Geological Survey of Queensland" ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:created "2019-04-03"^^xsd:date ;
-    dct:modified "2019-09-10"^^xsd:date .
+    dct:modified "2019-09-10"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
+.
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+.
 
 da:embargoed a skos:Concept ;
     skos:prefLabel "Embargoed access"@en ;
