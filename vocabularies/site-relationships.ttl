@@ -1,0 +1,163 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix strel: <http://linked.data.gov.au/def/site-relationships/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/site-relationships> a owl:Ontology .
+
+strel:conceptScheme a skos:ConceptScheme ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2020-01-21T15:45:34+10:00"^^xsd:dateTime,
+        "2020-01-21T15:51:19+10:00"^^xsd:dateTime ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The relationships between sites both topological and functional."@en ;
+    skos:hasTopConcept strel:above,
+        strel:below,
+        strel:borehole-intersect,
+        strel:contains,
+        strel:covers,
+        strel:disjoint,
+        strel:equals,
+        strel:injection-extraction-pair,
+        strel:meets,
+        strel:observation,
+        strel:parent,
+        strel:re-entry,
+        strel:redrill,
+        strel:twinned,
+        strel:well-pad ;
+    skos:prefLabel "Site Relationships"@en .
+
+strel:borehole a skos:Collection ;
+    skos:definition "Relationships between associated boreholes and boreholes with other operational sites such as well pads."@en ;
+    skos:member strel:borehole-intersect,
+        strel:injection-extraction-pair,
+        strel:observation,
+        strel:re-entry,
+        strel:redrill,
+        strel:twinned,
+        strel:well-pad ;
+    skos:prefLabel "Borehole"@en .
+
+strel:interval a skos:Collection ;
+    skos:definition "Relationships between intervals where vertical offset is the defining factor. Typically used for within a well or bore."@en ;
+    skos:member strel:above,
+        strel:below,
+        strel:contains,
+        strel:covers,
+        strel:disjoint,
+        strel:equals,
+        strel:meets ;
+    skos:prefLabel "Interval"@en .
+
+strel:topological a skos:Collection ;
+    skos:definition "Topology deals with spatial and structural properties of geometric objects, independent of their extension, type, or geometric form. Among the types of topological properties of objects there are: the number of dimensions an object has or the relationships that exist between objects."@en ;
+    skos:member strel:contains,
+        strel:covers,
+        strel:disjoint,
+        strel:equals,
+        strel:meets ;
+    skos:prefLabel "Topological"@en .
+
+strel:wellbore a skos:Collection ;
+    skos:definition "Defines the parent-child relationship of wellbores that constitute a borehole."@en ;
+    skos:member strel:parent ;
+    skos:prefLabel "Wellbore"@en .
+
+strel:above a skos:Concept ;
+    skos:definition "Object or interval A is above object or interval B."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Above"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:below a skos:Concept ;
+    skos:definition "Object or interval A is below object or interval B."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Below"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:borehole-intersect a skos:Concept ;
+    skos:definition "A well that is intersects the subject well."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Borehole Intersect"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:injection-extraction-pair a skos:Concept ;
+    skos:definition "Wells which exist in a pair, or system, in which a well or wells inject fluids and one or more offset wells extract fluids. Such as stimulated production, enhanced geothermale etc."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Injection-Extraction Pair"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:observation a skos:Concept ;
+    skos:altLabel "Monitoring"@en ;
+    skos:definition "A well drilled for the observation or monitoring of thesubject bore"@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Observation"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:parent a skos:Concept ;
+    skos:definition "The parent wellbore that the subject wellbore originated from."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Parent"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:re-entry a skos:Concept ;
+    skos:definition "A well drilled from within a previously abandonded well. A re-entry drills out or removes any abandonment plugs or equipment from the previously abandoned well."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Re-Entry"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:redrill a skos:Concept ;
+    skos:altLabel "Offset"@en ;
+    skos:definition "A well drilled at an offset position to replace a well in which drilling was abandoned. A redrill is drilled with the same intended target(s) and commonly the same general design."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Redrill"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:twinned a skos:Concept ;
+    skos:definition "A twin of the subject well. A hole drilled separate to but in support of the subject wells purpose and intent."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Twinned"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:well-pad a skos:Concept ;
+    skos:definition "The well pad site from which a batch of wells or bores share a single operational area at surface but drill to different sub-surface targets."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Well Pad"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:contains a skos:Concept ;
+    skos:definition "Object A contains object B."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Contains"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:covers a skos:Concept ;
+    skos:definition "Object A covers object B."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Covers"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:disjoint a skos:Concept ;
+    skos:definition "There is no intersection area between object A and object B."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Disjoint"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:equals a skos:Concept ;
+    skos:definition "Object B and object A match."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Equals"@en ;
+    skos:topConceptOf strel:conceptScheme .
+
+strel:meets a skos:Concept ;
+    skos:altLabel "Touches"@en ;
+    skos:definition "Object A and object B meet at the boundary."@en ;
+    skos:inScheme strel:conceptScheme ;
+    skos:prefLabel "Meets"@en ;
+    skos:topConceptOf strel:conceptScheme .
