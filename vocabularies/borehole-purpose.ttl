@@ -12,8 +12,8 @@
 
 bhpur:conceptScheme a skos:ConceptScheme ;
     dct:creator "Geological Survey of Queensland" ;
-    dct:modified "2020-01-21T9:40:39+10:00"^^xsd:dateTime,
-        "2020-01-21T9:44:45+10:00"^^xsd:dateTime ;
+    dct:modified "2020-01-21T13:24:10+10:00"^^xsd:dateTime,
+        "2020-01-21T9:40:39+10:00"^^xsd:dateTime ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The primary purpose of a borehole based on the legislative State Act and/or the resources industry sector."@en ;
     skos:hasTopConcept bhpur:coal,
@@ -26,23 +26,64 @@ bhpur:conceptScheme a skos:ConceptScheme ;
         bhpur:water ;
     skos:prefLabel "Borehole Purpose"@en .
 
-bhpur:coal a skos:Concept ;
-    skos:definition "Wells and bores drilled to facilitate the mining of coal under permits governed by the Queensland Mineral Resources Act (1989)"@en ;
+bhpur:carbon-capture-and-storage a skos:Concept ;
+    skos:broader bhpur:greenhouse-gas-storage ;
+    skos:definition "Wells that deposit carbon dioxide into an underground geological formation after capture from large point sources, such as a cement factory or biomass power plant."@en ;
     skos:inScheme bhpur:conceptScheme ;
-    skos:prefLabel "Coal"@en ;
-    skos:topConceptOf bhpur:conceptScheme .
+    skos:prefLabel "Carbon Capture and Storage"@en .
+
+bhpur:coal-seam-gas a skos:Concept ;
+    skos:broader bhpur:petroleum ;
+    skos:definition "Wells targetting coal seams where hydrocarbons are kept in place via adsorption to the coal surface and hydrostatic pressure"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Coal Seam Gas"@en .
+
+bhpur:conventional-petroleum a skos:Concept ;
+    skos:broader bhpur:petroleum ;
+    skos:definition "Wells targetting conventional petroleum reservoirs where buoyant forces keep hydrocarbons in place below a sealing caprock."@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Conventional Petroleum"@en .
+
+bhpur:open-cut-coal-mining a skos:Concept ;
+    skos:broader bhpur:coal ;
+    skos:definition "Wells drilled for the purpose of assessing coal resources for an open cut coal mine."@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Open-Cut Coal Mining"@en .
+
+bhpur:shale-gas a skos:Concept ;
+    skos:broader bhpur:unconventional-petroleum ;
+    skos:definition "Wells targetting shale that produces oil. Oil obtained by artificial maturation of oil shale. The process of artificial maturation uses controlled heating, or pyrolysis, of kerogen to release the shale oil."@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Shale Gas"@en .
+
+bhpur:shale-oil a skos:Concept ;
+    skos:broader bhpur:unconventional-petroleum ;
+    skos:definition "Wells targetting shale that produces natural gas. A shale that is thermally mature enough and has sufficient gas content to produce economic quantities of natural gas."@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Shale Oil"@en .
+
+bhpur:tight-gas a skos:Concept ;
+    skos:broader bhpur:unconventional-petroleum ;
+    skos:definition "Wells targetting gas from relatively impermeable reservoir rock."@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Tight Gas"@en .
+
+bhpur:tight-oil a skos:Concept ;
+    skos:broader bhpur:unconventional-petroleum ;
+    skos:definition "Wells targetting oil from relatively impermeable reservoir rock."@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Tight Oil"@en .
+
+bhpur:underground-coal-mining a skos:Concept ;
+    skos:broader bhpur:coal ;
+    skos:definition "Wells drilled for the purpose of assessing coal resources for an underground coal mine."@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Underground Coal Mining"@en .
 
 bhpur:geothermal a skos:Concept ;
     skos:definition "Wells and bores drilled under permits governed by the Queensland Geothermal Energy Act (2010)"@en ;
     skos:inScheme bhpur:conceptScheme ;
     skos:prefLabel "Geothermal"@en ;
-    skos:topConceptOf bhpur:conceptScheme .
-
-bhpur:greenhouse-gas-storage a skos:Concept ;
-    skos:altLabel "GHG"@en ;
-    skos:definition "Wells and bores drilled under permits governed by the Queensland Greenhouse Gas Storage Act (2009)"@en ;
-    skos:inScheme bhpur:conceptScheme ;
-    skos:prefLabel "Greenhouse Gas Storage"@en ;
     skos:topConceptOf bhpur:conceptScheme .
 
 bhpur:minerals a skos:Concept ;
@@ -63,6 +104,25 @@ bhpur:oil-shale a skos:Concept ;
     skos:prefLabel "Oil Shale"@en ;
     skos:topConceptOf bhpur:conceptScheme .
 
+bhpur:water a skos:Concept ;
+    skos:definition "Wells and bores drilled under permits governed by the Queensland Water Act (2000)"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Water"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
+bhpur:greenhouse-gas-storage a skos:Concept ;
+    skos:altLabel "GHG"@en ;
+    skos:definition "Wells and bores drilled under permits governed by the Queensland Greenhouse Gas Storage Act (2009)"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Greenhouse Gas Storage"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
+bhpur:coal a skos:Concept ;
+    skos:definition "Wells and bores drilled to facilitate the mining of coal under permits governed by the Queensland Mineral Resources Act (1989)"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Coal"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
 bhpur:petroleum a skos:Concept ;
     skos:altLabel "Coal Seam Gas"@en ;
     skos:definition "Wells and bores drilled under permits governed by the Queensland Petroleum Act (1923)"@en ;
@@ -70,10 +130,8 @@ bhpur:petroleum a skos:Concept ;
     skos:prefLabel "Petroleum"@en ;
     skos:topConceptOf bhpur:conceptScheme .
 
-bhpur:water a skos:Concept ;
-    skos:definition "Wells and bores drilled under permits governed by the Queensland Water Act (2000)"@en ;
+bhpur:unconventional-petroleum a skos:Concept ;
+    skos:broader bhpur:petroleum ;
+    skos:definition "Wells targetting unconventional reservoirs whose properties including porosity, permeability, or trapping mechanism differ from conventional reservoirs"@en ;
     skos:inScheme bhpur:conceptScheme ;
-    skos:prefLabel "Water"@en ;
-    skos:topConceptOf bhpur:conceptScheme .
-
-
+    skos:prefLabel "Unconventional Petroleum"@en .
