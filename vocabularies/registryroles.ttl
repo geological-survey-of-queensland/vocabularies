@@ -3,6 +3,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -11,6 +12,14 @@
 <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> a owl:Ontology .
 
 iso11179:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-10-17"^^xsd:date ;
+    dct:creator [
+        a sdo:Organization ;
+        sdo:name "International Organization for Standardization" ;
+    ] ;
+    dct:contributor <https://orcid.org/0000-0002-8742-7730> ;
+    dct:modified "2020-01-10"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "ISO/IEC 111179-6 Information technology - Metadata registries (MDR) - Part 6: Registration, Annex C" ;
     skos:definition """A SKOS version of the ISO 11179 Annex C Roles and Responsibilities.\n
     Organizational roles associated with Administered Item registration processes. The organizational roles specified are Registration Authority, Registrar, Stewards, Submitters, and Read-only users."""@en ;
@@ -25,6 +34,11 @@ iso11179:conceptScheme a skos:ConceptScheme ;
         iso11179:Steward,
         iso11179:Submitter ;
     skos:prefLabel "ISO/IEC 111179-6 Roles and Responsibilities"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+.
 
 iso11179:AllOthers a skos:Concept ;
     skos:definition "A Registration Authority may establish guidelines on the use of their Metadata Registry by other users. The general goal should be to provide an open area that anyone may use to obtain and explore the metadata that is managed within the Metadata Registry."@en ;
