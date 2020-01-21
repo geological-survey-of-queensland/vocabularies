@@ -1,0 +1,79 @@
+@prefix bhpur: <http://linked.data.gov.au/def/borehole-purpose/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/borehole-purpose> a owl:Ontology .
+
+bhpur:conceptScheme a skos:ConceptScheme ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2020-01-21T9:40:39+10:00"^^xsd:dateTime,
+        "2020-01-21T9:44:45+10:00"^^xsd:dateTime ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The primary purpose of a borehole based on the legislative State Act and/or the resources industry sector."@en ;
+    skos:hasTopConcept bhpur:coal,
+        bhpur:geothermal,
+        bhpur:greenhouse-gas-storage,
+        bhpur:minerals,
+        bhpur:non-industry,
+        bhpur:oil-shale,
+        bhpur:petroleum,
+        bhpur:water ;
+    skos:prefLabel "Borehole Purpose"@en .
+
+bhpur:coal a skos:Concept ;
+    skos:definition "Wells and bores drilled to facilitate the mining of coal under permits governed by the Queensland Mineral Resources Act (1989)"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Coal"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
+bhpur:geothermal a skos:Concept ;
+    skos:definition "Wells and bores drilled under permits governed by the Queensland Geothermal Energy Act (2010)"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Geothermal"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
+bhpur:greenhouse-gas-storage a skos:Concept ;
+    skos:altLabel "GHG"@en ;
+    skos:definition "Wells and bores drilled under permits governed by the Queensland Greenhouse Gas Storage Act (2009)"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Greenhouse Gas Storage"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
+bhpur:minerals a skos:Concept ;
+    skos:definition "Wells and bores drilled to facilitate the mining of minerals, excluding coal and oil shale, under permits governed by the Queensland Mineral Resources Act (1989)"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Minerals"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
+bhpur:non-industry a skos:Concept ;
+    skos:definition "Wells and bores drilled by non-industry agents outside of the State Resources Acts"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Non-Industry"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
+bhpur:oil-shale a skos:Concept ;
+    skos:definition "Wells and bores drilled to facilitate the mining of oil shale under permits governed by the Queensland Mineral Resources Act (1989)"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Oil Shale"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
+bhpur:petroleum a skos:Concept ;
+    skos:altLabel "Coal Seam Gas"@en ;
+    skos:definition "Wells and bores drilled under permits governed by the Queensland Petroleum Act (1923)"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Petroleum"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
+bhpur:water a skos:Concept ;
+    skos:definition "Wells and bores drilled under permits governed by the Queensland Water Act (2000)"@en ;
+    skos:inScheme bhpur:conceptScheme ;
+    skos:prefLabel "Water"@en ;
+    skos:topConceptOf bhpur:conceptScheme .
+
+
