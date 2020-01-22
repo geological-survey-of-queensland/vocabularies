@@ -1,0 +1,395 @@
+﻿@prefix bhfunc: <http://linked.data.gov.au/def/borehole-sub-purpose/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/borehole-sub-purpose> a owl:Ontology .
+
+bhfunc:conceptScheme a skos:ConceptScheme ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2020-01-23T9:21:00+10:00"^^xsd:dateTime,
+        "2020-01-23T9:25:23+10:00"^^xsd:dateTime ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The intended function of a borehole."@en ;
+    skos:hasTopConcept bhfunc:blasthole,
+        bhfunc:disposal,
+        bhfunc:environmental,
+        bhfunc:gas-management,
+        bhfunc:geotech,
+        bhfunc:limit-of-oxidation,
+        bhfunc:observation,
+        bhfunc:petroleum-injection,
+        bhfunc:petroleum-production,
+        bhfunc:resource-assessment,
+        bhfunc:service,
+        bhfunc:stimulation,
+        bhfunc:stratigraphic,
+        bhfunc:structure,
+        bhfunc:water-injection,
+        bhfunc:water-supply ;
+    skos:prefLabel "Borehole Function"@en .
+
+bhfunc:acid-leachate-testing a skos:Concept ;
+    skos:broader bhfunc:environmental ;
+    skos:definition "A well or bore drilled to facilitate the monitoring of the population, biodiversity and overall 'health' parameters of stygofauna."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "acid leachate testing"@en .
+
+bhfunc:ballast a skos:Concept ;
+    skos:broader bhfunc:service ;
+    skos:definition "A well or bore through which ballast is transported to and from mine workings."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "ballast"@en .
+
+bhfunc:cement a skos:Concept ;
+    skos:broader bhfunc:service ;
+    skos:definition "A well or bore through which cement is transported to and from mine workings."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "cement"@en .
+
+bhfunc:chemical-flood a skos:Concept ;
+    skos:broader bhfunc:stimulation ;
+    skos:definition "Borehole drilled to investigate water level or for piezometer installation."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Chemical Flood"@en .
+
+bhfunc:compliance-gas-testing a skos:Concept ;
+    skos:broader bhfunc:gas-management ;
+    skos:definition "A well drilled to provide a mechanism for the control of pressure in a system."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "compliance gas testing"@en .
+
+bhfunc:controlled-pressure-well a skos:Concept ;
+    skos:broader bhfunc:gas-management ;
+    skos:definition "A well drilled to be intersected by a ranging well."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "controlled pressure well"@en .
+
+bhfunc:electricity a skos:Concept ;
+    skos:broader bhfunc:service ;
+    skos:definition "A well or bore through which electricity is provided to mine workings."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "electricity"@en .
+
+bhfunc:end-of-borehole-well a skos:Concept ;
+    skos:broader bhfunc:gas-management ;
+    skos:definition "A well or bore drilled to remove gas from a subsurface system without any intent for commercialisation."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "end of borehole well"@en .
+
+bhfunc:extensometer a skos:Concept ;
+    skos:broader bhfunc:geotech ;
+    skos:definition "A borehole drilled to obtain strata core for geotechnical rock property testing."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "extensometer"@en .
+
+bhfunc:fault-delineation a skos:Concept ;
+    skos:broader bhfunc:structure ;
+    skos:definition "Borehole drilled to define a fault structure."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "fault delineation"@en .
+
+bhfunc:fire-flood a skos:Concept ;
+    skos:broader bhfunc:stimulation ;
+    skos:definition "The introduction of chemicals to either increase the receptiveness of a petroleum system to other improved recovery techniques, or to improve recovery in its own right."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Fire Flood"@en .
+
+bhfunc:gas-drainage-undifferentiated a skos:Concept ;
+    skos:broader bhfunc:gas-management ;
+    skos:definition "A well or bore drilled to remove fluids and or dangerous gases from the goaf."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "gas drainage undifferentiated"@en .
+
+bhfunc:gas-flood a skos:Concept ;
+    skos:broader bhfunc:stimulation ;
+    skos:definition "The injection of steam into a petroluem system to improve recovery through the reduction of viscosity, displacement and more beneficial pressure gradients."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Gas Flood"@en .
+
+bhfunc:geotechnical-properties a skos:Concept ;
+    skos:broader bhfunc:geotech ;
+    skos:definition "A well or bore drilled to facilitate strength measurements through the use of a penetrometer."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "geotechnical properties"@en .
+
+bhfunc:goaf-drainage a skos:Concept ;
+    skos:broader bhfunc:gas-management ;
+    skos:definition "A well drilled to intersect with another well."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "goaf drainage"@en .
+
+bhfunc:intrusion-delineation a skos:Concept ;
+    skos:broader bhfunc:structure ;
+    skos:definition "Borehole drilled to define an instrusion."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "intrusion delineation"@en .
+
+bhfunc:large-diameter a skos:Concept ;
+    skos:broader bhfunc:coal-quality ;
+    skos:definition "Large diameter tests for coal physical properties and washability"@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "large diameter"@en .
+
+bhfunc:mineral-ore-body-assessment a skos:Concept ;
+    skos:broader bhfunc:limit-of-oxidation ;
+    skos:definition "A well drilled to determine how to develop a hydrocarbon field most efficiently or quantify reservoir characteristics such as pay zone thickness, porosity, permability, saturation, fluid column heights, and the presence of cap rock."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Mineral Ore Body Assessment"@en .
+
+bhfunc:multi-channel-vibrating-wire-piezometer a skos:Concept ;
+    skos:broader bhfunc:observation ;
+    skos:definition "A well or bore drilled to provide a location in which Nested Standpipe Piezometer can be used to register changes in fluid pressure."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "multi-channel vibrating wire piezometer"@en .
+
+bhfunc:nested-standpipe-piezometer a skos:Concept ;
+    skos:broader bhfunc:observation ;
+    skos:definition "A well or bore drilled to provide a location in which Standpipe Piezometer can be used to register changes in fluid pressure."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "nested standpipe piezometer"@en .
+
+bhfunc:nitrogen a skos:Concept ;
+    skos:broader bhfunc:service ;
+    skos:definition "A well or bore through which nitrogen is transported to and from mine workings."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "nitrogen"@en .
+
+bhfunc:penetrometer a skos:Concept ;
+    skos:broader bhfunc:geotech ;
+    skos:definition "A well or bore drilled to facilitate the introduction of a liquid solution to a system, under significant pressure, to introduce fractures into strata."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "penetrometer"@en .
+
+bhfunc:petroleum-reservoir-characterisation a skos:Concept ;
+    skos:broader bhfunc:limit-of-oxidation ;
+    skos:definition "A well drilled to enhance the production of a fluid from an offset production well. Typically to maintain reservoir pressure, to overcome to low permability or high viscosity fluids in petroleum systems, or to introduce additional fluid in geothermal systems."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Petroleum Reservoir Characterisation"@en .
+
+bhfunc:plug a skos:Concept ;
+    skos:broader bhfunc:service ;
+    skos:definition "Plug hole"@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "plug"@en .
+
+bhfunc:primary-hydraulic-fracturing a skos:Concept ;
+    skos:broader bhfunc:geotech ;
+    skos:definition "A well or bore drilled to facilitate the installation and subsequent retrieval of (Through overcoring) a stress cell."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "primary hydraulic fracturing"@en .
+
+bhfunc:ranging-well a skos:Concept ;
+    skos:broader bhfunc:gas-management ;
+    skos:definition "A well drilled to improve the transport of gas away from a coal seam."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "ranging well"@en .
+
+bhfunc:refuge a skos:Concept ;
+    skos:broader bhfunc:service ;
+    skos:definition "A well or bore which provides access to, for ventilation or rescue, a refuge."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "refuge"@en .
+
+bhfunc:slim-core-testing a skos:Concept ;
+    skos:broader bhfunc:coal-quality ;
+    skos:definition "Slim core testing for basic coal quality"@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "slim core testing"@en .
+
+bhfunc:spontaneous-combustion-testing a skos:Concept ;
+    skos:broader bhfunc:coal-quality ;
+    skos:definition "Borehole Drilled to obtains samples for spontaneous combustion testing"@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "spontaneous combustion testing"@en .
+
+bhfunc:standpipe-piezometer a skos:Concept ;
+    skos:broader bhfunc:observation ;
+    skos:definition "A well or bore drilled to provide a location in which Vibrating Wire Piezometer can be used to register changes in fluid pressure."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "standpipe piezometer"@en .
+
+bhfunc:steam-flood a skos:Concept ;
+    skos:altLabel "CSS"@en,
+        "Cyclic Steam Stimulation"@en,
+        "SAGD"@en,
+        "Steam Assisted Gravity Drainage"@en ;
+    skos:broader bhfunc:stimulation ;
+    skos:definition "The ignition of a petroleum system to inject heat, improving recovery through the reduction of viscosity, displacement by combustion products and more beneficial pressure gradients."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Steam Flood"@en .
+
+bhfunc:stone-dust a skos:Concept ;
+    skos:broader bhfunc:service ;
+    skos:definition "A well or bore through which stone dust is transported to and from mine workings."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "stone dust"@en .
+
+bhfunc:stress-test-cell-over-stress-overcore a skos:Concept ;
+    skos:broader bhfunc:geotech ;
+    skos:definition "A well or bore drilled to facilitate the installation of a tiltmeter."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "stress test cell / stress overcore"@en .
+
+bhfunc:stygofauna-monitoring a skos:Concept ;
+    skos:broader bhfunc:environmental ;
+    skos:definition "Borehole drilled for gas analysis. Typical applications include exploration, compliance and greenhouse gas emissions."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "stygofauna monitoring"@en .
+
+bhfunc:surface-to-in-seam-well a skos:Concept ;
+    skos:broader bhfunc:petroleum-production ;
+    skos:definition "A well in which water is injected rather than produced, where the primary objective is to store water in a reservoir or aquifer for later production."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "surface to in-seam well"@en .
+
+bhfunc:tiltmeter a skos:Concept ;
+    skos:broader bhfunc:geotech ;
+    skos:definition "Borehole drilled to obtain samples to determine the amount of oxidation of any coal seam by either visual and tactile or coal analysis methods."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "tiltmeter"@en .
+
+bhfunc:underground-in-seam-gas-riser a skos:Concept ;
+    skos:broader bhfunc:gas-management ;
+    skos:definition "Gas content testing in areas not subject to gas drainage."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "underground in-seam gas-riser"@en .
+
+bhfunc:vertical-production-well a skos:Concept ;
+    skos:broader bhfunc:petroleum-production ;
+    skos:definition "A well drilled to laterally intersect and drain hydrocarbons from a subsurface system."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "vertical production well"@en .
+
+bhfunc:vibrating-wire-piezometer a skos:Concept ;
+    skos:broader bhfunc:observation ;
+    skos:definition "A well in which hydrocarbons are injected rather than produced, the primary objective typically to store gas in a high quality reservoir for later production to maintain consistent rates of gas supply."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "vibrating wire piezometer"@en .
+
+bhfunc:virgin-gas-testing a skos:Concept ;
+    skos:broader bhfunc:gas-management ;
+    skos:definition "A borehole drilled to investigate the geotechnical properties of the strata and provide samples for mechanical testing."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "virgin gas testing"@en .
+
+bhfunc:water-flood a skos:Concept ;
+    skos:broader bhfunc:stimulation ;
+    skos:definition "The introduction of a gas to a petroleum system to improve recovery through displacement and more beneficial pressure gradients."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Water Flood"@en .
+
+bhfunc:blasthole a skos:Concept ;
+    skos:definition "Borehole drilled to obtain samples of strata for laboratory analysis of parameters which may impact on the environment."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Blasthole"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:disposal a skos:Concept ;
+    skos:definition "A well or bore drilled to facilitate the installation and subsequent detonation of explosives, pulverising material and throwing it away from the wall or face, reducing the effort required to advance the face or recover and remove materials."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Disposal"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:petroleum-injection a skos:Concept ;
+    skos:altLabel "Petroleum Storage"@en ;
+    skos:definition "A well drilled to drain hydrocarbons from an oil or gas field, including during the degasification of a coal seam."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Petroleum Injection"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:stratigraphic a skos:Concept ;
+    skos:altLabel "Exploration"@en ;
+    skos:definition "A well determining the lithological intervals present at a location. Typcially to determine on the presence, location and extent of a potential resource"@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:notation "STRAT" ;
+    skos:prefLabel "Stratigraphic"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:water-injection a skos:Concept ;
+    skos:altLabel "Water Storage"@en ;
+    skos:definition "A well drilled to drain water from an aquifer."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Water Injection"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:water-supply a skos:Concept ;
+    skos:altLabel "Production Water Bore"@en,
+        "Water Production"@en ;
+    skos:definition "A well in which fluids are injected rather than produced, where the primary objective is to dispose of fluid into an isolated formation."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Water Supply"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:resource-assessment a skos:Concept ;
+    skos:definition "A well determining the geological properties of a resource specific to the type of commodity. This may include quantification of volume, grade, porosity, permeability, quality, or ease-of-extraction."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Resource Assessment"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:coal-quality a skos:Concept ;
+    skos:broader bhfunc:resource-assessment ;
+    skos:definition "Borehole drilled to obtain samples for laboratory testing and coal analysis."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Coal Quality"@en .
+
+bhfunc:environmental a skos:Concept ;
+    skos:definition "A well or bore drilled to recover strata samples for their use in acid leachate testing."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Environmental"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:limit-of-oxidation a skos:Concept ;
+    skos:definition "A well drilled to delineate a mineral ore deposit and/or define physical properties such as grade and quality"@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:notation "LOX" ;
+    skos:prefLabel "Limit of Oxidation"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:petroleum-production a skos:Concept ;
+    skos:definition "A vertical well drilled to drain hydrocarbons from aÂ  subsurface system."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Petroleum Production"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:structure a skos:Concept ;
+    skos:definition "Borehole drilled to investigate the attitude of strata and the impact of any tectonic features."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Structure"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:observation a skos:Concept ;
+    skos:definition "A well or bore drilled to provide a location in which Multi-Channel Vibrating Wire Piezometer can be used to register changes in fluid pressure."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Observation"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:stimulation a skos:Concept ;
+    skos:definition "The introduction of liquid water to a petroleum system to improve recovery through displacement and more beneficial pressure gradients."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Stimulation"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:geotech a skos:Concept ;
+    skos:definition "A well or bore drilled to facilitate strain measurements and tensile tests through the use of an extensometer."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Geotech"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:service a skos:Concept ;
+    skos:definition "Borehole drilled to provide a conduit or access to and from mine workings for equipment or materials."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Service"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
+bhfunc:gas-management a skos:Concept ;
+    skos:definition "Gas content testing in drainage areas to ensure remaining gas content is below the mining threshold."@en ;
+    skos:inScheme bhfunc:conceptScheme ;
+    skos:prefLabel "Gas Management"@en ;
+    skos:topConceptOf bhfunc:conceptScheme .
+
