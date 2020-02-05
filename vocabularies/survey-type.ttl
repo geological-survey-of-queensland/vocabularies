@@ -1,0 +1,258 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix svytp: <http://linked.data.gov.au/def/survey-type/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/survey-type> a owl:Ontology .
+
+svytp:conceptScheme a skos:ConceptScheme ;
+    dct:created "2020-02-05T13:54:52+10:00"^^xsd:dateTime ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2020-02-05T13:54:52+10:00"^^xsd:dateTime ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The one-off event examining a geological or administrative feature. The type of survey or sampling performed to investigate a feature, site, or sample. Surveys are activities that produce samples."@en ;
+    skos:hasTopConcept svytp:atmospheric,
+        svytp:directional,
+        svytp:electrical,
+        svytp:electromagnetic,
+        svytp:geochemistry,
+        svytp:geotechnical,
+        svytp:geothermics,
+        svytp:gravity,
+        svytp:hydrochemistry,
+        svytp:magnetic,
+        svytp:magnetotelluric,
+        svytp:petrophysical,
+        svytp:photographic,
+        svytp:physical-geology,
+        svytp:process,
+        svytp:radiometric,
+        svytp:seismic,
+        svytp:spectral ;
+    skos:prefLabel "Survey Type"@en .
+
+svytp:airborne a skos:Collection ;
+    skos:definition "Surveys where equipment is conveyed down a borehole to record measurements of borehole, rock, or fluid attributes."@en ;
+    skos:member svytp:atmospheric,
+        svytp:electromagnetic,
+        svytp:gravity-gradiometry,
+        svytp:magnetic,
+        svytp:magnetic-gradiometry,
+        svytp:photographic,
+        svytp:radiometric,
+        svytp:spectral ;
+    skos:prefLabel "Airborne"@en .
+
+svytp:downhole a skos:Collection ;
+    skos:definition "Surveys in which the surveying equipment is mounted to an aircraft such as an airplane, helicopter, balloon, or aerial drone."@en ;
+    skos:member svytp:directional,
+        svytp:electrical,
+        svytp:electromagnetic,
+        svytp:geochemistry,
+        svytp:geotechnical,
+        svytp:gravity,
+        svytp:gravity-gradiometry,
+        svytp:magnetic,
+        svytp:magnetic-gradiometry,
+        svytp:organic-geochemistry,
+        svytp:petrophysical,
+        svytp:photographic,
+        svytp:radiometric,
+        svytp:spectral ;
+    skos:prefLabel "Downhole"@en .
+
+svytp:ground a skos:Collection ;
+    skos:definition "Surveys undertaken at ground level or a solid subsurface level such as an underground mine floor. This may include surface collection of rocks, soil, water or other physical samples; geophysical surveys from surface locations; handheld photography."@en ;
+    skos:member svytp:atmospheric,
+        svytp:electrical,
+        svytp:electromagnetic,
+        svytp:geochemistry,
+        svytp:geotechnical,
+        svytp:geothermics,
+        svytp:gravity,
+        svytp:gravity-gradiometry,
+        svytp:hydrochemistry,
+        svytp:magnetic,
+        svytp:magnetic-gradiometry,
+        svytp:magnetotelluric,
+        svytp:organic-geochemistry,
+        svytp:passive-seismic,
+        svytp:physical-geology,
+        svytp:radiometric,
+        svytp:seismic ;
+    skos:prefLabel "Ground"@en .
+
+svytp:procedural a skos:Collection ;
+    skos:definition "Surveys undertaken as part of an overall sampling procedure to modify existing samples, or create new sub-samples from existing samples."@en ;
+    skos:member svytp:process ;
+    skos:prefLabel "Procedural"@en .
+
+svytp:satellite a skos:Collection ;
+    skos:definition "Surveys in which the surveying equipment is mounted to a platform outside the earth's atmosphere. Typically in a stable orbit such as a satellite, space station, or shuttle."@en ;
+    skos:member svytp:gravity,
+        svytp:magnetic,
+        svytp:photographic,
+        svytp:spectral ;
+    skos:prefLabel "Satellite"@en .
+
+svytp:passive-seismic a skos:Concept ;
+    skos:broader svytp:seismic ;
+    skos:definition "A seismic survey using passive and natural noise sources. Typically capturing cumulative information over extended recording periods."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Passive seismic"@en .
+
+svytp:directional a skos:Concept ;
+    skos:definition "The process of recording the subsurface geometry of a borehole i.e. direction and position of a wellbore."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Directional"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:geothermics a skos:Concept ;
+    skos:definition "A survey measuring variations of heat flow within the Earth."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Geothermics"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:hydrochemistry a skos:Concept ;
+    skos:definition "A survey of the chemical and physical properties of surface or ground water."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Hydrochemistry"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:magnetotelluric a skos:Concept ;
+    skos:altLabel "MT"@en,
+        "MT Survey"@en ;
+    skos:definition "A survey where recordings of the Earths electric and magnetic fields are taken concurrently to determine the subsurface electrical resistivity at a range of scales"@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Magnetotelluric"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:organic-geochemistry a skos:Concept ;
+    skos:broader svytp:geochemistry ;
+    skos:definition "A geochemistry survey specifically determining organic chemical properties. Typically performed for material such as coal and oil."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Organic Geochemistry"@en .
+
+svytp:petrophysical a skos:Concept ;
+    skos:altLabel "Wireline"@en ;
+    skos:definition "The process of recording various physical, chemical, electrical, or other properties of the rock/fluid mixtures penetrated by a borehole."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Petrophysical"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:physical-geology a skos:Concept ;
+    skos:altLabel "Field Mapping"@en ;
+    skos:definition "A survey of physical geological features such as outcrop samples, structural measurements, sedimentological and stratigraphic observations."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Physical Geology"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:process a skos:Concept ;
+    skos:altLabel "processing"@en,
+        "reprocessing"@en,
+        "resampling"@en ;
+    skos:definition "A sampling procedure performed on an existing sample to alter the sample or generate a new sub-sample or set of sub-samples. This may include seismic processing and reprocessing."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Process"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:atmospheric a skos:Concept ;
+    skos:definition "A survey measuring chemical and physical properties of the atmosphere."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Atmospheric"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:electrical a skos:Concept ;
+    skos:altLabel "Electrical Resistance"@en,
+        "Electrical Sounding"@en,
+        "IP"@en,
+        "Induced Polarisation"@en,
+        "MIMDAS"@en,
+        "SP"@en,
+        "Sclumberger Survey"@en,
+        "Spontenous Pontential"@en,
+        "Vertical Profiling"@en,
+        "Wiener Survey"@en ;
+    skos:definition "A survey measuring electrical currents as they travel through conductive pathways in the near surface."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Electrical"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:geotechnical a skos:Concept ;
+    skos:altLabel "Geomechanical"@en ;
+    skos:definition "A survey measuring the physical and mechanical properties of rocks, soil and earth material with particular focus on rock strength and competence."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Geotechnical"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:gravity-gradiometry a skos:Concept ;
+    skos:altLabel "Full tensor gravimetry"@en ;
+    skos:broader svytp:gravity ;
+    skos:definition "A variation of gravity survey where the gradient of the gravity field is measured instead of the field directly."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Gravity gradiometry"@en .
+
+svytp:magnetic-gradiometry a skos:Concept ;
+    skos:broader svytp:magnetic ;
+    skos:definition "A variation of magnetic survey which measured the gradient of the magnetic field instead of the field."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Magnetic gradiometry"@en .
+
+svytp:seismic a skos:Concept ;
+    skos:definition "A survey using the interaction of seismic waves with sub-surface features of the earth to determine properties and morphology of those features."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Seismic"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:electromagnetic a skos:Concept ;
+    skos:altLabel "EM"@en,
+        "EM Survey"@en ;
+    skos:definition "A survey measuring induced electromagnetic fields from the earth to determine the resistive/conductive structure of the earth."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Electromagnetic"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:geochemistry a skos:Concept ;
+    skos:definition "A survey where the chemical properties of rocks, soil, or other geological material is assessed to determine mineralogical and/or elemental composition."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Geochemistry"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:photographic a skos:Concept ;
+    skos:definition "A survey using standard photographic equipment for image capture without intention for spectral analysis. Including land-based geological photography."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Photographic"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:radiometric a skos:Concept ;
+    skos:altLabel "Gamma Logs"@en,
+        "Gamma-Ray Spectrography"@en ;
+    skos:definition "A survey where the emissions of natural gamma-rays are recorded to determine the quantity of radioelements (Potassium, Uranium, Thorium)."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Radiometric"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:spectral a skos:Concept ;
+    skos:altLabel "hyperspectral"@en ;
+    skos:definition "A survey capturing image information and intensity-per-wavelength-band to be used for spectral analysis e.g. ASTER, MODIS."@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Spectral"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:gravity a skos:Concept ;
+    skos:definition "A survey where the variation of the Earth's gravity field in measured to determine the distribution of density in the region"@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Gravity"@en ;
+    skos:topConceptOf svytp:conceptScheme .
+
+svytp:magnetic a skos:Concept ;
+    skos:altLabel "aeromagnetics"@en ;
+    skos:definition "A survey where the variations of the Earth's magnetic field is measured to determine the distribution of magnetic minerals (predominately magnetite)"@en ;
+    skos:inScheme svytp:conceptScheme ;
+    skos:prefLabel "Magnetic"@en ;
+    skos:topConceptOf svytp:conceptScheme .
