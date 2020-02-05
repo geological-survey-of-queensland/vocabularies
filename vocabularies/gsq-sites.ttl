@@ -1,0 +1,139 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gsqst: <http://linked.data.gov.au/def/gsq-sites/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/gsq-sites> a owl:Ontology .
+
+gsqst:conceptScheme a skos:ConceptScheme ;
+    dct:created "2020-02-05T15:48:27+10:00"^^xsd:dateTime ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2020-02-05T15:48:27+10:00"^^xsd:dateTime ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
+    skos:hasTopConcept gsqst:base-station,
+        gsqst:borehole,
+        gsqst:field-site,
+        gsqst:mine,
+        gsqst:project-location,
+        gsqst:seismic-survey-area,
+        gsqst:seismic-survey-line,
+        gsqst:wellbore,
+        gsqst:wellbore-interval ;
+    skos:prefLabel "GSQ Sites"@en .
+
+gsqst:atmospheric-sampling-site a skos:Concept ;
+    skos:broader gsqst:field-site ;
+    skos:definition "A field site from which an air sample is taken or observation is made."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Atmospheric Sampling Site"@en .
+
+gsqst:fossil-site a skos:Concept ;
+    skos:broader gsqst:field-site ;
+    skos:definition "A field site from which a fossil sample is taken or an observation made."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Fossil Site"@en .
+
+gsqst:outcrop a skos:Concept ;
+    skos:altLabel "Dig site"@en ;
+    skos:broader gsqst:field-site ;
+    skos:definition "The part of a rock formation that appears at the surface of the ground. Source: Merriam-Webster Dictionary"@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Outcrop"@en .
+
+gsqst:sediment-site a skos:Concept ;
+    skos:broader gsqst:field-site ;
+    skos:definition "A field site from which a sediment sample is taken or observation is made."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Sediment Site"@en .
+
+gsqst:soil-site a skos:Concept ;
+    skos:broader gsqst:field-site ;
+    skos:definition "A field site from which a soil sample is taken or observation is made."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Soil Site"@en .
+
+gsqst:stream-site a skos:Concept ;
+    skos:altLabel "Brook"@en,
+        "Canal"@en,
+        "Creek"@en,
+        "River"@en,
+        "Watercourse"@en ;
+    skos:broader gsqst:field-site ;
+    skos:definition "A field site from which a water sample is taken or observation is made."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Stream Site"@en .
+
+gsqst:base-station a skos:Concept ;
+    skos:definition "A  reference point used in a survey to measure a property, or provide a known reference quantity for survey calibration"@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Base Station"@en ;
+    skos:topConceptOf gsqst:conceptScheme .
+
+gsqst:borehole a skos:Concept ;
+    skos:altLabel "Bore"@en,
+        "Core Hole"@en,
+        "Corehole"@en,
+        "Drillhole"@en,
+        "Well"@en ;
+    skos:definition "A Borehole is a permitted or actual drilled hole in the ground designed to exchange (or facilitate the exchange of) fluids between a subsurface reservoir and the surface (or another reservoir), or to enable the detection and measurement of rock properties.  A Borehole has a single Origin and all Wellbore(s) that extend from this Wll Origin are parts of the Borehole. Source: PPDM What Is A Well."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Borehole"@en ;
+    skos:topConceptOf gsqst:conceptScheme .
+
+gsqst:mine a skos:Concept ;
+    skos:altLabel "Pit"@en,
+        "Quarry"@en ;
+    skos:definition "A pit or excavation in the earth from which mineral substances are taken. Source: Merriam-Webster Dictionary"@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Mine"@en ;
+    skos:topConceptOf gsqst:conceptScheme .
+
+gsqst:project-location a skos:Concept ;
+    skos:altLabel "Project"@en ;
+    skos:definition "The location of s scientific or technical survey, such as a geophysical survey area."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Project Location"@en ;
+    skos:topConceptOf gsqst:conceptScheme .
+
+gsqst:seismic-survey-area a skos:Concept ;
+    skos:definition "An area over which a seismic survey is conducted. The primary site to describe a 3D survey. The polygonal area encompassing the seismic lines of a 2D seismic survey."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Seismic Survey Area"@en ;
+    skos:topConceptOf gsqst:conceptScheme .
+
+gsqst:seismic-survey-line a skos:Concept ;
+    skos:altLabel "Seismic Line"@en ;
+    skos:definition "A line of seismic sources and/or receivers that represents the transect of seismic data acquistion."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Seismic Survey Line"@en ;
+    skos:topConceptOf gsqst:conceptScheme .
+
+gsqst:wellbore a skos:Concept ;
+    skos:altLabel "Branch"@en,
+        "Sidetrack"@en ;
+    skos:definition "A Wellbore is a path of drilled footage, from the Borehole Origin (top/start) to a terminating point (bottom/end). There are one or more Wellbores in a planned or drilled Borehole, namely the original Wellbore, and a Wellbore for each intended, actual or accidental sidetrack. Each Wellbore has a unique terminating point. A deepening of an existing Wellbore is considered a new Wellbore with the same Borehole Origin. Source: PPDM What Is A  Well."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Wellbore"@en ;
+    skos:topConceptOf gsqst:conceptScheme .
+
+gsqst:wellbore-interval a skos:Concept ;
+    skos:altLabel "Drilling Interval"@en,
+        "Well Section"@en,
+        "Well segment"@en ;
+    skos:definition "A Wellbore Segment is a unique drilled interval within the Well, either the original Wellbore from the Well Origin to the terminating point, or additional footage from a point in an existing Wellbore to a new terminating point. A Wellbore Segment is generally drilled in one continuous operation. The starting point of a new Wellbore Segment is a point in an existing Wellbore from which additional footage is drilled. This point may be a kickoff or sidetrack point or the original terminating point of the original Wellbore, as in a deepening. Wellbore Intervals typically are drilled with a constant diameter and may commonly be referred to by a functional name e.g. Conductor, Surface, Intermediate, Production. Sources: PPDM What is a Well, GSQ"@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Wellbore Interval"@en ;
+    skos:topConceptOf gsqst:conceptScheme .
+
+gsqst:field-site a skos:Concept ;
+    skos:definition "An area, transect, or point where samples are taken or observations are made directly from earth materials."@en ;
+    skos:inScheme gsqst:conceptScheme ;
+    skos:prefLabel "Field Site"@en ;
+    skos:topConceptOf gsqst:conceptScheme .
+
