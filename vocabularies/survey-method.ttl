@@ -1,0 +1,54 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix svymh: <http://linked.data.gov.au/def/survey-method/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/survey-method> a owl:Ontology .
+
+svymh:conceptScheme a skos:ConceptScheme ;
+    dct:created "2020-02-07T8:25:56+10:00"^^xsd:dateTime ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2020-02-07T8:25:56+10:00"^^xsd:dateTime ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The method of collection used by a survey."@en ;
+    skos:hasTopConcept svymh:airborne,
+        svymh:downhole,
+        svymh:ground,
+        svymh:procedural,
+        svymh:satellite ;
+    skos:prefLabel "Survey Method"@en .
+    
+svymh:airborne a skos:Concept ;
+    skos:definition "Surveys in which the surveying equipment is mounted to an aircraft such as an airplane, helicopter, balloon, or aerial drone."@en ;
+    skos:inScheme svymh:conceptScheme ;
+    skos:prefLabel "Airborne"@en ;
+    skos:topConceptOf svymh:conceptScheme .
+
+svymh:downhole a skos:Concept ;
+    skos:definition "Surveys where equipment is conveyed down a borehole to record measurements of borehole, rock, or fluid attributes."@en ;
+    skos:inScheme svymh:conceptScheme ;
+    skos:prefLabel "Downhole"@en ;
+    skos:topConceptOf svymh:conceptScheme .
+
+svymh:ground a skos:Concept ;
+    skos:definition "Surveys undertaken at ground level or a solid subsurface level such as an underground mine floor. This may include surface collection of rocks, soil, water or other physical samples; geophysical surveys from surface locations; handheld photography."@en ;
+    skos:inScheme svymh:conceptScheme ;
+    skos:prefLabel "Ground"@en ;
+    skos:topConceptOf svymh:conceptScheme .
+
+svymh:procedural a skos:Concept ;
+    skos:definition "Surveys undertaken as part of an overall sampling procedure to modify existing samples, or create new sub-samples from existing samples."@en ;
+    skos:inScheme svymh:conceptScheme ;
+    skos:prefLabel "Procedural"@en ;
+    skos:topConceptOf svymh:conceptScheme .
+
+svymh:satellite a skos:Concept ;
+    skos:definition "Surveys in which the surveying equipment is mounted to a platform outside the earth's atmosphere. Typically in a stable orbit such as a satellite, space station, or shuttle."@en ;
+    skos:inScheme svymh:conceptScheme ;
+    skos:prefLabel "Satellite"@en ;
+    skos:topConceptOf svymh:conceptScheme .
