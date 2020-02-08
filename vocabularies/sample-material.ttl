@@ -4,11 +4,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix spmt: <http://linked.data.gov.au/def/sample-material-type/> .
+@prefix spmt: <http://linked.data.gov.au/def/sample-material/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/sample-material-type> a owl:Ontology .
+<http://linked.data.gov.au/def/sample-material> a owl:Ontology .
 
 spmt:conceptScheme a skos:ConceptScheme ;
     dct:Created "2020-02-07T12:08:03+10:00"^^xsd:dateTime ;
@@ -24,7 +24,7 @@ spmt:conceptScheme a skos:ConceptScheme ;
         spmt:regolith,
         spmt:rock,
         spmt:unknown ;
-    skos:prefLabel "Sample Material Type"@en .
+    skos:prefLabel "Sample Material"@en .
 
 spmt:cement a skos:Concept ;
     skos:broader spmt:fluid ;
@@ -227,73 +227,6 @@ spmt:wax a skos:Concept ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/wax> ;
     skos:inScheme spmt:conceptScheme ;
     skos:prefLabel "Wax"@en .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/air> skos:exactMatch spmt:air .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/animal_material> skos:exactMatch spmt:animal-material .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/bitumen> skos:exactMatch spmt:bitumen .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/coal> skos:exactMatch spmt:coal .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/coke> skos:exactMatch spmt:coke .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/condensate> skos:exactMatch spmt:condensate .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/crude_oil> skos:exactMatch spmt:crude-oil .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/drilling_fluid> skos:exactMatch spmt:drilling-fluid .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/estuarine_water> skos:exactMatch spmt:estuarine-water .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/fluid> skos:exactMatch spmt:fluid .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/fluid_hydrocarbon> skos:exactMatch spmt:fluid-hydrocarbon .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/groundwater> skos:exactMatch spmt:groundwater .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/hydrocarbon_gas> skos:exactMatch spmt:hydrocarbon-gas .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/hydrocarbon_material> skos:exactMatch spmt:hydrocarbon-material .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/kerogen> skos:exactMatch spmt:kerogen .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/lag> skos:exactMatch spmt:lag .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/mineral> skos:exactMatch spmt:mineral .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/organic_material> skos:exactMatch spmt:organic-material .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/pitch> skos:exactMatch spmt:pitch .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/porewater> skos:exactMatch spmt:porewater .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/rain_water> skos:exactMatch spmt:rain-water .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/refined_oil> skos:exactMatch spmt:refined-oil .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/regolith> skos:exactMatch spmt:regolith .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/resin> skos:exactMatch spmt:resin .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/rock> skos:exactMatch spmt:rock .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/sea_water> skos:exactMatch spmt:sea-water .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/sediment> skos:exactMatch spmt:sediment .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/soil> skos:exactMatch spmt:soil .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/surface_water> skos:exactMatch spmt:surface-water .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/unknown> skos:exactMatch spmt:unknown .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/vegetation> skos:exactMatch spmt:vegetation .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/water> skos:exactMatch spmt:water .
-
-<http://pid.geoscience.gov.au/def/voc/ga/materialtype/wax> skos:exactMatch spmt:wax .
-
 spmt:air a skos:Concept ;
     skos:definition "The composite gas comprising the Earth's atmosphere."@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/air> ;
@@ -376,3 +309,72 @@ spmt:fluid a skos:Concept ;
     skos:inScheme spmt:conceptScheme ;
     skos:prefLabel "Fluid"@en ;
     skos:topConceptOf spmt:conceptScheme .
+
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/air> skos:exactMatch spmt:air .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/animal_material> skos:exactMatch spmt:animal-material .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/bitumen> skos:exactMatch spmt:bitumen .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/coal> skos:exactMatch spmt:coal .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/coke> skos:exactMatch spmt:coke .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/condensate> skos:exactMatch spmt:condensate .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/crude_oil> skos:exactMatch spmt:crude-oil .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/drilling_fluid> skos:exactMatch spmt:drilling-fluid .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/estuarine_water> skos:exactMatch spmt:estuarine-water .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/fluid> skos:exactMatch spmt:fluid .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/fluid_hydrocarbon> skos:exactMatch spmt:fluid-hydrocarbon .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/groundwater> skos:exactMatch spmt:groundwater .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/hydrocarbon_gas> skos:exactMatch spmt:hydrocarbon-gas .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/hydrocarbon_material> skos:exactMatch spmt:hydrocarbon-material .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/kerogen> skos:exactMatch spmt:kerogen .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/lag> skos:exactMatch spmt:lag .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/mineral> skos:exactMatch spmt:mineral .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/organic_material> skos:exactMatch spmt:organic-material .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/pitch> skos:exactMatch spmt:pitch .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/porewater> skos:exactMatch spmt:porewater .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/rain_water> skos:exactMatch spmt:rain-water .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/refined_oil> skos:exactMatch spmt:refined-oil .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/regolith> skos:exactMatch spmt:regolith .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/resin> skos:exactMatch spmt:resin .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/rock> skos:exactMatch spmt:rock .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/sea_water> skos:exactMatch spmt:sea-water .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/sediment> skos:exactMatch spmt:sediment .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/soil> skos:exactMatch spmt:soil .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/surface_water> skos:exactMatch spmt:surface-water .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/unknown> skos:exactMatch spmt:unknown .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/vegetation> skos:exactMatch spmt:vegetation .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/water> skos:exactMatch spmt:water .
+
+<http://pid.geoscience.gov.au/def/voc/ga/materialtype/wax> skos:exactMatch spmt:wax .
+
+
