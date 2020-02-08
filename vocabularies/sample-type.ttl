@@ -56,6 +56,7 @@ sampty:conceptScheme a skos:ConceptScheme ;
         sampty:termite-mound,
         sampty:trench-spoil,
         sampty:unspecified,
+        sampty:video,
         sampty:wellhead ;
     skos:prefLabel "Sample Type"@en .
 
@@ -333,6 +334,12 @@ sampty:unspecified a skos:Concept ;
     skos:inScheme sampty:conceptScheme ;
     skos:notation "UNSP" ;
     skos:prefLabel "Unspecified"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:video a skos:Concept ;
+    skos:definition "An moving image created by light falling on a series of photosensitive surfaces, usually videographic film or an electronic image sensor, such as a CCD or a CMOS chip."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:prefLabel "video"@en ;
     skos:topConceptOf sampty:conceptScheme .
 
 sampty:wellhead a skos:Concept ;
