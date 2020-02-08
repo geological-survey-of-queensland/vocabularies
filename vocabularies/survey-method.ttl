@@ -19,6 +19,7 @@ svymh:conceptScheme a skos:ConceptScheme ;
     skos:hasTopConcept svymh:airborne,
         svymh:downhole,
         svymh:ground,
+        svymh:marine,
         svymh:procedural,
         svymh:satellite ;
     skos:prefLabel "Survey Method"@en .
@@ -39,6 +40,12 @@ svymh:ground a skos:Concept ;
     skos:definition "Surveys undertaken at ground level or a solid subsurface level such as an underground mine floor. This may include surface collection of rocks, soil, water or other physical samples; geophysical surveys from surface locations; handheld photography."@en ;
     skos:inScheme svymh:conceptScheme ;
     skos:prefLabel "Ground"@en ;
+    skos:topConceptOf svymh:conceptScheme .
+
+svymh:marine a skos:Concept ;
+    skos:definition "Surveys undertaken at or below the surface of a body of water such as an ocean, sea, or lake."@en ;
+    skos:inScheme svymh:conceptScheme ;
+    skos:prefLabel "Marine"@en ;
     skos:topConceptOf svymh:conceptScheme .
 
 svymh:procedural a skos:Concept ;
