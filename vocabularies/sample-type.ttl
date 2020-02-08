@@ -57,6 +57,7 @@ sampty:conceptScheme a skos:ConceptScheme ;
         sampty:trench-spoil,
         sampty:unspecified,
         sampty:video,
+        sampty:water-specimen
         sampty:wellhead ;
     skos:prefLabel "Sample Type"@en .
 
@@ -340,6 +341,12 @@ sampty:video a skos:Concept ;
     skos:definition "An moving image created by light falling on a series of photosensitive surfaces, usually videographic film or an electronic image sensor, such as a CCD or a CMOS chip."@en ;
     skos:inScheme sampty:conceptScheme ;
     skos:prefLabel "video"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:water-specimen a skos:Concept ;
+    skos:definition "A generic specimen of water of any type. Includes water specimen types collected by any method."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:prefLabel "Water specimen"@en ;
     skos:topConceptOf sampty:conceptScheme .
 
 sampty:wellhead a skos:Concept ;
