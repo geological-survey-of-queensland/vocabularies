@@ -37,6 +37,7 @@ smprep:conceptScheme a skos:ConceptScheme ;
         smprep:filter,
         smprep:freeze,
         smprep:grind,
+        smprep:heat,
         smprep:hydrate,
         smprep:ionise,
         smprep:laser-ablate,
@@ -187,6 +188,13 @@ smprep:grind a skos:Concept ;
     skos:prefLabel "Grind"@en ;
     skos:topConceptOf smprep:conceptScheme .
 
+smprep:heat a skos:Concept ;
+    skos:altLabel "Heating"@en;
+    skos:definition "The process of applying thermal radiation to a material in order to raise its surface and or internal temperature."@en ;
+    skos:inScheme smprep:conceptScheme ;
+    skos:prefLabel "Heat"@en ;
+    skos:topConceptOf smprep:conceptScheme .
+
 smprep:hydrate a skos:Concept ;
     skos:altLabel "Wetting"@en ;
     skos:definition "The addition of water to a solid sample."@en ;
@@ -252,8 +260,6 @@ smprep:sublimate a skos:Concept ;
 smprep:thermal-treatment a skos:Concept ;
     skos:altLabel "Bake"@en,
         "Baking"@en,
-        "Heat"@en,
-        "Heating"@en ;
     skos:definition "The process of applying thermal radiation to a material in order to chemically alter or oxidise it."@en ;
     skos:inScheme smprep:conceptScheme ;
     skos:prefLabel "Thermal treatment"@en ;
