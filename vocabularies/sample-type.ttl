@@ -1,0 +1,364 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sampty: <http://linked.data.gov.au/def/sample-type/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/sample-type> a owl:Ontology .
+
+sampty:conceptScheme a skos:ConceptScheme ;
+    dct:created "2020-02-07T11:44:02+10:00"^^xsd:dateTime ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2020-02-08T9:59:08+10:00"^^xsd:dateTime ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Types of sample used in Geoscience."@en ;
+    skos:hasTopConcept sampty:blasted-sample,
+        sampty:bulk-cyanide-leach-sample,
+        sampty:channel-sample,
+        sampty:composited-core,
+        sampty:composited-cuttings,
+        sampty:continuous-channel-sample,
+        sampty:core,
+        sampty:cuttings,
+        sampty:deviation-log,
+        sampty:drill-spoil,
+        sampty:drill-stem-test,
+        sampty:feather-and-wedge-sample,
+        sampty:float,
+        sampty:hand-sample,
+        sampty:hyperspectral-scan,
+        sampty:macrofossil,
+        sampty:microfossil,
+        sampty:ore-sample,
+        sampty:oriented-or-orientation-sample,
+        sampty:oriented-sample,
+        sampty:palaeomagnetic-sample,
+        sampty:pan-concentrate,
+        sampty:petrophysical-log,
+        sampty:photograph,
+        sampty:powdered-chip,
+        sampty:random-dump-sample,
+        sampty:random-sample,
+        sampty:rock-chips,
+        sampty:scree,
+        sampty:selected-dump-sample,
+        sampty:selected-sample,
+        sampty:side-wall-core,
+        sampty:sieved-stream-sediment-sample,
+        sampty:sledge-hammer-sample,
+        sampty:soil-sample,
+        sampty:stream-sediment-sample,
+        sampty:suspended-silt-sample,
+        sampty:termite-mound,
+        sampty:trench-spoil,
+        sampty:unspecified,
+        sampty:video,
+        sampty:water-specimen
+        sampty:wellhead ;
+    skos:prefLabel "Sample Type"@en .
+
+sampty:image-log a skos:Concept ;
+    skos:broader sampty:petrophysical-log ;
+    skos:definition "A petrophysical log comprised of multiple directional measurements around the circumference of a wellbore to create an image detailing variation of properties around the borehole."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:prefLabel "Image Log"@en .
+
+sampty:blasted-sample a skos:Concept ;
+    skos:definition "Sample collected by drilling and blasting"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "BLSAMP" ;
+    skos:prefLabel "Blasted Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:bulk-cyanide-leach-sample a skos:Concept ;
+    skos:definition "Sample collected to test for extraction by bulk cyanide leach process"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "BCL" ;
+    skos:prefLabel "Bulk Cyanide Leach Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:channel-sample a skos:Concept ;
+    skos:definition "A sample composed of pieces of vein or mineral deposit that have been cut out of a small trench or channel, usually about 10 cm wide and 2 cm deep."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "CSAMP" ;
+    skos:prefLabel "Channel Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:composited-core a skos:Concept ;
+    skos:definition "Core combined from various sources to create a representative sample."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "CCO" ;
+    skos:prefLabel "Composited Core"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:composited-cuttings a skos:Concept ;
+    skos:definition "Cuttings combined from various sources to create a representative sample."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "CCU" ;
+    skos:prefLabel "Composited Cuttings"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:continuous-channel-sample a skos:Concept ;
+    skos:definition "A composite channel sample taken from multiple points within a channel."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "CCSAMP" ;
+    skos:prefLabel "Continuous Channel Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:core a skos:Concept ;
+    skos:definition "A core sample is a cylindrical section of (usually) a naturally occurring substance."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "CORE" ;
+    skos:prefLabel "Core"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:cuttings a skos:Concept ;
+    skos:definition "Cuttings are the small pieces of rock that are chipped away by the bit while a well is being drilled."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "CUT" ;
+    skos:prefLabel "Cuttings"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:deviation-log a skos:Concept ;
+    skos:definition "A file containing information such as aziumth and inclination or positional offset to describe the downhole geometry of a borehole."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:prefLabel "Deviation Log"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:drill-spoil a skos:Concept ;
+    skos:definition "Undifferentiated material generated during drilling."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "DSPOIN" ;
+    skos:prefLabel "Drill Spoil"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:drill-stem-test a skos:Concept ;
+    skos:definition "Test for pressure, permeability and production capabity of a reservoir"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "DSTEM" ;
+    skos:prefLabel "Drill Stem Test"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:feather-and-wedge-sample a skos:Concept ;
+    skos:definition "Sample collected by drilling and feathers and wedges."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "FWSAMP" ;
+    skos:prefLabel "Feather & Wedge Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:float a skos:Concept ;
+    skos:definition "Loose rock collected at the surface"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "FLOAT" ;
+    skos:prefLabel "Float"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:hand-sample a skos:Concept ;
+    skos:definition "Representative sample collected from outcrop usually by geopick"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "HAND" ;
+    skos:prefLabel "Hand Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:hyperspectral-scan a skos:Concept ;
+    skos:definition "A composite image comprised of multiple wavelength bands across the electromagnetic spectrum."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:prefLabel "Hyperspectral Scan"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:macrofossil a skos:Concept ;
+    skos:definition "Macrofossils collected for identification"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "MACFOS" ;
+    skos:prefLabel "Macrofossil"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:microfossil a skos:Concept ;
+    skos:definition "Sample collected to be processed for microfossil extraction"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "MICFOS" ;
+    skos:prefLabel "Microfossil"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:ore-sample a skos:Concept ;
+    skos:definition "Representative sample of ore sampled as a specimen or for analysis"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "ORE" ;
+    skos:prefLabel "Ore Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:oriented-or-orientation-sample a skos:Concept ;
+    skos:definition "A sample collected as a known reference for the orientation of other samples."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "ORIENT" ;
+    skos:prefLabel "Oriented Or Orientation Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:oriented-sample a skos:Concept ;
+    skos:definition "Sample collected with orientation recorded for detailed structural geology analysis"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "OSAMP" ;
+    skos:prefLabel "Oriented Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:palaeomagnetic-sample a skos:Concept ;
+    skos:definition "Orientated hand-drill sample for paleomagnitc analysis"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "PMAG" ;
+    skos:prefLabel "Palaeomagnetic Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:pan-concentrate a skos:Concept ;
+    skos:definition "Stream sediment that has been panned to concentrate heavy minerals"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "PCON" ;
+    skos:prefLabel "Pan Concentrate"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:photograph a skos:Concept ;
+    skos:definition "An image created by light falling on a photosensitive surface, usually photographic film or an electronic image sensor, such as a CCD or a CMOS chip."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:prefLabel "Photograph"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:powdered-chip a skos:Concept ;
+    skos:definition "A rock chip sample that has subsequently been powdered"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "PCHIP" ;
+    skos:prefLabel "Powdered Chip"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:random-dump-sample a skos:Concept ;
+    skos:definition "Sample collected from mine dump at random"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "RDSAMP" ;
+    skos:prefLabel "Random Dump Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:random-sample a skos:Concept ;
+    skos:definition "A randomly collected sample"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "RSAMP" ;
+    skos:prefLabel "Random Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:rock-chips a skos:Concept ;
+    skos:definition "Sample gathered as rock chips for geochemistry"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "CHIP" ;
+    skos:prefLabel "Rock Chips"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:scree a skos:Concept ;
+    skos:definition "Loose rock collected downslope from a ridge"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "SCREE" ;
+    skos:prefLabel "Scree"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:selected-dump-sample a skos:Concept ;
+    skos:definition "Sample collected from mine dump with suspected mineralisation"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "SDSAMP" ;
+    skos:prefLabel "Selected Dump Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:selected-sample a skos:Concept ;
+    skos:definition "A sample that was specifically selected for analysis"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "SEL" ;
+    skos:prefLabel "Selected Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:side-wall-core a skos:Concept ;
+    skos:definition "A core taken from the side of the borehole, usually by a wireline tool."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "SWC" ;
+    skos:prefLabel "Side Wall Core"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:sieved-stream-sediment-sample a skos:Concept ;
+    skos:definition "Stream sediment that has been sieved to break it up into different grainsize fractions"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "SSS" ;
+    skos:prefLabel "Sieved Stream Sediment Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:sledge-hammer-sample a skos:Concept ;
+    skos:definition "Representative sample collected from outcrop by sledgehammer"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "SHSAMP" ;
+    skos:prefLabel "Sledge Hammer Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:soil-sample a skos:Concept ;
+    skos:definition "Sample of soil taken from an exposure or auger sample"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "SOIL" ;
+    skos:prefLabel "Soil Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:stream-sediment-sample a skos:Concept ;
+    skos:definition "Sample of sediment from active streams"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "STRSED" ;
+    skos:prefLabel "Stream Sediment Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:suspended-silt-sample a skos:Concept ;
+    skos:definition "A water sample containing suspended sediment"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "SUSP" ;
+    skos:prefLabel "Suspended Silt Sample"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:termite-mound a skos:Concept ;
+    skos:definition "Sample collected from termite mounds"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "TMOUND" ;
+    skos:prefLabel "Termite Mound"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:trench-spoil a skos:Concept ;
+    skos:definition "Undifferentiated material generated from sampling within a trench or pit."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "TSPOIL" ;
+    skos:prefLabel "Trench Spoil"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:unspecified a skos:Concept ;
+    skos:definition "An unknown or unspecified sample"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "UNSP" ;
+    skos:prefLabel "Unspecified"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:video a skos:Concept ;
+    skos:definition "An moving image created by light falling on a series of photosensitive surfaces, usually videographic film or an electronic image sensor, such as a CCD or a CMOS chip."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:prefLabel "video"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:water-specimen a skos:Concept ;
+    skos:definition "A generic specimen of water of any type. Includes water specimen types collected by any method."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:prefLabel "Water specimen"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:wellhead a skos:Concept ;
+    skos:definition "Component at surface that provides structural and pressue interface"@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:notation "WHEAD" ;
+    skos:prefLabel "Wellhead"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
+sampty:petrophysical-log a skos:Concept ;
+    skos:definition "A digital file or image containing physical and chemical measurements from the logging of a borehole."@en ;
+    skos:inScheme sampty:conceptScheme ;
+    skos:prefLabel "Petrophysical Log"@en ;
+    skos:topConceptOf sampty:conceptScheme .
+
