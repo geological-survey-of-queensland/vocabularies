@@ -1,4 +1,4 @@
-﻿@prefix : <http://linked.data.gov.au/def/earth-science-data-category/> .
+@prefix : <http://linked.data.gov.au/def/earth-science-data-category/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix es: <http://purl.org/au-research/vocabulary/anzsrc-for/2008/> .
@@ -63,13 +63,7 @@
     skos:definition "Remotely sensed spectral imaging obtained from an airborne platform."@en ;
     skos:inScheme :conceptScheme ;
     skos:prefLabel "Airborne Spectral"@en .
-
-:conventional-logs a skos:Concept ;
-    skos:broader :petrophysics ;
-    skos:definition "To continuously measure formation properties with electrically powered instruments to infer properties and make decisions about drilling and production operations. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Conventional Logs"@en .
-
+	
 :core-spectral a skos:Concept ;
     skos:broader :spectral-imaging ;
     skos:definition "Spectral imaging (typically hyperspectral) of rock samples such as core."@en ;
@@ -82,23 +76,11 @@
     skos:inScheme :conceptScheme ;
     skos:prefLabel "Electrical Geophysics"@en .
 
-:gas-analysis a skos:Concept ;
-    skos:broader :fluid-analysis ;
-    skos:definition "Analysis of the chemical and physical properties of natural gas."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Gas Analysis"@en .
-
 :geomechanics a skos:Concept ;
     skos:broader :geology ;
     skos:definition "The geologic specialty that deals with understanding how rocks, stresses, pressures, and temperatures interact. Source: Schlumberger Oilfield Glossary"@en ;
     skos:inScheme :conceptScheme ;
     skos:prefLabel "Geomechanics"@en .
-
-:ground-water-chemistry a skos:Concept ;
-    skos:broader :fluid-analysis ;
-    skos:definition "Analysis of the chemical and physical properties of groundwater."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Ground Water Chemistry"@en .
 
 :hydrocarbon-occurrences a skos:Concept ;
     skos:broader :resource-geology ;
@@ -111,14 +93,7 @@
     skos:definition "The branch of paleontology concerned with the study of fossilized tracks, trails, burrows, borings, or other trace fossils as evidence of the occurrence or behavior of the organisms that produced them. Source: dictionary.com"@en ;
     skos:inScheme :conceptScheme ;
     skos:prefLabel "Ichnology"@en .
-
-:image-logs a skos:Concept ;
-    skos:altLabel "borehole imaging"@en ;
-    skos:broader :petrophysics ;
-    skos:definition "Logging and data-processing methods that are used to produce images of the borehole wall and the rocks that make it up.  The subject area can be classified into four parts: Optical imaging, Acoustic imaging, Electrical imaging, Methods that draw on both acoustic and electrical imaging techniques using the same logging tool."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Image Logs"@en .
-
+	
 :invertebrate-palaeontology a skos:Concept ;
     skos:broader :palaeontology ;
     skos:definition "Invertebrate paleontology deals with invertebrate fossils such as molluscs, arthropods, annelid worms and echinoderms. Source: Wikipedia"@en ;
@@ -130,12 +105,6 @@
     skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (e.g. ore body charictarization), and limitations to development of mineral occurences."@en ;
     skos:inScheme :conceptScheme ;
     skos:prefLabel "Mineral Occurrences"@en .
-
-:oil-analysis a skos:Concept ;
-    skos:broader :fluid-analysis ;
-    skos:definition "Analysis of the chemical and physical properties of liquid hydrocarbon i.e. oil."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Oil Analysis"@en .
 
 :palaeobotany a skos:Concept ;
     skos:broader :palaeontology ;
@@ -154,19 +123,6 @@
     skos:definition "The detection of natural low frequency earth movements, commonly with the purpose of discerning geological structures and locating underground oil, gas, or other resources. Source: Wikipedia"@en ;
     skos:inScheme :conceptScheme ;
     skos:prefLabel "Passive Seismic"@en .
-
-:proximate-analysis a skos:Concept ;
-    skos:broader :organic-geochemistry ;
-    skos:definition "The determination, by prescribed methods, of moisture, volatile matter, fixed carbon (by difference), and ash. The term proximate analysis does not include determinations of chemical elements or determinations other than those named. Source: mindat.org"@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Proximate Analysis"@en .
-
-:pyrolysis a skos:Concept ;
-    skos:altLabel "Pyrolysis gas chromatography mass spectrometry"@en ;
-    skos:broader :organic-geochemistry ;
-    skos:definition "A type of geochemical analysis in which a rock sample is subject to controlled heating in an inert gas to or past the point of generating hydrocarbons in order to assess its quality as a source rock, the abundance of organic material in it, its thermal maturity, and the quality of hydrocarbons it might generate or have generated. Pyrolysis breaks large hydrocarbon molecules into smaller molecules. This process is used to determine the quality of shale as a source rock and is instrumental in evaluating shale gas plays. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Pyrolysis"@en .
 
 :quarry-resources a skos:Concept ;
     skos:altLabel "Quarries, Sand, and Gravel Resources"@en ;
@@ -192,36 +148,12 @@
     skos:definition "The study of the composition, characteristics, and origin of sediments and sedimentary rocks. Source: AGI"@en ;
     skos:inScheme :conceptScheme ;
     skos:prefLabel "Sedimentary Petrology"@en .
-
-:synthetic-logs a skos:Concept ;
-    skos:broader :petrophysics ;
-    skos:definition "The technique of producing a synthetic petrophysical log based on pre-defined log responses to known rock types. Commonly applied to synthetic seismograms generated to calibrate seismic survey data against tie points in reference wells."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Synthetic Logs"@en .
-
-:temperature-logs a skos:Concept ;
-    skos:broader :petrophysics ;
-    skos:definition "A record of the temperature gradient in a well. The temperature log is interpreted by looking for anomalies, or departures, from the reference gradient such as the geothermal gradient. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Temperature Logs"@en .
-
-:ultimate-analysis a skos:Concept ;
-    skos:broader :organic-geochemistry ;
-    skos:definition "The determination of the elements contained in a compound, as distinguished from proximate analysis, which is the determination of the compounds contained in a mixture. Source: mindat.org"@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Ultimate Analysis"@en .
-
+	
 :vertebrate-palaeontology a skos:Concept ;
     skos:broader :palaeontology ;
     skos:definition "Vertebrate paleontology concentrates on fossils from the earliest fish to the immediate ancestors of modern mammals. Source: Wikipedia"@en ;
     skos:inScheme :conceptScheme ;
     skos:prefLabel "Vertebrate Palaeontology"@en .
-
-:vitrinite-reflectance a skos:Concept ;
-    skos:broader :organic-petrology ;
-    skos:definition "A measurement of the thermal maturity of organic matter with respect to whether it has generated hydrocarbons or could be an effective source rock. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Vitrinite Reflectance"@en .
 
 :basin-analysis a skos:Concept ;
     skos:altLabel "sedimentary basin analysis"@en ;
@@ -329,6 +261,12 @@
     skos:notation "040405" ;
     skos:prefLabel "Gravity"@en .
 
+:hydrogeochemistry a skos:Concept ;
+    skos:broader :Geochemistry ;
+    skos:definition "The science that uses the tools and principles of chemistry to explain the mechanisms behind major geological systems such as the Earth's crust and its oceans."@en ;
+    skos:inScheme :conceptScheme ;
+    skos:prefLabel "Hydrogeochemistry"@en .	
+	
 :hydrogeology a skos:Concept ;
     skos:broader :physical-geography ;
     skos:definition "The area of geology that deals with the distribution and movement of groundwater in the soil and rocks of the Earth's crust (commonly in aquifers). Source: SEG wiki"@en ;
@@ -360,12 +298,6 @@
     skos:inScheme :conceptScheme ;
     skos:notation "040203" ;
     skos:prefLabel "Isotope Geochemistry"@en .
-
-:maceral-analysis a skos:Concept ;
-    skos:broader :organic-petrology ;
-    skos:definition "Maceral analysis categorizes the microscopic constituents of coal according to morphology and reflectance. It is then used to determine the proportion of reactive to inert macerals for prediction of various coal quality parameters. Source: www.coalpetrography.com "@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Maceral Analysis"@en .
 
 :magnetics a skos:Concept ;
     skos:broader :geophysics ;
@@ -523,12 +455,6 @@
     skos:inScheme :conceptScheme ;
     skos:notation "040407" ;
     skos:prefLabel "Seismology and Seismic Exploration"@en .
-
-:fluid-analysis a skos:Concept ;
-    skos:broader :extract-geochemistry ;
-    skos:definition "Analysis of the chemical and physical properties of standard products extracted from rocks in the subsurface during petroleum exploration i.e. oil, gas, and water."@en ;
-    skos:inScheme :conceptScheme ;
-    skos:prefLabel "Fluid Analysis"@en .
 
 :petrology a skos:Concept ;
     skos:broader :geology ;
