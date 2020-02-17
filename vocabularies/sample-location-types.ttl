@@ -1,6 +1,6 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix locdt: <http://linked.data.gov.au/def/sample-location-details/> .
+@prefix locdt: <http://linked.data.gov.au/def/sample-location-types/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,7 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/sample-location-details> a owl:Ontology .
+<http://linked.data.gov.au/def/sample-location-types> a owl:Ontology .
 
 locdt:bag a skos:Concept ;
     skos:altLabel "Pack"@en,
@@ -39,7 +39,7 @@ locdt:conceptScheme a skos:ConceptScheme ;
         locdt:room,
         locdt:table,
         locdt:tray ;
-    skos:prefLabel "Sample Location Details"@en .
+    skos:prefLabel "Sample Location Types"@en .
 
 locdt:bin a skos:Concept ;
     skos:definition "A capacious receptacle for storing a substances and/or artifacts."@en ;
@@ -119,4 +119,3 @@ locdt:tray a skos:Concept ;
     skos:inScheme locdt:conceptScheme ;
     skos:prefLabel "Tray"@en ;
     skos:topConceptOf locdt:conceptScheme .
-
