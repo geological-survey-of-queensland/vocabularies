@@ -4,11 +4,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix smprep: <http://linked.data.gov.au/def/sample-preparation/> .
+@prefix smprep: <http://linked.data.gov.au/def/sample-preparation-methods/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/sample-preparation> a owl:Ontology .
+<http://linked.data.gov.au/def/sample-preparation-methods> a owl:Ontology .
 
 smprep:conceptScheme a skos:ConceptScheme ;
     dct:created "2020-02-07T13:19:42+10:00"^^xsd:dateTime ;
@@ -50,7 +50,7 @@ smprep:conceptScheme a skos:ConceptScheme ;
         smprep:sublimate,
         smprep:thermal-treatment,
         smprep:vaporise ;
-    skos:prefLabel "Sample Preparation"@en .
+    skos:prefLabel "Sample Preparation Methods"@en .
 
 smprep:acidify a skos:Concept ;
     skos:altLabel "Sour"@en ;
@@ -259,7 +259,7 @@ smprep:sublimate a skos:Concept ;
 
 smprep:thermal-treatment a skos:Concept ;
     skos:altLabel "Bake"@en,
-        "Baking"@en,
+        "Baking"@en ;
     skos:definition "The process of applying thermal radiation to a material in order to chemically alter or oxidise it."@en ;
     skos:inScheme smprep:conceptScheme ;
     skos:prefLabel "Thermal treatment"@en ;
@@ -272,4 +272,3 @@ smprep:vaporise a skos:Concept ;
     skos:inScheme smprep:conceptScheme ;
     skos:prefLabel "Vaporise"@en ;
     skos:topConceptOf smprep:conceptScheme .
-
