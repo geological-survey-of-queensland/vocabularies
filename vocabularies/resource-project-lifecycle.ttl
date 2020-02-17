@@ -1,14 +1,14 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prcls: <http://linked.data.gov.au/def/project-class/> .
+@prefix prcls: <http://linked.data.gov.au/def/resource-project-lifecycle/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/project-class> a owl:Ontology .
+<http://linked.data.gov.au/def/resource-project-lifecycle> a owl:Ontology .
 
 prcls:conceptScheme a skos:ConceptScheme ;
     dct:creator "Geological Survey of Queensland" ;
@@ -19,7 +19,7 @@ prcls:conceptScheme a skos:ConceptScheme ;
     skos:hasTopConcept prcls:appraisal,
         prcls:development,
         prcls:exploration ;
-    skos:prefLabel "Project Class"@en .
+    skos:prefLabel "Resource Project Lifecycle"@en .
 
 prcls:appraisal a skos:Concept ;
     skos:definition "The stage in the life-cycle of a resource where the quantification of resources and reserves is performed and the potential for commericality is assessed. Definition of the size, quality, and physical properties of the resource."@en ;
@@ -42,4 +42,3 @@ prcls:exploration a skos:Concept ;
     skos:notation "EXP" ;
     skos:prefLabel "Exploration"@en ;
     skos:topConceptOf prcls:conceptScheme .
-
