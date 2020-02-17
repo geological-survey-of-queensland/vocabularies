@@ -1,6 +1,6 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix gsqst: <http://linked.data.gov.au/def/gsq-sites/> .
+@prefix gsqst: <http://linked.data.gov.au/def/geological-sites/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,7 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/gsq-sites> a owl:Ontology .
+<http://linked.data.gov.au/def/geological-sites> a owl:Ontology .
 
 gsqst:conceptScheme a skos:ConceptScheme ;
     dct:created "2020-02-07T14:06:56+10:00"^^xsd:dateTime ;
@@ -25,23 +25,23 @@ gsqst:conceptScheme a skos:ConceptScheme ;
         gsqst:project-site,
         gsqst:wellbore,
         gsqst:wellbore-interval ;
-    skos:prefLabel "GSQ Sites"@en .
+    skos:prefLabel "Geological Sites"@en .
 
-gsqst:alluvium a skos:Concept ;
+gsqst:alluviual a skos:Concept ;
     skos:broader gsqst:field-site ;
     skos:definition "A field site from which a sediment sample transported by transport in a medium (air, water, ice) is taken or observation is made."@en ;
     skos:inScheme gsqst:conceptScheme ;
-    skos:prefLabel "Alluvium"@en .
+    skos:prefLabel "Alluvial Site"@en .
 
-gsqst:colluvium a skos:Concept ;
+gsqst:colluvial a skos:Concept ;
     skos:altLabel "Float"@en,
         "Scree"@en,
         "Scree Slope"@en,
         "Talus"@en ;
     skos:broader gsqst:field-site ;
-    skos:definition "A field site from which a sediment sample is transported by gravity taken or observation is made."@en ;
+    skos:definition "A field site from which a sediment sample transported by gravity is taken or observation is made."@en ;
     skos:inScheme gsqst:conceptScheme ;
-    skos:prefLabel "Colluvium"@en .
+    skos:prefLabel "Colluvial Site"@en .
 
 gsqst:geophysical-survey-area a skos:Concept ;
     skos:broader gsqst:project-site ;
@@ -51,7 +51,8 @@ gsqst:geophysical-survey-area a skos:Concept ;
 
 gsqst:outcrop a skos:Concept ;
     skos:broader gsqst:field-site ;
-    skos:definition "The part of a rock formation that appears at the surface of the ground. Source: Merriam-Webster Dictionary"@en ;
+    dct:source "Merriam-Webster Dictionary" ;
+    skos:definition "The part of a rock formation that appears at the surface of the ground. "@en ;
     skos:inScheme gsqst:conceptScheme ;
     skos:prefLabel "Outcrop"@en .
 
@@ -83,7 +84,8 @@ gsqst:tailings a skos:Concept ;
 
 gsqst:waterbody a skos:Concept ;
     skos:broader gsqst:field-site ;
-    skos:definition "A pit or excavation in the earth from which mineral substances are taken. Source: Merriam-Webster Dictionary"@en ;
+    dct:source "Source: Merriam-Webster Dictionary" ;
+    skos:definition "Any significant accumulation of typically non-flowing water, generally on a planet's surface. The term most often refers to oceans, seas, and lakes, but it includes smaller pools of water such as ponds, wetlands, or more rarely, puddles."@en ;
     skos:inScheme gsqst:conceptScheme ;
     skos:prefLabel "Waterbody"@en .
 
@@ -127,7 +129,8 @@ gsqst:cutting a skos:Concept ;
 
 gsqst:mine a skos:Concept ;
     skos:altLabel "Quarry"@en ;
-    skos:definition "Any significant accumulation of typically non-flowing water, generally on a planet's surface. The term most often refers to oceans, seas, and lakes, but it includes smaller pools of water such as ponds, wetlands, or more rarely, puddles."@en ;
+    dct:source "Source: Merriam-Webster Dictionary" ;
+    skos:definition "A pit or excavation in the earth from which mineral substances are taken. Source: Merriam-Webster Dictionary"@en ;
     skos:inScheme gsqst:conceptScheme ;
     skos:prefLabel "Mine"@en ;
     skos:topConceptOf gsqst:conceptScheme .
@@ -171,4 +174,3 @@ gsqst:field-site a skos:Concept ;
     skos:inScheme gsqst:conceptScheme ;
     skos:prefLabel "Field Site"@en ;
     skos:topConceptOf gsqst:conceptScheme .
-
