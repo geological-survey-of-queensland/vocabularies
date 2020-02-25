@@ -1,0 +1,52 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.eg.org/vocab/example/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ssst: <http://linked.data.gov.au/def/site-substatus/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/site-substatus> a owl:Ontology .
+
+ssst:exploration-status a skos:Collection ;
+    skos:definition "Collection describes the status of exploration at a Mineral Occurrence Site or Mine Site"@en ;
+    skos:member ssst:abandoned-prospect,
+        ssst:active-prospect,
+        ssst:inactive-prospect ;
+    skos:prefLabel "Exploration Status"@en .
+
+ssst:abandoned-prospect a skos:Concept ;
+    skos:altLabel "ABP"@en ;
+    skos:definition "A prospect where all exploration activities have ceased and are unlikely to recommence."@en ;
+    skos:inScheme ssst:conceptScheme ;
+    skos:prefLabel "Abandoned Prospect"@en ;
+    skos:topConceptOf ssst:conceptScheme .
+
+ssst:active-prospect a skos:Concept ;
+    skos:altLabel "ACP"@en ;
+    skos:definition "A prospect that has an active exploration program."@en ;
+    skos:inScheme ssst:conceptScheme ;
+    skos:prefLabel "Active Prospect"@en ;
+    skos:topConceptOf ssst:conceptScheme .
+
+ssst:inactive-prospect a skos:Concept ;
+    skos:altLabel "INP"@en ;
+    skos:definition "A prospect that does not have an active exploration program, but is likely to become active again at some point."@en ;
+    skos:inScheme ssst:conceptScheme ;
+    skos:prefLabel "Inactive Prospect"@en ;
+    skos:topConceptOf ssst:conceptScheme .
+
+ssst:conceptScheme a skos:ConceptScheme ;
+    dct:created "2020-02-25T14:35:55+10:00"^^xsd:dateTime ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2020-02-25T14:47:52+10:00"^^xsd:dateTime ;
+    dct:source "Developed by the Geological Survey of Queensland." ;
+    skos:definition "Controlled list of the current status of exploration activities for a site."@en ;
+    skos:hasTopConcept ssst:abandoned-prospect,
+        ssst:active-prospect,
+        ssst:inactive-prospect ;
+    skos:prefLabel "Site Substatus"@en .
+
