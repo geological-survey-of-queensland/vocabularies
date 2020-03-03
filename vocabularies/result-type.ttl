@@ -17,6 +17,8 @@ rslt:conceptScheme a skos:ConceptScheme ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The description and definition of the qualitative and quantitative results obtained through geoscience observations."@en ;
     skos:hasTopConcept rslt:angle,
+        rslt:age,
+        rslt:angle,
         rslt:api-gravity,
         rslt:area,
         rslt:capacitance,
@@ -86,6 +88,12 @@ rslt:conceptScheme a skos:ConceptScheme ;
         rslt:work,
         rslt:yield-point ;
     skos:prefLabel "Result Type"@en .
+
+rslt:age a skos:Concept ;
+    skos:definition "The time before a reference time. Commonly referenced to time before present (BP), before current era (BCE), or represented as Millions of Years Ago (Ma) in geological disciplines"@en ;
+    skos:inScheme rslt:conceptScheme ;
+    skos:prefLabel "Age"@en ;
+    skos:topConceptOf rslt:conceptScheme .
 
 rslt:angle a skos:Concept ;
     skos:definition "In plane geometry, an angle is the figure formed by two rays, called the sides of the angle, sharing a common endpoint, called the vertex of the angle."@en ;
