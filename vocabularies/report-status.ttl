@@ -25,6 +25,12 @@ rptst:conceptScheme a skos:ConceptScheme ;
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
 .
+rptst:abandoned a skos:Concept ;
+    skos:altLabel "Cancelled"@en;
+    skos:definition "The report was saved in the lodgement portal but not submitted within 90 days. Any S3 resources have been subsequently deleted."@en ;
+    skos:inScheme rptst:conceptScheme ;
+    skos:prefLabel "Abandoned"@en ;
+    skos:topConceptOf rptst:conceptScheme .
 
 rptst:in-progress a skos:Concept ;
     skos:altLabel "Pending"@en,
