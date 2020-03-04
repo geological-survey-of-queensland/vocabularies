@@ -17,7 +17,7 @@ rptst:conceptScheme a skos:ConceptScheme ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The status of a report during the submission process in the GSQ Open Data Portal Lodegement System"@en ;
     skos:hasTopConcept rptst:in-progress,
-        rptst:quarantined,
+        rptst:screening,
         rptst:submitted ;
     skos:prefLabel "Report Status"@en .
 
@@ -35,10 +35,10 @@ rptst:in-progress a skos:Concept ;
     skos:prefLabel "In-Progress"@en ;
     skos:topConceptOf rptst:conceptScheme .
 
-rptst:quarantined a skos:Concept ;
+rptst:screening a skos:Concept ;
     skos:definition "The report is held by the department for examination prior to submission being allowed"@en ;
     skos:inScheme rptst:conceptScheme ;
-    skos:prefLabel "Quarantined"@en ;
+    skos:prefLabel "Screening"@en ;
     skos:topConceptOf rptst:conceptScheme .
 
 rptst:submitted a skos:Concept ;
