@@ -9,9 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix gafeat: <http://linked.data.gov.au/def/gsq-features/> .
 
-<http://linked.data.gov.au/def/gsq-features> a owl:Ontology .
-
-gafeat:conceptScheme a skos:ConceptScheme ;
+<http://linked.data.gov.au/def/gsq-features> a owl:Ontology , skos:ConceptScheme ;
     dct:created "2019-10-09"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:modified "2020-01-10"^^xsd:date ;
@@ -34,52 +32,52 @@ gafeat:conceptScheme a skos:ConceptScheme ;
 
 gafeat:block a skos:Concept ;
     skos:definition "A Block is an administrative division of the State of Queensland that is used for tenure management. A Block is defined as five minutes of latitude by five minutes of longitude. Blocks are grouped by 1:1,000,000 map sheet areas, the names of which provide the containing Blocks with a four letter prefix (e.g. Clermont 1:1,000,000 provides CLER). Each sheet area contains 3456 Blocks, with the Blocks numbered between 1 and 3456 inclusive. A Block is divided into 25 Sub-Blocks."@en ;
-    skos:inScheme gafeat:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-features> ;
     skos:prefLabel "Block"@en ;
-    skos:topConceptOf gafeat:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-features> .
 
 gafeat:lithodemicFeature a skos:Concept ;
     skos:definition "A lithodemic feature is a three-dimensional, non-stratified body of rock, comprising one or more intrusive, highly-deformed and/or metamorphosed rock types, to which the Law of Superposition is not applicable, although age is an important criterion; contacts with other units may be intrusive, extrusive, tectonic, metamorphic and/or sedimentary."@en ;
     dct:source "NACSN, 1983, 2005; Kumpulainen, R.A., 2017." ;
-    skos:inScheme gafeat:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-features> ;
     skos:prefLabel "Lithodemic feature"@en ;
-    skos:topConceptOf gafeat:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-features> .
 
 gafeat:permit a skos:Concept ;
     skos:definition "Permits are a license granted over a spatial region within the State of Queensland. Permits govern the activities which can be conducted upon them. Activities include exploration, development, and extraction of a specific commodity or commodities."@en ;
     skos:example "ATP1234, ML5678, EPM9876"@en ;
-    skos:inScheme gafeat:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-features> ;
     skos:prefLabel "Permit"@en ;
-    skos:topConceptOf gafeat:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-features> .
 
 gafeat:placeName a skos:Concept ;
     skos:definition "Place Names are names given to natural and artificial geospatial features, such as administrative areas, political regions, mountain ranges, rivers, bays etc."@en ;
-    skos:inScheme gafeat:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-features> ;
     skos:prefLabel "Place name"@en ;
-    skos:topConceptOf gafeat:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-features> .
 
 gafeat:resourceAccumulation a skos:Concept ;
     skos:definition "Georesource accumulations are naturally occurring masses, volumes or concentrations of geological materials that have existing or potential economic value. These resources may include, but are not limited to, minerals (including coal), hydrocarbons, quarry resources and groundwater."@en ;
-    skos:inScheme gafeat:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-features> ;
     skos:prefLabel "Resource accumulation"@en ;
-    skos:topConceptOf gafeat:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-features> .
 
 gafeat:stratigraphicFeature a skos:Concept ;
     skos:definition "Stratigraphic Features encompass Stratigraphic Units, which are units of rock and/or sediment that conform to the Law of Superposition (e.g. lithostratigraphic units, biostratigraphic units, chronostratigraphic units), and Stratigraphic Events which reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (ICS; Kumpulainen, R.A., 2016)."@en ;
     dct:source "NACSN, 1983, 2005; Kumpulainen, R.A., 2017; ICS." ;
-    skos:inScheme gafeat:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-features> ;
     skos:prefLabel "Stratigraphic feature"@en ;
-    skos:topConceptOf gafeat:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-features> .
 
 gafeat:tectonicStructuralFrameworkFeature a skos:Concept ;
     skos:definition "A Tectonic and Structural Framework Feature is a Tectonic, Tectonostratigraphic or Structural element. Tectonic Elements include cratons, orogens, provinces and sedimentary basins; Tectonostratigraphic Elements include nappes and klippen; and Structural Elements include synclines, anticlines, faults and half-grabens."@en ;
     dct:source "Classification after Kumpulainen, R.A., 2017." ;
-    skos:inScheme gafeat:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-features> ;
     skos:prefLabel "Tectonic and structural framework feature"@en ;
-    skos:topConceptOf gafeat:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-features> .
 
 gafeat:subBlock a skos:Concept ;
     skos:definition "A Sub-Block is an administrative sub-division of a Block. Each Block is divided into 25 Sub-Blocks. A Sub-Block is defined as one minute of latitude by one minute of longitude. The Sub-Blocks are prefixed with their corresponding Block name and are labelled from A to Z, excluding I. Labels are allocated from left to right, top to bottom, starting from the northwest corner."@en ;
-    skos:inScheme gafeat:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-features> ;
     skos:prefLabel "Sub-block"@en ;
-    skos:topConceptOf gafeat:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-features> .
