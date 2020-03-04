@@ -13,7 +13,7 @@
 cdt:conceptScheme a skos:ConceptScheme ;
     dct:created "2020-02-17T16:06:02+10:00"^^xsd:dateTime ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-02-18T10:39:00+10:00"^^xsd:dateTime ;
+    dct:modified "2020-03-05T8:44:25+10:00"^^xsd:dateTime ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The types of commodities in geoscience."@en ;
     skos:hasTopConcept cdt:direct-use-commodity,
@@ -45,22 +45,23 @@ cdt:coking-coal a skos:Concept ;
     skos:notation "CCOK" ;
     skos:prefLabel "coking coal"@en .
 
-cdt:agate a skos:Concept ;
-    skos:altLabel "sardonyx"@en ;
-    skos:broader cdt:chalcedony ;
-    skos:definition "A variety of chalcedony having variegated colors arranged in stripes, blended in clouds, or showing mosslike forms. Sardonyx is a red-white or rarely red-white-black variant."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/agate> ;
+cdt:pulverised-coal-injection a skos:Concept ;
+    skos:altLabel "PCI"@en ;
+    skos:broader cdt:metallurgical-coal ;
+    skos:definition "A coal used for its heat value and injected directly into blast furnaces (without an intermediate coking phase) as a supplementary fuel, which reduces the amount of coke required and therefore costs."@en ;
     skos:inScheme cdt:conceptScheme ;
-    skos:notation "AE" ;
-    skos:prefLabel "agate"@en .
+    skos:notation "CPCI" ;
+    skos:prefLabel "pulverised coal injection"@en .
 
-cdt:aggregate a skos:Concept ;
-    skos:broader cdt:industrial-material ;
-    skos:definition "Broad category for coarse particulate material used in construction, including sand, gravel, crushed stone, slag, recycled concrete and geosynthetic aggregates."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/aggregate> ;
+cdt:thermal-coal a skos:Concept ;
+    skos:altLabel "raising coal"@en,
+        "steam coal"@en,
+        "steam raising coal"@en ;
+    skos:broader cdt:black-coal ;
+    skos:definition "A coal which is used in the generation of thermal energy."@en ;
     skos:inScheme cdt:conceptScheme ;
-    skos:notation "AGGREG" ;
-    skos:prefLabel "aggregate"@en .
+    skos:notation "CNC" ;
+    skos:prefLabel "thermal coal"@en .
 
 cdt:alumina a skos:Concept ;
     skos:altLabel "aluminium oxide"@en ;
@@ -152,7 +153,7 @@ cdt:antimony a skos:Concept ;
 
 cdt:apatite a skos:Concept ;
     skos:broader cdt:industrial-mineral ;
-    skos:definition "Apatite is a group of calcium phosphate minerals, usually referring to hydroxylapatite, fluorapatite and chlorapatite, named for high concentrations of OH-, F- and Cl- ions, respectively, in the crystal. The formula of the admixture of the four most common endmembers is written as Ca10(PO4)6(OH,F,Cl)2, and the crystal unit cell formulae of the individual minerals are written as Ca10(PO4)6(OH)2, Ca10(PO4)6(F)2 and Ca10(PO4)6(Cl)2."@en ;
+    skos:definition "Apatite is a group of calcium phosphate minerals, usually referring to hydroxylapatite, fluorapatite and chlorapatite, named for high concentrations of OHâˆ’, Fâˆ’ and Clâˆ’ ions, respectively, in the crystal. The formula of the admixture of the four most common endmembers is written as Ca10(PO4)6(OH,F,Cl)2, and the crystal unit cell formulae of the individual minerals are written as Ca10(PO4)6(OH)2, Ca10(PO4)6(F)2 and Ca10(PO4)6(Cl)2."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/apatite> ;
     skos:inScheme cdt:conceptScheme ;
     skos:notation "AP" ;
@@ -160,7 +161,7 @@ cdt:apatite a skos:Concept ;
 
 cdt:apatite-gemstone a skos:Concept ;
     skos:broader cdt:gemstone ;
-    skos:definition "Apatite is a group of phosphate minerals, usually referring to hydroxylapatite, fluorapatite and chlorapatite, named for high concentrations of OH-, F- and Cl- ions, respectively, in the crystal. The formula of the admixture of the four most common endmembers is written as Ca10(PO4)6(OH,F,Cl)2, and the crystal unit cell formulae of the individual minerals are written as Ca10(PO4)6(OH)2, Ca10(PO4)6(F)2 and Ca10(PO4)6(Cl)2."@en ;
+    skos:definition "Apatite is a group of phosphate minerals, usually referring to hydroxylapatite, fluorapatite and chlorapatite, named for high concentrations of OHâˆ’, Fâˆ’ and Clâˆ’ ions, respectively, in the crystal. The formula of the admixture of the four most common endmembers is written as Ca10(PO4)6(OH,F,Cl)2, and the crystal unit cell formulae of the individual minerals are written as Ca10(PO4)6(OH)2, Ca10(PO4)6(F)2 and Ca10(PO4)6(Cl)2."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/apatite-gemstone> ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "apatite-gemstone"@en .
@@ -218,7 +219,7 @@ cdt:basalt a skos:Concept ;
 
 cdt:bauxite a skos:Concept ;
     skos:broader cdt:direct-shipping-ore ;
-    skos:definition "Predominantly hydrated aluminium oxides with iron oxides, kaolinite and other impurities; almost always a residual soil rather than a sediment. Note that iron-rich sediments are covered elsewhere. A mixture, and rock, comprised of iron and aluminium Hydroxides/Oxides. The primary ore of aluminium. Originally described from Mas Rouge, Les Baux-de-Provence, Bouches-du-Rhone, Provence-Alpes-Cote d'Azur, France."@en ;
+    skos:definition "Predominantly hydrated aluminium oxides with iron oxides, kaolinite and other impurities; almost always a residual soil rather than a sediment. Note that iron-rich sediments are covered elsewhere. A mixture, and rock, comprised of iron and aluminium Hydroxides/Oxides. The primary ore of aluminium. Originally described from Mas Rouge, Les Baux-de-Provence, Bouches-du-RhÃ´ne, Provence-Alpes-CÃ´te d'Azur, France."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/bauxite> ;
     skos:inScheme cdt:conceptScheme ;
     skos:notation "BX" ;
@@ -339,14 +340,14 @@ cdt:cerium a skos:Concept ;
 cdt:cesium a skos:Concept ;
     skos:altLabel "caesium"@en ;
     skos:broader cdt:metal ;
-    skos:definition "Caesium or cesium is a chemical element with symbol Cs and atomic number 55. It is a soft, silvery-gold alkali metal with a melting point of 28 ï¿½C (82 ï¿½F), which makes it one of only five elemental metals that are liquid at or near room temperature."@en ;
+    skos:definition "Caesium or cesium is a chemical element with symbol Cs and atomic number 55. It is a soft, silvery-gold alkali metal with a melting point of 28 Â°C (82 Â°F), which makes it one of only five elemental metals that are liquid at or near room temperature."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/cesium> ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "cesium"@en .
 
 cdt:chert a skos:Concept ;
     skos:broader cdt:silica ;
-    skos:definition "A dense, hard siliceous-rock with low porosity. Cherts are tough, compact rocks with low porosity that are composed mainly of microcrystalline quartz and varying amounts of impurities (Folk et al 1952; Smith 1960). The quartz occurs as randomly interlocked, microscopic quartz grains (microquartz) or fibrous chalcedony (Folk et al 1952; Smith 1960; Oldershaw 1968; Knauth 1994). Cherts occur in a variety of geological settings, for example: - Bedded cherts may form by compaction and recrystallization of silica-rich biogenic sediments made of opaline tests of single-cell organisms (diatoms, radiolaria) or remains of silicious sponges, both in marine and in lake environments. During diagenesis, the silica in the sediments undergoes a transformation from opal-A through opal-CT to microcrystalline quartz in the mature chert (Oldershaw 1968; Calvert 1971; Lancelot 1973; Hein et al 1981; Pisciotto 1981; Riech 1981; Levitan 1983; Jones et al 1986; Compton 1991). Accordingly, these cherts may contain some opal-CT. Silica mobilized from volcaniclastic sediments, hydrothermal solutions and clay minerals may contribute to the silicification (Calvert 1971; Thurston 1972; Pollock 1987; Hesse 1989). - Cherts in banded iron formations are thought to have formed from primarily chemically precipitated silica. Often they are colored brightly by co-precipitated iron minerals (Sugitani et al 1998; Rosiï¿½re et al 2000; Maliva et al 2005; Fisher et al 2008). - Many cherts appear to have been formed by silicification of volcaniclastic sediments and other rock types (Knauth 1994). - Nodules, irregular bodies and discontinuous layers of chert are found in marine calcareous sediments. They typically form during early diagenesis by precipitation of silica mobilized from biogenic sources like radiolarian tests or sponge spicules. (Buurman et al 1971; Meyers 1977; Bustillo et al 1987; Maliva et al 1989; Knauth 1994; Madsen et al 2010). - Magadi-type cherts, named after their occurrence at Lake Magadi, Kenya, form by leaching of alkali ions from silicates in silica-rich evaporites (Hay 1968; Eugster 1969). The term 'chert' is occasionally also used for massive rocks made primarily of microcrystalline quartz that deposits around submarine volcanic hydrothermal vents ('black smokers'; Hopkinson et al 1999; Gutzmer et al 2001), or that formed as siliceous sinter, like Rhynie chert (Hesse 1989). Siliceous precursor rocks of comparable texture that are primarily made of opal-A or opal-CT are sometimes also called chert, but usually with the addition of the dominant silica phase, for example, 'opaline chert' (e.g. Weaver et al 1972; Pisciotto 1981, Calvert 1983; Cady et al 1996)."@en ;
+    skos:definition "A dense, hard siliceous-rock with low porosity. Cherts are tough, compact rocks with low porosity that are composed mainly of microcrystalline quartz and varying amounts of impurities (Folk et al 1952; Smith 1960). The quartz occurs as randomly interlocked, microscopic quartz grains (microquartz) or fibrous chalcedony (Folk et al 1952; Smith 1960; Oldershaw 1968; Knauth 1994). Cherts occur in a variety of geological settings, for example: - Bedded cherts may form by compaction and recrystallization of silica-rich biogenic sediments made of opaline tests of single-cell organisms (diatoms, radiolaria) or remains of silicious sponges, both in marine and in lake environments. During diagenesis, the silica in the sediments undergoes a transformation from opal-A through opal-CT to microcrystalline quartz in the mature chert (Oldershaw 1968; Calvert 1971; Lancelot 1973; Hein et al 1981; Pisciotto 1981; Riech 1981; Levitan 1983; Jones et al 1986; Compton 1991). Accordingly, these cherts may contain some opal-CT. Silica mobilized from volcaniclastic sediments, hydrothermal solutions and clay minerals may contribute to the silicification (Calvert 1971; Thurston 1972; Pollock 1987; Hesse 1989). - Cherts in banded iron formations are thought to have formed from primarily chemically precipitated silica. Often they are colored brightly by co-precipitated iron minerals (Sugitani et al 1998; RosiÃ¨re et al 2000; Maliva et al 2005; Fisher et al 2008). - Many cherts appear to have been formed by silicification of volcaniclastic sediments and other rock types (Knauth 1994). - Nodules, irregular bodies and discontinuous layers of chert are found in marine calcareous sediments. They typically form during early diagenesis by precipitation of silica mobilized from biogenic sources like radiolarian tests or sponge spicules. (Buurman et al 1971; Meyers 1977; Bustillo et al 1987; Maliva et al 1989; Knauth 1994; Madsen et al 2010). - Magadi-type cherts, named after their occurrence at Lake Magadi, Kenya, form by leaching of alkali ions from silicates in silica-rich evaporites (Hay 1968; Eugster 1969). The term 'chert' is occasionally also used for massive rocks made primarily of microcrystalline quartz that deposits around submarine volcanic hydrothermal vents ('black smokers'; Hopkinson et al 1999; Gutzmer et al 2001), or that formed as siliceous sinter, like Rhynie chert (Hesse 1989). Siliceous precursor rocks of comparable texture that are primarily made of opal-A or opal-CT are sometimes also called chert, but usually with the addition of the dominant silica phase, for example, 'opaline chert' (e.g. Weaver et al 1972; Pisciotto 1981, Calvert 1983; Cady et al 1996)."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/chert> ;
     skos:inScheme cdt:conceptScheme ;
     skos:notation "CHRT" ;
@@ -461,13 +462,6 @@ cdt:corundum a skos:Concept ;
     skos:inScheme cdt:conceptScheme ;
     skos:notation "CN" ;
     skos:prefLabel "corundum"@en .
-
-cdt:corundum-gemstone a skos:Concept ;
-    skos:broader cdt:gemstone ;
-    skos:definition "Corundum is the third hardest natural mineral known to science. The hardest mineral, diamond is still four times harder than corundum. Corundum's most famous gemstone forms are sapphire and ruby."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/corundum-gemstone> ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "corundum-gemstone"@en .
 
 cdt:crocidolite a skos:Concept ;
     skos:altLabel "blue asbestos"@en,
@@ -589,7 +583,7 @@ cdt:europium a skos:Concept ;
 
 cdt:feldspar a skos:Concept ;
     skos:broader cdt:industrial-mineral ;
-    skos:definition "Feldspars (KAlSi3O8 ï¿½ NaAlSi3O8 ï¿½ CaAl2Si2O8) are a group of rock-forming tectosilicate minerals that make up as much as 60% of the Earth's crust."@en ;
+    skos:definition "Feldspars (KAlSi3O8 â€“ NaAlSi3O8 â€“ CaAl2Si2O8) are a group of rock-forming tectosilicate minerals that make up as much as 60% of the Earth's crust."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/feldspar> ;
     skos:inScheme cdt:conceptScheme ;
     skos:notation "FS" ;
@@ -651,13 +645,6 @@ cdt:garnet a skos:Concept ;
     skos:inScheme cdt:conceptScheme ;
     skos:notation "GN" ;
     skos:prefLabel "garnet"@en .
-
-cdt:garnet-gemstone a skos:Concept ;
-    skos:broader cdt:gemstone ;
-    skos:definition "Garnets are a group of silicate minerals that have been used since the Bronze Age as gemstones and abrasives."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/garnet-gemstone> ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "garnet-gemstone"@en .
 
 cdt:gas-hydrate a skos:Concept ;
     skos:altLabel "methane clathrate"@en ;
@@ -883,7 +870,7 @@ cdt:lanthanum a skos:Concept ;
 
 cdt:laterite a skos:Concept ;
     skos:broader cdt:industrial-rock ;
-    skos:definition "A highly weathered, generally indurated, red subsoil nearly devoid of primary silicates, rich in hydrous iron oxides, +/- kaolinite  +/- quartz +/- gibbsite. Red residual soil developed in humid, tropical, and subtropical regions of good drainage. It is leached of silica and contains concentrations particularly of iron oxides and hydroxides and aluminum hydroxides. It may be an ore of iron, aluminum, manganese, or nickel. Adj. lateritic. Synonym of: latosol"@en ;
+    skos:definition "A highly weathered, generally indurated, red subsoil nearly devoid of primary silicates, rich in hydrous iron oxides, +/- kaolinite +/- quartz +/- gibbsite. Red residual soil developed in humid, tropical, and subtropical regions of good drainage. It is leached of silica and contains concentrations particularly of iron oxides and hydroxides and aluminum hydroxides. It may be an ore of iron, aluminum, manganese, or nickel. Adj. lateritic. Synonym of: latosol"@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/laterite> ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "laterite"@en .
@@ -1039,13 +1026,6 @@ cdt:mercury a skos:Concept ;
     skos:notation "HG" ;
     skos:prefLabel "mercury"@en .
 
-cdt:metallurgical-coal a skos:Concept ;
-    skos:altLabel "met coal"@en ;
-    skos:broader cdt:black-coal ;
-    skos:definition "Coals which are used in refining or alloying processes."@en ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "metallurgical coal"@en .
-
 cdt:mica a skos:Concept ;
     skos:broader cdt:industrial-mineral ;
     skos:definition "The mica group of sheet silicate (phyllosilicate) minerals includes several closely related materials having close to perfect basal cleavage. All are monoclinic, with a tendency towards pseudohexagonal crystals, and are similar in chemical composition."@en ;
@@ -1068,12 +1048,968 @@ cdt:molybdenite a skos:Concept ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "molybdenite"@en .
 
+cdt:molybdenum a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Molybdenum is a Group 6 chemical element with the symbol Mo and atomic number 42. The name is from Neo-Latin Molybdaenum, from Ancient Greek ÎœÏŒÎ»Ï…Î²Î´Î¿Ï‚ molybdos, meaning lead, since its ores were confused with lead ores."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/molybdenum> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "MO" ;
+    skos:prefLabel "molybdenum"@en .
+
+cdt:monazite a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Monazite is a reddish-brown phosphate mineral containing rare earth metals. It occurs usually in small isolated crystals. There are at least four different kinds of monazite, depending on relative elemental composition of the mineral."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/monazite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "monazite"@en .
+
+cdt:moonstone a skos:Concept ;
+    skos:broader cdt:feldspar-gemstone ;
+    skos:definition "Moonstone is a sodium potassium aluminium silicate, with the chemical formula (Na,K)AlSi3O8."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/moonstone> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "moonstone"@en .
+
+cdt:morganite a skos:Concept ;
+    skos:broader cdt:beryl ;
+    skos:definition "Morganite is the pink variety of beryl, the 'mother of gemstones'. While there are other pink gemstones (rose quartz and tourmaline come to mind), morganite is the most durable and rarest."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/morganite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "morganite"@en .
+
+cdt:moss-agate a skos:Concept ;
+    skos:broader cdt:agate ;
+    skos:definition "Moss agate (also called mocha stone) is a semi-precious gemstone formed from silicon dioxide. It is a form of chalcedony which includes minerals of a green colour embedded in the stone, forming filaments and other patterns suggestive of moss. It also sometimes resembles blue-cheese. The field is a clear or milky-white quartz, and the included minerals are mainly oxides of manganese or iron. It is not a true form of agate, as it lacks agate's defining feature of concentric banding. Moss agate is of the white variety with green inclusions that resemble moss."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/moss-agate> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "moss agate"@en .
+
+cdt:natural-secondary-aggregate a skos:Concept ;
+    skos:broader cdt:aggregate ;
+    skos:definition "Aggregates produced as a by-product of other mining or quarrying activities such as china clay waste, slate waste and colliery spoil."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/natural-secondary-aggregate> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "natural secondary aggregate"@en .
+
+cdt:neodymium a skos:Concept ;
+    skos:broader cdt:light-rare-earth-elements ;
+    skos:definition "Neodymium is a chemical element with the symbol Nd and atomic number 60. It is a soft silvery metal that tarnishes in air."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/neodymium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "ND" ;
+    skos:prefLabel "neodymium"@en .
+
+cdt:nepheline-syenite a skos:Concept ;
+    skos:broader cdt:industrial-rock ;
+    skos:definition "The variety of foid syenite in the IUGS classification scheme in which nepheline is the most abundant feldspathoid."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/nepheline-syenite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "nepheline syenite"@en .
+
+cdt:nickel a skos:Concept ;
+    skos:broader cdt:base-metal ;
+    skos:definition "Nickel is a chemical element with the chemical symbol Ni and atomic number 28. It is a silvery-white lustrous metal with a slight golden tinge. Nickel belongs to the transition metals and is hard and ductile."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/nickel> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "NI" ;
+    skos:prefLabel "nickel"@en .
+
+cdt:niobium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Niobium, formerly columbium, is a chemical element with the symbol Nb (formerly Cb) and atomic number 41. It is a soft, grey, ductile transition metal, which is often found in the pyrochlore mineral, the main commercial source for niobium, and columbite."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/niobium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "NB" ;
+    skos:prefLabel "niobium"@en .
+
+cdt:niobium-pentoxide a skos:Concept ;
+    skos:broader cdt:chemical-oxide-product ;
+    skos:definition "Niobium pentoxide is the inorganic compound with the formula Nb2O5. It is a colourless insoluble solid that is fairly unreactive. It is the main precursor to all materials made of niobium, the dominant application being alloys, but other specialized applications include capacitors, lithium niobate, and optical glasses."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/niobium-pentoxide> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "niobium pentoxide"@en .
+
+cdt:nitrate a skos:Concept ;
+    skos:broader cdt:chemical-compound-product ;
+    skos:definition "Nitrates are mainly produced for use as fertilizers in agriculture because of their high solubility and biodegradability. The main nitrates are ammonium, sodium, potassium, and calcium salts. Several million kilograms are produced annually for this purpose."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/nitrate> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "nitrate"@en .
+
+cdt:obsidian a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Glassy, fresh igneous rocks with a high silica content and conchoidal fracture. The earliest manufactured mirrors were pieces of polished obsidian. Volcanic glass - a rock rather than a mineral, it is a mixture of cryptocrystalline grains of silica minerals in a glass-like suspension, a super-cooled liquid. Obsidian is formed in the latest stage of volcanic eruptions, the silica left over after most of the other elements and water have been used up are ejected or flow out and rapidly chilled at surface temperatures.NOTE on 'Transparent/Translucent Obsidian': A lot of gem-quality water-clear variously coloured 'obsidian' has been offered for sale on the internet (in particular on auction websites) with a variety of sources listed. The material offered for sale is, in fact, an artificial glass mass-produced in places such as Indonesia.Visit gemdat.org for gemological information about Obsidian."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/obsidian> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "obsidian"@en .
+
+cdt:ochre a skos:Concept ;
+    skos:broader cdt:iron-oxide ;
+    skos:definition "Ochre is a natural earth pigment containing hydrated iron oxide, which ranges in color from yellow to deep orange or brown. It is also the name of the colors produced by this pigment, especially a light brownish-yellow. A variant of ochre containing a large amount of hematite, or dehydrated iron oxide, has a reddish tint known as 'red ochre'."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/ochre> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "ochre"@en .
+
+cdt:oil a skos:Concept ;
+    skos:altLabel "crude oil"@en,
+        "petroleum"@en ;
+    skos:broader cdt:liquid-hydrocarbons ;
+    skos:definition "Oil or petroleum consists of hydrocarbons of various molecular weights such as alkanes (pentane, hexane, heptane, octane) and other liquid organic compounds, typically recovered from drilling of underground reservoirs."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/oil> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "OIL" ;
+    skos:prefLabel "oil"@en .
+
+cdt:oil-shale a skos:Concept ;
+    skos:broader cdt:liquid-hydrocarbons ;
+    skos:definition "Fine-grained sedimentary rock, yielding significant quantities of oil upon decomposition by heating to high temperatures."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/oil-shale> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "oil shale"@en .
+
+cdt:olivine a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "The mineral olivine is a magnesium iron silicate with the formula (Mg+2, Fe+2)2SiO4."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/olivine> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "OLN" ;
+    skos:prefLabel "olivine"@en .
+
+cdt:olivine-gemstone a skos:Concept ;
+    skos:altLabel "peridot"@en ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Peridot is gem-quality olivine. Olivine is a silicate mineral with formula of (Mg, Fe)2SiO4. As peridot is the magnesium-rich variety (forsterite) the formula approaches Mg2SiO4."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/olivine-gemstone> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "olivine-gemstone"@en .
+
+cdt:onyx a skos:Concept ;
+    skos:broader cdt:agate ;
+    skos:definition "Onyx is a black-and-white banded agate."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/onyx> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "onyx"@en .
+
+cdt:opal a skos:Concept ;
+    skos:broader cdt:silica-gemstone ;
+    skos:definition "Opal is a hydrated amorphous form of silica; its water content may range from 3 to 21% by weight, but is usually between 6 and 10%. Because of its amorphous character, it is classed as a mineraloid."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/opal> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "OP" ;
+    skos:prefLabel "opal"@en .
+
+cdt:osmium a skos:Concept ;
+    skos:broader cdt:platinum-group-metal ;
+    skos:definition "Osmium is a chemical element with the symbol Os and atomic number 76. It is a hard, brittle, bluish-white transition metal in the platinum group that is found as a trace element in alloys, mostly in platinum ores. It is a hard, brittle, bluish-white transition metal."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/osmium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "OS" ;
+    skos:prefLabel "osmium"@en .
+
+cdt:palladium a skos:Concept ;
+    skos:broader cdt:platinum-group-metal ;
+    skos:definition "Palladium is a chemical element with the chemical symbol Pd and an atomic number of 46. It is a rare and lustrous silvery-white metal."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/palladium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "PD" ;
+    skos:prefLabel "palladium"@en .
+
+cdt:palygorskite a skos:Concept ;
+    skos:altLabel "attapulgite"@en ;
+    skos:broader cdt:fullers-earth ;
+    skos:definition "Palygorskite or attapulgite is a magnesium aluminium phyllosilicate with formula (Mg,Al)2Si4O10(OH)Â·4(H2O) that occurs in a type of clay soil common to the Southeastern United States. It is one of the types of fuller's earth."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/palygorskite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "palygorskite"@en .
+
+cdt:peat a skos:Concept ;
+    skos:broader cdt:carbonaceous-material ;
+    skos:definition "An unlithified heterogeneous mixture of a wide range of plant debris. It has a carbon content of less than 60% dry ash free and a volatile content of greater than 63%. There are two types of peat, low moor (Flachmoor) and high moor (Hochmoor) peat. Low moor peat is the most common starting material in coal genesis. It therefore constitutes a caustobiolith of low diagenetic degree. Peat is formed in marshes and swamps from the dead, and partly decomposed remains of the marsh vegetation. Stagnant ground water is necessary for peat formation to protect the residual plant material from decay. Peat has a yellowish brown to brownish black color, is generally of the fibrous consistency, and can be either plastic or friable; in its natural state it can be cut; further, it has a very high moisture content (above 75%, generally above 90%). It can be distinguished from brown coal by the fact that the greater part of its moisture content can be squeezed out by pressure (e.g., in the hand). Peat also contains more plant material in a reasonably good state of preservation than brown coal. Individual plant elements, such as roots, stems, leaves, and seeds, can commonly be seen in it with the unaided eye. Failing that, treatment of peat with dilute alkali will make visible many of these plant tissues. Further, peat is richer in cellulose than brown coal (reaction with Fehling's solution). Unlike brown coal, peat still contains cellulose, protected by lignin or cutin, which gives a reaction with chlorzinc iodide. Correspondingly, peat shows under the microscope tissues that have not undergone either lignification, suberinization, or cutinization; this is not the case in brown coal. The reflectance of peat is low (about 0.3%). Microscopic examination is best undertaken with transmitted light. Ref: Hower, James. (2002). International Handbook of Coal Petrography: Second Edition, 1963, International Committee for Coal and Organic Petrology"@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/peat> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "PEAT" ;
+    skos:prefLabel "peat"@en .
+
+cdt:perlite a skos:Concept ;
+    skos:broader cdt:industrial-rock ;
+    skos:definition "An amorphous volcanic glass with a relatively high water content, frequently formed by the hydration of obsidian."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/perlite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "PERL" ;
+    skos:prefLabel "perlite"@en .
+
+cdt:phenakite a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "A fairly rare nesosilicate mineral consisting of beryllium orthosilicate, Be2SiO4."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/phenakite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "phenakite"@en .
+
+cdt:phosphate-rock a skos:Concept ;
+    skos:altLabel "phosphorite"@en ;
+    skos:broader cdt:industrial-rock ;
+    skos:definition "Any rock that contains one or more phosphatic minerals of sufficient purity and quantity to permit its commercial use as a source of phosphatic compounds or elemental phosphorus. About 90% of the world's production is sedimentary phosphate rock, or phosphorite; the remainder is igneous rock rich in apatite."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/phosphate-rock> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "phosphate rock"@en .
+
+cdt:phosphorous a skos:Concept ;
+    skos:broader cdt:non-metal ;
+    skos:definition "Phosphorus is a nonmetallic chemical element with symbol P and atomic number 15. A multivalent pnictogen, phosphorus as a mineral is almost always present in its maximally oxidised state, as inorganic phosphate rocks. Elemental phosphorus exists in two major formsâ€”white phosphorus and red phosphorusâ€”but due to its high reactivity, phosphorus is never found as a free element on Earth."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/phosphorous> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "P" ;
+    skos:prefLabel "phosphorous"@en .
+
+cdt:phosphorous-pentoxide a skos:Concept ;
+    skos:broader cdt:chemical-oxide-product ;
+    skos:definition "Phosphorus pentoxide is a chemical compound with molecular formula P4O10 (with its common name derived from its empirical formula, P2O5). This white crystalline solid is the anhydride of phosphoric acid. It is a powerful desiccant and dehydrating agent."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/phosphorous-pentoxide> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "phosphorous pentoxide"@en .
+
+cdt:platinum a skos:Concept ;
+    skos:broader cdt:platinum-group-metal ;
+    skos:definition "Platinum is a chemical element with the chemical symbol Pt and an atomic number of 78. It is a dense, malleable, ductile, highly unreactive, precious, gray-white transition metal."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/platinum> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "PT" ;
+    skos:prefLabel "platinum"@en .
+
+cdt:potash a skos:Concept ;
+    skos:broader cdt:chemical-compound-product ;
+    skos:definition "Potash is any of various salts that contain potassium in water-soluble form, the most common being potassium chloride (KCl). Mostly used in fertilizers."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/potash> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "potash"@en .
+
+cdt:potassium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Potassium is a chemical element with symbol K and atomic number 19. Elemental potassium is a soft silvery-white alkali metal that oxidizes rapidly in air and is very reactive with water, generating sufficient heat to ignite the hydrogen emitted in the reaction and burning with a lilac flame."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/potassium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "K" ;
+    skos:prefLabel "potassium"@en .
+
+cdt:pozzolan a skos:Concept ;
+    skos:broader cdt:industrial-rock ;
+    skos:definition "Pozzolan is a siliceous or siliceous and aluminous material which will react chemically with calcium hydroxide to form compounds possessing cementitious properties (ASTM C618). The broad definition of a pozzolan imparts no bearing on the origin of the material, only on its capability of reacting with calcium hydroxide and water. The general definition of a pozzolan embraces a large number of materials which vary widely in terms of origin, composition and properties."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/pozzolan> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "pozzolan"@en .
+
+cdt:praseodymium a skos:Concept ;
+    skos:broader cdt:light-rare-earth-elements ;
+    skos:definition "Praseodymium is a chemical element that has the symbol Pr and atomic number 59. Praseodymium is a soft, silvery, malleable and ductile metal in the lanthanide group."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/praseodymium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "PR" ;
+    skos:prefLabel "praseodymium"@en .
+
+cdt:prehnite a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Prehnite was named after its discoverer; Colonel Hendrik von Prehn and is an attractive collection mineral that is occassionally used for ornamental stone purposes."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/prehnite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "prehnite"@en .
+
+cdt:promethium a skos:Concept ;
+    skos:broader cdt:light-rare-earth-elements ;
+    skos:definition "Promethium, originally prometheum, is a chemical element with the symbol Pm and atomic number 61. All of its isotopes are radioactive; it is one of only two such elements that are followed in the periodic table by elements with stable forms, a distinction shared with technetium."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/promethium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "PM" ;
+    skos:prefLabel "promethium"@en .
+
+cdt:pumice a skos:Concept ;
+    skos:broader cdt:industrial-rock ;
+    skos:definition "Glassy, highly vesicular, mostly silicic igneous rocks."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/pumice> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "pumice"@en .
+
+cdt:pyrite a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "The mineral pyrite, or iron pyrite, also known as fool's gold, is an iron sulfide with the chemical formula FeS2. This mineral's metallic luster and pale brass-yellow hue give it a superficial resemblance to gold, hence the well-known nickname of fool's gold."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/pyrite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "PY" ;
+    skos:prefLabel "pyrite"@en .
+
+cdt:pyrophyllite a skos:Concept ;
+    skos:broader cdt:aluminosilicate ;
+    skos:definition "A phyllosilicate mineral composed of aluminium silicate hydroxide: Al2Si4O10(OH)2. Pyrophyllite is easily machineable and has excellent thermal stability and is added to clay to reduce thermal expansion when firing and is combined with other compounds, such as in insecticide and for making bricks. It is also used for slate pencils, chalk (French chalk) and small carving."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/pyrophyllite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "PP" ;
+    skos:prefLabel "pyrophyllite"@en .
+
+cdt:quartz a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Quartz is the second most abundant mineral in the Earth's continental crust, after feldspar. It is made up of a continuous framework of SiO4 siliconâ€“oxygen tetrahedra, with each oxygen being shared between two tetrahedra, giving an overall formula SiO2. There are many different varieties of quartz, several of which are semi-precious gemstones."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/quartz> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "Q" ;
+    skos:prefLabel "quartz"@en .
+
+cdt:radium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Radium is a chemical element with symbol Ra and atomic number 88. Radium is an almost pure-white alkaline earth metal, but it readily oxidizes on exposure to air, becoming black in color."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/radium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "radium"@en .
+
+cdt:recycled-aggregate a skos:Concept ;
+    skos:broader cdt:aggregate ;
+    skos:definition "Recycled aggregates are materials produced by the recycling of construction and demolition waste. They can be crushed concrete, bricks or glass, asphalt planings (ie the surface layers of roads removed during roadworks) or spent rail ballast."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/recycled-aggregate> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "recycled aggregate"@en .
+
+cdt:reservoir-gas a skos:Concept ;
+    skos:broader cdt:gaseous-hydrocarbons ;
+    skos:definition "Natural gas derived from underground rock reservoirs typically containing methane with lesser amounts of ethane, propane, butane and pentane. Natural gas is commonly associated with liquid petroleum in the reservoirs but is extracted and managed differently."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/reservoir-gas> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "reservoir gas"@en .
+
+cdt:rhenium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Rhenium is a chemical element with the symbol Re and atomic number 75. It is a silvery-white, heavy, third-row transition metal in group 7 of the periodic table. With an estimated average concentration of 1 part per billion (ppb), rhenium is one of the rarest elements in the Earth's crust."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/rhenium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "RHEN" ;
+    skos:prefLabel "rhenium"@en .
+
+cdt:rhodium a skos:Concept ;
+    skos:broader cdt:platinum-group-metal ;
+    skos:definition "Rhodium is a chemical element that is a rare, silvery-white, hard, and chemically inert transition metal and a member of the platinum group. It has the chemical symbol Rh and atomic number 45."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/rhodium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "rhodium"@en .
+
+cdt:rhodonite a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Rhodonite is an attractive mineral that is often carved and used in jewelry. It is named after the Greek word for rose, rhodon."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/rhodonite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "RH" ;
+    skos:prefLabel "rhodonite"@en .
+
+cdt:riprap a skos:Concept ;
+    skos:broader cdt:industrial-rock,
+        cdt:primary-aggregate ;
+    skos:definition "Boulder size rock used to armour shorelines, streambeds, bridge abutments, pilings and other shoreline structures against scour, water or ice erosion."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/riprap> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "riprap"@en .
+
+cdt:rose-quartz a skos:Concept ;
+    skos:broader cdt:quartz-gemstone ;
+    skos:definition "Rose quartz is a type of quartz which exhibits a pale pink to rose red hue. The color is usually considered as due to trace amounts of titanium, iron, or manganese, in the material. Some rose quartz contains microscopic rutile needles which produces an asterism in transmitted light."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/rose-quartz> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "rose quartz"@en .
+
+cdt:rubidium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Rubidium is a chemical element with the symbol Rb and atomic number 37. Rubidium is a soft, silvery-white metallic element of the alkali metal group, with an atomic mass of 85.4678. Elemental rubidium is highly reactive, with properties similar to those of other alkali metals, such as very rapid oxidation in air."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/rubidium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "rubidium"@en .
+
+cdt:ruby a skos:Concept ;
+    skos:broader cdt:corundum-gemstone ;
+    skos:definition "A ruby is a pink to blood-red colored gemstone, a variety of the mineral corundum (aluminium oxide)."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/ruby> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "RUBY" ;
+    skos:prefLabel "ruby"@en .
+
+cdt:ruthenium a skos:Concept ;
+    skos:broader cdt:platinum-group-metal ;
+    skos:definition "Ruthenium is a chemical element with symbol Ru and atomic number 44. It is a rare transition metal belonging to the platinum group of the periodic table."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/ruthenium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "RU" ;
+    skos:prefLabel "ruthenium"@en .
+
+cdt:rutile a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Rutile is an interesting, varied and important mineral. Rutile is a major ore of titanium, a metal used for high tech alloys because of its light weight, high strength and resistance to corrosion."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/rutile> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "RUT" ;
+    skos:prefLabel "rutile"@en .
+
+cdt:salt a skos:Concept ;
+    skos:altLabel "halite"@en,
+        "rock salt"@en ;
+    skos:broader cdt:evaporite ;
+    skos:definition "Common salt is a mineral substance composed primarily of sodium chloride (NaCl), a chemical compound belonging to the larger class of ionic salts; salt in its natural form as a crystalline mineral is known as rock salt or halite. Salt is present in vast quantities in the sea where it is the main mineral constituent, with the open ocean having about 35 grams (1.2 oz) of solids per litre, a salinity of 3.5%."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/salt> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "NACL" ;
+    skos:prefLabel "salt"@en .
+
+cdt:samarium a skos:Concept ;
+    skos:broader cdt:light-rare-earth-elements ;
+    skos:definition "Samarium is a chemical element with symbol Sm and atomic number 62. It is a moderately hard silvery metal that readily oxidizes in air. Being a typical member of the lanthanide series."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/samarium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "SM" ;
+    skos:prefLabel "samarium"@en .
+
+cdt:sandstone a skos:Concept ;
+    skos:broader cdt:dimension-stone ;
+    skos:definition "A sand-grade clastic-sedimentary-rock. Note the majority of sandstone can be classed as silicate-sandstone. A medium-grained clastic sedimentary rock composed of fragments of sand size (0.1-2mm diameter) set in a fine-grained matrix (silt or clay) and more or less firmly united by a cementing material (commonly silica, iron oxide, or calcium carbonate); the consolidated equivalent of sand. The sand particles usually consist mostly of quartz, and the term sandstone, when used without qualification, indicates a rock containing more than about 80% quartz. The rock is usually a pale sandy colour but varies greatly in color. It may be deposited by water or wind and may contain abundant primary sedimentary features (fine and coarse bands, ripple marks, fossils, etc.). Sandstones are classified mostly according to the composition of the clastic particles and matrix, and also sometimes by mineralogic or textural maturity, fluidity index, diastrophism, and primary structures. Ref: AGI"@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sandstone> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "SST" ;
+    skos:prefLabel "sandstone"@en .
+
+cdt:saponite a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "A smectite group mineral, occurs insoapstone used in porcelain in Cornwall"@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/saponite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "saponite"@en .
+
+cdt:sapphire a skos:Concept ;
+    skos:broader cdt:corundum-gemstone ;
+    skos:definition "Sapphire is a blue gemstone variety of the mineral corundum."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sapphire> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "SAPP" ;
+    skos:prefLabel "sapphire"@en .
+
+cdt:sapphirine a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Sapphire is the non-red variety of corundum, the second hardest natural mineral known to mankind. The red variety of corundum is Ruby - all other colors are called sapphire, even pink."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sapphirine> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "sapphirine"@en .
+
+cdt:scandium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Scandium is a chemical element with symbol Sc and atomic number 21. A silvery-white metallic d-block element, it has historically been sometimes classified as a rare earth element, together with yttrium and the lanthanoids."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/scandium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "SC" ;
+    skos:prefLabel "scandium"@en .
+
+cdt:scapolite a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "A group of rock-forming silicate minerals composed of aluminium, calcium, and sodium silicate with chlorine, carbonate and sulfate."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/scapolite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "scapolite"@en .
+
+cdt:selenium a skos:Concept ;
+    skos:broader cdt:non-metal ;
+    skos:definition "Selenium is a chemical element with symbol Se and atomic number 34. It is a nonmetal with properties that are intermediate between those of its periodic table column-adjacent chalcogen elements sulfur and tellurium. It rarely occurs in its elemental state in nature, or as pure ore compounds."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/selenium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "SE" ;
+    skos:prefLabel "selenium"@en .
+
+cdt:sepiolite a skos:Concept ;
+    skos:broader cdt:clay ;
+    skos:definition "Sepiolite is used in oil drilling, for cat litter and in a solid form for carving, where it is known as Meerschaum. In construction, sepiolite can be used in lime mortars as water reservoir."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sepiolite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "sepiolite"@en .
+
+cdt:sericite a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Sericite is a fine grained mica, similar to muscovite, illite, or paragonite. Sericite is a common alteration mineral of orthoclase or plagioclase feldspars in areas that have been subjected to hydrothermal alteration typically associated with hydrothermal ore deposits."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sericite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "sericite"@en .
+
+cdt:serpentine a skos:Concept ;
+    skos:altLabel "serpentinite"@en ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "The serpentine group are greenish, brownish, or spotted minerals commonly found in serpentinite rocks. They are used as a source of magnesium and asbestos, and as a decorative stone. The name is thought to come from the greenish color being that of a serpent."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/serpentine> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "serpentine"@en .
+
+cdt:shell-grit a skos:Concept ;
+    skos:broader cdt:industrial-rock ;
+    skos:definition "Shell grit is coarsely ground or broken seashells. It is used, among other things, by birds as a source of calcium for egg shell production, and to aid digestion."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/shell-grit> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "shell grit"@en .
+
+cdt:silicon a skos:Concept ;
+    skos:broader cdt:metalloid ;
+    skos:definition "Silicon is a chemical element with the symbol Si and atomic number 14. It is a tetravalent metalloid, less reactive than its chemical analog carbon, the nonmetal directly above it in the periodic table, but more reactive than germanium, the metalloid directly below it in the table."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/silicon> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "SI" ;
+    skos:prefLabel "silicon"@en .
+
+cdt:sillimanite a skos:Concept ;
+    skos:broader cdt:aluminosilicate ;
+    skos:definition "Orthorhombic Al2SiO5 aluminium neosilicate mineral occurring in aluminous metamorphic rocks used in the manufacture of high alumina refractories or alumina bricks."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sillimanite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "sillimanite"@en .
+
+cdt:silver a skos:Concept ;
+    skos:broader cdt:precious-metal ;
+    skos:definition "Silver is a chemical element with the chemical symbol Ag and atomic number 47. A soft, white, lustrous transition metal, it possesses the highest electrical conductivity of any element and the highest thermal conductivity of any metal."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/silver> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "AG" ;
+    skos:prefLabel "silver"@en .
+
+cdt:sinhalite a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Sinhalite is rare mineral and known only from the gem gravels in Sri Lanka."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sinhalite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "sinhalite"@en .
+
+cdt:slate a skos:Concept ;
+    skos:broader cdt:dimension-stone ;
+    skos:definition "i. A fine-grained rock displaying strong slaty cleavage and hence can be split into slabs and thin plates. Most slate was formed from shale during low grade regional metamorphism. Usually gray to black, sometimes green, yellow, brown, or red. Slates are composed mostly of quartz, micas, chlorite, with minor hematite, clays, and other minerals. Ref: AGI ii. A coal miner's term for any shale accompanying coal; also, sometimes the equivalent of bone coal. Ref: AGI"@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/slate> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "ST" ;
+    skos:prefLabel "slate"@en .
+
+cdt:smokey-quartz a skos:Concept ;
+    skos:broader cdt:quartz-gemstone ;
+    skos:definition "Smoky quartz is a brown to black variety of quartz."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/smokey-quartz> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "smokey quartz"@en .
+
+cdt:soda-ash a skos:Concept ;
+    skos:altLabel "sodium carbonate"@en,
+        "trona"@en ;
+    skos:broader cdt:chemical-compound-product ;
+    skos:definition "The manufacture of glass is one of the most important uses of sodium carbonate. Sodium carbonate acts as a flux for silica, lowering the melting point of the mixture to something achievable without special materials."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/soda-ash> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "SODA" ;
+    skos:prefLabel "soda ash"@en .
+
+cdt:sodalite a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Sodalite is a rich royal blue mineral widely enjoyed as an ornamental gemstone. Although massive sodalite samples are opaque, crystals are usually transparent to translucent. Sodalite is a member of the sodalite group with hauyne, nosean, lazurite and tugtupite."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sodalite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "sodalite"@en .
+
+cdt:spectrolite a skos:Concept ;
+    skos:altLabel "labradorite"@en ;
+    skos:broader cdt:feldspar-gemstone ;
+    skos:definition "A variety of labradorite feldspar that exhibits a richer range of colours than the blue-grey-green of labradorite, and high has labradoresence. Sometimes incorrectly used to describe labradorite whenever a richer display of colours is present, regardless of locality."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/spectrolite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "spectrolite"@en .
+
+cdt:spinel a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Spinel is the magnesium aluminium member of the larger spinel group of minerals. It has the formula MgAl2O4."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/spinel> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "spinel"@en .
+
+cdt:spinel-gemstone a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "The Spinel Group contains over twenty members, but only a few are considered common. They are a group of oxides that have very similar structures. Named after their sole gemstone representative, spinel, this is an important group of minerals."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/spinel-gemstone> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "spinel-gemstone"@en .
+
+cdt:spodumene a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Spodumene is a rock forming mineral in granites and pegmatites that bear other lithium minerals. Spodumene is a relatively new mineral to science, being discovered in the last three centuries and gem varieties have only been discovered in the last 120 years."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/spodumene> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "spodumene"@en .
+
+cdt:spongolite a skos:Concept ;
+    skos:broader cdt:industrial-rock ;
+    skos:definition "Spongolite is a stone made almost entirely from fossilised sponges. It is light and porous."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/spongolite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "spongolite"@en .
+
+cdt:staurolite a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Staurolite is a red brown to black, mostly opaque, nesosilicate mineral with a white streak. It crystallizes in the monoclinic crystal system, has a Mohs hardness of 7 to 7.5 and the chemical formula: Fe2+2Al9O6(SiO4)4(O,OH)2."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/staurolite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "staurolite"@en .
+
+cdt:strontianite a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Strontium carbonate, usually containing some calcium. It is a member of the aragonite group. Used in the refining of sugar and the production of fireworks."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/strontianite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "strontianite"@en .
+
+cdt:strontium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Strontium is a chemical element with symbol Sr and atomic number 38. An alkaline earth metal, strontium is a soft silver-white or yellowish metallic element that is highly reactive chemically. The metal turns yellow when it is exposed to air. Strontium has physical and chemical properties similar to those of its two neighbors calcium and barium. It occurs naturally in the minerals celestine, putnisite and strontianite."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/strontium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "SR" ;
+    skos:prefLabel "strontium"@en .
+
+cdt:sulphur a skos:Concept ;
+    skos:broader cdt:non-metal ;
+    skos:definition "Sulfur or sulphur is a chemical element with the symbol S and atomic number 16. It is an abundant, multivalent non-metal. Under normal conditions, sulfur atoms form cyclic octatomic molecules with chemical formula S8. Elemental sulfur is a bright yellow crystalline solid when at room temperature."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sulphur> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "S" ;
+    skos:prefLabel "sulphur"@en .
+
+cdt:sylvite a skos:Concept ;
+    skos:broader cdt:evaporite ;
+    skos:definition "Sylvite, also called sylvine, is a major source of potassium or potash used in fertilizer products. So great is the need for potassium that sylvite deposits are considered very valuable economically."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sylvite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "sylvite"@en .
+
+cdt:talc a skos:Concept ;
+    skos:altLabel "soapstone"@en ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Talc is an important industrial mineral. Its resistance to heat, electricity and acids make it an ideal surface for lab counter tops and electrical switchboards. It is also an important filler material for paints, rubber and insecticides. Even with all these uses, most people only know talc as the primary ingredient in talcum powder."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/talc> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "talc"@en .
+
+cdt:tantalum a skos:Concept ;
+    skos:altLabel "tantalium"@en ;
+    skos:broader cdt:metal ;
+    skos:definition "Tantalum is a chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a character from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant. It is part of the refractory metals group, which are widely used as minor components in alloys. The chemical inertness of tantalum makes it a valuable substance for laboratory equipment and a substitute for platinum."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/tantalum> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "TA" ;
+    skos:prefLabel "tantalum"@en .
+
+cdt:tantalum-pentoxide a skos:Concept ;
+    skos:broader cdt:chemical-oxide-product ;
+    skos:definition "An oxide of tantalum also known as tantalum(V) oxide, a white, inert solid with a high refractive index and low absorption (i.e. colourless), useful for coatings, and used in the production of capacitors, due to its high dielectric constant."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/tantalum-pentoxide> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "tantalum pentoxide"@en .
+
+cdt:tanzanite a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Tanzanite is the blue/purple variety of the mineral zoisite belonging to the epidote group."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/tanzanite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "tanzanite"@en .
+
+cdt:tar-sand a skos:Concept ;
+    skos:altLabel "oil sand"@en ;
+    skos:broader cdt:liquid-hydrocarbons ;
+    skos:definition "Medium-grained sedimentary rock, yielding significant quantities of tar or oil upon decomposition by heating to high temperatures."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/tar-sand> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "tar sand"@en .
+
+cdt:tellurium a skos:Concept ;
+    skos:broader cdt:metalloid ;
+    skos:definition "Tellurium is a chemical element with symbol Te and atomic number 52. A brittle, mildly toxic, rare, silver-white metalloid which looks similar to tin, tellurium is chemically related to selenium and sulfur. It is occasionally found in native form, as elemental crystals."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/tellurium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "TE" ;
+    skos:prefLabel "tellurium"@en .
+
+cdt:terbium a skos:Concept ;
+    skos:broader cdt:heavy-rare-earth-element ;
+    skos:definition "Terbium is a chemical element with the symbol Tb and atomic number 65. It is a silvery-white rare earth metal that is malleable, ductile and very hard. Terbium is never found in nature as a free element, but it is contained in many minerals, including cerite, gadolinite, monazite, xenotime and euxenite. - Terbium is a chemical element with the symbol Tb and atomic number 65. It is a silvery-white rare earth metal that is malleable, ductile and very hard. Terbium is never found in nature as a free element, but it is contained in many minerals, including cerite, gadolinite, monazite, xenotime and euxenite."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/terbium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "TB" ;
+    skos:prefLabel "terbium"@en .
+
+cdt:thallium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Thallium is a chemical element with symbol Tl and atomic number 81. This soft gray other metal is not found free in nature. When isolated, it resembles tin, but discolors when exposed to air."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/thallium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "TL" ;
+    skos:prefLabel "thallium"@en .
+
+cdt:thenardite a skos:Concept ;
+    skos:altLabel "mirabilite"@en,
+        "sodium sulphate"@en ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Thenardite is one of several non-marine evaporite Sulfate Class minerals. It is easily dissolvable in water and specimens should be stored with desiccant. Sulfates in general tend to be more soluble than most of the other mineral classes and simple sodium salts, such as thernardite, are always soluble."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/thenardite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "thenardite"@en .
+
+cdt:thorium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Thorium is a naturally occurring radioactive chemical element with the symbol Th and atomic number 90."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/thorium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "TH" ;
+    skos:prefLabel "thorium"@en .
+
+cdt:thulium a skos:Concept ;
+    skos:broader cdt:heavy-rare-earth-element ;
+    skos:definition "Thulium is a chemical element that has the symbol Tm and atomic number 69. It is the thirteenth and antepenultimate element in the lanthanide series."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/thulium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "TM" ;
+    skos:prefLabel "thulium"@en .
+
+cdt:tin a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Tin is a chemical element with symbol Sn and atomic number 50. It is a main group metal in group 14 of the periodic table. Tin shows chemical similarity to both neighboring group-14 elements, germanium and lead."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/tin> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "SN" ;
+    skos:prefLabel "tin"@en .
+
+cdt:titanium a skos:Concept ;
+    skos:broader cdt:ferrous-metal ;
+    skos:definition "Titanium is a chemical element with the symbol Ti and atomic number 22. It is a lustrous transition metal with a silver color, low density and high strength. It is highly resistant to corrosion in sea water, aqua regia and chlorine."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/titanium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "titanium"@en .
+
+cdt:topaz a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Topaz is a common gemstone that has been used for centuries in jewelry. Topaz is the hardest silicate mineral and one of the hardest minerals in nature."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/topaz> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "topaz"@en .
+
+cdt:tourmaline a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Tourmaline is a crystal boron silicate mineral compounded with elements such as aluminium, iron, magnesium, sodium, lithium, or potassium. Tourmaline is classified as a semi-precious stone and the gemstone comes in a wide variety of colors."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/tourmaline> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "tourmaline"@en .
+
+cdt:tremolite-actinolite a skos:Concept ;
+    skos:broader cdt:asbestos-amphibole ;
+    skos:definition "Tremolite is a member of the amphibole group of silicate minerals with composition: Ca2(Mg5.0-4.5Fe2+0.0-0.5)Si8O22(OH)2. Tremolite forms by metamorphism of sediments rich in dolomite and quartz. Tremolite forms a series with actinolite and ferro-actinolite. Pure magnesium tremolite is creamy white, but the color grades to dark green with increasing iron content. It has a hardness on Mohs scale of 5 to 6. Nephrite, one of the two minerals of the gemstone jade, is a green variety of tremolite."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/tremolite-actinolite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "tremolite-actinolite"@en .
+
+cdt:tsavorite a skos:Concept ;
+    skos:broader cdt:garnet-gemstone ;
+    skos:definition "Tsavorite or tsavolite is a variety of the garnet group species grossular, a calcium-aluminium garnet with the formula Ca3Al2Si3O12."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/tsavorite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "tsavorite"@en .
+
+cdt:tungsten a skos:Concept ;
+    skos:altLabel "wolfram"@en ;
+    skos:broader cdt:metal ;
+    skos:definition "Tungsten, also known as wolfram, is a chemical element with the chemical symbol W and atomic number 74. The word tungsten comes from the Swedish language tung sten directly translatable to heavy stone."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/tungsten> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "W" ;
+    skos:prefLabel "tungsten"@en .
+
+cdt:turquoise a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Turquoise is a valuable mineral and is possibly the most valuable, non-transparent, non-metal mineral in the jewelry trade."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/turquoise> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "turquoise"@en .
+
+cdt:uranium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Uranium is a silvery-white metallic chemical element in the actinide series of the periodic table, with symbol U and atomic number 92. A uranium atom has 92 protons and 92 electrons, of which 6 are valence electrons. Uranium is weakly radioactive because all its isotopes are unstable (with half-lives of the 6 naturally known isotopes, U-233 - U-238, varying between 69 years and 4Â½ billion years)."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/uranium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "U" ;
+    skos:prefLabel "uranium"@en .
+
+cdt:uranium-oxide a skos:Concept ;
+    skos:broader cdt:chemical-oxide-product ;
+    skos:definition "Uranium dioxide or uranium(IV) oxide (UO2), also known as urania or uranous oxide, is an oxide of uranium, and is a black, radioactive, crystalline powder that naturally occurs in the mineral uraninite. It is used in nuclear fuel rods in nuclear reactors."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/uranium-oxide> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "uranium oxide"@en .
+
+cdt:vanadium a skos:Concept ;
+    skos:broader cdt:ferrous-metal ;
+    skos:definition "Vanadium is a chemical element with the symbol V and atomic number 23. It is a hard, silvery gray, ductile and malleable transition metal. The element is found only in chemically combined form in nature, but once isolated artificially."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/vanadium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "vanadium"@en .
+
+cdt:vanadium-pentoxide a skos:Concept ;
+    skos:broader cdt:chemical-oxide-product ;
+    skos:definition "A brown/yellow solid, although when freshly precipitated from aqueous solution, its colour is deep orange. Also known as vanadium(V) oxide or vanadia. Because of its high oxidation state, is both an amphoteric oxide and an oxidizing agent, used as a precursor to alloys of vanadium and as an industrial catalyst."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/vanadium-pentoxide> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "vanadium pentoxide"@en .
+
+cdt:variscite a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Variscite is a relatively rare phosphate mineral that is sometimes confused with turquoise. It is usually greener, however, than turquoise. Variscite is sometimes used as a semi-precious stone and can make distinctive color patterns that are very attractive."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/variscite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "variscite"@en .
+
+cdt:vermiculite a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Vermiculite is an important member of the Montmorillonite/Smectite Group, members of which also belong to the larger general group known as the Clays. Vermiculite is also sometimes placed in the Mica Group, although recent analysis has excluded it from this group."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/vermiculite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "vermiculite"@en .
+
+cdt:vesuvianite a skos:Concept ;
+    skos:altLabel "idocrase"@en ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Vesuvianite, also known as Idocrase, is a fascinating mineral found originally on the volcano, Mt Vesuvius, hence one of the names. The other name, idocrase, is from the greek and means mixed form, an allusion to its crystals showing a mixture of other mineral forms."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/vesuvianite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "vesuvianite"@en .
+
+cdt:wollastonite a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Wollastonite is a calcium inosilicate mineral (CaSiO3) that may contain small amounts of iron, magnesium, and manganese substituting for calcium. It is usually white. It forms when impure limestone or dolostone is subjected to high temperature and pressure sometimes in the presence of silica-bearing fluids as in skarns or contact metamorphic rocks. Associated minerals include garnets, vesuvianite, diopside, tremolite, epidote, plagioclase feldspar, pyroxene and calcite. It is named after the English chemist and mineralogist William Hyde Wollaston (1766â€“1828)."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/wollastonite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "wollastonite"@en .
+
+cdt:xenotime-gemstone a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Xenotime is a rare earth phosphate mineral, whose major component is yttrium orthophosphate (YPO4). Occasionally, gemstones are also cut from the finer xenotime crystals."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/xenotime-gemstone> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "xenotime-gemstone"@en .
+
+cdt:ytterbium a skos:Concept ;
+    skos:broader cdt:heavy-rare-earth-element ;
+    skos:definition "Ytterbium is a chemical element with symbol Yb and atomic number 70. It is the fourteenth and penultimate element in the lanthanide series, or last element in the f-block, which is the basis of the relative stability of the +2 oxidation state."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/ytterbium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "YB" ;
+    skos:prefLabel "ytterbium"@en .
+
+cdt:yttrium a skos:Concept ;
+    skos:broader cdt:heavy-rare-earth-element ;
+    skos:definition "Yttrium is a chemical element with symbol Y and atomic number 39. It is a silvery-metallic transition metal chemically similar to the lanthanides and it has often been classified as a rare earth element."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/yttrium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "Y" ;
+    skos:prefLabel "yttrium"@en .
+
+cdt:yttrium-oxide a skos:Concept ;
+    skos:broader cdt:chemical-oxide-product ;
+    skos:definition "Yttrium oxide, also known as yttria is an air-stable, white solid substance. Used to make Eu:YVO4 and Eu:Y2O3 phosphors that give the red color in color TV picture tubes, to make yttrium iron garnets used in microwave filters, and to make the high temperature superconductor YBa2Cu3O7."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/yttrium-oxide> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "yttrium oxide"@en .
+
+cdt:zeolite a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Zeolites are microporous, aluminosilicate minerals commonly used as commercial adsorbents and catalysts."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/zeolite> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "zeolite"@en .
+
+cdt:zinc a skos:Concept ;
+    skos:broader cdt:base-metal ;
+    skos:definition "Zinc is a metallic chemical element; it has the symbol Zn and atomic number 30. It is the first element of group 12 of the periodic table. In some respects zinc is chemically similar to magnesium: its ion is of similar size and its only common oxidation state is +2. Zinc is the 24th most abundant element in the Earth's crust and has five stable isotopes."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/zinc> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "ZN" ;
+    skos:prefLabel "zinc"@en .
+
+cdt:zircon a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Zircon (including hyacinth or yellow zircon) is a mineral belonging to the group of nesosilicates."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/zircon> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "ZIR" ;
+    skos:prefLabel "zircon"@en .
+
+cdt:zircon-gemstone a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Zircon resembles diamond in luster and fire and colorless zircons have been mistaken for diamonds by experienced jewelers. Zircon can make a very attractive and affordable gemstone. It is found in browns and greens but can be heat treated to beautiful blue and golden colors."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/zircon-gemstone> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "zircon-gemstone"@en .
+
+cdt:zirconia a skos:Concept ;
+    skos:altLabel "zirconium dioxide"@en ;
+    skos:broader cdt:chemical-oxide-product ;
+    skos:definition "A white crystalline oxide of zirconium. Used in the production of ceramics, as a protective coating on particles of titanium dioxide pigments, as a refractory material, in insulation, abrasives and enamels, in oxygen sensors and fuel cell membranes, and as the solid electrolyte in electrochromic devices."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/zirconia> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "zirconia"@en .
+
+cdt:zirconium a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "Zirconium is a chemical element with the symbol Zr, atomic number 40 and atomic mass of 91.224. The name of zirconium is taken from the mineral zircon, the most important source of zirconium."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/zirconium> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "zirconium"@en .
+
 cdt:asbestos-serpentine a skos:Concept ;
     skos:broader cdt:asbestos ;
     skos:definition "Asbestos formed predominantly of serpentine-group minerals (chrysotile)."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/asbestos-serpentine> ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "asbestos-serpentine"@en .
+
+cdt:garnet-gemstone a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Garnets are a group of silicate minerals that have been used since the Bronze Age as gemstones and abrasives."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/garnet-gemstone> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "garnet-gemstone"@en .
+
+cdt:metallurgical-coal a skos:Concept ;
+    skos:altLabel "met coal"@en ;
+    skos:broader cdt:black-coal ;
+    skos:definition "Coals which are used in refining or alloying processes."@en ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "metallurgical coal"@en .
+
+cdt:sand-and-gravel a skos:Concept ;
+    skos:broader cdt:industrial-rock,
+        cdt:primary-aggregate ;
+    skos:definition "Durable rock fragments (silicates, flints, etc) with a size range: 0.063 mm - 80mm, derived from the weathering, erosion and transport of rocks by glacial or fluvial processes. Used for aggregate purposes and construction fill."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sand-and-gravel> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "sand and gravel"@en .
+
+cdt:silica a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Silicon dioxide, also known as silica (from the Latin silex), is a chemical compound that is a dioxide of silicon with the chemical formula SiO2"@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/silica> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "SIO" ;
+    skos:prefLabel "silica"@en .
+
+cdt:agate a skos:Concept ;
+    skos:altLabel "sardonyx"@en ;
+    skos:broader cdt:chalcedony ;
+    skos:definition "A variety of chalcedony having variegated colors arranged in stripes, blended in clouds, or showing mosslike forms. Sardonyx is a red-white or rarely red-white-black variant."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/agate> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "AE" ;
+    skos:prefLabel "agate"@en .
+
+cdt:asbestos a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "One of six naturally occurring silicate minerals that occur in long (roughly 1:20 aspect ratio), thin, flexible fibrous crystals."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/asbestos> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "ASB" ;
+    skos:prefLabel "asbestos"@en .
 
 cdt:black-coal a skos:Concept ;
     skos:altLabel "bituminous coal"@en,
@@ -1092,12 +2028,12 @@ cdt:carbonaceous-material a skos:Concept ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "carbonaceous material"@en .
 
-cdt:feldspar-gemstone a skos:Concept ;
+cdt:corundum-gemstone a skos:Concept ;
     skos:broader cdt:gemstone ;
-    skos:definition "The feldspars are a group of minerals that have similar characteristics due to a similar structure."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/feldspar-gemstone> ;
+    skos:definition "Corundum is the third hardest natural mineral known to science. The hardest mineral, diamond is still four times harder than corundum. Corundum's most famous gemstone forms are sapphire and ruby."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/corundum-gemstone> ;
     skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "feldspar-gemstone"@en .
+    skos:prefLabel "corundum-gemstone"@en .
 
 cdt:fullers-earth a skos:Concept ;
     skos:broader cdt:clay ;
@@ -1107,6 +2043,13 @@ cdt:fullers-earth a skos:Concept ;
     skos:notation "CF" ;
     skos:prefLabel "Fullers earth"@en .
 
+cdt:iron-ore a skos:Concept ;
+    skos:broader cdt:direct-shipping-ore ;
+    skos:definition "Ferruginous rock containing one or more minerals from which metallic iron may be profitably extracted. The chief ores of iron consist mainly of the oxides: hematite, Fe2O3 ; goethite, alpha -FeO(OH); magnetite, Fe3O4; and the carbonate, siderite FeCO3. See Also: bog iron ore, Limonite, kidney iron ore, Magnetite, Siderite, Hematite, prereduced iron-ore pellet Ref: AGI The term has also been used extensively by petrologists to describe opaque minerals in thin sections, including magnetite, ilmenite, pyrite, etc."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/iron-ore> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "iron ore"@en .
+
 cdt:iron-oxide a skos:Concept ;
     skos:broader cdt:chemical-oxide-product ;
     skos:definition "Commodity of interest is any of the sixteen known iron oxides and oxyhydroxides, extracted from the mined material, exclusive of hematite or magnetite produced as an industrial mineral."@en ;
@@ -1114,28 +2057,46 @@ cdt:iron-oxide a skos:Concept ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "iron oxide"@en .
 
-cdt:liquid-hydrocarbons a skos:Concept ;
-    skos:broader cdt:organic-material ;
-    skos:definition "Liquid hydrocarbons consist of hydrocarbons of various molecular weights and other liquid or semi-solid organic compounds."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/liquid-hydrocarbons> ;
+cdt:rare-earth-element a skos:Concept ;
+    skos:altLabel "TREE"@en ;
+    skos:broader cdt:metal ;
+    skos:definition "As defined by IUPAC, a rare earth element (REE) or rare earth metal is one of a set of seventeen chemical elements in the periodic table, specifically the fifteen lanthanides plus scandium and yttrium. Scandium and yttrium are considered rare earth elements because they tend to occur in the same ore deposits as the lanthanides and exhibit similar chemical properties."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/rare-earth-element> ;
     skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "liquid hydrocarbons"@en .
+    skos:notation "REE" ;
+    skos:prefLabel "rare earth element"@en .
 
-cdt:aluminosilicate a skos:Concept ;
-    skos:broader cdt:industrial-mineral ;
-    skos:definition "Aluminosilicate minerals are minerals composed of aluminium, silicon, and oxygen, plus countercations. They are a major component of kaolin and other clay minerals. Andalusite, kyanite, and sillimanite are naturally occurring aluminosilicate minerals that have the composition Al2SiO5."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/aluminosilicate> ;
+cdt:rare-earth-oxide a skos:Concept ;
+    skos:altLabel "TREO"@en ;
+    skos:broader cdt:chemical-oxide-product ;
+    skos:definition "Oxides of rare earth elements (REE) or rare earth metals, rare earth elements or metals being one of a set of seventeen chemical elements in the periodic table, specifically the fifteen lanthanides plus scandium and yttrium. Scandium and yttrium are considered rare earth elements because they tend to occur in the same ore deposits as the lanthanides and exhibit similar chemical properties."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/rare-earth-oxide> ;
     skos:inScheme cdt:conceptScheme ;
-    skos:notation "ALU" ;
-    skos:prefLabel "aluminosilicate"@en .
+    skos:prefLabel "rare earth oxide"@en .
 
-cdt:asbestos a skos:Concept ;
-    skos:broader cdt:industrial-mineral ;
-    skos:definition "One of six naturally occurring silicate minerals that occur in long (roughly 1:20 aspect ratio), thin, flexible fibrous crystals."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/asbestos> ;
+cdt:sand a skos:Concept ;
+    skos:broader cdt:industrial-material,
+        cdt:sand-and-gravel ;
+    skos:definition "A sand-grade clastic-sediment. Note: the majority of sand can be classed as silicate-sand. i. A rock fragment or detrital particle smaller than a granule and larger than a coarse silt grain, having a diameter in range of 1/16 to 2 mm (62 to 2,000 mu m, or 0.0025 to 0.08 in, or 4 to 1 phi units, or a size between that at the lower limit of visibility of an individual particle with the unaided eye and that of the head of a small wooden match), being somewhat rounded by abrasion in the course of transport. In Great Britain, the range of 0.1 to 1 mm has been used. See Also: coarse sand, fine sand Ref: AGI ii. A loose aggregate, unlithified mineral or rock particles of sand size; an unconsolidated or moderately consolidated sedimentary deposit consisting essentially of medium-grained clastics. The material is most commonly composed of quartz, and when the term sand is used without qualification, a siliceous composition is implied; but the particles may be of any mineral composition or mixture of rock or mineral fragments, such as coral sand consisting of limestone fragments. Also, a mass of such material, esp. on a beach, desert, or in a streambed. Ref: AGI iii. Separate grains or particles of detrital rock material, easily distinguishable by the unaided eye, but not large enough to be called pebbles; also, a loose mass of such grains, forming an incoherent arenaceous sediment. Building sand, any hard, granular rock material finer than gravel and coarser than dust. The term indicates material comminuted by natural means. Ref: Fay iv. Detrital material of size range from 2 to 1/16 mm in diameter. Very coarse, 1 to 2 mm; coarse, 1/2 to 1 mm; medium, 1/4 to 1/2 mm; fine, 1/4 to 1/8 mm; very fine, 1/8 to 1/16 mm. Ref: AGI v. Granular material, composed mainly of quartz, that will settle readily in water. In the mechanical analysis of soil, sand--according to international classification--has a size between 0.02 mm and 2.0 mm. It has no cohesion when dry or saturated but has apparent cohesion when damp. Ref: Nelson vi. A term used in the United States for a rock or mineral particle in the soil, having a diameter in the range of 0.05 to 2 mm; prior to 1947, the range 1 to 2 mm was called fine gravel. The diameter range recognized by the International Society of Soil Science is 0.02 to 2 mm. A textural class of soil material containing 85% or more of sand, with the percentage of silt plus 1.5 times the percentage of clay not exceeding 15; specif. such material containing 25% or more of very coarse sand, coarse sand, and medium sand, and less than 50% of fine sand or very fine sand. The term has also been used for a soil containing 90% or more of sand. Ref: AGI"@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sand> ;
     skos:inScheme cdt:conceptScheme ;
-    skos:notation "ASB" ;
-    skos:prefLabel "asbestos"@en .
+    skos:notation "SD" ;
+    skos:prefLabel "sand"@en .
+
+cdt:silica-gemstone a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Silicon dioxide, also known as silica, is an oxide of silicon with the chemical formula SiO2. Silica gemstones of note are agate, onyx, jasper and opal."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/silica-gemstone> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "silica-gemstone"@en .
+
+cdt:aggregate a skos:Concept ;
+    skos:broader cdt:industrial-material ;
+    skos:definition "Broad category for coarse particulate material used in construction, including sand, gravel, crushed stone, slag, recycled concrete and geosynthetic aggregates."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/aggregate> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "AGGREG" ;
+    skos:prefLabel "aggregate"@en .
 
 cdt:asbestos-amphibole a skos:Concept ;
     skos:broader cdt:asbestos ;
@@ -1143,51 +2104,6 @@ cdt:asbestos-amphibole a skos:Concept ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/asbestos-amphibole> ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "asbestos-amphibole"@en .
-
-cdt:chemical-compound-product a skos:Concept ;
-    skos:broader cdt:produced-commodity ;
-    skos:definition "Commodity is a chemical compound that is extracted/processed from an ore material mined from the Earth."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/chemical-compound-product> ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "chemical compound product"@en .
-
-cdt:gaseous-hydrocarbons a skos:Concept ;
-    skos:altLabel "natural gas"@en ;
-    skos:broader cdt:organic-material ;
-    skos:definition "Natural gas is a hydrocarbon gas mixture consisting primarily of methane, but commonly includes varying amounts of other higher alkanes and even a lesser percentage of carbon dioxide, nitrogen, and hydrogen sulfide."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/gaseous-hydrocarbons> ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "gaseous hydrocarbons"@en .
-
-cdt:iron-ore a skos:Concept ;
-    skos:broader cdt:direct-shipping-ore ;
-    skos:definition "Ferruginous rock containing one or more minerals from which metallic iron may be profitably extracted. The chief ores of iron consist mainly of the oxides: hematite, Fe2O3 ; goethite, alpha -FeO(OH); magnetite, Fe3O4; and the carbonate, siderite FeCO3. See Also: bog iron ore, Limonite, kidney iron ore, Magnetite, Siderite, Hematite, prereduced iron-ore pellet Ref: AGI  The term has also been used extensively by petrologists to describe opaque minerals in thin sections, including magnetite, ilmenite, pyrite, etc."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/iron-ore> ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "iron ore"@en .
-
-cdt:light-rare-earth-elements a skos:Concept ;
-    skos:altLabel "LREE"@en ;
-    skos:broader cdt:rare-earth-element ;
-    skos:definition "Rare earth elements with atomic numbers 57 to 61, inclusive."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/lree> ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "light rare earth elements"@en .
-
-cdt:base-metal a skos:Concept ;
-    skos:broader cdt:metal ;
-    skos:definition "In chemistry, the term base metal is used informally to refer to a metal that oxidizes or corrodes relatively easily and reacts variably with diluted hydrochloric acid (HCl) to form hydrogen. Examples include iron, nickel, lead and zinc. Copper is also considered a base metal because it oxidizes relatively easily, although it does not react with HCl."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/base-metal> ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "base metal"@en .
-
-cdt:beryl a skos:Concept ;
-    skos:broader cdt:gemstone ;
-    skos:definition "Beryl is often unknown to the general public, even the gemstone-buying public. However, it is one of the most important gem minerals. Beryl is colorless in pure form; it is the many different impurities that give beryl its varied coloration."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/beryl> ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:notation "BER" ;
-    skos:prefLabel "beryl"@en .
 
 cdt:chalcedony a skos:Concept ;
     skos:broader cdt:silica-gemstone ;
@@ -1204,6 +2120,110 @@ cdt:direct-shipping-ore a skos:Concept ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "direct shipping ore"@en .
 
+cdt:feldspar-gemstone a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "The feldspars are a group of minerals that have similar characteristics due to a similar structure."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/feldspar-gemstone> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "feldspar-gemstone"@en .
+
+cdt:gaseous-hydrocarbons a skos:Concept ;
+    skos:altLabel "natural gas"@en ;
+    skos:broader cdt:organic-material ;
+    skos:definition "Natural gas is a hydrocarbon gas mixture consisting primarily of methane, but commonly includes varying amounts of other higher alkanes and even a lesser percentage of carbon dioxide, nitrogen, and hydrogen sulfide."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/gaseous-hydrocarbons> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "gaseous hydrocarbons"@en .
+
+cdt:precious-metal a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "A precious metal is a rare, naturally occurring metallic chemical element of high economic value. Chemically, the precious metals tend to be less reactive than most elements. They are usually ductile and have a high lustre."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/precious-metal> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "precious metal"@en .
+
+cdt:primary-aggregate a skos:Concept ;
+    skos:altLabel "natural aggregate"@en ;
+    skos:broader cdt:aggregate ;
+    skos:definition "Sand and gravel and crushed rock extracted from the ground."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/primary-aggregate> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "primary aggregate"@en .
+
+cdt:aluminosilicate a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Aluminosilicate minerals are minerals composed of aluminium, silicon, and oxygen, plus countercations. They are a major component of kaolin and other clay minerals. Andalusite, kyanite, and sillimanite are naturally occurring aluminosilicate minerals that have the composition Al2SiO5."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/aluminosilicate> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "ALU" ;
+    skos:prefLabel "aluminosilicate"@en .
+
+cdt:beryl a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Beryl is often unknown to the general public, even the gemstone-buying public. However, it is one of the most important gem minerals. Beryl is colorless in pure form; it is the many different impurities that give beryl its varied coloration."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/beryl> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "BER" ;
+    skos:prefLabel "beryl"@en .
+
+cdt:direct-use-commodity a skos:Concept ;
+    skos:definition "Commodity mined and used directly as product, in many cases with some sort of 'beneficiation'."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/direct-use-commodity> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "direct use commodity"@en ;
+    skos:topConceptOf cdt:conceptScheme .
+
+cdt:liquid-hydrocarbons a skos:Concept ;
+    skos:broader cdt:organic-material ;
+    skos:definition "Liquid hydrocarbons consist of hydrocarbons of various molecular weights and other liquid or semi-solid organic compounds."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/liquid-hydrocarbons> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "liquid hydrocarbons"@en .
+
+cdt:organic-material a skos:Concept ;
+    skos:broader cdt:industrial-material ;
+    skos:definition "Earth material composed of organic compounds derived from the remains of dead organisms and their waste products in the environment. Larger molecules of organic matter can be formed from the polymerization of different parts of already broken down matter."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/organic-material> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "organic material"@en .
+
+cdt:quartz-gemstone a skos:Concept ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Quartz is the most common mineral on the face of the Earth. Some macrocrystalline (large crystal) varieties are well known and popular as ornamental stone and as gemstones."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/quartz-gemstone> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "quartz-gemstone"@en .
+
+cdt:base-metal a skos:Concept ;
+    skos:broader cdt:metal ;
+    skos:definition "In chemistry, the term base metal is used informally to refer to a metal that oxidizes or corrodes relatively easily and reacts variably with diluted hydrochloric acid (HCl) to form hydrogen. Examples include iron, nickel, lead and zinc. Copper is also considered a base metal because it oxidizes relatively easily, although it does not react with HCl."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/base-metal> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "base metal"@en .
+
+cdt:chemical-compound-product a skos:Concept ;
+    skos:broader cdt:produced-commodity ;
+    skos:definition "Commodity is a chemical compound that is extracted/processed from an ore material mined from the Earth."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/chemical-compound-product> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "chemical compound product"@en .
+
+cdt:clay a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "A clay-grade clastic-sediment, extremely common on the earth's surface. Clay is a fine-grained natural sediment, soil or rock component that comprises mostly one or more clay minerals or clays (hydrous phyllosilicates: mostly smectite, illite, chlorite and kandite) normally with trace to major amounts of quartz, iron and aluminium oxy-hydroxides (mostly goethite and gibbsite) and organic matter. Clays are soft and plastic when wet due to the platy particle shape and fine size and become hard, brittle and nonâ€“plastic upon drying. Clays are white or pale coloured when pure but appear in various colours from grey to black, green, yellow, brown or red when impure. Clays are usually distinguished by geologists or pedologists from other fine-grained soils and sediments by their grain size and/or mineralogy, though geotechnical engineers distinguish them by plasticity. Silts, which are fine-grained soils and sediments that are not normally dominated by clay minerals, have larger particle sizes than clays. Geologists usually consider the division to occur at a particle size of 2 Âµm, sedimentologists often use 4â€“5 Î¼m, and colloid chemists use 1 Î¼m. Geotechnical engineers distinguish between silts and clays based on the plasticity properties of the soil, as measured by the soils' Atterberg limits. ISO 14688 grades clay particles as being smaller than 2 Î¼m and silt particles as being larger."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/clay> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "CY" ;
+    skos:prefLabel "clay"@en .
+
+cdt:coal a skos:Concept ;
+    skos:broader cdt:carbonaceous-material ;
+    skos:definition "An organic-rich-rock with less than 50% ash (by weight air dried) or more than 50% organic matter. A sedimentary rock of organic origin consisting predominantly of carbonised plant remains."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/coal> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:notation "COAL" ;
+    skos:prefLabel "coal"@en .
+
 cdt:evaporite a skos:Concept ;
     skos:broader cdt:industrial-mineral ;
     skos:definition "Sedimentary rocks containing non-carbonate salts. The term 'evaporite' is more strictly a genetic term and sometimes these can be formed through other means. A nonclastic sedimentary rock composed primarily of minerals produced from a saline solution as a result of extensive or total evaporation of the water. Examples include gypsum, anhydrite, rock salt, and various nitrates and borates. The term sometimes includes rocks developed by metamorphism or transport of other evaporites."@en ;
@@ -1218,19 +2238,11 @@ cdt:ferrous-metal a skos:Concept ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "ferrous metal"@en .
 
-cdt:clay a skos:Concept ;
-    skos:broader cdt:industrial-mineral ;
-    skos:definition "A clay-grade clastic-sediment, extremely common on the earth's surface. Clay is a fine-grained natural sediment, soil or rock component that comprises mostly one or more clay minerals or clays (hydrous phyllosilicates: mostly smectite, illite, chlorite and kandite) normally with trace to major amounts of quartz, iron and aluminium oxy-hydroxides (mostly goethite and gibbsite) and organic matter. Clays are soft and plastic when wet due to the platy particle shape and fine size and become hard, brittle and nonï¿½plastic upon drying. Clays are white or pale coloured when pure but appear in various colours from grey to black, green, yellow, brown or red when impure. Clays are usually distinguished by geologists or pedologists from other fine-grained soils and sediments by their grain size and/or mineralogy, though geotechnical engineers distinguish them by plasticity. Silts, which are fine-grained soils and sediments that are not normally dominated by clay minerals, have larger particle sizes than clays. Geologists usually consider the division to occur at a particle size of 2 ï¿½m, sedimentologists often use 4ï¿½5 ï¿½m, and colloid chemists use 1 ï¿½m. Geotechnical engineers distinguish between silts and clays based on the plasticity properties of the soil, as measured by the soils' Atterberg limits. ISO 14688 grades clay particles as being smaller than 2 ï¿½m and silt particles as being larger."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/clay> ;
+cdt:produced-commodity a skos:Concept ;
+    skos:definition "Commodity is obtained by extracting from material mined from the Earth."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/produced-commodity> ;
     skos:inScheme cdt:conceptScheme ;
-    skos:notation "CY" ;
-    skos:prefLabel "clay"@en .
-
-cdt:direct-use-commodity a skos:Concept ;
-    skos:definition "Commodity mined and used directly as product, in many cases with some sort of 'beneficiation'."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/direct-use-commodity> ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "direct use commodity"@en ;
+    skos:prefLabel "produced commodity"@en ;
     skos:topConceptOf cdt:conceptScheme .
 
 cdt:industrial-material a skos:Concept ;
@@ -1240,6 +2252,14 @@ cdt:industrial-material a skos:Concept ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "industrial material"@en .
 
+cdt:light-rare-earth-elements a skos:Concept ;
+    skos:altLabel "LREE"@en ;
+    skos:broader cdt:rare-earth-element ;
+    skos:definition "Rare earth elements with atomic numbers 57 to 61, inclusive."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/lree> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "light rare earth elements"@en .
+
 cdt:metalloid a skos:Concept ;
     skos:broader cdt:produced-commodity ;
     skos:definition "A metalloid is a chemical element that has properties in between those of metals and nonmetals. There is no standard definition of a metalloid, nor is there complete agreement as to which elements are appropriately classified as such. Despite this lack of specificity, the term remains in use in chemistry literature. The six commonly recognised metalloids are boron, silicon, germanium, arsenic, antimony and tellurium."@en ;
@@ -1247,27 +2267,28 @@ cdt:metalloid a skos:Concept ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "metalloid"@en .
 
-cdt:chemical-oxide-product a skos:Concept ;
-    skos:broader cdt:chemical-compound-product ;
-    skos:definition "Commodity is a chemical compound product oxide that is extracted/processed from an ore material mined from the Earth."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/chemical-oxide-product> ;
+cdt:non-metal a skos:Concept ;
+    skos:broader cdt:produced-commodity ;
+    skos:definition "In chemistry, a nonmetal or non-metal is a chemical element which mostly lacks metallic attributes. Physically, nonmetals tend to be highly volatile (easily vaporised), have low elasticity, and are good insulators of heat and electricity; chemically, they tend to have high ionisation energy and electronegativity values, and gain or share electrons when they react with other elements or compounds. Seventeen elements are generally classified as nonmetals; most are gases (hydrogen, helium, nitrogen, oxygen, fluorine, neon, chlorine, argon, krypton, xenon and radon); one is a liquid (bromine); and a few are solids (carbon, phosphorus, sulfur, selenium, and iodine)."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/non-metal> ;
     skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "chemical oxide product"@en .
+    skos:prefLabel "non metal"@en .
 
-cdt:coal a skos:Concept ;
-    skos:broader cdt:carbonaceous-material ;
-    skos:definition "An organic-rich-rock with less than 50% ash (by weight air dried) or more than 50% organic matter. A sedimentary rock of organic origin consisting predominantly of carbonised plant remains."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/coal> ;
+cdt:platinum-group-metal a skos:Concept ;
+    skos:altLabel "PGE"@en,
+        "PGM"@en,
+        "platidises"@en,
+        "platinides"@en,
+        "platinoids"@en,
+        "platinum family"@en,
+        "platinum group"@en,
+        "platinum metals"@en,
+        "platinum-group elements"@en ;
+    skos:broader cdt:precious-metal ;
+    skos:definition "The platinum-group metals is a term used sometimes to collectively refer to six metallic elements clustered together in the periodic table."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/platinum-group> ;
     skos:inScheme cdt:conceptScheme ;
-    skos:notation "COAL" ;
-    skos:prefLabel "coal"@en .
-
-cdt:industrial-rock a skos:Concept ;
-    skos:broader cdt:industrial-material ;
-    skos:definition "Different kind of rock types, which are uses for industrial purposes."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/industrial-rock> ;
-    skos:inScheme cdt:conceptScheme ;
-    skos:prefLabel "industrial rock"@en .
+    skos:prefLabel "platinum group metal"@en .
 
 cdt:dimension-stone a skos:Concept ;
     skos:broader cdt:industrial-material ;
@@ -1283,6 +2304,20 @@ cdt:heavy-rare-earth-element a skos:Concept ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/hree> ;
     skos:inScheme cdt:conceptScheme ;
     skos:prefLabel "heavy rare earth element"@en .
+
+cdt:chemical-oxide-product a skos:Concept ;
+    skos:broader cdt:chemical-compound-product ;
+    skos:definition "Commodity is a chemical compound product oxide that is extracted/processed from an ore material mined from the Earth."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/chemical-oxide-product> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "chemical oxide product"@en .
+
+cdt:industrial-rock a skos:Concept ;
+    skos:broader cdt:industrial-material ;
+    skos:definition "Different kind of rock types, which are uses for industrial purposes."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/industrial-rock> ;
+    skos:inScheme cdt:conceptScheme ;
+    skos:prefLabel "industrial rock"@en .
 
 cdt:metal a skos:Concept ;
     skos:broader cdt:produced-commodity ;
