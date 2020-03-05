@@ -8,9 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/report-status> a owl:Ontology .
-
-rptst:conceptScheme a skos:ConceptScheme ;
+<http://linked.data.gov.au/def/report-status> a owl:Ontology , skos:ConceptScheme ;
     dct:created "2020-03-03T13:30:19+10:00"^^xsd:dateTime ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:modified "2020-03-03T13:30:19+10:00"^^xsd:dateTime ;
@@ -28,27 +26,27 @@ rptst:conceptScheme a skos:ConceptScheme ;
 rptst:abandoned a skos:Concept ;
     skos:altLabel "Cancelled"@en;
     skos:definition "The report was saved in the lodgement portal but not submitted within 90 days. Any S3 resources have been subsequently deleted."@en ;
-    skos:inScheme rptst:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/report-status> ;
     skos:prefLabel "Abandoned"@en ;
-    skos:topConceptOf rptst:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/report-status> .
 
 rptst:in-progress a skos:Concept ;
     skos:altLabel "Pending"@en,
         "Saved"@en,
         "Started"@en ;
     skos:definition "The report is in-progress and saved in the lodgement portal awaiting submission."@en ;
-    skos:inScheme rptst:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/report-status> ;
     skos:prefLabel "In-Progress"@en ;
-    skos:topConceptOf rptst:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/report-status> .
 
 rptst:screening a skos:Concept ;
     skos:definition "The report is held by the department for examination prior to submission being allowed"@en ;
-    skos:inScheme rptst:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/report-status> ;
     skos:prefLabel "Screening"@en ;
-    skos:topConceptOf rptst:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/report-status> .
 
 rptst:submitted a skos:Concept ;
     skos:definition "The report has been sucessfully submitted."@en ;
-    skos:inScheme rptst:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/report-status> ;
     skos:prefLabel "Submitted"@en ;
-    skos:topConceptOf rptst:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/report-status> .

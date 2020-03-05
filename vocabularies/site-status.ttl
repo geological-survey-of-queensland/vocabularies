@@ -8,9 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/site-status> a owl:Ontology .
-
-ststs:conceptScheme a skos:ConceptScheme ;
+<http://linked.data.gov.au/def/site-status> a owl:Ontology , skos:ConceptScheme ;
     dct:creator "Geological Survey of Queensland" ;
     dct:modified "2020-01-21T11:52:35+10:00"^^xsd:dateTime;
     dct:created "2020-02-07T14:52:42+10:00"^^xsd:dateTime ;
@@ -25,30 +23,30 @@ ststs:conceptScheme a skos:ConceptScheme ;
 
 ststs:abandoned a skos:Concept ;
     skos:definition "A site that has been abandoned or usage has been completed."@en ;
-    skos:inScheme ststs:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Abandoned"@en ;
-    skos:topConceptOf ststs:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
 
 ststs:active a skos:Concept ;
     skos:definition "A site in an active state of measuring, sampling or surveying."@en ;
-    skos:inScheme ststs:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Active"@en ;
-    skos:topConceptOf ststs:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
 
 ststs:never-used a skos:Concept ;
     skos:definition "A site that was proposed but was never used as a survey location and is no longer intended to be used for its original purpose."@en ;
-    skos:inScheme ststs:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Never Used"@en ;
-    skos:topConceptOf ststs:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
 
 ststs:proposed a skos:Concept ;
     skos:definition "A proposed survey site is not yet in-use."@en ;
-    skos:inScheme ststs:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Proposed"@en ;
-    skos:topConceptOf ststs:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
 
 ststs:unknown a skos:Concept ;
     skos:definition "A site that has been surveyed or sampled, but whose further status is unknown."@en ;
-    skos:inScheme ststs:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Unknown"@en ;
-    skos:topConceptOf ststs:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/site-status> .

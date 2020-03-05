@@ -8,9 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/resource-project-lifecycle> a owl:Ontology .
-
-prcls:conceptScheme a skos:ConceptScheme ;
+<http://linked.data.gov.au/def/resource-project-lifecycle> a owl:Ontology , skos:ConceptScheme ;
     dct:creator "Geological Survey of Queensland" ;
     dct:modified "2020-01-21T14:22:45+10:00"^^xsd:dateTime,
         "2020-01-21T14:24:22+10:00"^^xsd:dateTime ;
@@ -24,22 +22,22 @@ prcls:conceptScheme a skos:ConceptScheme ;
 
 prcls:appraisal a skos:Concept ;
     skos:definition "The stage in the life-cycle of a resource where the quantification of resources and reserves is performed and the potential for commericality is assessed. Definition of the size, quality, and physical properties of the resource."@en ;
-    skos:inScheme prcls:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "APP" ;
     skos:prefLabel "Appraisal"@en ;
-    skos:topConceptOf prcls:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
 
 prcls:development a skos:Concept ;
     skos:altLabel "Production"@en ;
     skos:definition "The stage in the life-cycle of a resource where resources are produced or stored. Production may consist of hydrocarbon extraction, mining and quarrying. Storage may include underground storage of petroleum in natural underground reservoirs."@en ;
-    skos:inScheme prcls:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "DEV" ;
     skos:prefLabel "Development"@en ;
-    skos:topConceptOf prcls:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
 
 prcls:exploration a skos:Concept ;
     skos:definition "The stage in the life-cycle of a resource where exploration for the presence of natural resource accumulations is performed"@en ;
-    skos:inScheme prcls:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "EXP" ;
     skos:prefLabel "Exploration"@en ;
-    skos:topConceptOf prcls:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .

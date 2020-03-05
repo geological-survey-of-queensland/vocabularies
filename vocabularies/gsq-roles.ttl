@@ -7,9 +7,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/gsq-roles> a owl:Ontology .
-
-gsqr:conceptScheme a skos:ConceptScheme ;
+<http://linked.data.gov.au/def/gsq-roles> a owl:Ontology , skos:ConceptScheme ;
     dct:created "2019-10-17"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:modified "2020-01-10"^^xsd:date ;
@@ -42,54 +40,54 @@ gsqr:QdexReportsRoles a skos:Collection ;
 gsqr:driller a skos:Concept ;
     skos:broader gsqr:contractor ;
     skos:prefLabel "Driller"@en ;
-    skos:inScheme isorole:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     skos:definition "The agent who drills or bores the borehole."@en ;
-    skos:topConceptOf gsqr:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
 gsqr:operator a skos:Concept ;
     skos:broader gsqr:contractor ;
     skos:prefLabel "Operator"@en ;
-    skos:inScheme isorole:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     skos:definition "The corporation or other entity that is the decision-maker and has responsibility for the overall management for the project."@en ;
-    skos:topConceptOf gsqr:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
 iso11179:Submitter a skos:Concept ;
     skos:altLabel "Lodger" ;
     skos:definition "A Submitter should be an organizational unit approved by a process defined by the Registration Authority. A Submitter is authorized to identify and report Administered Items suitable for registration. The Submitter can be viewed as a contact for the Submitting Organization."@en ;
     skos:inScheme iso11179:conceptScheme ;
     skos:prefLabel "Submitter"@en ;
-    skos:topConceptOf gsqr:conceptScheme,
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
         iso11179:conceptScheme ;
     skos:usageNote "In QDEX Reports, this role has been known as 'Lodger' but 'Submitter' is now the preferred term for it."@en .
 
 isorole:author a skos:Concept ;
     skos:definition "Agent who authored the resource"@en ;
-    skos:inScheme isorole:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
     skos:prefLabel "Author"@en ;
-    skos:topConceptOf gsqr:conceptScheme,
-        isorole:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
+        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
 
 isorole:owner a skos:Concept ;
     skos:altLabel "tenure holder" , "authority holder" , "permit holder" ;
     skos:definition "Agent that owns the resource"@en ;
-    skos:inScheme isorole:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115. The altLabels are drawn from P&G (general provisions) regulation 2017, section 37(4)"@en ;
     skos:prefLabel "Owner"@en ;
-    skos:topConceptOf gsqr:conceptScheme,
-        isorole:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
+        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
 
 isorole:publisher a skos:Concept ;
     skos:definition "Agent who published the resource"@en ;
-    skos:inScheme isorole:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
     skos:prefLabel "Publisher"@en ;
-    skos:topConceptOf gsqr:conceptScheme,
-        isorole:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
+        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
 
 gsqr:contractor a skos:Concept ;
     skos:prefLabel "Contractor"@en ;
-    skos:inScheme isorole:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     skos:definition "Contractors are agents who receive work contracts to perform activities on behalf of other agents, e.g. owners or operators."@en ;
     skos:scopeNote "Contractors should always act on behalf of (formally: prov:actedObBehalfOf) some other Agent, such as an Owner"@en ;
-    skos:topConceptOf gsqr:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .

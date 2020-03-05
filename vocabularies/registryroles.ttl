@@ -9,9 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix iso11179: <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities/> .
 
-<http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> a owl:Ontology .
-
-iso11179:conceptScheme a skos:ConceptScheme ;
+<http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> a owl:Ontology , skos:ConceptScheme ;
     dct:created "2019-10-17"^^xsd:date ;
     dct:creator [
         a sdo:Organization ;
@@ -42,64 +40,64 @@ iso11179:conceptScheme a skos:ConceptScheme ;
 
 iso11179:AllOthers a skos:Concept ;
     skos:definition "A Registration Authority may establish guidelines on the use of their Metadata Registry by other users. The general goal should be to provide an open area that anyone may use to obtain and explore the metadata that is managed within the Metadata Registry."@en ;
-    skos:inScheme iso11179:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> ;
     skos:prefLabel "All others"@en ;
-    skos:topConceptOf iso11179:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> .
 
 iso11179:ControlCommittee a skos:Concept ;
     skos:definition "The Control Committee should be the organizational unit of the Registration Authority that is constituted to provide technical direction and harmonization of Administered Items for the metadata register. The structure, staffing, procedures, and membership of the Control Committee are determined by the Registration Authority. The membership of the Control Committee may include Registrars and Stewards."@en ;
-    skos:inScheme iso11179:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> ;
     skos:prefLabel "Control Committee"@en ;
-    skos:topConceptOf iso11179:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> .
 
 iso11179:ExecutiveCommittee a skos:Concept ;
     skos:definition "The Executive Committee should be an organizational unit established by the Registration Authority. It should be responsible for administering responsibilities and authority delegated by the Registration Authority. Responsibilities of the Executive Committee should include overall metadata registration policies and business direction of the Metadata Registry."@en ;
-    skos:inScheme iso11179:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> ;
     skos:prefLabel "Executive Committee"@en ;
-    skos:topConceptOf iso11179:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> .
 
 iso11179:OverallRegistrationAuthority a skos:Concept ;
     skos:definition """The Metadata Registry Registration Authority should be an organizational unit that desires to operate and manage a Metadata Registry based upon the ISO/IEC 11179 Metadata Registry standard. It is envisioned that any organization wishing to become a Registration Authority and establish a Metadata Registry for the purpose of registering Administered Items may do so.\n
     A Registration Authority should establish and publish procedures for the operation of its Metadata Registry. A Registration Authority should receive and process proposals from Submitting Organizations for registration of Administered Items falling within its registration domain. A Registration Authority is responsible for maintaining the metadata register of Administered Items and issuing of international registration data identifiers (IRDIs)."""@en ;
-    skos:inScheme iso11179:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> ;
     skos:prefLabel "Overall Registration Authority"@en ;
-    skos:topConceptOf iso11179:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> .
 
 iso11179:OverallResponsibleOrganization a skos:Concept ;
     skos:definition """Responsible Organizations are usually designated by an organizational unit to insure consistence of related Administered Items managed by its Submitting Organizations. In the absence of a designated Responsible Organization, a Submitting Organization should act as a Responsible Organization.\n
 A Responsible Organization is the organization, or part thereof, that is responsible for the integrity and accuracy of the attributes values of the Administered Item; e.g., the semantics of Administered Items maintained and controlled by a Registration Authority. The Responsible Organization is the subject matter expert for the Administered Item.\n
 The Responsible Organization, at the Registration Authority&#39;s request, should review proposals from Submitting Organizations on relevant attributes, e.g., name, definition, and permissible values for the Administered Item&#39;s attributes. The Responsible Organization should inform the Registration Authority of any essential modifications in the specification of the assigned Administered Items."""@en ;
-    skos:inScheme iso11179:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> ;
     skos:prefLabel "Overall Responsible Organization"@en ;
-    skos:topConceptOf iso11179:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> .
 
 iso11179:OverallSubmittingOrganization a skos:Concept ;
     skos:definition """All Submitting Organizations wishing to register Administered Items should be able to do so in accordance with the procedures prescribed in this part of ISO/IEC 11179 and the procedures established by the Registration Authority. Each Registration Authority may establish its own criteria for registration eligibility.\n
 A Submitting Organization wishing to register an Administered Item should follow the procedures and requirements prescribed in this part of ISO/IEC 11179 and in and the procedures established by the Registration Authority for submission to the appropriate Registration Authority."""@en ;
-    skos:inScheme iso11179:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> ;
     skos:prefLabel "Overall Submitting Organization"@en ;
-    skos:topConceptOf iso11179:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> .
 
 iso11179:ReadOnlyUser a skos:Concept ;
     skos:definition "A Read-only User should be an organizational unit or individual that is approved to review the contents of the metadata register. A read-only user has access to the contents in the metadata register, but is not permitted to submit, alter, or delete contents."@en ;
-    skos:inScheme iso11179:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> ;
     skos:prefLabel "Read-only user"@en ;
-    skos:topConceptOf iso11179:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> .
 
 iso11179:Registrar a skos:Concept ;
     skos:definition "The Registrar should be an organizational unit within the Registration Authority, expert in registration processes, responsible for facilitating the registration of Administered Items and making those Administered Items widely accessible and available to the community. The Registrar may be viewed as the contact for the Registration Authority. The Registration Authority should appoint the Registrar."@en ;
-    skos:inScheme iso11179:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> ;
     skos:prefLabel "Registrar"@en ;
-    skos:topConceptOf iso11179:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> .
 
 iso11179:Steward a skos:Concept ;
     skos:definition "A Steward shall be an organizational unit of the Metadata Registry community. Stewards should be responsible for the accuracy, reliability, and currency of descriptive metadata for Administered Items at a registration status level of â€œQualifiedâ€ or above within an assigned area. A process defined by the Registration Authority approves stewards. Stewards should be responsible for metadata within specific areas and may have responsibilities that cut across multiple areas (e.g., value domains such as date, time, location, codes of the Countries of the World). The Steward can be viewed as a contact for the Responsible Organization."@en ;
-    skos:inScheme iso11179:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> ;
     skos:prefLabel "Steward"@en ;
-    skos:topConceptOf iso11179:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> .
 
 iso11179:Submitter a skos:Concept ;
     skos:definition "A Submitter should be an organizational unit approved by a process defined by the Registration Authority. A Submitter is authorized to identify and report Administered Items suitable for registration. The Submitter can be viewed as a contact for the Submitting Organization."@en ;
-    skos:inScheme iso11179:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> ;
     skos:prefLabel "Submitter"@en ;
-    skos:topConceptOf iso11179:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities> .

@@ -8,9 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/borehole-depth-datum> a owl:Ontology .
-
-bhdd:conceptScheme a skos:ConceptScheme ;
+<http://linked.data.gov.au/def/borehole-depth-datum> a owl:Ontology , skos:ConceptScheme ;
     dct:creator "Geological Survey of Queensland" ;
     dct:modified "2020-01-21T11:03:47+10:00"^^xsd:dateTime,
         "2020-01-21T11:06:04+10:00"^^xsd:dateTime ;
@@ -24,29 +22,29 @@ bhdd:conceptScheme a skos:ConceptScheme ;
 
 bhdd:drill-collar a skos:Concept ;
     skos:definition "A component of a drillstring that provides weight on bit for drilling. Drill collars are thick-walled tubular pieces machined from solid bars of steel or alloy. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:inScheme bhdd:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-depth-datum> ;
     skos:notation "DC" ;
     skos:prefLabel "Drill Collar"@en ;
-    skos:topConceptOf bhdd:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-depth-datum> .
 
 bhdd:ground-level a skos:Concept ;
     skos:definition "At surface ground level elevation absent of additional equipment."@en ;
-    skos:inScheme bhdd:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-depth-datum> ;
     skos:notation "GL" ;
     skos:prefLabel "Ground Level"@en ;
-    skos:topConceptOf bhdd:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-depth-datum> .
 
 bhdd:kelly-bushing a skos:Concept ;
     skos:definition "An adapter that serves to connect the rotary table to the kelly (A long square or hexagonal steel bar with a hole drilled through the middle for a fluid path). Source: Schlumberger Oilfield Glossary"@en ;
-    skos:inScheme bhdd:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-depth-datum> ;
     skos:notation "KB" ;
     skos:prefLabel "Kelly Bushing"@en ;
-    skos:topConceptOf bhdd:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-depth-datum> .
 
 bhdd:rotary-table a skos:Concept ;
     skos:definition "The revolving or spinning section of the drillfloor that provides power to turn the drillstring in a clockwise direction (as viewed from above). Source: Schlumberger Oilfield Glossary"@en ;
-    skos:inScheme bhdd:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-depth-datum> ;
     skos:notation "RT" ;
     skos:prefLabel "Rotary Table"@en ;
-    skos:topConceptOf bhdd:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-depth-datum> .
 
