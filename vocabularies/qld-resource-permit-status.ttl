@@ -1,6 +1,6 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix gmps: <http://linked.data.gov.au/def/qld-resource-permit-status/> .
+@prefix qrps: <http://linked.data.gov.au/def/qld-resource-permit-status/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -16,11 +16,11 @@
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source <https://myminesonline.business.qld.gov.au> ;
     skos:definition "The stage in the life cycle of a Queensland Resource Permit."@en ;
-    skos:hasTopConcept gmps:abandoned,
-        gmps:application,
-        gmps:granted,
-        gmps:non-current,
-        gmps:unsuccessful ;
+    skos:hasTopConcept qrps:abandoned,
+        qrps:application,
+        qrps:granted,
+        qrps:non-current,
+        qrps:unsuccessful ;
     skos:prefLabel "Queensland Resource Permit Status"@en .
 
 <http://linked.data.gov.au/org/gsq>
@@ -28,14 +28,14 @@
     sdo:name "Geological Survey of Queensland" ;
 .
 
-gmps:abandoned a skos:Concept ;
+qrps:abandoned a skos:Concept ;
     skos:altLabel "Discarded"@en ;
     skos:definition "An application for a permit that has been abandoned or discarded by the applicant."@en ;
     skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Abandoned"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> .
 
-gmps:application a skos:Concept ;
+qrps:application a skos:Concept ;
     skos:altLabel "Submitted"@en ;
     skos:hiddenLabel "Not Accepted"@en,
         "Pre-Lodgement"@en ;
@@ -44,20 +44,20 @@ gmps:application a skos:Concept ;
     skos:prefLabel "Application"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> .
 
-gmps:granted a skos:Concept ;
+qrps:granted a skos:Concept ;
     skos:altLabel "Current"@en ;
     skos:definition "A permit that has been granted under legislation."@en ;
     skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Granted"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> .
 
-gmps:non-current a skos:Concept ;
+qrps:non-current a skos:Concept ;
     skos:definition "A permit that was once granted but is now no longer active."@en ;
     skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Non-Current"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> .
 
-gmps:unsuccessful a skos:Concept ;
+qrps:unsuccessful a skos:Concept ;
     skos:definition "An application for a permit that was deemed unsuccessful by the Department."@en ;
     skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Unsuccessful"@en ;
