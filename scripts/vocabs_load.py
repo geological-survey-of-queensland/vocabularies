@@ -2,16 +2,21 @@ import requests
 import json
 from github import Github
 import base64
-import os
 from rdflib import Graph
 from scripts import config
 
 
-# create-repos or load-data
-def load_one_vocab_from_github(repo_id, vocab_file_name, base_url, label):
+def load_one_vocab_from_github(vocab_file_name, base_url, pref_label):
+    """Loads a turtle file of RDF from GitHub into a Named Graph (context) in GraphDB
+
+    :param vocab_file_name: the name of the file in the vocabularies folder in GitHub
+    :param base_url: the context URI (Named Graph URI) for the vocab
+    :param pref_label: the preferred label of the vocabulary
+    :return:
+    """
     namespace = base_url + '/'
     r = requests.post(
-        config.GRAPHDB_LOAD_DATA_URI.format(repo_id),
+        config.GRAPHDB_LOAD_DATA_URI,
         auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD),
         headers={'Content-Type': 'application/json', 'Accept': 'application/json'},
         json={
@@ -21,7 +26,7 @@ def load_one_vocab_from_github(repo_id, vocab_file_name, base_url, label):
             'forceSerial': True,
             'format': 'text/turtle',
             'message': '',
-            'name': label,
+            'name': pref_label,
             'parserSettings': {
                 'failOnUnknownDataTypes': True,
                 'failOnUnknownLanguageTags': True,
@@ -49,7 +54,8 @@ def load_one_vocab_from_github(repo_id, vocab_file_name, base_url, label):
     return "loaded"
 
 
-def load_all_background_onts_from_github(repo_id):
+# not used now
+def load_all_background_onts_from_github():
     print('Loading background ontologies from GitHub')
     background_onts = [
         {
@@ -77,7 +83,7 @@ def load_all_background_onts_from_github(repo_id):
     for ont in background_onts:
         print('Loading {}'.format(ont['name']))
         r = requests.post(
-            config.GRAPHDB_LOAD_DATA_URI.format(repo_id),
+            config.GRAPHDB_LOAD_DATA_URI,
             auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD),
             headers={
                 'Content-Type': 'application/json',
@@ -123,6 +129,11 @@ def load_all_background_onts_from_github(repo_id):
 
 
 def load_all_vocabs_details_from_github():
+    """Uses the GitHub API via the Python client to get all the vocab details from the files in
+    the vocabularies/ folder
+
+    :return: a dict of vocabularies' details
+    """
     print('Loading all vocabs from GitHub')
     print("Vocabs to be uploaded:")
     gh = Github(config.GITHUB_USR, config.GITHUB_PWD)
@@ -136,7 +147,7 @@ def load_all_vocabs_details_from_github():
             c += 1
     print("\n{} vocabs in total".format(c))
 
-    VOCABS = {}
+    vocabs = {}
     for content_file in contents:
         fn = content_file.path.replace("vocabularies/", "")
         if fn.endswith(".ttl"):
@@ -157,25 +168,27 @@ def load_all_vocabs_details_from_github():
                     }
                 '''
                 for r in g.query(q):
-                    VOCABS[fn] = {
+                    vocabs[fn] = {
                         "context_uri": str(r["uri"]),
                         "pref_label": str(r["pl"]),
                         "github_raw_uri": config.GITHUB_RAW_URI_BASE + fn
                     }
 
-    return VOCABS
+    return vocabs
 
 
+# not used
 def list_repositories():
     r = requests.get(
-        config.GRAPHDB_REPOS_URI,
+        config.GRAPHDB_REPO_URI,
         headers={'Accept': 'application/json'},
         auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD)
     )
 
-    return json.loads(r.content.decode('utf-8'))
+    return r.json
 
 
+# not used
 def delete_repo():
     r = requests.delete(
         config.GRAPHDB_REPO_URI,
@@ -189,7 +202,10 @@ def delete_repo():
 
 
 def purge_repo():
-    # clear repo of all vocabs
+    """Deletes (purges) all the triples from the repo given in config
+
+    :return: print ut of "ok" or error text
+    """
     print("Purging repo {}".format(config.GRAPHDB_REPO_ID))
     r = requests.delete(
         config.GRAPHDB_REPO_URI + "/statements",
@@ -202,6 +218,7 @@ def purge_repo():
         print(r.text)
 
 
+# not used
 def make_repo_config_file(template_file, base_url, repo_id, repo_label):
     with open(template_file, 'r') as f:
         config_template_contents = f.read()
@@ -211,20 +228,24 @@ def make_repo_config_file(template_file, base_url, repo_id, repo_label):
                     .replace('{base_url}', base_url)
 
 
+# not used
 def create_repo(repo_config):
     r = requests.post(
-        config.GRAPHDB_REPOS_URI,
+        config.GRAPHDB_REPO_URI,
         files={'config': ('config.ttl', repo_config)},
         auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD)
     )
 
     if r.status_code == 201:
-        print('Created repo {}'.format(repo_id))
+        print('Created repo {}'.format(config.GRAPHDB_REPO_ID))
     else:
-        print('ERROR: did not create repo {}, message: {}'.format(repo_id, r.text))
+        print('ERROR: did not create repo {}, message: {}'.format(config.GRAPHDB_REPO_ID, r.text))
 
 
 if __name__ == '__main__':
+    # purge the repo
+    purge_repo()
+
     # generate vocab index from GitHub
     VOCABS = load_all_vocabs_details_from_github()
 
@@ -232,7 +253,6 @@ if __name__ == '__main__':
     for file_name, details in VOCABS.items():
         print("Loading {}".format(file_name))
         x = load_one_vocab_from_github(
-            config.GRAPHDB_REPO_ID,
             file_name,
             details['context_uri'],
             details["pref_label"]
