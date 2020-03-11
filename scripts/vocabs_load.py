@@ -1,12 +1,14 @@
 import requests
 import json
+from github import Github
+import base64
 import os
-import rdflib
+from rdflib import Graph
 from scripts import config
 
 
 # create-repos or load-data
-def load_one_vocab_from_github(repo_id, vocab_id, base_url, label):
+def load_one_vocab_from_github(repo_id, vocab_file_name, base_url, label):
     namespace = base_url + '/'
     r = requests.post(
         config.GRAPHDB_LOAD_DATA_URI.format(repo_id),
@@ -14,8 +16,8 @@ def load_one_vocab_from_github(repo_id, vocab_id, base_url, label):
         headers={'Content-Type': 'application/json', 'Accept': 'application/json'},
         json={
             'baseURI': namespace,
-            'context': namespace,
-            'data': config.GITHUB_RAW_URI_BASE + vocab_id + '.ttl',
+            'context': base_url,
+            'data': config.GITHUB_RAW_URI_BASE + vocab_file_name,
             'forceSerial': True,
             'format': 'text/turtle',
             'message': '',
@@ -43,8 +45,8 @@ def load_one_vocab_from_github(repo_id, vocab_id, base_url, label):
     )
 
     if r.status_code != 201:
-        print(r.content.decode('utf-8'))
-    return r.status_code
+        return str(r.status_code) + "\n" + r.content.decode('utf-8')
+    return "loaded"
 
 
 def load_all_background_onts_from_github(repo_id):
@@ -120,29 +122,48 @@ def load_all_background_onts_from_github(repo_id):
     return True
 
 
-def load_all_vocabs_from_github(repo_id):
+def load_all_vocabs_details_from_github():
     print('Loading all vocabs from GitHub')
-    for file in os.listdir('.'):
-        if file.startswith('gsq-') and file.endswith('.ttl'):
-            g = rdflib.Graph().parse(file, format='turtle')
+    print("Vocabs to be uploaded:")
+    gh = Github(config.GITHUB_USR, config.GITHUB_PWD)
+    repo = gh.get_repo("geological-survey-of-queensland/vocabularies")
+    contents = repo.get_contents("vocabularies")
+    c = 0
+    for content_file in contents:
+        fn = content_file.path.replace("vocabularies/", "")
+        if fn.endswith(".ttl"):
+            print(" - " + fn)
+            c += 1
+    print("\n{} vocabs in total".format(c))
 
-            q = '''
-                PREFIX owl: <http://www.w3.org/2002/07/owl#>
-                PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-                SELECT ?uri ?pl
-                WHERE {
-                    ?uri a owl:Ontology .
-                    ?uri2 a skos:ConceptScheme ;
-                        skos:prefLabel ?name .
-                }
-            '''
-            for r in g.query(q):
-                vocab_id = r['uri'].split('/')[-1]
-                base_url = r['uri']
-                name = r['pl']
+    VOCABS = {}
+    for content_file in contents:
+        fn = content_file.path.replace("vocabularies/", "")
+        if fn.endswith(".ttl"):
+            if fn == "minerals.ttl":
+                print("Skipping minerals as too large")
+            else:
+                print("Reading {}".format(fn))
+                fc = repo.get_contents("vocabularies/" + fn)
+                data = base64.b64decode(fc.content).decode('utf-8')
+                g = Graph().parse(data=data, format="turtle")
+                q = '''
+                    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+                    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+                    SELECT ?uri ?pl
+                    WHERE {
+                        ?uri a owl:Ontology ;
+                            skos:prefLabel ?pl .
+                    }
+                '''
+                for r in g.query(q):
+                    VOCABS[fn] = {
+                        "context_uri": str(r["uri"]),
+                        "pref_label": str(r["pl"]),
+                        "github_raw_uri": config.GITHUB_RAW_URI_BASE + fn
+                    }
 
-                print('Loading {} {} {}'.format(vocab_id, base_url, name))
-                load_one_vocab_from_github(repo_id, vocab_id, base_url, name)
+    return VOCABS
 
 
 def list_repositories():
@@ -155,16 +176,30 @@ def list_repositories():
     return json.loads(r.content.decode('utf-8'))
 
 
-def delete_repo(repo_id):
+def delete_repo():
     r = requests.delete(
-        config.GRAPHDB_REPOS_URI + '/' + repo_id,
+        config.GRAPHDB_REPO_URI,
         auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD)
     )
 
     if r.status_code == 200:
-        print('Deleted repo {}'.format(repo_id))
+        print('Deleted repo {}'.format(config.GRAPHDB_REPO_ID))
     else:
-        print('ERROR: did not delete repo {}, message: {}'.format(repo_id, r.text))
+        print('ERROR: did not delete repo {}, message: {}'.format(config.GRAPHDB_REPO_ID, r.text))
+
+
+def purge_repo():
+    # clear repo of all vocabs
+    print("Purging repo {}".format(config.GRAPHDB_REPO_ID))
+    r = requests.delete(
+        config.GRAPHDB_REPO_URI + "/statements",
+        auth=(config.GRAPHDB_USR, config.GRAPHDB_PWD),
+        headers={"Accept": "application/json"}
+    )
+    if r.ok:
+        print("OK - deleted all statements")
+    else:
+        print(r.text)
 
 
 def make_repo_config_file(template_file, base_url, repo_id, repo_label):
@@ -190,5 +225,16 @@ def create_repo(repo_config):
 
 
 if __name__ == '__main__':
-    load_all_background_onts_from_github(config.REPO_ID)
-    load_all_vocabs_from_github(config.REPO_ID)
+    # generate vocab index from GitHub
+    VOCABS = load_all_vocabs_details_from_github()
+
+    # Load all vocabs
+    for file_name, details in VOCABS.items():
+        print("Loading {}".format(file_name))
+        x = load_one_vocab_from_github(
+            config.GRAPHDB_REPO_ID,
+            file_name,
+            details['context_uri'],
+            details["pref_label"]
+        )
+        print(x)
