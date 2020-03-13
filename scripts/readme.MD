@@ -21,3 +21,7 @@ Until this size issue is resolved, the **minerals.ttl** file must be manually im
 ## How to manually import TTL files
 
 See https://github.com/geological-survey-of-queensland/vocabularies/wiki/GraphDB-manual-import-of-TTL-files
+
+## Renew the VocPrez cache
+
+To refresh the VocPrez cache of vocabularies, restart **Apache httpd** on the VocPrez EC2 instance.
