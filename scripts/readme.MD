@@ -17,3 +17,7 @@ The **vocabs_load.py** file uses the **config.py** file for its configuration.
 NOTE: The current script will not load the file **minerals.ttl** as it exceeds 2MB.
 
 Until this size issue is resolved, the **minerals.ttl** file must be manually imported through the GraphDB administration interface.
+
+## How to manually import TTL files
+
+See https://github.com/geological-survey-of-queensland/vocabularies/wiki/GraphDB-manual-import-of-TTL-files
