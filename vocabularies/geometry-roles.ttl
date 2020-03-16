@@ -51,7 +51,7 @@ grole:bounding-box a skos:Concept ;
 grole:bounding-circle a skos:Concept ;
     skos:broader grole:boundary ;
     dct:source <https://en.wikipedia.org/wiki/Smallest-circle_problem> ;
-    skos:definition "The circle with the smallest area that contains all the Points in a Feature's Geometry.."@en ;
+    skos:definition "The circle with the smallest area that contains all the Points in a Feature's Geometry."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
     skos:prefLabel "Bounding circle"@en .
 
@@ -63,14 +63,14 @@ grole:boundary a skos:Concept ;
 
 grole:concave-hull a skos:Concept ;
     skos:broader grole:boundary ;
-    skos:definition "."@en ;
+    skos:definition "The minimum bounding Polygon encompassing all the Points in a Features Geometry, based on a user-defined distance threshold for vectors between Points."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
     skos:prefLabel "Concave hull"@en .
 
 grole:convex-hull a skos:Concept ;    
     dct:source <https://www.arcgis.com/home/item.html?id=a6129839e96d4c0682250673cd89589d> ;
     skos:broader grole:boundary ;
-    skos:definition "The minimum bounding Polygon for the all Points in a Feature's Geometry."@en ;
+    skos:definition "The minimum bounding Polygon encompassing all the all Points in a Feature's Geometry."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
     skos:prefLabel "Convex hull"@en .
 
