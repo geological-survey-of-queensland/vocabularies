@@ -1,8 +1,8 @@
 # Configuration file for vocabs_load.py file. Edit this template and save as config.py
 
 GRAPHDB_REPO_ID = 'GSQ_Vocabularies_Master' 
-GRAPHDB_REPO_URI = 'https://vocabs.geoscience.data.qld.gov.au/repositories/{}'.format(GRAPHDB_REPO_ID) 
-GRAPHDB_LOAD_DATA_URI = 'https://vocabs.geoscience.data.qld.gov.au/rest/data/import/upload/{}/url'.format(GRAPHDB_REPO_ID) 
+GRAPHDB_REPO_URI = 'http://graphdb.gsq.digital/repositories/{}'.format(GRAPHDB_REPO_ID) 
+GRAPHDB_LOAD_DATA_URI = 'http://graphdb.gsq.digital/rest/data/import/upload/{}/url'.format(GRAPHDB_REPO_ID) 
 GRAPHDB_USR = 'graphdb_username'
 GRAPHDB_PWD = 'graphdb_password'
 
