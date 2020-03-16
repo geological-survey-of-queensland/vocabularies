@@ -1,0 +1,67 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix srt: <http://linked.data.gov.au/def/survey-relationship-type/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/survey-relationship-type> a owl:Ontology .
+
+srt:conceptScheme a skos:ConceptScheme ;
+    dct:created "2020-02-20T12:00:39+10:00"^^xsd:dateTime ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2020-02-20T12:02:43+10:00"^^xsd:dateTime ;
+    dct:source "Developed by the Geological Survey of Queensland." ;
+    skos:definition "The relationships that exist between surveys."@en ;
+    skos:hasTopConcept srt:follow-up,
+        srt:reprocessing,
+        srt:resampling,
+        srt:same-project ;
+    skos:prefLabel "Survey relationship type"@en .
+
+srt:extension a skos:Concept ;
+    skos:broader srt:follow-up ;
+    skos:definition "A follow-up survey designed to extend the coverage of an existing survey, usually using the same parameters to ensure data compatibility."@en ;
+    skos:inScheme srt:conceptScheme ;
+    skos:prefLabel "Extension"@en .
+
+srt:infill a skos:Concept ;
+    skos:broader srt:follow-up ;
+    skos:definition "A follow-up survey designed to increase the spatial resolution of a pre-existing survey, usually using the same parameters to ensure data compatibility."@en ;
+    skos:inScheme srt:conceptScheme ;
+    skos:prefLabel "Infill"@en .
+
+srt:repeat a skos:Concept ;
+    skos:broader srt:follow-up ;
+    skos:definition "A follow-up survey designed to replicate the coverage and parameters of an existing survey. A repeat survey may, for example, be needed to correct errors or to reproduce results from the initial survey."@en ;
+    skos:inScheme srt:conceptScheme ;
+    skos:prefLabel "Repeat"@en .
+
+srt:follow-up a skos:Concept ;
+    skos:definition "A survey that was designed on the basis of lessons learned from a prior survey."@en ;
+    skos:inScheme srt:conceptScheme ;
+    skos:prefLabel "Follow-up"@en ;
+    skos:topConceptOf srt:conceptScheme .
+
+srt:reprocessing a skos:Concept ;
+    skos:definition "Generating a new digital sample by reprocessing pre-existing raw data with a new algorithm or processing parameters."@en ;
+    skos:inScheme srt:conceptScheme ;
+    skos:prefLabel "Reprocessing"@en ;
+    skos:topConceptOf srt:conceptScheme .
+
+srt:resampling a skos:Concept ;
+    skos:altLabel "subsampling"@en ;
+    skos:definition "Generating a new physical sample from an existing sample."@en ;
+    skos:inScheme srt:conceptScheme ;
+    skos:prefLabel "Resampling"@en ;
+    skos:topConceptOf srt:conceptScheme .
+
+srt:same-project a skos:Concept ;
+    skos:definition "Surveys that were conducted, concurrently or otherwise, during the course of a single project."@en ;
+    skos:inScheme srt:conceptScheme ;
+    skos:prefLabel "Same project"@en ;
+    skos:topConceptOf srt:conceptScheme .
+
