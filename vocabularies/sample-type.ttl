@@ -16,6 +16,7 @@
     skos:definition "Types of sample used in Geoscience."@en ;
     skos:hasTopConcept sampty:blasted-sample,
         sampty:bulk-cyanide-leach-sample,
+        sampty:borehole-cement,
         sampty:channel-sample,
         sampty:composited-core,
         sampty:composited-cuttings,
@@ -70,6 +71,12 @@ sampty:blasted-sample a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
     skos:notation "BLSAMP" ;
     skos:prefLabel "Blasted Sample"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
+
+sampty:borehole-cement a skos:Concept ;
+    skos:definition "The cement used to bind casing to the wall of a well or bore, for borehole integrity."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
+    skos:prefLabel "Borehole Cement"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
 
 sampty:bulk-cyanide-leach-sample a skos:Concept ;
@@ -162,10 +169,16 @@ sampty:hand-sample a skos:Concept ;
     skos:prefLabel "Hand Sample"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
 
+sampty:hydraulic-fracturing-fluid a skos:Concept ;
+    skos:definition "Fluid used in the hydraulic fracturing process."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
+    skos:prefLabel "Hyperspectral Scan"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
+
 sampty:hyperspectral-scan a skos:Concept ;
     skos:definition "A composite image comprised of multiple wavelength bands across the electromagnetic spectrum."@en ;
     skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
-    skos:prefLabel "Hyperspectral Scan"@en ;
+    skos:prefLabel "Hydraulic Fracturing Fluid"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
 
 sampty:macrofossil a skos:Concept ;
