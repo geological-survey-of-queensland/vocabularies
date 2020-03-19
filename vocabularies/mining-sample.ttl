@@ -10,6 +10,49 @@
 
 <http://linked.data.gov.au/def/mining-sample> a owl:Ontology .
 
+minsample:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-01-29T15:07:14.470000+10:00"^^xsd:dateTime ;
+    dct:description "Types of samples relevant to the mining industry"@en ;
+    skos:hasTopConcept minsample:Blasted_Sample,
+        minsample:Bulk_Cyanide_Leach_Sample,
+        minsample:Channel_Sample,
+        minsample:Composited_Core,
+        minsample:Composited_Cuttings,
+        minsample:Continuous_Channel_Sample,
+        minsample:Core,
+        minsample:Cuttings,
+        minsample:Drill_Spoil,
+        minsample:Drill_Stem_Test,
+        minsample:Feather_and_Wedge_Sample,
+        minsample:Float,
+        minsample:Hand_Sample,
+        minsample:Hand_Specimen,
+        minsample:Macrofossil,
+        minsample:Microfossil,
+        minsample:Ore_Sample,
+        minsample:Oriented_Sample,
+        minsample:Oriented_or_Orientation_Sample,
+        minsample:Paleomagnetic_Sample,
+        minsample:Pan_Concentrate,
+        minsample:Powdered_Chip,
+        minsample:Random_Dump_Sample,
+        minsample:Random_Sample,
+        minsample:Rock_Chips,
+        minsample:Scree,
+        minsample:Selected_Dump_Sample,
+        minsample:Selected_Sample,
+        minsample:Sidewall_Core,
+        minsample:Sieved_Stream_Sediment_Sample,
+        minsample:Sledge_Hammer_Sample,
+        minsample:Soil_Sample,
+        minsample:Stream_Sediment_Sample,
+        minsample:Suspended_Silt_Sample,
+        minsample:Termite_Mound,
+        minsample:Trench_Spoil,
+        minsample:Unspecified,
+        minsample:Wellhead ;
+    skos:prefLabel "Mining Sample"@en .
+
 minsample:Blasted_Sample a skos:Concept ;
     dct:created "2019-01-29T15:20:05.561000+10:00"^^xsd:dateTime ;
     dct:modified "2019-01-29T15:20:25.343000+10:00"^^xsd:dateTime ;
@@ -314,48 +357,3 @@ minsample:Wellhead a skos:Concept ;
     skos:inScheme minsample:conceptScheme ;
     skos:prefLabel "Wellhead"@en ;
     skos:topConceptOf minsample:conceptScheme .
-
-minsample:conceptScheme a skos:ConceptScheme ;
-    dct:created "2019-01-29T15:07:14.470000+10:00"^^xsd:dateTime ;
-    dct:description "Types of samples relevant to the mining industry"@en ;
-    skos:hasTopConcept minsample:Blasted_Sample,
-        minsample:Bulk_Cyanide_Leach_Sample,
-        minsample:Channel_Sample,
-        minsample:Composited_Core,
-        minsample:Composited_Cuttings,
-        minsample:Continuous_Channel_Sample,
-        minsample:Core,
-        minsample:Cuttings,
-        minsample:Drill_Spoil,
-        minsample:Drill_Stem_Test,
-        minsample:Feather_and_Wedge_Sample,
-        minsample:Float,
-        minsample:Hand_Sample,
-        minsample:Hand_Specimen,
-        minsample:Macrofossil,
-        minsample:Microfossil,
-        minsample:Ore_Sample,
-        minsample:Oriented_Sample,
-        minsample:Oriented_or_Orientation_Sample,
-        minsample:Paleomagnetic_Sample,
-        minsample:Pan_Concentrate,
-        minsample:Powdered_Chip,
-        minsample:Random_Dump_Sample,
-        minsample:Random_Sample,
-        minsample:Rock_Chips,
-        minsample:Scree,
-        minsample:Selected_Dump_Sample,
-        minsample:Selected_Sample,
-        minsample:Sidewall_Core,
-        minsample:Sieved_Stream_Sediment_Sample,
-        minsample:Sledge_Hammer_Sample,
-        minsample:Soil_Sample,
-        minsample:Stream_Sediment_Sample,
-        minsample:Suspended_Silt_Sample,
-        minsample:Termite_Mound,
-        minsample:Trench_Spoil,
-        minsample:Unspecified,
-        minsample:Wellhead ;
-    skos:prefLabel "Mining Sample"@en .
-
-
