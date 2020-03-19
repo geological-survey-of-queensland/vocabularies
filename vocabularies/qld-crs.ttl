@@ -21,7 +21,8 @@
         qldcrs:geocentric-datum-of-australia-1994,
         qldcrs:geocentric-datum-of-australia-2020,
         qldcrs:map-grid-of-australia-1994,
-        qldcrs:map-grid-of-australia-2020 ;
+        qldcrs:map-grid-of-australia-2020,
+        qldcrs:world-geodetic-system-1984 ;
     skos:prefLabel "Queensland CRS"@en .
 
 qldcrs:geographic a skos:Collection ;
@@ -29,7 +30,8 @@ qldcrs:geographic a skos:Collection ;
     skos:member qldcrs:australian-geodetic-datum-1966,
         qldcrs:australian-geodetic-datum-1984,
         qldcrs:geocentric-datum-of-australia-1994,
-        qldcrs:geocentric-datum-of-australia-22 ;
+        qldcrs:geocentric-datum-of-australia-2020
+        qldcrs:world-geodetic-system-1984 ;
     skos:prefLabel "Geographic"@en .
 
 qldcrs:projected a skos:Collection ;
@@ -96,3 +98,9 @@ qldcrs:map-grid-of-australia-2020 a skos:Concept ;
     skos:prefLabel "Map Grid of Australia 2020"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
 
+qldcrs:world-geodetic-system-1984 a skos:Concept ;
+    skos:definition "The official world geodetic datum adopted in 1984. WGS84 is a coordinate reference system whose origin coincides with a determination of the centre of mass of the earth. The datum defines meridan 0 as IERS Reference Meridian and the datum surface is an oblate spheroid."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "WGS84" ;
+    skos:prefLabel "World Geodetic System 1984"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
