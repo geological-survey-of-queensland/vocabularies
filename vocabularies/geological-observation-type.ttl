@@ -46,13 +46,16 @@
         obtyp:proximity-of-orebody-obrackrelated-intervalcbrack,
         obtyp:quartz-textures,
         obtyp:regolith-observations,
+        obtyp:reservoir-interval
         obtyp:rock-classification,
         obtyp:sedimentary-lithofacies,
         obtyp:sedimentary-structures,
         obtyp:shape-of-object,
+        obtyp:stratigraphic-interval
         obtyp:tectonic-structures,
         obtyp:textures,
         obtyp:weathering-features,
+        obtyp:well-completion-interval,
         obtyp:younging ;
     skos:prefLabel "Observation Type"@en .
 
@@ -280,6 +283,13 @@ obtyp:regolith-observations a skos:Concept ;
     skos:prefLabel "Regolith Observations"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type>  .
 
+obtyp:reservoir-interval a skos:Concept ;
+    skos:definition "The observation of reservoir intervals and their properties for fluid storage and movement such as permeability, porosity, and saturation."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-type>  ;
+    skos:notation "RSVR" ;
+    skos:prefLabel "Reservoir Interval"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type>  .
+
 obtyp:rock-classification a skos:Concept ;
     skos:definition "The classification of a rock."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-type>  ;
@@ -308,6 +318,13 @@ obtyp:shape-of-object a skos:Concept ;
     skos:prefLabel "Shape of Object"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type>  .
 
+obtyp:stratigraphic-interval a skos:Concept ;
+    skos:definition "The observation of the downhole stratigraphic intervals and geological formations."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-type>  ;
+    skos:notation "STRT" ;
+    skos:prefLabel "Stratigraphic Interval"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type>  .
+
 obtyp:tectonic-structures a skos:Concept ;
     skos:definition "The observable tectonic structures."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-type>  ;
@@ -327,6 +344,13 @@ obtyp:weathering-features a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-type>  ;
     skos:notation "WETH" ;
     skos:prefLabel "Weathering Features"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type>  .
+
+obtyp:well-completion-interval a skos:Concept ;
+    skos:definition "The observation of the cset of zones within a well bore designed to put the wellbore in contact with targeted stratigraphic units."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-type>  ;
+    skos:notation "STRT" ;
+    skos:prefLabel "Stratigraphic Interval"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type>  .
 
 obtyp:younging a skos:Concept ;
