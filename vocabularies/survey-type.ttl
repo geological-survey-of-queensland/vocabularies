@@ -31,7 +31,8 @@
         svytp:process,
         svytp:radiometric,
         svytp:seismic,
-        svytp:spectral ;
+        svytp:spectral,
+        svytp:velocity ;
     skos:prefLabel "Survey Type"@en .
 
 svytp:airborne a skos:Collection ;
@@ -61,7 +62,8 @@ svytp:downhole a skos:Collection ;
         svytp:petrophysical,
         svytp:photographic,
         svytp:radiometric,
-        svytp:spectral ;
+        svytp:spectral,
+        svytp:velocity ;
     skos:prefLabel "Downhole"@en .
 
 svytp:ground a skos:Collection ;
@@ -141,6 +143,13 @@ svytp:petrophysical a skos:Concept ;
     skos:definition "The process of recording various physical, chemical, electrical, or other properties of the rock/fluid mixtures penetrated by a borehole."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
     skos:prefLabel "Petrophysical"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
+
+svytp:velocity a skos:Concept ;
+    skos:altLabel "Checkshot"@en ;
+    skos:definition "The process of recording the average sonic velocity with depth down a borehole."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:prefLabel "Velocity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
 svytp:physical-geology a skos:Concept ;
