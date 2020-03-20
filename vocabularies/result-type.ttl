@@ -16,7 +16,6 @@
     skos:definition "The description and definition of the qualitative and quantitative results obtained through geoscience observations."@en ;
     skos:hasTopConcept rslt:angle,
         rslt:age,
-        rslt:angle,
         rslt:api-gravity,
         rslt:area,
         rslt:capacitance,
@@ -37,6 +36,7 @@
         rslt:drill-rate,
         rslt:electric-charge,
         rslt:electric-current,
+        rslt:elevation,
         rslt:energy,
         rslt:energy-density,
         rslt:flow-rate,
@@ -90,12 +90,14 @@
 rslt:age a skos:Concept ;
     skos:definition "The time before a reference time. Commonly referenced to time before present (BP), before current era (BCE), or represented as Millions of Years Ago (Ma) in geological disciplines"@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rage" ;
     skos:prefLabel "Age"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:angle a skos:Concept ;
     skos:definition "In plane geometry, an angle is the figure formed by two rays, called the sides of the angle, sharing a common endpoint, called the vertex of the angle."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rang" ;
     skos:prefLabel "Angle"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -103,30 +105,35 @@ rslt:api-gravity a skos:Concept ;
     skos:altLabel "Oil Gravity"@en ;
     skos:definition "A measure of how heavy or light a petroleum liquid is compared to water: if its API gravity is greater than 10, it is lighter and floats on water; if less than 10, it is heavier and sinks."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rapi" ;
     skos:prefLabel "API Gravity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:area a skos:Concept ;
     skos:definition "The quantity that expresses the extent of a two-dimensional figure or shape or planar lamina, in the plane. Surface area is its analog on the two-dimensional surface of a three-dimensional object."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rara" ;
     skos:prefLabel "Area"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:capacitance a skos:Concept ;
     skos:definition "The ratio of the change in electric charge of a system, to the corresponding change in its electric potential."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rcap" ;
     skos:prefLabel "Capacitance"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:casing-weight a skos:Concept ;
     skos:definition "The mass per unit of length of a length of tubular installed in a borehole."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rcsw" ;
     skos:prefLabel "Casing Weight"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:colour a skos:Concept ;
     skos:definition "The qualitative description of the colour of an object."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rcol" ;
     skos:prefLabel "Colour"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -134,23 +141,27 @@ rslt:composition a skos:Concept ;
     skos:definition "A description of the component parts of a sample or object. Typically given as a component with its percentage or ratio within a bulk sample."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:prefLabel "Composition"@en ;
+    skos:notation "rcmp" ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:compressibility a skos:Concept ;
     skos:definition "A measure of the relative volume change of a fluid or solid as a response to a pressure (or mean stress) change."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rcpb" ;
     skos:prefLabel "Compressibility"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:compressive-strength a skos:Concept ;
     skos:definition "The capacity to withstand axially directed pushing forces"@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rcps" ;
     skos:prefLabel "Compressive Strength"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:concentration a skos:Concept ;
     skos:definition "The abundance of a constituent divided by the total volume of a mixture."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rctn" ;
     skos:prefLabel "Concentration"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -158,56 +169,65 @@ rslt:conductivity a skos:Concept ;
     skos:altLabel "Electrical Conductance"@en ;
     skos:definition "A measure of a material's ability to conduct an electric current."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rcnd" ;
     skos:prefLabel "Conductivity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:count a skos:Concept ;
     skos:definition "A quanitifation of the absolute number of discrete objects, groups, or sets."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rcnt" ;
     skos:prefLabel "Count"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:cost a skos:Concept ;
     skos:definition "The monetary value, cost, or price (in a unit of currency) for goods, services, or items."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rcst" ;
     skos:prefLabel "Cost"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:data a skos:Concept ;
     skos:definition "The amount of data or information held by an electronic and measurable means. Typically reported in bytes or a derivative unit."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rdat" ;
     skos:prefLabel "Data"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:density a skos:Concept ;
     skos:definition "The density (more precisely, the volumetric mass density; also known as specific mass), of a substance is its mass per unit volume."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rden" ;
     skos:prefLabel "Density"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:descriptive a skos:Concept ;
     skos:definition "A decription of a subject or object of interest."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rdsc" ;
     skos:prefLabel "Descriptive"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:distance a skos:Concept ;
     skos:definition "The length of travel along a path that may be non-linear."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rdis" ;
     skos:prefLabel "Distance"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
-rslt:dog-leg-severity a skos:Concept ;
-    skos:altLabel "Curvature"@en ;
+rslt:curvature a skos:Concept ;
+    skos:altLabel "Dog Leg Severity"@en ;
     skos:definition "The curvature of a line or length of material. The change in angle per unit of length. Used in oil and gas to describe the curvature of a wellbore."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
-    skos:prefLabel "Dog Leg Severity"@en ;
+    skos:notation "rdls" ;
+    skos:prefLabel "Curvature"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:drill-rate a skos:Concept ;
     skos:altLabel "Rate of Penetration"@en ;
     skos:definition "The rate that a drillbit penetrates the subsurface substrate and creates wellbore length."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rdlr" ;
     skos:prefLabel "Drill Rate"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -215,6 +235,7 @@ rslt:electric-charge a skos:Concept ;
     skos:altLabel "Electrical Charge"@en ;
     skos:definition "The physical property of matter that causes it to experience a force when placed in an electromagnetic field. There are two types of electric charge: positive and negative (commonly carried by protons and electrons respectively)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "relc" ;
     skos:prefLabel "Electric Charge"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -222,12 +243,23 @@ rslt:electric-current a skos:Concept ;
     skos:altLabel "Electrical Current"@en ;
     skos:definition "The rate of flow of electric charge past a point or region."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "relr" ;
     skos:prefLabel "Electric Current"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
+rslt:elevation a skos:Concept ;
+    skos:altLabel "Altitude"@en,
+        "Height" ;
+    skos:definition "The distance vertically upward from a reference point, surface, or datum."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "relv" ;
+    skos:prefLabel "Elevation"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:energy a skos:Concept ;
     skos:definition "The quantitative property that must be transferred to an object in order to perform work on, or to heat, the object."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "reng" ;
     skos:prefLabel "Energy"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -236,6 +268,7 @@ rslt:energy-density a skos:Concept ;
         "Heat Content"@en ;
     skos:definition "The amount of energy stored in a given system or region of space per unit volume e.g. PJ/Mm3."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rend" ;
     skos:prefLabel "Energy Density"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -243,6 +276,7 @@ rslt:flow-rate a skos:Concept ;
     skos:altLabel "Volumetric Flow Rate"@en ;
     skos:definition "The volume of fluid which passes a point or region per unit time."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rflr" ;
     skos:prefLabel "Flow Rate"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -250,24 +284,28 @@ rslt:fluid-density a skos:Concept ;
     skos:altLabel "Mud Weight"@en ;
     skos:definition "The mass per unit volume of a fluid. Commonly used as a quantity for drilling fluids and cement in relation to boreholes."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rfld" ;
     skos:prefLabel "Fluid Density"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:force a skos:Concept ;
     skos:definition "Any interaction that, when unopposed, will change the motion of an object."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rfrc" ;
     skos:prefLabel "Force"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:frequency a skos:Concept ;
     skos:definition "The number of occurrences of a repeating event per unit of time."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rfrq" ;
     skos:prefLabel "Frequency"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:gas-content a skos:Concept ;
     skos:definition "The amount of gas, typically hydrocarbon, contained or within solid or liquid. Commonly used to describe to the amount of gas adsorbed to a mass of coal."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rgsc" ;
     skos:prefLabel "Gas Content"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -275,54 +313,63 @@ rslt:grain-shape a skos:Concept ;
     skos:altLabel "Roundness"@en ;
     skos:definition "The degree of smoothing due to abrasion of sedimentary particles i.e. well-rounded, rounded, sub-rounded, sub-angular, angular, very angular."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rgrs" ;
     skos:prefLabel "Grain Shape"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:grain-size a skos:Concept ;
     skos:definition "The diameter of individual grains of sediment, or the lithified particles in clastic rocks. The term may also be applied to other granular materials."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rgrz" ;
     skos:prefLabel "Grain Size"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:heat a skos:Concept ;
     skos:definition "Energy in transfer to or from a thermodynamic system, by mechanisms other than thermodynamic work or transfer of matter."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rhet" ;
     skos:prefLabel "Heat"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:illuminance a skos:Concept ;
     skos:definition "The total luminous flux incident on a surface, per unit area."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rill" ;
     skos:prefLabel "Illuminance"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:inductance a skos:Concept ;
     skos:definition "The tendency of an electrical conductor to oppose a change in the electric current flowing through it."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rind" ;
     skos:prefLabel "Inductance"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:length a skos:Concept ;
     skos:definition "A measure of distance in one dimension."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rlen" ;
     skos:prefLabel "Length"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:luminous-flux a skos:Concept ;
     skos:definition "The measure of the perceived power of light. It differs from radiant flux, the measure of the total power of electromagnetic radiation (including infrared, ultraviolet, and visible light), in that luminous flux is adjusted to reflect the varying sensitivity of the human eye to different wavelengths of light."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rlfx" ;
     skos:prefLabel "Luminous Flux"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:luminous-intensity a skos:Concept ;
     skos:definition "A measure of the wavelength-weighted power emitted by a light source in a particular direction per unit solid angle, based on the luminosity function, a standardized model of the sensitivity of the human eye."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rlin" ;
     skos:prefLabel "Luminous Intensity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:magnetic-flux a skos:Concept ;
     skos:definition "The surface integral of the normal component of the magnetic field flux density B passing through that surface."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rmfx" ;
     skos:prefLabel "Magnetic Flux"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -332,18 +379,21 @@ rslt:magnetic-flux-density a skos:Concept ;
         "Magnetic Induction"@en ;
     skos:definition "The force a magnetic field exerts on a moving charged particle."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rmfd" ;
     skos:prefLabel "Magnetic Flux Density"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:mass a skos:Concept ;
     skos:definition "A property of a physical body and a measure of its resistance to acceleration (a change in its state of motion) when a net force is applied."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rmss" ;
     skos:prefLabel "Mass"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:measured-depth a skos:Concept ;
     skos:definition "The depth below a reference point or reference datum along a defined path. Commonly used along the path of a wellbore."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rmmd" ;
     skos:notation "MD" ;
     skos:prefLabel "Measured Depth"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
@@ -351,30 +401,35 @@ rslt:measured-depth a skos:Concept ;
 rslt:oil-quality a skos:Concept ;
     skos:definition "Value for the thermal quality of oil reported. This is often recorded in British Thermal Units (BTUs) and can be used to calculate the Barrel of Oil Equivalent (BOE)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rolq" ;
     skos:prefLabel "Oil Quality"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:permeability a skos:Concept ;
     skos:definition "A measure of the ability of a material (such as rocks) to transmit fluids."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rprm" ;
     skos:prefLabel "Permeability"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:porosity a skos:Concept ;
     skos:definition "A measure of the void (i.e. 'empty') spaces in a material, and is a fraction of the volume of voids over the total volume, between 0 and 1, or as a percentage between 0% and 100%."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rpor" ;
     skos:prefLabel "Porosity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:power a skos:Concept ;
     skos:definition "The rate of doing work or of transferring heat, i.e. the amount of energy transferred or converted per unit time."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rpow" ;
     skos:prefLabel "Power"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:pressure a skos:Concept ;
     skos:definition "The force applied perpendicular to the surface of an object per unit area over which that force is distributed."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rprs" ;
     skos:prefLabel "Pressure"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -385,6 +440,7 @@ rslt:radioactivity a skos:Concept ;
         "radioactive disintegration"@en ;
     skos:definition "The process by which an unstable atomic nucleus loses energy by radiation. A material containing unstable nuclei is considered radioactive."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rrad" ;
     skos:prefLabel "Radioactivity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -392,6 +448,7 @@ rslt:resitivity a skos:Concept ;
     skos:altLabel "Resistance"@en ;
     skos:definition "The measure of the degree to which a conductor opposes an electric current through that conductor."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rres" ;
     skos:prefLabel "Resitivity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -399,18 +456,21 @@ rslt:rotation a skos:Concept ;
     skos:altLabel "Rotation Rate"@en ;
     skos:definition "A measure of the rate of circular movement of an object around a center (or point) of rotation."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rrtt" ;
     skos:prefLabel "Rotation"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:saturation a skos:Concept ;
     skos:definition "A measure of the amount of a substance contained within a volume or another material relative to the maximum theoretical amount of substance that could be contained under the same conditions."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rsat" ;
     skos:prefLabel "Saturation"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:shear-strength a skos:Concept ;
     skos:definition "The ability to withstand the strength of a material or component against the type of yield or structural failure when the material or component fails in shear. A shear load is a force that tends to produce a sliding failure on a material along a plane that is parallel to the direction of the force. When a paper is cut with scissors, the paper fails in shear.shearing"@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rshs" ;
     skos:prefLabel "Shear Strength"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -418,60 +478,70 @@ rslt:sorting a skos:Concept ;
     skos:altLabel "Sedimentary Sorting"@en ;
     skos:definition "The distribution of grain size of sediments, either in unconsolidated deposits or in sedimentary rocks. Very poorly sorted indicates that the sediment sizes are mixed (large variance); whereas well sorted indicates that the sediment sizes are similar (low variance)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rsrt" ;
     skos:prefLabel "Sorting"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:spacing a skos:Concept ;
     skos:definition "The regular, or average, distance between recurrences of a feature along a transect or across an object."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rspc" ;
     skos:prefLabel "Spacing"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:sphericity a skos:Concept ;
     skos:definition "A measure of how closely the shape of an object resembles that of a perfect sphere."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rsph" ;
     skos:prefLabel "Sphericity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:stiffness a skos:Concept ;
     skos:definition "The extent to which an object resists deformation in response to an applied force."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rstf" ;     
     skos:prefLabel "Stiffness"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:strain a skos:Concept ;
     skos:definition "Strain is a measure of deformation representing the displacement between particles in the body relative to a reference length."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rstn" ;
     skos:prefLabel "Strain"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:stress a skos:Concept ;
     skos:definition "A physical quantity that expresses the internal forces that neighbouring particles of a continuous material exert on each other, while strain is the measure of the deformation of the material."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rsts" ;
     skos:prefLabel "Stress"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:temperature a skos:Concept ;
     skos:definition "A physical property of matter that quantitatively expresses hot and cold. Temperature is the manifestation of thermal energy, present in all matter, which is the source of the occurrence of heat, a flow of energy, when a body is in contact with another that is colder."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rtmp" ;
     skos:prefLabel "Temperature"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:tensile-strength a skos:Concept ;
     skos:definition "The maximum stress that a material can withstand while being stretched or pulled before breaking."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rtns" ;
     skos:prefLabel "Tensile Strength"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:time a skos:Concept ;
     skos:definition "The indefinite continued progress of existence and events that occur in an apparently irreversible succession from the past, through the present, into the future."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rtme" ;
     skos:prefLabel "Time"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:true-vertical-depth a skos:Concept ;
     skos:definition "The depth below a reference point or reference datum in a direct vertical direction."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rtvd" ;
     skos:notation "TVD" ;
     skos:prefLabel "True Vertical Depth"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
@@ -479,12 +549,14 @@ rslt:true-vertical-depth a skos:Concept ;
 rslt:velocity a skos:Concept ;
     skos:definition "The rate of change of its position with respect to a frame of reference, and is a function of time."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rvel" ;
     skos:prefLabel "Velocity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:viscosity a skos:Concept ;
     skos:definition "A measure of the resistance to deformation of a fluid at a given rate. For liquids, it corresponds to the informal concept of 'thickness': for example, syrup has a higher viscosity than water."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rvis" ;
     skos:prefLabel "Viscosity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -494,42 +566,48 @@ rslt:voltage a skos:Concept ;
         "electric tension"@en ;
     skos:definition "The difference in electric potential between two points. The voltage in a static electric field is defined as the work needed per unit of charge to move a test charge between the two points."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rvlt" ;
     skos:prefLabel "Voltage"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:volume a skos:Concept ;
     skos:definition "The quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rvol" ;
     skos:prefLabel "Volume"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:wavelength a skos:Concept ;
     skos:definition "The wavelength is the spatial period of a periodic wave the distance over which the shape of a wave repeats."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rwvl" ;
     skos:prefLabel "Wavelength"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:weight a skos:Concept ;
     skos:definition "The weight of an object is related to the force acting on the object, either due to gravity or to a reaction force that holds it in place."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rwgt" ;
     skos:prefLabel "Weight"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:weight-on-bit a skos:Concept ;
     skos:definition "The weight or force applied to a drill bit in the process of drilling a borehole."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rwob" ;
     skos:prefLabel "Weight on Bit"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:work a skos:Concept ;
     skos:definition "The product of force and displacement. A force is said to do work if, when acting, there is a movement of the point of application in the direction of the force."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rwrk" ;
     skos:prefLabel "Work"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:yield-point a skos:Concept ;
     skos:definition "The point on a stress-strain curve that indicates the limit of elastic behavior and the beginning of plastic behavior."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "ryld" ;
     skos:prefLabel "Yield Point"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
-
