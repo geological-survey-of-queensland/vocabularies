@@ -19,6 +19,7 @@
         gsqst:cutting,
         gsqst:field-site,
         gsqst:mine,
+        gsqst:mineral-occurrence
         gsqst:pit,
         gsqst:project-site,
         gsqst:wellbore,
@@ -145,6 +146,15 @@ gsqst:mine a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
     skos:notation "mi" ;
     skos:prefLabel "Mine"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+
+gsqst:mineral-occurrence a skos:Concept ;
+    skos:altLabel "Quarry"@en ;
+    dct:source "Source: USGS" ;
+    skos:definition "a concentration of a mineral (usually, but not necessarily, considered in terms of some commodity, such as copper, barite or gold) that is considered valuable by someone somewhere, or that is of scientific or technical interest."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "mo" ;
+    skos:prefLabel "Mineral Occurrence"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
 
 gsqst:pit a skos:Concept ;
