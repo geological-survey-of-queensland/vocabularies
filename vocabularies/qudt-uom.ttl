@@ -1,0 +1,1059 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://qudt.org/community/geoprofile/units>
+    a skos:ConceptScheme ;
+    skos:prefLabel "Units vocabulary of the Geoscience Profile of QUDT"@en ;
+    skos:definition "This vocabulary contains units of measure deemed to be of relevance to the geosciences." ;
+    dcterms:created "2020-03-23"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-03-23"^^xsd:date ;
+    dcterms:publisher <http://qudt.org> ;
+    skos:hasTopConcept 
+        unit:ATM ,
+        unit:BAR ,
+        unit:BBL ,
+        unit:BTU_IT ,
+        unit:BYTE ,
+        unit:CentiM ,
+        unit:CentiP ,
+        unit:DAY ,
+        unit:DEG_C ,
+        unit:FT ,
+        unit:FT3 ,
+        unit:GAL_IMP ,
+        unit:GAL_US ,
+        unit:GM ,
+        unit:HR ,
+        unit:HZ ,
+        unit:IN ,
+        unit:J ,
+        unit:K ,
+        unit:KiloGM ,
+        unit:L ,
+        unit:LB_F ,
+        unit:LB_M ,
+        unit:M ,
+        unit:M3 ,
+        unit:MilliM ,
+        unit:MIN ,
+        unit:MO ,
+        unit:N ,
+        unit:NanoSEC ,
+        unit:OZ ,
+        unit:PA ,
+        unit:PERCENT ,
+        unit:SEC ,
+        unit:TON_M ,
+        unit:WK ,
+        unit:YR ;
+.
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> ;
+.
+<http://qudt.org>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <http://qudt.org> ;
+.
+
+unit:ATM a qudt:CGS-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Standard Atmosphere"@en ;
+    skos:definition "<p class=\"lm-para\">The standard atmosphere (symbol: atm) is an international reference pressure defined as \\(101.325 \\,kPa\\) and formerly used as unit of pressure. For practical purposes it has been replaced by the bar which is \\(100 kPa\\). The difference of about 1% is not significant for many applications, and is within the error range of common pressure gauges.</p>"@en ;
+    qudt:conversionMultiplier 1.01325e+05 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/ForcePerArea> ;
+    qudt:iec61360Code "0112/2///62720#UAA322" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Atmosphere_(unit)"^^xsd:anyURI ;
+    qudt:symbol "atm" ;
+    qudt:ucumCaseInsensitiveCode "ATM" ;
+    qudt:ucumCaseSensitiveCode "atm" ;
+    qudt:ucumCode "ATM",
+        "atm" ;
+    qudt:uneceCommonCode "ATM" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:BAR a qudt:CGS-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Bar"@en ;
+    skos:definition """<p class="lm-para">The bar is a non-SI unit of pressure, defined by the IUPAC as exactly equal to \\(100,000\\,Pa\\). It is about equal to the atmospheric pressure on Earth at sea level, and since 1982 the IUPAC has recommended that the standard for atmospheric pressure should be harmonized to \\(100,000\\,Pa = 1 \\,bar \\approx 750.0616827\\, Torr\\). </p>
+<p class="lm-para">Units derived from the bar are the megabar (symbol: Mbar), kilobar (symbol: kbar), decibar (symbol: dbar), centibar (symbol: cbar), and millibar (symbol: mbar or mb). They are not SI or cgs units, but they are accepted for use with the SI.</p>"""@en ;
+    qudt:conversionMultiplier 1e+05 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Bar"^^xsd:anyURI ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/ForcePerArea> ;
+    qudt:iec61360Code "0112/2///62720#UAA323" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Bar?oldid=493875987"^^xsd:anyURI,
+        "http://en.wikipedia.org/wiki/Bar_(unit)"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/bar> ;
+    qudt:symbol "bar" ;
+    qudt:ucumCaseInsensitiveCode "BAR" ;
+    qudt:ucumCaseSensitiveCode "bar" ;
+    qudt:ucumCode "BAR",
+        "bar" ;
+    qudt:uneceCommonCode "BAR" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:BBL a qudt:Unit , skos:Concept ;
+    skos:prefLabel "Barrel"@en ;
+    skos:definition "A barrel is one of several units of volume, with dry barrels, fluid barrels (UK beer barrel, U.S. beer barrel), oil barrel, etc. The volume of some barrel units is double others, with various volumes in the range of about 100-200 litres (22-44 impÂ gal; 26-53 USÂ gal)."@en ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Barrel"^^xsd:anyURI ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Volume> ;
+    qudt:iec61360Code "0112/2///62720#UAA334" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Barrel?oldid=494614619"^^xsd:anyURI ;
+    qudt:symbol "bbl" ;
+    qudt:ucumCaseInsensitiveCode "[BBL_US]" ;
+    qudt:ucumCaseSensitiveCode "[bbl_us]" ;
+    qudt:ucumCode "[BBL_US]",
+        "[bbl_us]" ;
+    qudt:uneceCommonCode "BLL" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:BTU_IT a qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "British Thermal Unit (International Definition)"@en ;
+    skos:definition "\\(\\textit{British Thermal Unit}\\) (BTU or Btu) is a traditional unit of energy equal to about \\(1.0550558526 \\textit{ kilojoule}\\). It is approximately the amount of energy needed to heat 1 pound (0.454 kg) of water from \\(39 \\,^{\\circ}{\\rm F}\\)  to \\(40 \\,^{\\circ}{\\rm F}\\) . The unit is most often used in the power, steam generation, heating and air conditioning industries. In scientific contexts the BTU has largely been replaced by the SI unit of energy, the \\(joule\\), though it may be used as a measure of agricultural energy production (BTU/kg). It is still used unofficially in metric English-speaking countries (such as Canada), and remains the standard unit of classification for air conditioning units manufactured and sold in many non-English-speaking metric countries."@en ;
+    qudt:conversionMultiplier 1.055056e+03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "BtuIT" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/EnergyAndWork>,
+        <http://qudt.org/vocab/quantitykind/ThermalEnergy> ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/British_thermal_unit"^^xsd:anyURI,
+        "http://physics.nist.gov/Pubs/SP811/appenB9.html"^^xsd:anyURI,
+        "http://www.iso.org/iso/home/store/catalogue_ics/catalogue_detail_ics.htm?csnumber=31890"^^xsd:anyURI,
+        "http://www.knowledgedoor.com/2/units_and_constants_handbook/british-thermal-unit_group.html"^^xsd:anyURI ;
+    qudt:symbol "Btu_{it}" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:CentiM a qudt:BaseUnit,
+        qudt:CGS-Unit,
+        qudt:DecimalScaledUnit,
+        qudt:DerivedUnit,
+        qudt:SI-Unit ;
+    skos:prefLabel "Centimeter"@en ;
+    skos:definition "A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units."@en ;
+    qudt:conversionMultiplier 1e-02 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Centimetre"^^xsd:anyURI ;
+    qudt:expression "cm" ;
+    qudt:hasPrefixUnit unit:Centi ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+    qudt:iec61360Code "0112/2///62720#UAA375" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Centimetre?oldid=494931891"^^xsd:anyURI ;
+    qudt:isScalingOf unit:M ;
+    qudt:symbol "cm" ;
+    qudt:ucumCaseInsensitiveCode "CM" ;
+    qudt:ucumCaseSensitiveCode "cm" ;
+    qudt:ucumCode "CM",
+        "cm" ;
+    qudt:uneceCommonCode "CMT" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:CentiP a qudt:CGS-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Centipoise"@en ;
+    skos:definition "<p class=\"lm-para\"><em>Centipoise</em> is a C.G.S System unit for  'Dynamic Viscosity' expressed as \\(cP\\).</p>"@en ;
+    qudt:conversionMultiplier 1e-02 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "cP" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/DynamicViscosity> ;
+    qudt:iec61360Code "0112/2///62720#UAA356" ;
+    qudt:symbol "cP" ;
+    qudt:uneceCommonCode "C7" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:DAY a qudt:Unit , skos:Concept ;
+    skos:prefLabel "Day"@en ;
+    skos:definition "Mean solar day"@en ;
+    qudt:conversionMultiplier 8.64e+04 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Day"^^xsd:anyURI ;
+    qudt:expression "d" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Time> ;
+    qudt:iec61360Code "0112/2///62720#UAA407" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Day?oldid=494970012"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/day> ;
+    qudt:symbol "d" ;
+    qudt:ucumCaseSensitiveCode "d" ;
+    qudt:ucumCode "d" ;
+    qudt:uneceCommonCode "DAY" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:DEG_C a qudt:CGS-Unit,
+        qudt:DerivedUnit,
+        qudt:SI-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Degree Celsius"@en ;
+    skos:definition "\\(\\textit{Celsius}\\), also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely \\(273.15\\,^{\\circ}{\\rm C}\\).</p>"@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 2.7315e+02 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Celsius"^^xsd:anyURI ;
+    qudt:expression "degC" ;
+    qudt:guidance "<p>See NIST section <a href=\"http://physics.nist.gov/Pubs/SP811/sec04.html#4.2.1.1\">SP811 section 4.2.1.1</a></p>"^^rdf:HTML,
+        "<p>See NIST section <a href=\"http://physics.nist.gov/Pubs/SP811/sec06.html#6.2.8\">SP811 section 6.2.8</a></p>"@en ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/CelciusTemperature> ;
+    qudt:iec61360Code "0112/2///62720#UAA033" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Celsius?oldid=494152178"^^xsd:anyURI ;
+    qudt:latexDefinition "\\(\\,^{\\circ}{\\rm C}\\)" ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> ;
+    qudt:symbol "\\(\\,^{\\circ}{\\rm C}\\)" ;
+    qudt:uneceCommonCode "CEL" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:altLabel "degree-centigrade" ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.        
+
+unit:FT a qudt:ImperialUnit,
+        qudt:US-CustomaryUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Foot"@en ;
+    skos:definition "A foot is a unit of length defined as being 0.3048Â m exactly and used in the imperial system of units and United States customary units. It is subdivided into 12Â inches. The foot is still officially used in Canada and still commonly used in the United Kingdom, although the latter has partially metricated its units of measurement. "@en ;
+    qudt:conversionMultiplier 3.048e-01 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Foot_%28length%29"^^xsd:anyURI ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+    qudt:iec61360Code "0112/2///62720#UAA440" ;
+    qudt:symbol "ft" ;
+    qudt:ucumCaseInsensitiveCode "[FT_I]" ;
+    qudt:ucumCaseSensitiveCode "[ft_i]" ;
+    qudt:ucumCode "[FT_I]",
+        "[ft_i]" ;
+    qudt:uneceCommonCode "FOT" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:FT3 a qudt:DerivedUnit,
+        qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Cubic Foot"@en ;
+    skos:definition "The cubic foot is an Imperial and US customary unit of volume, used in the United States and the United Kingdom. It is defined as the volume of a cube with sides of one foot (0.3048 m) in length. To calculate cubic feet multiply length X width X height. "@en ;
+    qudt:conversionMultiplier 2.831685e-02 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "ft^{3}" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Volume> ;
+    qudt:iec61360Code "0112/2///62720#UAA456" ;
+    qudt:symbol "ft^{3}" ;
+    qudt:ucumCaseInsensitiveCode "[CFT_I]",
+        "[FT_I]3" ;
+    qudt:ucumCaseSensitiveCode "[cft_i]",
+        "[ft_i]3" ;
+    qudt:ucumCode "[CFT_I]",
+        "[FT_I]3",
+        "[cft_i]",
+        "[ft_i]3" ;
+    qudt:uneceCommonCode "FTQ" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:FT3-PER-MIN a qudt:DerivedUnit,
+        qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Cubic Foot per Minute"@en ;
+    skos:definition "\"Cubic Foot per Minute\" is an Imperial unit for  'Volume Per Unit Time' expressed as \\(ft^3/min\\)."@en ;
+    qudt:conversionMultiplier 4.719474e-04 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "ft^{3}/min" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/VolumePerUnitTime> ;
+    qudt:iec61360Code "0112/2///62720#UAA461" ;
+    qudt:symbol "ft^3/min" ;
+    qudt:ucumCaseInsensitiveCode "[CFT_I].MIN-1",
+        "[CFT_I]/MIN",
+        "[FT_I]3.MIN-1",
+        "[FT_I]3/MIN" ;
+    qudt:ucumCaseSensitiveCode "[cft_i].min-1",
+        "[cft_i]/min",
+        "[ft_i]3.min-1",
+        "[ft_i]3/min" ;
+    qudt:ucumCode "[CFT_I].MIN-1",
+        "[CFT_I]/MIN",
+        "[FT_I]3.MIN-1",
+        "[FT_I]3/MIN",
+        "[cft_i].min-1",
+        "[cft_i]/min",
+        "[ft_i]3.min-1",
+        "[ft_i]3/min" ;
+    qudt:uneceCommonCode "2L" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:FT3-PER-SEC a qudt:DerivedUnit,
+        qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Cubic Foot per Second"@en ;
+    skos:definition "\"Cubic Foot per Second\" is an Imperial unit for \\( \\textit{Volume Per Unit Time}\\) expressed as \\(ft^3/s\\)."@en ;
+    qudt:conversionMultiplier 2.831685e-02 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "ft^{3}/s" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/VolumePerUnitTime> ;
+    qudt:iec61360Code "0112/2///62720#UAA462" ;
+    qudt:symbol "ft^3/s" ;
+    qudt:ucumCaseInsensitiveCode "[CFT_I].S-1",
+        "[CFT_I]/S",
+        "[FT_I]3.S-1",
+        "[FT_I]3/S" ;
+    qudt:ucumCaseSensitiveCode "[cft_i].s-1",
+        "[cft_i]/s",
+        "[ft_i]3.s-1",
+        "[ft_i]3/s" ;
+    qudt:ucumCode "[CFT_I].S-1",
+        "[CFT_I]/S",
+        "[FT_I]3.S-1",
+        "[FT_I]3/S",
+        "[cft_i].s-1",
+        "[cft_i]/s",
+        "[ft_i]3.s-1",
+        "[ft_i]3/s" ;
+    qudt:uneceCommonCode "E17" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:GAL_IMP a qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Imperial Gallon"@en ;
+    skos:definition "\"Imperial Gallon\" is an Imperial unit for  'Liquid Volume' expressed as \\(galIMP\\)."@en ;
+    qudt:conversionMultiplier 4.54609e-03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "galIMP" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/LiquidVolume> ;
+    qudt:symbol "gal" ;
+    qudt:ucumCaseInsensitiveCode "[GAL_BR]" ;
+    qudt:ucumCaseSensitiveCode "[gal_br]" ;
+    qudt:ucumCode "[GAL_BR]",
+        "[gal_br]" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:GAL_US a qudt:Unit , skos:Concept ;
+    skos:prefLabel "US Gallon"@en ;
+    skos:definition "\"US Gallon\" is a unit for  'Liquid Volume' expressed as \\(galUS\\)."@en ;
+    qudt:conversionMultiplier 3.785412e-03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/LiquidVolume> ;
+    qudt:symbol "gal" ;
+    qudt:ucumCaseInsensitiveCode "[GAL_US]" ;
+    qudt:ucumCaseSensitiveCode "[gal_us]" ;
+    qudt:ucumCode "[GAL_US]",
+        "[gal_us]" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:altLabel "Queen Anne's wine gallon" ;
+    skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.    
+
+unit:GM a qudt:BaseUnit,
+        qudt:CGS-Unit,
+        qudt:SI-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Gram"@en ;
+    skos:definition "A unit of mass in the metric system. The name comes from the Greek gramma, a small weight identified in later Roman and Byzantine times with the Latin scripulum or scruple (the English scruple is equal to about 1.3 grams). The gram was originally defined to be the mass of one cubic centimeter of pure water, but to provide precise standards it was necessary to construct physical objects of specified mass. One gram is now defined to be 1/1000 of the mass of the standard kilogram, a platinum-iridium bar carefully guarded by the International Bureau of Weights and Measures in Paris for more than a century. (The kilogram, rather than the gram, is considered the base unit of mass in the SI.) The gram is a small mass, equal to about 15.432 grains or 0.035 273 966 ounce. "@en ;
+    qudt:conversionMultiplier 1e-03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Gram"^^xsd:anyURI ;
+    qudt:expression "g" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Mass> ;
+    qudt:iec61360Code "0112/2///62720#UAA465" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Gram?oldid=493995797"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/gram> ;
+    qudt:symbol "g" ;
+    qudt:ucumCaseInsensitiveCode "G" ;
+    qudt:ucumCaseSensitiveCode "g" ;
+    qudt:ucumCode "G",
+        "g" ;
+    qudt:uneceCommonCode "GRM" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:GigaBYTE a qudt:DecimalScaledUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "GigaByte"@en ;
+    skos:definition "The gigabyte is a multiple of the unit byte for digital information storage. The prefix giga means 10 in the International System of Units (SI), therefore 1 gigabyte is \\(1,000,000,000 \\; bytes\\). The unit symbol for the gigabyte is \\(GB\\) or \\(Gbyte\\), but not \\(Gb\\) (lower case b) which is typically used for the gigabit. Historically, the term has also been used in some fields of computer science and information technology to denote the \\(gibibyte\\), or \\(1073741824 \\; bytes\\)."@en ;
+    qudt:conversionMultiplier 1.073742e+09 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Gigabyte"^^xsd:anyURI ;
+    qudt:hasPrefixUnit unit:Giga ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Dimensionless> ;
+    qudt:iec61360Code "0112/2///62720#UAB185" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Gigabyte?oldid=493019145"^^xsd:anyURI ;
+    qudt:isScalingOf unit:BYTE ;
+    qudt:symbol "GB" ;
+    qudt:uneceCommonCode "E34" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:altLabel "gbyte" ;
+    skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:HR a qudt:SI-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Hour"@en ;
+    skos:definition "The hour (common symbol: h or hr) is a unit of measurement of time. In modern usage, an hour comprises 60 minutes, or 3,600 seconds. It is approximately 1/24 of a mean solar day. An hour in the Universal Coordinated Time (UTC) time standard can include a negative or positive leap second, and may therefore have a duration of 3,599 or 3,601 seconds for adjustment purposes. Although it is not a standard defined by the International System of Units, the hour is a unit accepted for use with SI, represented by the symbol h."@en ;
+    qudt:conversionMultiplier 3.6e+03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Hour"^^xsd:anyURI ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Time> ;
+    qudt:iec61360Code "0112/2///62720#UAA525" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Hour?oldid=495040268"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/hour> ;
+    qudt:symbol "hr" ;
+    qudt:ucumCaseInsensitiveCode "HR" ;
+    qudt:ucumCaseSensitiveCode "h" ;
+    qudt:ucumCode "HR",
+        "h" ;
+    qudt:uneceCommonCode "K42" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:HZ a qudt:DerivedCoherentUnit,
+        qudt:DerivedUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Hertz"@en ;
+    skos:definition "The hertz (symbol Hz) is the SI unit of frequency defined as the number of cycles per second of a periodic phenomenon. One of its most common uses is the description of the sine wave, particularly those used in radio and audio applications, such as the frequency of musical tones. The word \"hertz\" is named for Heinrich Rudolf Hertz, who was the first to conclusively prove the existence of electromagnetic waves."@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Hertz"^^xsd:anyURI ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Frequency> ;
+    qudt:iec61360Code "0112/2///62720#UAA170" ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/hertz> ;
+    qudt:symbol "Hz" ;
+    qudt:ucumCaseInsensitiveCode "HZ" ;
+    qudt:ucumCode "HZ",
+        "Hz" ;
+    qudt:uneceCommonCode "HTZ" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:IN a qudt:ImperialUnit,
+        qudt:US-CustomaryUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Inch"@en ;
+    skos:definition "An inch is the name of a unit of length in a number of different systems, including Imperial units, and United States customary units. There are 36Â inches in a yard and 12Â inches in a foot. Corresponding units of area and volume are the square inch and the cubic inch."@en ;
+    qudt:conversionMultiplier 2.54e-02 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Inch"^^xsd:anyURI ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+    qudt:iec61360Code "0112/2///62720#UAA539" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Inch?oldid=492522790"^^xsd:anyURI ;
+    qudt:symbol "in" ;
+    qudt:ucumCaseInsensitiveCode "[IN_I]" ;
+    qudt:ucumCaseSensitiveCode "[in_i]" ;
+    qudt:ucumCode "[IN_I]",
+        "[in_i]" ;
+    qudt:uneceCommonCode "INH" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:J a qudt:DerivedUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Joule"@en ;
+    skos:definition "The SI unit of work or energy, defined to be the work done by a force of one newton acting to move an object through a distance of one meter in the direction in which the force is applied. Equivalently, since kinetic energy is one half the mass times the square of the velocity, one joule is the kinetic energy of a mass of two kilograms moving at a velocity of \\(1 m/s\\)."@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Joule"^^xsd:anyURI ;
+    qudt:description "The SI unit of work or energy, defined to be the work done by a force of one newton acting to move an object through a distance of one meter in the direction in which the force is applied. Equivalently, since kinetic energy is one half the mass times the square of the velocity, one joule is the kinetic energy of a mass of two kilograms moving at a velocity of 1 m/s. This is the same as 107 ergs in the CGS system, or approximately 0.737 562 foot-pound in the traditional English system. In other energy units, one joule equals about 9.478 170 x 10-4 Btu, 0.238 846 (small) calories, or 2.777 778 x 10-4 watt hour. The joule is named for the British physicist James Prescott Joule (1818-1889), who demonstrated the equivalence of mechanical and thermal energy in a famous experiment in 1843. "@en ;
+    qudt:exactMatch unit:N-M ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/EnergyAndWork> ;
+    qudt:iec61360Code "0112/2///62720#UAA172" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Joule?oldid=494340406"^^xsd:anyURI ;
+    qudt:latexDefinition "\\(\\text{J}\\ \\equiv\\ \\text{joule}\\ \\equiv\\ \\text{CV}\\ \\equiv\\ \\text{coulomb.volt}\\ \\equiv\\ \\frac{\\text{eV}}{1.602\\ 10^{-19}}\\ \\equiv\\ \\frac{\\text{electron.volt}}{1.602\\ 10^{-19}}\\)" ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/joule> ;
+    qudt:symbol "J" ;
+    qudt:ucumCaseInsensitiveCode "J" ;
+    qudt:ucumCode "J" ;
+    qudt:uneceCommonCode "JOU" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:K a qudt:BaseUnit,
+        qudt:SI-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Kelvin"@en ;
+    skos:definition "<p>The SI base unit of temperature, previously called the degree Kelvin. One kelvin represents the same temperature difference as one degree Celsius. In 1967 the General Conference on Weights and Measures defined the temperature of the triple point of water (the temperature at which water exists simultaneously in the gaseous, liquid, and solid states) to be exactly 273.16 kelvins. Since this temperature is also equal to 0.01 u00b0C, the temperature in kelvins is always equal to 273.15 plus the temperature in degrees Celsius. The kelvin equals exactly 1.8 degrees Fahrenheit. The unit is named for the British mathematician and physicist William Thomson (1824-1907), later known as Lord Kelvin after he was named Baron Kelvin of Largs.</p>"@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Kelvin"^^xsd:anyURI ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
+    qudt:iec61360Code "0112/2///62720#UAA185",
+        "0112/2///62720#UAD721" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Kelvin?oldid=495075694"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/kelvin> ;
+    qudt:symbol "K" ;
+    qudt:uneceCommonCode "KEL" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:KiloBYTE a qudt:BinaryScaledUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Kilo Byte"@en ;
+    skos:definition "The kilobyte is a multiple of the unit byte for digital information equivalent to 1024 bytes. Although the prefix kilo- means 1000, the term kilobyte and symbol kB have historically been used to refer to either 1024 (210) bytes or 1000 (103) bytes, dependent upon context, in the fields of computer science and information technology."@en ;
+    qudt:conversionMultiplier 1.024e+03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Byte"^^xsd:anyURI ;
+    qudt:expression "KB" ;
+    qudt:hasPrefixUnit unit:Kibi ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Dimensionless> ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Byte?oldid=493588918"^^xsd:anyURI ;
+    qudt:isScalingOf unit:BYTE ;
+    qudt:symbol "kB" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:KiloGM a qudt:BaseUnit,
+        qudt:CGS-Unit,
+        qudt:SI-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Kilogram"@en ;
+    skos:definition "The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water."@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Kilogram"^^xsd:anyURI ;
+    qudt:description "The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water. The avoirdupois (or international) pound, used in both the Imperial system and U.S. customary units, is defined as exactly 0.45359237 kg, making one kilogram approximately equal to 2.2046 avoirdupois pounds."@en ;
+    qudt:expression "kg" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Mass> ;
+    qudt:iec61360Code "0112/2///62720#UAA594",
+        "0112/2///62720#UAD720" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Kilogram?oldid=493633626"^^xsd:anyURI ;
+    qudt:symbol "kg" ;
+    qudt:ucumCaseInsensitiveCode "KG" ;
+    qudt:ucumCaseSensitiveCode "kg" ;
+    qudt:ucumCode "KG",
+        "kg" ;
+    qudt:uneceCommonCode "KGM" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:KiloGM-PER-M a qudt:DerivedCoherentUnit,
+        qudt:DerivedUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Kilogram per Meter"@en ;
+    skos:definition "Kilogram Per Meter (kg/m) is a unit in the category of Linear mass density. It is also known as kilogram/meter, kilogram/metre, kilograms per meter, kilogram per metre, kilograms per metre. This unit is commonly used in the SI unit system. Kilogram Per Meter (kg/m) has a dimension of ML-1 where M is mass, and L is length. This unit is the standard SI unit in this category. "@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "kg/m" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/MassPerLength> ;
+    qudt:iec61360Code "0112/2///62720#UAA616" ;
+    qudt:symbol "kg/m" ;
+    qudt:uneceCommonCode "KL" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:LB_F a qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Pound Force"@en ;
+    skos:definition "\"Pound Force\" is an Imperial unit for  'Force' expressed as \\(lbf\\)."@en ;
+    qudt:conversionMultiplier 4.448222e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Pound-force"^^xsd:anyURI ;
+    qudt:expression "lbf" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Force> ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Pound-force?oldid=453191483"^^xsd:anyURI ;
+    qudt:symbol "lbf" ;
+    qudt:ucumCaseInsensitiveCode "[LBF_AV]" ;
+    qudt:ucumCaseSensitiveCode "[lbf_av]" ;
+    qudt:ucumCode "[LBF_AV]",
+        "[lbf_av]" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:LB_M a qudt:CGS-Unit,
+        qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Pound Mass"@en ;
+    skos:definition "A pound of mass, based on the international standard definition of the pound as exactly 0.45359237 kg."@en ;
+    qudt:conversionMultiplier 4.535924e-01 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "lbm" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Mass> ;
+    qudt:symbol "lbm" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:LB_M-PER-FT a qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Pound per Foot"@en ;
+    skos:definition "\"Pound per Foot\" is an Imperial unit for  'Mass Per Length' expressed as \\(lb/ft\\)."@en ;
+    qudt:conversionMultiplier 1.488164e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "lb/ft" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/MassPerLength> ;
+    qudt:symbol "lb/ft" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:LB_M-PER-GAL a qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Pound per Gallon"@en ;
+    skos:definition "\"Pound per Gallon\" is an Imperial unit for  'Density' expressed as \\(lb/gal\\)."@en ;
+    qudt:conversionMultiplier 9.977637e+01 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "lb/gal" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Density> ;
+    qudt:symbol "lb/gal" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:M3 a qudt:DerivedUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Cubic Meter"@en ;
+    skos:definition "The SI unit of volume, equal to 106 cm3, 1000 liters, 35.3147 ft3, or 1.307 95 yd3. A cubic meter holds about 264.17 U.S. liquid gallons or 219.99 British Imperial gallons."@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Cubic_metre"^^xsd:anyURI ;
+    qudt:expression "m^{3}" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Volume> ;
+    qudt:iec61360Code "0112/2///62720#UAA757" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Cubic_metre?oldid=490956678"^^xsd:anyURI ;
+    qudt:symbol "m^{3}" ;
+    qudt:ucumCaseInsensitiveCode "M3" ;
+    qudt:ucumCaseSensitiveCode "m3" ;
+    qudt:ucumCode "M3",
+        "m3" ;
+    qudt:uneceCommonCode "MTQ" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:M3-PER-HR a qudt:DerivedUnit,
+        qudt:SI-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Cubic Meter per Hour"@en ;
+    skos:definition "Cubic Meter Per Hour (m3/h) is a unit in the category of Volume flow rate. It is also known as cubic meters per hour, cubic metre per hour, cubic metres per hour, cubic meter/hour, cubic metre/hour, cubic meter/hr, cubic metre/hr, flowrate. Cubic Meter Per Hour (m3/h) has a dimension of L3T-1 where L is length, and T is time. It can be converted to the corresponding standard SI unit m3/s by multiplying its value by a factor of 0.00027777777."@en ;
+    qudt:conversionMultiplier 2.777778e-04 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "m^{3}/h" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/VolumePerUnitTime> ;
+    qudt:iec61360Code "0112/2///62720#UAA763" ;
+    qudt:symbol "m^{3}/h" ;
+    qudt:ucumCaseInsensitiveCode "M3.HR-1",
+        "M3/HR" ;
+    qudt:ucumCaseSensitiveCode "m3.h-1",
+        "m3/h" ;
+    qudt:ucumCode "M3.HR-1",
+        "M3/HR",
+        "m3.h-1",
+        "m3/h" ;
+    qudt:uneceCommonCode "MQH" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:MO a qudt:Unit , skos:Concept ;
+    skos:prefLabel "Month"@en ;
+    skos:definition "A unit of time corresponding approximately to one cycle of the moon's phases, or about 30 days or 4 weeks. Also known as the 'Synodic Month' and calculated as 29.53059 days."@en ;
+    qudt:conversionMultiplier 2.551443e+06 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Month"^^xsd:anyURI ;
+    qudt:exactMatch unit:MO_Synodic ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Time> ;
+    qudt:iec61360Code "0112/2///62720#UAA880" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Month?oldid=494371020"^^xsd:anyURI,
+        "http://www.thefreedictionary.com/Synodal+month"^^xsd:anyURI ;
+    qudt:latexDefinition "mo_{j}" ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/month> ;
+    qudt:symbol "mo" ;
+    qudt:ucumCaseInsensitiveCode "MO" ;
+    qudt:ucumCaseSensitiveCode "mo" ;
+    qudt:ucumCode "MO",
+        "mo" ;
+    qudt:uneceCommonCode "MON" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:MilliM a qudt:DerivedUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Millimeter"@en ;
+    skos:definition "The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactly 5/127 (approximately 0.039370) of an inch."@en ;
+    qudt:conversionMultiplier 1e-03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Millimetre"^^xsd:anyURI ;
+    qudt:expression "mm" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+    qudt:iec61360Code "0112/2///62720#UAA862" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Millimetre?oldid=493032457"^^xsd:anyURI ;
+    qudt:symbol "m^{-3}" ;
+    qudt:ucumCaseInsensitiveCode "MM" ;
+    qudt:ucumCaseSensitiveCode "mm" ;
+    qudt:ucumCode "MM",
+        "mm" ;
+    qudt:uneceCommonCode "MMT" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:N a qudt:DerivedCoherentUnit,
+        qudt:DerivedUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Newton"@en ;
+    skos:definition "The \"Newton\" is the SI unit of force. A force of one newton will accelerate a mass of one kilogram at the rate of one meter per second per second. The newton is named for Isaac Newton (1642-1727), the British mathematician, physicist, and natural philosopher. He was the first person to understand clearly the relationship between force (F), mass (m), and acceleration (a) expressed by the formula \\(F = m \\cdot a\\)."@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Newton"^^xsd:anyURI ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Force> ;
+    qudt:iec61360Code "0112/2///62720#UAA235" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Newton?oldid=488427661"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/newton> ;
+    qudt:symbol "N" ;
+    qudt:ucumCaseInsensitiveCode "N" ;
+    qudt:ucumCode "N" ;
+    qudt:uneceCommonCode "NEW" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:NanoSEC a qudt:DecimalScaledUnit,
+        qudt:DerivedUnit,
+        qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "nanosecond"@en ;
+    skos:definition "A nanosecond is a SI unit of time equal to one billionth of a second (10−9 or 1/1,000,000,000 s). One nanosecond is to one second as one second is to 31.69 years. The word nanosecond is formed by the prefix nano and the unit second."@en ;
+    qudt:conversionMultiplier 1e-09 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Nanosecond"^^xsd:anyURI ;
+    qudt:expression "ns" ;
+    qudt:hasPrefixUnit unit:Nano ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Time> ;
+    qudt:iec61360Code "0112/2///62720#UAA913" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Nanosecond?oldid=919778950"^^xsd:anyURI ;
+    qudt:isScalingOf unit:SEC ;
+    qudt:symbol "ms" ;
+    qudt:ucumCaseInsensitiveCode "NS" ;
+    qudt:ucumCaseSensitiveCode "ns" ;
+    qudt:ucumCode "NS",
+        "ns" ;
+    qudt:uneceCommonCode "C47" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:OZ a qudt:ImperialUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Imperial OZ"@en ;
+    skos:definition "\\(\\textit{Imperial Ounce}\\) is an Imperial unit for  'Liquid Volume' expressed as \\(oz\\)."@en ;
+    qudt:conversionMultiplier 2.841306e-05 ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Volume> ;
+    qudt:ucumCaseInsensitiveCode "[OZ_AV]" ;
+    qudt:ucumCaseSensitiveCode "[oz_av]" ;
+    qudt:ucumCode "[OZ_AV]",
+        "[oz_av]" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:PA a qudt:DerivedUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Pascal"@en ;
+    skos:definition "The SI unit of pressure. The pascal is the standard pressure unit in the MKS metric system, equal to one newton per square meter or one \"kilogram per meter per second per second.\" The unit is named for Blaise Pascal (1623-1662), French philosopher and mathematician, who was the first person to use a barometer to measure differences in altitude."@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Pascal"^^xsd:anyURI ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/ForcePerArea> ;
+    qudt:iec61360Code "0112/2///62720#UAA258" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Pascal?oldid=492989202"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/pascal> ;
+    qudt:siUnitsExpression "N/m^2" ;
+    qudt:symbol "Pa" ;
+    qudt:ucumCaseInsensitiveCode "PAL" ;
+    qudt:ucumCaseSensitiveCode "Pa" ;
+    qudt:ucumCode "PAL",
+        "Pa" ;
+    qudt:uneceCommonCode "PAL" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:PA-PER-SEC a qudt:DerivedCoherentUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Pascal per Second"@en ;
+    skos:definition "A rate of change of pressure measured as the number of Pascals in a period of one second."@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:expression "P / s" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/ForcePerAreaTime> ;
+    qudt:symbol "P / s" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:PERCENT a qudt:CGS-Unit,
+        qudt:CountingUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Percent"@en ;
+    skos:definition "\"Percent\" is a C.G.S System unit for  'Dimensionless Ratio' expressed as \\(\\%\\)."@en ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Percentage"^^xsd:anyURI ;
+    qudt:expression "\\%" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/DimensionlessRatio> ;
+    qudt:iec61360Code "0112/2///62720#UAA000" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Percentage?oldid=495284540"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/percent> ;
+    qudt:symbol "\\%" ;
+    qudt:ucumCaseSensitiveCode "%" ;
+    qudt:ucumCode "%" ;
+    qudt:uneceCommonCode "P1" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:PetaBYTE a qudt:DecimalScaledUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "PetaByte"@en ;
+    skos:definition "A petabyte is a unit of information equal to one quadrillion bytes, or 1024 terabytes. The unit symbol for the petabyte is PB. The prefix peta (P) indicates the fifth power to 1000: 1 PB = 1000000000000000B, 1 million gigabytes = 1 thousand terabytes The pebibyte (PiB), using a binary prefix, is the corresponding power of 1024, which is more than \\(12\\% \\)greater (\\(2^{50} bytes = 1,125,899,906,842,624 bytes\\))."@en ;
+    qudt:conversionMultiplier 1e+15 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Petabyte"^^xsd:anyURI ;
+    qudt:expression "PB" ;
+    qudt:hasPrefixUnit unit:Peta ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Dimensionless> ;
+    qudt:iec61360Code "0112/2///62720#UAB187" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Petabyte?oldid=494735969"^^xsd:anyURI ;
+    qudt:isScalingOf unit:BYTE ;
+    qudt:symbol "PB" ;
+    qudt:uneceCommonCode "E36" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:TON_M a qudt:CGS-Unit,
+        qudt:SI-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Metric Ton"@en ;
+    skos:definition "The tonne (SI unit symbol: t) is a metric system unit of mass equal to 1,000 kilograms (2,204.6 pounds). It is a non-SI unit accepted for use with SI. To avoid confusion with the ton, it is also known as the metric tonne and metric ton in the United States[3] and occasionally in the United Kingdom. In SI units and prefixes, the tonne is a megagram (Mg), a rarely-used symbol, easily confused with mg, for milligram."@en ;
+    qudt:conversionMultiplier 1e+03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Tonne"^^xsd:anyURI ;
+    qudt:expression "mT" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Mass> ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Tonne?oldid=492526238"^^xsd:anyURI ;
+    qudt:symbol "mT" ;
+    qudt:ucumCaseInsensitiveCode "TNE" ;
+    qudt:ucumCaseSensitiveCode "t" ;
+    qudt:ucumCode "TNE",
+        "t" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:altLabel "metric-tonne" ;
+    skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.    
+
+unit:TeraBYTE a qudt:DecimalScaledUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "TeraByte"@en ;
+    skos:definition "The terabyte is a multiple of the unit byte for digital information. The prefix tera means 10 in the International System of Units (SI), and therefore 1 terabyte is 1000000000000bytes, or 1 trillion bytes, or 1000 gigabytes. 1 terabyte in binary prefixes is 0.9095 tebibytes, or 931.32 gibibytes. The unit symbol for the terabyte is TB or TByte, but not Tb (lower case b) which refers to terabit."@en ;
+    qudt:conversionMultiplier 1.048576e+06 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Terabyte"^^xsd:anyURI ;
+    qudt:expression "TB" ;
+    qudt:hasPrefixUnit unit:Tera ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Dimensionless> ;
+    qudt:iec61360Code "0112/2///62720#UAB186" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Terabyte?oldid=494671550"^^xsd:anyURI ;
+    qudt:isScalingOf unit:BYTE ;
+    qudt:symbol "TB" ;
+    qudt:uneceCommonCode "E35" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:WK a qudt:Unit , skos:Concept ;
+    skos:prefLabel "Week"@en ;
+    skos:definition "Mean solar week"@en ;
+    qudt:conversionMultiplier 6.048e+05 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Week"^^xsd:anyURI ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Time> ;
+    qudt:iec61360Code "0112/2///62720#UAB024" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Week?oldid=493867029"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/week> ;
+    qudt:symbol "wk" ;
+    qudt:ucumCaseInsensitiveCode "WK" ;
+    qudt:ucumCaseSensitiveCode "wk" ;
+    qudt:ucumCode "WK",
+        "wk" ;
+    qudt:uneceCommonCode "WEE" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:YR a qudt:Unit , skos:Concept ;
+    skos:prefLabel "Year"@en ;
+    skos:definition "A year is any of the various periods equated with one passage of Earth about the Sun, and hence of roughly 365 days. The familiar calendar has a mixture of 365- and 366-day years, reflecting the fact that the time for one complete passage takes about 365Â¼ days; the precise value for this figure depends on the manner of defining the year."@en ;
+    qudt:conversionMultiplier 3.1536e+07 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Time> ;
+    qudt:iec61360Code "0112/2///62720#UAB026" ;
+    qudt:informativeReference "http://www.oxfordreference.com/view/10.1093/acref/9780198605225.001.0001/acref-9780198605225-e-1533?rskey=b94Fd6"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/year> ;
+    qudt:symbol "yr" ;
+    qudt:ucumCaseInsensitiveCode "ANN" ;
+    qudt:ucumCaseSensitiveCode "a" ;
+    qudt:ucumCode "ANN",
+        "a" ;
+    qudt:uneceCommonCode "ANN" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:L a qudt:Unit , skos:Concept ;
+    skos:prefLabel "Liter"@en ;
+    skos:definition "<p class=\"lm-para\">The \\(litre\\) (American spelling: \\(\\textit{liter}\\); SI symbol \\(l\\) or \\(L\\)) is a non-SI metric system unit of volume equal to \\(1 \\textit{cubic decimetre}\\) (\\(dm^3\\)), 1,000 cubic centimetres (\\(cm^3\\)) or \\(1/1000 \\textit{cubic metre}\\). If the lower case \"L\" is used as the symbol, it is sometimes rendered as a cursive \"l\" to help distinguish it from the capital \"I\", although this usage has no official approval by any international bureau.</p>"@en ;
+    qudt:conversionMultiplier 1e-03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Litre"^^xsd:anyURI ;
+    qudt:exactMatch unit:L ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/LiquidVolume> ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Litre?oldid=494846400"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/litre> ;
+    qudt:symbol "L" ;
+    qudt:ucumCaseInsensitiveCode "L" ;
+    qudt:ucumCaseSensitiveCode "l" ;
+    qudt:ucumCode "L",
+        "l" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:altLabel "litre" ;
+    skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.    
+
+unit:M a qudt:BaseUnit,
+        qudt:MKS-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Meter"@en ;
+    skos:definition "The metric and SI base unit of distance.   The meter is equal to approximately 1.093 613 3 yards, 3.280 840 feet, or 39.370 079 inches."@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Metre"^^xsd:anyURI ;
+    qudt:description "The metric and SI base unit of distance.  The 17th General Conference on Weights and Measures in 1983 defined the meter as that distance that makes the speed of light in a vacuum equal to exactly 299 792 458 meters per second. The speed of light in a vacuum, \\(c\\), is one of the fundamental constants of nature. The meter is equal to approximately 1.093 613 3 yards, 3.280 840 feet, or 39.370 079 inches."@en ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+    qudt:iec61360Code "0112/2///62720#UAA726" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Metre?oldid=495145797"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/metre> ;
+    qudt:symbol "m" ;
+    qudt:ucumCaseInsensitiveCode "M" ;
+    qudt:ucumCaseSensitiveCode "m" ;
+    qudt:ucumCode "M",
+        "m" ;
+    qudt:uneceCommonCode "MTR" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:MIN a qudt:Unit , skos:Concept ;
+    skos:prefLabel "Minute"@en ;
+    skos:definition "A minute is a unit of measurement of time. The minute is a unit of time equal to 1/60 (the first sexagesimal fraction of an hour or 60 seconds. In the UTC time scale, a minute on rare occasions has 59 or 61 seconds; see leap second. The minute is not an SI unit; however, it is accepted for use with SI units. The SI symbol for minute or minutes is min (for time measurement) or the prime symbol after a number, e.g. 5' (for angle measurement, even if it is informally used for time)."@en ;
+    qudt:conversionMultiplier 6e+01 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:exactMatch unit:MIN ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Time> ;
+    qudt:iec61360Code "0112/2///62720#UAA842" ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/minute-Time> ;
+    qudt:symbol "min" ;
+    qudt:ucumCaseInsensitiveCode "MIN" ;
+    qudt:ucumCaseSensitiveCode "min" ;
+    qudt:ucumCode "MIN",
+        "min" ;
+    qudt:uneceCommonCode "MIN" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:MegaBYTE a qudt:DecimalScaledUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Mega byte"@en ;
+    skos:definition "The megabyte is a multiple of the unit byte for digital information equivalent to \\(2^{6} bytes\\). Although the prefix mega means \\(10^{6}\\), the term megabyte and symbol \\(mB\\) have historically been used to refer to \\(1024^{3} bytes\\) or \\(2^{30} bytes\\). The megabyte is a multiple of the unit byte for digital information storage or transmission with three different values depending on context: 1048576 bytes generally for computer memory; and one million bytes (10, see prefix mega-) generally for computer storage. In rare cases, it is used to mean \\(1000 \\times 1024 (1024,000) bytes\\). The IEEE Standards Board has confirmed that mega means \\(1000,000\\), with exceptions allowed for the base-two meaning."@en ;
+    qudt:conversionMultiplier 1.048576e+06 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Megabyte"^^xsd:anyURI ;
+    qudt:exactMatch unit:MegaBYTE ;
+    qudt:expression "mB" ;
+    qudt:hasPrefixUnit unit:Mega ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Dimensionless> ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Megabyte?oldid=487094486"^^xsd:anyURI ;
+    qudt:isScalingOf unit:BYTE ;
+    qudt:symbol "mB" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:SEC a qudt:BaseUnit,
+        qudt:CGS-Unit,
+        qudt:SI-Unit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Second"@en ;
+    skos:definition "The \"Second\" (symbol: \\(s\\)) is the base unit of time in the International System of Units (SI) and is also a unit of time in other systems of measurement."@en ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Second"^^xsd:anyURI ;
+    qudt:description """Between the years1000 (when al-Biruni used seconds) and 1960 the second was defined as \\(1/86400\\) of a mean solar day (that definition still applies in some astronomical and legal contexts). Between 1960 and 1967, it was defined in terms of the period of the Earth's orbit around the Sun in 1900, but it is now defined more precisely in atomic terms.  
+
+Under the International System of Units (via the International Committee for Weights and Measures, or CIPM), since 1967 the second has been defined as the duration of \\({9192631770}\\) periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium 133 atom.In 1997 CIPM added that the periods would be defined for a caesium atom at rest, and approaching the theoretical temperature of absolute zero, and in 1999, it included corrections from ambient radiation."""@en ;
+    qudt:expression "s" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Time> ;
+    qudt:iec61360Code "0112/2///62720#UAA972",
+        "0112/2///62720#UAD722" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Second?oldid=495241006"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/second-Time> ;
+    qudt:symbol "s" ;
+    qudt:ucumCaseInsensitiveCode "S" ;
+    qudt:ucumCaseSensitiveCode "s" ;
+    qudt:ucumCode "S",
+        "s" ;
+    qudt:uneceCommonCode "SEC" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
+
+unit:BYTE a qudt:DerivedUnit,
+        qudt:Unit , skos:Concept ;
+    skos:prefLabel "Byte"@en ;
+    skos:definition "The byte is a unit of digital information in computing and telecommunications that most commonly consists of eight bits."@en ;
+    qudt:conversionMultiplier 5.545177e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Byte"^^xsd:anyURI ;
+    qudt:expression "B" ;
+    qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Dimensionless> ;
+    qudt:iec61360Code "0112/2///62720#UAA354" ;
+    qudt:informativeReference "http://en.wikipedia.org/wiki/Byte?oldid=493588918"^^xsd:anyURI ;
+    qudt:omUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/byte> ;
+    qudt:symbol "B" ;
+    qudt:uneceCommonCode "AD" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+	skos:topConceptOf <http://qudt.org/community/geoprofile/units> ;
+.
