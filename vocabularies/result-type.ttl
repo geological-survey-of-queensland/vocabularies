@@ -25,7 +25,6 @@
         rslt:compressibility,
         rslt:compressive-strength,
         rslt:concentration,
-        rslt:conductivity,
         rslt:cost,
         rslt:count,
         rslt:data,
@@ -36,6 +35,7 @@
         rslt:drill-rate,
         rslt:electric-charge,
         rslt:electric-current,
+        rslt:electrical-conductivity,
         rslt:elevation,
         rslt:energy,
         rslt:energy-density,
@@ -74,6 +74,7 @@
         rslt:stress,
         rslt:temperature,
         rslt:tensile-strength,
+        rslt:thermal-conductivity,
         rslt:time,
         rslt:true-vertical-depth,
         rslt:velocity,
@@ -165,14 +166,6 @@ rslt:concentration a skos:Concept ;
     skos:prefLabel "Concentration"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
-rslt:conductivity a skos:Concept ;
-    skos:altLabel "Electrical Conductance"@en ;
-    skos:definition "A measure of a material's ability to conduct an electric current."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
-    skos:notation "rcnd" ;
-    skos:prefLabel "Conductivity"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
-
 rslt:count a skos:Concept ;
     skos:definition "A quanitifation of the absolute number of discrete objects, groups, or sets."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
@@ -245,6 +238,14 @@ rslt:electric-current a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "relr" ;
     skos:prefLabel "Electric Current"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
+rslt:electrical-conductivity a skos:Concept ;
+    skos:altLabel "Electrical Conductance"@en ;
+    skos:definition "A measure of a material's ability to conduct an electric current."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "recd" ;
+    skos:prefLabel "Conductivity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:elevation a skos:Concept ;
@@ -530,6 +531,13 @@ rslt:tensile-strength a skos:Concept ;
     skos:notation "rtns" ;
     skos:prefLabel "Tensile Strength"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
+rslt:thermal-conductivity a skos:Concept ;
+    skos:altLabel "Thermal Conductance"@en ;
+    skos:definition "A measure of a material's ability to conduct an thermal energy."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rtcd" ;
+    skos:prefLabel "Thermal Conductivity"@en ;
 
 rslt:time a skos:Concept ;
     skos:definition "The indefinite continued progress of existence and events that occur in an apparently irreversible succession from the past, through the present, into the future."@en ;
