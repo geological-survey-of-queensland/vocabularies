@@ -22,7 +22,8 @@
         drd:metres-sub-sea,
         drd:rotary-table,
         drd:seismic-reference-datum,
-        drd:water-bottom ;
+        drd:water-bottom,
+        drd:well-head ;
     skos:prefLabel "Depth Reference Datum"@en .
     
 drd:absolute a skos:Collection ;
@@ -38,7 +39,8 @@ drd:borehole a skos:Collection ;
         drd:ground-level,
         drd:kelly-bushing,
         drd:rotary-table,
-        drd:water-bottom ;
+        drd:water-bottom,
+        drd:well-head ;
     skos:prefLabel "Borehole"@en .
 
 drd:seismic a skos:Collection ;
@@ -114,3 +116,11 @@ drd:water-bottom a skos:Concept ;
     skos:notation "WB" ;
     skos:prefLabel "Water Bottom"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/depth-reference-datum> .
+
+drd:well-head a skos:Concept ;
+    skos:definition "A wellhead is the component at the surface of an oil or gas well that provides the structural and pressure-containing interface for the drilling and production equipment. Iolation valves and choke equipment control the flow of well fluids during production. Elevation is typically equivalent to the valve or outlet point from which samples are extracted."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/depth-reference-datum> ;
+    skos:notation "WH" ;
+    skos:prefLabel "Well Head"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/depth-reference-datum> .
+
