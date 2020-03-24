@@ -20,6 +20,7 @@
         gsqst:field-site,
         gsqst:mine,
         gsqst:mineral-occurrence,
+        gsqst:mineral-deposit
         gsqst:pit,
         gsqst:project-site,
         gsqst:wellbore,
@@ -154,6 +155,13 @@ gsqst:mineral-occurrence a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
     skos:notation "mo" ;
     skos:prefLabel "Mineral Occurrence"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+
+gsqst:mineral-deposit a skos:Concept ;
+    skos:definition "A major mineral occurrence that has a defined resource, usually associated with a major exploration project."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "md" ;
+    skos:prefLabel "Mineral Deposit"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
 
 gsqst:pit a skos:Concept ;
