@@ -7,10 +7,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdo: https://schema.org/ .
 
-<http://linked.data.gov.au/def/party-relationship> a owl:Ontology, skos:ConceptScheme .
+<http://linked.data.gov.au/def/party-relationship> a owl:Ontology, skos:ConceptScheme ;
     dct:created "2020-03-24"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> 
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:modified "2020-03-25"^^xsd:date ;
     dct:source "Compiled by the Geological Survey of Queensland." ;
     skos:definition "The relationships that exist between companies, businesses, and individuals."@en ;
@@ -28,7 +29,7 @@
 <http://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    .
+.
 
 pyrl:adviser a skos:Concept ;
     skos:definition "An entity acting in an advisory capacity to the subject."@en ;
