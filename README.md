@@ -10,7 +10,7 @@ A vocabulary is a set of agreed terms:
 Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Why-Vocabularies%3F) and more subjects in the [Vocabularies Wiki](https://github.com/geological-survey-of-queensland/vocabularies/wiki).
 
 ## Vocabulary - how it all hangs together
-<img src="vocabulary_context_diagram.png" style="width:800px;" alt="Vocabulary context diagram" />  
+<img src="images/vocabulary_context_diagram.png" style="width:800px;" alt="Vocabulary context diagram" />  
 
 **Fig. 1: Vocabulary context diagram**
 
@@ -23,49 +23,53 @@ Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/voca
 
 
 ## How to create a vocabulary
-<img src="Vocabulary-Process.png" style="width:100%;" alt="Vocabulary build and pull process" />  
+<img src="images/Vocabulary-Process.png" style="width:100%;" alt="Vocabulary build and pull process" />  
 
 **Fig. 2: Vocabulary build and pull process**
 
-1. Search for existing International, National, and Industry Standards. Use directly where possible, augment and adapt when needed, create new original vocabulary as a final option (see below for links to existing vocabularies).
-2. Select the vocabulary editor of your choice.
-2. Create the vocabulary using the [SKOS Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/). See also the [SKOS Primer](https://www.w3.org/TR/skos-primer/) for the basics. NOTE: Always first check if there is an international or national vocabulary .  
-    a. Use [Vocbench](www.vocbench.gsq.digital:7200/) to create the vocabulary.  
-    b. Use the Excel template to create the vocabulary - [download Excel SKOS Vocabulary Builder](https://github.com/geological-survey-of-queensland/vocabularies/blob/master/templates/SKOS_Vocabulary_Builder.xlsm).  
-    c. Edit the vocab TTL file in Visual Studio Code. Use the extension [Language Support for RDF related language syntax](https://marketplace.visualstudio.com/items?itemName=fantasticfears.semantic-data-model-language) for formatting support.  
-3. Export the vocabulary to a TTL file. If using Vocbench, it is easier to export the TTL from the Build repository in GraphDB. Follow the [instructions here](http://graphdb.ontotext.com/documentation/standard/exporting-data.html).
-4. Validate the TTL file using the [online Skosify tool](http://demo.seco.tkk.fi/skosify/skosify). Tick the checkbox *Keep skos:related relationships within the same hierarchy*, leave the other checkboxes unticked.
-5. Import the TTL file into a development branch in Github. Name your branch *dev-vocabularyName*. See [how-to instructions here](https://guides.github.com/activities/hello-world/). 
-6. Submit a pull request from the development to a review branch *review-vocabularyName* for technical review of file structure and integrity. Select at least One technical reviewer.
-7. When the vocabulary has passed technical review approve the pull request to import the vocabulary into the review branch.
-8. Publish to VocPrez Test (see instructions below).
-9. Submit a pull request from the review to the master branch for a content review. Select at least One content reviewer, it is recommended that more reviewers are requested for complex or contentious vocabularies. request a review by the relevant data custodian. Direct reviewers to the VocPrez Test presentation of the vocabulary.
-10. Reviewers will review your vocabulary and either Approve or Request Changes. Once approved, a member of the Data Integrity Team will merge your pull request to the master branch. See [how-to instructions here](https://help.github.com/en/articles/approving-a-pull-request-with-required-reviews).
+1. **Search for existing** International, National, and Industry Standards. Use directly where possible, augment and adapt when needed, create new original vocabulary as a final option (see below for links to existing vocabularies).
+2. **Create the vocabulary** using the [SKOS Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/)
+    - See also the [SKOS Primer](https://www.w3.org/TR/skos-primer/) for the basics
+    - Use one of these tools:
+        1. [Vocbench](www.vocbench.gsq.digital:7200/) to create the vocabulary.  
+        2. Excel templates - [GSQ's Excel SKOS Vocabulary Builder](https://github.com/geological-survey-of-queensland/vocabularies/blob/master/templates/SKOS_Vocabulary_Builder.xlsm).  
+        3. Text Editor, e.g. Visual Studio Code
+            - for VS Code, use the extension [Language Support for RDF related language syntax](https://marketplace.visualstudio.com/items?itemName=fantasticfears.semantic-data-model-language) for formatting support.  
+3. **Allocate a URI** to the vocab
+    - we use `linked.data.gov.au` for all GSQ vocabs
+    - Arrange for URI allocation via the [Contacts](#contacts) below
+3. **Export the vocabulary** to a TTL file
+    - If using Vocbench, it is easier to export the TTL from the Build repository in GraphDB. Follow the [instructions here](http://graphdb.ontotext.com/documentation/standard/exporting-data.html).
+4. **Validate the TTL file**
+    1. Use the [online Skosify tool](http://demo.seco.tkk.fi/skosify/skosify). 
+        - This tests for SKOS conformance
+        - Tick the checkbox *Keep skos:related relationships within the same hierarchy*, leave the other checkboxes unticked.
+    2. The use the GSQ Vocab [SAHCL](https://www.w3.org/TR/shacl/) Shapes files
+        - This tests for GSQ requirements over and beyond SKOS, such as particular metadata for the vocab
+        - The files are stored in this repo, [shapes](shapes/)
+        - Use the [pySHACL](https://github.com/RDFLib/pySHACL) tool on your desktop to do the validation
+5. **Import the TTL file** into a development branch in Github. Name your branch *dev-vocabularyName*. See [how-to instructions here](https://guides.github.com/activities/hello-world/). 
+6. **Submit a pull request** to the vocabularies repository.
+  - Create a branch for your vocab named `review-vocabularyName`
+  - add your vocab to that branch
+  - create a Pull Request from that `review-` branch to `master` branch and nominate reviewers
+    - See [how-to instructions here](https://help.github.com/en/articles/approving-a-pull-request-with-required-reviews)
+  - Once 2+ reviews have passed (usually a data managmenet staff member and a science domain expert), the final reviewer will merge the `review-` branch into `master` branch and delete the `review-` branch
+7. **Publication of the vocab** to production VocPrez will be automated from here onwards
+  - You should see the vocab in https://vocabs.gsq.digital/vocabulary/ within hours of approval and merger
+  - If testing of the vocab in VocPrez is required, the test instance will be used: https://test.vocabs.gsq.digital/vocabulary/
 
-
-## How to publish a vocabulary to VocPrez Test
-1. Import the vocabulary TTL file into the Core Repository in the Test Graph DB https://test.graphdb.gsq.digital using the [instructions here](http://graphdb.ontotext.com/documentation/standard/loading-data-using-the-workbench.html).
-2. Restart the Test VocPrez to refresh the VocPrez cache (we will automate this step).
-3. The vocabulary is now published in the Test VocPrez at https://test.vocabs.gsq.digital
-
-## How to review and validate a vocabulary
-See the instructions at [Vocabulary Review Process](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Vocabulary-Review-Process)
-
-## How to publish a vocabulary to VocPrez Production
-1. Follow the PID URI Allocations process detailed on the [Linked Data Working Group webpage](http://www.linked.data.gov.au/governance).
-1. Perform a Pull Request from the DEV branch in Github to the MASTER branch.
-1. A member of the Data Integrity Team will review your vocabulary and either Approve or Request Changes.
-1. Import the vocabulary TTL file into the Core Repository in the Production Graph DB https://graphdb.gsq.digital using the [instructions here](http://graphdb.ontotext.com/documentation/standard/loading-data-using-the-workbench.html).
-1. Restart the Production VocPrez to refresh the VocPrez cache (we will automate this step).
-1. The vocabulary is now published in the Production VocPrez at https://vocabs.gsq.digital. Please note that the vocab will not display in VocPrez until the URI registration at http://linked.data.gov.au is approved. 
+### Creation Workflow
+The steps outlined above are shown in workflow form at the [Vocabulary Review Workflow wiki page](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Vocabulary-Review-Workflow)
 
 
 ## See also
-* Research Vocabularies Australia https://vocabs.ands.org.au/
 * Geoscience Australia http://ldweb.ga.gov.au/def/voc/ga/
 * CGI Vocabularies Register http://resource.geosciml.org/def/voc/
 * EarthResourceML Vocabularies http://resource.geosciml.org/def/voc/ (scroll down)
+* Research Vocabularies Australia https://vocabs.ands.org.au/
 * CSIRO Environment Registry http://registry2.it.csiro.au/
+* Linked Open Vocabularies https://lov.linkeddata.es/dataset/lov
 * ISO 19115 https://geo-ide.noaa.gov/wiki/index.php?title=ISO_19115_and_19115-2_CodeList_Dictionaries
 * Basel Register https://bartoc.org/
 * British Geological Survey https://www.bgs.ac.uk/data/vocabularies/home.cfm
@@ -73,11 +77,11 @@ See the instructions at [Vocabulary Review Process](https://github.com/geologica
 * NERC Vocabulary Server http://vocab.nerc.ac.uk/collection/
 * Best practice in formalizing a SKOS vocabulary https://confluence.csiro.au/public/VOCAB/vocabulary-services/publishing-vocabularies/best-practice-in-formalizing-a-skos-vocabulary
 
-## Files
-* **ontologies/\*.ttl** - background ontologies needed for vocab inferencing
-* **gsq-\*.ttl** - GSQ vocab files
-* **vocabs_load.py** - a Python script to load a GraphDB instance with the background ontologies and GSQ vocab files
-* **scripts/** - Python scripts to dump/load a GraphDB instance with these vocab files
+## Repository Contents
+* [vocabularies/](vocabularies/) - all GSQ's vocabularies, in RDF (Turtle) text files
+* [shapes/](shapes/) - SHACL graph shape files used to validate vocab files before publication
+* [scripts/](scripts/) - Python scripts to dump/load a GraphDB instance with these vocab files
+* [templates/](templates/) - Excel and other tools to help with vocab creation
 
 
 ## License
