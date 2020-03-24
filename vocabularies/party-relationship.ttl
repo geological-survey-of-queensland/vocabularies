@@ -1,0 +1,85 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pyrl: <http://linked.data.gov.au/def/party-relationship/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdo: <https://schema.org/> .
+
+<http://linked.data.gov.au/def/party-relationship> a owl:Ontology, skos:ConceptScheme ;
+    dct:created "2020-03-24"^^xsd:date ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-03-25"^^xsd:date ;
+    dct:source "Compiled by the Geological Survey of Queensland." ;
+    skos:definition "The relationships that exist between companies, businesses, and individuals."@en ;
+    skos:hasTopConcept pyrl:adviser,
+        pyrl:contractor,
+        pyrl:director,
+        pyrl:employee,
+        pyrl:joint-venture,
+        pyrl:owner,
+        pyrl:parent,
+        pyrl:subsidiary,
+        pyrl:volunteer ;
+    skos:prefLabel "Party Relationship"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
+
+pyrl:adviser a skos:Concept ;
+    skos:definition "An entity acting in an advisory capacity to the subject."@en ;
+    skos:inScheme pyrl:conceptScheme ;
+    skos:prefLabel "Adviser"@en ;
+    skos:topConceptOf pyrl:conceptScheme .
+
+pyrl:contractor a skos:Concept ;
+    skos:definition "An entity contracted to conduct work on behalf of the subject."@en ;
+    skos:inScheme pyrl:conceptScheme ;
+    skos:prefLabel "Contractor"@en ;
+    skos:topConceptOf pyrl:conceptScheme .
+
+pyrl:director a skos:Concept ;
+    skos:definition "The director of the subject company or business."@en ;
+    skos:inScheme pyrl:conceptScheme ;
+    skos:prefLabel "Director"@en ;
+    skos:topConceptOf pyrl:conceptScheme .
+
+pyrl:employee a skos:Concept ;
+    skos:definition "An individual in the paid employment of the subject entity."@en ;
+    skos:inScheme pyrl:conceptScheme ;
+    skos:prefLabel "Employee"@en ;
+    skos:topConceptOf pyrl:conceptScheme .
+
+pyrl:joint-venture a skos:Concept ;
+    skos:definition "A joint-venture entity to which the subject belongs, in partnership with other parties."@en ;
+    skos:inScheme pyrl:conceptScheme ;
+    skos:prefLabel "Joint Venture"@en ;
+    skos:topConceptOf pyrl:conceptScheme .
+
+pyrl:owner a skos:Concept ;
+    skos:definition "An individual who owns the subject business or company."@en ;
+    skos:inScheme pyrl:conceptScheme ;
+    skos:prefLabel "Owner"@en ;
+    skos:topConceptOf pyrl:conceptScheme .
+
+pyrl:parent a skos:Concept ;
+    skos:definition "The parent company of the subject."@en ;
+    skos:inScheme pyrl:conceptScheme ;
+    skos:prefLabel "Parent"@en ;
+    skos:topConceptOf pyrl:conceptScheme .
+
+pyrl:subsidiary a skos:Concept ;
+    skos:definition "A subsidiary of the subject company."@en ;
+    skos:inScheme pyrl:conceptScheme ;
+    skos:prefLabel "Subsidiary"@en ;
+    skos:topConceptOf pyrl:conceptScheme .
+
+pyrl:volunteer a skos:Concept ;
+    skos:definition "An unpaid individual volunteering services to the subject entity."@en ;
+    skos:inScheme pyrl:conceptScheme ;
+    skos:prefLabel "Volunteer"@en ;
+    skos:topConceptOf pyrl:conceptScheme .
