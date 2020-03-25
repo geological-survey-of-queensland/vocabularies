@@ -107,3 +107,27 @@ orgtyp:trust-regarded-as-corporations a skos:Concept ;
     skos:inScheme orgtyp:conceptScheme ;
     skos:prefLabel "Trust Regarded as Corporations"@en ;
     skos:topConceptOf orgtyp:conceptScheme .
+
+orgtyp:incorporated-private-sector-entities a skos:Collection ;
+    skos:definition "Government units which are created as bodies corporate through the Corporations Act in Australia or through other legislation."@en ;
+    skos:member orgtyp:other-incorporated-companies,
+        orgtyp:proprietary-companies,
+        orgtyp:public-companies ;
+    skos:prefLabel "Incorporated Private Sector Entities"@en .
+
+orgtyp:public-sector-entities a skos:Collection ;
+    skos:definition "Private sector entities which have a separate legal identity from their members (i.e. shareholders). They may be incorporated through the Corporations Act or other government legislation."@en ;
+    skos:member orgtyp:foreign-government-entities,
+        orgtyp:government-companies,
+        orgtyp:other-government-entities ;
+    skos:prefLabel "Public Sector Entities"@en .
+
+orgtyp:unincorporated-private-sector-entities a skos:Collection ;
+    skos:definition "Single owner entities which do not operate through an incorporated entity."@en ;
+    skos:member orgtyp:family-partnership,
+        orgtyp:other-incorporated-entities,
+        orgtyp:other-partnership,
+        orgtyp:other-trust,
+        orgtyp:sole-proprietorship,
+        orgtyp:trust-regarded-as-corporations ;
+    skos:prefLabel "Unincorporated Private Sector Entities"@en .
