@@ -1,0 +1,84 @@
+@prefix adrss: <http://linked.data.gov.au/def/address-type/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://www.schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+        
+<http://linked.data.gov.au/def/address-type> a owl:Ontology,
+        skos:ConceptScheme ;
+    dct:created "2020-03-25"^^xsd:date ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-03-25"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
+    dct:source "Derived from  Australian Standard AS 4590.1:2017" ;
+    skos:definition "The role or use of the address in relation to a party. An address may have more than one purpose."@en ;
+    skos:prefLabel "Address Type"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
+
+adrss:conceptScheme a skos:ConceptScheme ;
+    skos:hasTopConcept adrss:business-address,
+        adrss:delivery-address,
+        adrss:overseas-address,
+        adrss:postal-address,
+        adrss:primary-property-address,
+        adrss:residential-adress,
+        adrss:secondary-property-address .
+
+adrss:business-address a skos:Concept ;
+    skos:altLabel "Company Address"@en,
+        "Office Address"@en ;
+    skos:definition "The address of the principal place of business for the client."@en ;
+    skos:inScheme adrss:conceptScheme ;
+    skos:notation "BUS" ;
+    skos:prefLabel "Business Address"@en ;
+    skos:topConceptOf adrss:conceptScheme .
+
+adrss:delivery-address a skos:Concept ;
+    skos:definition "The address used for goods delivery purposes."@en ;
+    skos:inScheme adrss:conceptScheme ;
+    skos:notation "DEL" ;
+    skos:prefLabel "Delivery Address"@en ;
+    skos:topConceptOf adrss:conceptScheme .
+
+adrss:overseas-address a skos:Concept ;
+    skos:definition "The address used by the client when overseas."@en ;
+    skos:inScheme adrss:conceptScheme ;
+    skos:notation "OVS" ;
+    skos:prefLabel "Overseas Address"@en ;
+    skos:topConceptOf adrss:conceptScheme .
+
+adrss:postal-address a skos:Concept ;
+    skos:altLabel "Correspondence Address"@en ;
+    skos:definition "The address used by the client for receipt of correspondence."@en ;
+    skos:inScheme adrss:conceptScheme ;
+    skos:notation "POS" ;
+    skos:prefLabel "Postal Address"@en ;
+    skos:topConceptOf adrss:conceptScheme .
+
+adrss:primary-property-address a skos:Concept ;
+    skos:definition "The property address normally used by the client."@en ;
+    skos:inScheme adrss:conceptScheme ;
+    skos:notation "PR" ;
+    skos:prefLabel "Primary Property Address"@en ;
+    skos:topConceptOf adrss:conceptScheme .
+
+adrss:residential-adress a skos:Concept ;
+    skos:definition "The address of the principal place of residence for the client"@en ;
+    skos:inScheme adrss:conceptScheme ;
+    skos:notation "RES" ;
+    skos:prefLabel "Residential Adress"@en ;
+    skos:topConceptOf adrss:conceptScheme .
+
+adrss:secondary-property-address a skos:Concept ;
+    skos:definition "The address of an additional property attached to the client."@en ;
+    skos:inScheme adrss:conceptScheme ;
+    skos:notation "SEC" ;
+    skos:prefLabel "Secondary Property Address"@en ;
+    skos:topConceptOf adrss:conceptScheme .
