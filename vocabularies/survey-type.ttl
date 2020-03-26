@@ -32,6 +32,7 @@
         svytp:radiometric,
         svytp:seismic,
         svytp:spectral,
+        svytp:spatial,
         svytp:velocity ;
     skos:prefLabel "Survey Type"@en .
 
@@ -45,6 +46,7 @@ svytp:airborne a skos:Collection ;
         svytp:photographic,
         svytp:radiometric,
         svytp:spectral ;
+        svytp:spatial,
     skos:prefLabel "Airborne"@en .
 
 svytp:downhole a skos:Collection ;
@@ -85,6 +87,7 @@ svytp:ground a skos:Collection ;
         svytp:physical-geology,
         svytp:radiometric,
         svytp:seismic ;
+        svytp:spatial,
     skos:prefLabel "Ground"@en .
 
 svytp:procedural a skos:Collection ;
@@ -98,29 +101,34 @@ svytp:satellite a skos:Collection ;
         svytp:magnetic,
         svytp:photographic,
         svytp:spectral ;
+        svytp:spatial,
     skos:prefLabel "Satellite"@en .
 
 svytp:passive-seismic a skos:Concept ;
     skos:broader svytp:seismic ;
     skos:definition "A seismic survey using passive and natural noise sources. Typically capturing cumulative information over extended recording periods."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "pv" ;
     skos:prefLabel "Passive seismic"@en .
 
 svytp:directional a skos:Concept ;
     skos:definition "The process of recording the subsurface geometry of a borehole i.e. direction and position of a wellbore."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "ds" ;
     skos:prefLabel "Directional"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
 svytp:geothermics a skos:Concept ;
     skos:definition "A survey measuring variations of heat flow within the Earth."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "ge" ;
     skos:prefLabel "Geothermics"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
 svytp:hydrochemistry a skos:Concept ;
     skos:definition "A survey of the chemical and physical properties of surface or ground water."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "hy" ;
     skos:prefLabel "Hydrochemistry"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -129,6 +137,7 @@ svytp:magnetotelluric a skos:Concept ;
         "MT Survey"@en ;
     skos:definition "A survey where recordings of the Earths electric and magnetic fields are taken concurrently to determine the subsurface electrical resistivity at a range of scales"@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "mt" ;
     skos:prefLabel "Magnetotelluric"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -136,12 +145,14 @@ svytp:organic-geochemistry a skos:Concept ;
     skos:broader svytp:geochemistry ;
     skos:definition "A geochemistry survey specifically determining organic chemical properties. Typically performed for material such as coal and oil."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "og" ;
     skos:prefLabel "Organic Geochemistry"@en .
 
 svytp:petrophysical a skos:Concept ;
     skos:altLabel "Wireline"@en ;
     skos:definition "The process of recording various physical, chemical, electrical, or other properties of the rock/fluid mixtures penetrated by a borehole."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "pp" ;
     skos:prefLabel "Petrophysical"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -149,6 +160,7 @@ svytp:velocity a skos:Concept ;
     skos:altLabel "Checkshot"@en ;
     skos:definition "The process of recording the average sonic velocity with depth down a borehole."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "vl" ;
     skos:prefLabel "Velocity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -156,6 +168,7 @@ svytp:physical-geology a skos:Concept ;
     skos:altLabel "Field Mapping"@en ;
     skos:definition "A survey of physical geological features such as outcrop samples, structural measurements, sedimentological and stratigraphic observations."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "pg" ;
     skos:prefLabel "Physical Geology"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -165,12 +178,14 @@ svytp:process a skos:Concept ;
         "resampling"@en ;
     skos:definition "A sampling procedure performed on an existing sample to alter the sample or generate a new sub-sample or set of sub-samples. This may include seismic processing and reprocessing."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "ps" ;
     skos:prefLabel "Process"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
 svytp:atmospheric a skos:Concept ;
     skos:definition "A survey measuring chemical and physical properties of the atmosphere."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "at" ;
     skos:prefLabel "Atmospheric"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -187,6 +202,7 @@ svytp:electrical a skos:Concept ;
         "Wiener Survey"@en ;
     skos:definition "A survey measuring electrical currents as they travel through conductive pathways in the near surface."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "es" ;
     skos:prefLabel "Electrical"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -194,6 +210,7 @@ svytp:geotechnical a skos:Concept ;
     skos:altLabel "Geomechanical"@en ;
     skos:definition "A survey measuring the physical and mechanical properties of rocks, soil and earth material with particular focus on rock strength and competence."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "gt" ;
     skos:prefLabel "Geotechnical"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -202,17 +219,20 @@ svytp:gravity-gradiometry a skos:Concept ;
     skos:broader svytp:gravity ;
     skos:definition "A variation of gravity survey where the gradient of the gravity field is measured instead of the field directly."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "gy" ;
     skos:prefLabel "Gravity gradiometry"@en .
 
 svytp:magnetic-gradiometry a skos:Concept ;
     skos:broader svytp:magnetic ;
     skos:definition "A variation of magnetic survey which measured the gradient of the magnetic field instead of the field."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "my" ;
     skos:prefLabel "Magnetic gradiometry"@en .
 
 svytp:seismic a skos:Concept ;
     skos:definition "A survey using the interaction of seismic waves with sub-surface features of the earth to determine properties and morphology of those features."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "ss" ;
     skos:prefLabel "Seismic"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -221,18 +241,21 @@ svytp:electromagnetic a skos:Concept ;
         "EM Survey"@en ;
     skos:definition "A survey measuring induced electromagnetic fields from the earth to determine the resistive/conductive structure of the earth."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "em" ;
     skos:prefLabel "Electromagnetic"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
 svytp:geochemistry a skos:Concept ;
     skos:definition "A survey where the chemical properties of rocks, soil, or other geological material is assessed to determine mineralogical and/or elemental composition."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "gc" ;
     skos:prefLabel "Geochemistry"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
 svytp:photographic a skos:Concept ;
     skos:definition "A survey using standard photographic equipment for image capture without intention for spectral analysis. Including land-based geological photography."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "ph" ;
     skos:prefLabel "Photographic"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -241,6 +264,7 @@ svytp:radiometric a skos:Concept ;
         "Gamma-Ray Spectrography"@en ;
     skos:definition "A survey where the emissions of natural gamma-rays are recorded to determine the quantity of radioelements (Potassium, Uranium, Thorium)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "rm" ;
     skos:prefLabel "Radiometric"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -248,12 +272,21 @@ svytp:spectral a skos:Concept ;
     skos:altLabel "hyperspectral"@en ;
     skos:definition "A survey capturing image information and intensity-per-wavelength-band to be used for spectral analysis e.g. ASTER, MODIS."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "sp" ;
     skos:prefLabel "Spectral"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
+
+svytp:spatial a skos:Concept ;
+    skos:definition "A survey measuring the spatial characteristics of an object or region."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "st" ;
+    skos:prefLabel "Spatial"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
 svytp:gravity a skos:Concept ;
     skos:definition "A survey where the variation of the Earth's gravity field in measured to determine the distribution of density in the region"@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "gv" ;
     skos:prefLabel "Gravity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
@@ -261,5 +294,6 @@ svytp:magnetic a skos:Concept ;
     skos:altLabel "aeromagnetics"@en ;
     skos:definition "A survey where the variations of the Earth's magnetic field is measured to determine the distribution of magnetic minerals (predominately magnetite)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+    skos:notation "mg" ;
     skos:prefLabel "Magnetic"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
