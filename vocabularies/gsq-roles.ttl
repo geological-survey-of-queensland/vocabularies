@@ -17,7 +17,11 @@
     skos:hasTopConcept gsqr:contractor,
         iso11179:Submitter,
         isorole:author,
+        isorole:editor,
+        isorole:originator,
         isorole:owner,
+        isorole:principalInvestigator,
+        isorole:processor,
         isorole:publisher ;
     skos:prefLabel "Geological Survey of Queensland's Agent Roles"@en .
 
@@ -68,12 +72,43 @@ isorole:author a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
         <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
 
+isorole:editor a skos:Concept ;
+    skos:definition "Party who reviewed or modified the resource to improve the content"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
+    skos:altLabel "Reviewer"@en ;
+    skos:prefLabel "Editor"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
+        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
+
 isorole:owner a skos:Concept ;
     skos:altLabel "tenure holder" , "authority holder" , "permit holder" ;
     skos:definition "Agent that owns the resource"@en ;
     skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115. The altLabels are drawn from P&G (general provisions) regulation 2017, section 37(4)"@en ;
     skos:prefLabel "Owner"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
+        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
+
+isorole:originator a skos:Concept ;
+    skos:definition "Party who created the resource"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
+    skos:altLabel "Sampler"@en ;
+    skos:prefLabel "Owner"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
+        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
+
+isorole:principalInvestigator a skos:Concept ;
+    skos:definition "Key party responsible for gathering information and conducting research"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
+    skos:altLabel "Observer"@en ;
+    skos:prefLabel "Principal Investigator"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
+        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
+
+isorole:processor a skos:Concept ;
+    skos:definition "Party who has processed the data in a manner such that the resource has been modified"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
+    skos:prefLabel "Processor"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
         <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
 
