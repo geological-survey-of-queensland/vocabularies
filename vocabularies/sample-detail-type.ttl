@@ -1,0 +1,46 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://www.schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix smpdt: <http://linked.data.gov.au/def/sample-detail-type/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/sample-detail-type> a owl:Ontology,
+        skos:ConceptScheme ;
+    dct:created "2020-03-30"^^xsd:date ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-03-30"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "A definition for vocabulary that describes its purpose."@en ;
+    skos:prefLabel "Sample Detail Type"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
+
+smpdt:conceptScheme a skos:ConceptScheme ;
+    skos:hasTopConcept smpdt:dummy,
+        smpdt:example,
+        smpdt:placeholder .
+
+smpdt:dummy a skos:Concept ;
+    skos:definition "Not areal concept, just here for looks."@en ;
+    skos:inScheme smpdt:conceptScheme ;
+    skos:prefLabel "Dummy"@en ;
+    skos:topConceptOf smpdt:conceptScheme .
+
+smpdt:example a skos:Concept ;
+    skos:definition "This just looks like what should actually be here."@en ;
+    skos:inScheme smpdt:conceptScheme ;
+    skos:prefLabel "Example"@en ;
+    skos:topConceptOf smpdt:conceptScheme .
+
+smpdt:placeholder a skos:Concept ;
+    skos:definition "This is a placeholder."@en ;
+    skos:inScheme smpdt:conceptScheme ;
+    skos:prefLabel "Placeholder"@en ;
+    skos:topConceptOf smpdt:conceptScheme .
