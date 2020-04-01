@@ -1,4 +1,4 @@
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
@@ -11,7 +11,7 @@
 <TitleShape>
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
-    sh:message "A vocabulary's ConceptScheme must have either a skos:prefLabel, dct:title or rdfs:label property (a Literal) and may only have at most one of each per language." ;
+    sh:message "A vocabulary's ConceptScheme must have either a skos:prefLabel, dcterms:title or rdfs:label property (a Literal) and may only have at most one of each per language." ;
     sh:xone (
         [
             sh:property [
@@ -22,7 +22,7 @@
         ]
         [
             sh:property [
-                sh:path dct:title ;
+                sh:path dcterms:title ;
                 sh:minCount 1 ;
                 sh:uniqueLang true ;
             ]
@@ -40,7 +40,7 @@
 <DescriptionShape>
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
-    sh:message "A vocabulary's ConceptScheme must have either a skos:definition, dct:description or rdfs:comment property (a Literal) and may only have at most one of each per language." ;
+    sh:message "A vocabulary's ConceptScheme must have either a skos:definition, dcterms:description or rdfs:comment property (a Literal) and may only have at most one of each per language." ;
     sh:xone (
         [
             sh:property [
@@ -51,7 +51,7 @@
         ] 
         [
             sh:property [
-                sh:path dct:description ;
+                sh:path dcterms:description ;
                 sh:minCount 1 ;
                 sh:uniqueLang true ;
             ]
@@ -70,7 +70,7 @@
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
     sh:property [
-        sh:path dct:creator ;
+        sh:path dcterms:creator ;
         sh:minCount 1 ;
         sh:or (
             [
@@ -80,7 +80,7 @@
                 sh:class sdo:Person ;
             ]
         ) ;       
-        sh:message "A vocabulary's ConceptScheme must have a dct:creator property (an sdo:Organization or an sdo:Person)" ;
+        sh:message "A vocabulary's ConceptScheme must have a dcterms:creator property (an sdo:Organization or an sdo:Person)" ;
     ] ;  
 .
 
@@ -88,7 +88,7 @@
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
     sh:property [
-        sh:path dct:publisher;
+        sh:path dcterms:publisher;
         sh:minCount 1 ;
         sh:or (
             [
@@ -98,7 +98,7 @@
                 sh:class sdo:Person ;
             ]
         ) ;        
-        sh:message "A vocabulary's ConceptScheme must have a dct:publisher property (an IRI)" ;
+        sh:message "A vocabulary's ConceptScheme must have a dcterms:publisher property (an IRI)" ;
     ] ;
 .
 
@@ -106,7 +106,7 @@
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
     sh:property [
-        sh:path dct:created ;
+        sh:path dcterms:created ;
         sh:minCount 1 ;
         sh:maxCount 1 ; 
         sh:or (
@@ -120,10 +120,10 @@
                 sh:datatype xsd:dateTimeStamp ;
             ]            
         ) ;
-        sh:message "A vocabulary's ConceptScheme must have a dct:created property that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp." ;
+        sh:message "A vocabulary's ConceptScheme must have a dcterms:created property that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp." ;
     ] ; 
     sh:property [
-        sh:path dct:modified ;
+        sh:path dcterms:modified ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:or (
@@ -137,7 +137,7 @@
                 sh:datatype xsd:dateTimeStamp ;
             ]
         ) ;
-        sh:message "A vocabulary's ConceptScheme must have a dct:modified property that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp." ;
+        sh:message "A vocabulary's ConceptScheme must have a dcterms:modified property that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp." ;
     ] ;
 .
 
