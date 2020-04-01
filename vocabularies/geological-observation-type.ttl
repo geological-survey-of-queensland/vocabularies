@@ -22,6 +22,7 @@
         obtyp:colour,
         obtyp:components,
         obtyp:composition,
+        obtype:depth-interval,
         obtyp:depths-of-supergene-alteration,
         obtyp:fabric,
         obtyp:fossils,
@@ -113,6 +114,13 @@ obtyp:composition a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-type>  ;
     skos:notation "COMPOS" ;
     skos:prefLabel "Composition"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type>  .
+
+obtyp:depth-interval a skos:Concept ;
+    skos:definition "The depth of an interval or horizon in a borehole."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-type>  ;
+    skos:notation "DPINT" ;
+    skos:prefLabel "Depth Interval"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type>  .
 
 obtyp:depths-of-supergene-alteration a skos:Concept ;
