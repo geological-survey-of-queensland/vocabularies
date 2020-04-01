@@ -1,0 +1,730 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qgsff: <http://linked.data.gov.au/def/queensland-geological-structure-framework-features/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://www.schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/queensland-geological-structure-framework-features> a owl:Ontology,
+        skos:ConceptScheme ;
+    dct:created "2020-04-01"^^xsd:date ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-04-01"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
+    dct:source "Derived from https://gisservices.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/StructuralFramework/MapServer" ;
+    skos:definition "Major structural framework features which are  geological in nature and wholly or partially within the bounds of the Australian state of Queensland."@en ;
+    skos:prefLabel "Queensland Geological Structure Framework Features"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
+
+qgsff:conceptScheme a skos:ConceptScheme ;
+    skos:hasTopConcept qgsff:adavale-basin,
+        qgsff:barrolka-depression,
+        qgsff:belyando-basin,
+        qgsff:bowen-basin,
+        qgsff:bundock-basin,
+        qgsff:burdekin-basin,
+        qgsff:burketown-depression,
+        qgsff:calen-basin,
+        qgsff:callide-basin,
+        qgsff:canobie-depression,
+        qgsff:cape-york-oriomo-province,
+        qgsff:carpentaria-basin,
+        qgsff:centralian-superbasin,
+        qgsff:clarence-moreton-basin,
+        qgsff:clarke-river-basin,
+        qgsff:cooper-basin,
+        qgsff:croydon-province,
+        qgsff:drummond-basin,
+        qgsff:eromanga-basin,
+        qgsff:esk-basin,
+        qgsff:etheridge-province,
+        qgsff:galilee-basin,
+        qgsff:gamboola-basin,
+        qgsff:gilberton-basin,
+        qgsff:inorunie-basin,
+        qgsff:ipswich-basin,
+        qgsff:lakefield-basin,
+        qgsff:laura-basin,
+        qgsff:maryborough-basin,
+        qgsff:mcarthur-basin,
+        qgsff:millungera-basin,
+        qgsff:mossman-orogen,
+        qgsff:mount-isa-province,
+        qgsff:mulgildie-basin,
+        qgsff:nambour-basin,
+        qgsff:new-england-orogen,
+        qgsff:ngarrabullgan-basin,
+        qgsff:north-australian-craton-extent,
+        qgsff:olive-river-basin,
+        qgsff:pascoe-river-basin,
+        qgsff:savannah-province,
+        qgsff:south-nicholson-basin,
+        qgsff:styx-basin,
+        qgsff:surat-basin,
+        qgsff:tarong-basin,
+        qgsff:thomson-orogen,
+        qgsff:warrabin-trough,
+        qgsff:whitsunday-province .
+
+qgsff:auburn-subprovince a skos:Concept ;
+    skos:broader qgsff:connors-auburn-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/49"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Auburn Subprovince"@en .
+
+qgsff:awoonga-subprovince a skos:Concept ;
+    skos:broader qgsff:calliope-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/68"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Awoonga Subprovince"@en .
+
+qgsff:beenleigh-subprovince a skos:Concept ;
+    skos:broader qgsff:wandilla-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/59"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Beenleigh Subprovince"@en .
+
+qgsff:berserker-subprovince a skos:Concept ;
+    skos:broader qgsff:yarrol-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/52"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Berserker Subprovince"@en .
+
+qgsff:camel-creek-subprovince a skos:Concept ;
+    skos:broader qgsff:broken-river-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/78"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Camel Creek Subprovince"@en .
+
+qgsff:campwyn-subprovince a skos:Concept ;
+    skos:broader qgsff:yarrol-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/53"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Campwyn Subprovince"@en .
+
+qgsff:capella-subprovince a skos:Concept ;
+    skos:broader qgsff:calliope-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/69"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Capella Subprovince"@en .
+
+qgsff:chillagoe-subprovince a skos:Concept ;
+    skos:broader qgsff:hodgkinson-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/81"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Chillagoe Subprovince"@en .
+
+qgsff:coastal-subprovince a skos:Concept ;
+    skos:broader qgsff:wandilla-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/60"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Coastal Subprovince"@en .
+
+qgsff:connors-subprovince a skos:Concept ;
+    skos:broader qgsff:connors-auburn-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/50"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Connors Subprovince"@en .
+
+qgsff:craigilee-subprovince a skos:Concept ;
+    skos:broader qgsff:calliope-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/70"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Craigilee Subprovince"@en .
+
+qgsff:erebus-subprovince a skos:Concept ;
+    skos:broader qgsff:calliope-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/71"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Erebus Subprovince"@en .
+
+qgsff:georgina-basin a skos:Concept ;
+    skos:broader qgsff:centralian-superbasin ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/42"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Georgina Basin"@en .
+
+qgsff:grantleigh-subprovince a skos:Concept ;
+    skos:broader qgsff:yarrol-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/54"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Grantleigh Subprovince"@en .
+
+qgsff:graveyard-creek-subprovince a skos:Concept ;
+    skos:broader qgsff:broken-river-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/79"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Graveyard Creek Subprovince"@en .
+
+qgsff:gympie-province a skos:Concept ;
+    skos:broader qgsff:new-england-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/47"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Gympie Province"@en .
+
+qgsff:mossman-orogen-extent a skos:Concept ;
+    skos:broader qgsff:mossman-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/83"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Mossman Orogen extent"@en .
+
+qgsff:new-england-orogen-extent a skos:Concept ;
+    skos:broader qgsff:marlborough-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/75"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "New England Orogen extent"@en .
+
+qgsff:nogo-subprovince a skos:Concept ;
+    skos:broader qgsff:yarrol-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/55"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Nogo Subprovince"@en .
+
+qgsff:north-d-aguilar-subprovince a skos:Concept ;
+    skos:broader qgsff:wandilla-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/61"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "North D Aguilar Subprovince"@en .
+
+qgsff:palmer-barron-subprovince a skos:Concept ;
+    skos:broader qgsff:hodgkinson-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/82"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Palmer-Barron Subprovince"@en .
+
+qgsff:philpott-subprovince a skos:Concept ;
+    skos:broader qgsff:calliope-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/72"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Philpott Subprovince"@en .
+
+qgsff:rockhampton-subprovince a skos:Concept ;
+    skos:broader qgsff:yarrol-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/56"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Rockhampton Subprovince"@en .
+
+qgsff:silver-spur-subprovince a skos:Concept ;
+    skos:broader qgsff:woolomin-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/65"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Silver Spur Subprovince"@en .
+
+qgsff:silverwood-province a skos:Concept ;
+    skos:broader qgsff:marlborough-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/74"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Silverwood Province"@en .
+
+qgsff:south-d-aguilar-subprovince a skos:Concept ;
+    skos:broader qgsff:wandilla-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/62"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "South D Aguilar Subprovince"@en .
+
+qgsff:stoodleigh-subprovince a skos:Concept ;
+    skos:broader qgsff:yarrol-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/57"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Stoodleigh Subprovince"@en .
+
+qgsff:texas-subprovince a skos:Concept ;
+    skos:broader qgsff:woolomin-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/66"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Texas Subprovince"@en .
+
+qgsff:thomson-orogen-extent a skos:Concept ;
+    skos:broader qgsff:thomson-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/94"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Thomson Orogen extent"@en .
+
+qgsff:yarraman-subprovince a skos:Concept ;
+    skos:broader qgsff:wandilla-province ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/63"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Yarraman Subprovince"@en .
+
+qgsff:anakie-province a skos:Concept ;
+    skos:broader qgsff:thomson-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/86"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Anakie Province"@en .
+
+qgsff:barnard-province a skos:Concept ;
+    skos:broader qgsff:thomson-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/87"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Barnard Province"@en .
+
+qgsff:charters-towers-province a skos:Concept ;
+    skos:broader qgsff:thomson-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/88"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Charters Towers Province"@en .
+
+qgsff:fork-lagoons-subprovince a skos:Concept ;
+    skos:broader qgsff:thomson-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/89"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Fork Lagoons Subprovince"@en .
+
+qgsff:greenvale-province a skos:Concept ;
+    skos:broader qgsff:thomson-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/90"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Greenvale Province"@en .
+
+qgsff:iron-range-province a skos:Concept ;
+    skos:broader qgsff:thomson-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/91"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Iron Range Province"@en .
+
+qgsff:mount-windsor-subprovince a skos:Concept ;
+    skos:broader qgsff:thomson-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/92"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Mount Windsor Subprovince"@en .
+
+qgsff:north-australian-craton-extent a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/104"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "North Australian Craton extent"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:warburton-basin a skos:Concept ;
+    skos:broader qgsff:thomson-orogen ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/93"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Warburton Basin"@en .
+
+qgsff:adavale-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/31"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Adavale Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:barrolka-depression a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/32"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Barrolka Depression"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:belyando-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/33"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Belyando Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:bowen-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/21"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Bowen Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:broken-river-province a skos:Concept ;
+    skos:broader qgsff:mossman-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/77"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Broken River Province"@en .
+
+qgsff:bundock-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/34"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Bundock Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:burdekin-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/35"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Burdekin Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:burketown-depression a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/14"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Burketown Depression"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:calen-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/22"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Calen Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:callide-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/15"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Callide Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:canobie-depression a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/16"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Canobie Depression"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:cape-york-oriomo-province a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/29"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Cape York-Oriomo Province"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:carpentaria-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/3"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Carpentaria Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:centralian-superbasin a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/41"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Centralian Superbasin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:clarence-moreton-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/4"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Clarence-Moreton Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:clarke-river-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/36"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Clarke River Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:connors-auburn-province a skos:Concept ;
+    skos:broader qgsff:new-england-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/48"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Connors-Auburn Province"@en .
+
+qgsff:cooper-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/23"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Cooper Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:drummond-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/37"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Drummond Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:eromanga-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/5"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Eromanga Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:esk-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/17"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Esk Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:galilee-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/24"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Galilee Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:gamboola-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/25"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Gamboola Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:gilberton-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/38"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Gilberton Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:hodgkinson-province a skos:Concept ;
+    skos:broader qgsff:mossman-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/80"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Hodgkinson Province"@en .
+
+qgsff:inorunie-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/44"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Inorunie Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:ipswich-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/18"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Ipswich Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:lakefield-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/26"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Lakefield Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:laura-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/6"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Laura Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:marlborough-province a skos:Concept ;
+    skos:broader qgsff:new-england-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/73"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Marlborough Province"@en .
+
+qgsff:maryborough-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/7"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Maryborough Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:millungera-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/45"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Millungera Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:mulgildie-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/8"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Mulgildie Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:nambour-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/9"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Nambour Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:ngarrabullgan-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/27"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Ngarrabullgan Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:olive-river-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/28"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Olive River Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:pascoe-river-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/39"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Pascoe River Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:styx-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/10"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Styx Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:surat-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/11"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Surat Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:tarong-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/19"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Tarong Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:warrabin-trough a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/40"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Warrabin Trough"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:whitsunday-province a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/12"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Whitsunday Province"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:woolomin-province a skos:Concept ;
+    skos:broader qgsff:new-england-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/64"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Woolomin Province"@en .
+
+qgsff:croydon-province a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/98"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Croydon Province"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:etheridge-province a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/101"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Etheridge Province"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:mcarthur-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/102"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "McArthur Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:mount-isa-province a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/103"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Mount Isa Province"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:savannah-province a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/99"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Savannah Province"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:south-nicholson-basin a skos:Concept ;
+    skos:definition "A geological sedimentary basin wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/97"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "South Nicholson Basin"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:mossman-orogen a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/76"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Mossman Orogen"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:calliope-province a skos:Concept ;
+    skos:broader qgsff:new-england-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/67"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Calliope Province"@en .
+
+qgsff:wandilla-province a skos:Concept ;
+    skos:broader qgsff:new-england-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/58"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Wandilla Province"@en .
+
+qgsff:yarrol-province a skos:Concept ;
+    skos:broader qgsff:new-england-orogen ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/51"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Yarrol Province"@en .
+
+qgsff:new-england-orogen a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/46"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "New England Orogen"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:thomson-orogen a skos:Concept ;
+    skos:definition "A geological province wholly or partially within the bounds of the Australian state of Queensland and spatially defined by https://gisservices.information.qld.gov.au/arcgis/rest/services/geoscientificInformation/StructuralFramework/MapServer/84"@en ;
+    skos:inScheme qgsff:conceptScheme ;
+    skos:prefLabel "Thomson Orogen"@en ;
+    skos:topConceptOf qgsff:conceptScheme .
+
+qgsff:basins-of-unknown-age a skos:Collection ;
+    skos:definition "Basins in Queensland which are of unknown age."@en ;
+    skos:member qgsff:inorunie-basin,
+        qgsff:millungera-basin ;
+    skos:prefLabel "Basins of Unknown Age"@en .
+
+qgsff:devonian-carboniferous-basins a skos:Collection ;
+    skos:definition "Basins in Queensland which are of Devonian-Carboniferous age."@en ;
+    skos:member qgsff:adavale-basin,
+        qgsff:barrolka-depression,
+        qgsff:belyando-basin,
+        qgsff:bundock-basin,
+        qgsff:burdekin-basin,
+        qgsff:clarke-river-basin,
+        qgsff:drummond-basin,
+        qgsff:gilberton-basin,
+        qgsff:pascoe-river-basin,
+        qgsff:warrabin-trough ;
+    skos:prefLabel "Devonian-Carboniferous Basins"@en .
+
+qgsff:jurassic-cretaceous-basins a skos:Collection ;
+    skos:definition "Basins in Queensland which are of Jurassic-Cretaceous age."@en ;
+    skos:member qgsff:carpentaria-basin,
+        qgsff:clarence-moreton-basin,
+        qgsff:eromanga-basin,
+        qgsff:laura-basin,
+        qgsff:maryborough-basin,
+        qgsff:mulgildie-basin,
+        qgsff:nambour-basin,
+        qgsff:styx-basin,
+        qgsff:surat-basin,
+        qgsff:whitsunday-province ;
+    skos:prefLabel "Jurassic-Cretaceous Basins"@en .
+
+qgsff:mesoproterozoic-provinces a skos:Collection ;
+    skos:definition "Provinces which are of Mesoproterozoic age."@en ;
+    skos:member qgsff:croydon-province,
+        qgsff:savannah-province,
+        qgsff:south-nicholson-basin ;
+    skos:prefLabel "Mesoproterozoic Provinces"@en .
+
+qgsff:neoproterozoic-early-paleozoic-provinces a skos:Collection ;
+    skos:definition "Provinces in Queensland which are of Neoproterozoic to Early Paleozoic age."@en ;
+    skos:member qgsff:anakie-province,
+        qgsff:barnard-province,
+        qgsff:charters-towers-province,
+        qgsff:fork-lagoons-subprovince,
+        qgsff:greenvale-province,
+        qgsff:iron-range-province,
+        qgsff:mount-windsor-subprovince,
+        qgsff:warburton-basin ;
+    skos:prefLabel "Neoproterozoic-Early Paleozoic Provinces"@en .
+
+qgsff:paleoproterozoic-mesoproterozoic-provinces a skos:Collection ;
+    skos:definition "Provinces which are of Paleoproterozic-Mesoproterozoic age."@en ;
+    skos:member qgsff:etheridge-province,
+        qgsff:mcarthur-basin,
+        qgsff:mount-isa-province ;
+    skos:prefLabel "Paleoproterozoic-Mesoproterozoic Provinces"@en .
+
+qgsff:permian-triassic-basins a skos:Collection ;
+    skos:definition "Basins in Queensland which are of Permian-Triassic age."@en ;
+    skos:member qgsff:bowen-basin,
+        qgsff:calen-basin,
+        qgsff:cape-york-oriomo-province,
+        qgsff:cooper-basin,
+        qgsff:galilee-basin,
+        qgsff:gamboola-basin,
+        qgsff:lakefield-basin,
+        qgsff:ngarrabullgan-basin,
+        qgsff:olive-river-basin ;
+    skos:prefLabel "Permian-Triassic Basins"@en .
+
+qgsff:proterozoic-provinces a skos:Collection ;
+    skos:definition "Provinces in Queensland which are of Proterozoic age."@en ;
+    skos:member qgsff:croydon-province,
+        qgsff:etheridge-province,
+        qgsff:mcarthur-basin,
+        qgsff:mount-isa-province,
+        qgsff:savannah-province,
+        qgsff:south-nicholson-basin ;
+    skos:prefLabel "Proterozoic Provinces"@en .
+
+qgsff:triassic-basins a skos:Collection ;
+    skos:definition "Basins in Queensland which are of Triassic age."@en ;
+    skos:member qgsff:burketown-depression,
+        qgsff:callide-basin,
+        qgsff:canobie-depression,
+        qgsff:esk-basin,
+        qgsff:ipswich-basin,
+        qgsff:tarong-basin ;
+    skos:prefLabel "Triassic Basins"@en .
