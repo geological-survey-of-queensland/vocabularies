@@ -1,0 +1,59 @@
+@prefix bhsp: <http://linked.data.gov.au/def/borehole-start-point/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://www.schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/borehole-start-point> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:created "2020-04-02"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-04-02"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Derived from the 201109 version of CGI Borehole start point list" ;
+    skos:definition "Indicates the nature of the borehole start point location."@en ;
+    skos:prefLabel "Borehole Start Point"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+
+bhsp:from-pre-existing-hole a skos:Concept ;
+    skos:definition "Indicates that the borehole was drilled from a pre-existing hole."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/boreholestartpoint/0002> ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-start-point> ;
+    skos:prefLabel "From pre-existing hole"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-start-point> .
+
+bhsp:natual-ground-surface a skos:Concept ;
+    skos:definition "Indicates that the borehole was drilled from the natural ground surface."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/boreholestartpoint/0003> ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-start-point> ;
+    skos:prefLabel "Natual ground surface"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-start-point> .
+
+bhsp:offshore a skos:Concept ;
+    skos:definition "Indicates that the borehole was drilled from an offshore platform, such as a petroleum platform or a marine research vessel."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/boreholestartpoint/0005> ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-start-point> ;
+    skos:prefLabel "Offshore"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-start-point> .
+
+bhsp:open-pit-floor-or-wall a skos:Concept ;
+    skos:definition "Indicates that the borehole was drilled from an open pit floor or open pit wall."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/boreholestartpoint/0004> ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-start-point> ;
+    skos:prefLabel "Open pit floor or wall"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-start-point> .
+
+bhsp:underground a skos:Concept ;
+    skos:definition "Indicates that the borehole was drilled from an underground location."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/boreholestartpoint/0001> ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-start-point> ;
+    skos:prefLabel "Underground"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-start-point> .
