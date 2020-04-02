@@ -24,6 +24,7 @@
         strel:injection-extraction-pair,
         strel:meets,
         strel:observation,
+        strel:overlaps,
         strel:parent,
         strel:re-entry,
         strel:redrill,
@@ -50,7 +51,8 @@ strel:interval a skos:Collection ;
         strel:covers,
         strel:disjoint,
         strel:equals,
-        strel:meets ;
+        strel:meets,
+        strel:overlaps ;
     skos:prefLabel "Interval"@en .
 
 strel:topological a skos:Collection ;
@@ -59,7 +61,8 @@ strel:topological a skos:Collection ;
         strel:covers,
         strel:disjoint,
         strel:equals,
-        strel:meets ;
+        strel:meets,
+        strel:overlaps ;
     skos:prefLabel "Topological"@en .
 
 strel:wellbore a skos:Collection ;
@@ -130,13 +133,13 @@ strel:well-pad a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:contains a skos:Concept ;
-    skos:definition "Object A contains object B."@en ;
+    skos:definition "Object A contains object B, and the boundaries do not intersect."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Contains"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:covers a skos:Concept ;
-    skos:definition "Object A covers object B."@en ;
+    skos:definition "Object A covers object B, and the boundaries intersect."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Covers"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
@@ -158,4 +161,10 @@ strel:meets a skos:Concept ;
     skos:definition "Object A and object B meet at the boundary."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Meets"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:overlaps a skos:Concept ;
+    skos:definition "Object A and object B overlap."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlaps"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
