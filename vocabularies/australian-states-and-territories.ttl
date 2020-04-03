@@ -17,12 +17,7 @@
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Derived from  ISO standard 3166. https://www.iso.org/obp/ui/#iso:code:3166:AU" ;
     skos:definition "The States and Territories of the Country of Australia."@en ;
-    skos:prefLabel "Australian States and Territories"@en .
-
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" .
-    
-<http://linked.data.gov.au/def/australian-states-and-territories> a skos:ConceptScheme ;
+    skos:prefLabel "Australian States and Territories"@en ;
     skos:hasTopConcept asat:australian-capital-territory,
         asat:new-south-wales,
         asat:northern-territory,
@@ -30,7 +25,10 @@
         asat:south-australia,
         asat:tasmania,
         asat:victoria,
-        asat:western-australia.
+        asat:western-australia .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
 
 asat:australian-capital-territory a skos:Concept ;
     skos:definition "The Australian Capital Territory."@en ;
