@@ -17,12 +17,7 @@
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Derived from  Australian Standard AS 4590.1:2017" ;
     skos:definition "The role or use of the address in relation to a party. An address may have more than one purpose."@en ;
-    skos:prefLabel "Address Type"@en .
-
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" .
-
-<http://linked.data.gov.au/def/address-type> a skos:ConceptScheme ;
+    skos:prefLabel "Address Type"@en ;
     skos:hasTopConcept adrss:business-address,
         adrss:delivery-address,
         adrss:overseas-address,
@@ -30,6 +25,10 @@
         adrss:primary-property-address,
         adrss:residential-address,
         adrss:secondary-property-address .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
+
 
 adrss:business-address a skos:Concept ;
     skos:altLabel "Company Address"@en,
