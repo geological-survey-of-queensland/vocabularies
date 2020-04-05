@@ -15,6 +15,8 @@
     dct:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml> ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)"@en ;
     skos:hasTopConcept gsqr:contractor,
+        gsqr:contractor,
+        gsqr:operator,
         iso11179:Submitter,
         isorole:author,
         isorole:editor,
@@ -25,11 +27,87 @@
         isorole:publisher ;
     skos:prefLabel "Geological Survey of Queensland's Agent Roles"@en .
 
-<http://linked.data.gov.au/org/gsq>
-    a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-.
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
 
+gsqr:contractor a skos:Concept ;
+    skos:prefLabel "Contractor"@en ;
+    skos:altLabel "Service Provider"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:definition "Contractors are agents who receive work contracts to perform activities on behalf of other agents, e.g. owners or operators."@en ;
+    skos:scopeNote "Contractors should always act on behalf of (formally: prov:actedObBehalfOf) some other Agent, such as an Owner"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
+
+gsqr:driller a skos:Concept ;
+    skos:broader gsqr:contractor ;
+    skos:prefLabel "Driller"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:definition "The agent who drills or bores the borehole."@en .
+
+gsqr:operator a skos:Concept ;
+    skos:prefLabel "Operator"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:definition "The corporation or other entity that is the decision-maker and has responsibility for the overall management for the project."@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
+
+iso11179:Submitter a skos:Concept ;
+    skos:altLabel "Lodger" ;
+    skos:definition "A Submitter should be an organizational unit approved by a process defined by the Registration Authority. A Submitter is authorized to identify and report Administered Items suitable for registration. The Submitter can be viewed as a contact for the Submitting Organization."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles>;
+    skos:prefLabel "Submitter"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>;
+    skos:usageNote "In QDEX Reports, this role has been known as 'Lodger' but 'Submitter' is now the preferred term for it."@en .
+
+isorole:author a skos:Concept ;
+    skos:definition "Agent who authored the resource"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles>;
+    skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
+    skos:prefLabel "Author"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>.
+
+isorole:editor a skos:Concept ;
+    skos:definition "Party who reviewed or modified the resource to improve the content"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles>;
+    skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
+    skos:altLabel "Reviewer"@en ;
+    skos:prefLabel "Editor"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>.
+
+isorole:originator a skos:Concept ;
+    skos:definition "Party who created the resource"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:altLabel "Sampler"@en ;
+    skos:prefLabel "Owner"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>.
+
+isorole:owner a skos:Concept ;
+    skos:altLabel "tenure holder" , "authority holder" , "permit holder" ;
+    skos:definition "Agent that owns the resource"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles>;
+    skos:historyNote "Agent is known as Party in the original definition from ISO19115. The altLabels are drawn from P&G (general provisions) regulation 2017, section 37(4)"@en ;
+    skos:prefLabel "Owner"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>.
+
+isorole:principalInvestigator a skos:Concept ;
+    skos:definition "Key party responsible for gathering information and conducting research"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:altLabel "Observer"@en ;
+    skos:prefLabel "Principal Investigator"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
+
+isorole:processor a skos:Concept ;
+    skos:definition "Party who has processed the data in a manner such that the resource has been modified"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:prefLabel "Processor"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>.
+
+isorole:publisher a skos:Concept ;
+    skos:definition "Agent who published the resource"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles>;
+    skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
+    skos:prefLabel "Publisher"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>.
+        
 gsqr:QdexReportsRoles a skos:Collection ;
     skos:definition "A collection of roles used for Agents within the Georesources Reports regime"@en ;
     skos:member gsqr:contractor,
@@ -40,90 +118,3 @@ gsqr:QdexReportsRoles a skos:Collection ;
         isorole:owner,
         isorole:publisher ;
     skos:prefLabel "Georesources Reports Roles"@en .
-
-gsqr:driller a skos:Concept ;
-    skos:broader gsqr:contractor ;
-    skos:prefLabel "Driller"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
-    skos:definition "The agent who drills or bores the borehole."@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
-
-gsqr:operator a skos:Concept ;
-    skos:broader gsqr:contractor ;
-    skos:prefLabel "Operator"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
-    skos:definition "The corporation or other entity that is the decision-maker and has responsibility for the overall management for the project."@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
-
-iso11179:Submitter a skos:Concept ;
-    skos:altLabel "Lodger" ;
-    skos:definition "A Submitter should be an organizational unit approved by a process defined by the Registration Authority. A Submitter is authorized to identify and report Administered Items suitable for registration. The Submitter can be viewed as a contact for the Submitting Organization."@en ;
-    skos:inScheme iso11179:conceptScheme ;
-    skos:prefLabel "Submitter"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
-        iso11179:conceptScheme ;
-    skos:usageNote "In QDEX Reports, this role has been known as 'Lodger' but 'Submitter' is now the preferred term for it."@en .
-
-isorole:author a skos:Concept ;
-    skos:definition "Agent who authored the resource"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
-    skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
-    skos:prefLabel "Author"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
-        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
-
-isorole:editor a skos:Concept ;
-    skos:definition "Party who reviewed or modified the resource to improve the content"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
-    skos:altLabel "Reviewer"@en ;
-    skos:prefLabel "Editor"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
-        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
-
-isorole:owner a skos:Concept ;
-    skos:altLabel "tenure holder" , "authority holder" , "permit holder" ;
-    skos:definition "Agent that owns the resource"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
-    skos:historyNote "Agent is known as Party in the original definition from ISO19115. The altLabels are drawn from P&G (general provisions) regulation 2017, section 37(4)"@en ;
-    skos:prefLabel "Owner"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
-        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
-
-isorole:originator a skos:Concept ;
-    skos:definition "Party who created the resource"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
-    skos:altLabel "Sampler"@en ;
-    skos:prefLabel "Owner"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
-        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
-
-isorole:principalInvestigator a skos:Concept ;
-    skos:definition "Key party responsible for gathering information and conducting research"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
-    skos:altLabel "Observer"@en ;
-    skos:prefLabel "Principal Investigator"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
-        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
-
-isorole:processor a skos:Concept ;
-    skos:definition "Party who has processed the data in a manner such that the resource has been modified"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
-    skos:prefLabel "Processor"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
-        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
-
-isorole:publisher a skos:Concept ;
-    skos:definition "Agent who published the resource"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
-    skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
-    skos:prefLabel "Publisher"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>,
-        <http://linked.data.gov.au/def/iso19115-1/RoleCode> .
-
-gsqr:contractor a skos:Concept ;
-    skos:prefLabel "Contractor"@en ;
-    skos:altLabel "Service Provider"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
-    skos:definition "Contractors are agents who receive work contracts to perform activities on behalf of other agents, e.g. owners or operators."@en ;
-    skos:scopeNote "Contractors should always act on behalf of (formally: prov:actedObBehalfOf) some other Agent, such as an Owner"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
