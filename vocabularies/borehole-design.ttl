@@ -17,7 +17,8 @@
     dct:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "A description of the intended configuration and trajectory of a borehole."@en ;
     skos:hasTopConcept bhd:deviated,
-        bhd:inclined,
+        bhd:inclinedup,
+        bhd:inclineddown,
         bhd:lateral,
         bhd:vertical ;
     skos:prefLabel "Borehole Design"@en .
@@ -34,24 +35,17 @@ bhd:deviated a skos:Concept ;
     skos:prefLabel "Deviated"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-design> .
 
-bhd:inclined a skos:Concept ;
-    skos:altLabel "Slant"@en ;
-    skos:definition "A borehole drilled without geosteering equipment at a non-vertical angle with the intent of maintaining its initial trajectory."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/borehole-design> ;
-    skos:prefLabel "Inclined"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/borehole-design> .
-
 bhd:inclinedup a skos:Concept ;
-    skos:definition "An inclined borehole drilled at a non-vertical angle above horizontal."@en ;
+    skos:definition "A borehole drilled without geosteering equipment at a non-vertical angle above horizontal."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-design> ;
     skos:prefLabel "Inclined Up"@en ;
-    skos:broader bhd:inclined .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-design> .
 
 bhd:inclineddown a skos:Concept ;
-    skos:definition "An inclined borehole drilled at a non-vertical angle at or below horizontal."@en ;
+    skos:definition "A borehole drilled without geosteering equipment at a non-vertical angle at or below horizontal."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-design> ;
     skos:prefLabel "Inclined Down"@en ;
-    skos:broader bhd:inclined .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-design> .
 
 bhd:lateral a skos:Concept ;
     skos:altLabel "Horizontal"@en ;
