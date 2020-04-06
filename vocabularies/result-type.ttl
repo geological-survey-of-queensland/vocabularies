@@ -18,6 +18,7 @@
         rslt:age,
         rslt:api-gravity,
         rslt:area,
+        rslt:azimuth,
         rslt:capacitance,
         rslt:casing-weight,
         rslt:colour,
@@ -28,6 +29,7 @@
         rslt:cost,
         rslt:count,
         rslt:data,
+        rslt:declination,
         rslt:density,
         rslt:descriptive,
         rslt:distance,
@@ -49,6 +51,7 @@
         rslt:heat,
         rslt:illuminance,
         rslt:inductance,
+        rslt:inclination,
         rslt:length,
         rslt:luminous-flux,
         rslt:luminous-intensity,
@@ -118,6 +121,13 @@ rslt:area a skos:Concept ;
     skos:prefLabel "Area"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
+rslt:azimuth a skos:Concept ;
+    skos:definition "An angular measurement of departure from north increasing in a clockwise direction. 0 is North, 90 is East, 180 is south, 270 is West."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "razi" ;
+    skos:prefLabel "declination"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
 rslt:capacitance a skos:Concept ;
     skos:definition "The ratio of the change in electric charge of a system, to the corresponding change in its electric potential."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
@@ -181,11 +191,26 @@ rslt:cost a skos:Concept ;
     skos:prefLabel "Cost"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
+rslt:curvature a skos:Concept ;
+    skos:altLabel "Dog Leg Severity"@en ;
+    skos:definition "The curvature of a line or length of material. The change in angle per unit of length. Used in oil and gas to describe the curvature of a wellbore."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rdls" ;
+    skos:prefLabel "Curvature"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
 rslt:data a skos:Concept ;
     skos:definition "The amount of data or information held by an electronic and measurable means. Typically reported in bytes or a derivative unit."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "rdat" ;
     skos:prefLabel "Data"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
+rslt:declination a skos:Concept ;
+    skos:definition "A degree of slope in the vertical plane. -90 is vertically downward, 0 is horizontal, 90 is vertically upward."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rdec" ;
+    skos:prefLabel "declination"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:density a skos:Concept ;
@@ -207,14 +232,6 @@ rslt:distance a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "rdis" ;
     skos:prefLabel "Distance"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
-
-rslt:curvature a skos:Concept ;
-    skos:altLabel "Dog Leg Severity"@en ;
-    skos:definition "The curvature of a line or length of material. The change in angle per unit of length. Used in oil and gas to describe the curvature of a wellbore."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
-    skos:notation "rdls" ;
-    skos:prefLabel "Curvature"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:drill-rate a skos:Concept ;
@@ -338,6 +355,13 @@ rslt:illuminance a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "rill" ;
     skos:prefLabel "Illuminance"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
+rslt:inclination a skos:Concept ;
+    skos:definition "A degree of slope in the vertical plane. 0 is vertically downward, 90 is horizontal, 180 is vertically upward."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rinc" ;
+    skos:prefLabel "Inclination"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:inductance a skos:Concept ;
