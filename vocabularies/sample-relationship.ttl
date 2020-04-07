@@ -16,10 +16,10 @@
     dct:modified "2020-04-06"^^xsd:date ;
     dct:source """Source information from https://www.w3.org/TR/vocab-ssn/#Sample_Relations modified by the Geological Survey of Queensland.""" ;
     skos:definition "Samples are often related to other samples, by sub-sampling, topological relationships (stations along a traverse, pixels within an image, probe spots on a polished section, specimens retrieved within a borehole) or as parts of sample processing chains (crushing, splitting, dissecting, disolving). There are an essentially unlimited set of relationships between samples, so the nature of the relationship has its own class."@en ;
+    skos:prefLabel "Sample Relationship"@en ;
     skos:hasTopConcept smprl:has-originalsample,
         smprl:has-sample,
-        smprl:is-sample-of ;
-    skos:prefLabel "Sample Relationship"@en .
+        smprl:is-sample-of .
     
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" .
@@ -32,14 +32,14 @@ smprl:has-originalsample a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> .
 
 smprl:has-sample a skos:Concept ;
-    skos:definition "Relation between aï¿½FeatureOfInterest, Site, or parent Sampleï¿½and theï¿½Sampleï¿½used to represent it."@en ;
+    skos:definition "Relation between a FeatureOfInterest, Site, or parent Sample and the Sample used to represent it."@en ;
     skos:inScheme <http://linked.data.gov.au/def/sample-relationship> ;
     skos:notation "hasSample" ;
     skos:prefLabel "Has Sample"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> .
 
 smprl:is-sample-of a skos:Concept ;
-    skos:definition "Relation from aï¿½Sampleï¿½to theï¿½FeatureOfInterest, Site, or parent Sampleï¿½that it is intended to be representative of."@en ;
+    skos:definition "Relation from a Sample to the FeatureOfInterest, Site, or parent Sample that it is intended to be representative of."@en ;
     skos:inScheme <http://linked.data.gov.au/def/sample-relationship> ;
     skos:notation "isSampleOf" ;
     skos:prefLabel "Is Sample Of"@en ;
