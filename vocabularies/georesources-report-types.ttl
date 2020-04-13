@@ -10,18 +10,54 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/georesource-report> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2019-10-09T11:21:44"^^xsd:dateTime ;
+    dct:created "2019-10-09"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2019-10-24T15:50:36"^^xsd:dateTime ;
+    dct:modified "2020-04-09"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "The types of reports administered by the GeoResources division of the Department of Natural Resources, Mines and Energy."@en ;
     skos:prefLabel "Georesource Report"@en .
 
-<http://linked.data.gov.au/org/gsq>
-    a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-.
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
+
+grt:pa-21A a skos:Concept ;
+    skos:definition "A notice to inform the Department that a seismic survey or scientific or technical survey will be performed."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:prefLabel "Notice of Intention to carry out seismic survey or scientific or technical survey"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:pa-22A a skos:Concept ;
+    skos:definition "A notice to inform the Department that a seismic survey or scientific or technical survey has been completed."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:prefLabel "Notice of Completion of seismic survey or scientific or technical survey"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:pm-1-2013 a skos:Concept ;
+    skos:definition "A notice to inform the Department that a geophysical survey has been completed."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:prefLabel "Notification of geophysical survey"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:pa-42 a skos:Concept ;
+    skos:definition "A notice to inform the Department that a petroleum well is intended to be converted to a water bore."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:prefLabel "Notice of intention to convert a petroleum well to a water observation bore or water supply bore"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:wra-05A a skos:Concept ;
+    skos:definition "A notice to inform the Department that a petroleum well has been converted to a water bore. Changes purpose from Petroleum, or narrower term, to Water. May trigger check for status change."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:prefLabel "Notice of completion of conversion of petroleum well to water supply bore or water observation bore"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:mmol-44 a skos:Concept ;
+    skos:definition "A notice to inform the Department that a well or water bore has been decommisioned."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:historyNote "Form supersedes legacy form PA-40"@en ;
+    skos:altLabel "Notice of decommissioning a well, water observation bore, water monitoring bore or water supply bore"@en ;
+    skos:prefLabel "Notice of decommissioning petroleum wells, water observation bores or water supply bores"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:annual-report a skos:Concept ;
     skos:definition "A report that is not specifically linked to a permit that describes activities and/or the results of activities, market conditions etc. that occurred over a 12 month interval prior to the completion of that report."@en ;
@@ -396,6 +432,12 @@ grt:soil-and-land-resources a skos:Concept ;
     skos:prefLabel "Soil and Land Resources"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
+grt:survey-plan a skos:Concept ;
+    skos:definition "A schematic or plan produces by certified surveyors detailing the location of site or feature."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:prefLabel "Survey Plan"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
 grt:technical-report a skos:Concept ;
     skos:definition "A report detailing activities of a highly technical nature that were not conducted as a part of a work programme for a resource permit."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
@@ -652,3 +694,47 @@ grt:water-reports a skos:Collection ;
         grt:permit-report-mineral-associated-water,
         grt:petroleum-report-non-associated-water ;
     skos:prefLabel "Water Reports"@en .
+    
+ grt:lodgement-portal-reports a skos:Collection ;
+    skos:definition "Reports accepted by the DNRME Geoscience Open Data Portal Lodgement site."@en ;
+    skos:member  grt:hydraulic-fracturing-activity-report,
+        grt:petroleum-report-production-information,
+        grt:petroleum-report-resource-and-reserves-information,
+        grt:scientific-or-technical-survey-report,
+        grt:seismic-survey-report-final,
+        grt:seismic-survey-report-other,
+        grt:seismic-survey-report-reprocessing,
+        grt:well-completion-report,
+        grt:well-or-bore-abandonment-report,
+        grt:well-production-testing-report,
+        grt:permit-report-annual,
+        grt:permit-report-final,
+        grt:permit-report-final-relinquishment,
+        grt:permit-report-partial-relinquishment,
+        grt:permit-report-surrender,
+        grt:geophysical-survey-report-acquisition,
+        grt:geophysical-survey-report-final,
+        grt:geophysical-survey-report-logistics,
+        grt:geothermal-report-annual-reserves,
+        grt:geothermal-report-injection,
+        grt:geothermal-report-injection-testing,
+        grt:geothermal-report-production,
+        grt:geothermal-report-production-testing,
+        grt:greenhouse-gas-report-injection,
+        grt:greenhouse-gas-report-storage-capacity,
+        grt:greenhouse-gas-report-storage-injection,
+        grt:mine-plan-lodgement,
+        grt:survey-plan,
+        grt:permit-report-mineral-associated-water,
+        grt:petroleum-report-cumulative-water-production,
+        grt:petroleum-report-field-information,
+        grt:petroleum-report-infrastructure,
+        grt:petroleum-report-non-associated-water,
+        grt:water-report-performance-review,
+        grt:pa-21A,
+        grt:pa-22A,
+        grt:pm-1-2013,
+        grt:pa-42,
+        grt:wra-05A,
+        grt:mmol-44;   
+    skos:prefLabel "Lodgement Portal Reports"@en .
