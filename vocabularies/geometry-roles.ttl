@@ -13,14 +13,17 @@
     a owl:Ontology , skos:ConceptScheme ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:created "2020-03-12"^^xsd:date ;
-    dct:modified "2020-03-12"^^xsd:date ;
+    dct:modified "2020-04-14"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     skos:definition """A Geometry Role is the function a Geometry plays in relation to the Feature it is a Geometry for where Feature and Geometry are defined by the GeoSPARQL Ontology.
     
 Geometry Role is not geometry type and does not indicate sub classes of geometry. Well known Geometry types or subclasses of geometry include Point, Polygon, LineString MultiPolygon etc."""@en ;
     skos:hasTopConcept 
         grole:centroid ,
-        grole:boundary ,
+        grole:bounding-box ,
+        grole:bounding-circle ,
+        grole:concave-hull ,
+        grole:convex-hull ,
         grole:detailed-geometry ;
     skos:prefLabel "Geometry Role"@en ;
     skos:scopeNote "Concepts in this vocabulary indicate should, but do not have to only be, used with instances of the GeoSPARQL Ontology's Geometry class using the GeoSPARQL Extensions Ontology's hasRole property."@en .
@@ -28,8 +31,7 @@ Geometry Role is not geometry type and does not indicate sub classes of geometry
 <http://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> ;
-.
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 grole:centroid a skos:Concept ;
     dct:source <https://en.wikipedia.org/wiki/Centroid> ;
@@ -37,11 +39,9 @@ grole:centroid a skos:Concept ;
     skos:definition "The arithmetic mean position of all the Points in a Feature's Geometry, expressed as a single Point."@en ;
     skos:hiddenLabel "center of mass"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
-    skos:prefLabel "Centroid"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geometry-roles> .
+    skos:prefLabel "Centroid"@en .
 
 grole:bounding-box a skos:Concept ;
-    skos:broader grole:boundary ;
     dct:source <https://en.wikipedia.org/wiki/Minimum_bounding_box> ;
     skos:altLabel "minimum bounding box"@en , "smallest bounding box"@en , "enclosing box"@en , "bounding rectangle"@en ;
     skos:definition "The box (rectangle) with the smallest area that contains all the Points in a Feature's Geometry."@en ;
@@ -49,27 +49,18 @@ grole:bounding-box a skos:Concept ;
     skos:prefLabel "Bounding box"@en .
 
 grole:bounding-circle a skos:Concept ;
-    skos:broader grole:boundary ;
     dct:source <https://en.wikipedia.org/wiki/Smallest-circle_problem> ;
     skos:definition "The circle with the smallest area that contains all the Points in a Feature's Geometry."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
     skos:prefLabel "Bounding circle"@en .
 
-grole:boundary a skos:Concept ;
-    skos:definition "A polygon which denotes the extent of a Feature's Geometry."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
-    skos:prefLabel "Boundary"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geometry-roles> .
-
 grole:concave-hull a skos:Concept ;
-    skos:broader grole:boundary ;
     skos:definition "The minimum bounding Polygon encompassing all the Points in a Features Geometry, based on a user-defined distance threshold for vectors between Points."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
     skos:prefLabel "Concave hull"@en .
 
 grole:convex-hull a skos:Concept ;    
     dct:source <https://www.arcgis.com/home/item.html?id=a6129839e96d4c0682250673cd89589d> ;
-    skos:broader grole:boundary ;
     skos:definition "The minimum bounding Polygon encompassing all the all Points in a Feature's Geometry."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
     skos:prefLabel "Convex hull"@en .
@@ -77,6 +68,4 @@ grole:convex-hull a skos:Concept ;
 grole:detailed-geometry a skos:Concept ;
     skos:definition "A Feature's Geometry in detail. It may be regular or irrigular but it does not constitute a Boundary for the Feature."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
-    skos:prefLabel "Detailed geometry"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geometry-roles> .                    
-
+    skos:prefLabel "Detailed geometry"@en .
