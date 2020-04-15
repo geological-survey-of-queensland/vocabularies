@@ -17,28 +17,26 @@
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Derived from  Australian Standard AS 4590.1:2017" ;
     skos:definition "The code and description that differentiates the type of telecommunications device based on the transmission service connected to the telephone network."@en ;
-    skos:prefLabel "Telephone Service Line"@en .
-
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" .
-
-tsl:conceptScheme a skos:ConceptScheme ;
+    skos:prefLabel "Telephone Service Line"@en ;
     skos:hasTopConcept tsl:01,
         tsl:02 .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .   
 
 tsl:01 a skos:Concept ;
     skos:altLabel "Cell"@en,
         "Cellular"@en ;
     skos:definition "A portable telephone that can make and receive calls over a radio frequency link while the user is moving within a telephone service area."@en ;
-    skos:inScheme tsl:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/telephone-service-line> ;
     skos:notation "01" ;
     skos:prefLabel "Mobile"@en ;
-    skos:topConceptOf tsl:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/telephone-service-line> .
 
 tsl:02 a skos:Concept ;
     skos:altLabel "Landline"@en ;
     skos:definition "A telephone that can make and receive calls by transmission of communications signals via a cable to a fixed location."@en ;
-    skos:inScheme tsl:conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/telephone-service-line> ;
     skos:notation "02" ;
     skos:prefLabel "Fixed Line"@en ;
-    skos:topConceptOf tsl:conceptScheme .
+    skos:topConceptOf <http://linked.data.gov.au/def/telephone-service-line> .

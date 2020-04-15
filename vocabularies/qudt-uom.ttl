@@ -7,7 +7,7 @@
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://qudt.org/community/geoprofile/units>
+<http://linked.data.gov.au/def/qudt-geoprofile>
     a skos:ConceptScheme ;
     skos:prefLabel "Units vocabulary of the Geoscience Profile of QUDT"@en ;
     skos:definition "This vocabulary contains units of measure deemed to be of relevance to the geosciences." ;
@@ -61,7 +61,7 @@
 .
 <http://qudt.org>
     a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
+    sdo:name "QUDT.org" ;
     sdo:url <http://qudt.org> ;
 .
 
@@ -109,7 +109,7 @@ unit:BAR a qudt:CGS-Unit,
 
 unit:BBL a qudt:Unit , skos:Concept ;
     skos:prefLabel "Barrel"@en ;
-    skos:definition "A barrel is one of several units of volume, with dry barrels, fluid barrels (UK beer barrel, U.S. beer barrel), oil barrel, etc. The volume of some barrel units is double others, with various volumes in the range of about 100-200 litres (22-44 impÂ gal; 26-53 USÂ gal)."@en ;
+    skos:definition "A barrel is one of several units of volume, with dry barrels, fluid barrels (UK beer barrel, U.S. beer barrel), oil barrel, etc. The volume of some barrel units is double others, with various volumes in the range of about 100-200 litres (22-44 imp gal; 26-53 US gal)."@en ;
     qudt:conversionOffset 0e+00 ;
     qudt:dbpediaMatch "http://dbpedia.org/resource/Barrel"^^xsd:anyURI ;
     qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Volume> ;
@@ -128,7 +128,7 @@ unit:BBL a qudt:Unit , skos:Concept ;
 unit:BTU_IT a qudt:ImperialUnit,
         qudt:Unit , skos:Concept ;
     skos:prefLabel "British Thermal Unit (International Definition)"@en ;
-    skos:definition "\\(\\textit{British Thermal Unit}\\) (BTU or Btu) is a traditional unit of energy equal to about \\(1.0550558526 \\textit{ kilojoule}\\). It is approximately the amount of energy needed to heat 1 pound (0.454 kg) of water from \\(39 \\,^{\\circ}{\\rm F}\\)  to \\(40 \\,^{\\circ}{\\rm F}\\) . The unit is most often used in the power, steam generation, heating and air conditioning industries. In scientific contexts the BTU has largely been replaced by the SI unit of energy, the \\(joule\\), though it may be used as a measure of agricultural energy production (BTU/kg). It is still used unofficially in metric English-speaking countries (such as Canada), and remains the standard unit of classification for air conditioning units manufactured and sold in many non-English-speaking metric countries."@en ;
+    skos:definition "\\(\\textit{British Thermal Unit}\\) (BTU or Btu) is a traditional unit of energy equal to about \\(1.0550558526 \\textit{ kilojoule}\\). It is approximately the amount of energy needed to heat 1 pound (0.454 kg) of water from \\(39 \\,^{\\circ}{\\rm F}\\)  to \\(40 \\,^{\\circ}{\\rm F}\\). The unit is most often used in the power, steam generation, heating and air conditioning industries. In scientific contexts the BTU has largely been replaced by the SI unit of energy, the \\(joule\\), though it may be used as a measure of agricultural energy production (BTU/kg). It is still used unofficially in metric English-speaking countries (such as Canada), and remains the standard unit of classification for air conditioning units manufactured and sold in many non-English-speaking metric countries."@en ;
     qudt:conversionMultiplier 1.055056e+03 ;
     qudt:conversionOffset 0e+00 ;
     qudt:expression "BtuIT" ;
@@ -147,7 +147,8 @@ unit:CentiM a qudt:BaseUnit,
         qudt:CGS-Unit,
         qudt:DecimalScaledUnit,
         qudt:DerivedUnit,
-        qudt:SI-Unit ;
+        qudt:SI-Unit ,
+        skos:Concept ;
     skos:prefLabel "Centimeter"@en ;
     skos:definition "A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units."@en ;
     qudt:conversionMultiplier 1e-02 ;
@@ -231,7 +232,7 @@ unit:FT a qudt:ImperialUnit,
         qudt:US-CustomaryUnit,
         qudt:Unit , skos:Concept ;
     skos:prefLabel "Foot"@en ;
-    skos:definition "A foot is a unit of length defined as being 0.3048Â m exactly and used in the imperial system of units and United States customary units. It is subdivided into 12Â inches. The foot is still officially used in Canada and still commonly used in the United Kingdom, although the latter has partially metricated its units of measurement. "@en ;
+    skos:definition "A foot is a unit of length defined as being 0.3048m exactly and used in the imperial system of units and United States customary units. It is subdivided into 12 inches. The foot is still officially used in Canada and still commonly used in the United Kingdom, although the latter has partially metricated its units of measurement."@en ;
     qudt:conversionMultiplier 3.048e-01 ;
     qudt:conversionOffset 0e+00 ;
     qudt:dbpediaMatch "http://dbpedia.org/resource/Foot_%28length%29"^^xsd:anyURI ;
@@ -251,7 +252,7 @@ unit:FT3 a qudt:DerivedUnit,
         qudt:ImperialUnit,
         qudt:Unit , skos:Concept ;
     skos:prefLabel "Cubic Foot"@en ;
-    skos:definition "The cubic foot is an Imperial and US customary unit of volume, used in the United States and the United Kingdom. It is defined as the volume of a cube with sides of one foot (0.3048 m) in length. To calculate cubic feet multiply length X width X height. "@en ;
+    skos:definition "The cubic foot is an Imperial and US customary unit of volume, used in the United States and the United Kingdom. It is defined as the volume of a cube with sides of one foot (0.3048 m) in length. To calculate cubic feet multiply length X width X height."@en ;
     qudt:conversionMultiplier 2.831685e-02 ;
     qudt:conversionOffset 0e+00 ;
     qudt:expression "ft^{3}" ;
@@ -300,7 +301,7 @@ unit:FT3-PER-MIN a qudt:DerivedUnit,
         "[ft_i]3/min" ;
     qudt:uneceCommonCode "2L" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:FT3-PER-SEC a qudt:DerivedUnit,
@@ -332,7 +333,7 @@ unit:FT3-PER-SEC a qudt:DerivedUnit,
         "[ft_i]3/s" ;
     qudt:uneceCommonCode "E17" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:GAL_IMP a qudt:ImperialUnit,
@@ -373,7 +374,7 @@ unit:GM a qudt:BaseUnit,
         qudt:SI-Unit,
         qudt:Unit , skos:Concept ;
     skos:prefLabel "Gram"@en ;
-    skos:definition "A unit of mass in the metric system. The name comes from the Greek gramma, a small weight identified in later Roman and Byzantine times with the Latin scripulum or scruple (the English scruple is equal to about 1.3 grams). The gram was originally defined to be the mass of one cubic centimeter of pure water, but to provide precise standards it was necessary to construct physical objects of specified mass. One gram is now defined to be 1/1000 of the mass of the standard kilogram, a platinum-iridium bar carefully guarded by the International Bureau of Weights and Measures in Paris for more than a century. (The kilogram, rather than the gram, is considered the base unit of mass in the SI.) The gram is a small mass, equal to about 15.432 grains or 0.035 273 966 ounce. "@en ;
+    skos:definition "A unit of mass in the metric system. The name comes from the Greek gramma, a small weight identified in later Roman and Byzantine times with the Latin scripulum or scruple (the English scruple is equal to about 1.3 grams). The gram was originally defined to be the mass of one cubic centimeter of pure water, but to provide precise standards it was necessary to construct physical objects of specified mass. One gram is now defined to be 1/1000 of the mass of the standard kilogram, a platinum-iridium bar carefully guarded by the International Bureau of Weights and Measures in Paris for more than a century. (The kilogram, rather than the gram, is considered the base unit of mass in the SI.) The gram is a small mass, equal to about 15.432 grains or 0.035 273 966 ounce."@en ;
     qudt:conversionMultiplier 1e-03 ;
     qudt:conversionOffset 0e+00 ;
     qudt:dbpediaMatch "http://dbpedia.org/resource/Gram"^^xsd:anyURI ;
@@ -408,7 +409,7 @@ unit:GigaBYTE a qudt:DecimalScaledUnit,
     qudt:uneceCommonCode "E34" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:altLabel "gbyte" ;
-    skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+    skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:HR a qudt:SI-Unit,
@@ -456,7 +457,7 @@ unit:IN a qudt:ImperialUnit,
         qudt:US-CustomaryUnit,
         qudt:Unit , skos:Concept ;
     skos:prefLabel "Inch"@en ;
-    skos:definition "An inch is the name of a unit of length in a number of different systems, including Imperial units, and United States customary units. There are 36Â inches in a yard and 12Â inches in a foot. Corresponding units of area and volume are the square inch and the cubic inch."@en ;
+    skos:definition "An inch is the name of a unit of length in a number of different systems, including Imperial units, and United States customary units. There are 36 inches in a yard and 12 inches in a foot. Corresponding units of area and volume are the square inch and the cubic inch."@en ;
     qudt:conversionMultiplier 2.54e-02 ;
     qudt:conversionOffset 0e+00 ;
     qudt:dbpediaMatch "http://dbpedia.org/resource/Inch"^^xsd:anyURI ;
@@ -480,7 +481,7 @@ unit:J a qudt:DerivedUnit,
     qudt:conversionMultiplier 1e+00 ;
     qudt:conversionOffset 0e+00 ;
     qudt:dbpediaMatch "http://dbpedia.org/resource/Joule"^^xsd:anyURI ;
-    qudt:description "The SI unit of work or energy, defined to be the work done by a force of one newton acting to move an object through a distance of one meter in the direction in which the force is applied. Equivalently, since kinetic energy is one half the mass times the square of the velocity, one joule is the kinetic energy of a mass of two kilograms moving at a velocity of 1 m/s. This is the same as 107 ergs in the CGS system, or approximately 0.737 562 foot-pound in the traditional English system. In other energy units, one joule equals about 9.478 170 x 10-4 Btu, 0.238 846 (small) calories, or 2.777 778 x 10-4 watt hour. The joule is named for the British physicist James Prescott Joule (1818-1889), who demonstrated the equivalence of mechanical and thermal energy in a famous experiment in 1843. "@en ;
+    qudt:description "The SI unit of work or energy, defined to be the work done by a force of one newton acting to move an object through a distance of one meter in the direction in which the force is applied. Equivalently, since kinetic energy is one half the mass times the square of the velocity, one joule is the kinetic energy of a mass of two kilograms moving at a velocity of 1 m/s. This is the same as 107 ergs in the CGS system, or approximately 0.737 562 foot-pound in the traditional English system. In other energy units, one joule equals about 9.478 170 x 10-4 Btu, 0.238 846 (small) calories, or 2.777 778 x 10-4 watt hour. The joule is named for the British physicist James Prescott Joule (1818-1889), who demonstrated the equivalence of mechanical and thermal energy in a famous experiment in 1843."@en ;
     qudt:exactMatch unit:N-M ;
     qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/EnergyAndWork> ;
     qudt:iec61360Code "0112/2///62720#UAA172" ;
@@ -528,7 +529,7 @@ unit:KiloBYTE a qudt:BinaryScaledUnit,
     qudt:isScalingOf unit:BYTE ;
     qudt:symbol "kB" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:KiloGM a qudt:BaseUnit,
@@ -560,7 +561,7 @@ unit:KiloGM-PER-M a qudt:DerivedCoherentUnit,
         qudt:DerivedUnit,
         qudt:Unit , skos:Concept ;
     skos:prefLabel "Kilogram per Meter"@en ;
-    skos:definition "Kilogram Per Meter (kg/m) is a unit in the category of Linear mass density. It is also known as kilogram/meter, kilogram/metre, kilograms per meter, kilogram per metre, kilograms per metre. This unit is commonly used in the SI unit system. Kilogram Per Meter (kg/m) has a dimension of ML-1 where M is mass, and L is length. This unit is the standard SI unit in this category. "@en ;
+    skos:definition "Kilogram Per Meter (kg/m) is a unit in the category of Linear mass density. It is also known as kilogram/meter, kilogram/metre, kilograms per meter, kilogram per metre, kilograms per metre. This unit is commonly used in the SI unit system. Kilogram Per Meter (kg/m) has a dimension of ML-1 where M is mass, and L is length. This unit is the standard SI unit in this category."@en ;
     qudt:conversionMultiplier 1e+00 ;
     qudt:conversionOffset 0e+00 ;
     qudt:expression "kg/m" ;
@@ -569,7 +570,7 @@ unit:KiloGM-PER-M a qudt:DerivedCoherentUnit,
     qudt:symbol "kg/m" ;
     qudt:uneceCommonCode "KL" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:LB_F a qudt:ImperialUnit,
@@ -615,7 +616,7 @@ unit:LB_M-PER-FT a qudt:ImperialUnit,
     qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/MassPerLength> ;
     qudt:symbol "lb/ft" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:LB_M-PER-GAL a qudt:ImperialUnit,
@@ -628,7 +629,7 @@ unit:LB_M-PER-GAL a qudt:ImperialUnit,
     qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Density> ;
     qudt:symbol "lb/gal" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:M3 a qudt:DerivedUnit,
@@ -673,7 +674,7 @@ unit:M3-PER-HR a qudt:DerivedUnit,
         "m3/h" ;
     qudt:uneceCommonCode "MQH" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:MO a qudt:Unit , skos:Concept ;
@@ -811,7 +812,7 @@ unit:PA-PER-SEC a qudt:DerivedCoherentUnit,
     qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/ForcePerAreaTime> ;
     qudt:symbol "P / s" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:PERCENT a qudt:CGS-Unit,
@@ -850,7 +851,7 @@ unit:PetaBYTE a qudt:DecimalScaledUnit,
     qudt:symbol "PB" ;
     qudt:uneceCommonCode "E36" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:TON_M a qudt:CGS-Unit,
@@ -890,7 +891,7 @@ unit:TeraBYTE a qudt:DecimalScaledUnit,
     qudt:symbol "TB" ;
     qudt:uneceCommonCode "E35" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:WK a qudt:Unit , skos:Concept ;
@@ -915,7 +916,7 @@ unit:WK a qudt:Unit , skos:Concept ;
 
 unit:YR a qudt:Unit , skos:Concept ;
     skos:prefLabel "Year"@en ;
-    skos:definition "A year is any of the various periods equated with one passage of Earth about the Sun, and hence of roughly 365 days. The familiar calendar has a mixture of 365- and 366-day years, reflecting the fact that the time for one complete passage takes about 365Â¼ days; the precise value for this figure depends on the manner of defining the year."@en ;
+    skos:definition "A year is any of the various periods equated with one passage of Earth about the Sun, and hence of roughly 365 days. The familiar calendar has a mixture of 365- and 366-day years, reflecting the fact that the time for one complete passage takes about 365¼ days; the precise value for this figure depends on the manner of defining the year."@en ;
     qudt:conversionMultiplier 3.1536e+07 ;
     qudt:conversionOffset 0e+00 ;
     qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Time> ;
@@ -1009,7 +1010,7 @@ unit:MegaBYTE a qudt:DecimalScaledUnit,
     qudt:isScalingOf unit:BYTE ;
     qudt:symbol "mB" ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-	skos:inScheme <http://qudt.org/community/geoprofile/units> ;
+	skos:inScheme <http://linked.data.gov.au/def/qudt-geoprofile> ;
 .
 
 unit:SEC a qudt:BaseUnit,

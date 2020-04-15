@@ -27,11 +27,11 @@
         rslt:concentration,
         rslt:cost,
         rslt:count,
+        rslt:curvature,
         rslt:data,
         rslt:density,
         rslt:descriptive,
         rslt:distance,
-        rslt:dog-leg-severity,
         rslt:drill-rate,
         rslt:electric-charge,
         rslt:electric-current,
@@ -54,6 +54,7 @@
         rslt:luminous-intensity,
         rslt:magnetic-flux,
         rslt:magnetic-flux-density,
+        rslt:magnetic-susceptibility,
         rslt:mass,
         rslt:measured-depth,
         rslt:oil-quality,
@@ -119,6 +120,7 @@ rslt:area a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:capacitance a skos:Concept ;
+    skos:altLabel "Chargeability"@en ;
     skos:definition "The ratio of the change in electric charge of a system, to the corresponding change in its electric potential."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "rcap" ;
@@ -181,6 +183,14 @@ rslt:cost a skos:Concept ;
     skos:prefLabel "Cost"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
+rslt:curvature a skos:Concept ;
+    skos:altLabel "Dog Leg Severity"@en ;
+    skos:definition "The curvature of a line or length of material. The change in angle per unit of length. Used in oil and gas to describe the curvature of a wellbore."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rdls" ;
+    skos:prefLabel "Curvature"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
 rslt:data a skos:Concept ;
     skos:definition "The amount of data or information held by an electronic and measurable means. Typically reported in bytes or a derivative unit."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
@@ -207,14 +217,6 @@ rslt:distance a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "rdis" ;
     skos:prefLabel "Distance"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
-
-rslt:curvature a skos:Concept ;
-    skos:altLabel "Dog Leg Severity"@en ;
-    skos:definition "The curvature of a line or length of material. The change in angle per unit of length. Used in oil and gas to describe the curvature of a wellbore."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
-    skos:notation "rdls" ;
-    skos:prefLabel "Curvature"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:drill-rate a skos:Concept ;
@@ -383,6 +385,13 @@ rslt:magnetic-flux-density a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "rmfd" ;
     skos:prefLabel "Magnetic Flux Density"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
+rslt:magnetic-susceptibility a skos:Concept ;
+    skos:definition "A measure of how much a material will become magnetized in an applied magnetic field. Mathematically, it is the ratio of magnetization M (magnetic moment per unit volume) to the applied magnetizing field intensity H."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rmsc" ;
+    skos:prefLabel "Magnetic Susceptibility"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:mass a skos:Concept ;
