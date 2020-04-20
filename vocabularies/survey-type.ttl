@@ -40,9 +40,9 @@ svytp:airborne a skos:Collection ;
     skos:definition "Surveys in which the surveying equipment is mounted to an aircraft such as an airplane, helicopter, balloon, or aerial drone."@en ;
     skos:member svytp:atmospheric,
         svytp:electromagnetic,
-        svytp:gravity-gradiometry,
+        #svytp:gravity-gradiometry,
         svytp:magnetic,
-        svytp:magnetic-gradiometry,
+        #svytp:magnetic-gradiometry,
         svytp:photographic,
         svytp:radiometric,
         svytp:spatial,
@@ -57,10 +57,10 @@ svytp:downhole a skos:Collection ;
         svytp:geochemistry,
         svytp:geotechnical,
         svytp:gravity,
-        svytp:gravity-gradiometry,
+        #svytp:gravity-gradiometry,
         svytp:magnetic,
-        svytp:magnetic-gradiometry,
-        svytp:organic-geochemistry,
+        #svytp:magnetic-gradiometry,
+        #svytp:organic-geochemistry,
         svytp:petrophysical,
         svytp:photographic,
         svytp:radiometric,
@@ -77,13 +77,13 @@ svytp:ground a skos:Collection ;
         svytp:geotechnical,
         svytp:geothermics,
         svytp:gravity,
-        svytp:gravity-gradiometry,
+        #svytp:gravity-gradiometry,
         svytp:hydrochemistry,
         svytp:magnetic,
-        svytp:magnetic-gradiometry,
+        #svytp:magnetic-gradiometry,
         svytp:magnetotelluric,
-        svytp:organic-geochemistry,
-        svytp:passive-seismic,
+        #svytp:organic-geochemistry,
+        #svytp:passive-seismic,
         svytp:physical-geology,
         svytp:radiometric,
         svytp:seismic,
@@ -104,12 +104,12 @@ svytp:satellite a skos:Collection ;
         svytp:spatial ;
     skos:prefLabel "Satellite"@en .
 
-svytp:passive-seismic a skos:Concept ;
-    skos:broader svytp:seismic ;
-    skos:definition "A seismic survey using passive and natural noise sources. Typically capturing cumulative information over extended recording periods."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
-    skos:notation "pv" ;
-    skos:prefLabel "Passive seismic"@en .
+#svytp:passive-seismic a skos:Concept ;
+#    skos:broader svytp:seismic ;
+#    skos:definition "A seismic survey using passive and natural noise sources. Typically capturing cumulative information over extended recording periods."@en ;
+#    skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+#    skos:notation "pv" ;
+#    skos:prefLabel "Passive seismic"@en .
 
 svytp:directional a skos:Concept ;
     skos:definition "The process of recording the subsurface geometry of a borehole i.e. direction and position of a wellbore."@en ;
@@ -141,12 +141,12 @@ svytp:magnetotelluric a skos:Concept ;
     skos:prefLabel "Magnetotelluric"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
-svytp:organic-geochemistry a skos:Concept ;
-    skos:broader svytp:geochemistry ;
-    skos:definition "A geochemistry survey specifically determining organic chemical properties. Typically performed for material such as coal and oil."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
-    skos:notation "og" ;
-    skos:prefLabel "Organic Geochemistry"@en .
+#svytp:organic-geochemistry a skos:Concept ;
+#    skos:broader svytp:geochemistry ;
+#    skos:definition "A geochemistry survey specifically determining organic chemical properties. Typically performed for material such as coal and oil."@en ;
+#    skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+#    skos:notation "og" ;
+#    skos:prefLabel "Organic Geochemistry"@en .
 
 svytp:petrophysical a skos:Concept ;
     skos:altLabel "Wireline"@en ;
@@ -214,20 +214,20 @@ svytp:geotechnical a skos:Concept ;
     skos:prefLabel "Geotechnical"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-type> .
 
-svytp:gravity-gradiometry a skos:Concept ;
-    skos:altLabel "Full tensor gravimetry"@en ;
-    skos:broader svytp:gravity ;
-    skos:definition "A variation of gravity survey where the gradient of the gravity field is measured instead of the field directly."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
-    skos:notation "gy" ;
-    skos:prefLabel "Gravity gradiometry"@en .
+#svytp:gravity-gradiometry a skos:Concept ;
+#    skos:altLabel "Full tensor gravimetry"@en ;
+#    skos:broader svytp:gravity ;
+#    skos:definition "A variation of gravity survey where the gradient of the gravity field is measured instead of the field directly."@en ;
+#    skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+#    skos:notation "gy" ;
+#    skos:prefLabel "Gravity gradiometry"@en .
 
-svytp:magnetic-gradiometry a skos:Concept ;
-    skos:broader svytp:magnetic ;
-    skos:definition "A variation of magnetic survey which measured the gradient of the magnetic field instead of the field."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
-    skos:notation "my" ;
-    skos:prefLabel "Magnetic gradiometry"@en .
+#svytp:magnetic-gradiometry a skos:Concept ;
+#    skos:broader svytp:magnetic ;
+#    skos:definition "A variation of magnetic survey which measured the gradient of the magnetic field instead of the field."@en ;
+#    skos:inScheme <http://linked.data.gov.au/def/survey-type> ;
+#    skos:notation "my" ;
+#    skos:prefLabel "Magnetic gradiometry"@en .
 
 svytp:seismic a skos:Concept ;
     skos:definition "A survey using the interaction of seismic waves with sub-surface features of the earth to determine properties and morphology of those features."@en ;
