@@ -22,7 +22,7 @@
         gsqst:mineral-occurrence,
         gsqst:mineral-deposit,
         gsqst:pit,
-        gsqst:project-site,
+        gsqst:survey-site,
         #gsqst:wellbore,
         gsqst:wellbore-interval ;
     skos:prefLabel "Geological Sites"@en .
@@ -45,13 +45,6 @@ gsqst:colluvial a skos:Concept ;
     skos:notation "cv" ;
     skos:prefLabel "Colluvial Site"@en .
 
-gsqst:geophysical-survey-area a skos:Concept ;
-    skos:broader gsqst:project-site ;
-    skos:definition "An area over which a non-seismic geophysical survey is conducted."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
-    skos:notation "ga" ;
-    skos:prefLabel "Geophysical Survey Area"@en .
-
 gsqst:outcrop a skos:Concept ;
     skos:broader gsqst:field-site ;
     dct:source "Merriam-Webster Dictionary" ;
@@ -59,21 +52,6 @@ gsqst:outcrop a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
     skos:notation "oc" ;
     skos:prefLabel "Outcrop"@en .
-
-gsqst:seismic-survey-area a skos:Concept ;
-    skos:broader gsqst:project-site ;
-    skos:definition "An area over which a seismic survey is conducted. The primary site to describe a 3D survey. The polygonal area encompassing the seismic lines of a 2D seismic survey."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
-    skos:notation "sa" ;
-    skos:prefLabel "Seismic Survey Area"@en .
-
-gsqst:seismic-survey-line a skos:Concept ;
-    skos:altLabel "Seismic Line"@en ;
-    skos:broader gsqst:project-site ;
-    skos:definition "A line of seismic sources and/or receivers that represents the transect of seismic data acquisition."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
-    skos:notation "sl" ;
-    skos:prefLabel "Seismic Survey Line"@en .
 
 gsqst:soil-horizon a skos:Concept ;
     skos:broader gsqst:field-site ;
@@ -194,12 +172,12 @@ gsqst:wellbore-interval a skos:Concept ;
     skos:prefLabel "Wellbore Interval"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
 
-gsqst:project-site a skos:Concept ;
+gsqst:survey-site a skos:Concept ;
     skos:altLabel "Project"@en ;
     skos:definition "The location of a survey."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
-    skos:notation "pj" ;
-    skos:prefLabel "Project Site"@en ;
+    skos:notation "ss" ;
+    skos:prefLabel "Survey Site"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
 
 gsqst:field-site a skos:Concept ;
