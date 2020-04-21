@@ -21,46 +21,45 @@
 
 <http://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-.
+    sdo:name "Geological Survey of Queensland" .
 
 :atmospheric-sciences a skos:Concept ;
-    skos:topConceptOf :conceptScheme ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:definition "The study of the Earth's atmosphere and its various inner-working physical processes."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0401> ;
-    skos:inScheme :conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "0401" ;
     skos:prefLabel "Atmospheric Sciences"@en .
 
 :biological-sciences a skos:Concept ;
-    skos:topConceptOf :conceptScheme ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:definition "The natural science that studies life and living organisms, including their physical structure, chemical processes, molecular interactions, physiological mechanisms, development and evolution."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/06> ;
-    skos:inScheme :conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "06" ;
     skos:prefLabel "Biological Sciences"@en .
 
 :demography a skos:Concept ;
-    skos:topConceptOf :conceptScheme ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:definition "The statistical study of populations, especially human beings."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/1603> ;
-    skos:inScheme :conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "1603" ;
     skos:prefLabel "Demography"@en .
 
 :engineering a skos:Concept ;
-    skos:topConceptOf :conceptScheme ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:definition "The use of scientific principles to design and build machines, structures, and other items, including bridges, tunnels, roads, vehicles, and buildings."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/09> ;
-    skos:inScheme :conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "09" ;
     skos:prefLabel "Engineering"@en .
 
 :environmental-sciences a skos:Concept ;
-    skos:topConceptOf :conceptScheme ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:definition "an interdisciplinary academic field that integrates physical, biological and information sciences to the study of the environment, and the solution of environmental problems."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/05> ;
-    skos:inScheme :conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "05" ;
     skos:prefLabel "Environmental Sciences"@en .
 
@@ -112,7 +111,7 @@
     skos:broader :biological-sciences ;
     skos:definition "A branch of biology concerning interactions among organisms and their biophysical environment, which includes both biotic and abiotic components."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0602> ;
-    skos:inScheme :conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "0602" ;
     skos:prefLabel "Ecology"@en .
 
@@ -214,7 +213,7 @@
     skos:broader :engineering ;
     skos:definition "A professional engineering discipline that takes from broad scientific topics like chemistry, biology, ecology, geology, hydraulics, hydrology, microbiology, and mathematics to create solutions that will protect and also improve the health of living organisms and improve the quality of the environment. Source:Wikipedia"@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0907> ;
-    skos:inScheme :conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "0907" ;
     skos:prefLabel "Environmental Engineering"@en .
 
@@ -295,7 +294,7 @@
     skos:broader :engineering ;
     skos:definition "The application of scientific methods and engineering principles to the acquisition, interpretation, and use of knowledge of materials of the Earth's crust and earth materials for the solution of engineering problems and the design of engineering works. Source:Wikipedia"@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/091402> ;
-    skos:inScheme :conceptScheme ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "091402" ;
     skos:prefLabel "Geomechanics and Resources Geotechnical Engineering"@en .
 
@@ -558,3 +557,11 @@
     skos:notation "040308" ;
     skos:prefLabel "Palaeontology"@en .
 
+:lodgement-form a skos:Collection ;
+    skos:definition "Earth science data categories for selection on lodgement form."@en ;
+    skos:member 
+    :geochemistry,
+    :geochronology,
+    :geology,
+    :geophysics ;
+    skos:prefLabel "Lodgement form selection"@en .
