@@ -1,0 +1,214 @@
+@prefix obsm: <http://linked.data.gov.au/def/observation-method/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://linked.data.gov.au/def/observation-method> a owl:Ontology , skos:ConceptScheme ;
+    dct:created "2020-02-10T13:02:05"^^xsd:dateTime ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-02-10T13:02:05"^^xsd:dateTime ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The method of collection used by a observation."@en ;
+    skos:hasTopConcept obsm:airborne,
+        obsm:downhole,
+        obsm:ground,
+        obsm:marine,
+        obsm:procedural,
+        obsm:satellite ;
+    skos:prefLabel "Observation Method"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+.
+
+obsm:airborne a skos:Concept ;
+    skos:altLabel "Aerial"@en ;
+    skos:definition "Observations in which the observinging equipment is mounted to an aircraft such as an airplane, helicopter, balloon, or aerial drone."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Airborne"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-method> .
+
+obsm:downhole a skos:Concept ;
+    skos:altLabel "Borehole"@en ;
+    skos:definition "Observations where equipment is conveyed down a borehole to record measurements of borehole, rock, or fluid attributes."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Downhole"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-method> .
+
+obsm:procedural a skos:Concept ;
+    skos:definition "Observations undertaken as part of an overall sampling procedure to modify existing samples, or create new sub-samples from existing samples."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Procedural"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-method> .
+
+obsm:satellite a skos:Concept ;
+    skos:definition "Observations in which the observing equipment is mounted to a platform outside the earth's atmosphere. Typically in a stable orbit such as a satellite, space station, or shuttle."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Satellite"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-method> .
+
+obsm:accelerated-weight-drop a skos:Concept ;
+    skos:altLabel "AWD"@en ;
+    skos:broader obsm:ground ;
+    skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released and propelled into the impact point to generate a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Accelerated Weight Drop"@en .
+
+obsm:air-gun a skos:Concept ;
+    skos:altLabel "Air Pulse"@en ;
+    skos:broader obsm:marine ;
+    skos:definition "Metal cylinders through which high pressure air is forced through and into the water column. The injection of air into the water creates a pressure pulse that travels through the water and into the subsurface. It is common to have multiple airguns firing at once to create an array."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Air Gun"@en .
+
+obsm:boomer a skos:Concept ;
+    skos:altLabel "Bang Box"@en,
+        "Boomers"@en ;
+    skos:broader obsm:marine ;
+    skos:definition "Energy is stored in capacitors and discharges through a flat spiral coil with no spark. A copper plate adjacent to the coil flexes away from the coil as the capacitors are discharged. This flexing is transmitted into the water as the seismic pulse. Boomers are towed in a floating sled behind a survey vessel."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Boomer"@en .
+
+obsm:dynamite a skos:Concept ;
+    skos:broader obsm:ground ;
+    skos:definition "An explosive consisting of nitroglycerine mixed with an absorbent material and typically moulded into sticks. A stick is placed into a shallow borehole and detonated to generate a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Dynamite"@en .
+
+obsm:firearm a skos:Concept ;
+    skos:altLabel "Betsy Gun"@en,
+        "Pistol"@en,
+        "Shotgun"@en ;
+    skos:broader obsm:ground ;
+    skos:definition "A gunpowder-based firearm is discharged in a shallow borehole to generate a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Firearm"@en .
+
+obsm:hammer a skos:Concept ;
+    skos:altLabel "Sledge Hammer"@en,
+        "Sledgehammer"@en ;
+    skos:broader obsm:ground ;
+    skos:definition "A large hand-held hammer is used to strike a metal plate on the ground surface to generate a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Hammer"@en .
+
+obsm:hydraulic-oil-impactor a skos:Concept ;
+    skos:broader obsm:ground ;
+    skos:definition "The transmission of energy wave vibrations into earth strata surrounding a borehole. A hydraulic oscillator acts as a piston and is regulated by a high pressure hydraulic fluid flow into and out of upper and lower chambers surrounding the piston. The device impacts the surrounding strata in the borehole to generate a series of seismic pulses."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Hydraulic Oil Impactor"@en .
+
+obsm:noise-source a skos:Concept ;
+    skos:altLabel "Passive Source"@en ;
+    skos:broader obsm:ground ;
+    skos:definition "The ambient vibrations transmitted in the ground. Measurements are typically taken over relatively long timeframes."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Noise Source"@en .
+
+obsm:plasma-sound-source a skos:Concept ;
+    skos:altLabel "Spark Gap"@en,
+        "Spark Gap Sound Source"@en,
+        "Sparker"@en,
+        "Sparkers"@en ;
+    skos:broader obsm:marine ;
+    skos:definition "An electric charge is stored in a large high-voltage bank of capacitors and then released in an arc across electrodes in the water. The underwater spark discharge produces a high-pressure plasma and vapor bubble, which expands and displaces the surrounding water. The resulting implosion of water to fill the cavity generates a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Plasma Sound Source"@en .
+
+obsm:vibroseis a skos:Concept ;
+    skos:altLabel "Vibrator"@en ;
+    skos:broader obsm:ground ;
+    skos:definition "A vehicle-mounted system that holds a large mass to the ground surface which is then oscillated to generate vibrations."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Vibroseis"@en .
+
+obsm:wacker a skos:Concept ;
+    skos:altLabel "Compactor"@en,
+        "Mini-SOSIE"@en,
+        "Rammer"@en,
+        "SOSIE"@en,
+        "Sozie"@en,
+        "Wacker Packer"@en,
+        "Whacker"@en ;
+    skos:broader obsm:ground ;
+    skos:definition "A vibration-rammer, similar to a large jackhammer with a flat-plated bottom, repeatedly strikes the ground to generate a series of seismic pulses. Engine speed is used to vary the striking rate, resulting in a random impulse transmission."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Wacker"@en .
+
+obsm:water-gun a skos:Concept ;
+    skos:broader obsm:marine ;
+    skos:definition "A piston mechanism forces compressed air into the surrounding water and displaces it. The resulting implosion of water to fill the cavity generates a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Water Gun"@en .
+
+obsm:weight-drop a skos:Concept ;
+    skos:broader obsm:ground ;
+    skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released under the force of gravity with no additional forces applied. The mass strikes the impact point to generate a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Weight Drop"@en .
+
+obsm:marine a skos:Concept ;
+    skos:altLabel "Oceanic"@en,
+        "Sea"@en ;
+    skos:definition "Observations undertaken at or below the surface of a body of water such as an ocean, sea, or lake."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Marine"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-method> .
+
+obsm:ground a skos:Concept ;
+    skos:altLabel "Land"@en ;
+    skos:definition "Observations undertaken at ground level or a solid subsurface level such as an underground mine floor. This may include surface collection of rocks, soil, water or other physical samples; geophysical observations from surface locations; handheld photography."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-method> ;
+    skos:prefLabel "Ground"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-method> .
+
+obsm:explosive-seismic-methods a skos:Collection ;
+    skos:definition "An explosive, or explosive material, is a reactive substance that contains a great amount of potential energy that can produce an explosion if released suddenly, usually accompanied by the production of light, heat, sound, and pressure. An explosive seismic method utilises explosive material to generate a seismic pulse."@en ;
+    skos:member obsm:air-gun,
+        obsm:boomer,
+        obsm:dynamite,
+        obsm:firearm,
+        obsm:plasma-sound-source,
+        obsm:water-gun ;
+    skos:prefLabel "Explosive Seismic Methods"@en .
+
+obsm:impact-seismic-methods a skos:Collection ;
+    skos:definition "A force is used to contact a mass, or striker, with the ground surface to generate a seismic pulse."@en ;
+    skos:member obsm:accelerated-weight-drop,
+        obsm:hammer,
+        obsm:hydraulic-oil-impactor,
+        obsm:wacker,
+        obsm:weight-drop ;
+    skos:prefLabel "Impact Seismic Methods"@en .
+
+obsm:seismic-methods a skos:Collection ;
+    skos:definition "The classification of tools used as an energy source that generate a seismic signal for use in seismic observation acquisition."@en ;
+    skos:member obsm:accelerated-weight-drop,
+        obsm:air-gun,
+        obsm:boomer,
+        obsm:dynamite,
+        obsm:firearm,
+        obsm:hammer,
+        obsm:hydraulic-oil-impactor,
+        obsm:noise-source,
+        obsm:plasma-sound-source,
+        obsm:vibroseis,
+        obsm:wacker,
+        obsm:water-gun,
+        obsm:weight-drop ;
+    skos:prefLabel "Seismic Methods"@en .
+
+obsm:vibration-seismic-methods a skos:Collection ;
+    skos:definition "A mass is held in contact with the ground and oscillated to put a range of frequencies into the earth."@en ;
+    skos:member obsm:noise-source,
+        obsm:vibroseis ;
+    skos:prefLabel "Vibration Seismic Methods"@en .
