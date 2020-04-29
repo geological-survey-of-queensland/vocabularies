@@ -4,15 +4,17 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sdo: <https://schema.org/> .
 @prefix obst: <http://linked.data.gov.au/def/observation-type/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/observation-type> a owl:Ontology , skos:ConceptScheme ;
     dct:created "2020-02-05T13:54:52"^^xsd:dateTime ;
-    dct:creator "Geological Survey of Queensland" ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:modified "2020-02-05T13:54:52"^^xsd:dateTime ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;    
     skos:definition "The one-off event of examining a Feature. The observation performed may produce samples."@en ;
     skos:hasTopConcept obst:atmospheric,
         obst:directional,
@@ -35,6 +37,12 @@
         obst:spatial,
         obst:velocity ;
     skos:prefLabel "Observation Type"@en .
+
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+.
 
 obst:airborne a skos:Collection ;
     skos:definition "Observations in which the observation equipment is mounted to an aircraft such as an airplane, helicopter, balloon, or aerial drone."@en ;
