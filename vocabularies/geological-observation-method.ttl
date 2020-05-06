@@ -1,0 +1,43 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix obmeth: <http://linked.data.gov.au/def/geological-observation-method/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdo: <https://schema.org/> .
+
+<http://linked.data.gov.au/def/geological-observation-method> a owl:Ontology , skos:ConceptScheme ;
+    dct:created "2020-04-29T14:01:10"^^xsd:dateTime ;
+    dct:creator "Geological Survey of Queensland" ;
+    dct:modified "2020-04-29T14:01:10"^^xsd:dateTime ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The methods of observation in geoscience."@en ;
+    skos:hasTopConcept 
+        obmeth:dummy,
+        obmeth:example,
+        obmeth:placeholder;
+    skos:prefLabel "Observation Method"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
+
+obmeth:dummy a skos:Concept ;
+    skos:definition "Not areal concept, just here for looks."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Dummy"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> .
+
+obmeth:example a skos:Concept ;
+    skos:definition "This just looks like what should actually be here."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Example"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> .
+
+obmeth:placeholder a skos:Concept ;
+    skos:definition "This is a placeholder."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Placeholder"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> .
