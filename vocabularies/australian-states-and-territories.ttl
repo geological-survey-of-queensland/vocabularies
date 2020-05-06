@@ -15,22 +15,24 @@
     dct:creator <http://linked.data.gov.au/org/gsq> ;
     dct:modified "2020-03-25"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
-    dct:source "Derived from  ISO standard 3166. https://www.iso.org/obp/ui/#iso:code:3166:AU" ;
-    skos:definition "The States and Territories of the Country of Australia."@en ;
+    dct:source "Australian Statistical Geographies Standard, 2016" ;
+    skos:definition "The States and Territories of the Commonwealth of Australia."@en ;
     skos:prefLabel "Australian States and Territories"@en ;
-    skos:hasTopConcept asat:australian-capital-territory,
-        asat:new-south-wales,
-        asat:northern-territory,
-        asat:queensland,
-        asat:south-australia,
-        asat:tasmania,
-        asat:victoria,
-        asat:western-australia .
+    skos:hasTopConcept 
+        <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/1> ,
+        <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/2> ,
+        <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/3> ,
+        <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/4> ,
+        <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/5> ,
+        <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/6> ,
+        <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/7> ,
+        <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/8> ,
+        <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/9> .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" .
 
-asat:australian-capital-territory a skos:Concept ;
+<http://linked.data.gov.au/dataset/asgs2016/stateorterritory/8> a skos:Concept ;
     skos:definition "The Australian Capital Territory."@en ;
     skos:inScheme <http://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "ACT",
@@ -38,7 +40,7 @@ asat:australian-capital-territory a skos:Concept ;
     skos:prefLabel "Australian Capital Territory"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/australian-states-and-territories> .
 
-asat:new-south-wales a skos:Concept ;
+<http://linked.data.gov.au/dataset/asgs2016/stateorterritory/1> a skos:Concept ;
     skos:definition "The State of New South Wales, in the country of Australia."@en ;
     skos:inScheme <http://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-NSW",
@@ -46,7 +48,7 @@ asat:new-south-wales a skos:Concept ;
     skos:prefLabel "New South Wales"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/australian-states-and-territories> .
 
-asat:northern-territory a skos:Concept ;
+<http://linked.data.gov.au/dataset/asgs2016/stateorterritory/7> a skos:Concept ;
     skos:definition "The Northern Territory of Australia."@en ;
     skos:inScheme <http://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-NT",
@@ -54,7 +56,7 @@ asat:northern-territory a skos:Concept ;
     skos:prefLabel "Northern Territory"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/australian-states-and-territories> .
 
-asat:queensland a skos:Concept ;
+<http://linked.data.gov.au/dataset/asgs2016/stateorterritory/3> a skos:Concept ;
     skos:definition "The State of Queensland, in the country of Australia."@en ;
     skos:inScheme <http://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-QLD",
@@ -62,7 +64,7 @@ asat:queensland a skos:Concept ;
     skos:prefLabel "Queensland"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/australian-states-and-territories> .
 
-asat:south-australia a skos:Concept ;
+<http://linked.data.gov.au/dataset/asgs2016/stateorterritory/4> a skos:Concept ;
     skos:definition "The State of South Australia, in the country of Australia."@en ;
     skos:inScheme <http://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-SA",
@@ -70,7 +72,7 @@ asat:south-australia a skos:Concept ;
     skos:prefLabel "South Australia"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/australian-states-and-territories> .
 
-asat:tasmania a skos:Concept ;
+<http://linked.data.gov.au/dataset/asgs2016/stateorterritory/6> a skos:Concept ;
     skos:definition "The State of Tasmania, in the country of Australia."@en ;
     skos:inScheme <http://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-TAS",
@@ -78,7 +80,7 @@ asat:tasmania a skos:Concept ;
     skos:prefLabel "Tasmania"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/australian-states-and-territories> .
 
-asat:victoria a skos:Concept ;
+<http://linked.data.gov.au/dataset/asgs2016/stateorterritory/2> a skos:Concept ;
     skos:definition "The State of Victoria, in the country of Australia."@en ;
     skos:inScheme <http://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-VIC",
@@ -86,10 +88,18 @@ asat:victoria a skos:Concept ;
     skos:prefLabel "Victoria"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/australian-states-and-territories> .
 
-asat:western-australia a skos:Concept ;
+<http://linked.data.gov.au/dataset/asgs2016/stateorterritory/5> a skos:Concept ;
     skos:definition "The State of Western Australia, in the country of Australia."@en ;
     skos:inScheme <http://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-WA",
         "WA" ;
     skos:prefLabel "Western Australia"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/australian-states-and-territories> .
+
+<http://linked.data.gov.au/dataset/asgs2016/stateorterritory/9> a skos:Concept ;
+    skos:definition "Other Territories of Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/australian-states-and-territories> ;
+    skos:notation "AU-OT",
+        "OT" ;
+    skos:prefLabel "Other Territories"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/australian-states-and-territories> .
