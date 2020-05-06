@@ -17,6 +17,8 @@
     dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The stage in the lifecycle of a project (e.g. mine site, petroleum field, quarry) that describes the maturity of resource defintion and production."@en ;
     skos:hasTopConcept plife:appraisal,
+        plife:closed,
+        plife:closed-with-near-field-exploration,
         plife:development,
         plife:development-with-near-field-exploration,
         plife:exploration,
@@ -28,6 +30,20 @@ plife:appraisal a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "APP" ;
     skos:prefLabel "Appraisal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
+
+plife:closed a skos:Concept ;
+    skos:definition "The stage in the life-cycle of a resource where resources have been produced and development activity has now ceased, but prior to rehabilitation commencing. "@en ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
+    skos:notation "CLS" ;
+    skos:prefLabel "Closed"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
+
+plife:closed-with-near-field-exploration a skos:Concept ;
+    skos:definition "The stage in the life-cycle of a resource where development activity has now ceased but there are exploration or appraisal activities to further expand or define the commercial bounds of the resource."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
+    skos:notation "CWE" ;
+    skos:prefLabel "Closed with near-field exploration"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
 
 plife:development a skos:Concept ;
