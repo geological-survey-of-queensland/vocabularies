@@ -229,11 +229,14 @@ esdc:environmental-engineering a skos:Concept ;
     skos:notation "0907" ;
     skos:prefLabel "Environmental Engineering"@en .
 
-esdc:extract-geochemistry a skos:Concept ;
+esdc:exploration-geochemistry a skos:Concept ;
+    skos:altLabel "Trace Element Geochemistry"@en ;
     skos:broader esdc:geochemistry ;
-    skos:definition "Analysis of the chemical and physical properties of products extracted from rocks in the subsurface."@en ;
+    skos:definition "The study of the abundance, distribution, and migration of ore elements, or elements closely associated with ore, with the object of detecting ore deposits. Exploration geochemistry describes the enrichment and depletion of trace elements associated with mineralisation."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040201> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Extract Geochemistry"@en .
+    skos:notation "040201" ;
+    skos:prefLabel "Exploration Geochemistry"@en .
 
 esdc:extraterrestrial-geology a skos:Concept ;
     skos:altLabel "astrogeology"@en,
@@ -272,7 +275,7 @@ esdc:geodynamics a skos:Concept ;
 
 esdc:geology-not-elsewhere-classified a skos:Concept ;
     skos:broader esdc:geology ;
-    skos:definition "Geological data and information not otherwise described by other sub-categories of geochemistry."@en ;
+    skos:definition "Geological data and information not otherwise described by other sub-categories of geology."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040399> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040399" ;
@@ -296,7 +299,7 @@ esdc:geophysical-fluid-dynamics a skos:Concept ;
 
 esdc:geophysics-not-elsewhere-classified a skos:Concept ;
     skos:broader esdc:geophysics ;
-    skos:definition "Geophysical data and information not otherwise described by other sub-categories of geochemistry."@en ;
+    skos:definition "Geophysical data and information not otherwise described by other sub-categories of geophysics."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040499> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040499" ;
@@ -416,9 +419,17 @@ esdc:natural-hazards a skos:Concept ;
 
 esdc:organic-petrology a skos:Concept ;
     skos:broader esdc:petrology ;
-    skos:definition "Organic petrology involves the study of organic matter (OM) in rocks including its origin and thermal maturity due to burial within the earth's crust. Source: CSIRO"@en ;
+    skos:definition "Organic petrology involves the study of organic matter in rocks including its origin and thermal maturity due to burial within the earth's crust. Source: CSIRO"@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Organic Petrology"@en .
+
+esdc:ore-deposit-petrology a skos:Concept ;
+    skos:broader esdc:petrology ;
+    skos:definition "The branch of petrology that describes the composition and texture rocks and minerals in the context of defining and describing ore bodies and economically significant geological features."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040307> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040307" ;
+    skos:prefLabel "Ore Deposit Petrology"@en .
 
 esdc:palaeoclimatology a skos:Concept ;
     skos:broader esdc:physical-geography ;
