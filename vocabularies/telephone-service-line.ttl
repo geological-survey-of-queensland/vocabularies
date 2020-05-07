@@ -1,42 +1,41 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <http://www.schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tsl: <http://linked.data.gov.au/def/telephone-service-line/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix tsl: <http://linked.data.gov.au/def/telephone-type/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/telephone-service-line> a owl:Ontology,
+
+<http://linked.data.gov.au/def/telephone-type> a owl:Ontology,
         skos:ConceptScheme ;
-    dct:created "2020-03-25"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-03-25"^^xsd:date ;
-    dct:publisher <http://linked.data.gov.au/org/gsq> ;
-    dct:source "Derived from  Australian Standard AS 4590.1:2017" ;
+    dcterms:created "2020-03-25"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-03-25"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Derived from Australian Standard AS 4590.1:2017" ;
     skos:definition "The code and description that differentiates the type of telecommunications device based on the transmission service connected to the telephone network."@en ;
-    skos:prefLabel "Telephone Service Line"@en ;
-    skos:hasTopConcept tsl:01,
-        tsl:02 .
+    skos:prefLabel "Telephone Type"@en ;
+    skos:hasTopConcept 
+        vcard:Cell ,
+        vcard:Voice .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" .   
 
-tsl:01 a skos:Concept ;
+vcard:Cell a skos:Concept , vcard:TelephoneType ;
     skos:altLabel "Cell"@en,
         "Cellular"@en ;
     skos:definition "A portable telephone that can make and receive calls over a radio frequency link while the user is moving within a telephone service area."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/telephone-service-line> ;
+    skos:inScheme <http://linked.data.gov.au/def/telephone-type> ;
     skos:notation "01" ;
     skos:prefLabel "Mobile"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/telephone-service-line> .
+    skos:topConceptOf <http://linked.data.gov.au/def/telephone-type> .
 
-tsl:02 a skos:Concept ;
-    skos:altLabel "Landline"@en ;
+vcard:Voice a skos:Concept ;
+    skos:altLabel "Landline"@en , "voice"@en ;
     skos:definition "A telephone that can make and receive calls by transmission of communications signals via a cable to a fixed location."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/telephone-service-line> ;
+    skos:inScheme <http://linked.data.gov.au/def/telephone-type> ;
     skos:notation "02" ;
     skos:prefLabel "Fixed Line"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/telephone-service-line> .
+    skos:topConceptOf <http://linked.data.gov.au/def/telephone-type> .
