@@ -1,0 +1,432 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix obsin: <http://linked.data.gov.au/def/geological-observation-instrument/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/geological-observation-instrument> a owl:Ontology,
+        skos:ConceptScheme ;
+    dct:created "2020-05-11"^^xsd:date ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-05-11"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
+    dct:source "Compiled by the Geological Survey of Queensland." ;
+    skos:definition "Types of instruments used to perform geological observations."@en ;
+    skos:hasTopConcept obsin:exploranium,
+        obsin:falcon,
+        obsin:fasdas-mag-decoupler-unit,
+        obsin:geometrics,
+        obsin:geophone,
+        obsin:geotem,
+        obsin:helisam,
+        obsin:helitem,
+        obsin:hoistem,
+        obsin:kroum,
+        obsin:nuclear-data,
+        obsin:picodas,
+        obsin:questem,
+        obsin:radiations-solutions,
+        obsin:reptem,
+        obsin:sam,
+        obsin:scintrex,
+        obsin:skytem,
+        obsin:tempest,
+        obsin:unknown,
+        obsin:vtem,
+        obsin:ztem ;
+    skos:prefLabel "Geological Observation Instrument"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+
+obsin:exploranium-gr-800 a skos:Concept ;
+    skos:broader obsin:exploranium ;
+    skos:definition "The Exploranium brand GR-800 model gamma-ray spectrometer."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "EXPLORANIUM GR-800"@en .
+
+obsin:exploranium-gr-820 a skos:Concept ;
+    skos:broader obsin:exploranium ;
+    skos:definition "The Exploranium brand GR-820 model gamma-ray spectrometer."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "EXPLORANIUM GR-820"@en .
+
+obsin:geometrics-g-803 a skos:Concept ;
+    skos:broader obsin:geometrics ;
+    skos:definition "The G-803 model magnetometer built by Geometrics."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS G-803"@en .
+
+obsin:geometrics-gr-800 a skos:Concept ;
+    skos:broader obsin:geometrics ;
+    skos:definition "The GR-800 model gamma-ray spectrometer built by Geometrics."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS GR-800"@en .
+
+obsin:helitem30 a skos:Concept ;
+    skos:broader obsin:helitem ;
+    skos:definition "CGG's 30 channel version of CGG's HeliTEM system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "HELITEM30"@en .
+
+obsin:picodas-pgam-1000- a skos:Concept ;
+    skos:broader obsin:picodas ;
+    skos:definition "The PGAM-1000 model gamma-ray spectrometer built by Picodas."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "PICODAS PGAM 1000"@en .
+
+obsin:radiation-solution-rs-400 a skos:Concept ;
+    skos:broader obsin:radiations-solutions ;
+    skos:definition "The RS-500 model radiation monitoring instrument built by Radiation Solutions."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "RADIATION SOLUTION RS-400"@en .
+
+obsin:radiation-solutions-rs-500 a skos:Concept ;
+    skos:broader obsin:radiations-solutions ;
+    skos:definition "The RS-400 model radiation monitoring instrument built by Radiation Solutions."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "RADIATION SOLUTIONS RS-500"@en .
+
+obsin:scintrex-v201 a skos:Concept ;
+    skos:broader obsin:scintrex ;
+    skos:definition "The V201 model magnetometer built by Scintrex."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "SCINTREX V201"@en .
+
+obsin:einstein a skos:Concept ;
+    skos:broader obsin:falcon ;
+    skos:definition "The Einstein variant of the FALCON system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "Einstein"@en .
+
+obsin:galileo a skos:Concept ;
+    skos:broader obsin:falcon ;
+    skos:definition "The Galileo variant of the FALCON system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "Galileo"@en .
+
+obsin:geometrics-g-813 a skos:Concept ;
+    skos:broader obsin:geometrics ;
+    skos:definition "The  G-813 model magnetometer built by Geometrics."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS G-813"@en .
+
+obsin:geometrics-g-822 a skos:Concept ;
+    skos:broader obsin:geometrics ;
+    skos:definition "The  G-822 model magnetometer built by Geometrics."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS G-822"@en .
+
+obsin:geometrics-g-822a a skos:Concept ;
+    skos:broader obsin:geometrics ;
+    skos:definition "The  G-822A model magnetometer built by Geometrics."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS G-822A"@en .
+
+obsin:geometrics-g-823-caesium-vapour a skos:Concept ;
+    skos:broader obsin:geometrics ;
+    skos:definition "The  G-823 CAESIUM VAPOUR model magnetometer built by Geometrics."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS G-823 CAESIUM VAPOUR"@en .
+
+obsin:geometrics-g-823b-caesium-vapour a skos:Concept ;
+    skos:broader obsin:geometrics ;
+    skos:definition "The  G-823B CAESIUM VAPOUR model magnetometer built by Geometrics."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS G-823B CAESIUM VAPOUR"@en .
+
+obsin:geometrics-g-833 a skos:Concept ;
+    skos:broader obsin:geometrics ;
+    skos:definition "The  G-833 model magnetometer built by Geometrics."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS G-833"@en .
+
+obsin:geometrics-g-856a a skos:Concept ;
+    skos:broader obsin:geometrics ;
+    skos:definition "The  G-856A model magnetometer built by Geometrics."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS G-856A"@en .
+
+obsin:geotem-1 a skos:Concept ;
+    skos:broader obsin:geotem ;
+    skos:definition "The first iteration of Geoterrex's GEOTEM system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOTEM-1"@en .
+
+obsin:geotem-2 a skos:Concept ;
+    skos:broader obsin:geotem ;
+    skos:definition "The second iteration of Geoterrex's GEOTEM system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOTEM-2"@en .
+
+obsin:geotem-3 a skos:Concept ;
+    skos:broader obsin:geotem ;
+    skos:definition "The third iteration of Geoterrex's GEOTEM system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOTEM-3"@en .
+
+obsin:helitem-other a skos:Concept ;
+    skos:broader obsin:helitem ;
+    skos:definition "A non-specific version of CGG's HeliTEM system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "HELITEM-OTHER"@en .
+
+obsin:newton a skos:Concept ;
+    skos:broader obsin:falcon ;
+    skos:definition "The Newton variant of the FALCON system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "Newton"@en .
+
+obsin:radiation-solutions-rsx-3 a skos:Concept ;
+    skos:broader obsin:radiations-solutions ;
+    skos:definition "The RSX-3 model spectrometer built by Radiation Solutions."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "RADIATION SOLUTIONS RSX-3"@en .
+
+obsin:radiation-solutions-rsx-4 a skos:Concept ;
+    skos:broader obsin:radiations-solutions ;
+    skos:definition "The RSX-4 model spectrometer built by Radiation Solutions."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "RADIATION SOLUTIONS RSX-4"@en .
+
+obsin:radiation-solutions-rsx-5 a skos:Concept ;
+    skos:broader obsin:radiations-solutions ;
+    skos:definition "The RSX-5 model spectrometer built by Radiation Solutions."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "RADIATION SOLUTIONS RSX-5"@en .
+
+obsin:scintrex-cs-2 a skos:Concept ;
+    skos:broader obsin:scintrex ;
+    skos:definition "The CS-2 model magnetometer built by Scintrex."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "SCINTREX CS-2"@en .
+
+obsin:scintrex-cs-3 a skos:Concept ;
+    skos:broader obsin:scintrex ;
+    skos:definition "The CS-3 model magnetometer built by Scintrex."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "SCINTREX CS-3"@en .
+
+obsin:scintrex-v2321 a skos:Concept ;
+    skos:broader obsin:scintrex ;
+    skos:definition "The V2321 model magnetometer built by Scintrex."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "SCINTREX V2321"@en .
+
+obsin:fasdas-mag-decoupler-unit a skos:Concept ;
+    skos:definition "An airborne magnetometer unit."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "FASDAS MAG DECOUPLER UNIT"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:geophone a skos:Concept ;
+    skos:definition "A geophone is a device that converts ground movement into voltage."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "Geophone"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:helisam a skos:Concept ;
+    skos:definition "Helicopter sub-audio magnetics system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "HELISAM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:hoistem a skos:Concept ;
+    skos:definition "A helicopter towed time domain EM hoist system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "HOISTEM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:kroum a skos:Concept ;
+    skos:definition "Kroum airborne magnetometer system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "KROUM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:nuclear-data a skos:Concept ;
+    skos:definition "A nuclear  data brand spectrometer."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "NUCLEAR DATA"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:questem a skos:Concept ;
+    skos:definition "QUESTEM is a time domain airborne EM system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "QUESTEM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:reptem a skos:Concept ;
+    skos:definition "GeoSolutions' airborne time domain EM system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "REPTEM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:sam a skos:Concept ;
+    skos:definition "A SAM (Sub-Audio Magnetics) system that records both the electrical and magnetic properties of the earth."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "SAM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:skytem a skos:Concept ;
+    skos:definition "SkyTEM's proprietary airborne time domain EM system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "SKYTEM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:tempest a skos:Concept ;
+    skos:definition "CGG's fixed-wing airborne time domain EM system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "TEMPEST"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:vtem a skos:Concept ;
+    skos:definition "GeoTech's Versatile Time Domain Electromagnetic airborne system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "VTEM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:ztem a skos:Concept ;
+    skos:definition "The ZTEM (Z-Axis Tipper Electromagnetic) System built be GeoTech."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "ZTEM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:picodas a skos:Concept ;
+    skos:definition "An radiometric measurement instrument developed and sold by Picodas."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "PICODAS"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:exploranium a skos:Concept ;
+    skos:definition "An Exploranium brand gamma-ray spectometer."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "EXPLORANIUM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:helitem a skos:Concept ;
+    skos:definition "A broad-spectrum helicopter electromagnetic system capable of collecting data at base frequencies as low as 7.5 Hz of CGG design."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "HELITEM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:falcon a skos:Concept ;
+    skos:definition "Airborne Gravity Gradiometry system."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "Falcon"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:geotem a skos:Concept ;
+    skos:definition "An airborne digital time-domain electromagnetic system of Geoterrex design."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOTEM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:scintrex a skos:Concept ;
+    skos:definition "An instrument developed and sold by Scintrex."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "SCINTREX"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:radiations-solutions a skos:Concept ;
+    skos:definition "The RS-400 model radiation monitoring instrument built by Radiation Solutions."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "RADIATION SOLUTIONS"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:unknown a skos:Concept ;
+    skos:definition "It is unknown which instrument was used to make the observation."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "Unknown"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:geometrics a skos:Concept ;
+    skos:definition "An instrument developed and sold by Geometrics."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:electromagnetic a skos:Collection ;
+    skos:definition "Instruments used in Electromagnetic surveys."@en ;
+    skos:member obsin:geotem,
+        obsin:geotem-1,
+        obsin:geotem-2,
+        obsin:geotem-3,
+        obsin:helitem,
+        obsin:helitem-other,
+        obsin:helitem3,
+        obsin:hoistem,
+        obsin:questem,
+        obsin:reptem,
+        obsin:sam,
+        obsin:skytem,
+        obsin:tempest,
+        obsin:unknown,
+        obsin:vtem,
+        obsin:ztem ;
+    skos:prefLabel "Electromagnetic"@en .
+
+obsin:gravity a skos:Collection ;
+    skos:definition "Instruments used in Gravity surveys."@en ;
+    skos:member obsin:unknown ;
+    skos:prefLabel "Gravity"@en .
+
+obsin:gravity-gradiometry a skos:Collection ;
+    skos:definition "Instruments used in Gravity Gradiometry surveys."@en ;
+    skos:member obsin:einstein,
+        obsin:falcon,
+        obsin:galileo,
+        obsin:newton,
+        obsin:unknown ;
+    skos:prefLabel "Gravity Gradiometry"@en .
+    
+obsin:magnetic a skos:Collection ;
+    skos:definition "Instruments used in Magnetic surveys."@en ;
+    skos:member obsin:fasdas-mag-decoupler-unit,
+        obsin:geometrics,
+        obsin:geometrics-g-813,
+        obsin:geometrics-g-822,
+        obsin:geometrics-g-822a,
+        obsin:geometrics-g-823-caesium-vapour,
+        obsin:geometrics-g-823b-caesium-vapour,
+        obsin:geometrics-g-83,
+        obsin:geometrics-g-833,
+        obsin:geometrics-g-856a,
+        obsin:helisam,
+        obsin:kroum,
+        obsin:scintrex,
+        obsin:scintrex-cs-2,
+        obsin:scintrex-cs-3,
+        obsin:scintrex-v21,
+        obsin:scintrex-v2321,
+        obsin:unknown ;
+    skos:prefLabel "Magnetic"@en .
+
+obsin:radiometric a skos:Collection ;
+    skos:definition "Instruments used in Radiometric surveys."@en ;
+    skos:member obsin:exploranium,
+        obsin:exploranium-gr-8,
+        obsin:exploranium-gr-82,
+        obsin:geometrics-gr-8,
+        obsin:nuclear-data,
+        obsin:picodas,
+        obsin:picodas-pgam-1-,
+        obsin:radiation-solution-rs-4,
+        obsin:radiation-solutions-rs-5,
+        obsin:radiation-solutions-rsx-3,
+        obsin:radiation-solutions-rsx-4,
+        obsin:radiation-solutions-rsx-5,
+        obsin:radiations-solutions,
+        obsin:unknown ;
+    skos:prefLabel "Radiometric"@en .
+
+obsin:seismic a skos:Collection ;
+    skos:definition "Instruments used in Seismic surveys."@en ;
+    skos:member obsin:geophone,
+        obsin:unknown ;
+    skos:prefLabel "Seismic"@en .
