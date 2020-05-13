@@ -1,3 +1,4 @@
+  
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -8,10 +9,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-
 <http://linked.data.gov.au/def/sample-material> a owl:Ontology , skos:ConceptScheme ;
-    dct:creator "Geological Survey of Queensland" ;
-    dct:modified "2020-02-08T11:19:37"^^xsd:dateTime ;
+    dct:created "2020-02-08"^^xsd:date ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-05-13"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Types of materials of which samples can consist of in Geoscience."@en ;
     skos:hasTopConcept spmt:air,
@@ -298,6 +300,27 @@ spmt:rock a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Rock"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
+
+spmt:sandstone a skos:Concept ;
+    skos:definition "A sand-grade clastic-sedimentary-rock."@en ;
+    skos:broader spmt:rock ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
+    skos:altLabel "Sand-grade-sedimentary-rock"@en ;
+    skos:prefLabel "Sandstone"@en .
+
+spmt:shale a skos:Concept ;
+    skos:definition "A fine-grained detrital sedimentary rock, formed by the consolidation (esp. by compression) of clay, silt, or mud. It is characterized by finely laminated structure, which imparts a fissility approx. parallel to the bedding, along which the rock breaks readily into thin layers, and by an appreciable content of clay minerals and detrital quartz; a thinly laminated or fissile claystone, siltstone, or mudstone."@en ;
+    skos:broader spmt:rock ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
+    skos:altLabel "Schluffstein"@en ;
+    skos:prefLabel "Shale"@en .
+
+spmt:siltstone a skos:Concept ;
+    skos:definition "A mudstone with silt-grade clasts. An indurated silt having the texture and composition of shale but lacking its fine lamination or fissility; a massive mudstone in which the silt predominates over clay; a nonfissile silty shale. It tends to be flaggy, containing hard, durable, generally thin layers, and often showing various primary current structures."@en ;
+    skos:broader spmt:rock ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
+    skos:altLabel "Siltite"@en ;
+    skos:prefLabel "Siltstone"@en .
 
 spmt:regolith a skos:Concept ;
     skos:definition "Typically unconsolidated or fragmental material, either transported or residual origin, which covers bedrock. Includes surficial duricrusts that cap bedrock."@en ;
