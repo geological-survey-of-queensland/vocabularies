@@ -13,7 +13,7 @@
         skos:ConceptScheme ;
     dct:created "2020-05-11"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-05-11"^^xsd:date ;
+    dct:modified "2020-05-14"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Compiled by the Geological Survey of Queensland." ;
     skos:definition "Types of instruments used to perform geological observations."@en ;
@@ -33,6 +33,7 @@
         obsin:radiations-solutions,
         obsin:reptem,
         obsin:sam,
+        obsin:samson,
         obsin:scintrex,
         obsin:skytem,
         obsin:tempest,
@@ -271,6 +272,12 @@ obsin:sam a skos:Concept ;
     skos:definition "A SAM (Sub-Audio Magnetics) system that records both the electrical and magnetic properties of the earth."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
     skos:prefLabel "SAM"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
+
+obsin:samson a skos:Concept ;
+    skos:definition "A SAM system using a Gap GeoPhysics TM-7 receiver to perform a time-domain electromagnetic survey using a total field cesium vapour sensor. SAMSON acquires data through five minute acquisitions at fixed points, rather than being a moving survey."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "SAMSON"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-instrument> .
 
 obsin:skytem a skos:Concept ;
