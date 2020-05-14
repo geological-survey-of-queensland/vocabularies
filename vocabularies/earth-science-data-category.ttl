@@ -11,9 +11,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/earth-science-data-category> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2019-09-06T08:17:57"^^xsd:dateTime ;
+    dct:created "2019-09-06"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2019-09-11T08:46:46"^^xsd:dateTime ;
+    dct:modified "2020-05-14"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Modified from the Fields of Research vocabulary from the Australian and New Zealand Standard Research Classification (ANZSRC). Relevant earth science categories have been extracted and augmented with narrower terms relevant for industry and research institutions." ;
     skos:definition "A classification that facilitates identification of the Fields of Research, or topics, to which a dataset, activity, or entity pertain."@en ;
@@ -302,6 +302,23 @@ esdc:geophysics-not-elsewhere-classified a skos:Concept ;
     skos:notation "040499" ;
     skos:prefLabel "Geophysics Not Elsewhere Classified"@en .
 
+esdc:geomatic-engineering a skos:Concept ;
+    skos:broader esdc:engineering ;
+    skos:definition "A professional engineering discipline that focuses on spatial information (i.e. information that has a location). Source:Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0909> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "0909" ;
+    skos:prefLabel "Geomatic Engineering"@en .
+
+esdc:surveying a skos:Concept ;
+    skos:broader esdc:geomatic-engineering ;
+    skos:definition "The science of determining the terrestrial or three-dimensional positions of points and the distances and angles between them. Source:Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0909> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "090906" ;
+    skos:altLabel "Surveying (incl. Hydrographic Surveying)"@en ;
+    skos:prefLabel "Surveying"@en .
+
 esdc:geomechanics-and-resources-geotechnical-engineering a skos:Concept ;
     skos:broader esdc:engineering ;
     skos:definition "The application of scientific methods and engineering principles to the acquisition, interpretation, and use of knowledge of materials of the Earth's crust and earth materials for the solution of engineering problems and the design of engineering works. Source:Wikipedia"@en ;
@@ -581,6 +598,7 @@ esdc:lodgement-form a skos:Collection ;
     skos:definition "Earth science data categories for selection on lodgement form."@en ;
     skos:member 
     esdc:engineering,
+    esdc:surveying,
     esdc:environmental-sciences,
     esdc:geochemistry,
     esdc:extract-geochemistry,
