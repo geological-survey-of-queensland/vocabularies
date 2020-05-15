@@ -1,307 +1,519 @@
+@prefix obstp: <http://linked.data.gov.au/def/observation-type/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sdo: <https://schema.org/> .
-@prefix obst: <http://linked.data.gov.au/def/observation-type/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/observation-type> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2020-02-05T13:54:52"^^xsd:dateTime ;
+<http://linked.data.gov.au/def/observation-type> a owl:Ontology, 
+        skos:ConceptScheme ;
+    dct:created "2020-02-07"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-02-05T13:54:52"^^xsd:dateTime ;
+    dct:modified "2020-05-14"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
-    dct:publisher <http://linked.data.gov.au/org/gsq> ;    
-    skos:definition "The one-off event of examining a Feature. The observation performed may produce samples."@en ;
-    skos:hasTopConcept obst:atmospheric,
-        obst:directional,
-        obst:electrical,
-        obst:electromagnetic,
-        obst:geochemistry,
-        obst:geotechnical,
-        obst:geothermics,
-        obst:gravity,
-        obst:hydrochemistry,
-        obst:magnetic,
-        obst:magnetotelluric,
-        obst:petrophysical,
-        obst:photographic,
-        obst:physical-geology,
-        obst:process,
-        obst:radiometric,
-        obst:seismic,
-        obst:spectral,
-        obst:spatial,
-        obst:velocity ;
+    skos:definition "The types of observation in geoscience."@en ;
+    skos:hasTopConcept obstp:alteration,
+        obstp:auger-hole-description,
+        obstp:cement-int,
+        obstp:coal-seam-properties,
+        obstp:coal-type,
+        obstp:coherance,
+        obstp:depths-of-supergene-alteration,
+        obstp:directional,
+        obstp:drilling-int,
+        obstp:electrical,
+        obstp:electromagnetic,
+        obstp:fabric,
+        obstp:fossils,
+        obstp:geochemical-signature,
+        obstp:geothermics,
+        obstp:gravity,
+        obstp:gravity-gradiometry,
+        obstp:hyperspectral,
+        obstp:igneous-structures,
+        obstp:internal-sequences,
+        obstp:lith-int,
+        obstp:magnetic,
+        obstp:magnetic-gradiometry,
+        obstp:magnetotelluric,
+        obstp:metamorphic-structures,
+        obstp:metamorphic-type,
+        obstp:metamorphism,
+        obstp:mineral-deposit-expression,
+        obstp:mineral-deposit-form,
+        obstp:mineralogical-components,
+        obstp:miscellaneous-observation,
+        obstp:multispectral,
+        obstp:ore-textures,
+        obstp:panchromatic,
+        obstp:perf-int,
+        obstp:photographic,
+        obstp:physical,
+        obstp:quartz-textures,
+        obstp:radiometric,
+        obstp:regolith-observations,
+        obstp:reservoir-int,
+        obstp:rock-classification,
+        obstp:sedimentary-lithofacies,
+        obstp:sedimentary-structures,
+        obstp:seismic-2d,
+        obstp:seismic-3d,
+        obstp:strat-int,
+        obstp:tectonic-structures,
+        obstp:textures,
+        obstp:tubular-int,
+        obstp:velocity-survey,
+        obstp:weathering-features,
+        obstp:well-completion-int,
+        obstp:younging ;
     skos:prefLabel "Observation Type"@en .
 
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
 
-<http://linked.data.gov.au/org/gsq>
-    a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-.
+obstp:alteration a skos:Concept ;
+    skos:definition "A change in the mineralogic composition of a rock brought about by physical or chemical means, esp. by the action of hydrothermal solutions; also, a secondary, i.e., supergene, change in a rock or mineral. Alteration excludes that specifically resulting from metamorphic alteration, which is characterised in a unique observation type, Metamorphism."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "ALTN" ;
+    skos:prefLabel "Alteration"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:airborne a skos:Collection ;
-    skos:definition "Observations in which the observation equipment is mounted to an aircraft such as an airplane, helicopter, balloon, or aerial drone."@en ;
-    skos:member obst:atmospheric,
-        obst:electromagnetic,
-        #obst:gravity-gradiometry,
-        obst:magnetic,
-        #obst:magnetic-gradiometry,
-        obst:photographic,
-        obst:radiometric,
-        obst:spatial,
-        obst:spectral ;     
-    skos:prefLabel "Airborne"@en .
+obstp:auger-hole-description a skos:Concept ;
+    skos:definition "A description of an auger hole."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "AUGR" ;
+    skos:prefLabel "Auger Hole Description"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:downhole a skos:Collection ;
-    skos:definition "Observations where equipment is conveyed down a borehole to record measurements of borehole, rock, or fluid attributes."@en ;
-    skos:member obst:directional,
-        obst:electrical,
-        obst:electromagnetic,
-        obst:geochemistry,
-        obst:geotechnical,
-        obst:gravity,
-        #obst:gravity-gradiometry,
-        obst:magnetic,
-        #obst:magnetic-gradiometry,
-        #obst:organic-geochemistry,
-        obst:petrophysical,
-        obst:photographic,
-        obst:radiometric,
-        obst:spectral,
-        obst:velocity ;
-    skos:prefLabel "Downhole"@en .
+obstp:cement-int a skos:Concept ;
+    skos:definition "An observation detailing the emplacement of cement in a borehole."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "CMNT" ;
+    skos:prefLabel "Cementing Interval"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:ground a skos:Collection ;
-    skos:definition "Observations undertaken at ground level or a solid subsurface level such as an underground mine floor. This may include surface collection of rocks, soil, water or other physical samples; geophysical observations from surface locations; handheld photography."@en ;
-    skos:member obst:atmospheric,
-        obst:electrical,
-        obst:electromagnetic,
-        obst:geochemistry,
-        obst:geotechnical,
-        obst:geothermics,
-        obst:gravity,
-        #obst:gravity-gradiometry,
-        obst:hydrochemistry,
-        obst:magnetic,
-        #obst:magnetic-gradiometry,
-        obst:magnetotelluric,
-        #obst:organic-geochemistry,
-        #obst:passive-seismic,
-        obst:physical-geology,
-        obst:radiometric,
-        obst:seismic,
-        obst:spatial ;
-    skos:prefLabel "Ground"@en .
+obstp:coal-seam-properties a skos:Concept ;
+    skos:definition "An observation of the properties of a coal seam using a variety of analytical techniques."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "CSPR" ;
+    skos:prefLabel "Coal Seam Properties"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:procedural a skos:Collection ;
-    skos:definition "Observations undertaken as part of an overall sampling procedure to modify existing samples, or create new sub-samples from existing samples."@en ;
-    skos:member obst:process ;
-    skos:prefLabel "Procedural"@en .
+obstp:coal-type a skos:Concept ;
+    skos:definition "A definition of the type of coal according to a classification scheme."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "COAL" ;
+    skos:prefLabel "Coal Type"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:satellite a skos:Collection ;
-    skos:definition "Observations in which the observation equipment is mounted to a platform outside the earth's atmosphere. Typically in a stable orbit such as a satellite, space station, or shuttle."@en ;
-    skos:member obst:gravity,
-        obst:magnetic,
-        obst:photographic,
-        obst:spectral,
-        obst:spatial ;
-    skos:prefLabel "Satellite"@en .
+obstp:coherance a skos:Concept ;
+    skos:definition "How well a rock is lithified."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "COHR" ;
+    skos:prefLabel "Coherance"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-#obst:passive-seismic a skos:Concept ;
-#    skos:broader obst:seismic ;
-#    skos:definition "A seismic observation using passive and natural noise sources. Typically capturing cumulative information over extended recording periods."@en ;
-#    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-#    skos:notation "pv" ;
-#    skos:prefLabel "Passive seismic"@en .
+obstp:depths-of-supergene-alteration a skos:Concept ;
+    skos:definition "The depths at which supergene alteration occurred."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "DSUP" ;
+    skos:prefLabel "Depths of Supergene Alteration"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:directional a skos:Concept ;
+obstp:directional a skos:Concept ;
     skos:definition "The process of recording the subsurface geometry of a borehole i.e. direction and position of a wellbore."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "ds" ;
+    skos:notation "DRCT" ;
+    skos:altLabel "Deviation"@en ;
     skos:prefLabel "Directional"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:geothermics a skos:Concept ;
-    skos:definition "A observation measuring variations of heat flow within the Earth."@en ;
+obstp:drilling-int a skos:Concept ;
+    skos:definition "The observation of a drilled interval by a specific wellbit in a borehole."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "ge" ;
-    skos:prefLabel "Geothermics"@en ;
+    skos:notation "DRLL" ;
+    skos:prefLabel "Drilling Interval"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:hydrochemistry a skos:Concept ;
-    skos:definition "A observation of the chemical and physical properties of surface or ground water."@en ;
+obstp:electrical a skos:Concept ;
+    skos:definition "The observations of measuring electrical currents as they travel through conductive pathways in the near surface."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "hy" ;
-    skos:prefLabel "Hydrochemistry"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
-
-obst:magnetotelluric a skos:Concept ;
-    skos:altLabel "MT"@en,
-        "MT Observation"@en ;
-    skos:definition "A observation where recordings of the Earths electric and magnetic fields are taken concurrently to determine the subsurface electrical resistivity at a range of scales"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "mt" ;
-    skos:prefLabel "Magnetotelluric"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
-
-#obst:organic-geochemistry a skos:Concept ;
-#    skos:broader obst:geochemistry ;
-#    skos:definition "A geochemistry observation specifically determining organic chemical properties. Typically performed for material such as coal and oil."@en ;
-#    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-#    skos:notation "og" ;
-#    skos:prefLabel "Organic Geochemistry"@en .
-
-obst:petrophysical a skos:Concept ;
-    skos:altLabel "Wireline"@en ;
-    skos:definition "The process of recording various physical, chemical, electrical, or other properties of the rock/fluid mixtures penetrated by a borehole."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "pp" ;
-    skos:prefLabel "Petrophysical"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
-
-obst:velocity a skos:Concept ;
-    skos:altLabel "Checkshot"@en ;
-    skos:definition "The process of recording the average sonic velocity with depth down a borehole."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "vl" ;
-    skos:prefLabel "Velocity"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
-
-obst:physical-geology a skos:Concept ;
-    skos:altLabel "Field Mapping"@en ;
-    skos:definition "A observation of physical geological features such as outcrop samples, structural measurements, sedimentological and stratigraphic observations."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "pg" ;
-    skos:prefLabel "Physical Geology"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
-
-obst:process a skos:Concept ;
-    skos:altLabel "processing"@en,
-        "reprocessing"@en,
-        "resampling"@en ;
-    skos:definition "A sampling procedure performed on an existing sample to alter the sample or generate a new sub-sample or set of sub-samples. This may include seismic processing and reprocessing."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "ps" ;
-    skos:prefLabel "Process"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
-
-obst:atmospheric a skos:Concept ;
-    skos:definition "A observation measuring chemical and physical properties of the atmosphere."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "at" ;
-    skos:prefLabel "Atmospheric"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
-
-obst:electrical a skos:Concept ;
-    skos:altLabel "Electrical Resistance"@en,
-        "Electrical Sounding"@en,
-        "IP"@en,
-        "Induced Polarisation"@en,
-        "MIMDAS"@en,
-        "SP"@en,
-        "Schlumberger Observation"@en,
-        "Spontenous Pontential"@en,
-        "Vertical Profiling"@en,
-        "Wiener Observation"@en ;
-    skos:definition "A observation measuring electrical currents as they travel through conductive pathways in the near surface."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "es" ;
+    skos:notation "EL" ;
+    skos:altLabel "Electric"@en ;
     skos:prefLabel "Electrical"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:geotechnical a skos:Concept ;
-    skos:altLabel "Geomechanical"@en ;
-    skos:definition "A observation measuring the physical and mechanical properties of rocks, soil and earth material with particular focus on rock strength and competence."@en ;
+obstp:electromagnetic a skos:Concept ;
+    skos:definition "A survey measuring induced electromagnetic fields from the earth to determine the resistive/conductive structure of the earth."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "gt" ;
-    skos:prefLabel "Geotechnical"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
-
-#obst:gravity-gradiometry a skos:Concept ;
-#    skos:altLabel "Full tensor gravimetry"@en ;
-#    skos:broader obst:gravity ;
-#    skos:definition "A variation of gravity observation where the gradient of the gravity field is measured instead of the field directly."@en ;
-#    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-#    skos:notation "gy" ;
-#    skos:prefLabel "Gravity gradiometry"@en .
-
-#obst:magnetic-gradiometry a skos:Concept ;
-#    skos:broader obst:magnetic ;
-#    skos:definition "A variation of magnetic observation which measured the gradient of the magnetic field instead of the field."@en ;
-#    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-#    skos:notation "my" ;
-#    skos:prefLabel "Magnetic gradiometry"@en .
-
-obst:seismic a skos:Concept ;
-    skos:definition "A observation using the interaction of seismic waves with sub-surface features of the earth to determine properties and morphology of those features."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "ss" ;
-    skos:prefLabel "Seismic"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
-
-obst:electromagnetic a skos:Concept ;
+    skos:notation "EM" ;
     skos:altLabel "EM"@en,
-        "EM Observation"@en ;
-    skos:definition "A observation measuring induced electromagnetic fields from the earth to determine the resistive/conductive structure of the earth."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "em" ;
+        "EM Survey"@en ;
     skos:prefLabel "Electromagnetic"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:geochemistry a skos:Concept ;
-    skos:definition "A observation where the chemical properties of rocks, soil, or other geological material is assessed to determine mineralogical and/or elemental composition."@en ;
+obstp:fabric a skos:Concept ;
+    skos:definition "The spatial and geometric configuration of a sample."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "gc" ;
-    skos:prefLabel "Geochemistry"@en ;
+    skos:notation "FABR" ;
+    skos:prefLabel "Fabric"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:photographic a skos:Concept ;
-    skos:definition "A observation using standard photographic equipment for image capture without intention for spectral analysis. Including land-based geological photography."@en ;
+obstp:fossils a skos:Concept ;
+    skos:definition "Fossils observed."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "ph" ;
-    skos:prefLabel "Photographic"@en ;
+    skos:notation "FOSS" ;
+    skos:prefLabel "Fossils"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:radiometric a skos:Concept ;
-    skos:altLabel "Gamma Logs"@en,
-        "Gamma-Ray Spectrography"@en ;
-    skos:definition "A observation where the emissions of natural gamma-rays are recorded to determine the quantity of radioelements (Potassium, Uranium, Thorium)."@en ;
+obstp:geochemical-signature a skos:Concept ;
+    skos:definition "The geochemical signature observed."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "rm" ;
-    skos:prefLabel "Radiometric"@en ;
+    skos:notation "GEOC" ;
+    skos:prefLabel "Geochemical signature"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:spectral a skos:Concept ;
-    skos:altLabel "hyperspectral"@en ;
-    skos:definition "A observation capturing image information and intensity-per-wavelength-band to be used for spectral analysis e.g. ASTER, MODIS."@en ;
+obstp:geothermics a skos:Concept ;
+    skos:definition "An observation measuring variations of heat flow within the Earth."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "sp" ;
-    skos:prefLabel "Spectral"@en ;
+    skos:notation "GE" ;
+    skos:prefLabel "Geothermics"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:spatial a skos:Concept ;
-    skos:definition "A observation measuring the spatial characteristics of an object or region."@en ;
+obstp:gravity a skos:Concept ;
+    skos:definition "A survey where the variation of the Earth's gravity field in measured to determine the distribution of density in the region."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "st" ;
-    skos:prefLabel "Spatial"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
-
-obst:gravity a skos:Concept ;
-    skos:definition "A observation where the variation of the Earth's gravity field in measured to determine the distribution of density in the region"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "gv" ;
+    skos:notation "GV" ;
     skos:prefLabel "Gravity"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
 
-obst:magnetic a skos:Concept ;
-    skos:altLabel "aeromagnetics"@en ;
-    skos:definition "A observation where the variations of the Earth's magnetic field is measured to determine the distribution of magnetic minerals (predominately magnetite)"@en ;
+obstp:gravity-gradiometry a skos:Concept ;
+    skos:definition "A variation of gravity observations where the gradient of the gravity field is measured instead of the field directly."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
-    skos:notation "mg" ;
+    skos:notation "GG" ;
+    skos:altLabel "Full tensor gravimetry"@en ;
+    skos:prefLabel "Gravity Gradiometry"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:hyperspectral a skos:Concept ;
+    skos:definition "A spectral observation type that captures between greater than 10 frequency bands. Hyperspectal observations typically consist of hundred of narrow bands (10-20nm)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "HYPR" ;
+    skos:prefLabel "Hyperspectral"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:igneous-structures a skos:Concept ;
+    skos:definition "The types of igneous structures observed."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "IGST" ;
+    skos:prefLabel "Igneous Structures"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:internal-sequences a skos:Concept ;
+    skos:definition "The sequences observable inside a sample."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "SEQU" ;
+    skos:prefLabel "Internal Sequences"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:lith-int a skos:Concept ;
+    skos:definition "An observation detailing the lithological characteristics of a defined interval."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "LITH" ;
+    skos:altLabel "Lithology Interval"@en ;
+    skos:prefLabel "Lithological Interval"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:magnetic a skos:Concept ;
+    skos:definition "The intensity of magnetism observed."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "MG" ;
+    skos:altLabel "magnetism"@en ;
     skos:prefLabel "Magnetic"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:magnetic-gradiometry a skos:Concept ;
+    skos:definition "A variation of magnetic observations where the gradient of the magnetic field is measured instead of the field directly."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "MY" ;
+    skos:prefLabel "Magnetic Gradiometry"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:magnetotelluric a skos:Concept ;
+    skos:definition "A survey where recordings of the Earths electric and magnetic fields are taken concurrently to determine the subsurface electrical resistivity at a range of scales."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "MT" ;
+    skos:altLabel "MT"@en,
+        "MT Survey"@en ;
+    skos:prefLabel "Magnetotelluric"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:metamorphic-structures a skos:Concept ;
+    skos:definition "The metamorphic structures observed."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "METS" ;
+    skos:prefLabel "Metamorphic Structures"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:metamorphic-type a skos:Concept ;
+    skos:definition "The type of metamorphism observed."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "METTYP" ;
+    skos:prefLabel "Metamorphic Type"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:metamorphism a skos:Concept ;
+    skos:definition "Mineralogical alterations specifically related to metamorphism."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "META" ;
+    skos:altLabel "Metamorphic Alteration"@en ;
+    skos:prefLabel "Metamorphism"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:mineral-deposit-expression a skos:Concept ;
+    skos:definition "The type expressed by a mineral deposit"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "DEXP" ;
+    skos:prefLabel "Mineral Deposit Expression"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:mineral-deposit-form a skos:Concept ;
+    skos:definition "The form expressed by a mineral deposit"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "DFRM" ;
+    skos:prefLabel "Mineral Deposit Form"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:mineralogical-components a skos:Concept ;
+    skos:definition "The mineralogical components of a sample."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "COMPON" ;
+    skos:prefLabel "Components"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:miscellaneous-observation a skos:Concept ;
+    skos:definition "A trivial type of observation, not elsewhere classified."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "MISC" ;
+    skos:prefLabel "Miscellaneous Observation"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:multispectral a skos:Concept ;
+    skos:definition "A spectral observation type that captures between 3 and 10 frequency bands."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "MULT" ;
+    skos:prefLabel "Multispectral"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:ore-textures a skos:Concept ;
+    skos:definition "The textures apparently in an ore."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "OTEX" ;
+    skos:prefLabel "Ore Textures"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:panchromatic a skos:Concept ;
+    skos:definition "A spectral observation type that captures light across a wide bandwidth, typically spanning hundreds of nanometers, as a single band."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "PANC" ;
+    skos:altLabel "Monochromatic"@en ;
+    skos:prefLabel "Panchromatic"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:perf-int a skos:Concept ;
+    skos:definition "An observation detailing the perforations through casing of a defined interval in a borehole."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "PERF" ;
+    skos:prefLabel "Perforations"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:photographic a skos:Concept ;
+    skos:definition "The details observable via photogrammetry using standard photographic equipment for image capture without intention for spectral analysis. Including land-based geological photography."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "PHOT" ;
+    skos:altLabel "Photographic details"@en ;
+    skos:prefLabel "Photographic"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:physical a skos:Concept ;
+    skos:definition "An observation of the fundamental physical properties of an entity such as shape, size, colour, mass, porosity, permeability, strength, stiffness, composition."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "PHYS" ;
+    skos:prefLabel "Physical Properties"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:positional a skos:Concept ;
+    skos:definition "An observation of the fundamental physical properties of an entity such as shape, size, colour, mass, porosity, permeability, strength, stiffness, composition."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "PSTN" ;
+    skos:altLabel "Surveying"@en,
+        "Ranging"@en,
+        "Distance Ranging"@en,
+        "Targeting"@en ,
+        "Rangefinding"@en ;
+    skos:prefLabel "Positional"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:quartz-textures a skos:Concept ;
+    skos:definition "The textures visible in quartz."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "QTEX" ;
+    skos:prefLabel "Quartz Textures"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:radiometric a skos:Concept ;
+    skos:definition "A survey where the emissions of natural gamma-rays are recorded to determine the quantity of radioelements (Potassium, Uranium, Thorium)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "RM" ;
+    skos:altLabel "Gamma Logs"@en,
+        "Gamma-Ray Spectrography"@en ;
+    skos:prefLabel "Radiometric"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:regolith-observations a skos:Concept ;
+    skos:definition "Observations of regolith."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "REGO" ;
+    skos:prefLabel "Regolith Observations"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:reservoir-int a skos:Concept ;
+    skos:definition "Observations of reservoir properties within a specific interval within a borehole."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "RSVR" ;
+    skos:altLabel "Reservoir Interval"@en,
+        "Reservoir Properties"@en ;
+    skos:prefLabel "Reservoirs"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:rock-classification a skos:Concept ;
+    skos:definition "The classification of a rock."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "RCLASS" ;
+    skos:prefLabel "Rock Classification"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:sedimentary-lithofacies a skos:Concept ;
+    skos:definition "The lithofacies observable in a sedimentary sequence."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "SEDFAC" ;
+    skos:prefLabel "Sedimentary Lithofacies"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:sedimentary-structures a skos:Concept ;
+    skos:definition "The structures observable in a sedimentary sequence."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "SEDS" ;
+    skos:prefLabel "Sedimentary Structures"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:seismic-2d a skos:Concept ;
+    skos:definition "The Fundamental Dataset of a 2D seismic survey is the 'Line'; the Line dataset is a 2D cross-section of the subsurface measured by a chain of geophones. It is described by a function of two parameters : 1) Trace Number and 2) Two-Way Time. A 2D seismic survey may be composed of one or many lines that may or may not intersect with each other."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "2d" ;
+    skos:altLabel "Seismic 2D"@en,
+        "2D"@en,
+        "2D Seismic Survey"@en,
+        "2D Survey"@en  ;
+    skos:prefLabel "2D Seismic"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:seismic-3d a skos:Concept ;
+    skos:definition "The Fundamental Dataset of a 3D seismic survey is the 'Volume'; the Volume dataset is a 3D model of the subsurface measured by a grid/array of geophones. It is described by a function of three parameters : 1) In-Line, 2) Cross-Line and 3) Two-Way Time. A 3D seismic survey contains many In-Lines and Cross-Lines that intersect with each other."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "3d" ;
+    skos:altLabel "Seismic 3D"@en,
+        "3D"@en,
+        "3D Seismic Survey"@en,
+        "3D Survey"@en  ;
+    skos:prefLabel "3D Seismic"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:seismic-4d a skos:Concept ;
+    skos:definition "The Fundamental Dataset of a 4D seismic survey is the 'Temporal Volume'; The Temporal Volume is a collection of multiple discrete recordings of a volume of the subsurface measured at successive time intervals. It is described by a function of four parameters: 1) In-Line, 2) Cross-Line, 3) Two-Way Time and 4) Repeat Index. The In-Lines and Cross-Lines intersect with each other."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "4d" ;
+    skos:altLabel "Seismic 4D"@en,
+        "3D Time Lapse Survey"@en,
+        "3D Time-Lapse Survey"@en,
+        "4D"@en,
+        "4D Seismic Survey"@en,
+        "4D Survey"@en,
+        "Time Lapse"@en,
+        "Time Lapse Survey"@en,
+        "Time-Lapse"@en,
+        "Time-Lapse Survey"@en  ;
+    skos:prefLabel "4D Seismic"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:strat-int a skos:Concept ;
+    skos:definition "Observations of the formal rock units formations and their depth intervals intersected within a borehole."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "STRT" ;
+    skos:altLabel "Stratigraphic Interval"@en ;
+    skos:prefLabel "Stratigraphy"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:tectonic-structures a skos:Concept ;
+    skos:definition "The observable tectonic structures."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "TCST" ;
+    skos:prefLabel "Tectonic Structures"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:textures a skos:Concept ;
+    skos:definition "The textures observable of a sample."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "TEXT" ;
+    skos:prefLabel "Textures"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:tubular-int a skos:Concept ;
+    skos:definition "The observations of tubular equipment (casing, tubing, liner) installed in a borehole."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "TBLR" ;
+    skos:altLabel "Tubular"@en,
+        "Liner"@en,
+        "Tubing"@en,
+        "Tubular"@en,
+        "Tubular Interval"@en,
+        "Casing Interval"@en ;
+    skos:prefLabel "Casing"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:velocity-survey a skos:Concept ;
+    skos:definition "Observations that generate measurements used to determine average velocity versus depth in a borehole."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "VELS" ;
+    skos:altLabel "Seismic Velocity"@en ;
+    skos:prefLabel "Velocity Survey"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:weathering-features a skos:Concept ;
+    skos:definition "The weathering features observable in a sample."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "WETH" ;
+    skos:prefLabel "Weathering Features"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:well-completion-int a skos:Concept ;
+    skos:definition "The observations of the interval over which a well is completed. The contact interval or intervals with the reservoir(s) that function as a single unit to produce or inject fluids."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "WCPI" ;
+    skos:altLabel "Well Completion Interval"@en,
+        "Completion"@en,
+        "Completion Interval"@en;
+    skos:prefLabel "Well Completion"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:younging a skos:Concept ;
+    skos:definition "The younging direction observed in a sequence."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-type> ;
+    skos:notation "YOUNG" ;
+    skos:prefLabel "Younging"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
