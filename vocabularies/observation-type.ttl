@@ -54,6 +54,7 @@
         obstp:perf-int,
         obstp:photographic,
         obstp:physical,
+        obstp:positional,
         obstp:quartz-textures,
         obstp:radiometric,
         obstp:regolith-observations,
@@ -63,6 +64,7 @@
         obstp:sedimentary-structures,
         obstp:seismic-2d,
         obstp:seismic-3d,
+        obstp:seismic-4d,
         obstp:strat-int,
         obstp:tectonic-structures,
         obstp:textures,
@@ -517,3 +519,140 @@ obstp:younging a skos:Concept ;
     skos:notation "YOUNG" ;
     skos:prefLabel "Younging"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-type> .
+
+obstp:borehole-obs a skos:Collection ;
+    skos:definition "The observation types pertinent to borehole observations."@en ;
+    skos:member obstp:auger-hole-description,
+        obstp:cement-int,
+        obstp:coal-seam-properties,
+        obstp:coal-type,
+        obstp:depths-of-supergene-alteration,
+        obstp:directional,
+        obstp:drilling-int,
+        obstp:fossils,
+        obstp:lith-int,
+        obstp:mineralogical-components,
+        obstp:miscellaneous-observation,
+        obstp:perf-int,
+        obstp:photographic,
+        obstp:physical,
+        obstp:regolith-observations,
+        obstp:reservoir-int,
+        obstp:rock-classification,
+        obstp:sedimentary-lithofacies,
+        obstp:sedimentary-structures,
+        obstp:strat-int,
+        obstp:tubular-int,
+        obstp:velocity-survey,
+        obstp:weathering-features,
+        obstp:well-completion-int ;
+    skos:prefLabel "Borehole Observations"@en .
+
+obstp:site-obs a skos:Collection ;
+    skos:definition "The observation types pertinent to sites."@en ;
+    skos:member obstp:alteration,
+        obstp:auger-hole-description,
+        obstp:coal-seam-properties,
+        obstp:coal-type,
+        obstp:coherance,
+        obstp:depths-of-supergene-alteration,
+        obstp:electrical,
+        obstp:electromagnetic,
+        obstp:fabric,
+        obstp:fossils,
+        obstp:geochemical-signature,
+        obstp:geothermics,
+        obstp:hyperspectral,
+        obstp:igneous-structures,
+        obstp:internal-sequences,
+        obstp:magnetic,
+        obstp:magnetotelluric,
+        obstp:metamorphic-structures,
+        obstp:metamorphic-type,
+        obstp:metamorphism,
+        obstp:mineral-deposit-expression,
+        obstp:mineral-deposit-form,
+        obstp:mineralogical-components,
+        obstp:miscellaneous-observation,
+        obstp:multispectral,
+        obstp:ore-textures,
+        obstp:panchromatic,
+        obstp:photographic,
+        obstp:physical,
+        obstp:quartz-textures,
+        obstp:regolith-observations,
+        obstp:rock-classification,
+        obstp:sedimentary-lithofacies,
+        obstp:sedimentary-structures,
+        obstp:tectonic-structures,
+        obstp:textures,
+        obstp:velocity-survey,
+        obstp:weathering-features,
+        obstp:younging ;
+    skos:prefLabel "Sites Observations"@en .
+
+obstp:seismic-obs a skos:Collection ;
+    skos:definition "The observation types pertinent to seismic surveys."@en ;
+    skos:member obstp:seismic-2d,
+        obstp:seismic-3d,
+        obstp:seismic-4d ;
+    skos:prefLabel "Seismic Observations"@en .
+
+obstp:survey-obs a skos:Collection ;
+    skos:definition "The observation types pertinent to surveys."@en ;
+    skos:member obstp:directional,
+        obstp:electrical,
+        obstp:electromagnetic,
+        obstp:geochemical-signature,
+        obstp:geothermics,
+        obstp:gravity,
+        obstp:gravity-gradiometry,
+        obstp:hyperspectral,
+        obstp:magnetic,
+        obstp:magnetic-gradiometry,
+        obstp:magnetotelluric,
+        obstp:multispectral,
+        obstp:panchromatic,
+        obstp:photographic,
+        obstp:radiometric,
+        obstp:seismic-2d,
+        obstp:seismic-3d,
+        obstp:seismic-4d ;
+    skos:prefLabel "Survey Observations"@en .    
+
+obstp:sample-obs a skos:Collection ;
+    skos:definition "The observation types pertinent to samples."@en ;
+    skos:member obstp:alteration,
+        obstp:coal-seam-properties,
+        obstp:coal-type,
+        obstp:coherance,
+        obstp:fabric,
+        obstp:fossils,
+        obstp:geochemical-signature,
+        obstp:hyperspectral,
+        obstp:igneous-structures,
+        obstp:internal-sequences,
+        obstp:magnetic,
+        obstp:metamorphic-structures,
+        obstp:metamorphic-type,
+        obstp:metamorphism,
+        obstp:mineral-deposit-expression,
+        obstp:mineral-deposit-form,
+        obstp:mineralogical-components,
+        obstp:miscellaneous-observation,
+        obstp:multispectral,
+        obstp:ore-textures,
+        obstp:panchromatic,
+        obstp:photographic,
+        obstp:physical,
+        obstp:quartz-textures,
+        obstp:radiometric,
+        obstp:regolith-observations,
+        obstp:rock-classification,
+        obstp:sedimentary-lithofacies,
+        obstp:sedimentary-structures,
+        obstp:tectonic-structures,
+        obstp:textures,
+        obstp:weathering-features,
+        obstp:younging ;
+    skos:prefLabel "Sample Observations"@en .
