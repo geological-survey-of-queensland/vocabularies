@@ -9,26 +9,24 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-
-<http://linked.data.gov.au/def/survey-method> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2020-02-10T13:02:05"^^xsd:dateTime ;
+<http://linked.data.gov.au/def/survey-method> a owl:Ontology, 
+        skos:ConceptScheme ;
+    dct:created "2020-02-10"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-02-10T13:02:05"^^xsd:dateTime ;
+    dct:modified "2020-05-14"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The method of collection used by a survey."@en ;
     skos:hasTopConcept svymh:airborne,
         svymh:downhole,
         svymh:ground,
+        svymh:laboratory,
         svymh:marine,
-        svymh:procedural,
         svymh:satellite ;
     skos:prefLabel "Survey Method"@en .
 
-<http://linked.data.gov.au/org/gsq>
-    a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-.
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" .
 
 svymh:airborne a skos:Concept ;
     skos:altLabel "Aerial"@en ;
@@ -36,6 +34,53 @@ svymh:airborne a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Airborne"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
+    
+svymh:fixed-wing a skos:Concept ;
+    skos:altLabel "Airplane"@en,
+        "Aeroplane"@en,
+        "Glider"@en ;
+    skos:broader svymh:airborne ;
+    skos:definition "A heavier-than-air flying machine that is capable of flight using wings that generate lift caused by the aircraft's forward airspeed and the shape of the wings. Source:Wikipedia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Fixed Wing"@en .
+
+svymh:rotary-wing a skos:Concept ;
+    skos:altLabel "Helicopter"@en,
+        "Rotorcraft"@en,
+        "Gyrodyne"@en,
+        "Autogyro"@en ;
+    skos:broader svymh:airborne ;
+    skos:definition "A heavier-than-air flying machine that generates lift using rotary wings or rotor blades, which revolve around a mast."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Rotary Wing"@en .
+    
+svymh:balloon a skos:Concept ;
+    skos:altLabel "Hot Air Balloon"@en,
+        "Gas Balloon"@en,
+        "Hot-Air Balloon"@en ;
+    skos:broader svymh:airborne ;
+    skos:definition "A lighter-than-air flying machine that generates lift using buoyancy and lacks a means to propel and direct itself through the air. A balloon may be free, moving with the wind, or tethered to a fixed point. "@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Balloon"@en .
+        
+svymh:airship a skos:Concept ;
+    skos:altLabel "Air-Ship"@en,
+        "Air Ship"@en,
+        "Dirigible"@en, 
+        "Zeppelin"@en ;
+    skos:broader svymh:airborne ;
+    skos:definition "A lighter-than-air flying machine that generates lift using buoyancy and has a means to propel and direct itself through the air under its own power, such as a rotor."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Airship"@en .
+
+svymh:uav a skos:Concept ;
+    skos:altLabel "UAV"@en,
+        "Aerial Drone"@en,
+        "Uncrewed aerial vehicle"@en ;
+    skos:broader svymh:airborne ;
+    skos:definition "An aircraft without a human pilot on board and a type of unmanned vehicle. UAVs may operate with various degrees of autonomy: either under remote control by a human operator or autonomously by onboard computers."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Drone"@en .
 
 svymh:downhole a skos:Concept ;
     skos:altLabel "Borehole"@en ;
@@ -44,125 +89,40 @@ svymh:downhole a skos:Concept ;
     skos:prefLabel "Downhole"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
 
-svymh:procedural a skos:Concept ;
-    skos:definition "Surveys undertaken as part of an overall sampling procedure to modify existing samples, or create new sub-samples from existing samples."@en ;
+svymh:mwd a skos:Concept ;
+    skos:hiddenLabel "Logging While Drilling"@en,
+        "LWD"@en,
+        "L.W.D"@en,
+        "L.W.D."@en ;
+    skos:altLabel "MWD"@en,
+        "M.W.D."@en,
+        "M.W.D"@en ;
+    skos:broader svymh:downhole ;
+    skos:definition "A survey where data is acquired while the hole is being drilled, from sensors integrated within the drill string ."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Procedural"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
+    skos:prefLabel "Measurement While Drilling"@en .
 
-svymh:satellite a skos:Concept ;
-    skos:definition "Surveys in which the surveying equipment is mounted to a platform outside the earth's atmosphere. Typically in a stable orbit such as a satellite, space station, or shuttle."@en ;
+svymh:pipe-conveyed a skos:Concept ;
+    skos:altLabel "on-pipe"@en,
+        "on pipe"@en;
+    skos:broader svymh:downhole ;
+    skos:definition "A survey where data is acquired from logging tools attached to the drill string, while the well is not actively drilling."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Satellite"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
+    skos:prefLabel "Pipe Conveyed"@en .
 
-svymh:accelerated-weight-drop a skos:Concept ;
-    skos:altLabel "AWD"@en ;
-    skos:broader svymh:ground ;
-    skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released and propelled into the impact point to generate a seismic pulse."@en ;
+svymh:well-tractor a skos:Concept ;
+    skos:altLabel "borehole tractor"@en;
+    skos:broader svymh:downhole ;
+    skos:definition "A survey where data is acquired from logging tools integrated in a Well Tractor, a device that moves through a wellbore using wheels or tracks pushed against the side of the borehole."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Accelerated Weight Drop"@en .
+    skos:prefLabel "Well Tractor"@en .
 
-svymh:air-gun a skos:Concept ;
-    skos:altLabel "Air Pulse"@en ;
-    skos:broader svymh:marine ;
-    skos:definition "Metal cylinders through which high pressure air is forced through and into the water column. The injection of air into the water creates a pressure pulse that travels through the water and into the subsurface. It is common to have multiple airguns firing at once to create an array."@en ;
+svymh:wireline a skos:Concept ;
+    skos:altLabel "wireline logging"@en;
+    skos:broader svymh:downhole ;
+    skos:definition "A survey where data is acquired from logging tools lowered and raised within a borehole on a wireline or cable."@en ;
     skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Air Gun"@en .
-
-svymh:boomer a skos:Concept ;
-    skos:altLabel "Bang Box"@en,
-        "Boomers"@en ;
-    skos:broader svymh:marine ;
-    skos:definition "Energy is stored in capacitors and discharges through a flat spiral coil with no spark. A copper plate adjacent to the coil flexes away from the coil as the capacitors are discharged. This flexing is transmitted into the water as the seismic pulse. Boomers are towed in a floating sled behind a survey vessel."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Boomer"@en .
-
-svymh:dynamite a skos:Concept ;
-    skos:broader svymh:ground ;
-    skos:definition "An explosive consisting of nitroglycerine mixed with an absorbent material and typically moulded into sticks. A stick is placed into a shallow borehole and detonated to generate a seismic pulse."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Dynamite"@en .
-
-svymh:firearm a skos:Concept ;
-    skos:altLabel "Betsy Gun"@en,
-        "Pistol"@en,
-        "Shotgun"@en ;
-    skos:broader svymh:ground ;
-    skos:definition "A gunpowder-based firearm is discharged in a shallow borehole to generate a seismic pulse."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Firearm"@en .
-
-svymh:hammer a skos:Concept ;
-    skos:altLabel "Sledge Hammer"@en,
-        "Sledgehammer"@en ;
-    skos:broader svymh:ground ;
-    skos:definition "A large hand-held hammer is used to strike a metal plate on the ground surface to generate a seismic pulse."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Hammer"@en .
-
-svymh:hydraulic-oil-impactor a skos:Concept ;
-    skos:broader svymh:ground ;
-    skos:definition "The transmission of energy wave vibrations into earth strata surrounding a borehole. A hydraulic oscillator acts as a piston and is regulated by a high pressure hydraulic fluid flow into and out of upper and lower chambers surrounding the piston. The device impacts the surrounding strata in the borehole to generate a series of seismic pulses."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Hydraulic Oil Impactor"@en .
-
-svymh:noise-source a skos:Concept ;
-    skos:altLabel "Passive Source"@en ;
-    skos:broader svymh:ground ;
-    skos:definition "The ambient vibrations transmitted in the ground. Measurements are typically taken over relatively long timeframes."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Noise Source"@en .
-
-svymh:plasma-sound-source a skos:Concept ;
-    skos:altLabel "Spark Gap"@en,
-        "Spark Gap Sound Source"@en,
-        "Sparker"@en,
-        "Sparkers"@en ;
-    skos:broader svymh:marine ;
-    skos:definition "An electric charge is stored in a large high-voltage bank of capacitors and then released in an arc across electrodes in the water. The underwater spark discharge produces a high-pressure plasma and vapor bubble, which expands and displaces the surrounding water. The resulting implosion of water to fill the cavity generates a seismic pulse."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Plasma Sound Source"@en .
-
-svymh:vibroseis a skos:Concept ;
-    skos:altLabel "Vibrator"@en ;
-    skos:broader svymh:ground ;
-    skos:definition "A vehicle-mounted system that holds a large mass to the ground surface which is then oscillated to generate vibrations."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Vibroseis"@en .
-
-svymh:wacker a skos:Concept ;
-    skos:altLabel "Compactor"@en,
-        "Mini-SOSIE"@en,
-        "Rammer"@en,
-        "SOSIE"@en,
-        "Sozie"@en,
-        "Wacker Packer"@en,
-        "Whacker"@en ;
-    skos:broader svymh:ground ;
-    skos:definition "A vibration-rammer, similar to a large jackhammer with a flat-plated bottom, repeatedly strikes the ground to generate a series of seismic pulses. Engine speed is used to vary the striking rate, resulting in a random impulse transmission."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Wacker"@en .
-
-svymh:water-gun a skos:Concept ;
-    skos:broader svymh:marine ;
-    skos:definition "A piston mechanism forces compressed air into the surrounding water and displaces it. The resulting implosion of water to fill the cavity generates a seismic pulse."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Water Gun"@en .
-
-svymh:weight-drop a skos:Concept ;
-    skos:broader svymh:ground ;
-    skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released under the force of gravity with no additional forces applied. The mass strikes the impact point to generate a seismic pulse."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Weight Drop"@en .
-
-svymh:marine a skos:Concept ;
-    skos:altLabel "Oceanic"@en,
-        "Sea"@en ;
-    skos:definition "Surveys undertaken at or below the surface of a body of water such as an ocean, sea, or lake."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
-    skos:prefLabel "Marine"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
+    skos:prefLabel "Wireline"@en .
 
 svymh:ground a skos:Concept ;
     skos:altLabel "Land"@en ;
@@ -171,44 +131,102 @@ svymh:ground a skos:Concept ;
     skos:prefLabel "Ground"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
 
-svymh:explosive-seismic-methods a skos:Collection ;
-    skos:definition "An explosive, or explosive material, is a reactive substance that contains a great amount of potential energy that can produce an explosion if released suddenly, usually accompanied by the production of light, heat, sound, and pressure. An explosive seismic method utilises explosive material to generate a seismic pulse."@en ;
-    skos:member svymh:air-gun,
-        svymh:boomer,
-        svymh:dynamite,
-        svymh:firearm,
-        svymh:plasma-sound-source,
-        svymh:water-gun ;
-    skos:prefLabel "Explosive Seismic Methods"@en .
+svymh:fixed-location a skos:Concept ;
+    skos:altLabel "Permanent Location"@en ;
+    skos:definition "Surveys undertaken at ground level from a set of fixed locations."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Fixed location"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
 
-svymh:impact-seismic-methods a skos:Collection ;
-    skos:definition "A force is used to contact a mass, or striker, with the ground surface to generate a seismic pulse."@en ;
-    skos:member svymh:accelerated-weight-drop,
-        svymh:hammer,
-        svymh:hydraulic-oil-impactor,
-        svymh:wacker,
-        svymh:weight-drop ;
-    skos:prefLabel "Impact Seismic Methods"@en .
+svymh:human a skos:Concept ;
+    skos:altLabel "Manual"@en,
+        "Field Work"@en,
+        "In Person"@en ;
+    skos:broader svymh:ground ;
+    skos:definition "A ground based survey where data is acquired from a human conducting work on-foot."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Human"@en .
 
-svymh:seismic-methods a skos:Collection ;
-    skos:definition "The classification of tools used as an energy source that generate a seismic signal for use in seismic survey acquisition."@en ;
-    skos:member svymh:accelerated-weight-drop,
-        svymh:air-gun,
-        svymh:boomer,
-        svymh:dynamite,
-        svymh:firearm,
-        svymh:hammer,
-        svymh:hydraulic-oil-impactor,
-        svymh:noise-source,
-        svymh:plasma-sound-source,
-        svymh:vibroseis,
-        svymh:wacker,
-        svymh:water-gun,
-        svymh:weight-drop ;
-    skos:prefLabel "Seismic Methods"@en .
+svymh:vehicle a skos:Concept ;
+    skos:altLabel "Car"@en,
+        "Truck"@en,
+        "Ute"@en,
+        "Vehicle Conveyed"@en ;
+    skos:broader svymh:ground ;
+    skos:definition "A ground based survey where data is acquired from instruments mounted to a vehicle."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Vehicle"@en .
 
-svymh:vibration-seismic-methods a skos:Collection ;
-    skos:definition "A mass is held in contact with the ground and oscillated to put a range of frequencies into the earth."@en ;
-    skos:member svymh:noise-source,
-        svymh:vibroseis ;
-    skos:prefLabel "Vibration Seismic Methods"@en .
+svymh:laboratory a skos:Concept ;
+    skos:altLabel "Rig Site"@en,
+        "Mobile Lab"@en,
+        "Lab"@en,
+        "Mobile"@en ;
+    skos:definition "Surveys undertaken on samples that are no-longer in-situ e.g. spectral surveys of core by hylogger in a laboratory, CoreScan in a rig site, XRF analysis of collected samples."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Laboratory"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
+
+svymh:marine a skos:Concept ;
+    skos:altLabel "Oceanic"@en,
+        "Sea"@en,
+        "On Water"@en;
+    skos:definition "Surveys undertaken at or below the surface of a body of water such as an ocean, sea, or lake."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Marine"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
+
+svymh:boat a skos:Concept ;
+    skos:altLabel "Ship"@en,
+        "Hovercraft"@en,
+        "Sailboat"@en,
+        "Motorboat"@en ;
+    skos:broader svymh:marine ;
+    skos:definition "A marine survey where data is acquired from instruments attached to a mobile water craft on the water's surface."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Boat"@en .
+
+svymh:diver a skos:Concept ;
+    skos:altLabel "SCUBA"@en,
+        "SCUBA Diver"@en;
+    skos:broader svymh:marine ;
+    skos:definition "A marine survey where data is acquired by a human conveying the instruments of measurement."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Diver"@en .
+
+svymh:float a skos:Concept ;
+    skos:altLabel "Pontoon"@en,
+        "Floating Dock"@en,
+        "Floating Jetty"@en,
+        "Floating Pier"@en ;
+    skos:broader svymh:marine ;
+    skos:definition "A marine survey where data is acquired from instruments operated from a fixed, buoyant, structure at the water's surface."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Float"@en .
+
+svymh:submarine a skos:Concept ;
+    skos:altLabel "Sub"@en,
+        "Submersible"@en,
+        "Underwater"@en ;
+    skos:broader svymh:marine ;
+    skos:definition "A marine survey where data is acquired by a human piloted watercraft operating under the surface of the water. Surveys may be performed by submarines or submersibles."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Submarine"@en .
+
+svymh:uuv a skos:Concept ;
+    skos:altLabel "UUV"@en,
+        "Underwater Drone"@en,
+        "AUV"@en,
+        "Autonomous underwater vehicle"@en,
+        "ROUV"@en,
+        "remotely operated underwater vehicles"@en ;
+    skos:broader svymh:marine ;
+    skos:definition "A marine survey where data is acquired by a watercraft, without an onboard human pilot, operating under the surface of the water."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Unmanned underwater vehicle"@en .
+
+svymh:satellite a skos:Concept ;
+    skos:definition "Surveys in which the surveying equipment is mounted to a platform outside the earth's atmosphere. Typically in a stable orbit such as a satellite, space station, or shuttle."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
+    skos:prefLabel "Satellite"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .

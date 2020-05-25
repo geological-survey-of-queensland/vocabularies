@@ -1,43 +1,461 @@
+@prefix obsmh: <http://linked.data.gov.au/def/geological-observation-method/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix obmeth: <http://linked.data.gov.au/def/geological-observation-method/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix sdo: <https://schema.org/> .
 
-<http://linked.data.gov.au/def/geological-observation-method> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2020-04-29T14:01:10"^^xsd:dateTime ;
-    dct:creator "Geological Survey of Queensland" ;
-    dct:modified "2020-04-29T14:01:10"^^xsd:dateTime ;
+<http://linked.data.gov.au/def/geological-observation-method> a owl:Ontology, 
+        skos:ConceptScheme ;
+    dct:created "2020-02-10"^^xsd:date ;
+    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-05-14"^^xsd:date ;
+    dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
-    skos:definition "The methods of observation in geoscience."@en ;
-    skos:hasTopConcept 
-        obmeth:dummy,
-        obmeth:example,
-        obmeth:placeholder;
+    skos:definition "The method of collection used in an observation."@en ;
+    skos:hasTopConcept obsmh:accelerated-weight-drop,
+        obsmh:air-gun,
+        obsmh:boomer,
+        obsmh:dynamite,
+        obsmh:firearm,
+        obsmh:hammer,
+        obsmh:hydraulic-oil-impactor,
+        obsmh:noise-source,
+        obsmh:plasma-sound-source,
+        obsmh:vibroseis,
+        obsmh:wacker,
+        obsmh:water-gun,
+        obsmh:weight-drop,
+        obsmh:ip,
+        obsmh:sp,
+        obsmh:ert,
+        obsmh:ves,
+        obsmh:dcr,
+        obsmh:cr,
+        obsmh:gpr,
+        obsmh:tem,
+        obsmh:sam,
+        obsmh:mlem,
+        obsmh:flem,
+        obsmh:lpmt,
+        obsmh:csem,
+        obsmh:amt,
+        obsmh:bbmt,
+        obsmh:direct,
+        obsmh:xrd,
+        obsmh:xrf,
+        obsmh:active-spectral,
+        obsmh:passive-spectral ;
     skos:prefLabel "Observation Method"@en .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" .
-
-obmeth:dummy a skos:Concept ;
-    skos:definition "Not areal concept, just here for looks."@en ;
+    
+obsmh:accelerated-weight-drop a skos:Concept ;
+    skos:altLabel "AWD"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released and propelled into the impact point to generate a seismic pulse."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
-    skos:prefLabel "Dummy"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> .
+    skos:prefLabel "Accelerated Weight Drop"@en .
 
-obmeth:example a skos:Concept ;
-    skos:definition "This just looks like what should actually be here."@en ;
+obsmh:air-gun a skos:Concept ;
+    skos:altLabel "Air Pulse"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "Metal cylinders through which high pressure air is forced through and into the water column. The injection of air into the water creates a pressure pulse that travels through the water and into the subsurface. It is common to have multiple airguns firing at once to create an array."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
-    skos:prefLabel "Example"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> .
+    skos:prefLabel "Air Gun"@en .
 
-obmeth:placeholder a skos:Concept ;
-    skos:definition "This is a placeholder."@en ;
+obsmh:boomer a skos:Concept ;
+    skos:altLabel "Bang Box"@en,
+        "Boomers"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "Energy is stored in capacitors and discharges through a flat spiral coil with no spark. A copper plate adjacent to the coil flexes away from the coil as the capacitors are discharged. This flexing is transmitted into the water as the seismic pulse. Boomers are towed in a floating sled behind a survey vessel."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
-    skos:prefLabel "Placeholder"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> .
+    skos:prefLabel "Boomer"@en .
+
+obsmh:dynamite a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "An explosive consisting of nitroglycerine mixed with an absorbent material and typically moulded into sticks. A stick is placed into a shallow borehole and detonated to generate a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Dynamite"@en .
+
+obsmh:firearm a skos:Concept ;
+    skos:altLabel "Betsy Gun"@en,
+        "Pistol"@en,
+        "Shotgun"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A gunpowder-based firearm is discharged in a shallow borehole to generate a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Firearm"@en .
+
+obsmh:hammer a skos:Concept ;
+    skos:altLabel "Sledge Hammer"@en,
+        "Sledgehammer"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A large hand-held hammer is used to strike a metal plate on the ground surface to generate a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Hammer"@en .
+
+obsmh:hydraulic-oil-impactor a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "The transmission of energy wave vibrations into earth strata surrounding a borehole. A hydraulic oscillator acts as a piston and is regulated by a high pressure hydraulic fluid flow into and out of upper and lower chambers surrounding the piston. The device impacts the surrounding strata in the borehole to generate a series of seismic pulses."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Hydraulic Oil Impactor"@en .
+
+obsmh:noise-source a skos:Concept ;
+    skos:altLabel "Passive Source"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "The ambient vibrations transmitted in the ground. Measurements are typically taken over relatively long timeframes."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Noise Source"@en .
+
+obsmh:plasma-sound-source a skos:Concept ;
+    skos:altLabel "Spark Gap"@en,
+        "Spark Gap Sound Source"@en,
+        "Sparker"@en,
+        "Sparkers"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "An electric charge is stored in a large high-voltage bank of capacitors and then released in an arc across electrodes in the water. The underwater spark discharge produces a high-pressure plasma and vapor bubble, which expands and displaces the surrounding water. The resulting implosion of water to fill the cavity generates a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Plasma Sound Source"@en .
+
+obsmh:vibroseis a skos:Concept ;
+    skos:altLabel "Vibrator"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A vehicle-mounted system that holds a large mass to the ground surface which is then oscillated to generate vibrations."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Vibroseis"@en .
+
+obsmh:wacker a skos:Concept ;
+    skos:altLabel "Compactor"@en,
+        "Mini-SOSIE"@en,
+        "Rammer"@en,
+        "SOSIE"@en,
+        "Sozie"@en,
+        "Wacker Packer"@en,
+        "Whacker"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A vibration-rammer, similar to a large jackhammer with a flat-plated bottom, repeatedly strikes the ground to generate a series of seismic pulses. Engine speed is used to vary the striking rate, resulting in a random impulse transmission."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Wacker"@en .
+
+obsmh:water-gun a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A piston mechanism forces compressed air into the surrounding water and displaces it. The resulting implosion of water to fill the cavity generates a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Water Gun"@en .
+
+obsmh:weight-drop a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A mass, or striker, is held above the impact point on the ground surface. The mass is then released under the force of gravity with no additional forces applied. The mass strikes the impact point to generate a seismic pulse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Weight Drop"@en .
+
+obsmh:ip a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A geophysical imaging technique used to identify the electrical chargeability of subsurface materials."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "IP"@en,
+        "I.P."@en,
+        "Induced Polarization"@en ;
+    skos:prefLabel "Induced Polarisation"@en .
+
+obsmh:sp a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A naturally occurring electric potential difference in the Earth, measured by an electrode relative to a fixed reference electrode."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "Self Potential"@en,
+        "SP"@en,
+        "S.P."@en ;
+    skos:prefLabel "Spontaneous Potential "@en .
+
+obsmh:ert a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A geophysical technique for imaging sub-surface structures from electrical resistivity measurements made at the surface, or by electrodes in one or more boreholes. "@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "ERT"@en,
+        "E.R.T."@en,
+        "Electrical Resistivity Imaging"@en,
+        "ERI"@en,
+        "E.R.I."@en ;
+    skos:prefLabel "Electrical Resistivity Tomography"@en .
+
+obsmh:ves a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A 1-D geophysical method for investigation of a geological medium. The method is based on the estimation of the electrical conductivity or resistivity of the medium by measurement of electrical field voltage of induced by distant grounded electrodes"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "VES"@en,
+        "V.E.S."@en ;
+    skos:prefLabel "Vertical Electrical Sounding"@en .
+
+obsmh:dcr a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "An electircal geophysical method where an electrical current is injected into the earth. The current path depends upon the variation of conductivity or equivalently, its reciprocal, the electrical resistivity."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "Direct Current Resistivity"@en,
+        "DCR"@en,
+        "D.C.R."@en ;
+    skos:prefLabel "DC Resistivity"@en .
+
+obsmh:cr a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A geophysical survey technique and an extension of the induced polarization (IP) method that measures the frequency-dependent (i.e. spectral) complex impedance, equivalent to the amount of resistance and phase shift between electric current and voltage."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "Spectral Induced Polarization"@en,
+        "Spectral Induced Polarisation"@en,
+        "SIP"@en,
+        "S.I.P."@en,
+        "Complex Conductivity"@en,
+        "CC"@en,
+        "C.C."@en,
+        "CR"@en,
+        "C.R."@en ;
+    skos:prefLabel "Complex Resistivity"@en .
+
+obsmh:gpr a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A geophysical method that uses radar pulses to image the subsurface. "@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "Ground Probing Radar"@en,
+        "GPR"@en,
+        "G.P.R."@en ;
+    skos:prefLabel "Ground Penetrating Radar"@en .
+
+obsmh:tem a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A geophysical exploration technique in which electric and magnetic fields are induced by transient pulses of electric current and the subsequent decay response measured."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "Time-domain electromagnetics"@en,
+        "TDEM"@en,
+        "T.D.E.M"@en,
+        "TEM"@en,
+        "T.E.M."@en ;
+    skos:prefLabel "Transient Electromagnetics"@en .
+
+obsmh:sam a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A Gap GeoPhysics proprietary survey technique which requires a geophysical transmitter to transmit a precisely controlled signal into either an inductive transmit loop or a grounded dipole in order to induce secondary fields in sub-surface conductors. "@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "SAM"@en,
+        "S.A.M."@en ;
+    skos:prefLabel "Sub-Audio Magnetics"@en .
+
+obsmh:mlem a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A non-destructive testing tool for mapping sub-surface changes in electrical conductivity. At a specified station, or sounding location, a transmitted EM field is generated by a transmitter coil to induce an electrical current in the subsurface. In a moving loop survey the transmitter and receiver are moved simultaneously along a survey line. The induced subsurface secondary field which is created by the induced subsurface electrical current is detected by the EM receiver. The MLEM equipment measures the conductivity value with time at the sounding location. Sources:Draig Geoscience & University of Queensland"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "MLEM"@en,
+        "M.L.E.M."@en ;
+    skos:prefLabel "Moving-Loop Electromagnetics"@en .
+
+obsmh:flem a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A non-destructive testing tool for mapping sub-surface changes in electrical conductivity. At a specified station, or sounding location, a transmitted EM field is generated by a transmitter coil to induce an electrical current in the subsurface. In a fixed-loop survey a large transmitter loop is placed in a fixed position and measurements are made along a survey line at a series of receiver positions. The induced subsurface secondary field which is created by the induced subsurface electrical current is detected by the EM receiver. The MLEM equipment measures the conductivity value with time at the sounding location. Sources:Draig Geoscience & University of Queensland"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "FLEM"@en,
+        "F.L.E.M."@en ;
+    skos:prefLabel "Fixed-Loop Electromagnetics"@en .
+
+obsmh:lpmt a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A magnetotelluric survey method that uses a low frequency (below 1-10Hz) electric signal over an extended period"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "LPMT"@en,
+        "L.P.M.T"@en,
+        "LMT"@en,
+        "L.M.T."@en ;
+    skos:prefLabel "Long Period Magnetotellurics"@en .
+
+obsmh:csem a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A low-impact, ground geophysical survey method transmitting a controlled electric signal at a suite of frequencies into the ground from one location (transmitter site) and measuring the received electric and magnetic fields in the area of interest (receiver site)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "Controlled source electromagnetics"@en,
+        "CSEM"@en,
+        "C.S.E.M"@en,
+        "Audio-frequency Magnetotellurics"@en,
+        "Controlled source audio-frequency Magnetotellurics"@en,
+        "CSMT"@en,
+        "C.S.M.T."@en,
+        "CSAMT"@en,
+        "C.S.A.M.T."@en ;
+    skos:prefLabel "Controlled source magnetotellurics"@en .
+
+obsmh:amt a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A higher-frequency magnetotelluric technique for shallower investigations. AMT has less depth penetration than MT but commonly take approximately one hour to perform whereas deep AMT measurements during low-signal strength periods may take up to 24 hours."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "AMT"@en,
+        "A.M.T"@en ;
+    skos:prefLabel "Audio-magnetotellurics"@en .
+
+obsmh:bbmt a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A magnetotellurics technique combining long-period and audio magentotelluric frequencies to create a broadband electrical signal."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "BBMT"@en,
+        "B.B.M.T"@en,
+        "Wide band magnetotellurics"@en,
+        "WBMT"@en,
+        "W.B.M.T."@en ;
+    skos:prefLabel "Broadband magnetotellurics"@en .
+
+obsmh:direct a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "An observation method whereby the observation is made directly by a human."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "Human Observed"@en ;
+    skos:prefLabel "Direct Observation"@en .
+
+obsmh:xrd a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A non-destructive technique for identifying and quantifying the mineralogy of crystalline compounds in rocks, soils and particulates. Monochromatic X-rays are projected onto a crystalline material at an angle (θ) and diffraction occurs when the distance traveled by the rays reflected from successive planes differs by an integer(n) of wavelengths (λ). Every mineral or compound has a characteristic X-ray diffraction pattern whose 'fingerprint'. Source:British Geological Survey"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "XRD"@en;
+    skos:prefLabel "X-ray diffraction"@en .
+
+obsmh:xrf a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "A non-destructive analytical technique used to determine the elemental composition of materials. XRF analyzers determine the chemistry of a sample by measuring the fluorescent (or secondary) X-ray emitted from a sample when it is excited by a primary X-ray source. Source:ThermoFisher Scientific"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "XRF"@en;
+    skos:prefLabel "X-ray fluorescence"@en .
+
+obsmh:active-spectral a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "Spectral methods that use their own source of energy to illuminate the objects they observe. An active sensor emits radiation in the direction of the target to be investigated."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Active Spectroscopy"@en .
+
+obsmh:lidar a skos:Concept ;
+    skos:broader obsmh:active-spectral ;
+    skos:definition "A method for measuring distances (ranging) by illuminating the target with laser light and measuring the reflection with a sensor.."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "LADAR"@en,
+        "Laser Ranging"@en,
+        "light detection and ranging"@en,
+        "laser imaging, detection, and ranging"@en,
+        "3-D laser scanning"@en ;
+    skos:prefLabel "LIDAR"@en .
+
+obsmh:radar a skos:Concept ;
+    skos:broader obsmh:active-spectral ;
+    skos:definition "An application of radar which is used to create two-dimensional images, typically of landscapes. Imaging radar provides its light to illuminate an area on the ground and take a picture at radio wavelengths. It uses an antenna and digital computer storage to record its images.."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "Radar Imaging"@en;
+    skos:prefLabel "Imaging Radar"@en .
+
+obsmh:sar a skos:Concept ;
+    skos:broader obsmh:radar ;
+    skos:definition "A form of radar that is used to create two-dimensional images or three-dimensional reconstructions of objects, such as landscapes.[1] SAR uses the motion of the radar antenna over a target region to provide finer spatial resolution than conventional beam-scanning radars."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "SAR"@en;
+    skos:prefLabel "Synthetic-Aperture Radar"@en .
+
+obsmh:laser-altimetry a skos:Concept ;
+    skos:broader obsmh:active-spectral ;
+    skos:definition "Laser altimetry is a group of active remote sensing techniques in which laser pulses are emitted and  are reflected from the ground surface; part of the reflected radiation returns to the sensor; then, the distance from the ground surface can be calculated considering the speed of light ."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "laser altimeter"@en ;
+    skos:prefLabel "Laser Altimetry"@en .
+
+obsmh:passive-spectral a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:definition "Spectral methods that detect natural energy (radiation) that is emitted or reflected by the object or scene being observed. Reflected sunlight is the most common source of radiation measured by passive sensors."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Passive Spectroscopy"@en .
+
+obsmh:radiometer a skos:Concept ;
+    skos:broader obsmh:passive-spectral ;
+    skos:definition "An instrument that quantitatively measures the intensity of electromagnetic radiation in some bands within the spectrum. Usually, a radiometer is further identified by the portion of the spectrum it covers; for example, visible, infrared, or microwave. Source:NASA EarthData"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Radiometry"@en .
+
+obsmh:imaging-radiometer a skos:Concept ;
+    skos:broader obsmh:radiometer ;
+    skos:definition "A radiometer that has a scanning capability to provide a two-dimensional array of pixels from which an image may be produced. Scanning can be performed mechanically or electronically by using an array of detectors. Source:NASA EarthData"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Imaging Radiometry"@en .
+
+obsmh:spectrometer a skos:Concept ;
+    skos:broader obsmh:passive-spectral ;
+    skos:definition "A device that is designed to detect, measure, and analyze the spectral content of incident electromagnetic radiation. Conventional imaging spectrometers use gratings or prisms to disperse the radiation for spectral discrimination. Source:NASA EarthData"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "Spectrometer"@en ;
+    skos:prefLabel "Spectrometry"@en .
+
+obsmh:spectroradiometer a skos:Concept ;
+    skos:broader obsmh:passive-spectral ;
+    skos:definition "A radiometer that measures the intensity of radiation in multiple wavelength bands (i.e., multispectral). Many times the bands are of high-spectral resolution, designed for remotely sensing specific geophysical parameters. Source:NASA EarthData"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:altLabel "Spectroradiometer"@en;
+    skos:prefLabel "Spectroradiometry"@en .
+
+obsmh:interferometer a skos:Concept ;
+    skos:broader obsmh:passive-spectral ;
+    skos:definition "A family of techniques in which waves, usually electromagnetic waves, are superimposed, causing the phenomenon of interference, which is used to extract information."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:prefLabel "Interferometry"@en .
+
+obsmh:seismic-methods a skos:Collection ;
+    skos:definition "The classification of tools used as an energy source that generate a seismic signal for use in seismic survey acquisition."@en ;
+    skos:member obsmh:accelerated-weight-drop,
+        obsmh:air-gun,
+        obsmh:boomer,
+        obsmh:dynamite,
+        obsmh:firearm,
+        obsmh:hammer,
+        obsmh:hydraulic-oil-impactor,
+        obsmh:noise-source,
+        obsmh:plasma-sound-source,
+        obsmh:vibroseis,
+        obsmh:wacker,
+        obsmh:water-gun,
+        obsmh:weight-drop ;
+    skos:prefLabel "Seismic Methods"@en .
+
+obsmh:electrical-methods a skos:Collection ;
+    skos:definition "The classification of methods used in electrical geophysical survey acquisition."@en ;
+    skos:member obsmh:ip,
+        obsmh:sp,
+        obsmh:ert,
+        obsmh:ves,
+        obsmh:dcr,
+        obsmh:cr ;
+    skos:prefLabel "Electrical Geophysical Methods"@en .
+
+obsmh:em-methods a skos:Collection ;
+    skos:definition "The classification of methods used in electromagnetic geophysical survey acquisition."@en ;
+    skos:member obsmh:gpr,
+        obsmh:tem,
+        obsmh:sam,
+        obsmh:mlem,
+        obsmh:flem ;
+    skos:prefLabel "Electromagnetic Geophysical Methods"@en .
+    
+obsmh:mt-methods a skos:Collection ;
+    skos:definition "The classification of methods used in magnetotelluric geophysical survey acquisition."@en ;
+    skos:member obsmh:lpmt,
+        obsmh:csem,
+        obsmh:amt,
+        obsmh:bbmt ;
+    skos:prefLabel "Magnetotelluric Methods"@en .
+
+obsmh:spectral-methods a skos:Collection ;
+    skos:definition "The classification of methods used in magnetotelluric geophysical survey acquisition."@en ;
+    skos:member obsmh:xrd,
+        obsmh:xrf,
+        obsmh:sar,
+        obsmh:lidar,
+        obsmh:radar,
+        obsmh:laser-altimeter,
+        obsmh:radiometer,
+        obsmh:imaging-radiometer,
+        obsmh:spectrometer,
+        obsmh:spectroradiometer,
+        obsmh:interferometer ;
+    skos:prefLabel "Spectral Methods"@en .
