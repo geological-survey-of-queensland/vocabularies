@@ -58,6 +58,7 @@ Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/voca
 7. **Publication of the vocab** to production VocPrez will be automated from here onwards
   - You should see the vocab in https://vocabs.gsq.digital/vocabulary/ within hours of approval and merger
   - If testing of the vocab in VocPrez is required, the test instance will be used: https://test.vocabs.gsq.digital/vocabulary/
+  - During UAT the vocabularies rendered in the test systems will be derived from files presented in https://vocabs.uat.gsq.digital/vocabulary
 
 ### Creation Workflow
 The steps outlined above are shown in workflow form at the [Vocabulary Review Workflow wiki page](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Vocabulary-Review-Workflow)
