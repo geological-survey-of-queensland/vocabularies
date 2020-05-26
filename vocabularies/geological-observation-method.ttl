@@ -312,14 +312,14 @@ obsmh:direct a skos:Concept ;
     skos:prefLabel "Direct Observation"@en .
 
 obsmh:xrd a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:broader obsmh:active-spectral  ;
     skos:definition "A non-destructive technique for identifying and quantifying the mineralogy of crystalline compounds in rocks, soils and particulates. Monochromatic X-rays are projected onto a crystalline material at an angle (θ) and diffraction occurs when the distance traveled by the rays reflected from successive planes differs by an integer(n) of wavelengths (λ). Every mineral or compound has a characteristic X-ray diffraction pattern whose 'fingerprint'. Source:British Geological Survey"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
     skos:altLabel "XRD"@en;
     skos:prefLabel "X-ray diffraction"@en .
 
 obsmh:xrf a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
+    skos:broader obsmh:active-spectral ;
     skos:definition "A non-destructive analytical technique used to determine the elemental composition of materials. XRF analyzers determine the chemistry of a sample by measuring the fluorescent (or secondary) X-ray emitted from a sample when it is excited by a primary X-ray source. Source:ThermoFisher Scientific"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
     skos:altLabel "XRF"@en;
@@ -332,7 +332,7 @@ obsmh:active-spectral a skos:Concept ;
     skos:prefLabel "Active Spectroscopy"@en .
 
 obsmh:lidar a skos:Concept ;
-    skos:broader obsmh:active-spectral ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
     skos:definition "A method for measuring distances (ranging) by illuminating the target with laser light and measuring the reflection with a sensor.."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
     skos:altLabel "LADAR"@en,
@@ -343,7 +343,7 @@ obsmh:lidar a skos:Concept ;
     skos:prefLabel "LIDAR"@en .
 
 obsmh:radar a skos:Concept ;
-    skos:broader obsmh:active-spectral ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
     skos:definition "An application of radar which is used to create two-dimensional images, typically of landscapes. Imaging radar provides its light to illuminate an area on the ground and take a picture at radio wavelengths. It uses an antenna and digital computer storage to record its images.."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
     skos:altLabel "Radar Imaging"@en;
@@ -357,7 +357,7 @@ obsmh:sar a skos:Concept ;
     skos:prefLabel "Synthetic-Aperture Radar"@en .
 
 obsmh:laser-altimetry a skos:Concept ;
-    skos:broader obsmh:active-spectral ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-method> ;
     skos:definition "Laser altimetry is a group of active remote sensing techniques in which laser pulses are emitted and  are reflected from the ground surface; part of the reflected radiation returns to the sensor; then, the distance from the ground surface can be calculated considering the speed of light ."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-method> ;
     skos:altLabel "laser altimeter"@en ;
@@ -449,13 +449,17 @@ obsmh:spectral-methods a skos:Collection ;
     skos:definition "The classification of methods used in spectral survey acquisition."@en ;
     skos:member obsmh:xrd,
         obsmh:xrf,
-        obsmh:sar,
-        obsmh:lidar,
-        obsmh:radar,
-        obsmh:laser-altimeter,
         obsmh:radiometer,
         obsmh:imaging-radiometer,
         obsmh:spectrometer,
         obsmh:spectroradiometer,
         obsmh:interferometer ;
     skos:prefLabel "Spectral Methods"@en .
+
+obsmh:spatial-methods a skos:Collection ;
+    skos:definition "The classification of methods used in spatial survey acquisition."@en ;
+    skos:member obsmh:sar,
+        obsmh:lidar,
+        obsmh:radar,
+        obsmh:laser-altimeter,
+    skos:prefLabel "Spatial Methods"@en .
