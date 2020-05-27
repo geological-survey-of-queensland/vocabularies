@@ -106,12 +106,11 @@ spmt:digital a skos:Concept ;
     skos:prefLabel "Digital"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
 
-spmt:drilling-fluid a skos:Concept ;
-    skos:broader spmt:fluid ;
-    skos:definition "Fluid used for drill bit lubrication and return of ground rock material from the drill bit, e.g. mud."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/drilling_fluid> ;
+spmt:aerated-mud a skos:Concept ;
+    skos:broader spmt:mud ;
+    skos:definition "Fluid consisting of a mud whose density has been decreased by the process of aeration. Typically used as a drilling fluid."@en ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Drilling Fluid"@en .
+    skos:prefLabel "Aerated Mud"@en .
 
 spmt:estuarine-water a skos:Concept ;
     skos:broader spmt:water ;
@@ -349,3 +348,13 @@ spmt:fluid a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Fluid"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
+
+spmt:drilling-fluid a skos:Collection ;
+    skos:definition "Fluid used for drill bit lubrication and return of ground rock material from the drill bit, e.g. mud."@en ;
+    skos:member spmt:mud,
+        spmt:water,
+        spmt:aerated-mud,
+        spmt:foam,
+        spmt:mist,
+        spmt:air ;
+    skos:prefLabel "Drilling Fluid"@en .
