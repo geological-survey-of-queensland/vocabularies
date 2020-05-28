@@ -36,19 +36,35 @@ stdt:drill-result a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
 
 stdt:locality a skos:Concept ;
-    skos:definition "Approximate location with respect to a nearby topographic feature, be it a homestead, crossroads, town or city."@en ;
+    skos:definition "Approximate location with respect to a nearby landmark or feature, be it a homestead, crossroads, town or city."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
     skos:prefLabel "Locality"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
 
 stdt:location-accuracy a skos:Concept ;
     skos:definition "The accuracy or uncertainty range for stated location i.e. the distance from which the stated location may diverge from the actual location."@en ;
+    skos:scopeNote "May be a spatial, rather than a site attribute in a future release."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
     skos:prefLabel "Location Accuracy"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
 
 stdt:location-method a skos:Concept ;
     skos:definition "The survey or activity method that was used to locate the site."@en ;
+    skos:scopeNote "May be a spatial, rather than a site attribute in a future release."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
     skos:prefLabel "Location Method"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
+
+stdt:extent-of-workings a skos:Concept ; 
+    skos:definition "The approximate spatial extent (length, width, and height) of mine works or diggings that exist at a site. "@en ; 
+    skos:scopeNote "May be an observation of a site, rather than a site attribute in future release."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ; 
+    skos:prefLabel "Extent of workings"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
+
+stdt:original-merlin-crs a skos:Concept ; 
+    skos:definition "The original CRS of location information in MERLIN that was converted to GDA94 in 2005."@en ; 
+    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ; 
+    skos:prefLabel "Original MERLIN CRS"@en ; 
+    skos:scopeNote "For use in data migration only."@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
