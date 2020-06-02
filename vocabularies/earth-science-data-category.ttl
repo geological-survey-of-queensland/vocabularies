@@ -14,7 +14,7 @@
         skos:ConceptScheme ;
     dct:created "2019-09-06"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-06-02"^^xsd:date ;
+    dct:modified "2020-06-03"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Modified from the Fields of Research vocabulary from the Australian and New Zealand Standard Research Classification (ANZSRC). Relevant earth science categories have been extracted and augmented with narrower terms relevant for industry and research institutions." ;
     skos:definition "A classification that facilitates identification of the Fields of Research, or topics, to which a dataset, activity, or entity pertain."@en ;
@@ -420,30 +420,6 @@ esdc:gravity-gradiometry a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Gravity Gradiometry"@en .
 
-esdc:spectral-imaging a skos:Concept ;
-    skos:broader esdc:geophysics ;
-    skos:definition "Spectral imaging is imaging that uses multiple bands across the electromagnetic spectrum."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Spectral Imaging"@en .
-    
-esdc:airborne-spectral a skos:Concept ;
-    skos:broader esdc:spectral-imaging ;
-    skos:definition "Remotely sensed spectral imaging obtained from an airborne platform."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Airborne Spectral"@en .
-	
-esdc:core-spectral a skos:Concept ;
-    skos:broader esdc:spectral-imaging ;
-    skos:definition "Spectral imaging (typically hyperspectral) of rock samples such as core."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Core Spectral"@en .
-
-esdc:satellite-spectral a skos:Concept ;
-    skos:broader esdc:spectral-imaging ;
-    skos:definition "Remotely sensed spectral imaging obtained from a platform in orbit outside the atmosphere of Earth."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Satellite Spectral"@en .
-
 esdc:petrophysics a skos:Concept ;
     skos:broader esdc:geophysics ;
     skos:definition "Petrophysics is the study of physical and chemical rock properties and their interactions with fluids. A major application of petrophysics is in studying reservoirs for the hydrocarbon industry. Source: Wikipedia"@en ;
@@ -580,10 +556,45 @@ esdc:geomatic-engineering a skos:Concept ;
     skos:notation "0909" ;
     skos:prefLabel "Geomatic Engineering"@en .
 
+esdc:remote-sensing a skos:Concept ;
+    skos:broader esdc:geomatic-engineering ;
+    skos:definition " the art, science, and technology of obtaining reliable information from noncontact imaging and other sensor systems about the Earth and its environment, and other physical objects and of processes through
+recording, measuring, analyzing and representation. Source:International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Volume XXXIX-B6, 2012
+XXII ISPRS Congress, 25 August – 01 September 2012, Melbourne, Australia."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/090905> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "090905" ;
+    skos:altLabel "Photogrammetry and Remote Sensing"@en ;
+    skos:prefLabel "Remote Sensing"@en .
+
+esdc:spectral-imaging a skos:Concept ;
+    skos:broader esdc:remote-sensing ;
+    skos:definition "Spectral imaging is imaging that uses multiple bands across the electromagnetic spectrum."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Spectral Imaging"@en .
+    
+esdc:airborne-spectral a skos:Concept ;
+    skos:broader esdc:spectral-imaging ;
+    skos:definition "Remotely sensed spectral imaging obtained from an airborne platform."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Airborne Spectral"@en .
+	
+esdc:core-spectral a skos:Concept ;
+    skos:broader esdc:spectral-imaging ;
+    skos:definition "Spectral imaging (typically hyperspectral) of rock samples such as core."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Core Spectral"@en .
+
+esdc:satellite-spectral a skos:Concept ;
+    skos:broader esdc:spectral-imaging ;
+    skos:definition "Remotely sensed spectral imaging obtained from a platform in orbit outside the atmosphere of Earth."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Satellite Spectral"@en .
+
 esdc:surveying a skos:Concept ;
     skos:broader esdc:geomatic-engineering ;
     skos:definition "The science of determining the terrestrial or three-dimensional positions of points and the distances and angles between them. Source:Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0909> ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/090906> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "090906" ;
     skos:altLabel "Surveying (incl. Hydrographic Surveying)"@en ;
@@ -642,11 +653,12 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:passive-seismic,
         esdc:gravity,
         esdc:gravity-gradiometry,
-        esdc:airborne-spectral,
-        esdc:core-spectral,
-        esdc:satellite-spectral,
         esdc:petrophysics,
         esdc:environmental-sciences,
         esdc:engineering,
+        esdc:remote-sensing,
+        esdc:airborne-spectral,
+        esdc:core-spectral,
+        esdc:satellite-spectral,
         esdc:surveying ;
     skos:prefLabel "Lodgement form selection"@en .
