@@ -369,6 +369,21 @@ esdc:geothermal-energy a skos:Concept ;
     skos:altLabel "Geothermal"@en ;
     skos:prefLabel "Geothermal Energy"@en .
 
+esdc:gravity a skos:Concept ;
+    skos:broader esdc:geophysics ;
+    skos:definition "A versatile geophysical technique used to detect and identify subsurface bodies and anomalies within the Earth. It is based on the density changes of rock bodies and their effect on the acceleration of gravity. Source: SEG wiki"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040405> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040405" ;
+    skos:altLabel "Gravimetrics"@en ;
+    skos:prefLabel "Gravity"@en .
+
+esdc:gravity-gradiometry a skos:Concept ;
+    skos:broader esdc:gravity ;
+    skos:definition "The study and measurement of variations in the acceleration due to gravity. The gravity gradient is the spatial rate of change of gravitational acceleration. Source: Wikipedia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Gravity Gradiometry"@en .
+
 esdc:magnetics a skos:Concept ;
     skos:broader esdc:geophysics ;
     skos:definition "Magnetic surveys are a geophysical method to image anomalies in the magnetic field of the earth caused by source bodies within the sub-surface. Source: SEG wiki"@en ;
@@ -404,21 +419,6 @@ esdc:geophysics-not-elsewhere-classified a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040499" ;
     skos:prefLabel "Geophysics Not Elsewhere Classified"@en .
-
-esdc:gravity a skos:Concept ;
-    skos:broader esdc:geophysics ;
-    skos:definition "A versatile geophysical technique used to detect and identify subsurface bodies and anomalies within the Earth. It is based on the density changes of rock bodies and their effect on the acceleration of gravity. Source: SEG wiki"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040405> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040405" ;
-    skos:altLabel "Gravimetrics"@en ;
-    skos:prefLabel "Gravity"@en .
-
-esdc:gravity-gradiometry a skos:Concept ;
-    skos:broader esdc:gravity ;
-    skos:definition "The study and measurement of variations in the acceleration due to gravity. The gravity gradient is the spatial rate of change of gravitational acceleration. Source: Wikipedia"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Gravity Gradiometry"@en .
 
 esdc:petrophysics a skos:Concept ;
     skos:broader esdc:geophysics ;
@@ -600,14 +600,33 @@ esdc:surveying a skos:Concept ;
     skos:altLabel "Surveying (incl. Hydrographic Surveying)"@en ;
     skos:prefLabel "Surveying"@en .
 
-esdc:geomechanics-and-resources-geotechnical-engineering a skos:Concept ;
+esdc:resources-engineering a skos:Concept ;
     skos:broader esdc:engineering ;
+    skos:definition "Engineering that applies various branches of science in order to create new technology that aims to protect, maintain, extract, and establish sustainable natural resources. Source:Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0914> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "0914" ;
+    skos:altLabel "RESOURCES ENGINEERING AND EXTRACTIVE METALLURGY"@en,
+            "Natural Resources Engineering"@en ;
+    skos:prefLabel "Resources Engineering"@en .
+
+esdc:geomechanics-and-resources-geotechnical-engineering a skos:Concept ;
+    skos:broader esdc:resources-engineeringg ;
     skos:definition "The application of scientific methods and engineering principles to the acquisition, interpretation, and use of knowledge of materials of the Earth's crust and earth materials for the solution of engineering problems and the design of engineering works. Source:Wikipedia"@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/091402> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "091402" ;
     skos:altLabel "Geomechanics and Resources Geotechnical Engineering"@en ;
     skos:prefLabel "Geomechanics"@en .
+
+esdc:reservoir-engineering a skos:Concept ;
+    skos:broader esdc:resources-engineeringg ;
+    skos:definition "The application and study of scientific principles to the fluid flow through porous medium during the development and production of oil and gas reservoirs so as to obtain a high economic recovery.  Source:Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/091406> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "091406" ;
+    skos:altLabel "Reservoir Engineering"@en ;
+    skos:prefLabel "Petroleum and Reservoir Engineering"@en 
 
 esdc:demography a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
@@ -656,7 +675,7 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:petrophysics,
         esdc:environmental-sciences,
         esdc:engineering,
-        esdc:remote-sensing,
+	esdc:remote-sensing,
         esdc:airborne-spectral,
         esdc:core-spectral,
         esdc:satellite-spectral,
