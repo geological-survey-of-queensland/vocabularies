@@ -10,10 +10,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/earth-science-data-category> a owl:Ontology , skos:ConceptScheme ;
+<http://linked.data.gov.au/def/earth-science-data-category> a owl:Ontology ,
+        skos:ConceptScheme ;
     dct:created "2019-09-06"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-05-14"^^xsd:date ;
+    dct:modified "2020-06-02"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Modified from the Fields of Research vocabulary from the Australian and New Zealand Standard Research Classification (ANZSRC). Relevant earth science categories have been extracted and augmented with narrower terms relevant for industry and research institutions." ;
     skos:definition "A classification that facilitates identification of the Fields of Research, or topics, to which a dataset, activity, or entity pertain."@en ;
@@ -23,97 +24,300 @@
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" .
 
-esdc:atmospheric-sciences a skos:Concept ;
+esdc:earth-sciences a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:definition "Earth science or geoscience includes all fields of natural science related to the planet Earth."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/04> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "04" ;
+    skos:altLabel "Geoscience"@en ;
+    skos:prefLabel "Earth Sciences"@en .
+
+esdc:atmospheric-sciences a skos:Concept ;
+    skos:broader esdc:earth-sciences ;
     skos:definition "The study of the Earth's atmosphere and its various inner-working physical processes."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0401> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "0401" ;
     skos:prefLabel "Atmospheric Sciences"@en .
 
-esdc:biological-sciences a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:definition "The natural science that studies life and living organisms, including their physical structure, chemical processes, molecular interactions, physiological mechanisms, development and evolution."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/06> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "06" ;
-    skos:prefLabel "Biological Sciences"@en .
-
-esdc:demography a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:definition "The statistical study of populations, especially human beings."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/1603> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "1603" ;
-    skos:prefLabel "Demography"@en .
-
-esdc:engineering a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:definition "The use of scientific principles to design and build machines, structures, and other items, including bridges, tunnels, roads, vehicles, and buildings."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/09> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "09" ;
-    skos:prefLabel "Engineering"@en .
-
-esdc:environmental-sciences a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:definition "an interdisciplinary academic field that integrates physical, biological and information sciences to the study of the environment, and the solution of environmental problems."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/05> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "05" ;
-    skos:prefLabel "Environmental Sciences"@en .
-
-esdc:physical-geography a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:definition "The branch of geography dealing with natural features. Source: dictionary.com"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0406> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "0406" ;
-    skos:prefLabel "Physical Geography"@en .
-
 esdc:geochemistry a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:broader esdc:earth-sciences ;
     skos:definition "The study of the chemistry of the Earth and within solid bodies of the solar system, including the distribution, circulation and abundance of elements (and their ions and isotopes), molecules, minerals, rocks and fluids. Source Schulmberger Oilfield Glossary"@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0402> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "0402" ;
     skos:prefLabel "Geochemistry"@en .
 
-esdc:geophysics a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:definition "The study of the physics of the Earth, especially its electrical, gravitational and magnetic fields and propagation of elastic (seismic) waves within it. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0404> ;
+esdc:inorganic-geochemistry a skos:Concept ;
+    skos:broader esdc:geochemistry ;
+    skos:definition "The study of the chemistry of inorganic rocks, minerals, and other earth materials that are not currently or once living."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040202> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "0404" ;
-    skos:prefLabel "Geophysics"@en .
+    skos:notation "040202" ;
+    skos:prefLabel "Inorganic Geochemistry"@en .
+
+esdc:organic-geochemistry a skos:Concept ;
+    skos:broader esdc:geochemistry ;
+    skos:definition "The study of the role of processes and compounds that are derived from living or once-living organisms. Source: Killops, Stephen D.; Killops, Vanessa J. (2013). Introduction to Organic Geochemistry. John Wiley & Sons."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040204> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040204" ;
+    skos:prefLabel "Organic Geochemistry"@en .
+
+esdc:isotope-geochemistry a skos:Concept ;
+    skos:broader esdc:geochemistry ;
+    skos:definition "The determination of the relative and absolute concentrations of the elements and their isotopes in the Earth and on Earth's surface. Source: Kendall, Carol; Caldwell, Eric A. (1998). 'Chapter 2: Fundamentals of Isotope Geochemistry'. In Kendall, C.; McDonnell, J. J. (eds.). Isotope Tracers in Catchment Hydrology. Amsterdam: Elsevier Science. pp. 51-86."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040203> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040203" ;
+    skos:prefLabel "Isotope Geochemistry"@en .
+
+esdc:extract-geochemistry a skos:Concept ;
+    skos:broader esdc:geochemistry ;
+    skos:definition "Analysis of the chemical and physical properties of products extracted from rocks in the subsurface."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Extract Geochemistry"@en .
+
+esdc:hydrogeochemistry a skos:Concept ;
+    skos:broader esdc:geochemistry ;
+    skos:definition "The science that uses the tools and principles of chemistry to explain the mechanisms behind major geological systems such as the Earth's crust and its oceans."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Hydrogeochemistry"@en .	
+
+esdc:geochemistry-not-elsewhere-classified a skos:Concept ;
+    skos:broader esdc:geochemistry ;
+    skos:definition "Geochemical data and information not otherwise described by other sub-categories of geochemistry."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040299> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040299" ;
+    skos:prefLabel "Geochemistry Not Elsewhere Classified"@en .
 
 esdc:geology a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:broader esdc:earth-sciences ;
     skos:definition "An earth science concerned with the solid Earth, the rocks of which it is composed, and the processes by which they change over time. Geology can also include the study of the solid features of any terrestrial planet or natural satellite such as Mars or the Moon. Modern geology significantly overlaps all other earth sciences, including hydrology and the atmospheric sciences, and so is treated as one major aspect of integrated earth system science and planetary science. Source: Wikipedia"@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0403> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "0403" ;
     skos:prefLabel "Geology"@en .
 
-esdc:airborne-spectral a skos:Concept ;
-    skos:broader esdc:spectral-imaging ;
-    skos:definition "Remotely sensed spectral imaging obtained from an airborne platform."@en ;
+esdc:basin-analysis a skos:Concept ;
+    skos:altLabel "sedimentary basin analysis"@en ;
+    skos:broader esdc:geology ;
+    skos:definition "a geologic method by which the history of a sedimentary basin is revealed, by analyzing the sediment fill itself. Aspects of the sediment, namely its composition, primary structures, and internal architecture, can be synthesized into a history of the basin fill. Source:Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040301> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Airborne Spectral"@en .
-	
-esdc:core-spectral a skos:Concept ;
-    skos:broader esdc:spectral-imaging ;
-    skos:definition "Spectral imaging (typically hyperspectral) of rock samples such as core."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Core Spectral"@en .
+    skos:notation "040301" ;
+    skos:prefLabel "Basin Analysis"@en .
 
-esdc:ecology a skos:Concept ;
-    skos:broader esdc:biological-sciences ;
-    skos:definition "A branch of biology concerning interactions among organisms and their biophysical environment, which includes both biotic and abiotic components."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0602> ;
+esdc:extraterrestrial-geology a skos:Concept ;
+    skos:altLabel "astrogeology"@en,
+        "exogeology"@en,
+        "planetary geology"@en ;
+    skos:broader esdc:geology ;
+    skos:definition "A planetary science discipline concerned with the geology of the celestial bodies such as the planets and their moons, asteroids, comets, and meteorites. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040302> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "0602" ;
-    skos:prefLabel "Ecology"@en .
+    skos:notation "040302" ;
+    skos:prefLabel "Extraterrestrial Geology"@en .
+
+esdc:geochronology a skos:Concept ;
+    skos:broader esdc:geology ;
+    skos:definition "The study of the relative or absolute age of rocks, minerals and fossils. Absolute age is the measurement of age in years, but 'absolute' ages typically have some amount of error and are inexact. Relative age, in contrast, is the approximate age of rocks, fossils or minerals made by determining the age of the material relative to other surrounding material. Source: Schlumberger Oilfield Glossary"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040303> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040303" ;
+    skos:prefLabel "Geochronology"@en .
+
+esdc:petrology a skos:Concept ;
+    skos:broader esdc:geology ;
+    skos:definition "The branch of geology that studies rocks and the conditions under which they form. Sometimes synonymous with lithology that studies the macroscopic hand-sample or outcrop-scale description of rocks. Source: Wikipedia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Petrology"@en .
+
+esdc:igneous-and-metamorphic-petrology a skos:Concept ;
+    skos:broader esdc:petrology ;
+    skos:definition "The branch of petrology that describes the composition and texture of igneous and metamorphic rocks. Igneous and metamorphic petrology are commonly categorized together because they both contain heavy use of chemistry, chemical methods, and phase diagrams. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040304> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040304" ;
+    skos:prefLabel "Igneous and Metamorphic Petrology"@en .
+
+esdc:organic-petrology a skos:Concept ;
+    skos:broader esdc:petrology ;
+    skos:definition "Organic petrology involves the study of organic matter (OM) in rocks including its origin and thermal maturity due to burial within the earth's crust. Source: CSIRO"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Organic Petrology"@en .
+
+esdc:sedimentary-petrology a skos:Concept ;
+    skos:broader esdc:petrology ;
+    skos:definition "The study of the composition, characteristics, and origin of sediments and sedimentary rocks. Source: AGI"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Sedimentary Petrology"@en .
+
+esdc:marine-geoscience a skos:Concept ;
+    skos:altLabel "geological oceanography"@en,
+        "marine geology"@en ;
+    skos:broader esdc:geology ;
+    skos:definition "The study of the history and structure of the ocean floor. It involves geophysical, geochemical, sedimentological and paleontological investigations of the ocean floor and coastal zone. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040305> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040305" ;
+    skos:prefLabel "Marine Geoscience"@en .
+
+esdc:mineralogy-and-crystallography a skos:Concept ;
+    skos:broader esdc:geology ;
+    skos:definition "The scientific study of the chemistry, crystal structure, and physical (including optical) properties of minerals and mineralized artifacts. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040306> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040306" ;
+    skos:prefLabel "Mineralogy and Crystallography"@en .
+
+esdc:palaeontology a skos:Concept ;
+    skos:broader esdc:geology ;
+    skos:definition "The study of fossilized, or preserved, remnants of plant and animal life. Changes in the Earth through time can be documented by observing changes in the fossils in successive strata and the environments in which they formed or were preserved. Fossils can also be compared with their extant relatives to assess evolutionary changes. Correlations of strata can be aided by studying their fossil content, a discipline called biostratigraphy. Source: Schlumberger Oilfield Glossary"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040308> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040308" ;
+    skos:prefLabel "Palaeontology"@en .
+
+esdc:ichnology a skos:Concept ;
+    skos:broader esdc:palaeontology ;
+    skos:definition "The branch of paleontology concerned with the study of fossilized tracks, trails, burrows, borings, or other trace fossils as evidence of the occurrence or behavior of the organisms that produced them. Source: dictionary.com"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Ichnology"@en .
+	
+esdc:invertebrate-palaeontology a skos:Concept ;
+    skos:broader esdc:palaeontology ;
+    skos:definition "Invertebrate paleontology deals with invertebrate fossils such as molluscs, arthropods, annelid worms and echinoderms. Source: Wikipedia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Invertebrate Palaeontology"@en .
+
+esdc:palaeobotany a skos:Concept ;
+    skos:broader esdc:palaeontology ;
+    skos:definition "Paleobotany studies fossil plants, algae, and fungi. Source: Wikipedia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Palaeobotany"@en .
+
+esdc:palynology a skos:Concept ;
+    skos:broader esdc:palaeontology ;
+    skos:definition "Palynology, the study of pollen and spores produced by land plants and protists, straddles paleontology and botany, as it deals with both living and fossil organisms. Source: Wikipedia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Palynology"@en .
+	
+esdc:vertebrate-palaeontology a skos:Concept ;
+    skos:broader esdc:palaeontology ;
+    skos:definition "Vertebrate paleontology concentrates on fossils from the earliest fish to the immediate ancestors of modern mammals. Source: Wikipedia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Vertebrate Palaeontology"@en .
+
+esdc:petroleum-and-coal-geology a skos:Concept ;
+    skos:altLabel "fossil fuel geology"@en,
+        "fossil-fuel geology"@en,
+        "petroleum and coal geology"@en ;
+    skos:broader esdc:geology ;
+    skos:definition "The branch of geology that studies the processes of fossil fuel formation (coal, oil and gas)."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040309> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040309" ;
+    skos:prefLabel "Petroleum and Coal Geology"@en .
+
+esdc:reservoir-geology a skos:Concept ;
+    skos:broader esdc:petroleum-and-coal-geology ;
+    skos:definition "The study of subsurface rock formations that contain hydrocarbon accumulations. In particular quantification of reservoir properities such as porosity, permeability, fluid saturations, and fluid contacts."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Reservoir Geology"@en .
+
+esdc:sedimentology a skos:Concept ;
+    skos:broader esdc:geology ;
+    skos:definition "The scientific study of sedimentary rocks and of the processes by which they were formed; the description, classification, origin, and interpretation of sediments. Source: AGI"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040310> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040310" ;
+    skos:prefLabel "Sedimentology"@en .
+
+esdc:stratigraphy a skos:Concept ;
+    skos:broader esdc:geology ;
+    skos:definition "The study of the history, composition, relative ages and distribution of strata, and the interpretation of strata to elucidate Earth history. The comparison, or correlation, of separated strata can include study of their lithology, fossil content, and relative or absolute age, or lithostratigraphy, biostratigraphy, and chronostratigraphy. Source: Schlumberger Oilfield Glossary"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040311> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040311" ;
+    skos:prefLabel "Stratigraphy"@en .
+
+esdc:structural-geology a skos:Concept ;
+    skos:broader esdc:geology ;
+    skos:definition "Pertaining to structure, the geometry and spatial arrangement of rocks. The structure or deformation can include many mechanisms, such as folding, faulting and fracturing. Structure can usually be interpreted in terms of the deformation of the crust of the Earth as continents and tectonic plates move and collide. Source: Schlumberger Oilfield Glossary"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040312> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040312" ;
+    skos:prefLabel "Structural Geology"@en .
+
+esdc:tectonics a skos:Concept ;
+    skos:altLabel "plate tectonics"@en ;
+    skos:broader esdc:geology ;
+    skos:definition "Also known as plate tectonics, the unifying geologic theory developed to explain observations that interactions of the brittle plates of the lithosphere with each other and with the softer underlying asthenosphere result in large-scale changes in the Earth. Source: Schlumberger Oilfield Glossary"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040313> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040313" ;
+    skos:prefLabel "Tectonics"@en .
+
+esdc:volcanology a skos:Concept ;
+    skos:altLabel "vulcanology"@en ;
+    skos:broader esdc:geology ;
+    skos:definition "The study of volcanoes, lava, magma, and related geological, geophysical and geochemical phenomena. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040314> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040314" ;
+    skos:prefLabel "Volcanology"@en .
+
+esdc:resource-geology a skos:Concept ;
+    skos:broader esdc:geology ;
+    skos:definition "The study of geology in the context of economic development and the quantification of resource potential of accumulations such as hydrocarbons, mineral ore bodies, and coal deposits."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Resource Geology"@en .
+
+esdc:hydrocarbon-occurrences a skos:Concept ;
+    skos:broader esdc:resource-geology ;
+    skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (i.e. plays and prospects), and limitations to development of hydrocarbon accumulations."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Hydrocarbon Occurrences"@en .
+
+esdc:mineral-occurrences a skos:Concept ;
+    skos:broader esdc:resource-geology ;
+    skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (e.g. ore body charictarization), and limitations to development of mineral occurences."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Mineral Occurrences"@en .
+
+esdc:quarry-resources a skos:Concept ;
+    skos:altLabel "Quarries, Sand, and Gravel Resources"@en ;
+    skos:broader esdc:resource-geology ;
+    skos:definition "The quantification of the physical properties, chemical properties, volumes, and limitations to development of quarry product accumulations. Quarry resources include, but may not be limited to, hardrock, sand and gravel."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Quarry Resources"@en .
+
+esdc:geology-not-elsewhere-classified a skos:Concept ;
+    skos:broader esdc:geology ;
+    skos:definition "Geological data and information not otherwise described by other sub-categories of geochemistry."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040399> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040399" ;
+    skos:prefLabel "Geology Not Elsewhere Classified"@en .
+
+esdc:geophysics a skos:Concept ;
+    skos:broader esdc:earth-sciences ;
+    skos:definition "The study of the physics of the Earth, especially its electrical, gravitational and magnetic fields and propagation of elastic (seismic) waves within it. Source: Schlumberger Oilfield Glossary"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0404> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "0404" ;
+    skos:prefLabel "Geophysics"@en .
+
+esdc:electrical-and-electromagnetic-methods-in-geophysics a skos:Concept ;
+    skos:broader esdc:geophysics ;
+    skos:definition "Geophysical methods based on electrical and electromagnetic phenomena that respond to the electrical properties of the subsurface. Source: Cambridge.org"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040401> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040401" ;
+    skos:prefLabel "Electrical and Electromagnetic Methods in Geophysics"@en .
 
 esdc:electrical-geophysics a skos:Concept ;
     skos:broader esdc:electrical-and-electromagnetic-methods-in-geophysics ;
@@ -133,135 +337,6 @@ esdc:magnetotellurics a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Magnetotellurics"@en .
 
-esdc:geomechanics a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "The geologic specialty that deals with understanding how rocks, stresses, pressures, and temperatures interact. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Geomechanics"@en .
-
-esdc:hydrocarbon-occurrences a skos:Concept ;
-    skos:broader esdc:resource-geology ;
-    skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (i.e. plays and prospects), and limitations to development of hydrocarbon accumulations."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Hydrocarbon Occurrences"@en .
-
-esdc:ichnology a skos:Concept ;
-    skos:broader esdc:palaeontology ;
-    skos:definition "The branch of paleontology concerned with the study of fossilized tracks, trails, burrows, borings, or other trace fossils as evidence of the occurrence or behavior of the organisms that produced them. Source: dictionary.com"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Ichnology"@en .
-	
-esdc:invertebrate-palaeontology a skos:Concept ;
-    skos:broader esdc:palaeontology ;
-    skos:definition "Invertebrate paleontology deals with invertebrate fossils such as molluscs, arthropods, annelid worms and echinoderms. Source: Wikipedia"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Invertebrate Palaeontology"@en .
-
-esdc:mineral-occurrences a skos:Concept ;
-    skos:broader esdc:resource-geology ;
-    skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (e.g. ore body charictarization), and limitations to development of mineral occurences."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Mineral Occurrences"@en .
-
-esdc:palaeobotany a skos:Concept ;
-    skos:broader esdc:palaeontology ;
-    skos:definition "Paleobotany studies fossil plants, algae, and fungi. Source: Wikipedia"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Palaeobotany"@en .
-
-esdc:palynology a skos:Concept ;
-    skos:broader esdc:palaeontology ;
-    skos:definition "Palynology, the study of pollen and spores produced by land plants and protists, straddles paleontology and botany, as it deals with both living and fossil organisms. Source: Wikipedia"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Palynology"@en .
-
-esdc:passive-seismic a skos:Concept ;
-    skos:broader esdc:seismic-surveys ;
-    skos:definition "The detection of natural low frequency earth movements, commonly with the purpose of discerning geological structures and locating underground oil, gas, or other resources. Source: Wikipedia"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Passive Seismic"@en .
-
-esdc:quarry-resources a skos:Concept ;
-    skos:altLabel "Quarries, Sand, and Gravel Resources"@en ;
-    skos:broader esdc:resource-geology ;
-    skos:definition "The quantification of the physical properties, chemical properties, volumes, and limitations to development of quarry product accumulations. Quarry resources include, but may not be limited to, hardrock, sand and gravel."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Quarry Resources"@en .
-
-esdc:reservoir-geology a skos:Concept ;
-    skos:broader esdc:petroleum-and-coal-geology ;
-    skos:definition "The study of subsurface rock formations that contain hydrocarbon accumulations. In particular quantification of reservoir properities such as porosity, permeability, fluid saturations, and fluid contacts."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Reservoir Geology"@en .
-
-esdc:satellite-spectral a skos:Concept ;
-    skos:broader esdc:spectral-imaging ;
-    skos:definition "Remotely sensed spectral imaging obtained from a platform in orbit outside the atmosphere of Earth."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Satellite Spectral"@en .
-
-esdc:sedimentary-petrology a skos:Concept ;
-    skos:broader esdc:petrology ;
-    skos:definition "The study of the composition, characteristics, and origin of sediments and sedimentary rocks. Source: AGI"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Sedimentary Petrology"@en .
-	
-esdc:vertebrate-palaeontology a skos:Concept ;
-    skos:broader esdc:palaeontology ;
-    skos:definition "Vertebrate paleontology concentrates on fossils from the earliest fish to the immediate ancestors of modern mammals. Source: Wikipedia"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Vertebrate Palaeontology"@en .
-
-esdc:basin-analysis a skos:Concept ;
-    skos:altLabel "sedimentary basin analysis"@en ;
-    skos:broader esdc:geology ;
-    skos:definition "a geologic method by which the history of a sedimentary basin is revealed, by analyzing the sediment fill itself. Aspects of the sediment, namely its composition, primary structures, and internal architecture, can be synthesized into a history of the basin fill. Source:Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040301> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040301" ;
-    skos:prefLabel "Basin Analysis"@en .
-
-esdc:environmental-engineering a skos:Concept ;
-    skos:broader esdc:engineering ;
-    skos:definition "A professional engineering discipline that takes from broad scientific topics like chemistry, biology, ecology, geology, hydraulics, hydrology, microbiology, and mathematics to create solutions that will protect and also improve the health of living organisms and improve the quality of the environment. Source:Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0907> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "0907" ;
-    skos:prefLabel "Environmental Engineering"@en .
-
-esdc:extract-geochemistry a skos:Concept ;
-    skos:broader esdc:geochemistry ;
-    skos:definition "Analysis of the chemical and physical properties of products extracted from rocks in the subsurface."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Extract Geochemistry"@en .
-
-esdc:extraterrestrial-geology a skos:Concept ;
-    skos:altLabel "astrogeology"@en,
-        "exogeology"@en,
-        "planetary geology"@en ;
-    skos:broader esdc:geology ;
-    skos:definition "A planetary science discipline concerned with the geology of the celestial bodies such as the planets and their moons, asteroids, comets, and meteorites. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040302> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040302" ;
-    skos:prefLabel "Extraterrestrial Geology"@en .
-
-esdc:geochemistry-not-elsewhere-classified a skos:Concept ;
-    skos:broader esdc:geochemistry ;
-    skos:definition "Geochemical data and information not otherwise described by other sub-categories of geochemistry."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040299> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040299" ;
-    skos:prefLabel "Geochemistry Not Elsewhere Classified"@en .
-
-esdc:geochronology a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "The study of the relative or absolute age of rocks, minerals and fossils. Absolute age is the measurement of age in years, but 'absolute' ages typically have some amount of error and are inexact. Relative age, in contrast, is the approximate age of rocks, fossils or minerals made by determining the age of the material relative to other surrounding material. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040303> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040303" ;
-    skos:prefLabel "Geochronology"@en .
-
 esdc:geodynamics a skos:Concept ;
     skos:broader esdc:geophysics ;
     skos:definition "A subfield of geophysics dealing with dynamics of the Earth. It applies physics, chemistry and mathematics to the understanding of how mantle convection leads to plate tectonics and geologic phenomena such as seafloor spreading, mountain building, volcanoes, earthquakes, faulting and so on. It also attempts to probe the internal activity by measuring magnetic fields, gravity, and seismic waves, as well as the mineralogy of rocks and their isotopic composition. Source: Wikipedia"@en ;
@@ -269,22 +344,6 @@ esdc:geodynamics a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040402" ;
     skos:prefLabel "Geodynamics"@en .
-
-esdc:geology-not-elsewhere-classified a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "Geological data and information not otherwise described by other sub-categories of geochemistry."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040399> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040399" ;
-    skos:prefLabel "Geology Not Elsewhere Classified"@en .
-
-esdc:geomorphology-and-regolith-and-landscape-evolution a skos:Concept ;
-    skos:broader esdc:physical-geography ;
-    skos:definition "The scientific study of the origin and evolution of topographic and bathymetric features created by physical, chemical or biological processes operating at or near the Earth's surface. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040601> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040601" ;
-    skos:prefLabel "Geomorphology And Regolith And Landscape Evolution"@en .
 
 esdc:geophysical-fluid-dynamics a skos:Concept ;
     skos:broader esdc:geophysics ;
@@ -294,6 +353,50 @@ esdc:geophysical-fluid-dynamics a skos:Concept ;
     skos:notation "040403" ;
     skos:prefLabel "Geophysical Fluid Dynamics"@en .
 
+esdc:geothermics-and-radiometrics a skos:Concept ;
+    skos:broader esdc:geophysics ;
+    skos:definition "The study of heatflow and radioactive activity within the Earth."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040404> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040404" ;
+    skos:altLabel "Geothermics and Radiometrics"@en ;
+    skos:prefLabel "Radiometrics"@en .
+
+esdc:geothermal-energy a skos:Concept ;
+    skos:broader esdc:geothermics-and-radiometrics ;
+    skos:definition "The study of heatflow in the Earth's upper crust in the context of energy generation, and methods, materials and operations used in extraction of energy from geothermal sources."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:altLabel "Geothermal"@en ;
+    skos:prefLabel "Geothermal Energy"@en .
+
+esdc:magnetics a skos:Concept ;
+    skos:broader esdc:geophysics ;
+    skos:definition "Magnetic surveys are a geophysical method to image anomalies in the magnetic field of the earth caused by source bodies within the sub-surface. Source: SEG wiki"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040406> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040406" ;
+    skos:prefLabel "Magnetics"@en .
+
+esdc:seismology-and-seismic-exploration a skos:Concept ;
+    skos:broader esdc:geophysics ;
+    skos:definition "The scientific study of earthquakes and the propagation of elastic waves through the Earth or through other planet-like bodies. The field also includes studies of earthquake environmental effects such as tsunamis as well as diverse seismic sources such as volcanic, tectonic, oceanic, atmospheric, and artificial processes such as explosions. Seismic exploration is a method of exploration geophysics that uses the principles of seismology to estimate the properties of the Earth's subsurface from artificially generated seismic waves. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040407> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040407" ;
+    skos:prefLabel "Seismology and Seismic Exploration"@en .
+
+esdc:seismic-surveys a skos:Concept ;
+    skos:broader esdc:seismology-and-seismic-exploration ;
+    skos:definition "The acquisition, processing, and analysis of seismic data sets measured and recorded with reference to a particular area of the Earth's surface, to evaluate the subsurface."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Seismic Surveys"@en .
+
+esdc:passive-seismic a skos:Concept ;
+    skos:broader esdc:seismic-surveys ;
+    skos:definition "The detection of natural low frequency earth movements, commonly with the purpose of discerning geological structures and locating underground oil, gas, or other resources. Source: Wikipedia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Passive Seismic"@en .
+
 esdc:geophysics-not-elsewhere-classified a skos:Concept ;
     skos:broader esdc:geophysics ;
     skos:definition "Geophysical data and information not otherwise described by other sub-categories of geochemistry."@en ;
@@ -301,6 +404,173 @@ esdc:geophysics-not-elsewhere-classified a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040499" ;
     skos:prefLabel "Geophysics Not Elsewhere Classified"@en .
+
+esdc:gravity a skos:Concept ;
+    skos:broader esdc:geophysics ;
+    skos:definition "A versatile geophysical technique used to detect and identify subsurface bodies and anomalies within the Earth. It is based on the density changes of rock bodies and their effect on the acceleration of gravity. Source: SEG wiki"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040405> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040405" ;
+    skos:altLabel "Gravimetrics"@en ;
+    skos:prefLabel "Gravity"@en .
+
+esdc:gravity-gradiometry a skos:Concept ;
+    skos:broader esdc:gravity ;
+    skos:definition "The study and measurement of variations in the acceleration due to gravity. The gravity gradient is the spatial rate of change of gravitational acceleration. Source: Wikipedia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Gravity Gradiometry"@en .
+
+esdc:spectral-imaging a skos:Concept ;
+    skos:broader esdc:geophysics ;
+    skos:definition "Spectral imaging is imaging that uses multiple bands across the electromagnetic spectrum."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Spectral Imaging"@en .
+    
+esdc:airborne-spectral a skos:Concept ;
+    skos:broader esdc:spectral-imaging ;
+    skos:definition "Remotely sensed spectral imaging obtained from an airborne platform."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Airborne Spectral"@en .
+	
+esdc:core-spectral a skos:Concept ;
+    skos:broader esdc:spectral-imaging ;
+    skos:definition "Spectral imaging (typically hyperspectral) of rock samples such as core."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Core Spectral"@en .
+
+esdc:satellite-spectral a skos:Concept ;
+    skos:broader esdc:spectral-imaging ;
+    skos:definition "Remotely sensed spectral imaging obtained from a platform in orbit outside the atmosphere of Earth."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Satellite Spectral"@en .
+
+esdc:petrophysics a skos:Concept ;
+    skos:broader esdc:geophysics ;
+    skos:definition "Petrophysics is the study of physical and chemical rock properties and their interactions with fluids. A major application of petrophysics is in studying reservoirs for the hydrocarbon industry. Source: Wikipedia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Petrophysics"@en .
+
+esdc:physical-geography a skos:Concept ;
+    skos:broader esdc:earth-sciences ;
+    skos:definition "The branch of geography dealing with natural features. Source: dictionary.com"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0406> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "0406" ;
+    skos:prefLabel "Physical Geography"@en .
+
+esdc:geomorphology-and-regolith-and-landscape-evolution a skos:Concept ;
+    skos:broader esdc:physical-geography ;
+    skos:definition "The scientific study of the origin and evolution of topographic and bathymetric features created by physical, chemical or biological processes operating at or near the Earth's surface. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040601> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040601" ;
+    skos:prefLabel "Geomorphology And Regolith And Landscape Evolution"@en .
+
+esdc:glaciology a skos:Concept ;
+    skos:broader esdc:physical-geography ;
+    skos:definition "The scientific study of glaciers, or more generally ice and natural phenomena that involve ice. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040602> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040602" ;
+    skos:prefLabel "Glaciology"@en .
+	
+esdc:hydrogeology a skos:Concept ;
+    skos:broader esdc:physical-geography ;
+    skos:definition "The area of geology that deals with the distribution and movement of groundwater in the soil and rocks of the Earth's crust (commonly in aquifers). Source: SEG wiki"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040603> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040603" ;
+    skos:prefLabel "Hydrogeology"@en .
+
+esdc:natural-hazards a skos:Concept ;
+    skos:broader esdc:physical-geography ;
+    skos:definition "The study of natural phenomena that might have a negative effect on humans or the environment. Specifically geophysical hazards encompassing geological and meteorological phenomena such as earthquakes, volcanic eruptions, wildfires, cyclonic storms, floods, droughts, avalanches and landslides. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040604> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040604" ;
+    skos:prefLabel "Natural Hazards"@en .
+
+esdc:palaeoclimatology a skos:Concept ;
+    skos:broader esdc:physical-geography ;
+    skos:definition "The study of changes in climate taken on the scale of the entire history of Earth. It uses a variety of proxy methods from the Earth and life sciences to obtain data previously preserved within rocks, sediments, ice sheets, tree rings, corals, shells, and microfossils to determine the past states of the Earth's various climate regions and its atmospheric system. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040605> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040605" ;
+    skos:prefLabel "Palaeoclimatology"@en .
+
+esdc:quaternary-environments a skos:Concept ;
+    skos:altLabel "quaternary geology"@en ;
+    skos:broader esdc:physical-geography ;
+    skos:definition "The branch of geology that study developments from 2.6 million years ago onwards. In particular Quaternary geology study the process and deposits that developed during the quaternary, a period characterized by glacial-interglacial cycles. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040606> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040606" ;
+    skos:prefLabel "Quaternary Environments"@en .
+
+esdc:surface-processes a skos:Concept ;
+    skos:broader esdc:physical-geography ;
+    skos:definition "The study of the processes that form and change the Earth's surface. Source: University of Melbourne"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040607> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040607" ;
+    skos:prefLabel "Surface Processes"@en .
+
+esdc:surfacewater-hydrology a skos:Concept ;
+    skos:altLabel "Surface-water hydrology"@en ;
+    skos:broader esdc:physical-geography ;
+    skos:definition "The sub-field of hydrology concerned with above-earth water, in contrast to groundwater hydrology that deals with water below the surface of the Earth. Its applications include rainfall and runoff, the routes that surface water takes (for example through rivers or reservoirs), and the occurrence of floods and droughts. Source: Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040608> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040608" ;
+    skos:prefLabel "Surfacewater Hydrology"@en .
+
+esdc:physical-geography-and-environmental-geoscience-not-elsewhere-classified a skos:Concept ;
+    skos:broader esdc:physical-geography ;
+    skos:definition "Physical geographical and environmental science data and information not otherwise described by other sub-categories of geochemistry."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040699> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040699" ;
+    skos:prefLabel "Physical Geography And Environmental Geoscience Not Elsewhere Classified"@en .
+
+esdc:environmental-sciences a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:definition "An interdisciplinary academic field that integrates physical, biological and information sciences to the study of the environment, and the solution of environmental problems."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/05> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "05" ;
+    skos:prefLabel "Environmental Sciences"@en .
+
+esdc:biological-sciences a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:definition "The natural science that studies life and living organisms, including their physical structure, chemical processes, molecular interactions, physiological mechanisms, development and evolution."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/06> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "06" ;
+    skos:prefLabel "Biological Sciences"@en .
+
+esdc:ecology a skos:Concept ;
+    skos:broader esdc:biological-sciences ;
+    skos:definition "A branch of biology concerning interactions among organisms and their biophysical environment, which includes both biotic and abiotic components."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0602> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "0602" ;
+    skos:prefLabel "Ecology"@en .
+
+esdc:engineering a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:definition "The use of scientific principles to design and build machines, structures, and other items, including bridges, tunnels, roads, vehicles, and buildings."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/09> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "09" ;
+    skos:prefLabel "Engineering"@en .
+
+esdc:environmental-engineering a skos:Concept ;
+    skos:broader esdc:engineering ;
+    skos:definition "A professional engineering discipline that takes from broad scientific topics like chemistry, biology, ecology, geology, hydraulics, hydrology, microbiology, and mathematics to create solutions that will protect and also improve the health of living organisms and improve the quality of the environment. Source:Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0907> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "0907" ;
+    skos:prefLabel "Environmental Engineering"@en .
 
 esdc:geomatic-engineering a skos:Concept ;
     skos:broader esdc:engineering ;
@@ -325,323 +595,58 @@ esdc:geomechanics-and-resources-geotechnical-engineering a skos:Concept ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/091402> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "091402" ;
-    skos:prefLabel "Geomechanics and Resources Geotechnical Engineering"@en .
+    skos:altLabel "Geomechanics and Resources Geotechnical Engineering"@en ;
+    skos:prefLabel "Geomechanics"@en .
 
-esdc:geothermal-energy a skos:Concept ;
-    skos:broader esdc:geothermics-and-radiometrics ;
-    skos:definition "The study of heatflow in the Earth's upper crust in the context of energy generation, and methods, materials and operations used in extraction of energy from geothermal sources."@en ;
+esdc:demography a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:definition "The statistical study of populations, especially human beings."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/1603> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:altLabel "Geothermal"@en ;
-    skos:prefLabel "Geothermal Energy"@en .
+    skos:notation "1603" ;
+    skos:prefLabel "Demography"@en .
 
-esdc:geothermics-and-radiometrics a skos:Concept ;
-    skos:broader esdc:geophysics ;
-    skos:definition "The study of heatflow and radioactive activity within the Earth."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040404> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040404" ;
-    skos:altLabel "Geothermics and Radiometrics"@en ;
-    skos:prefLabel "Radiometrics"@en .
+#Collection#
 
-esdc:glaciology a skos:Concept ;
-    skos:broader esdc:physical-geography ;
-    skos:definition "The scientific study of glaciers, or more generally ice and natural phenomena that involve ice. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040602> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040602" ;
-    skos:prefLabel "Glaciology"@en .
-
-esdc:gravity a skos:Concept ;
-    skos:broader esdc:geophysics ;
-    skos:definition "A versatile geophysical technique used to detect and identify subsurface bodies and anomalies within the Earth. It is based on the density changes of rock bodies and their effect on the acceleration of gravity. Source: SEG wiki"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040405> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040405" ;
-    skos:altLabel "Gravimetrics"@en ;
-    skos:prefLabel "Gravity"@en .
-
-esdc:gravity-gradiometry a skos:Concept ;
-    skos:broader esdc:geophysics ;
-    skos:definition "The study and measurement of variations in the acceleration due to gravity. The gravity gradient is the spatial rate of change of gravitational acceleration. Source: Wikipedia"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Gravity Gradiometry"@en .
-
-esdc:hydrogeochemistry a skos:Concept ;
-    skos:broader esdc:geochemistry ;
-    skos:definition "The science that uses the tools and principles of chemistry to explain the mechanisms behind major geological systems such as the Earth's crust and its oceans."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Hydrogeochemistry"@en .	
-	
-esdc:hydrogeology a skos:Concept ;
-    skos:broader esdc:physical-geography ;
-    skos:definition "The area of geology that deals with the distribution and movement of groundwater in the soil and rocks of the Earth's crust (commonly in aquifers). Source: SEG wiki"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040603> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040603" ;
-    skos:prefLabel "Hydrogeology"@en .
-
-esdc:igneous-and-metamorphic-petrology a skos:Concept ;
-    skos:broader esdc:petrology ;
-    skos:definition "The branch of petrology that describes the composition and texture of igneous and metamorphic rocks. Igneous and metamorphic petrology are commonly categorized together because they both contain heavy use of chemistry, chemical methods, and phase diagrams. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040304> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040304" ;
-    skos:prefLabel "Igneous and Metamorphic Petrology"@en .
-
-esdc:inorganic-geochemistry a skos:Concept ;
-    skos:broader esdc:geochemistry ;
-    skos:definition "The study of the chemistry of inorganic rocks, minerals, and other earth materials that are not currently or once living."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040202> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040202" ;
-    skos:prefLabel "Inorganic Geochemistry"@en .
-
-esdc:isotope-geochemistry a skos:Concept ;
-    skos:broader esdc:geochemistry ;
-    skos:definition "The determination of the relative and absolute concentrations of the elements and their isotopes in the Earth and on Earth's surface. Source: Kendall, Carol; Caldwell, Eric A. (1998). 'Chapter 2: Fundamentals of Isotope Geochemistry'. In Kendall, C.; McDonnell, J. J. (eds.). Isotope Tracers in Catchment Hydrology. Amsterdam: Elsevier Science. pp. 51-86."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040203> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040203" ;
-    skos:prefLabel "Isotope Geochemistry"@en .
-
-esdc:magnetics a skos:Concept ;
-    skos:broader esdc:geophysics ;
-    skos:definition "Magnetic surveys are a geophysical method to image anomalies in the magnetic field of the earth caused by source bodies within the sub-surface. Source: SEG wiki"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040406> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040406" ;
-    skos:prefLabel "Magnetics"@en .
-
-esdc:marine-geoscience a skos:Concept ;
-    skos:altLabel "geological oceanography"@en,
-        "marine geology"@en ;
-    skos:broader esdc:geology ;
-    skos:definition "The study of the history and structure of the ocean floor. It involves geophysical, geochemical, sedimentological and paleontological investigations of the ocean floor and coastal zone. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040305> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040305" ;
-    skos:prefLabel "Marine Geoscience"@en .
-
-esdc:mineralogy-and-crystallography a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "The scientific study of the chemistry, crystal structure, and physical (including optical) properties of minerals and mineralized artifacts. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040306> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040306" ;
-    skos:prefLabel "Mineralogy and Crystallography"@en .
-
-esdc:natural-hazards a skos:Concept ;
-    skos:broader esdc:physical-geography ;
-    skos:definition "The study of natural phenomena that might have a negative effect on humans or the environment. Specifically geophysical hazards encompassing geological and meteorological phenomena such as earthquakes, volcanic eruptions, wildfires, cyclonic storms, floods, droughts, avalanches and landslides. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040604> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040604" ;
-    skos:prefLabel "Natural Hazards"@en .
-
-esdc:organic-petrology a skos:Concept ;
-    skos:broader esdc:petrology ;
-    skos:definition "Organic petrology involves the study of organic matter (OM) in rocks including its origin and thermal maturity due to burial within the earth's crust. Source: CSIRO"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Organic Petrology"@en .
-
-esdc:palaeoclimatology a skos:Concept ;
-    skos:broader esdc:physical-geography ;
-    skos:definition "The study of changes in climate taken on the scale of the entire history of Earth. It uses a variety of proxy methods from the Earth and life sciences to obtain data previously preserved within rocks, sediments, ice sheets, tree rings, corals, shells, and microfossils to determine the past states of the Earth's various climate regions and its atmospheric system. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040605> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040605" ;
-    skos:prefLabel "Palaeoclimatology"@en .
-
-esdc:physical-geography-and-environmental-geoscience-not-elsewhere-classified a skos:Concept ;
-    skos:broader esdc:physical-geography ;
-    skos:definition "Physical geographical and environmental science data and information not otherwise described by other sub-categories of geochemistry."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040699> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040699" ;
-    skos:prefLabel "Physical Geography And Environmental Geoscience Not Elsewhere Classified"@en .
-
-esdc:quaternary-environments a skos:Concept ;
-    skos:altLabel "quaternary geology"@en ;
-    skos:broader esdc:physical-geography ;
-    skos:definition "The branch of geology that study developments from 2.6 million years ago onwards. In particular Quaternary geology study the process and deposits that developed during the quaternary, a period characterized by glacial-interglacial cycles. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040606> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040606" ;
-    skos:prefLabel "Quaternary Environments"@en .
-
-esdc:sedimentology a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "The scientific study of sedimentary rocks and of the processes by which they were formed; the description, classification, origin, and interpretation of sediments. Source: AGI"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040310> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040310" ;
-    skos:prefLabel "Sedimentology"@en .
-
-esdc:seismic-surveys a skos:Concept ;
-    skos:broader esdc:seismology-and-seismic-exploration ;
-    skos:definition "The acquisition, processing, and analysis of seismic data sets measured and recorded with reference to a particular area of the Earth's surface, to evaluate the subsurface."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Seismic Surveys"@en .
-
-esdc:stratigraphy a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "The study of the history, composition, relative ages and distribution of strata, and the interpretation of strata to elucidate Earth history. The comparison, or correlation, of separated strata can include study of their lithology, fossil content, and relative or absolute age, or lithostratigraphy, biostratigraphy, and chronostratigraphy. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040311> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040311" ;
-    skos:prefLabel "Stratigraphy"@en .
-
-esdc:structural-geology a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "Pertaining to structure, the geometry and spatial arrangement of rocks. The structure or deformation can include many mechanisms, such as folding, faulting and fracturing. Structure can usually be interpreted in terms of the deformation of the crust of the Earth as continents and tectonic plates move and collide. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040312> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040312" ;
-    skos:prefLabel "Structural Geology"@en .
-
-esdc:surface-processes a skos:Concept ;
-    skos:broader esdc:physical-geography ;
-    skos:definition "The study of the processes that form and change the Earth's surface. Source: University of Melbourne"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040607> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040607" ;
-    skos:prefLabel "Surface Processes"@en .
-
-esdc:surfacewater-hydrology a skos:Concept ;
-    skos:altLabel "Surface-water hydrology"@en ;
-    skos:broader esdc:physical-geography ;
-    skos:definition "The sub-field of hydrology concerned with above-earth water, in contrast to groundwater hydrology that deals with water below the surface of the Earth. Its applications include rainfall and runoff, the routes that surface water takes (for example through rivers or reservoirs), and the occurrence of floods and droughts. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040608> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040608" ;
-    skos:prefLabel "Surfacewater Hydrology"@en .
-
-esdc:tectonics a skos:Concept ;
-    skos:altLabel "plate tectonics"@en ;
-    skos:broader esdc:geology ;
-    skos:definition "Also known as plate tectonics, the unifying geologic theory developed to explain observations that interactions of the brittle plates of the lithosphere with each other and with the softer underlying asthenosphere result in large-scale changes in the Earth. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040313> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040313" ;
-    skos:prefLabel "Tectonics"@en .
-
-esdc:volcanology a skos:Concept ;
-    skos:altLabel "vulcanology"@en ;
-    skos:broader esdc:geology ;
-    skos:definition "The study of volcanoes, lava, magma, and related geological, geophysical and geochemical phenomena. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040314> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040314" ;
-    skos:prefLabel "Volcanology"@en .
-
-esdc:electrical-and-electromagnetic-methods-in-geophysics a skos:Concept ;
-    skos:broader esdc:geophysics ;
-    skos:definition "Geophysical methods based on electrical and electromagnetic phenomena that respond to the electrical properties of the subsurface. Source: Cambridge.org"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040401> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040401" ;
-    skos:prefLabel "Electrical and Electromagnetic Methods in Geophysics"@en .
-
-esdc:petroleum-and-coal-geology a skos:Concept ;
-    skos:altLabel "fossil fuel geology"@en,
-        "fossil-fuel geology"@en,
-        "petroleum and coal geology"@en ;
-    skos:broader esdc:geology ;
-    skos:definition "The branch of geology that studies the processes of fossil fuel formation (coal, oil and gas)."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040309> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040309" ;
-    skos:prefLabel "Petroleum and Coal Geology"@en .
-
-esdc:seismology-and-seismic-exploration a skos:Concept ;
-    skos:broader esdc:geophysics ;
-    skos:definition "The scientific study of earthquakes and the propagation of elastic waves through the Earth or through other planet-like bodies. The field also includes studies of earthquake environmental effects such as tsunamis as well as diverse seismic sources such as volcanic, tectonic, oceanic, atmospheric, and artificial processes such as explosions. Seismic exploration is a method of exploration geophysics that uses the principles of seismology to estimate the properties of the Earth's subsurface from artificially generated seismic waves. Source: Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040407> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040407" ;
-    skos:prefLabel "Seismology and Seismic Exploration"@en .
-
-esdc:petrology a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "The branch of geology that studies rocks and the conditions under which they form. Sometimes synonymous with lithology that studies the macroscopic hand-sample or outcrop-scale description of rocks. Source: Wikipedia"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Petrology"@en .
-
-esdc:resource-geology a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "The study of geology in the context of economic development and the quantification of resource potential of accumulations such as hydrocarbons, mineral ore bodies, and coal deposits."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Resource Geology"@en .
-
-esdc:spectral-imaging a skos:Concept ;
-    skos:broader esdc:geophysics ;
-    skos:definition "Spectral imaging is imaging that uses multiple bands across the electromagnetic spectrum."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Spectral Imaging"@en .
-
-esdc:organic-geochemistry a skos:Concept ;
-    skos:broader esdc:geochemistry ;
-    skos:definition "The study of the role of processes and compounds that are derived from living or once-living organisms. Source: Killops, Stephen D.; Killops, Vanessa J. (2013). Introduction to Organic Geochemistry. John Wiley & Sons."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040204> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040204" ;
-    skos:prefLabel "Organic Geochemistry"@en .
-
-esdc:petrophysics a skos:Concept ;
-    skos:broader esdc:geophysics ;
-    skos:definition "Petrophysics is the study of physical and chemical rock properties and their interactions with fluids. A major application of petrophysics is in studying reservoirs for the hydrocarbon industry. Source: Wikipedia"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Petrophysics"@en .
-
-esdc:palaeontology a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "The study of fossilized, or preserved, remnants of plant and animal life. Changes in the Earth through time can be documented by observing changes in the fossils in successive strata and the environments in which they formed or were preserved. Fossils can also be compared with their extant relatives to assess evolutionary changes. Correlations of strata can be aided by studying their fossil content, a discipline called biostratigraphy. Source: Schlumberger Oilfield Glossary"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040308> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040308" ;
-    skos:prefLabel "Palaeontology"@en .
-
-esdc:lodgement-form a skos:Collection ;
+esdc:lodgement-form a skos:OrderedCollection ;
     skos:definition "Earth science data categories for selection on lodgement form."@en ;
-    skos:member 
-    esdc:engineering,
-    esdc:surveying,
-    esdc:environmental-sciences,
-    esdc:geochemistry,
-    esdc:extract-geochemistry,
-    esdc:inorganic-geochemistry,
-    esdc:isotope-geochemistry,
-    esdc:organic-geochemistry,
-    esdc:basin-analysis,
-    esdc:geochronology,
-    esdc:geomechanics,
-    esdc:mineralogy-and-crystallography,
-    esdc:palaeontology,
-    esdc:palynology,
-    esdc:reservoir-geology,
-    esdc:petrology,
-    esdc:igneous-and-metamorphic-petrology,
-    esdc:organic-petrology,
-    esdc:sedimentary-petrology,
-    esdc:resource-geology,
-    esdc:hydrocarbon-occurences,
-    esdc:mineral-occurences,
-    esdc:quarry-resources,
-    esdc:structural-geology,
-    esdc:geophysics,
-    esdc:electrical-geophysics,
-    esdc:electromagnetic-geophysics,
-    esdc:magnetotellurics,
-    esdc:geothermics-and-radiometrics,
-    esdc:gravity,
-    esdc:gravity-gradiometry,
-    esdc:magnetics,
-    esdc:petrophysics,
-    esdc:seismic-surveys,
-    esdc:passive-seismic,
-    esdc:airborne-spectral,
-    esdc:core-spectral,
-    esdc:satellite-spectral,
-    esdc:hydrogeochemistry,
-    esdc:hydrogeology ;
+    skos:member esdc:geochemistry,
+        esdc:inorganic-geochemistry,
+        esdc:organic-geochemistry,
+        esdc:isotope-geochemistry,
+        esdc:extract-geochemistry,
+        esdc:hydrogeochemistry,
+        esdc:geology,
+        esdc:basin-analysis,
+        esdc:geochronology,
+        esdc:petrology,
+        esdc:igneous-and-metamorphic-petrology,
+        esdc:organic-petrology,
+        esdc:sedimentary-petrology,
+        esdc:mineralogy-and-crystallography,
+        esdc:palaeontology,
+        esdc:palynology,
+        esdc:reservoir-geology,
+        esdc:structural-geology,
+        esdc:resource-geology,
+        esdc:quarry-resources,
+        esdc:geomechanics-and-resources-geotechnical-engineering,
+        esdc:geophysics,
+        esdc:electrical-geophysics,
+        esdc:electromagnetic-geophysics,
+        esdc:magnetotellurics,
+        esdc:geothermics-and-radiometrics,
+        esdc:geothermal-energy,
+        esdc:magnetics,
+        esdc:seismic-surveys,
+        esdc:passive-seismic,
+        esdc:gravity,
+        esdc:gravity-gradiometry,
+        esdc:airborne-spectral,
+        esdc:core-spectral,
+        esdc:satellite-spectral,
+        esdc:petrophysics,
+        esdc:environmental-sciences,
+        esdc:engineering,
+        esdc:surveying ;
     skos:prefLabel "Lodgement form selection"@en .
