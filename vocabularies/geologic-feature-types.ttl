@@ -338,6 +338,13 @@ geof:Horst a skos:Concept ;
     skos:notation "gfhrt" ;
     skos:prefLabel "horst"@en .
 
+geof:IgneousAssociation a skos:Concept ;
+    skos:broader geof:TectonicEntity ;
+    skos:definition "An association of igneous rocks where their differentiation is uncertain, because the geodynamic environment of their magmatism is not well understood."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gf???" ;
+    skos:prefLabel "igneous association"@en .
+
 geof:IgneousProvince a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
     skos:broader geof:TectonicEntity ;
@@ -345,6 +352,13 @@ geof:IgneousProvince a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfigp" ;
     skos:prefLabel "igneous province"@en .
+
+geof:IgneousSubprovince a skos:Concept ;
+    skos:broader geof:TectonicEntity ;
+    skos:definition "To be provided later, as there is a dliemma here with Igneous Associations and daughter subprovinces."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gf???" ;
+    skos:prefLabel "igneous subprovince"@en .
 
 geof:Inlier a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
@@ -528,6 +542,14 @@ geof:PresentContinent a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
     skos:prefLabel "present continent"@en .
 
+geof:Province a skos:Concept ;
+    skos:broader geof:TectonicEntity ;
+    skos:definition "A geologic province is a spatial entity with common geologic attributes, comprising a large area or region, which, considered as a whole, is characterised by similar geologic features or by a geologic history differing significantly from that of adjacent areas. (Modified from: Neuendorf et al. 2011; Geoscience Australia, USGS & Wikipedia, all accessed 13.05.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gf???" ;
+    skos:prefLabel "Province"@en .
+    skos:scopeNote "A geologic province may include a single dominant tectonic/structural entity such as a sedimentary basin or an association of genetically-related basins, but otherwise craton (including shields and platforms) or orogen, as well as specified types of provinces (viz., mineral province, igneous province, large igneous province, tectonised/metamorphosed province, extended-crust province) that are individually defined by a complex history of tectonics, metamorphism, magmatism and/or metallogenesis. A province may be divided into two or more subprovinces that may be further divided into geologic domains."@en ;
+
 geof:RangeZone a skos:Concept ;
     dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
     skos:broader geof:BiostratigraphicUnit ;
@@ -560,6 +582,21 @@ geof:SeismicProvince a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfssp" ;
     skos:prefLabel "seismic province"@en .
+
+geof:Subprovince a skos:Concept ;
+    skos:broader geof:TectonicEntity ;
+    skos:definition "One of two or more divisions of a province, based on differences in geological character."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gf???" ;
+    skos:prefLabel "Subprovince"@en .
+
+geof:Superprovince a skos:Concept ;
+    skos:broader geof:TectonicEntity ;
+    skos:definition "A grouping of two or more like geologic provinces."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gf???" ;
+    skos:prefLabel "Superprovince"@en .
+    skos:scopeNote "This highest-level root term was introduced by Mortimer et al. (2014), as the Austral Superprovince, to encompass all rocks of New Zealand’s Eastern Province and Western Province basement (providing a single stratigraphic search term for basement rocks in digital databases). In Queensland, for example, the term has application with the Tasmanides Orogenic Collage, the Great Australian Superbasin, and the Centralian Superbasin."@en ;
 
 geof:SequenceStratigraphicUnit a skos:Concept ;
     dcterms:source <https://doi.org/10.1080/11035897.2016.1178666>,
