@@ -1,3 +1,7 @@
+# This script checks the redirect status of vocabs' URIs
+#
+# as of 2020-06-03, all 64 vocab' URIs are resulting in successful redirects to GSQ VocPrez
+
 import requests
 import os
 from os.path import join, dirname
