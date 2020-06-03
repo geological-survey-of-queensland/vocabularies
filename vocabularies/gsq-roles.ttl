@@ -10,7 +10,7 @@
 <http://linked.data.gov.au/def/gsq-roles> a owl:Ontology , skos:ConceptScheme ;
     dct:created "2019-10-17"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-01-10"^^xsd:date ;
+    dct:modified "2020-03-06"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml> ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)"@en ;
@@ -19,6 +19,7 @@
         gsqr:operator,
         iso11179:Submitter,
         isorole:author,
+        isorole:collaborator,
         isorole:editor,
         isorole:originator,
         isorole:owner,
@@ -52,12 +53,12 @@ gsqr:operator a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
 iso11179:Submitter a skos:Concept ;
-    skos:altLabel "Lodger" ;
+    skos:altLabel "Lodger"@en ;
     skos:definition "A Submitter should be an organizational unit approved by a process defined by the Registration Authority. A Submitter is authorized to identify and report Administered Items suitable for registration. The Submitter can be viewed as a contact for the Submitting Organization."@en ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-roles>;
     skos:prefLabel "Submitter"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>;
-    skos:usageNote "In QDEX Reports, this role has been known as 'Lodger' but 'Submitter' is now the preferred term for it."@en .
+    skos:historyNote "In QDEX Reports, this role has been known as 'Lodger' but 'Submitter' is now the preferred term for it."@en .
 
 isorole:author a skos:Concept ;
     skos:definition "Agent who authored the resource"@en ;
@@ -65,6 +66,13 @@ isorole:author a skos:Concept ;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
     skos:prefLabel "Author"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>.
+
+isorole:collaborator a skos:Concept ;
+    skos:definition "Party who assists with the generation of the resource other than the principal investigator"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:altLabel "Contributor"@en ;
+    skos:prefLabel "Collaborator"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
 isorole:editor a skos:Concept ;
     skos:definition "Party who reviewed or modified the resource to improve the content"@en ;
@@ -82,7 +90,9 @@ isorole:originator a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>.
 
 isorole:owner a skos:Concept ;
-    skos:altLabel "tenure holder" , "authority holder" , "permit holder" ;
+    skos:altLabel "tenure holder"@en ,
+        "authority holder"@en ,
+        "permit holder"@en ;
     skos:definition "Agent that owns the resource"@en ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-roles>;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115. The altLabels are drawn from P&G (general provisions) regulation 2017, section 37(4)"@en ;
