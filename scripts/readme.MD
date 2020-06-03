@@ -12,11 +12,12 @@ Edit the relevant config file, test or production, with GraphDB and Github accou
 
 The **vocabs_load.py** file uses the **config.py** file for its configuration.
 
-## minerals.ttl
+## Manually load vocabs that script doesn't load
 
-NOTE: The current script will not load the file **minerals.ttl** as it exceeds 2MB.
+NOTE: The current script will not load the file **minerals.ttl** as it exceeds 2MB (this needs to be fixed).  
+NOTE: The current script will not load the file **qudt-uom.ttl** due to a bug in the load script (this needs to be fixed).
 
-Until this size issue is resolved, the **minerals.ttl** file must be manually imported through the GraphDB administration interface.
+Until these issue are resolved, the **minerals.ttl** and **qudt-uom.ttl** files must be manually imported through the GraphDB administration interface - see instructions below.
 
 ## How to manually import TTL files
 
