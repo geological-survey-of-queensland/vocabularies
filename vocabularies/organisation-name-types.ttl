@@ -1,17 +1,17 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix orgnt: <http://linked.data.gov.au/def/organisation-name-types/> .
+@prefix orgnt: <https://linked.data.gov.au/def/organisation-name-types/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/organisation-name-types> a owl:Ontology,
+<https://linked.data.gov.au/def/organisation-name-types> a owl:Ontology,
         skos:ConceptScheme ;
     dcterms:created "2020-03-25"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-03-25"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "Derived from Australian Standard AS 4590.1:2017." ;
     skos:definition "Types of names provided by organisations."@en ;
     skos:prefLabel "Organisation Name Types"@en ;
@@ -23,56 +23,56 @@
         orgnt:other-trading-name,
         orgnt:unknown .
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 orgnt:legal-organisation-name a skos:Concept ;
     skos:definition "This is the name of the owner of the organisation that appears on all legal papers (AS4590.1:2017)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/organisation-name-types> ;
+    skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "LGL" ;
     skos:prefLabel "Legal Organisation Name"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/organisation-name-types> .
+    skos:topConceptOf <https://linked.data.gov.au/def/organisation-name-types> .
 
 orgnt:main-organisation a skos:Concept ;
     skos:definition "Main name of the organisation. This is the name of the entity that appears on all official documents or legal papers. May be the registered Business name where it is different to the Trading name (AS4590.1:2017)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/organisation-name-types> ;
+    skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "MN" ;
     skos:prefLabel "Main Organisation"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/organisation-name-types> .
+    skos:topConceptOf <https://linked.data.gov.au/def/organisation-name-types> .
 
 orgnt:main-trading-name a skos:Concept ;
     skos:altLabel "Trading Name"@en ;
     skos:definition "The main name that the organisation trades under or the name by which suppliers or customers know the organisation (AS4590.1:2017)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/organisation-name-types> ;
+    skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "MTR" ;
     skos:prefLabel "Main Trading Name"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/organisation-name-types> .
+    skos:topConceptOf <https://linked.data.gov.au/def/organisation-name-types> .
 
 orgnt:management-accounting-unit a skos:Concept ;
     skos:definition "Management accounting unit. These are principal business units for which regular accounts are maintained, e.g. a division of a large business such as BHP's Steel Division. MAUs are ABS defined but are a popular way for large businesses to manage diverse undertakings (AS4590.1:2017)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/organisation-name-types> ;
+    skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "MAU" ;
     skos:prefLabel "Management Accounting Unit"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/organisation-name-types> .
+    skos:topConceptOf <https://linked.data.gov.au/def/organisation-name-types> .
 
 orgnt:other-name a skos:Concept ;
     skos:definition "Other name type not listed, e.g. sales and marketing  (AS4590.1:2017)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/organisation-name-types> ;
+    skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "OTH" ;
     skos:prefLabel "Other Name"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/organisation-name-types> .
+    skos:topConceptOf <https://linked.data.gov.au/def/organisation-name-types> .
 
 orgnt:other-trading-name a skos:Concept ;
     skos:definition "Alternative trading name for an organisation that is not registered (AS4590.1:2017)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/organisation-name-types> ;
+    skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "OTR" ;
     skos:prefLabel "Other Trading Name"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/organisation-name-types> .
+    skos:topConceptOf <https://linked.data.gov.au/def/organisation-name-types> .
 
 orgnt:unknown a skos:Concept ;
     skos:definition "There is no information about the name type (AS4590.1:2017)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/organisation-name-types> ;
+    skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "UNK" ;
     skos:prefLabel "Unknown"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/organisation-name-types> .
+    skos:topConceptOf <https://linked.data.gov.au/def/organisation-name-types> .

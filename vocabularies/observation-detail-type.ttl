@@ -3,15 +3,15 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix obsdt: <http://linked.data.gov.au/def/observation-detail-type/> .
+@prefix obsdt: <https://linked.data.gov.au/def/observation-detail-type/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/observation-detail-type> a owl:Ontology,
+<https://linked.data.gov.au/def/observation-detail-type> a owl:Ontology,
         skos:ConceptScheme ;
     dcterms:created "2020-03-30"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-03-30"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "A definition for vocabulary that describes its purpose."@en ;
     skos:prefLabel "Observation Detail Type"@en ;
@@ -19,28 +19,28 @@
         obsdt:example,
         obsdt:placeholder .
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 obsdt:reading-interval-hz a skos:Concept ;
     skos:definition "Frequnecy of readings or observations in Hertz (1/s)"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/observation-detail-type> ;
     skos:prefLabel "Reading Interval (Hz)"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/observation-detail-type> .
 
 obsdt:reading-interval-m a skos:Concept ;
     skos:definition "Distance between readings or observations in metres"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/observation-detail-type> ;
     skos:prefLabel "Reading Interval (m)"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/observation-detail-type> .
 
 obsdt:survey-configuration a skos:Concept ;
     skos:definition "Additional information about the survey configuration"@en ;
 
-    skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/observation-detail-type> ;
     skos:prefLabel "Survey Configuration"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/observation-detail-type> .
 
 obsdt:airborne-geophysics a skos:Collection ;
     skos:definition "Additional details that describe Airborne Geophysics surveys."@en ;

@@ -16,7 +16,7 @@ def get_vocab_uri_statuses():
     for v in sorted(glob.glob(vocabs_dir + "/*.ttl")):
         g = Graph().parse(v, format="turtle")
         for s, p, o in g.triples((None, RDF.type, SKOS.ConceptScheme)):
-            vocab_uris.append(str(s).replace("http", "https"))
+            vocab_uris.append(str(s))
 
     vocab_uri_statues = []
     for vocab_uri in vocab_uris:

@@ -1,5 +1,5 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix geoad: <http://linked.data.gov.au/def/geoadminfeatures#> .
+@prefix geoad: <https://linked.data.gov.au/def/geoadminfeatures#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -8,34 +8,34 @@
 geoad:Block a skos:Concept ;
     skos:broader geoad:AdministrativeFeature ;
     skos:definition "A Block is an administrative division of the State of Queensland that is used for tenure management. A Block is defined as five minutes of latitude by five minutes of longitude. Blocks are grouped by 1:1,000,000 map sheet areas, the names of which provide the containing Blocks with a four letter prefix (e.g. Clermont 1:1,000,000 provides CLER). Each sheet area contains 3456 Blocks, with the Blocks numbered between 1 and 3456 inclusive. A Block is divided into 25 Sub-Blocks."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geoadminfeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geoadminfeatures> ;
     skos:prefLabel "Block"@en .
 
 geoad:Permit a skos:Concept ;
     skos:broader geoad:AdministrativeFeature ;
     skos:definition "Permits are a license granted over a spatial region within the State of Queensland. Permits govern the activities which can be conducted upon them. Activities include exploration, development, and extraction of a specific commodity or commodities."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geoadminfeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geoadminfeatures> ;
     skos:prefLabel "Permit"@en .
 
 geoad:SubBlock a skos:Concept ;
     skos:broader geoad:AdministrativeFeature ;
     skos:definition "A Sub-Block is an administrative sub-division of a Block. Each Block is divided into 25 Sub-Blocks. A Sub-Block is defined as one minute of latitude by one minute of longitude. The Sub-Blocks are prefixed with their corresponding Block name and are labelled from A to Z, excluding I. Labels are allocated from left to right, top to bottom, starting from the northwest corner."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geoadminfeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geoadminfeatures> ;
     skos:prefLabel "Sub-Block"@en .
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:email <mailto:geological_info@dnrme.qld.gov.au> ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
-<http://linked.data.gov.au/def/geoadminfeatures> a owl:Ontology,
+<https://linked.data.gov.au/def/geoadminfeatures> a owl:Ontology,
         skos:ConceptScheme ;
     dcterms:created "2019-12-04"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-04-15"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     owl:imports <http://www.opengis.net/ont/geosparql> ;
-    skos:definition "This vocabulary lists types of geological administrative features relevant to the duties of the Geological Survey of Queensland. It is automatically derived from GSQ's Geological Administrative Features Ontology (http://linked.data.gov.au/def/geoadminfeatures)"@en ;
+    skos:definition "This vocabulary lists types of geological administrative features relevant to the duties of the Geological Survey of Queensland. It is automatically derived from GSQ's Geological Administrative Features Ontology (https://linked.data.gov.au/def/geoadminfeatures)"@en ;
     skos:hasTopConcept geoad:AdministrativeFeature ;
     skos:prefLabel "GeoAdmin Feature Types"@en ;
     sdo:codeRepository <https://github.com/geological-survey-of-queensland/gsq-geoadmin-features-ont> .
@@ -43,5 +43,5 @@ geoad:SubBlock a skos:Concept ;
 geoad:AdministrativeFeature a skos:Concept ;
     skos:broader <http://www.opengis.net/ont/geosparql#Feature> ;
     skos:definition "An Administrative Feature is a geo:Feature that is defined by adminstrative processes such as legislation, regulation, policy or procedure."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geoadminfeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geoadminfeatures> ;
     skos:prefLabel "Administrative feature"@en .
