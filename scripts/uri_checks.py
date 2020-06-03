@@ -16,11 +16,9 @@ def get_vocab_uri_statuses():
 
     vocab_uri_statues = []
     for vocab_uri in vocab_uris:
-        # check if it resolves
         r = requests.head(vocab_uri)
-        # if r.ok:
-        #     status = "resolving"
-        # else:
+        if r.status_code == 401:
+            print(vocab_uri)
         status = r.status_code
         vocab_uri_statues.append((vocab_uri, status))
 
