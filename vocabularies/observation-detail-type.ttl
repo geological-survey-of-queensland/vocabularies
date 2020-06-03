@@ -23,20 +23,28 @@
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
-obsdt:dummy a skos:Concept ;
-    skos:definition "Not areal concept, just here for looks."@en ;
+obsdt:reading-interval-hz a skos:Concept ;
+    skos:definition "Frequnecy of readings or observations in Hertz (1/s)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
-    skos:prefLabel "Dummy"@en ;
+    skos:prefLabel "Reading Interval (Hz)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
 
-obsdt:example a skos:Concept ;
-    skos:definition "This just looks like what should actually be here."@en ;
+obsdt:reading-interval-m a skos:Concept ;
+    skos:definition "Distance between readings or observations in metres"@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
-    skos:prefLabel "Example"@en ;
+    skos:prefLabel "Reading Interval (m)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
 
-obsdt:placeholder a skos:Concept ;
-    skos:definition "This is a placeholder."@en ;
+obsdt:survey-configuration a skos:Concept ;
+    skos:definition "Additional information about the survey configuration"@en ;
+
     skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
-    skos:prefLabel "Placeholder"@en ;
+    skos:prefLabel "Survey Configuration"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
+
+obsdt:airborne-geophysics a skos:Collection ;
+    skos:definition "Additional details that describe Airborne Geophysics surveys."@en ;
+    skos:member obsdt:reading-interval-hz,
+        obsdt:reading-interval-m,
+        obsdt:survey-configuration ;
+    skos:prefLabel "Airborne Geophysics"@en .
