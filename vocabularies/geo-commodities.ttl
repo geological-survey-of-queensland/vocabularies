@@ -1,5 +1,5 @@
 @prefix cdt: <http://linked.data.gov.au/def/geo-commodities/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -7,10 +7,11 @@
 
 <http://linked.data.gov.au/def/geo-commodities> a owl:Ontology,
         skos:ConceptScheme ;
-    dct:created "2020-02-17"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-04-08"^^xsd:date ;
-    dct:source "Compiled by the Geological Survey of Queensland" ;
+    dcterms:created "2020-02-17"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-04-08"^^xsd:date ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The types of commodities in geoscience."@en ;
     skos:hasTopConcept cdt:direct-use-commodity,
         cdt:produced-commodity ;

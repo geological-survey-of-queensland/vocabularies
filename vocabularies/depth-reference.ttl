@@ -1,14 +1,16 @@
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix drd: <http://linked.data.gov.au/def/depth-reference/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/depth-reference> a owl:Ontology , skos:ConceptScheme ;
-    dct:creator "Geological Survey of Queensland" ;
-    dct:modified "2020-01-21T11:03:47"^^xsd:dateTime,
-        "2020-01-28T11:44:20"^^xsd:dateTime ;
-    dct:source "Compiled by the Geological Survey of Queensland" ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:created "2020-01-21T11:03:47"^^xsd:dateTime ;
+    dcterms:modified "2020-01-28T11:44:20"^^xsd:dateTime ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The point or level from which all depths are measured and referenced to for an entity or activity. Typically relative to a common global or regional reference datum such as the Australian Height Datum (AHD)."@en ;
     skos:hasTopConcept drd:australian-height-datum,
         drd:drill-collar,
@@ -21,7 +23,11 @@
         drd:water-bottom,
         drd:well-head ;
     skos:prefLabel "Depth Reference"@en .
-    
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+
 drd:absolute a skos:Collection ;
     skos:definition "A fixed plane or point that describes an absolute reference for depth observations."@en ;
     skos:member drd:australian-height-datum,

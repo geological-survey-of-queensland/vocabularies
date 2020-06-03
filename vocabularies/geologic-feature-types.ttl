@@ -2,11 +2,8 @@
 @prefix geof: <http://linked.data.gov.au/def/geofeatures/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 geof:AbundanceZone a skos:Concept ;
@@ -748,7 +745,8 @@ geof:GeophysicalFeature a skos:Concept ;
         sdo:Person ;
     sdo:affiliation <http://linked.data.gov.au/org/gsq> ;
     sdo:email <mailto:john.mckellar@dnrme.qld.gov.au> ;
-    sdo:name "John L. McKellar" .
+    sdo:name "John L. McKellar" ;
+    sdo:identifier <https://orcid.org/0000-0001-5489-9590> .
 
 <https://orcid.org/0000-0002-8742-7730> a owl:NamedIndividual,
         sdo:Person ;
@@ -756,7 +754,8 @@ geof:GeophysicalFeature a skos:Concept ;
             sdo:name "SURROUND Australia Pty Ltd" ;
             sdo:url <https://surroundaustralia.com> ] ;
     sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
-    sdo:name "Nicholas J. Car" .
+    sdo:name "Nicholas J. Car" ;
+    sdo:identifier <https://orcid.org/0000-0002-8742-7730> .
 
 geof:GeophysicalDomain a skos:Concept ;
     dcterms:source <http://pid.geoscience.gov.au/dataset/ga/14909>,
@@ -886,6 +885,7 @@ geof:StructuralFeature a skos:Concept ;
                 sdo:Person ;
             sdo:affiliation <http://linked.data.gov.au/org/gsq> ;
             sdo:email <mailto:derek.hoy@dnrme.qld.gov.au> ;
+            sdo:identifier <mailto:derek.hoy@dnrme.qld.gov.au> ;
             sdo:name "Derek Hoy" ],
         <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2020-01-23"^^xsd:date ;

@@ -1,18 +1,16 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix smprep: <http://linked.data.gov.au/def/sample-preparation-methods/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/sample-preparation-methods> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2020-02-07T13:19:42"^^xsd:dateTime ;
-    dct:creator "Geological Survey of Queensland" ;
-    dct:modified "2020-02-08T12:54:32"^^xsd:dateTime ;
-    dct:source "Compiled by the Geological Survey of Queensland" ;
+    dcterms:created "2020-02-07T13:19:42"^^xsd:dateTime ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-02-08T12:54:32"^^xsd:dateTime ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The methods used to prepare samples for analyses."@en ;
     skos:hasTopConcept smprep:acidify,
         smprep:aggregate,
@@ -49,6 +47,10 @@
         smprep:thermal-treatment,
         smprep:vaporise ;
     skos:prefLabel "Sample Preparation Methods"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 smprep:acidify a skos:Concept ;
     skos:altLabel "Sour"@en ;

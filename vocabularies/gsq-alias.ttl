@@ -1,20 +1,18 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix als: <http://linked.data.gov.au/def/gsq-alias/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/gsq-alias> a owl:Ontology, 
         skos:ConceptScheme ;
-    dct:created "2020-03-23T16:19:50+10:00"^^xsd:dateTime ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-03-23T16:38:10+10:00"^^xsd:dateTime ;
-    dct:source "Compiled by the Geological Survey of Queensland" ;
+    dcterms:created "2020-03-23T16:19:50+10:00"^^xsd:dateTime ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-03-23T16:38:10+10:00"^^xsd:dateTime ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Sources for any alternate names for features, sites, surveys, or samples catalogued by the Geological Survey of Queensland."@en ;
     skos:hasTopConcept als:colloquial,
         als:des,
@@ -29,7 +27,8 @@
     skos:prefLabel "GSQ Alias"@en .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" .
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 als:colloquial a skos:Concept ;
     skos:altLabel "Common"@en,

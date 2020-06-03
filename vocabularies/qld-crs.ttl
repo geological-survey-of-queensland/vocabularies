@@ -1,18 +1,17 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qldcrs: <http://linked.data.gov.au/def/queensland-crs/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/queensland-crs> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2020-01-30T15:57:41"^^xsd:dateTime ;
-    dct:creator "Geological Survey of Queensland" ;
-    dct:modified "2020-01-30T15:57:41"^^xsd:dateTime ;
-    dct:source "Compiled by the Geological Survey of Queensland" ;
+    dcterms:created "2020-01-30T15:57:41"^^xsd:dateTime ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-01-30T15:57:41"^^xsd:dateTime ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The coordinate reference systems used and refered to within Queensland"@en ;
     skos:hasTopConcept qldcrs:gda2020,
         qldcrs:gda1994,
@@ -32,6 +31,10 @@
         qldcrs:amg1966-z55,
         qldcrs:amg1966-z56 ;
     skos:prefLabel "Queensland CRS"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 qldcrs:geographic a skos:Collection ;
     skos:definition "A geographic coordinate system (GCS) is a coordinate system which uses a three-dimensional spherical surface (ellipsoid) to define locations on the earth. A common choice of coordinates is latitude and longitude."@en ;
@@ -127,7 +130,7 @@ qldcrs:mga1994-z54 a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
     skos:notation "28354" ;
     skos:altLabel "Map Grid of Australia 1994 zone 54"@en ;
-    skos:prefLabel "MGA94 z54" ;
+    skos:prefLabel "MGA94 z54"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
 
 qldcrs:mga1994-z55 a skos:Concept ;
@@ -135,7 +138,7 @@ qldcrs:mga1994-z55 a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
     skos:notation "28355" ;
     skos:altLabel "Map Grid of Australia 1994 zone 55"@en ;
-    skos:prefLabel "MGA94 z55" ;
+    skos:prefLabel "MGA94 z55"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
 
 qldcrs:mga1994-z56 a skos:Concept ;
@@ -143,7 +146,7 @@ qldcrs:mga1994-z56 a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
     skos:notation "28356" ;
     skos:altLabel "Map Grid of Australia 1994 zone 56"@en ;
-    skos:prefLabel "MGA94 z56" ;
+    skos:prefLabel "MGA94 z56"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
 
 qldcrs:amg1984-z54 a skos:Concept ;

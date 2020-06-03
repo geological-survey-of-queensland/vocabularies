@@ -1,21 +1,18 @@
 @prefix asat: <http://linked.data.gov.au/def/australian-states-and-territories/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/australian-states-and-territories> a owl:Ontology,
         skos:ConceptScheme ;
-    dct:created "2020-03-25"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-03-25"^^xsd:date ;
-    dct:publisher <http://linked.data.gov.au/org/gsq> ;
-    dct:source "Australian Statistical Geographies Standard, 2016" ;
+    dcterms:created "2020-03-25"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-03-25"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Australian Statistical Geographies Standard, 2016" ;
     skos:definition "The States and Territories of the Commonwealth of Australia."@en ;
     skos:prefLabel "Australian States and Territories"@en ;
     skos:hasTopConcept 
@@ -30,7 +27,8 @@
         <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/9> .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" .
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 <http://linked.data.gov.au/dataset/asgs2016/stateorterritory/8> a skos:Concept ;
     skos:definition "The Australian Capital Territory."@en ;

@@ -1,13 +1,10 @@
 ﻿@prefix : <http://linked.data.gov.au/def/minerals/> .
 @prefix cs: <http://linked.data.gov.au/def/minerals> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/minerals> a owl:Ontology , skos:ConceptScheme ;
@@ -39,11 +36,14 @@
 
 
 :nickel-strunz-classification
-    a owl:Class ;
+    a owl:Class , skos:Concept ;
     rdfs:subClassOf rdfs:Literal ;
     skos:prefLabel "Nickel-Strunz Classification"@en ;
     skos:definition "Nickel–Strunz classification is a scheme for categorizing minerals based upon their chemical composition, introduced by German mineralogist Karl Hugo Strunz."@en ;
-    rdfs:seeAlso <https://en.wikipedia.org/wiki/Nickel%E2%80%93Strunz_classification> .
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Nickel%E2%80%93Strunz_classification> ;
+    skos:topConceptOf cs: ;
+    skos:inScheme cs: ;
+.
 
 :abellaite a skos:Concept ;
     skos:broader :carbonates-with-additional-anions-without-h2o-with-pb-bi ;
