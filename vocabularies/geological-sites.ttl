@@ -1,17 +1,21 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix gsqst: <https://linked.data.gov.au/def/geological-sites/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://linked.data.gov.au/def/geological-sites> a owl:Ontology , skos:ConceptScheme ;
-    dcterms:created "2020-02-07"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+<https://linked.data.gov.au/def/geological-sites> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dct:created "2020-02-07"^^xsd:date ;
+    dct:creator <https://linked.data.gov.au/org/gsq> ;
+    dct:modified "2020-06-05"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-05-06"^^xsd:date ;
-    dcterms:source "Compiled by the Geological Survey of Queensland" ;
+    dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
     skos:hasTopConcept 
         gsqst:auger,
@@ -65,11 +69,13 @@ gsqst:cutting a skos:Concept ;
         "Road"@en,
         "Railway Cutting"@en,
         "Track"@en,
-        "Tunnel"@en ;
+        "Tunnel"@en,
+        "Drill Pad"@en ;
     skos:definition "A man-made excavation through the earth typically for infrastucture and/or transport."@en ;
     skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "ct" ;
     skos:prefLabel "Cutting"@en ;
+    skos:scopeNote "A drill pad may be used where an at-surface sample or observation is taken at a drilling location. All sites where samples and observations made downhole are classified as boreholes."@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:field-site a skos:Concept ;
@@ -115,7 +121,7 @@ gsqst:waterbody a skos:Concept ;
         "Lake"@en,
         "Pond"@en ;
     skos:broader gsqst:alluvial ;
-    dcterms:source "Source: Merriam-Webster Dictionary" ;
+    dct:source "Source: Merriam-Webster Dictionary" ;
     skos:definition "Any significant accumulation of typically non-flowing water, generally on a planet's surface. The term most often refers to oceans, seas, and lakes, but it includes smaller pools of water such as ponds, wetlands, or more rarely, puddles."@en ;
     skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "wy" ;
@@ -128,7 +134,6 @@ gsqst:colluvial a skos:Concept ;
         "Rubble"@en,
         "Scree"@en,
         "Scree Slope"@en,
-        "Sub-outcrop"@en,
         "Talus"@en ;
     skos:broader gsqst:field-site ;
     skos:definition "A field site from which sediment is not primarily transported in a fluid, typically transported by gravity, where a sample is taken or observation is made. Bedrock is not exposed, but surface rock suggests bedrock is near surface."@en ;
@@ -138,32 +143,69 @@ gsqst:colluvial a skos:Concept ;
 
 gsqst:outcrop a skos:Concept ;
     skos:broader gsqst:field-site ;
-    dcterms:source "Merriam-Webster Dictionary" ;
+    dct:source "Merriam-Webster Dictionary" ;
     skos:definition "The part of a rock formation that appears at the surface of the ground."@en ;
     skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "oc" ;
     skos:prefLabel "Outcrop"@en .
 
-gsqst:soil-horizon a skos:Concept ;
-    skos:altLabel "Soil"@en ;
+gsqst:regolith a skos:Concept ;
     skos:broader gsqst:field-site ;
+    skos:definition "A field site at a layer of loose, heterogeneous superficial deposits covering solid rock."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "rg" ;
+    skos:prefLabel "Regolith"@en .
+
+gsqst:pedolith a skos:Concept ;
+    skos:altLabel "Soil"@en,
+        "Soil Horizon"@en ;
+    skos:broader gsqst:regolith ;
+    skos:definition "A field site that has undergone pedogenic processes. Typically where a sample is taken or observation is made of soil."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "pd" ;
+    skos:prefLabel "Pedolith"@en .
+
+gsqst:saprolith a skos:Concept ;
+    skos:altLabel "Decomposed Granite"@en,
+        "Decomposed Rock"@en,
+        "Weathered Rock"@en,
+        "Weathering Profile"@en ;
+    skos:broader gsqst:regolith ;
     skos:definition "A field site from which a soil sample is taken or observation is made."@en ;
     skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
-    skos:notation "sh" ;
-    skos:prefLabel "Soil Horizon"@en .
+    skos:notation "sr" ;
+    skos:prefLabel "Saprolith"@en .
+
+gsqst:subcrop a skos:Concept ;
+    skos:altLabel "sub-outcrop"@en ;
+    skos:broader gsqst:field-site ;
+    skos:definition "The part of a rock formation under soil or sediment cover that is close to, but not outcropping at, the ground surface."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "sc" ;
+    skos:prefLabel "Subcrop"@en .
 
 gsqst:tailings a skos:Concept ;
-    skos:altLabel "Mine Dump"@en,
-        "Dump"@en,
-        "processing Plant"@en ;
+    skos:altLabel "Processing Plant"@en ;
     skos:broader gsqst:field-site ;
     skos:definition "An accumulation of material left over after the process of separating the valuable fraction from the uneconomic fraction (gangue) of an ore."@en ;
     skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "tl" ;
     skos:prefLabel "Tailings"@en .
 
+gsqst:spoil a skos:Concept ;
+    skos:altLabel "Mine Dump"@en,
+        "Dump"@en,
+        "Overburden"@en,
+        "Interburden"@en,
+        "Waste"@en ;
+    skos:broader gsqst:field-site ;
+    skos:definition "An accumulation of material removed to access an economically significant resource or ore body. Distinct from tailings, as spoil is physically removed from the ore prior to processing."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "sl" ;
+    skos:prefLabel "Spoil"@en .
+
 gsqst:mine a skos:Concept ;
-    dcterms:source "Source: Merriam-Webster Dictionary" ;
+    dct:source "Source: Merriam-Webster Dictionary" ;
     skos:definition "A pit or excavation in the earth from which mineral substances are taken. Source: Merriam-Webster Dictionary"@en ;
     skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "mi" ;
