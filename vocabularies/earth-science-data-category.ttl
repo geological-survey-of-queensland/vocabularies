@@ -276,6 +276,13 @@ esdc:resource-geology a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Resource Geology"@en .
 
+esdc:geothermal-energy a skos:Concept ;
+    skos:broader esdc:resource-geology ;
+    skos:definition "The study of energy generation from geothermal resources including the geological systems and the methods, materials and operations used in the production of energy."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:altLabel "Geothermal"@en ;
+    skos:prefLabel "Geothermal Energy"@en .
+
 esdc:hydrocarbon-occurrences a skos:Concept ;
     skos:broader esdc:resource-geology ;
     skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (i.e. plays and prospects), and limitations to development of hydrocarbon accumulations."@en ;
@@ -359,15 +366,8 @@ esdc:geothermics-and-radiometrics a skos:Concept ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040404> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040404" ;
-    skos:prefLabel "Geothermics and Radiometrics"@en ;
-    skos:altLabel "Radiometrics"@en .
-
-esdc:geothermal-energy a skos:Concept ;
-    skos:broader esdc:geothermics-and-radiometrics ;
-    skos:definition "The study of heatflow in the Earth's upper crust in the context of energy generation, and methods, materials and operations used in extraction of energy from geothermal sources."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:altLabel "Geothermal"@en ;
-    skos:prefLabel "Geothermal Energy"@en .
+    skos:prefLabel "Radiometrics"@en ;
+    skos:altLabel "Geothermics and Radiometrics"@en .
 
 esdc:gravity a skos:Concept ;
     skos:broader esdc:geophysics ;
@@ -636,7 +636,7 @@ esdc:demography a skos:Concept ;
     skos:notation "1603" ;
     skos:prefLabel "Demography"@en .
 
-#Collection#
+#Targetted Collection#
 
 esdc:lodgement-form a skos:OrderedCollection ;
     skos:definition "Earth science data categories for selection on lodgement form."@en ;
@@ -657,8 +657,10 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:palaeontology,
         esdc:palynology,
         esdc:reservoir-geology,
+        esdc:reservoir-engineering,
         esdc:structural-geology,
         esdc:resource-geology,
+        esdc:geothermal-energy,
         esdc:quarry-resources,
         esdc:geomechanics-and-resources-geotechnical-engineering,
         esdc:geophysics,
@@ -666,7 +668,6 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:electromagnetic-geophysics,
         esdc:magnetotellurics,
         esdc:geothermics-and-radiometrics,
-        esdc:geothermal-energy,
         esdc:magnetics,
         esdc:seismic-surveys,
         esdc:passive-seismic,
@@ -675,9 +676,9 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:petrophysics,
         esdc:environmental-sciences,
         esdc:engineering,
-	esdc:remote-sensing,
+        esdc:surveying,
+        esdc:remote-sensing,
         esdc:airborne-spectral,
         esdc:core-spectral,
-        esdc:satellite-spectral,
-        esdc:surveying ;
+        esdc:satellite-spectral ;
     skos:prefLabel "Lodgement form selection"@en .
