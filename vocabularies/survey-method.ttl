@@ -1,4 +1,4 @@
-@prefix svymh: <https://linked.data.gov.au/def/survey-method/> .
+@prefix svymh: <http://linked.data.gov.au/def/survey-method/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -6,12 +6,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://linked.data.gov.au/def/survey-method> a owl:Ontology,
+<http://linked.data.gov.au/def/survey-method> a owl:Ontology,
         skos:ConceptScheme ;
     dcterms:created "2020-02-10"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-05-14"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The method of collection used by a survey."@en ;
     skos:hasTopConcept svymh:airborne,
@@ -22,16 +22,16 @@
         svymh:satellite ;
     skos:prefLabel "Survey Method"@en .
 
-<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 svymh:airborne a skos:Concept ;
     skos:altLabel "Aerial"@en ;
     skos:definition "Surveys in which the surveying equipment is mounted to an aircraft such as an airplane, helicopter, balloon, or aerial drone."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Airborne"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/survey-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
     
 svymh:fixed-wing a skos:Concept ;
     skos:altLabel "Airplane"@en,
@@ -39,7 +39,7 @@ svymh:fixed-wing a skos:Concept ;
         "Glider"@en ;
     skos:broader svymh:airborne ;
     skos:definition "A heavier-than-air flying machine that is capable of flight using wings that generate lift caused by the aircraft's forward airspeed and the shape of the wings. Source:Wikipedia"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Fixed Wing"@en .
 
 svymh:rotary-wing a skos:Concept ;
@@ -49,7 +49,7 @@ svymh:rotary-wing a skos:Concept ;
         "Autogyro"@en ;
     skos:broader svymh:airborne ;
     skos:definition "A heavier-than-air flying machine that generates lift using rotary wings or rotor blades, which revolve around a mast."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Rotary Wing"@en .
     
 svymh:balloon a skos:Concept ;
@@ -58,7 +58,7 @@ svymh:balloon a skos:Concept ;
         "Hot-Air Balloon"@en ;
     skos:broader svymh:airborne ;
     skos:definition "A lighter-than-air flying machine that generates lift using buoyancy and lacks a means to propel and direct itself through the air. A balloon may be free, moving with the wind, or tethered to a fixed point. "@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Balloon"@en .
         
 svymh:airship a skos:Concept ;
@@ -68,7 +68,7 @@ svymh:airship a skos:Concept ;
         "Zeppelin"@en ;
     skos:broader svymh:airborne ;
     skos:definition "A lighter-than-air flying machine that generates lift using buoyancy and has a means to propel and direct itself through the air under its own power, such as a rotor."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Airship"@en .
 
 svymh:uav a skos:Concept ;
@@ -77,15 +77,15 @@ svymh:uav a skos:Concept ;
         "Uncrewed aerial vehicle"@en ;
     skos:broader svymh:airborne ;
     skos:definition "An aircraft without a human pilot on board and a type of unmanned vehicle. UAVs may operate with various degrees of autonomy: either under remote control by a human operator or autonomously by onboard computers."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Drone"@en .
 
 svymh:downhole a skos:Concept ;
     skos:altLabel "Borehole"@en ;
     skos:definition "Surveys where equipment is conveyed down a borehole to record measurements of borehole, rock, or fluid attributes."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Downhole"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/survey-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
 
 svymh:mwd a skos:Concept ;
     skos:hiddenLabel "Logging While Drilling"@en,
@@ -97,7 +97,7 @@ svymh:mwd a skos:Concept ;
         "M.W.D"@en ;
     skos:broader svymh:downhole ;
     skos:definition "A survey where data is acquired while the hole is being drilled, from sensors integrated within the drill string ."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Measurement While Drilling"@en .
 
 svymh:pipe-conveyed a skos:Concept ;
@@ -105,36 +105,36 @@ svymh:pipe-conveyed a skos:Concept ;
         "on pipe"@en;
     skos:broader svymh:downhole ;
     skos:definition "A survey where data is acquired from logging tools attached to the drill string, while the well is not actively drilling."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Pipe Conveyed"@en .
 
 svymh:well-tractor a skos:Concept ;
     skos:altLabel "borehole tractor"@en;
     skos:broader svymh:downhole ;
     skos:definition "A survey where data is acquired from logging tools integrated in a Well Tractor, a device that moves through a wellbore using wheels or tracks pushed against the side of the borehole."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Well Tractor"@en .
 
 svymh:wireline a skos:Concept ;
     skos:altLabel "wireline logging"@en;
     skos:broader svymh:downhole ;
     skos:definition "A survey where data is acquired from logging tools lowered and raised within a borehole on a wireline or cable."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Wireline"@en .
 
 svymh:ground a skos:Concept ;
     skos:altLabel "Land"@en ;
     skos:definition "Surveys undertaken at ground level or a solid subsurface level such as an underground mine floor. This may include surface collection of rocks, soil, water or other physical samples; geophysical surveys from surface locations; handheld photography."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Ground"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/survey-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
 
 svymh:fixed-location a skos:Concept ;
     skos:altLabel "Permanent Location"@en ;
     skos:definition "Surveys undertaken at ground level from a set of fixed locations."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Fixed location"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/survey-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
 
 svymh:human a skos:Concept ;
     skos:altLabel "Manual"@en,
@@ -142,7 +142,7 @@ svymh:human a skos:Concept ;
         "In Person"@en ;
     skos:broader svymh:ground ;
     skos:definition "A ground based survey where data is acquired from a human conducting work on-foot."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Human"@en .
 
 svymh:vehicle a skos:Concept ;
@@ -152,7 +152,7 @@ svymh:vehicle a skos:Concept ;
         "Vehicle Conveyed"@en ;
     skos:broader svymh:ground ;
     skos:definition "A ground based survey where data is acquired from instruments mounted to a vehicle."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Vehicle"@en .
 
 svymh:laboratory a skos:Concept ;
@@ -161,18 +161,18 @@ svymh:laboratory a skos:Concept ;
         "Lab"@en,
         "Mobile"@en ;
     skos:definition "Surveys undertaken on samples that are no-longer in-situ e.g. spectral surveys of core by hylogger in a laboratory, CoreScan in a rig site, XRF analysis of collected samples."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Laboratory"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/survey-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
 
 svymh:marine a skos:Concept ;
     skos:altLabel "Oceanic"@en,
         "Sea"@en,
         "On Water"@en;
     skos:definition "Surveys undertaken at or below the surface of a body of water such as an ocean, sea, or lake."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Marine"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/survey-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .
 
 svymh:boat a skos:Concept ;
     skos:altLabel "Ship"@en,
@@ -181,7 +181,7 @@ svymh:boat a skos:Concept ;
         "Motorboat"@en ;
     skos:broader svymh:marine ;
     skos:definition "A marine survey where data is acquired from instruments attached to a mobile water craft on the water's surface."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Boat"@en .
 
 svymh:diver a skos:Concept ;
@@ -189,7 +189,7 @@ svymh:diver a skos:Concept ;
         "SCUBA Diver"@en;
     skos:broader svymh:marine ;
     skos:definition "A marine survey where data is acquired by a human conveying the instruments of measurement."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Diver"@en .
 
 svymh:float a skos:Concept ;
@@ -199,7 +199,7 @@ svymh:float a skos:Concept ;
         "Floating Pier"@en ;
     skos:broader svymh:marine ;
     skos:definition "A marine survey where data is acquired from instruments operated from a fixed, buoyant, structure at the water's surface."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Float"@en .
 
 svymh:submarine a skos:Concept ;
@@ -208,7 +208,7 @@ svymh:submarine a skos:Concept ;
         "Underwater"@en ;
     skos:broader svymh:marine ;
     skos:definition "A marine survey where data is acquired by a human piloted watercraft operating under the surface of the water. Surveys may be performed by submarines or submersibles."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Submarine"@en .
 
 svymh:uuv a skos:Concept ;
@@ -220,11 +220,11 @@ svymh:uuv a skos:Concept ;
         "remotely operated underwater vehicles"@en ;
     skos:broader svymh:marine ;
     skos:definition "A marine survey where data is acquired by a watercraft, without an onboard human pilot, operating under the surface of the water."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Unmanned underwater vehicle"@en .
 
 svymh:satellite a skos:Concept ;
     skos:definition "Surveys in which the surveying equipment is mounted to a platform outside the earth's atmosphere. Typically in a stable orbit such as a satellite, space station, or shuttle."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/survey-method> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-method> ;
     skos:prefLabel "Satellite"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/survey-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-method> .

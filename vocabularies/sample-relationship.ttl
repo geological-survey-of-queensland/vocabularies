@@ -6,11 +6,11 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://linked.data.gov.au/def/sample-relationship> a owl:Ontology , skos:ConceptScheme ;
+<http://linked.data.gov.au/def/sample-relationship> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-03-24T09:03:21"^^xsd:dateTime ;
-    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-03-24T09:03:21"^^xsd:dateTime ;
-    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Source information from https://www.w3.org/TR/vocab-ssn/#Sample_Relations and the SOSA Extensions ontology, modified by the Geological Survey of Queensland." ;
     skos:definition """Relationships between Samples.
 
@@ -22,7 +22,7 @@ This vocabulary is derived from the SOSA Ontology and the SOSA Extensions Ontolo
     skos:prefLabel "Sample Relationship"@en ;
 .
 
-<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
@@ -34,7 +34,7 @@ sosa:hasSample
     sdo:rangeIncludes sosa:Sample ;
     owl:inverseOf sosa:isSampleOf ;
     rdfs:isDefinedBy sosa: ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-relationship> .
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> .
 
 sosa:isSampleOf
     a owl:ObjectProperty , skos:Concept ;
@@ -44,7 +44,7 @@ sosa:isSampleOf
     sdo:rangeIncludes sosa:FeatureOfInterest ;
     owl:inverseOf sosa:hasSample ;
     rdfs:isDefinedBy sosa: ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-relationship> .
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> .
 
 sosa:hasOriginalSample
     a owl:ObjectProperty , skos:Concept ;
@@ -54,10 +54,10 @@ sosa:hasOriginalSample
     skos:definition "A Link to the original sample that is related to the context sample through a chain of isSampleOf relations."@en ;
     rdfs:domain sosa:Sample ;
     rdfs:range sosa:Sample ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-relationship> .
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> .
 
 
-<https://linked.data.gov.au/org/gsq>
+<http://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> ;
