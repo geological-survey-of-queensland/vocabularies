@@ -143,11 +143,18 @@ gsqst:colluvial a skos:Concept ;
 
 gsqst:outcrop a skos:Concept ;
     skos:broader gsqst:field-site ;
-    dct:source "Merriam-Webster Dictionary" ;
-    skos:definition "The part of a rock formation that appears at the surface of the ground."@en ;
+    skos:definition "A field site where bedrock is exposed at the surface of the earth, and not concealed by regolith or water. There is a high degree of confidence that samples and observations from an outcrop site relate to the bedrock at that location."@en ;
     skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "oc" ;
     skos:prefLabel "Outcrop"@en .
+
+gsqst:subcrop a skos:Concept ;
+    skos:altLabel "sub-outcrop"@en ;
+    skos:broader gsqst:outcrop ;
+    skos:definition "A field site where bedrock is only exposed over a small area with very little topographic relief, to such an extent that the bedrock is reasonably inferred to be in-situ. There is a reasonable degree of confidence that samples and observations from a subcrop site relate to the bedrock at that location."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "sc" ;
+    skos:prefLabel "Subcrop"@en .
 
 gsqst:regolith a skos:Concept ;
     skos:broader gsqst:field-site ;
@@ -175,14 +182,6 @@ gsqst:saprolith a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "sr" ;
     skos:prefLabel "Saprolith"@en .
-
-gsqst:subcrop a skos:Concept ;
-    skos:altLabel "sub-outcrop"@en ;
-    skos:broader gsqst:field-site ;
-    skos:definition "The part of a rock formation under soil or sediment cover that is close to, but not outcropping at, the ground surface."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
-    skos:notation "sc" ;
-    skos:prefLabel "Subcrop"@en .
 
 gsqst:tailings a skos:Concept ;
     skos:altLabel "Processing Plant"@en ;
