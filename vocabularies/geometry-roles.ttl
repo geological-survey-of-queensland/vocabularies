@@ -1,20 +1,18 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix geox: <http://linked.data.gov.au/def/geox> .
 @prefix grole: <http://linked.data.gov.au/def/geometry-roles/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/geometry-roles> 
+<http://linked.data.gov.au/def/geometry-roles>
     a owl:Ontology , skos:ConceptScheme ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:created "2020-03-12"^^xsd:date ;
-    dct:modified "2020-03-12"^^xsd:date ;
-    dct:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:created "2020-03-12"^^xsd:date ;
+    dcterms:modified "2020-03-12"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     skos:definition """A Geometry Role is the function a Geometry plays in relation to the Feature it is a Geometry for where Feature and Geometry are defined by the GeoSPARQL Ontology.
     
 Geometry Role is not geometry type and does not indicate sub classes of geometry. Well known Geometry types or subclasses of geometry include Point, Polygon, LineString MultiPolygon etc."""@en ;
@@ -32,7 +30,7 @@ Geometry Role is not geometry type and does not indicate sub classes of geometry
 .
 
 grole:centroid a skos:Concept ;
-    dct:source <https://en.wikipedia.org/wiki/Centroid> ;
+    dcterms:source <https://en.wikipedia.org/wiki/Centroid> ;
     skos:altLabel "barycenter"@en ;
     skos:definition "The arithmetic mean position of all the Points in a Feature's Geometry, expressed as a single Point."@en ;
     skos:hiddenLabel "center of mass"@en ;
@@ -42,7 +40,7 @@ grole:centroid a skos:Concept ;
 
 grole:bounding-box a skos:Concept ;
     skos:broader grole:boundary ;
-    dct:source <https://en.wikipedia.org/wiki/Minimum_bounding_box> ;
+    dcterms:source <https://en.wikipedia.org/wiki/Minimum_bounding_box> ;
     skos:altLabel "minimum bounding box"@en , "smallest bounding box"@en , "enclosing box"@en , "bounding rectangle"@en ;
     skos:definition "The box (rectangle) with the smallest area that contains all the Points in a Feature's Geometry."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
@@ -50,7 +48,7 @@ grole:bounding-box a skos:Concept ;
 
 grole:bounding-circle a skos:Concept ;
     skos:broader grole:boundary ;
-    dct:source <https://en.wikipedia.org/wiki/Smallest-circle_problem> ;
+    dcterms:source <https://en.wikipedia.org/wiki/Smallest-circle_problem> ;
     skos:definition "The circle with the smallest area that contains all the Points in a Feature's Geometry."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
     skos:prefLabel "Bounding circle"@en .
@@ -68,7 +66,7 @@ grole:concave-hull a skos:Concept ;
     skos:prefLabel "Concave hull"@en .
 
 grole:convex-hull a skos:Concept ;    
-    dct:source <https://www.arcgis.com/home/item.html?id=a6129839e96d4c0682250673cd89589d> ;
+    dcterms:source <https://www.arcgis.com/home/item.html?id=a6129839e96d4c0682250673cd89589d> ;
     skos:broader grole:boundary ;
     skos:definition "The minimum bounding Polygon encompassing all the all Points in a Feature's Geometry."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
@@ -78,5 +76,5 @@ grole:detailed-geometry a skos:Concept ;
     skos:definition "A Feature's Geometry in detail. It may be regular or irrigular but it does not constitute a Boundary for the Feature."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
     skos:prefLabel "Detailed geometry"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geometry-roles> .                    
+    skos:topConceptOf <http://linked.data.gov.au/def/geometry-roles> .
 

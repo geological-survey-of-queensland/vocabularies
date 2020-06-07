@@ -1,20 +1,17 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix datac: <http://linked.data.gov.au/def/dataciteroles/> .
 
 <http://linked.data.gov.au/def/dataciteroles> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2019-10-17"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-01-10"^^xsd:date ;
-    dct:publisher <http://linked.data.gov.au/org/gsq> ;    
-    dct:source "DataCite Metadata Working Group. (2019). DataCite Metadata Schema Documentation for the Publication and Citation of Research Data. Version 4.3. DataCite e.V. https://doi.org/10.14454/7xq3-zf69, Appendix 1, Table 5" ;
+    dcterms:created "2019-10-17"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-01-10"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "DataCite Metadata Working Group. (2019). DataCite Metadata Schema Documentation for the Publication and Citation of Research Data. Version 4.3. DataCite e.V. https://doi.org/10.14454/7xq3-zf69, Appendix 1, Table 5" ;
     skos:definition "A SKOS version of the DataCite Metadata Schema V 4.3 Table 5 contributorType roles."@en ;
     skos:hasTopConcept datac:ContactPerson,
         datac:DataCollector,
@@ -39,10 +36,9 @@
         datac:WorkPackageLeader ;
     skos:prefLabel "DataCite Metadata Schema Roles"@en .
 
-<http://linked.data.gov.au/org/gsq>
-    a sdo:Organization ;
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-.
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 datac:ContactPerson a skos:Concept ;
     skos:definition "Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource."@en ;

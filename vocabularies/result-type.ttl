@@ -1,18 +1,17 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rslt: <http://linked.data.gov.au/def/result-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/result-type> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2020-02-08T14:48:09"^^xsd:dateTime ;
-    dct:creator "Geological Survey of Queensland" ;
-    dct:modified "2020-02-08T14:48:17"^^xsd:dateTime ;
-    dct:source "Compiled by the Geological Survey of Queensland" ;
+<http://linked.data.gov.au/def/result-type> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2020-02-08"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-05-28"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The description and definition of the qualitative and quantitative results obtained through geoscience observations."@en ;
     skos:hasTopConcept rslt:angle,
         rslt:age,
@@ -65,6 +64,7 @@
         rslt:radioactivity,
         rslt:resitivity,
         rslt:rotation,
+        rslt:sales-volumetric,
         rslt:saturation,
         rslt:shear-strength,
         rslt:sorting,
@@ -89,6 +89,10 @@
         rslt:work,
         rslt:yield-point ;
     skos:prefLabel "Result Type"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 rslt:age a skos:Concept ;
     skos:definition "The time before a reference time. Commonly referenced to time before present (BP), before current era (BCE), or represented as Millions of Years Ago (Ma) in geological disciplines"@en ;
@@ -405,7 +409,7 @@ rslt:measured-depth a skos:Concept ;
     skos:definition "The depth below a reference point or reference datum along a defined path. Commonly used along the path of a wellbore."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "rmmd" ;
-    skos:notation "MD" ;
+    skos:altLabel "MD" ;
     skos:prefLabel "Measured Depth"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
@@ -469,6 +473,14 @@ rslt:rotation a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "rrtt" ;
     skos:prefLabel "Rotation"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
+rslt:sales-volumetric a skos:Concept ;
+    skos:definition "A measure of the amount of a commodity in its unit of sale. A measure of a reserve or resource volume."@en ;
+    skos:scopeNote "Sales volumes are represented by commodity specific units of measure that are internally inconsistent within a standard result type and refer specifically to the context of marketable quantities i.e. a sales quantity may be a volume, energy unit, mass, or other result type."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rsal" ;
+    skos:prefLabel "Sales Volumetric"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:saturation a skos:Concept ;
@@ -561,7 +573,7 @@ rslt:true-vertical-depth a skos:Concept ;
     skos:definition "The depth below a reference point or reference datum in a direct vertical direction."@en ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "rtvd" ;
-    skos:notation "TVD" ;
+    skos:altLabel "TVD" ;
     skos:prefLabel "True Vertical Depth"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 

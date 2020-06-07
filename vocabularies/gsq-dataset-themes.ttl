@@ -1,27 +1,23 @@
 @prefix : <http://linked.data.gov.au/def/gsq-dataset-theme/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/gsq-dataset-theme> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2019-10-02T15:00:47"^^xsd:dateTime ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2019-10-09T15:16:00"^^xsd:dateTime ;
-    dct:publisher <http://linked.data.gov.au/org/gsq> ;
-    dct:source "Developed by the Geological Survey of Queensland." ;
+    dcterms:created "2019-10-02T15:00:47"^^xsd:dateTime ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2019-10-09T15:16:00"^^xsd:dateTime ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "A list of broad thematic descriptions of datasets created, received, and held by the Geological Survey of Queensland."@en ;
     skos:prefLabel "GSQ dataset themes"@en .
 
-<http://linked.data.gov.au/org/gsq>
-    a sdo:Organization ;
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-.
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 :administrative-data a skos:Concept ;
     skos:definition "Ancillary information regarding the administration of Queensland Resources such as administrative boundaries, resource permits, legislation, and information about organisations such as DNRME and GSQ."@en ;

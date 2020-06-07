@@ -1,20 +1,18 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix bhfunc: <http://linked.data.gov.au/def/borehole-sub-purpose/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/borehole-sub-purpose> a owl:Ontology,
         skos:ConceptScheme ;
-    dct:created "2020-01-23"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-01-23"^^xsd:date ;
-    dct:source "Compiled by the Geological Survey of Queensland" ;
+    dcterms:created "2020-01-23"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-01-23"^^xsd:date ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The intended function of a borehole."@en ;
     skos:hasTopConcept bhfunc:blasthole,
         bhfunc:disposal,
@@ -34,7 +32,8 @@
     skos:prefLabel "Borehole Sub-Purpose"@en .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" .
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 bhfunc:acid-leachate-testing a skos:Concept ;
     skos:broader bhfunc:environmental ;

@@ -1,19 +1,17 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gsqst: <http://linked.data.gov.au/def/geological-sites/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/geological-sites> a owl:Ontology , skos:ConceptScheme ;
-    dct:created "2020-02-07"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-05-06"^^xsd:date ;
-    dct:source "Compiled by the Geological Survey of Queensland" ;
+    dcterms:created "2020-02-07"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-05-06"^^xsd:date ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
     skos:hasTopConcept 
         gsqst:auger,
@@ -117,7 +115,7 @@ gsqst:waterbody a skos:Concept ;
         "Lake"@en,
         "Pond"@en ;
     skos:broader gsqst:alluvial ;
-    dct:source "Source: Merriam-Webster Dictionary" ;
+    dcterms:source "Source: Merriam-Webster Dictionary" ;
     skos:definition "Any significant accumulation of typically non-flowing water, generally on a planet's surface. The term most often refers to oceans, seas, and lakes, but it includes smaller pools of water such as ponds, wetlands, or more rarely, puddles."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
     skos:notation "wy" ;
@@ -140,7 +138,7 @@ gsqst:colluvial a skos:Concept ;
 
 gsqst:outcrop a skos:Concept ;
     skos:broader gsqst:field-site ;
-    dct:source "Merriam-Webster Dictionary" ;
+    dcterms:source "Merriam-Webster Dictionary" ;
     skos:definition "The part of a rock formation that appears at the surface of the ground."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
     skos:notation "oc" ;
@@ -165,7 +163,7 @@ gsqst:tailings a skos:Concept ;
     skos:prefLabel "Tailings"@en .
 
 gsqst:mine a skos:Concept ;
-    dct:source "Source: Merriam-Webster Dictionary" ;
+    dcterms:source "Source: Merriam-Webster Dictionary" ;
     skos:definition "A pit or excavation in the earth from which mineral substances are taken. Source: Merriam-Webster Dictionary"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
     skos:notation "mi" ;

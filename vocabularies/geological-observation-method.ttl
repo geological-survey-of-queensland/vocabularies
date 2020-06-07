@@ -1,21 +1,18 @@
 @prefix obsmh: <http://linked.data.gov.au/def/geological-observation-method/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/geological-observation-method> a owl:Ontology, 
+<http://linked.data.gov.au/def/geological-observation-method> a owl:Ontology,
         skos:ConceptScheme ;
-    dct:created "2020-02-10"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-05-14"^^xsd:date ;
-    dct:publisher <http://linked.data.gov.au/org/gsq> ;
-    dct:source "Compiled by the Geological Survey of Queensland" ;
+    dcterms:created "2020-02-10"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-05-14"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The method of collection used in an observation."@en ;
     skos:hasTopConcept obsmh:accelerated-weight-drop,
         obsmh:air-gun,
@@ -51,7 +48,8 @@
     skos:prefLabel "Observation Method"@en .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" .
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
     
 obsmh:accelerated-weight-drop a skos:Concept ;
     skos:altLabel "AWD"@en ;

@@ -3,9 +3,8 @@
 # imports: http://www.w3.org/2006/time
 
 @prefix trs: <http://linked.data.gov.au/def/trs#> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,10 +18,10 @@
   skos:prefLabel "Temporal Reference Systems"@en ;
   skos:definition "Temporal reference system, such temporal coordinate systems (with origin, directions, and scales), calendar-clock combinations, or a (possibly hierarchical) ordinal system."@en ;
   skos:historyNote "This vocabulary was established to provide instances of the Time Ontology in OWL's time:TRS class for reference. See <https://www.w3.org/TR/owl-time/#time:TRS> for the time:TRS definition."@en ;
-  dct:created "2019-10-17"^^xsd:date ;
-  dct:creator <https://orcid.org/0000-0002-8742-7730> ;
-  dct:modified "2020-05-08"^^xsd:date ;
-  dct:publisher <http://linked.data.gov.au/org/gsq> ;
+  dcterms:created "2019-10-17"^^xsd:date ;
+  dcterms:creator <https://orcid.org/0000-0002-8742-7730> ;
+  dcterms:modified "2020-05-08"^^xsd:date ;
+  dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
   skos:hasTopConcept 
     trs:BahaiCalendar ,
     trs:BeforePresent ,
@@ -44,14 +43,21 @@
     trs:UTCTime ;
 .
 
-<http://linked.data.gov.au/org/gsq>
-  a sdo:Organization ;
-  sdo:name "Geological Survey of Queensland" ;
-.
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 <https://orcid.org/0000-0002-8742-7730>
   a sdo:Person ;
   sdo:name "Nicholas J. Car" ;
+  sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
+  sdo:affiliation <https://surroundaustralia.com> ;
+  sdo:identifier <https://orcid.org/0000-0002-8742-7730> ;
+.
+<https://surroundaustralia.com>
+  a sdo:Organization ;
+  sdo:name "SURROUND Australia Pty Ltd" ;
+  sdo:url <https://surroundaustralia.com> ;
 .
 trs:BahaiCalendar
   a skos:Concept ;
@@ -75,7 +81,7 @@ trs:BeforePresent
 trs:BIPM
   a skos:Concept ;
   a time:TRS ;
-  dct:source <http://www.opengis.net/def/trs/BIPM> ;
+  dcterms:source <http://www.opengis.net/def/trs/BIPM> ;
   rdfs:seeAlso <https://www.bipm.org/en/bipm/tai/tai> ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
   skos:altLabel "BIPM" ;
@@ -87,7 +93,7 @@ trs:BIPM
 trs:ChineseCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Chinese_calendar> ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
   skos:definition "The traditional China calendar (officially known as the Rural Calendar [農曆; 农历; Nónglì; 'farming calendar']), or Former Calendar (舊曆; 旧历; Jiùlì), Traditional Calendar (老曆; 老历; Lǎolì) or Lunar Calendar (陰曆; 阴历; Yīnlì; 'yin calendar'), is a lunisolar calendar which reckons years, months and days according to astronomical phenomena. It is defined by GB/T 33661-2017, 'Calculation and promulgation of the Chinese calendar' issued by the Standardisation Administration of China on 12 May 2017."@en ;
@@ -115,7 +121,7 @@ trs:GeologicTimescale
 trs:GregorianCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Gregorian_calendar> ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
   skos:definition "The Gregorian calendar is the calendar used in most of the world. It is named after Pope Gregory XIII, who introduced it in October 1582. "@en ;
@@ -125,7 +131,7 @@ trs:GregorianCalendar
 trs:HebrewCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <http://dbpedia.org/resource/Hebrew_calendar> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Hebrew_calendar> ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
@@ -137,7 +143,7 @@ trs:HebrewCalendar
 trs:IndianNationalCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Indian_national_calendar> ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
   skos:definition "The Indian national calendar, sometimes called the Shalivahana Shaka calendar is used, alongside the Gregorian calendar, by The Gazette of India, in news broadcasts by All India Radio and in calendars and communications issued by the Government of India."@en ;
@@ -158,7 +164,7 @@ As one of the few calendars designed in the era of accurate positional astronomy
 trs:IslamicCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <https://aa.usno.navy.mil/faq/docs/islamic.php> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Islamic_calendar> ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
@@ -169,7 +175,7 @@ trs:IslamicCalendar
 trs:JulianCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Julian_calendar> ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
   skos:definition "The Julian calendar, proposed by Julius Caesar in 708 AUC (46 BC/BCE), was a reform of the Roman calendar. It took effect on 1 January 709 AUC (45 BC/BCE), by edict. It was designed with the aid of Greek mathematicians and Greek astronomers such as Sosigenes of Alexandria. "@en ;
@@ -199,7 +205,7 @@ trs:MayaCalendar
 trs:ParliamentsOfAustraliaTimeline
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://en.wikipedia.org/wiki/Chronology_of_Australian_federal_parliaments> ;
+  dcterms:source <https://en.wikipedia.org/wiki/Chronology_of_Australian_federal_parliaments> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Parliament_of_Australia> ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
   skos:definition """This timeline of Parliaments of Australia starts in 1901 (Gregorian Caledar) when Australia was formed as an country. Epochs within this timeline are parliaments which are formed after elections with the first parliament formed after the first election in 1901 and subsequently numbered 1st, 2nd, 3rd etc. up to (as of October, 2019, Gegorian Calendar) the 44th."""@en ;
@@ -228,7 +234,7 @@ trs:UNIXTime
 trs:UTCTime
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://www.bipm.org/en/bipm-services/timescales/> ;
+  dcterms:source <https://www.bipm.org/en/bipm-services/timescales/> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Unix_time> ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
   skos:definition "The atomic time scale that forms the basis for the coordinated dissemination of standard frequencies and time signals."@en ;
@@ -239,7 +245,7 @@ trs:UTCTime
 trs:ThousandsOfYearsAgo
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://www.bipm.org/en/bipm-services/timescales/> ;
+  dcterms:source <https://www.bipm.org/en/bipm-services/timescales/> ;
   skos:altLabel "ka"@en ;
   skos:broader trs:BeforePresent ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
@@ -250,7 +256,7 @@ trs:ThousandsOfYearsAgo
 trs:MillionsOfYearsAgo
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://www.bipm.org/en/bipm-services/timescales/> ;
+  dcterms:source <https://www.bipm.org/en/bipm-services/timescales/> ;
   skos:altLabel "Ma"@en ;
   skos:broader trs:BeforePresent ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
@@ -261,7 +267,7 @@ trs:MillionsOfYearsAgo
 trs:BillionsOfYearsAgo
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://www.bipm.org/en/bipm-services/timescales/> ;
+  dcterms:source <https://www.bipm.org/en/bipm-services/timescales/> ;
   skos:altLabel "Ga"@en ;
   skos:broader trs:BeforePresent ;
   skos:inScheme <http://linked.data.gov.au/def/trs> ;

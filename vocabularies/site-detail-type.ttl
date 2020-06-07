@@ -1,27 +1,31 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix stdt: <http://linked.data.gov.au/def/site-detail-type/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/site-detail-type> a owl:Ontology,
         skos:ConceptScheme ;
-    dct:created "2020-03-30"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-05-27"^^xsd:date ;
-    dct:publisher <http://linked.data.gov.au/org/gsq> ;
-    dct:source "Compiled by the Geological Survey of Queensland" ;
+    dcterms:created "2020-03-30"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-05-27"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Miscellaneous Survey Details."@en ;
     skos:prefLabel "Site-detail-type"@en .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+
+stdt:collaborative-drilling-initiative-well a skos:Concept ;
+    skos:definition "Whether the borehole was partly or wholly funded through the Collaborative Drilling Initiative."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
+    skos:altLabel "Collaborative Exploration Initiative Well"@en ;
+    skos:prefLabel "Collaborative Drilling Initiative Well"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
 
 stdt:confidential a skos:Concept ;
     skos:definition "Whether the details pertaining to the entity are confidential records."@en ;
@@ -58,13 +62,13 @@ stdt:location-method a skos:Concept ;
 stdt:extent-of-workings a skos:Concept ; 
     skos:definition "The approximate spatial extent (length, width, and height) of mine works or diggings that exist at a site. "@en ; 
     skos:scopeNote "May be an observation of a site, rather than a site attribute in future release."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ; 
+    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
     skos:prefLabel "Extent of workings"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
 
 stdt:original-crs a skos:Concept ;
     skos:definition "The original Coordinate Reference System of recorded location information."@en ; 
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ; 
+    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
     skos:prefLabel "Original CRS"@en ;
     skos:scopeNote "For use in data migration. Used for data previously stored in MERLIN that was converted to GDA94 in 2005."@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
