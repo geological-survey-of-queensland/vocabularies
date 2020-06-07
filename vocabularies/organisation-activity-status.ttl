@@ -1,18 +1,18 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix oas: <https://linked.data.gov.au/def/organisation-activity-status/> .
+@prefix oas: <http://linked.data.gov.au/def/organisation-activity-status/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://linked.data.gov.au/def/organisation-activity-status> a owl:Ontology,
+<http://linked.data.gov.au/def/organisation-activity-status> a owl:Ontology,
         skos:ConceptScheme ;
     dcterms:created "2020-03-25"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-03-25"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
-    dcterms:source "Derived from  Australian Standard AS4590.1:2017 and ASIC." ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Derived from Australian Standard AS4590.1:2017 and ASIC." ;
     skos:definition "Descriptions of the business activity of an organisation at a point in time."@en ;
     skos:prefLabel "Organisation Activity Status"@en ;
     skos:hasTopConcept oas:strike-off-action-in-progress,
@@ -20,34 +20,34 @@
         oas:trading,
         oas:under-external-administration-and-or-controller-appointed .
 
-<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 oas:strike-off-action-in-progress a skos:Concept ;
     skos:definition "The organisation is being removed from the organisational register."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-activity-status> ;
     skos:notation "SOFF" ;
     skos:prefLabel "Strike off action in progress"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-activity-status> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-activity-status> .
 
 oas:suspended-trading a skos:Concept ;
     skos:definition "The organisation has suspended or has been suspended from trading on an exchange."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-activity-status> ;
     skos:prefLabel "Suspended Trading"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-activity-status> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-activity-status> .
 
 oas:trading a skos:Concept ;
     skos:definition "The organisation is being traded on an exchange."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-activity-status> ;
     skos:prefLabel "Trading"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-activity-status> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-activity-status> .
 
 oas:under-external-administration-and-or-controller-appointed a skos:Concept ;
     skos:altLabel "Controller Appointed",
         "Under External Administration" ;
     skos:definition "The organisation is being administered or controlled by a person or persons independent of that organisation."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-activity-status> ;
     skos:notation "EXAD" ;
     skos:prefLabel "Under external administration and/or controller appointed"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-activity-status> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-activity-status> .
