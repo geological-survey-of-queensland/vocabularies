@@ -1,17 +1,17 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix orgtyp: <https://linked.data.gov.au/def/organisation-type/> .
+@prefix orgtyp: <http://linked.data.gov.au/def/organisation-type/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://linked.data.gov.au/def/organisation-type> a owl:Ontology,
+<http://linked.data.gov.au/def/organisation-type> a owl:Ontology,
         skos:ConceptScheme ;
     dcterms:created "2020-03-25"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-03-25"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Derived from ABS 1218.0" ;
     skos:definition "The code that classifies institutional units according to the type of legal organisation that best describes their structure."@en ;
     skos:prefLabel "Organisation Type"@en ;
@@ -28,78 +28,78 @@
         orgtyp:sole-proprietorship,
         orgtyp:trust-regarded-as-corporations .
 
-<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 orgtyp:family-partnership a skos:Concept ;
     skos:definition "Partnerships formed by members of the same family who enter into a formal agreement to conduct business. As with sole proprietorships the partners are personally responsible for business decisions and liabilities. (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Family Partnership"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:foreign-government-entities a skos:Concept ;
     skos:definition "Foreign government entities which operate in Australia (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Foreign Government Entities"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:government-companies a skos:Concept ;
     skos:definition "Government units (as defined in Chapter 2) which are created as bodies corporate through the Corporations Act in Australia or through other legislation (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Government Companies"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:other-government-entities a skos:Concept ;
     skos:definition "All government units (as defined in Chapter 2) except those that are created as bodies corporate (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Other Government Entities"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:other-incorporated-companies a skos:Concept ;
     skos:definition "Entities which are incorporated through means other than the Corporations Act such as state or territory associations' acts or the Commonwealth's Corporations (Aboriginal and Torres Strait Islander) Act 2006. These entities have a legal identity separate from their members or shareholders (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Other Incorporated Companies"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:other-incorporated-entities a skos:Concept ;
     skos:definition "Unincorporated entities other than sole proprietors, partnerships and trusts. Examples of other unincorporated entities are sporting or social clubs. Legally these do not have a separate identity from their owners (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Other Incorporated Entities"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:other-partnership a skos:Concept ;
     skos:definition "Partnerships comprised of individuals who enter into a formal agreement to conduct business. Membership is not confined to members of the same family. The partners may be companies, government departments or individuals. Partners operate under their own names and are responsible for business decisions and liabilities (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Other Partnership"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:other-trust a skos:Concept ;
     skos:definition "All trusts, other than those regarded as corporations. A trust is a legal arrangement whereby a trustee manages an asset on behalf of the beneficiaries of the trust. The terms of the arrangements are set out in the trust deed (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Other Trust"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:proprietary-companies a skos:Concept ;
     skos:definition "Entities, incorporated through the Corporations Act, as proprietary companies (defined under section 45A(1) of the Corporations Act 2001). These companies have restrictions on how they may operate, for example they are not permitted to have more than 50 shareholders or offer its shares to the public (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Proprietary Companies"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:public-companies a skos:Concept ;
     skos:definition "This class consists of entities incorporated through the Corporations Act which are: Limited by shares; Limited by guarantee; and No liability. The liability of shareholders of companies limited by shares is limited to amounts unpaid on their shares. The liability of members of companies limited by guarantee is limited to the amounts that they undertake to contribute in the event of the company being wound up (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Public Companies"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:sole-proprietorship a skos:Concept ;
     skos:definition "Single owner entities which do not operate through an incorporated entity. The owner of the business is personally responsible for all business decisions and liabilities. (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Sole Proprietorship"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .
 
 orgtyp:trust-regarded-as-corporations a skos:Concept ;
     skos:definition "Trusts which behave as corporations. A trust is a legal arrangement whereby a trustee manages an asset on behalf of the beneficiaries of the trust. This may include overseeing business activity on behalf of the beneficiaries. The terms of the arrangements are set out in the trust deed (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/organisation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-type> ;
     skos:prefLabel "Trust Regarded as Corporations"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/organisation-type> .
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-type> .

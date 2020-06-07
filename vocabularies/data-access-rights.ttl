@@ -5,53 +5,53 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix da: <https://linked.data.gov.au/def/data-access-rights/> .
+@prefix da: <http://linked.data.gov.au/def/data-access-rights/> .
 
-<https://linked.data.gov.au/def/data-access-rights> a owl:Ontology , skos:ConceptScheme ;
+<http://linked.data.gov.au/def/data-access-rights> a owl:Ontology , skos:ConceptScheme ;
     skos:prefLabel "Data Access Rights"@en ;
     skos:definition "Data access rights control how users and systems access a data resource."@en ;
     skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
     dcterms:source <http://vocabularies.coar-repositories.org/documentation/access_rights/> ;
-    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2019-04-03"^^xsd:date ;
     dcterms:modified "2019-09-10"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
 .
 
-<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 da:embargoed a skos:Concept ;
     skos:prefLabel "Embargoed access"@en ;
     skos:definition "Embargoed access refers to a resource accessible as metadata only until released for open access on a specified date."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/data-access-rights> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/data-access-rights> .
+    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> .
 
 da:metadata-only a skos:Concept ;
     skos:prefLabel "Metadata only access"@en ;
     skos:definition "Metadata only access refers to a resource in which access is limited to metadata only. Access to the resource requires granting of access rights."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/data-access-rights> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/data-access-rights> .
+    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> .
 
 da:open a skos:Concept ;
     skos:prefLabel "Open access"@en ;
     skos:altLabel "Open file"@en ;
     skos:definition "Open access refers to a resource that is immediately and permanently online, and free for all on the Web, without financial and technical barriers."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/data-access-rights> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/data-access-rights> .
+    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> .
 
 da:restricted a skos:Concept ;
     skos:prefLabel "Restricted access"@en ;
     skos:definition "Restricted access refers to a resource that is stored in a system but is not freely accessible. Access is limited to specific personnel or user groups."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/data-access-rights> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/data-access-rights> .
+    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> .
 
 da:protected a skos:Concept ;
     skos:prefLabel "Protected access"@en ;
     skos:definition "Protected access refers to a resource that is stored in a system but is not freely accessible due to specific legal or policy decisions, such as active legal proceedings or ministerial discretion. Access is limited to specific personnel or user groups. "@en ;
-    skos:inScheme <https://linked.data.gov.au/def/data-access-rights> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/data-access-rights> .
+    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> .
 
 da:open-access-rights a skos:Collection ;
     skos:prefLabel "Open data access rights"@en ;
