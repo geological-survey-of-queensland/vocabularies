@@ -1,6 +1,6 @@
 import requests
 import json
-from github import Github
+from github import Github, GithubException
 import base64
 from rdflib import Graph
 from scripts import config
@@ -151,28 +151,32 @@ def load_all_vocabs_details_from_github():
     for content_file in contents:
         fn = content_file.path.replace("vocabularies/", "")
         if fn.endswith(".ttl"):
-            if fn == "minerals.ttl":
-                print("Skipping minerals as too large")
-            else:
-                print("Reading {}".format(fn))
+            print("Reading {}".format(fn))
+            try:
                 fc = repo.get_contents("vocabularies/" + fn)
-                data = base64.b64decode(fc.content).decode('utf-8')
-                g = Graph().parse(data=data, format="turtle")
-                q = '''
-                    PREFIX owl: <http://www.w3.org/2002/07/owl#>
-                    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-                    SELECT ?uri ?pl
-                    WHERE {
-                        ?uri a owl:Ontology ;
-                            skos:prefLabel ?pl .
-                    }
-                '''
-                for r in g.query(q):
-                    vocabs[fn] = {
-                        "context_uri": str(r["uri"]),
-                        "pref_label": str(r["pl"]),
-                        "github_raw_uri": config.GITHUB_RAW_URI_BASE + fn
-                    }
+            except GithubException as e:
+                for err in e.data.get('errors'):
+                    if err['code'] == 'too_large':
+                        print("File is above 1MB, using Data API call")
+                        fc = repo.get_git_blob(content_file.sha)
+
+            data = base64.b64decode(fc.content).decode('utf-8')
+            g = Graph().parse(data=data, format="turtle")
+            q = '''
+                PREFIX owl: <http://www.w3.org/2002/07/owl#>
+                PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+                SELECT ?uri ?pl
+                WHERE {
+                    ?uri a owl:Ontology ;
+                        skos:prefLabel ?pl .
+                }
+            '''
+            for r in g.query(q):
+                vocabs[fn] = {
+                    "context_uri": str(r["uri"]),
+                    "pref_label": str(r["pl"]),
+                    "github_raw_uri": config.GITHUB_RAW_URI_BASE + fn
+                }
 
     return vocabs
 
