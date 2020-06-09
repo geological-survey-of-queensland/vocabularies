@@ -10,3 +10,4 @@ GITHUB_RAW_URI_BASE = 'https://raw.githubusercontent.com/geological-survey-of-qu
 
 GITHUB_USR = 'github_username'  # or any valid GitHub account
 GITHUB_PWD = 'github_password'  # for the valid GitHub account
+GITHUB_TOKEN = 'github_personal_access_token' # recommended for use from 2020, not user/pass

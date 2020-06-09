@@ -136,7 +136,11 @@ def load_all_vocabs_details_from_github():
     """
     print('Loading all vocabs from GitHub')
     print("Vocabs to be uploaded:")
-    gh = Github(config.GITHUB_USR, config.GITHUB_PWD)
+    if config.GITHUB_USR:
+        print("Using passwords will be deprecated in Nov 2020, try to use a personal token instead")
+        gh = Github(config.GITHUB_USR, config.GITHUB_PWD)
+    else:
+        gh = Github(config.GITHUB_TOKEN)
     repo = gh.get_repo("geological-survey-of-queensland/vocabularies")
     contents = repo.get_contents("vocabularies")
     c = 0
