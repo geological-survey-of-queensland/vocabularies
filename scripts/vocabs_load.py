@@ -175,6 +175,10 @@ def load_all_vocabs_details_from_github():
                         skos:prefLabel ?pl .
                 }
             '''
+            if not g.query(q):
+                print("There was an error parsing or querying the graph. " 
+                      "Ensure it contains 'a owl:Ontology' and 'skos:prefLabel'")
+
             for r in g.query(q):
                 vocabs[fn] = {
                     "context_uri": str(r["uri"]),
