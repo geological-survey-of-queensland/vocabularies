@@ -22,6 +22,12 @@
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
+id:c-code a skos:Concept ;
+ skos:definition "A locally relevant company code, commonly locally administered by an individual agency."@en ;
+ skos:inScheme <http://linked.data.gov.au/def/party-identifier-type> ;
+ skos:prefLabel "Company Code"@en ;
+ skos:topConceptOf <http://linked.data.gov.au/def/party-identifier-type> .
+
 id:abn a skos:Concept ;
  skos:altLabel "Australian business number"@en ;
  skos:definition "The Australian Business Number (ABN) is a unique number used to identify business names and companies. The Australian Business Register (ABR) provides ABNs. Source:ASIC"@en ;
@@ -163,7 +169,8 @@ id:medicare-card a skos:Concept ;
 id:company-id a skos:Collection ;
  skos:definition "Identification numbers for businesses and companies within Australia."@en ;
  skos:member id:abn,
- id:acn ;
+ id:acn,
+ id:c-code ;
  skos:prefLabel "Company ID"@en .
  
 id:mmol-list-a a skos:Collection ;
