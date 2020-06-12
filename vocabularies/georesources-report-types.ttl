@@ -2,14 +2,17 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix grt: <http://linked.data.gov.au/def/georesource-report/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/georesource-report> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-09"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-04-09"^^xsd:date ;
+    dcterms:modified "2020-06-12"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "The types of reports administered by the GeoResources division of the Department of Natural Resources, Mines and Energy."@en ;
@@ -29,6 +32,34 @@ grt:pa-22A a skos:Concept ;
     skos:definition "A notice to inform the Department that a seismic survey or scientific or technical survey has been completed."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:prefLabel "Notice of Completion of seismic survey or scientific or technical survey"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:pggd-01 a skos:Concept ;
+    skos:definition "A notice to inform the Department that a petroleum well or bore will be drilled."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:prefLabel "Notice of intention to drill a petroleum well or bore"@en ;
+    skos:altLabel "PGGD-01"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:pggd-02 a skos:Concept ;
+    skos:definition "A notice to inform the Department that a petroleum well or bore has been completed, aletered, or abandoned."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:prefLabel "Notice of completion, alteration or abandonment of petroleum well or bore"@en ;
+    skos:altLabel "PGGD-02"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:pggd-03 a skos:Concept ;
+    skos:definition "A notice to inform the Department that hydraulic fracturing activities on a petroleum well or bore will performed."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:prefLabel "Notice of intention to carry out hydraulic fracturing activities"@en ;
+    skos:altLabel "PGGD-03"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:pggd-04 a skos:Concept ;
+    skos:definition "A notice to inform the Department that hydraulic fracturing activities on a petroleum well or bore have been completed."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:prefLabel "Notice of completion of hydraulic fracturing activities"@en ;
+    skos:altLabel "PGGD-04"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:pm-1-2013 a skos:Concept ;
@@ -736,6 +767,10 @@ grt:water-reports a skos:Collection ;
         grt:petroleum-report-infrastructure,
         grt:petroleum-report-non-associated-water,
         grt:water-report-performance-review,
+        grt:pggd-01,
+        grt:pggd-02,
+        grt:pggd-03,
+        grt:pggd-04,
         grt:pa-21A,
         grt:pa-22A,
         grt:pm-1-2013,
