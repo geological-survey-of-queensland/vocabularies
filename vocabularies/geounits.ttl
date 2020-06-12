@@ -4,8 +4,181 @@
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-<http://qudt.org/vocab/unit/CentiM> rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+<http://linked.data.gov.au/def/geou> a owl:Ontology , skos:ConceptScheme ;
+    dcterms:created "2020-04-15"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-06-11"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Derived from the geo-profile of QUDT (http://linked.data.gov.au/def/geou)"@en ;
+    skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to the geosciences." ;
+    skos:hasTopConcept geou:BBLOE,
+        geou:BBL_US-PER-HR,
+        geou:BBL_US-PER-MIN,
+        geou:BOE,
+        geou:BTU-PER-MegaL,
+        geou:BWOC,
+        geou:BWOW,
+        geou:COUNT,
+        geou:CentiM3-PER-TON_M,
+        geou:D,
+        geou:DEG-PER-100F,
+        geou:DEG-PER-30M,
+        geou:DEG-PER-F,
+        geou:DEG-PER-M,
+        geou:DecaREV-PER-MIN,
+        geou:ExaBYTE,
+        geou:FRAC,
+        geou:FT-PER-MilliSEC,
+        geou:FT3-PER-TON,
+        geou:FT3-PER-TON_M,
+        geou:GAL_IMP-PER-50SACK,
+        geou:GM-PER-KiloGM,
+        geou:GM-PER-TON_M,
+        geou:GigaJ,
+        geou:GigaJ-PER-MegaL,
+        geou:HR-PER-FT,
+        geou:KiloBBL,
+        geou:KiloBBLOE,
+        geou:KiloBTU,
+        geou:KiloBTU-PER-MegaL,
+        geou:KiloL,
+        geou:KiloL-PER-DAY,
+        geou:KiloLB_F,
+        geou:KiloLB_M,
+        geou:KiloREV-PER-MIN,
+        geou:L-PER-50SACK,
+        geou:LB_F-PER-100FT2,
+        geou:LB_F-PER-IN,
+        geou:LB_M-PER-100FT2,
+        geou:LB_M-PER-50SACK,
+        geou:LB_M-PER-BBL,
+        geou:M2-PER-N,
+        geou:M3-PER-TON_M,
+        geou:MYR,
+        geou:MegaBBLOE,
+        geou:MegaBOE,
+        geou:MegaBTU,
+        geou:MegaBTU-PER-MegaL,
+        geou:MegaF3-PER-DAY,
+        geou:MegaFT3,
+        geou:MegaL-PER-DAY,
+        geou:MegaM3,
+        geou:MegaTON_M,
+        geou:MicroS-PER-CentiM,
+        geou:MicroS-PER-M,
+        geou:MilliD,
+        geou:MilliGM,
+        geou:MilliGM-PER-TOC,
+        geou:MilliGM-PER-TON_M,
+        geou:MilliM-PER-SEC,
+        geou:N-PER-M,
+        geou:OZ-PER-TON_LONG,
+        geou:OZ-PER-TON_M,
+        geou:PER-PA,
+        geou:PERCENT-PER-VOL,
+        geou:PERCENT-PER-WEIGHT,
+        geou:PetaJ,
+        geou:PetaJ-PER-MegaL,
+        geou:RATIO,
+        geou:SHOTS-PER-FT,
+        geou:SHOTS-PER-M,
+        geou:TOC,
+        geou:TON_M-PER-M,
+        <http://qudt.org/vocab/unit/ARCMIN>,
+        <http://qudt.org/vocab/unit/ARCSEC>,
+        <http://qudt.org/vocab/unit/ATM>,
+        <http://qudt.org/vocab/unit/BAR>,
+        <http://qudt.org/vocab/unit/BBL>,
+        <http://qudt.org/vocab/unit/BBL_US-PER-DAY>,
+        <http://qudt.org/vocab/unit/BTU_IT>,
+        <http://qudt.org/vocab/unit/BYTE>,
+        <http://qudt.org/vocab/unit/CentiM3>,
+        <http://qudt.org/vocab/unit/CentiP>,
+        <http://qudt.org/vocab/unit/DAY>,
+        <http://qudt.org/vocab/unit/DEG>,
+        <http://qudt.org/vocab/unit/DEG_C>,
+        <http://qudt.org/vocab/unit/DEG_F>,
+        <http://qudt.org/vocab/unit/FT>,
+        <http://qudt.org/vocab/unit/FT-PER-HR>,
+        <http://qudt.org/vocab/unit/FT-PER-SEC>,
+        <http://qudt.org/vocab/unit/FT3>,
+        <http://qudt.org/vocab/unit/FT3-PER-DAY>,
+        <http://qudt.org/vocab/unit/FT3-PER-HR>,
+        <http://qudt.org/vocab/unit/GAL_IMP>,
+        <http://qudt.org/vocab/unit/GAL_US>,
+        <http://qudt.org/vocab/unit/GM>,
+        <http://qudt.org/vocab/unit/GM-PER-CentiM3>,
+        <http://qudt.org/vocab/unit/GRAD>,
+        <http://qudt.org/vocab/unit/G_REL>,
+        <http://qudt.org/vocab/unit/GigaBYTE>,
+        <http://qudt.org/vocab/unit/HR>,
+        <http://qudt.org/vocab/unit/HZ>,
+        <http://qudt.org/vocab/unit/IN>,
+        <http://qudt.org/vocab/unit/J>,
+        <http://qudt.org/vocab/unit/K>,
+        <http://qudt.org/vocab/unit/KiloBYTE>,
+        <http://qudt.org/vocab/unit/KiloFT3>,
+        <http://qudt.org/vocab/unit/KiloGM>,
+        <http://qudt.org/vocab/unit/KiloGM-PER-L>,
+        <http://qudt.org/vocab/unit/KiloGM-PER-M>,
+        <http://qudt.org/vocab/unit/KiloGM-PER-M3>,
+        <http://qudt.org/vocab/unit/KiloL>,
+        <http://qudt.org/vocab/unit/KiloLB_M-PER-IN2>,
+        <http://qudt.org/vocab/unit/KiloN>,
+        <http://qudt.org/vocab/unit/KiloPA>,
+        <http://qudt.org/vocab/unit/L>,
+        <http://qudt.org/vocab/unit/L-PER-DAY>,
+        <http://qudt.org/vocab/unit/L-PER-HR>,
+        <http://qudt.org/vocab/unit/L-PER-MIN>,
+        <http://qudt.org/vocab/unit/LB_F>,
+        <http://qudt.org/vocab/unit/LB_M>,
+        <http://qudt.org/vocab/unit/LB_M-PER-FT>,
+        <http://qudt.org/vocab/unit/LB_M-PER-FT3>,
+        <http://qudt.org/vocab/unit/LB_M-PER-GAL>,
+        <http://qudt.org/vocab/unit/LB_M-PER-IN2>,
+        <http://qudt.org/vocab/unit/M>,
+        <http://qudt.org/vocab/unit/M-PER-HR>,
+        <http://qudt.org/vocab/unit/M-PER-SEC>,
+        <http://qudt.org/vocab/unit/M3>,
+        <http://qudt.org/vocab/unit/M3-PER-DAY>,
+        <http://qudt.org/vocab/unit/M3-PER-HR>,
+        <http://qudt.org/vocab/unit/MIN>,
+        <http://qudt.org/vocab/unit/MO>,
+        <http://qudt.org/vocab/unit/MegaBYTE>,
+        <http://qudt.org/vocab/unit/MegaL>,
+        <http://qudt.org/vocab/unit/MegaLB_F>,
+        <http://qudt.org/vocab/unit/MegaPA>,
+        <http://qudt.org/vocab/unit/MilliGM>,
+        <http://qudt.org/vocab/unit/MilliM>,
+        <http://qudt.org/vocab/unit/MilliRAD>,
+        <http://qudt.org/vocab/unit/MilliS>,
+        <http://qudt.org/vocab/unit/N>,
+        <http://qudt.org/vocab/unit/NanoSEC>,
+        <http://qudt.org/vocab/unit/OHM-M>,
+        <http://qudt.org/vocab/unit/OZ>,
+        <http://qudt.org/vocab/unit/PA>,
+        <http://qudt.org/vocab/unit/PA-PER-SEC>,
+        <http://qudt.org/vocab/unit/PERCENT>,
+        <http://qudt.org/vocab/unit/PPB>,
+        <http://qudt.org/vocab/unit/PPM>,
+        <http://qudt.org/vocab/unit/PetaBYTE>,
+        <http://qudt.org/vocab/unit/RAD>,
+        <http://qudt.org/vocab/unit/REV-PER-HR>,
+        <http://qudt.org/vocab/unit/REV-PER-MIN>,
+        <http://qudt.org/vocab/unit/SEC>,
+        <http://qudt.org/vocab/unit/TOE>,
+        <http://qudt.org/vocab/unit/TON_LONG>,
+        <http://qudt.org/vocab/unit/TON_M>,
+        <http://qudt.org/vocab/unit/TeraBYTE>,
+        <http://qudt.org/vocab/unit/UNITLESS>,
+        <http://qudt.org/vocab/unit/WK>,
+        <http://qudt.org/vocab/unit/YR> ;
+    skos:prefLabel "Geoscience Profile of QUDT Units"@en .
+
+<http://qudt.org/vocab/unit/CentiM> a skos:Concept;
+rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units."@en ;
     skos:notation "CM",
         "CMT",
@@ -573,8 +746,7 @@ geou:TON_M-PER-M a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "B1" ;
-    skos:prefLabel "BBL_US PER DAY"@en,
-        "barrel (US) per day"@en ;
+    skos:prefLabel "barrel (US) per day"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/BTU_IT> a skos:Concept ;
@@ -689,16 +861,14 @@ geou:TON_M-PER-M a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "K22" ;
-    skos:prefLabel "FT3 PER DAY"@en,
-        "cubic foot per day"@en ;
+    skos:prefLabel "cubic foot per day"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/FT3-PER-HR> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "2K" ;
-    skos:prefLabel "FT3 PER HR"@en,
-        "cubic foot per hour"@en ;
+    skos:prefLabel "cubic foot per hour"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/GAL_IMP> a skos:Concept ;
@@ -733,8 +903,7 @@ geou:TON_M-PER-M a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "23" ;
-    skos:prefLabel "GM PER CentiM3"@en,
-        "gram per centimetre cubed"@en ;
+    skos:prefLabel "gram per centimetre cubed"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/GRAD> a skos:Concept ;
@@ -835,8 +1004,7 @@ geou:TON_M-PER-M a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "B35" ;
-    skos:prefLabel "KiloGM PER L"@en,
-        "kilogram per litre"@en ;
+    skos:prefLabel "kilogram per litre"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloGM-PER-M> a skos:Concept ;
@@ -857,8 +1025,7 @@ geou:TON_M-PER-M a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "K6" ;
-    skos:prefLabel "KiloL"@en,
-        "kilolitre"@en ;
+    skos:prefLabel "kilolitre"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloLB_M-PER-IN2> a skos:Concept ;
@@ -872,8 +1039,7 @@ geou:TON_M-PER-M a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "B47" ;
-    skos:prefLabel "KiloN"@en,
-        "kilonewton"@en ;
+    skos:prefLabel "kilonewton"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloPA> a skos:Concept ;
@@ -897,24 +1063,21 @@ geou:TON_M-PER-M a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "LD" ;
-    skos:prefLabel "L PER DAY"@en,
-        "litre per day"@en ;
+    skos:prefLabel "litre per day"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/L-PER-HR> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "E32" ;
-    skos:prefLabel "L PER HR"@en,
-        "litre per hour"@en ;
+    skos:prefLabel "litre per hour"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/L-PER-MIN> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "L2" ;
-    skos:prefLabel "L PER MIN"@en,
-        "litre per minute"@en ;
+    skos:prefLabel "litre per minute"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/LB_F> a skos:Concept ;
@@ -955,8 +1118,7 @@ geou:TON_M-PER-M a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "80" ;
-    skos:prefLabel "LB_M PER IN2"@en,
-        "pound (avoirdupois) per square inch"@en ;
+    skos:prefLabel "pound per square inch"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/M> a skos:Concept ;
@@ -1003,8 +1165,7 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "G52" ;
-    skos:prefLabel "M3 PER DAY"@en,
-        "metre cubed per day"@en ;
+    skos:prefLabel "M3 PER DAY"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/M3-PER-HR> a skos:Concept ;
@@ -1046,8 +1207,7 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "MAL" ;
-    skos:prefLabel "MegaL"@en,
-        "megalitre"@en ;
+    skos:prefLabel "megalitre"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MegaLB_F> a skos:Concept ;
@@ -1061,16 +1221,14 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "MPA" ;
-    skos:prefLabel "MegaPA"@en,
-        "megapascal"@en ;
+    skos:prefLabel "megapascal"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MilliGM> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "MGM" ;
-    skos:prefLabel "MilliGM"@en,
-        "milligram"@en ;
+    skos:prefLabel "milligram"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MilliM> a skos:Concept ;
@@ -1095,8 +1253,7 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "C27" ;
-    skos:prefLabel "MilliS"@en,
-        "millisiemens"@en ;
+    skos:prefLabel "millisiemens"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/N> a skos:Concept ;
@@ -1271,175 +1428,3 @@ Under the International System of Units (via the International Committee for Wei
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
-
-<http://linked.data.gov.au/def/geou> a skos:ConceptScheme ;
-    dcterms:created "2020-04-15"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-06-11"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:source "Derived from the geo-profile of QUDT (http://linked.data.gov.au/def/geou)"@en ;
-    skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to the geosciences." ;
-    skos:hasTopConcept geou:BBLOE,
-        geou:BBL_US-PER-HR,
-        geou:BBL_US-PER-MIN,
-        geou:BOE,
-        geou:BTU-PER-MegaL,
-        geou:BWOC,
-        geou:BWOW,
-        geou:COUNT,
-        geou:CentiM3-PER-TON_M,
-        geou:D,
-        geou:DEG-PER-100F,
-        geou:DEG-PER-30M,
-        geou:DEG-PER-F,
-        geou:DEG-PER-M,
-        geou:DecaREV-PER-MIN,
-        geou:ExaBYTE,
-        geou:FRAC,
-        geou:FT-PER-MilliSEC,
-        geou:FT3-PER-TON,
-        geou:FT3-PER-TON_M,
-        geou:GAL_IMP-PER-50SACK,
-        geou:GM-PER-KiloGM,
-        geou:GM-PER-TON_M,
-        geou:GigaJ,
-        geou:GigaJ-PER-MegaL,
-        geou:HR-PER-FT,
-        geou:KiloBBL,
-        geou:KiloBBLOE,
-        geou:KiloBTU,
-        geou:KiloBTU-PER-MegaL,
-        geou:KiloL,
-        geou:KiloL-PER-DAY,
-        geou:KiloLB_F,
-        geou:KiloLB_M,
-        geou:KiloREV-PER-MIN,
-        geou:L-PER-50SACK,
-        geou:LB_F-PER-100FT2,
-        geou:LB_F-PER-IN,
-        geou:LB_M-PER-100FT2,
-        geou:LB_M-PER-50SACK,
-        geou:LB_M-PER-BBL,
-        geou:M2-PER-N,
-        geou:M3-PER-TON_M,
-        geou:MYR,
-        geou:MegaBBLOE,
-        geou:MegaBOE,
-        geou:MegaBTU,
-        geou:MegaBTU-PER-MegaL,
-        geou:MegaF3-PER-DAY,
-        geou:MegaFT3,
-        geou:MegaL-PER-DAY,
-        geou:MegaM3,
-        geou:MegaTON_M,
-        geou:MicroS-PER-CentiM,
-        geou:MicroS-PER-M,
-        geou:MilliD,
-        geou:MilliGM,
-        geou:MilliGM-PER-TOC,
-        geou:MilliGM-PER-TON_M,
-        geou:MilliM-PER-SEC,
-        geou:N-PER-M,
-        geou:OZ-PER-TON_LONG,
-        geou:OZ-PER-TON_M,
-        geou:PER-PA,
-        geou:PERCENT-PER-VOL,
-        geou:PERCENT-PER-WEIGHT,
-        geou:PetaJ,
-        geou:PetaJ-PER-MegaL,
-        geou:RATIO,
-        geou:SHOTS-PER-FT,
-        geou:SHOTS-PER-M,
-        geou:TOC,
-        geou:TON_M-PER-M,
-        <http://qudt.org/vocab/unit/ARCMIN>,
-        <http://qudt.org/vocab/unit/ARCSEC>,
-        <http://qudt.org/vocab/unit/ATM>,
-        <http://qudt.org/vocab/unit/BAR>,
-        <http://qudt.org/vocab/unit/BBL>,
-        <http://qudt.org/vocab/unit/BBL_US-PER-DAY>,
-        <http://qudt.org/vocab/unit/BTU_IT>,
-        <http://qudt.org/vocab/unit/BYTE>,
-        <http://qudt.org/vocab/unit/CentiM3>,
-        <http://qudt.org/vocab/unit/CentiP>,
-        <http://qudt.org/vocab/unit/DAY>,
-        <http://qudt.org/vocab/unit/DEG>,
-        <http://qudt.org/vocab/unit/DEG_C>,
-        <http://qudt.org/vocab/unit/DEG_F>,
-        <http://qudt.org/vocab/unit/FT>,
-        <http://qudt.org/vocab/unit/FT-PER-HR>,
-        <http://qudt.org/vocab/unit/FT-PER-SEC>,
-        <http://qudt.org/vocab/unit/FT3>,
-        <http://qudt.org/vocab/unit/FT3-PER-DAY>,
-        <http://qudt.org/vocab/unit/FT3-PER-HR>,
-        <http://qudt.org/vocab/unit/GAL_IMP>,
-        <http://qudt.org/vocab/unit/GAL_US>,
-        <http://qudt.org/vocab/unit/GM>,
-        <http://qudt.org/vocab/unit/GM-PER-CentiM3>,
-        <http://qudt.org/vocab/unit/GRAD>,
-        <http://qudt.org/vocab/unit/G_REL>,
-        <http://qudt.org/vocab/unit/GigaBYTE>,
-        <http://qudt.org/vocab/unit/HR>,
-        <http://qudt.org/vocab/unit/HZ>,
-        <http://qudt.org/vocab/unit/IN>,
-        <http://qudt.org/vocab/unit/J>,
-        <http://qudt.org/vocab/unit/K>,
-        <http://qudt.org/vocab/unit/KiloBYTE>,
-        <http://qudt.org/vocab/unit/KiloFT3>,
-        <http://qudt.org/vocab/unit/KiloGM>,
-        <http://qudt.org/vocab/unit/KiloGM-PER-L>,
-        <http://qudt.org/vocab/unit/KiloGM-PER-M>,
-        <http://qudt.org/vocab/unit/KiloGM-PER-M3>,
-        <http://qudt.org/vocab/unit/KiloL>,
-        <http://qudt.org/vocab/unit/KiloLB_M-PER-IN2>,
-        <http://qudt.org/vocab/unit/KiloN>,
-        <http://qudt.org/vocab/unit/KiloPA>,
-        <http://qudt.org/vocab/unit/L>,
-        <http://qudt.org/vocab/unit/L-PER-DAY>,
-        <http://qudt.org/vocab/unit/L-PER-HR>,
-        <http://qudt.org/vocab/unit/L-PER-MIN>,
-        <http://qudt.org/vocab/unit/LB_F>,
-        <http://qudt.org/vocab/unit/LB_M>,
-        <http://qudt.org/vocab/unit/LB_M-PER-FT>,
-        <http://qudt.org/vocab/unit/LB_M-PER-FT3>,
-        <http://qudt.org/vocab/unit/LB_M-PER-GAL>,
-        <http://qudt.org/vocab/unit/LB_M-PER-IN2>,
-        <http://qudt.org/vocab/unit/M>,
-        <http://qudt.org/vocab/unit/M-PER-HR>,
-        <http://qudt.org/vocab/unit/M-PER-SEC>,
-        <http://qudt.org/vocab/unit/M3>,
-        <http://qudt.org/vocab/unit/M3-PER-DAY>,
-        <http://qudt.org/vocab/unit/M3-PER-HR>,
-        <http://qudt.org/vocab/unit/MIN>,
-        <http://qudt.org/vocab/unit/MO>,
-        <http://qudt.org/vocab/unit/MegaBYTE>,
-        <http://qudt.org/vocab/unit/MegaL>,
-        <http://qudt.org/vocab/unit/MegaLB_F>,
-        <http://qudt.org/vocab/unit/MegaPA>,
-        <http://qudt.org/vocab/unit/MilliGM>,
-        <http://qudt.org/vocab/unit/MilliM>,
-        <http://qudt.org/vocab/unit/MilliRAD>,
-        <http://qudt.org/vocab/unit/MilliS>,
-        <http://qudt.org/vocab/unit/N>,
-        <http://qudt.org/vocab/unit/NanoSEC>,
-        <http://qudt.org/vocab/unit/OHM-M>,
-        <http://qudt.org/vocab/unit/OZ>,
-        <http://qudt.org/vocab/unit/PA>,
-        <http://qudt.org/vocab/unit/PA-PER-SEC>,
-        <http://qudt.org/vocab/unit/PERCENT>,
-        <http://qudt.org/vocab/unit/PPB>,
-        <http://qudt.org/vocab/unit/PPM>,
-        <http://qudt.org/vocab/unit/PetaBYTE>,
-        <http://qudt.org/vocab/unit/RAD>,
-        <http://qudt.org/vocab/unit/REV-PER-HR>,
-        <http://qudt.org/vocab/unit/REV-PER-MIN>,
-        <http://qudt.org/vocab/unit/SEC>,
-        <http://qudt.org/vocab/unit/TOE>,
-        <http://qudt.org/vocab/unit/TON_LONG>,
-        <http://qudt.org/vocab/unit/TON_M>,
-        <http://qudt.org/vocab/unit/TeraBYTE>,
-        <http://qudt.org/vocab/unit/UNITLESS>,
-        <http://qudt.org/vocab/unit/WK>,
-        <http://qudt.org/vocab/unit/YR> ;
-    skos:prefLabel "Geoscience Profile of QUDT Units"@en .
-
