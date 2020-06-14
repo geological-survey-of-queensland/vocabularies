@@ -11,7 +11,7 @@
 <http://linked.data.gov.au/def/gsq-roles> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-17"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-06-05"^^xsd:date ;
+    dcterms:modified "2020-06-15"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml> ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)"@en ;
@@ -44,9 +44,9 @@ gsqr:contractor a skos:Concept ;
 
 gsqr:driller a skos:Concept ;
     skos:prefLabel "Driller"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
     skos:definition "The agent who drills or bores the borehole."@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
 gsqr:operator a skos:Concept ;
     skos:prefLabel "Operator"@en ;
@@ -78,14 +78,14 @@ isorole:collaborator a skos:Concept ;
 
 datac:DataCollector a skos:Concept ;
     skos:definition "Person/institution responsible for finding, gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
     skos:altLabel "Observation Agent"@en,
         "Observer"@en,
         "Interviewer"@en,
         "Survey Conductor"@en ;
     skos:prefLabel "Data Collector"@en ;
     skos:scopeNote "May also use when crediting survey conductors, interviewers, event or condition observers, person responsible for monitoring key instrument data."@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
 isorole:editor a skos:Concept ;
     skos:definition "Party who reviewed or modified the resource to improve the content"@en ;
@@ -114,7 +114,7 @@ isorole:owner a skos:Concept ;
 
 isorole:principalInvestigator a skos:Concept ;
     skos:definition "Key party responsible for gathering information and conducting research"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Principal Investigator"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
