@@ -1,20 +1,26 @@
 @prefix cdt: <http://linked.data.gov.au/def/geo-commodities/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/geo-commodities> a owl:Ontology,
+<http://linked.data.gov.au/def/geo-commodities> a owl:Ontology ,
         skos:ConceptScheme ;
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-04-08"^^xsd:date ;
+    dcterms:modified "2020-06-15"^^xsd:date ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The types of commodities in geoscience."@en ;
-    skos:hasTopConcept cdt:direct-use-commodity,
-        cdt:produced-commodity ;
+    skos:hasTopConcept cdt:undefined,
+        cdt:direct-use-commodity,
+        cdt:produced-commodity,
+        cdt:sequestered-commodity ;
     skos:prefLabel "Geoscience Commodities"@en .
 
 <http://linked.data.gov.au/org/gsq>
@@ -22,6 +28,12 @@
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> ;
 .
+
+cdt:undefined a skos:Concept ;
+    skos:definition "A commodity that has not been defined or identified. Used where exploring in a prospective area but when a specific commodity has not been identified or targetted."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/direct-use-commodity> ;
+    skos:prefLabel "undefined"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geo-commodities> .
 
 cdt:boghead-coal a skos:Concept ;
     skos:altLabel "torbanite"@en ;
@@ -420,14 +432,14 @@ cdt:citrine a skos:Concept ;
     skos:prefLabel "citrine"@en .
 
 cdt:coal-bed-methane a skos:Concept ;
-    skos:altLabel "coal seam gas"@en,
+    skos:altLabel "coal bed methane"@en,
         "coal seam methane"@en ;
     skos:broader cdt:gaseous-hydrocarbons ;
     skos:definition "Coal bed methane (CBM) or coal seam gas (CSG) is a form of natural gas extracted from coal beds. Coal bed methane contains very little heavier hydrocarbons such as propane or butane, and no natural-gas condensate. It often contains up to a few percent carbon dioxide."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/coal-bed-methane> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "CMET" ;
-    skos:prefLabel "coal bed methane"@en .
+    skos:prefLabel "coal seam gas"@en .
 
 cdt:cobalt a skos:Concept ;
     skos:broader cdt:base-metal ;
@@ -1366,7 +1378,7 @@ cdt:recycled-aggregate a skos:Concept ;
 
 cdt:reservoir-gas a skos:Concept ;
     skos:broader cdt:gaseous-hydrocarbons ;
-    skos:definition "Natural gas derived from underground rock reservoirs typically containing methane with lesser amounts of ethane, propane, butane and pentane. Natural gas is commonly associated with liquid petroleum in the reservoirs but is extracted and managed differently."@en ;
+    skos:definition "Natural gas derived from conventional clastic or carbonate underground rock reservoirs typically containing methane with lesser amounts of ethane, propane, butane and pentane. Natural gas is commonly associated with liquid petroleum in the reservoirs but is extracted and managed differently."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/reservoir-gas> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:prefLabel "reservoir gas"@en .
@@ -1532,6 +1544,19 @@ cdt:serpentine a skos:Concept ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/serpentine> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:prefLabel "serpentine"@en .
+
+cdt:shale-gas a skos:Concept ;
+    skos:altLabel "gas shale"@en ;
+    skos:broader cdt:gaseous-hydrocarbons ;
+    skos:definition "Natural gas produced from gas shale formations (Schlumberger Oilfield Glossary)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:prefLabel "shale gas"@en .
+
+cdt:shale-oil a skos:Concept ;
+    skos:broader cdt:liquid-hydrocarbons ;
+    skos:definition "Oil obtained by artificial maturation of oil shale. The process of artificial maturation uses controlled heating, or pyrolysis, of kerogen to release the shale oil (Schlumberger Oilfield Glossary)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:prefLabel "shale oil"@en .
 
 cdt:shell-grit a skos:Concept ;
     skos:broader cdt:industrial-rock ;
@@ -2073,13 +2098,18 @@ cdt:rare-earth-oxide a skos:Concept ;
     skos:prefLabel "rare earth oxide"@en .
 
 cdt:sand a skos:Concept ;
-    skos:broader cdt:industrial-material,
-        cdt:sand-and-gravel ;
+    skos:broader cdt:sand-and-gravel ;
     skos:definition "A sand-grade clastic-sediment. Note: the majority of sand can be classed as silicate-sand. i. A rock fragment or detrital particle smaller than a granule and larger than a coarse silt grain, having a diameter in range of 1/16 to 2 mm (62 to 2,000 mu m, or 0.0025 to 0.08 in, or 4 to 1 phi units, or a size between that at the lower limit of visibility of an individual particle with the unaided eye and that of the head of a small wooden match), being somewhat rounded by abrasion in the course of transport. In Great Britain, the range of 0.1 to 1 mm has been used. See Also: coarse sand, fine sand Ref: AGI ii. A loose aggregate, unlithified mineral or rock particles of sand size; an unconsolidated or moderately consolidated sedimentary deposit consisting essentially of medium-grained clastics. The material is most commonly composed of quartz, and when the term sand is used without qualification, a siliceous composition is implied; but the particles may be of any mineral composition or mixture of rock or mineral fragments, such as coral sand consisting of limestone fragments. Also, a mass of such material, esp. on a beach, desert, or in a streambed. Ref: AGI iii. Separate grains or particles of detrital rock material, easily distinguishable by the unaided eye, but not large enough to be called pebbles; also, a loose mass of such grains, forming an incoherent arenaceous sediment. Building sand, any hard, granular rock material finer than gravel and coarser than dust. The term indicates material comminuted by natural means. Ref: Fay iv. Detrital material of size range from 2 to 1/16 mm in diameter. Very coarse, 1 to 2 mm; coarse, 1/2 to 1 mm; medium, 1/4 to 1/2 mm; fine, 1/4 to 1/8 mm; very fine, 1/8 to 1/16 mm. Ref: AGI v. Granular material, composed mainly of quartz, that will settle readily in water. In the mechanical analysis of soil, sand--according to international classification--has a size between 0.02 mm and 2.0 mm. It has no cohesion when dry or saturated but has apparent cohesion when damp. Ref: Nelson vi. A term used in the United States for a rock or mineral particle in the soil, having a diameter in the range of 0.05 to 2 mm; prior to 1947, the range 1 to 2 mm was called fine gravel. The diameter range recognized by the International Society of Soil Science is 0.02 to 2 mm. A textural class of soil material containing 85% or more of sand, with the percentage of silt plus 1.5 times the percentage of clay not exceeding 15; specif. such material containing 25% or more of very coarse sand, coarse sand, and medium sand, and less than 50% of fine sand or very fine sand. The term has also been used for a soil containing 90% or more of sand. Ref: AGI"@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sand> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "SD" ;
     skos:prefLabel "sand"@en .
+
+cdt:water a skos:Concept ;
+    skos:broader cdt:direct-use-commodity ;
+    skos:definition "Water captured or extracted as a resource or commodity."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:prefLabel "water"@en .
 
 cdt:silica-gemstone a skos:Concept ;
     skos:broader cdt:gemstone ;
@@ -2236,6 +2266,38 @@ cdt:ferrous-metal a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:prefLabel "ferrous metal"@en .
 
+cdt:energy-resources a skos:Concept ;
+    skos:broader cdt:direct-use-commodity ;
+    skos:definition "Resources that are non-material energy sources that can be used directly as a commodity."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:altLabel "energy resources"@en, 
+        "renewable energy resources"@en ;
+    skos:prefLabel "non-physical resources"@en .
+
+cdt:geothermal-energy a skos:Concept ;
+    skos:broader cdt:energy-resources ;
+    skos:definition "Thermal energy generated and stored within the Earth"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:prefLabel "geothermal energy"@en .
+
+cdt:hydro-power a skos:Concept ;
+    skos:broader cdt:energy-resources ;
+    skos:definition "The kinetic energy of moving water such as rivers and streams or through stored water facilities such as dams for hydroelectric power stations that can be converted to mechanical or electrical energy."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:prefLabel "hydro power"@en .
+
+cdt:solar-power a skos:Concept ;
+    skos:broader cdt:energy-resources ;
+    skos:definition "Radiant solar energy harvested for energy generation or heating."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:prefLabel "solar power"@en .
+
+cdt:wind-power a skos:Concept ;
+    skos:broader cdt:energy-resources ;
+    skos:definition "The kinetic energy of atmospheric movement."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:prefLabel "wind power"@en .
+
 cdt:produced-commodity a skos:Concept ;
     skos:definition "Commodity is obtained by extracting from material mined from the Earth."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/produced-commodity> ;
@@ -2340,3 +2402,18 @@ cdt:industrial-mineral a skos:Concept ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/industrial-mineral> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:prefLabel "industrial mineral"@en .
+
+cdt:sequestered-commodity a skos:Concept ;
+    skos:definition "Commodity that has economic value when sequestered or disposed of, as opposed to a traditional extractive commodity."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:prefLabel "sequestered commodity"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geo-commodities> .
+
+cdt:greenhouse-gases a skos:Concept ;
+    skos:broader cdt:sequestered-commodity ;
+    skos:definition "Greenhouse gases that are an economic resource when captured for storage and sequestration."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:altLabel "GHG"@en,
+        "Carbon GeoStorage"@en,
+        "Carbon Capture"@en ;
+    skos:prefLabel "greenhouse gases"@en .
