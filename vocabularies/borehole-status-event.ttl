@@ -6,87 +6,120 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/borehole-status-event> a owl:Ontology , skos:ConceptScheme ;
+<http://linked.data.gov.au/def/borehole-status-event> a owl:Ontology ,
+        skos:ConceptScheme ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:created "2020-01-21T15:03:09"^^xsd:dateTime ;
-    dcterms:modified "2020-01-21T15:03:15"^^xsd:dateTime ;
+    dcterms:created "2020-01-21"^^xsd:date ;
+    dcterms:modified "2020-06-17"^^xsd:date ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
-    skos:definition "The stage in the lifecycle of a project (e.g. mine site, petroleum field, quarry) that describes the maturity of resource defintion and production."@en ;
-    skos:hasTopConcept bhse:notice-of-completion-alteration-or-abandonment-of-petroleum-well-or-bore,
-        bhse:notice-of-completion-of-conversion-of-petroleum-well-to-water-supply-bore-or-water-observation-bore,
-        bhse:notice-of-completion-of-hydraulic-fracturing-activities,
-        bhse:notice-of-decommissioning-a-well-water-observation-bore-water-monitoring-bore-or-water-supply-bore,
-        bhse:notice-of-intention-to-carry-out-hydraulic-fracturing-activities,
-        bhse:notice-of-intention-to-convert-a-petroleum-well-to-a-water-observation-bore-or-water-supply-bore,
-        bhse:notice-of-intention-to-drill-a-petroleum-well-or-bore,
-        bhse:petroleum-production-report ;
+    skos:definition "Events that occur during the lifecycle a borehole that affect the status or history, or convert a borehole from one purpose to another."@en ;
+    skos:hasTopConcept bhse:drilling-of-borehole-on-notice,
+        bhse:completion,
+        bhse:alteration,
+        bhse:abandonment,
+        bhse:hydraulic-fracturing-on-notice,
+        bhse:hydraulic-fracturing-abandoned,
+        bhse:hydraulic-fracturing-completed,
+        bhse:conversion-to-water-supply-on-notice,
+        bhse:conversion-to-water-supply,
+        bhse:conversion-to-water-observation-on-notice,
+        bhse:conversion-to-water-observation,
+        bhse:decommissioning,
+        bhse:petroleum-production-commencement,
+        bhse:manual-update ;
     skos:prefLabel "Borehole Status Event"@en .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
-bhse:notice-of-completion-alteration-or-abandonment-of-petroleum-well-or-bore a skos:Concept ;
-    skos:definition "A notice to inform the Department that a petroleum well or bore has been completed, altered, or abandoned. Changes status to drilled, suspended, or abandoned."@en ;
+bhse:drilling-of-borehole-on-notice a skos:Concept ;
+    skos:definition "A Notice of intention to drill a petroleum well or bore. Lodgement of Form PGGD-01. This event creates a borehole entity under the Proposed status."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
-    skos:notation "PGGD-02" ;
-    skos:prefLabel "Notice of completion, alteration or abandonment of petroleum well or bore"@en ;
+    skos:prefLabel "Drilling of borehole on notice"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
-bhse:notice-of-completion-of-conversion-of-petroleum-well-to-water-supply-bore-or-water-observation-bore a skos:Concept ;
-    skos:definition "A notice to inform the Department that a petroleum well has been converted to a water bore. Changes purpose from Petroleum, or narrower term, to Water. May trigger check for status change."@en ;
+bhse:drilling-of-borehole-abandoned a skos:Concept ;
+    skos:definition "Recording that the intended drilling of a borehole was cancelled and abandoned and drilling was never undertaken. This event changes the status to Never Used."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
-    skos:notation "WRA-05A" ;
-    skos:prefLabel "Notice of completion of conversion of petroleum well to water supply bore or water observation bore"@en ;
+    skos:prefLabel "Drilling of borehole cancelled"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
-bhse:notice-of-completion-of-hydraulic-fracturing-activities a skos:Concept ;
-    skos:definition "A notice to inform the Department that a petroleum well has had stimulation by hydraulically fracturing completed."@en ;
+bhse:completion a skos:Concept ;
+    skos:definition "Notice that the initial drilling activities of the borehole have been completed. Lodgement of Form PGGD-02. This event will change the borehole status from Proposed to Completed."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
-    skos:notation "PGGD-04" ;
-    skos:prefLabel "Notice of completion of hydraulic fracturing activities"@en ;
+    skos:prefLabel "Completion"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
-bhse:notice-of-intention-to-carry-out-hydraulic-fracturing-activities a skos:Concept ;
-    skos:definition "A notice to inform the Department that a petroleum well is intended to be stimulated by hydraulically fracturing."@en ;
+bhse:alteration a skos:Concept ;
+    skos:definition "Notice of the activities that occur after completion of the initial drilling activities of the borehole. Lodgement of Form PGGD-02. This event is a recording of a reportable activity that does not change the status."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
-    skos:notation "PGGD-03" ;
-    skos:prefLabel "Notice of intention to carry out hydraulic fracturing activities"@en ;
+    skos:prefLabel "Alteration"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
-bhse:notice-of-decommissioning-a-well-water-observation-bore-water-monitoring-bore-or-water-supply-bore a skos:Concept ;
-    skos:definition "A notice to inform the Department that a well or water bore has been decommisioned."@en ;
+bhse:abandonment a skos:Concept ;
+    skos:definition "Notice of when a borehole is shut-in and permanently closed. Lodgement of Form PGGD-02. This event will change the borehole status to Capped and Abandoned."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
-    skos:historyNote "Form supersedes legacy form PA-40"@en ;
-    skos:notation "PA-40",
-        "MMOL-44";
-    skos:altLabel "Notice of decommissioning a well, water observation bore, water monitoring bore or water supply bore"@en ;
-    skos:prefLabel "Notice of decommissioning petroleum wells, water observation bores or water supply bores"@en ;
+    skos:prefLabel "Abandonment"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
-bhse:notice-of-intention-to-convert-a-petroleum-well-to-a-water-observation-bore-or-water-supply-bore a skos:Concept ;
-    skos:definition "A notice to inform the Department that a petroleum well is intended to be converted to a water bore."@en ;
+bhse:hydraulic-fracturing-on-notice a skos:Concept ;
+    skos:definition "A Notice of intention to carry out hydraulic fracturing activities. Lodgement of Form PGGD-O3. This event is a recording of an intended activity that does not change the status."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
-    skos:notation "PA-42" ;
-    skos:prefLabel "Notice of intention to convert a petroleum well to a water observation bore or water supply bore"@en ;
+    skos:prefLabel "Hydraulic fracturing on notice"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
-bhse:notice-of-intention-to-drill-a-petroleum-well-or-bore a skos:Concept ;
-    skos:definition "A notice to inform the Department that a petroleum well or bore is intended to be drilled. Triggers the creation of a well with the status: proposed."@en ;
+bhse:hydraulic-fracturing-abandoned a skos:Concept ;
+    skos:definition "Recording that the intended hydraulic fracturing activity was cancelled and abandoned and the activity was never undertaken. Borehole status will not change."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
-    skos:notation "PGGD-01" ;
-    skos:prefLabel "Notice of intention to drill a petroleum well or bore"@en ;
+    skos:prefLabel "Hydraulic fracturing abandoned"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
-bhse:petroleum-production-report a skos:Concept ;
-    skos:definition "A petroleum production report. Triggers change to on production or on injection depending on contents of report."@en ;
+bhse:hydraulic-fracturing-completed a skos:Concept ;
+    skos:definition "A Notice of completion of hydraulic fracturing activities. Lodgement of Form PGGD-04. This event is a recording of a reportable activity which does not change the status"@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
-    skos:prefLabel "Petroleum Production Report"@en ;
+    skos:prefLabel "Hydraulic fracturing completed"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+bhse:conversion-to-water-supply-on-notice a skos:Concept ;
+    skos:definition "A Notice of intention to convert a petroleum well to a water supply bore. Lodgement of Form PA-42. This event is a recording of an intended activity that does not change the status."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
+    skos:prefLabel "Conversion to water supply borehole on notice"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+bhse:conversion-to-water-observation-on-notice a skos:Concept ;
+    skos:definition "A Notice of intention to convert a petroleum well to a water observation bore. Lodgement of Form PA-42. This event is a recording of an intended activity which does not change the status."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
+    skos:prefLabel "Conversion to water observation borehole on notice"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+bhse:conversion-to-water-supply a skos:Concept ;
+    skos:definition "A Notice of completion of conversion of petroleum well to water supply bore. Lodgement of Form WRA-05A. The event changes the borehole purpose from Petroleum, or narrower term, to Water and the status to Water Supply."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
+    skos:prefLabel "Conversion to water supply borehole"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+bhse:conversion-to-water-observation a skos:Concept ;
+    skos:definition "A Notice of completion of conversion of petroleum well to water observation bore. Lodgement of Form WRA-05A. This event changes purpose from Petroleum, or narrower term, to Water and status to Monitoring."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
+    skos:prefLabel "Conversion to water observation borehole"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+bhse:decommissioning a skos:Concept ;
+    skos:definition "A Notice of decommissioning a well, water observation bore, water monitoring bore or water supply bore. Lodgement of Form MMOL-44. Decommissioning refers to the act of permanently shutting-in and abandoning a borehole. This event changes the borehole status to Capped and Abandoned."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
+    skos:prefLabel "Decommissioning"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+bhse:petroleum-production-commencement a skos:Concept ;
+    skos:definition "The production of petroleum from a well or bore has been confirmed by notice (PGGD-02) or thorugh a Petroleum Production Report as defined under of the Petroleum and Gas (General Provisions) Regulation. This changes the borehole status to on-production."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
+    skos:prefLabel "Commencement of Production"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
 bhse:manual-update a skos:Concept ;
-    skos:definition "An update to a borehole status performed via direct creation or update in the database by an authorised user."@en ;
+    skos:definition "A manual update to an existing borehole status or a manual creation of a new borehole status."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
     skos:prefLabel "Manual Update or Creation"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
