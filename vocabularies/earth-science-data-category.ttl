@@ -80,7 +80,14 @@ esdc:hydrogeochemistry a skos:Concept ;
     skos:broader esdc:geochemistry ;
     skos:definition "The science that uses the tools and principles of chemistry to explain the mechanisms behind major geological systems such as the Earth's crust and its oceans."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Hydrogeochemistry"@en .	
+    skos:prefLabel "Hydrogeochemistry"@en .
+
+esdc:biogeochemistry a skos:Concept ; 
+    skos:broader esdc:geochemistry ;
+    skos:definition "A highly interdisciplinary field involving the integration of biology, geology and chemistry, and encompassing the study of the chemical, physical, geological and biological processes and reactions that govern the composition of the natural environment (including the biosphere, hydrosphere, atmosphere, pedosphere and the lithosphere). (Gorham, 1997; Dunn, 2007; Wikipedia, 23.04.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Is the study of the behaviour of inorganic chemical elements in biological systems of geologic scope, as opposed to organic geochemistry, which is the study of organic compounds found in geologic materials and meteorites. Includes biogeochemical methods of exploration and the study of the cycles of chemical elements, such as the carbon, nitrogen, sulphur, iron and phosphorus cycles, which are either driven, or influenced, by biological activity. (Encyclopaedia Britannica, 23.04.2020; Wikipedia, 23.04.2020)."@en ;
+    skos:prefLabel "Biogeochemistry"@en . 
 
 esdc:geochemistry-not-elsewhere-classified a skos:Concept ;
     skos:broader esdc:geochemistry ;
@@ -96,7 +103,57 @@ esdc:geology a skos:Concept ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/0403> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "0403" ;
+    skos:altLabel "General Geology"@en ;
     skos:prefLabel "Geology"@en .
+
+esdc:regional-geology a skos:Concept ; 
+    skos:broader esdc:geology ; 
+    skos:definition "The geological study of large-scale regions, providing a link between global and local geology, and a framework for site-specific studies. (Bally & Roberts, 2012)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Regional Geology"@en .
+
+esdc:history-of-geology a skos:Concept ; 
+    skos:broader esdc:geology ; 
+    skos:definition "The historical development of geologic knowledge, including the history of observations of geologic features, geological exploration, drilling, mapping, etc. (Modified from: Neuendorf et al., 2011)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Also includes: The history of theories to explain the origin of geologic features, the history of the organisation and development of geologic institutions and societies, and the biographical study of geologists. Not to be confused with historical geology."@en ;
+        skos:prefLabel "History of Geology"@en .
+
+esdc:historical-geology a skos:Concept ; 
+    skos:altLabel "paleogeology"@en , 
+        "palaeogeology"@en ;
+    skos:broader esdc:geology ; 
+    skos:definition "The branch of geology concerned with the reconstruction and comprehension of the geological history of the Earth. (Neuendorf et al., 2011)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Includes geologic processes on the surface of, and within, the Earth, involving investigations into stratigraphy, paleontology and the associated evolution of life forms throughout the interval of the geologic time scale, geochronology, plate tectonics, structural geology, paleoenvironments and changing paleoclimates. It is not to be confused with history of geology."@en ;    skos:prefLabel "Historical Geology"@en .
+
+esdc:local-geology a skos:Concept ; 
+    skos:broader esdc:geology ; 
+    skos:definition "A comprehensive study of the geological and geographical features of an area at a local scale."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:hiddenLabel "Areal Geology"@en ;
+    skos:prefLabel "Local Geology"@en  .
+
+esdc:surface-geology a skos:Concept ; 
+    skos:altLabel "surficial geology"@en ; 
+    skos:broader esdc:geology ; 
+    skos:definition " The study of rock formations, soils, unconsolidated sediments, geological structures and other features, as observed and recorded or mapped at or near the Earth's surface. (Modified from Neuendorf et al., 2011; www.mindat.org, 06.05.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Surface Geology"@en .
+
+
+esdc:economic-geology a skos:Concept ; 
+    skos:broader esdc:geology ; 
+    skos:definition "The study of fuels, metals and other materials of economic interest; it is concerned with the distribution, value and availability of resources, and the cost and benefits of their recovery. (Encyclopedia.com, 06.05.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Economic Geology"@en .
+
+esdc:biogeology a skos:Concept ; 
+    skos:broader esdc:geology ; 
+    skos:definition "Biogeology is the interdisciplinary study of biology and geology, embracing interactions between the Earths’ biosphere and geosphere (viz., lithosphere, hydrosphere and atmosphere). (HongFu Yin et al., 2008; Wikipedia, 22.04.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "includes, for example, the interactions of various bacteria that are responsible for the formation of some minerals such as pyrite, and can concentrate economically important metals such as tin and uranium."@en ;
+    skos:prefLabel "Biogeology"@en .
 
 esdc:basin-analysis a skos:Concept ;
     skos:altLabel "sedimentary basin analysis"@en ;
@@ -170,43 +227,67 @@ esdc:mineralogy-and-crystallography a skos:Concept ;
     skos:notation "040306" ;
     skos:prefLabel "Mineralogy and Crystallography"@en .
 
-esdc:palaeontology a skos:Concept ;
+esdc:gemmology a skos:Concept ; 
+    skos:altLabel "gemology"@en ;
+    skos:hiddenLabel "gems"@en ,
+        "gemstones"@en ;
+    skos:broader esdc:mineralogy-and-crystallography ; 
+    skos:definition "The science and study of gemstones, including their source, description, geology, origin, identification, grading and appraisal. (Neuendorf et al., 2011)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Gemmology"@en .
+
+esdc:paleontology a skos:Concept ;
+    skos:altLabel "palaeontology"@en ;
     skos:broader esdc:geology ;
     skos:definition "The study of fossilized, or preserved, remnants of plant and animal life. Changes in the Earth through time can be documented by observing changes in the fossils in successive strata and the environments in which they formed or were preserved. Fossils can also be compared with their extant relatives to assess evolutionary changes. Correlations of strata can be aided by studying their fossil content, a discipline called biostratigraphy. Source: Schlumberger Oilfield Glossary"@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040308> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040308" ;
-    skos:prefLabel "Palaeontology"@en .
+    skos:prefLabel "Paleontology"@en .
 
 esdc:ichnology a skos:Concept ;
-    skos:broader esdc:palaeontology ;
-    skos:definition "The branch of paleontology concerned with the study of fossilized tracks, trails, burrows, borings, or other trace fossils as evidence of the occurrence or behavior of the organisms that produced them. Source: dictionary.com"@en ;
+    skos:altLabel "trace fossils"@en ;
+    skos:broader esdc:paleontology ;
+    skos:definition "The branch of paleontology concerned with the study of fossilized tracks, trails, burrows, borings, or other trace fossils as evidence of the occurrence or behavior of the organisms that produced them. (dictionary.com)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Ichnology"@en .
 	
-esdc:invertebrate-palaeontology a skos:Concept ;
-    skos:broader esdc:palaeontology ;
+esdc:invertebrate-paleontology a skos:Concept ;
+    skos:altLabel "invertebrate palaeontology"@en ;
+    skos:broader esdc:paleontology ;
     skos:definition "Invertebrate paleontology deals with invertebrate fossils such as molluscs, arthropods, annelid worms and echinoderms. Source: Wikipedia"@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Invertebrate Palaeontology"@en .
+    skos:prefLabel "Invertebrate Paleontology"@en .
 
-esdc:palaeobotany a skos:Concept ;
-    skos:broader esdc:palaeontology ;
-    skos:definition "Paleobotany studies fossil plants, algae, and fungi. Source: Wikipedia"@en ;
+esdc:paleobotany a skos:Concept ;
+    skos:altLabel "palaeobotany"@en ;
+    skos:broader esdc:paleontology ;
+    skos:definition "Paleobotany encompasses the study of fossil plants. (Allaby, 2008)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Palaeobotany"@en .
+    skos:prefLabel "Paleobotany"@en .
+
+esdc:micropaleontology a skos:Concept ; 
+    skos:altLabel "micropalaeontology"@en ,
+        "microfossils"@en ;
+    skos:broader esdc:paleontology ; 
+    skos:definition "Micropaleontology is the systematic study of microfossils (usually small fossils, best studied by means of a microscope), their morphology, classification, and environmental and biostratigraphic significance. (After: Saraswati & Srinivasan, 2016)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Micropaleontology includes a heterogeneous group of fossils that are generally of microscopic size (e.g., foraminifera, ostracoda, radiolaria, spores and pollen, dinoflagellates, acritarchs, chitinozoa). It also includes the detached skeletal elements of large-sized organisms that are difficult to identify without the aid of a microscope (e.g., sponge spicules, plates of corals, echinoderm spines)."@en ;
+    skos:prefLabel "Micropaleontology"@en .
 
 esdc:palynology a skos:Concept ;
-    skos:broader esdc:palaeontology ;
-    skos:definition "Palynology, the study of pollen and spores produced by land plants and protists, straddles paleontology and botany, as it deals with both living and fossil organisms. Source: Wikipedia"@en ;
+    skos:broader esdc:micropaleontology ;
+    skos:definition "Originally, the study of pollen and spores, extant and fossil (paleopalynology), including stratigraphic and paleoecological applications. Now includes the study of a wide range of other robust-walled, microscopic remains of various plants, animals, fungal spores and protists. (Traverse, 2007)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Palynology and paleopalynology (the latter also generally referred to as palynology) have a wide array of scientific applications and functions, including stratigraphy, climatology, paleoecology, evolutionary studies, archaeology, human-allergy diseases, pollen-in-honey studies (melitopalynology) and associated apiculture, and in forensics. Paleopalynology, but not other aspects of palynology, is a subset of micropaleontology and thus of paleontology. It is concerned with the study of a wide range of fossil microscopic, usually organic bodies: spores and pollen (collectively termed miospores, if <200 µm in diameter), animal remains such as chitinozoans, as well as fungal spores, dinoflagellates, acritarchs and other organisms, as well as fragmented, more or less degraded organic particles (palynodebris), all resistant to acids and found in sedimentary rocks of varying age."@en ;
     skos:prefLabel "Palynology"@en .
 	
-esdc:vertebrate-palaeontology a skos:Concept ;
-    skos:broader esdc:palaeontology ;
+esdc:vertebrate-paleontology a skos:Concept ;
+    skos:altLabel "vertebrate palaeontology"@en ;
+    skos:broader esdc:paleontology ;
     skos:definition "Vertebrate paleontology concentrates on fossils from the earliest fish to the immediate ancestors of modern mammals. Source: Wikipedia"@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Vertebrate Palaeontology"@en .
+    skos:prefLabel "Vertebrate Paleontology"@en .
 
 esdc:petroleum-and-coal-geology a skos:Concept ;
     skos:altLabel "fossil fuel geology"@en,
@@ -250,9 +331,8 @@ esdc:structural-geology a skos:Concept ;
     skos:prefLabel "Structural Geology"@en .
 
 esdc:tectonics a skos:Concept ;
-    skos:altLabel "plate tectonics"@en ;
     skos:broader esdc:geology ;
-    skos:definition "Also known as plate tectonics, the unifying geologic theory developed to explain observations that interactions of the brittle plates of the lithosphere with each other and with the softer underlying asthenosphere result in large-scale changes in the Earth. Source: Schlumberger Oilfield Glossary"@en ;
+    skos:definition "The branch of geology dealing with the broad architecture of the outer part of the Earth, i.e., the regional assembling of structural or deformational features, a study of their mutual relations, origin and historical evolution. It is closely related to structural geology, with which the distinctions are blurred, but tectonics generally deals with larger features. Source: Neuendorf et al., 2011"@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040313> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040313" ;
@@ -463,13 +543,14 @@ esdc:natural-hazards a skos:Concept ;
     skos:notation "040604" ;
     skos:prefLabel "Natural Hazards"@en .
 
-esdc:palaeoclimatology a skos:Concept ;
+esdc:paleoclimatology a skos:Concept ;
+    skos:altLabel "palaeoclimatology"@en ;
     skos:broader esdc:physical-geography ;
     skos:definition "The study of changes in climate taken on the scale of the entire history of Earth. It uses a variety of proxy methods from the Earth and life sciences to obtain data previously preserved within rocks, sediments, ice sheets, tree rings, corals, shells, and microfossils to determine the past states of the Earth's various climate regions and its atmospheric system. Source: Wikipedia"@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040605> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040605" ;
-    skos:prefLabel "Palaeoclimatology"@en .
+    skos:prefLabel "Paleoclimatology"@en .
 
 esdc:quaternary-environments a skos:Concept ;
     skos:altLabel "quaternary geology"@en ;
@@ -602,7 +683,7 @@ esdc:resources-engineering a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "0914" ;
     skos:altLabel "RESOURCES ENGINEERING AND EXTRACTIVE METALLURGY"@en,
-            "Natural Resources Engineering"@en ;
+        "Natural Resources Engineering"@en ;
     skos:prefLabel "Resources Engineering"@en .
 
 esdc:geomechanics-and-resources-geotechnical-engineering a skos:Concept ;
@@ -649,7 +730,7 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:organic-petrology,
         esdc:sedimentary-petrology,
         esdc:mineralogy-and-crystallography,
-        esdc:palaeontology,
+        esdc:paleontology,
         esdc:palynology,
         esdc:reservoir-geology,
         esdc:reservoir-engineering,
