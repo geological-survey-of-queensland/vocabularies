@@ -8,14 +8,14 @@
 <http://linked.data.gov.au/def/borehole-purpose> a owl:Ontology , skos:ConceptScheme ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-01-21T13:24:10"^^xsd:dateTime ;
+    dcterms:modified "2020-06-17T11:30:10"^^xsd:dateTime ;
     dcterms:created "2020-01-21T09:40:39"^^xsd:dateTime ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The primary purpose of a borehole based on the legislative State Act and/or the resources industry sector."@en ;
     skos:hasTopConcept bhpur:coal,
         bhpur:geothermal,
         bhpur:greenhouse-gas-storage,
-        bhpur:minerals,
+        bhpur:mineral,
         bhpur:non-industry,
         bhpur:oil-shale,
         bhpur:petroleum,
@@ -86,10 +86,10 @@ bhpur:geothermal a skos:Concept ;
     skos:prefLabel "Geothermal"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-purpose> .
 
-bhpur:minerals a skos:Concept ;
+bhpur:mineral a skos:Concept ;
     skos:definition "Wells and bores drilled to facilitate the mining of minerals, excluding coal and oil shale, under permits governed by the Queensland Mineral Resources Act (1989)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-purpose> ;
-    skos:prefLabel "Minerals"@en ;
+    skos:prefLabel "Mineral"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-purpose> .
 
 bhpur:non-industry a skos:Concept ;
@@ -124,7 +124,6 @@ bhpur:coal a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-purpose> .
 
 bhpur:petroleum a skos:Concept ;
-    skos:altLabel "Coal Seam Gas"@en ;
     skos:definition "Wells and bores drilled under permits governed by the Queensland Petroleum Act (1923)"@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-purpose> ;
     skos:prefLabel "Petroleum"@en ;
