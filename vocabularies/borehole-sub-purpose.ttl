@@ -11,7 +11,7 @@
     dcterms:created "2020-01-23"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-01-23"^^xsd:date ;
+    dcterms:modified "2020-06-18"^^xsd:date ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The intended function of a borehole."@en ;
     skos:hasTopConcept bhfunc:blasthole,
@@ -124,6 +124,13 @@ bhfunc:goaf-drainage a skos:Concept ;
     skos:definition "A well or bore drilled to remove fluids and or dangerous gases from the goaf."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-sub-purpose> ;
     skos:prefLabel "goaf drainage"@en .
+
+bhfunc:heat-flow a skos:Concept ;
+    skos:altLabel "geothermal heat flow"@en ;
+    skos:broader bhfunc:resource-assessment ;
+    skos:definition "purposely drilled to directly measure downhole temperature gradient as well as collecting core samples (to measure thermal conductivity of formations intersected), then to be able to calculate / determine heat flow in the drilled section of the borehole."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-sub-purpose> ;
+    skos:prefLabel "heat flow"@en .
 
 bhfunc:intrusion-delineation a skos:Concept ;
     skos:broader bhfunc:structure ;
