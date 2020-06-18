@@ -10,7 +10,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-05-14"^^xsd:date ;
+    dcterms:modified "2020-06-18"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The types of observation in geoscience."@en ;
@@ -44,6 +44,7 @@
         obstp:metamorphism,
         obstp:mineral-deposit-expression,
         obstp:mineral-deposit-form,
+        obstp:mineralisation,
         obstp:mineralogical-components,
         obstp:miscellaneous-observation,
         obstp:multispectral,
@@ -295,6 +296,14 @@ obstp:mineral-deposit-form a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "DFRM" ;
     skos:prefLabel "Mineral Deposit Form"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type> .
+
+obstp:mineralisation a skos:Concept ;
+    skos:definition "The observation of minerals or materials that are of potential economic interest."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-type> ;
+    skos:notation "MINOCC" ;
+    skos:altLabel "Mineral Occurrence"@en ;
+    skos:prefLabel "Mineralisation"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type> .
 
 obstp:mineralogical-components a skos:Concept ;
