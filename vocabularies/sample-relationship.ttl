@@ -34,6 +34,7 @@ sosa:hasSample
     sdo:rangeIncludes sosa:Sample ;
     owl:inverseOf sosa:isSampleOf ;
     rdfs:isDefinedBy sosa: ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-relationship> ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> .
 
 sosa:isSampleOf
@@ -44,6 +45,7 @@ sosa:isSampleOf
     sdo:rangeIncludes sosa:FeatureOfInterest ;
     owl:inverseOf sosa:hasSample ;
     rdfs:isDefinedBy sosa: ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-relationship> ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> .
 
 sosa:hasOriginalSample
@@ -54,6 +56,7 @@ sosa:hasOriginalSample
     skos:definition "A Link to the original sample that is related to the context sample through a chain of isSampleOf relations."@en ;
     rdfs:domain sosa:Sample ;
     rdfs:range sosa:Sample ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-relationship> ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> .
 
 
