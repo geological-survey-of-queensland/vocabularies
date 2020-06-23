@@ -11,7 +11,7 @@
         skos:ConceptScheme ;
     dct:created "2019-09-06"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-06-23"^^xsd:date ;
+    dct:modified "2020-06-03"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Modified from the Fields of Research vocabulary from the Australian and New Zealand Standard Research Classification (ANZSRC). Relevant earth science categories have been extracted and augmented with narrower terms relevant for industry and research institutions." ;
     skos:definition "A classification that facilitates identification of the Fields of Research, or topics, to which a dataset, activity, or entity pertain."@en ;
@@ -47,7 +47,7 @@ esdc:built-environment-and-design a skos:Concept ;
     skos:prefLabel "Built Environment and Design"@en .
 
 esdc:urban-and-regional-planning a skos:Concept ;
-    skos:broader esdc:build-environment-and-design ;
+    skos:broader esdc:built-environment-and-design ;
     skos:definition "Encompasses: Community Planning, History and Theory of the Built Environment (excl. Architecture); Housing Markets, Development, Management; Land Use and Environmental Planning, Regional Analysis and Development, Transport Planning, Urban Analysis and Development; Urban and Regional Planning not elsewhere classified; and Urban Design. (Australian and New Zealand Standard Research Classification: Fields of Research; accessed 17.06.2020)."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/1205> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
@@ -450,7 +450,7 @@ esdc:mineral-occurrences a skos:Concept ;
 
 esdc:quarry-resources a skos:Concept ;
     skos:altLabel "Quarries, Sand, and Gravel Resources"@en ;
-    skos:broader esdc:resource-geology ;
+    skos:broader esdc:economic-geology ;
     skos:definition "The quantification of the physical properties, chemical properties, volumes, and limitations to development of quarry product accumulations. Quarry resources include, but may not be limited to, hardrock, sand and gravel."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Quarry Resources"@en .
@@ -861,6 +861,6 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:remote-sensing,
         esdc:airborne-spectral,
         esdc:core-spectral,
-        esdc:satellite-spectral,
+        esdc:satellite-spectral ,
         esdc:environmental-sciences ;
     skos:prefLabel "Lodgement form selection"@en .
