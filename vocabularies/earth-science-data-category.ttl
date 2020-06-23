@@ -47,7 +47,7 @@ esdc:built-environment-and-design a skos:Concept ;
     skos:prefLabel "Built Environment and Design"@en .
 
 esdc:urban-and-regional-planning a skos:Concept ;
-    skos:broader esdc:build-environment-and-design ;
+    skos:broader esdc:built-environment-and-design ;
     skos:definition "Encompasses: Community Planning, History and Theory of the Built Environment (excl. Architecture); Housing Markets, Development, Management; Land Use and Environmental Planning, Regional Analysis and Development, Transport Planning, Urban Analysis and Development; Urban and Regional Planning not elsewhere classified; and Urban Design. (Australian and New Zealand Standard Research Classification: Fields of Research; accessed 17.06.2020)."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/1205> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
@@ -166,7 +166,8 @@ esdc:surface-geology a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Surface Geology"@en .
 
-esdc:economic-geology a skos:Concept ; 
+esdc:economic-geology a skos:Concept ;
+    skos:altLabel "Resource Geology"@en ;
     skos:broader esdc:geology ; 
     skos:definition "The study of fuels, metals and other materials of economic interest; it is concerned with the distribution, value and availability of resources, and the cost and benefits of their recovery. (Encyclopedia.com, 06.05.2020)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
@@ -428,34 +429,28 @@ esdc:volcanology a skos:Concept ;
     skos:notation "040314" ;
     skos:prefLabel "Volcanology"@en .
 
-esdc:resource-geology a skos:Concept ;
-    skos:broader esdc:geology ;
-    skos:definition "The study of geology in the context of economic development and the quantification of resource potential of accumulations such as hydrocarbons, mineral ore bodies, and coal deposits."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Resource Geology"@en .
-
 esdc:geothermal-energy a skos:Concept ;
-    skos:broader esdc:resource-geology ;
+    skos:broader esdc:economic-geology ;
     skos:definition "The study of energy generation from geothermal resources including the geological systems and the methods, materials and operations used in the production of energy."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:altLabel "Geothermal"@en ;
     skos:prefLabel "Geothermal Energy"@en .
 
 esdc:hydrocarbon-occurrences a skos:Concept ;
-    skos:broader esdc:resource-geology ;
+    skos:broader esdc:economic-geology ;
     skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (i.e. plays and prospects), and limitations to development of hydrocarbon accumulations."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Hydrocarbon Occurrences"@en .
 
 esdc:mineral-occurrences a skos:Concept ;
-    skos:broader esdc:resource-geology ;
+    skos:broader esdc:economic-geology ;
     skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (e.g. ore body charictarization), and limitations to development of mineral occurences."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Mineral Occurrences"@en .
 
 esdc:quarry-resources a skos:Concept ;
     skos:altLabel "Quarries, Sand, and Gravel Resources"@en ;
-    skos:broader esdc:resource-geology ;
+    skos:broader esdc:economic-geology ;
     skos:definition "The quantification of the physical properties, chemical properties, volumes, and limitations to development of quarry product accumulations. Quarry resources include, but may not be limited to, hardrock, sand and gravel."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Quarry Resources"@en .
@@ -828,7 +823,7 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:inorganic-geochemistry,
         esdc:organic-geochemistry,
         esdc:isotope-geochemistry,
-        esdc:extract-geochemistry,
+        esdc:fluid-extract-geochemistry,
         esdc:hydrogeochemistry,
         esdc:geology,
         esdc:basin-analysis,
@@ -843,9 +838,11 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:reservoir-geology,
         esdc:reservoir-engineering,
         esdc:structural-geology,
-        esdc:resource-geology,
+        esdc:economic-geology,
         esdc:geothermal-energy,
         esdc:quarry-resources,
+        esdc:coal-geology,
+        esdc:petroleum-geology,
         esdc:geomechanics-and-resources-geotechnical-engineering,
         esdc:geophysics,
         esdc:electrical-geophysics,
@@ -858,11 +855,12 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:gravity,
         esdc:gravity-gradiometry,
         esdc:petrophysics,
-        esdc:environmental-sciences,
         esdc:engineering,
         esdc:surveying,
+        esdc:drilling-engineering,
         esdc:remote-sensing,
         esdc:airborne-spectral,
         esdc:core-spectral,
-        esdc:satellite-spectral ;
+        esdc:satellite-spectral ,
+        esdc:environmental-sciences ;
     skos:prefLabel "Lodgement form selection"@en .
