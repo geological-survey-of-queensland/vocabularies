@@ -8,8 +8,8 @@
 
 <http://linked.data.gov.au/def/site-relationships> a owl:Ontology , skos:ConceptScheme ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:created "2020-01-21T15:45:34"^^xsd:dateTime ;
-    dcterms:modified "2020-05-07T23:13:00"^^xsd:dateTime ;
+    dcterms:created "2020-01-21"^^xsd:date ;
+    dcterms:modified "2020-06-24"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The relationships between sites both topological and functional."@en ;
@@ -18,6 +18,7 @@
         strel:borehole-intersect,
         strel:contains,
         strel:covers,
+        strel:crosses,
         strel:disjoint,
         strel:equals,
         strel:injection-extraction-pair,
@@ -56,7 +57,7 @@ strel:interval a skos:Collection ;
         strel:covers,
         strel:disjoint,
         strel:equals,
-        strel:meets,
+        strel:touches,
         strel:intersects ;
     skos:prefLabel "Interval"@en .
 
@@ -67,7 +68,7 @@ strel:topological a skos:Collection ;
         strel:disjoint,
         strel:equals,
         strel:touches,
-        strel:overlaps ;
+        strel:intersects ;
     skos:prefLabel "Topological"@en .
 
 strel:wellbore a skos:Collection ;
@@ -138,6 +139,7 @@ strel:well-pad a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:contains a skos:Concept ;
+    skos:altLabel "Within"@en ;
     skos:definition "Object A contains object B, and the boundaries do not intersect."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Contains"@en ;
