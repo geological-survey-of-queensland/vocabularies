@@ -8,13 +8,14 @@
 <http://linked.data.gov.au/def/sample-type> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-05-13"^^xsd:date ;
+    dcterms:modified "2020-06-24"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Types of sample used in Geoscience."@en ;
     skos:hasTopConcept sampty:blasted-sample,
         sampty:bulk-cyanide-leach-sample,
         sampty:borehole-cement,
+        sampty:boxed-core,
         sampty:channel-sample,
         sampty:composited-core,
         sampty:composited-cuttings,
@@ -85,6 +86,14 @@ sampty:borehole-cement a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
     skos:notation "BHCM" ;
     skos:prefLabel "Borehole Cement"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
+
+sampty:boxed-core a skos:Concept ;
+    skos:definition "A part of a core sample which has been broken into shorter lengths and placed into boxes or trays for ease of storage."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
+    skos:notation "BOXCORE" ;
+    skos:altLabel "Core Tray"@en , "Core Box"@en;
+    skos:prefLabel "Boxed Core"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
 
 sampty:bulk-cyanide-leach-sample a skos:Concept ;
