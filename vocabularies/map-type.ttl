@@ -1,49 +1,140 @@
- @prefix mctp: <http://linked.data.gov.au/def/map-type/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mctp: <http://linked.data.gov.au/def/map-type/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+mctp:map-collection a skos:Collection ;
+    skos:definition "Additional details that describe Map Collection surveys."@en ;
+    skos:member mctp:atlas,
+        mctp:gemfields,
+        mctp:geochemistry,
+        mctp:geology,
+        mctp:geophysical,
+        mctp:groundwater,
+        mctp:index,
+        mctp:industrial-rock,
+        mctp:mine,
+        mctp:mineral-occurrence,
+        mctp:miscellaneous,
+        mctp:orthophoto,
+        mctp:permit,
+        mctp:resource,
+        mctp:slope-stability,
+        mctp:time-space ;
+    skos:prefLabel "Map Collection"@en .
 
- @prefix dc: <http://purl.org/dc/elements/1.1/> .
- @prefix dcterms: <http://purl.org/dc/terms/> .
- @prefix owl: <http://www.w3.org/2002/07/owl#> .
- @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
- @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
- @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
- @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
- @prefix sdo: <https://schema.org/> .
+mctp:atlas a skos:Concept ;
+    skos:definition "Atlas Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Atlas"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
 
-<http://linked.data.gov.au/def/map-type> a owl:Ontology , skos:ConceptScheme ;
-dcterms:created "2020-06-25"^^xsd:date ;
-dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-dcterms:modified "2020-06-25"^^xsd:date ;
-dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+mctp:gemfields a skos:Concept ;
+    skos:definition "Gemfields Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Gemfields"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
 
-skos:definition "Types of maps found in GSQs Map Collection"@en ;
-skos:prefLabel "Map Type"@en .
+mctp:geochemistry a skos:Concept ;
+    skos:definition "Geochemistry Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Geochemistry"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:geology a skos:Concept ;
+    skos:definition "Geology Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Geology"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:geophysical a skos:Concept ;
+    skos:definition "Geophysical Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Geophysical"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:groundwater a skos:Concept ;
+    skos:definition "Groundwater Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Groundwater"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:index a skos:Concept ;
+    skos:definition "Index Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Index"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:industrial-rock a skos:Concept ;
+    skos:definition "Industrial-Rock Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Industrial Rock"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:mine a skos:Concept ;
+    skos:definition "Mine Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Mine"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:mineral-occurrence a skos:Concept ;
+    skos:definition "Mineral-Occurrence Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Mineral Occurrence"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:miscellaneous a skos:Concept ;
+    skos:definition "Miscellaneous Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Miscellaneous"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:orthophoto a skos:Concept ;
+    skos:definition "Orthophoto Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Orthophoto"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:permit a skos:Concept ;
+    skos:definition "Permit Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Permit"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:resource a skos:Concept ;
+    skos:definition "Resource Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Resource"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:slope-stability a skos:Concept ;
+    skos:definition "Slope-Stability Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Slope Stability"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
+
+mctp:time-space a skos:Concept ;
+    skos:definition "Time-Space Map Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-type> ;
+    skos:prefLabel "Time-Space"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-type> .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ; 
+    sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
-mctp:atlas a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Atlas Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Atlas"@en  .
-mctp:gemfields a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Gemfields Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Gemfields"@en  .
-mctp:geology a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Geology Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Geology"@en  .
-mctp:geophysical a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Geophysical Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Geophysical"@en  .
-mctp:groundwater a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Groundwater Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Groundwater"@en  .
-mctp:index a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Index Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Index"@en  .
-mctp:industrial-rock a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Industrial-Rock Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Industrial Rock"@en  .
-mctp:mine a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Mine Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Mine"@en  .
-mctp:mineral-occurrence a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Mineral-Occurrence Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Mineral Occurrence"@en  .
-mctp:miscellaneous a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Miscellaneous Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Miscellaneous"@en  .
-mctp:orthophoto a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Orthophoto Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Orthophoto"@en  .
-mctp:resource a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Resource Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Resource"@en  .
-mctp:slope-stability a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Slope-Stability Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Slope Stability"@en  .
-mctp:time-space a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Time-Space Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Time-Space"@en  .
-mctp:geochemistry a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Geochemistry Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Geochemistry"@en  .
-mctp:permit a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-type> ; skos:definition "Permit Map Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-type>; skos:prefLabel "Permit"@en  .
-
-mctp:map-collection a skos:Collection  ; skos:prefLabel "Map Collection"@en ; skos:definition "Additional details that describe Map Collection surveys."@en ; skos:member mctp:atlas, mctp:gemfields, mctp:geology, mctp:geophysical, mctp:groundwater, mctp:index, mctp:industrial-rock, mctp:mine, mctp:mineral-occurrence, mctp:miscellaneous, mctp:orthophoto, mctp:resource, mctp:slope-stability, mctp:time-space, mctp:geochemistry, mctp:permit  .
-
-
-
-
-
-
+<http://linked.data.gov.au/def/map-type> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:created "2020-06-25"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-06-25"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    skos:definition "Types of maps found in GSQs Map Collection"@en ;
+    skos:prefLabel "Map Type"@en .
