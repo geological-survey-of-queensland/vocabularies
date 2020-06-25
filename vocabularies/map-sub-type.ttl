@@ -1,51 +1,154 @@
- @prefix mcsbtp: <http://linked.data.gov.au/def/map-sub-type/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mcsbtp: <http://linked.data.gov.au/def/map-sub-type/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+mcsbtp:map-collection a skos:Collection ;
+    skos:definition "Additional details that describe Map Collection surveys."@en ;
+    skos:member mcsbtp:all-minerals,
+        mcsbtp:basement,
+        mcsbtp:block-identification-map,
+        mcsbtp:coal,
+        mcsbtp:cross-section,
+        mcsbtp:economic,
+        mcsbtp:energy,
+        mcsbtp:fossicking,
+        mcsbtp:gas,
+        mcsbtp:geothermal,
+        mcsbtp:greenhouse-gas,
+        mcsbtp:hydrogeological,
+        mcsbtp:minerals-other-than-coal,
+        mcsbtp:petroleum,
+        mcsbtp:regolith,
+        mcsbtp:stream-sediment,
+        mcsbtp:structural-framework,
+        mcsbtp:surface ;
+    skos:prefLabel "Map Collection"@en .
 
- @prefix dc: <http://purl.org/dc/elements/1.1/> .
- @prefix dcterms: <http://purl.org/dc/terms/> .
- @prefix owl: <http://www.w3.org/2002/07/owl#> .
- @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
- @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
- @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
- @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
- @prefix sdo: <https://schema.org/> .
+mcsbtp:all-minerals a skos:Concept ;
+    skos:definition "All Minerals Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "All Minerals"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
 
-<http://linked.data.gov.au/def/map-sub-type> a owl:Ontology , skos:ConceptScheme ;
-dcterms:created "2020-06-25"^^xsd:date ;
-dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-dcterms:modified "2020-06-25"^^xsd:date ;
-dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+mcsbtp:basement a skos:Concept ;
+    skos:definition "Basement Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Basement"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
 
-skos:definition "Sub types of maps found in GSQs Map Collection"@en ;
-skos:prefLabel "Map Sub Type"@en .
+mcsbtp:block-identification-map a skos:Concept ;
+    skos:definition "Block Identification Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Block Identification Map"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:coal a skos:Concept ;
+    skos:definition "Coal Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Coal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:cross-section a skos:Concept ;
+    skos:definition "Cross Section Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Cross-Section"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:economic a skos:Concept ;
+    skos:definition "Economic Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Economic"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:energy a skos:Concept ;
+    skos:definition "Energy Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Energy"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:fossicking a skos:Concept ;
+    skos:definition "Fossicking Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Fossicking"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:gas a skos:Concept ;
+    skos:definition "Gas Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Gas"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:geothermal a skos:Concept ;
+    skos:definition "Geothermal Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel ""@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:greenhouse-gas a skos:Concept ;
+    skos:definition "Greenhouse Gas Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel ""@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:hydrogeological a skos:Concept ;
+    skos:definition "Hydrogeological Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Hydrogeological"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:minerals-other-than-coal a skos:Concept ;
+    skos:definition "Minerals Other Than Coal Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Minerals other than Coal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:petroleum a skos:Concept ;
+    skos:definition "Petroleum Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Petroleum"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:regolith a skos:Concept ;
+    skos:definition "Regolith Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Regolith"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:stream-sediment a skos:Concept ;
+    skos:definition "Stream Sediment Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Stream Sediment"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:structural-framework a skos:Concept ;
+    skos:definition "Structural Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Structural Framework"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
+
+mcsbtp:surface a skos:Concept ;
+    skos:definition "Surface Map Sub Type"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/map-sub-type> ;
+    skos:prefLabel "Surface"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/map-sub-type> .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ; 
+    sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
-mcsbtp:all-minerals a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "All Minerals Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "All Minerals"@en  .
-mcsbtp:basement a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Basement Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Basement"@en  .
-mcsbtp:block-identification-map a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Block Identification Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Block Identification Map"@en  .
-mcsbtp:coal a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Coal Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Coal"@en  .
-mcsbtp:economic a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Economic Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Economic"@en  .
-mcsbtp:energy a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Energy Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Energy"@en  .
-mcsbtp:fossicking a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Fossicking Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Fossicking"@en  .
-mcsbtp:gas a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Gas Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Gas"@en  .
-mcsbtp:hydrogeological a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Hydrogeological Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Hydrogeological"@en  .
-mcsbtp:minerals-other-than-coal a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Minerals Other Than Coal Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Minerals other than Coal"@en  .
-mcsbtp:petroleum a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Petroleum Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Petroleum"@en  .
-mcsbtp:regolith a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Regolith Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Regolith"@en  .
-mcsbtp:stream-sediment a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Stream Sediment Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Stream Sediment"@en  .
-mcsbtp:structural-framework a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Structural Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Structural Framework"@en  .
-mcsbtp:surface a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Surface Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Surface"@en  .
-mcsbtp:cross-section a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Cross Section Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel "Cross-Section"@en  .
-mcsbtp:geothermal a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Geothermal Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel ""@en  .
-mcsbtp:greenhouse-gas a skos:Concept ; skos:topConceptOf  <http://linked.data.gov.au/def/map-sub-type> ; skos:definition "Greenhouse Gas Map Sub Type"@en ; skos:inScheme  <http://linked.data.gov.au/def/map-sub-type>; skos:prefLabel ""@en  .
-
-mcsbtp:map-collection a skos:Collection  ; skos:prefLabel "Map Collection"@en ; skos:definition "Additional details that describe Map Collection surveys."@en ; skos:member mcsbtp:all-minerals, mcsbtp:basement, mcsbtp:block-identification-map, mcsbtp:coal, mcsbtp:economic, mcsbtp:energy, mcsbtp:fossicking, mcsbtp:gas, mcsbtp:hydrogeological, mcsbtp:minerals-other-than-coal, mcsbtp:petroleum, mcsbtp:regolith, mcsbtp:stream-sediment, mcsbtp:structural-framework, mcsbtp:surface, mcsbtp:cross-section, mcsbtp:geothermal, mcsbtp:greenhouse-gas  .
-
-
-
-
-
-
+<http://linked.data.gov.au/def/map-sub-type> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:created "2020-06-25"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-06-25"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    skos:definition "Sub types of maps found in GSQs Map Collection"@en ;
+    skos:prefLabel "Map Sub Type"@en .
