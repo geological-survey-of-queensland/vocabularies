@@ -1,6 +1,6 @@
 @prefix esdc: <http://linked.data.gov.au/def/earth-science-data-category/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix es: <http://purl.org/au-research/vocabulary/anzsrc-for/2008/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
@@ -9,11 +9,11 @@
 
 <http://linked.data.gov.au/def/earth-science-data-category> a owl:Ontology ,
         skos:ConceptScheme ;
-    dct:created "2019-09-06"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-06-03"^^xsd:date ;
-    dct:publisher <http://linked.data.gov.au/org/gsq> ;
-    dct:source "Modified from the Fields of Research vocabulary from the Australian and New Zealand Standard Research Classification (ANZSRC). Relevant earth science categories have been extracted and augmented with narrower terms relevant for industry and research institutions." ;
+    dcterms:created "2019-09-06"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-06-26"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:source "Modified from the Fields of Research vocabulary from the Australian and New Zealand Standard Research Classification (ANZSRC). Relevant earth science categories have been extracted and augmented with narrower terms relevant for industry and research institutions." ;
     skos:definition "A classification that facilitates identification of the Fields of Research, or topics, to which a dataset, activity, or entity pertain."@en ;
     skos:prefLabel "Earth Science Data Category"@en .
 
@@ -37,31 +37,6 @@ esdc:atmospheric-sciences a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "0401" ;
     skos:prefLabel "Atmospheric Sciences"@en .
-
-esdc:built-environment-and-design a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:definition "Encompasses: Architecture; Building, Design Practice and Management; Engineering Design; Other Built Environment and Design; and Urban and Regional Planning. (Australian and New Zealand Standard Research Classification: Fields of Research; accessed 17.06.2020)."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/12> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "12" ;
-    skos:prefLabel "Built Environment and Design"@en .
-
-esdc:urban-and-regional-planning a skos:Concept ;
-    skos:broader esdc:built-environment-and-design ;
-    skos:definition "Encompasses: Community Planning, History and Theory of the Built Environment (excl. Architecture); Housing Markets, Development, Management; Land Use and Environmental Planning, Regional Analysis and Development, Transport Planning, Urban Analysis and Development; Urban and Regional Planning not elsewhere classified; and Urban Design. (Australian and New Zealand Standard Research Classification: Fields of Research; accessed 17.06.2020)."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/1205> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "1205" ;
-    skos:prefLabel "Urban and Regional Planning"@en .
-
-esdc:land-use-and-environmental-planning a skos:Concept ;
-    skos:broader esdc:urban-and-regional-planning ;
-    skos:definition "Land-use and environmental planning involves the regulation and commitment of land-use, as to how the landscape is used (whether for food production, forestry, nature conservation, water storage, urban development, mining, etc.), to ensure the most efficient, effective and beneficial management and utilization of resources, to provide optimal environmental and social outcomes."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/120504> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "120504" ;
-    skos:scopeNote "The Queensland Land Use Mapping Program (QLUMP) assesses land-use patterns and changes across the State, according to the Australian Land Use and Management Classification, and is part of the Australian Collaborative Land Use and Management Program (ACLUMP). This Program is coordinated by the Australian Bureau of Agricultural and Resource Economics and Sciences (ABARES) and promotes nationally-consistent, land-use data for natural resource assessment, monitoring and planning. The Australian Land Use and Management Classification has been provided as a vocabulary service by ABARES in collaboration with the National Environmental Information Infrastructure (NEII) and the Australian National Data Service (ANDS)."@en ;
-    skos:prefLabel "Land Use and Environmental Planning"@en .
 
 esdc:geochemistry a skos:Concept ;
     skos:broader esdc:earth-sciences ;
@@ -97,7 +72,7 @@ esdc:isotope-geochemistry a skos:Concept ;
 
 esdc:fluid-extract-geochemistry a skos:Concept ;
     skos:broader esdc:geochemistry ;
-    skos:definition "Analysis of the chemical and physical properties of products extracted from rocks in the subsurface."@en ;
+    skos:definition "Analysis of the chemical and physical properties of fluids extracted from rocks in the subsurface."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Fluid Extract Geochemistry"@en .
 
@@ -131,47 +106,20 @@ esdc:geology a skos:Concept ;
     skos:altLabel "General Geology"@en ;
     skos:prefLabel "Geology"@en .
 
-esdc:regional-geology a skos:Concept ; 
+esdc:basement-geology a skos:Concept ;  
     skos:broader esdc:geology ; 
-    skos:definition "The geological study of large-scale regions, providing a link between global and local geology, and a framework for site-specific studies. (Bally & Roberts, 2012)."@en ;
+    skos:definition " The study of the bedrock of the earth under sedimentary layers. Basement geology may be self-referential in that it is also the study of defining what consititutes basement at regional and local scales, and whether geologically or economically defined."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Regional Geology"@en .
+    skos:prefLabel "Basement Geology"@en .
 
-esdc:history-of-geology a skos:Concept ; 
-    skos:broader esdc:geology ; 
-    skos:definition "The historical development of geologic knowledge, including the history of observations of geologic features, geological exploration, drilling, mapping, etc. (Modified from: Neuendorf et al., 2011)."@en ;
+esdc:basin-analysis a skos:Concept ;
+    skos:altLabel "sedimentary basin analysis"@en ;
+    skos:broader esdc:geology ;
+    skos:definition "a geologic method by which the history of a sedimentary basin is revealed, by analyzing the sediment fill itself. Aspects of the sediment, namely its composition, primary structures, and internal architecture, can be synthesized into a history of the basin fill. Source:Wikipedia"@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040301> ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:scopeNote "Also includes: The history of theories to explain the origin of geologic features, the history of the organisation and development of geologic institutions and societies, and the biographical study of geologists. Not to be confused with historical geology."@en ;
-        skos:prefLabel "History of Geology"@en .
-
-esdc:historical-geology a skos:Concept ; 
-    skos:altLabel "paleogeology"@en , 
-        "palaeogeology"@en ;
-    skos:broader esdc:geology ; 
-    skos:definition "The branch of geology concerned with the reconstruction and comprehension of the geological history of the Earth. (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:scopeNote "Includes geologic processes on the surface of, and within, the Earth, involving investigations into stratigraphy, paleontology and the associated evolution of life forms throughout the interval of the geologic time scale, geochronology, plate tectonics, structural geology, paleoenvironments and changing paleoclimates. It is not to be confused with history of geology."@en ;    skos:prefLabel "Historical Geology"@en .
-
-esdc:local-geology a skos:Concept ; 
-    skos:broader esdc:geology ; 
-    skos:definition "A comprehensive study of the geological and geographical features of an area at a local scale."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:hiddenLabel "Areal Geology"@en ;
-    skos:prefLabel "Local Geology"@en  .
-
-esdc:surface-geology a skos:Concept ; 
-    skos:altLabel "surficial geology"@en ; 
-    skos:broader esdc:geology ; 
-    skos:definition " The study of rock formations, soils, unconsolidated sediments, geological structures and other features, as observed and recorded or mapped at or near the Earth's surface. (Modified from Neuendorf et al., 2011; www.mindat.org, 06.05.2020)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Surface Geology"@en .
-
-esdc:economic-geology a skos:Concept ;
-    skos:altLabel "Resource Geology"@en ;
-    skos:broader esdc:geology ; 
-    skos:definition "The study of fuels, metals and other materials of economic interest; it is concerned with the distribution, value and availability of resources, and the cost and benefits of their recovery. (Encyclopedia.com, 06.05.2020)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Economic Geology"@en .
+    skos:notation "040301" ;
+    skos:prefLabel "Basin Analysis"@en .
 
 esdc:biogeology a skos:Concept ; 
     skos:broader esdc:geology ; 
@@ -200,15 +148,6 @@ esdc:carbon-geostorage-geology a skos:Concept ;
     skos:scopeNote "Includes assessment and testing of the capacity, injectivity and containment of potential reservoirs. Hydrodynamic and chemical modelling of trapping mechanisms are often part of geostorage reservoir characterisation."@en ;
     skos:prefLabel "Carbon Geostorage Geology"@en .
 
-esdc:basin-analysis a skos:Concept ;
-    skos:altLabel "sedimentary basin analysis"@en ;
-    skos:broader esdc:geology ;
-    skos:definition "a geologic method by which the history of a sedimentary basin is revealed, by analyzing the sediment fill itself. Aspects of the sediment, namely its composition, primary structures, and internal architecture, can be synthesized into a history of the basin fill. Source:Wikipedia"@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040301> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040301" ;
-    skos:prefLabel "Basin Analysis"@en .
-
 esdc:extraterrestrial-geology a skos:Concept ;
     skos:altLabel "astrogeology"@en,
         "exogeology"@en,
@@ -227,6 +166,111 @@ esdc:geochronology a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040303" ;
     skos:prefLabel "Geochronology"@en .
+
+esdc:historical-geology a skos:Concept ; 
+    skos:altLabel "paleogeology"@en , 
+        "palaeogeology"@en ;
+    skos:broader esdc:geology ; 
+    skos:definition "The branch of geology concerned with the reconstruction and comprehension of the geological history of the Earth. (Neuendorf et al., 2011)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Includes geologic processes on the surface of, and within, the Earth, involving investigations into stratigraphy, paleontology and the associated evolution of life forms throughout the interval of the geologic time scale, geochronology, plate tectonics, structural geology, paleoenvironments and changing paleoclimates. It is not to be confused with history of geology."@en ;    skos:prefLabel "Historical Geology"@en .
+
+esdc:history-of-geology a skos:Concept ; 
+    skos:broader esdc:geology ; 
+    skos:definition "The historical development of geologic knowledge, including the history of observations of geologic features, geological exploration, drilling, mapping, etc. (Modified from: Neuendorf et al., 2011)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Also includes: The history of theories to explain the origin of geologic features, the history of the organisation and development of geologic institutions and societies, and the biographical study of geologists. Not to be confused with historical geology."@en ;
+        skos:prefLabel "History of Geology"@en .
+
+esdc:local-geology a skos:Concept ; 
+    skos:broader esdc:geology ; 
+    skos:definition "A comprehensive study of the geological and geographical features of an area at a local scale."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:hiddenLabel "Areal Geology"@en ;
+    skos:prefLabel "Local Geology"@en  .
+
+esdc:regional-geology a skos:Concept ; 
+    skos:broader esdc:geology ; 
+    skos:definition "The geological study of large-scale regions, providing a link between global and local geology, and a framework for site-specific studies. (Bally & Roberts, 2012)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Regional Geology"@en .
+
+esdc:resource-geology a skos:Concept ;
+    skos:broader esdc:geology ; 
+    skos:definition "The study of fuels, metals and other materials of economic interest; it is concerned with the distribution, value and availability of resources, and the cost and benefits of their recovery. (Encyclopedia.com, 06.05.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Resource Geology"@en .
+
+esdc:geothermal-resource-geology a skos:Concept ;
+    skos:broader esdc:resource-geology ;
+    skos:definition "The study of energy generation from geothermal resources including the geological systems and the methods, materials and operations used in the production of energy."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:altLabel "Geothermal"@en,
+        "Geothermal Energy"@en,
+        "Geothermal Geology"@en ;
+    skos:prefLabel "Geothermal Resource Geology"@en .
+
+esdc:mineral-resource-geology a skos:Concept ;
+    skos:altLabel "Economic Geology"@en ;
+    skos:broader esdc:resource-geology ;
+    skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (e.g. ore body charictarization), and limitations to development of mineral occurences."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Mineral Resource Geology"@en .
+
+esdc:petroleum-and-coal-geology a skos:Concept ;
+    skos:altLabel "fossil fuel geology"@en,
+        "fossil-fuel geology"@en,
+        "coal and petroleum geology"@en ;
+    skos:broader esdc:resource-geology ;
+    skos:definition "The branch of geology that studies the processes of fossil fuel formation (coal, oil and gas)."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040309> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "040309" ;
+    skos:prefLabel "Petroleum and Coal Geology"@en .
+
+esdc:coal-geology a skos:Concept ;
+    skos:broader esdc:petroleum-and-coal-geology ; 
+    skos:definition "Coal geology includes study of: the sedimentation of coals and coal-bearing sequences; their stratigraphy, age and geographic distribution; their physical properties, including coal rank and quality, and the associated classification of coals; their hydrogeological characteristics; contained gases, and the contribution of coal deposits (amongst other rock types) to accumulations of oil and natural gas. (Collated from: Thomas, 2013)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Coal Geology"@en .
+
+esdc:petroleum-geology a skos:Concept ;
+    skos:altLabel "Reservoir Geology"@en ;
+    skos:broader esdc:petroleum-and-coal-geology ; 
+    skos:definition "Study of the mode of origin and conditions of accumulation of hydrocarbons in the Earth's crust; their exploration, involving application of the techniques of geophysics, geochemistry, paleontology, stratigraphy, and tectonics; and their evaluation. (Allaby, 2008). An assessment of petroleum systems and their composite parts: source, migration pathways, reservoir, seal, and method of entrapment"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Petroleum Geology"@en .
+
+esdc:conventional-reservoir-geology a skos:Concept ;
+    skos:broader esdc:petroleum-geology ;
+    skos:definition "The study of conventional (carbonate and clastic) petroleum systems that contain hydrocarbon accumulations. Conventional petroleum systems are accesible by standard oilfield techniques and typically do not require advanced drilling, completions, and reservoir stimulation methods. (Definition and scopeNote collated and adapted from: Selley & Sonnenburg, 2015; Schlumberger Oilfield Glossary & Wikipedia, both accessed 18.06.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Involves assessment of rock properties, particularly porosity, permeability and compressibility, and of the timing and mechanism of trap formation, as petroleum source rocks, reservoir rocks, impermeable caprocks/seals (which, together with reservoir rocks, constitute what are termed conventional reservoirs where buoyant forces keep hydrocarbons in place below the sealing caprocks) must form in a favourable sequence to allow accumulation in reservoir rocks (following petroleum generation in source rocks and its ensuing migration therefrom). Conventional reservoirs are those which permit petroleum (oil and/or natural gas) to flow readily from reservoirs into wellbores."@en ;
+    skos:prefLabel "Conventional Reservoir Geology"@en .
+
+esdc:unconventional-reservoir-geology a skos:Concept ;
+    skos:broader esdc:petroleum-geology ;
+    skos:definition "The geological study of nconventional petroleum systems, which comprise formations with tight gas, tight oil, oil sands, oil shale, bitumen, gas shales, coal seam gas/coalbed methane, and gas hydrates. (Definition and scopeNote after: Ganat, 2019; Schlumberger Oilfield Glossary, accessed 18.06.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Involves rocks where petroleum is distributed throughout the reservoir at basin-wide scale, and in which buoyant forces or the influence of a water column on the location of hydrocarbons in the reservoir are not significant."@en ;
+    skos:prefLabel "Unconventional Reservoir Geology"@en .
+
+esdc:coal-seam-gas-geology a skos:Concept ;
+    skos:altLabel "csg geology"@en,
+        "coalbed methane geology"@en,
+        "cbm geology"@en ;
+    skos:broader esdc:unconventional-reservoir-geology ;
+    skos:definition "The study of hydrocarbon bearing coal measures and coal-seam-gas resources. (Definition and scopeNote derived from Geoscience Australia; Department of Agriculture, Water and the Environment; Wikipedia: websites accessed 18.06.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "The geological parameters under which coal seam gas (naturally occurring methane) is ‘reservoired’ within coal-bearing units differ from those associated with conventional gas reservoirs in that gas is adsosorbed into the coal matrix, permitting greater volumes of storage compared to conventional natural gas reservoirs of equal rock volume."@en ;
+    skos:prefLabel "Coal Seam Gas Geology"@en .
+
+esdc:quarry-resource-geology a skos:Concept ;
+    skos:altLabel "Quarries, Sand, and Gravel Resources"@en ;
+    skos:broader esdc:resource-geology ;
+    skos:definition "The quantification of the physical properties, chemical properties, volumes, and limitations to development of quarry product accumulations. Quarry resources include, but may not be limited to, hardrock, sand and gravel."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Quarry Resource Geology"@en .
 
 esdc:petrology a skos:Concept ;
     skos:broader esdc:geology ;
@@ -334,60 +378,6 @@ esdc:vertebrate-paleontology a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Vertebrate Paleontology"@en .
 
-esdc:petroleum-and-coal-geology a skos:Concept ;
-    skos:altLabel "fossil fuel geology"@en,
-        "fossil-fuel geology"@en,
-        "petroleum and coal geology"@en ;
-    skos:broader esdc:geology ;
-    skos:definition "The branch of geology that studies the processes of fossil fuel formation (coal, oil and gas)."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/040309> ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:notation "040309" ;
-    skos:prefLabel "Petroleum and Coal Geology"@en .
-
-esdc:coal-geology a skos:Concept ;
-    skos:broader esdc:petroleum-and-coal-geology ; 
-    skos:definition "Coal geology includes study of: the sedimentation of coals and coal-bearing sequences; their stratigraphy, age and geographic distribution; their physical properties, including coal rank and quality, and the associated classification of coals; their hydrogeological characteristics; contained gases, and the contribution of coal deposits (amongst other rock types) to accumulations of oil and natural gas. (Collated from: Thomas, 2013)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Coal Geology"@en .
-
-esdc:petroleum-geology a skos:Concept ;
-    skos:broader esdc:petroleum-and-coal-geology ; 
-    skos:definition "Study of the mode of origin and conditions of accumulation of hydrocarbons in the Earth's crust; their exploration, involving application of the techniques of geophysics, geochemistry, paleontology, stratigraphy, and tectonics; and their evaluation. (Allaby, 2008)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Petroleum Geology"@en .
-
-esdc:reservoir-geology a skos:Concept ;
-    skos:broader esdc:petroleum-and-coal-geology ;
-    skos:definition "The study of subsurface rock formations that contain hydrocarbon accumulations in conventional and unconventional reservoirs."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:scopeNote "Involves quantification of reservoir properities such as porosity, permeability, fluid saturations, and fluid contacts."@en ;
-    skos:prefLabel "Reservoir Geology"@en .
-
-esdc:conventional-reservoir-geology a skos:Concept ;
-    skos:broader esdc:reservoir-geology ;
-    skos:definition "The study of subsurface rock formations and structures that contain hydrocarbon accumulations. (Definition and scopeNote collated and adapted from: Selley & Sonnenburg, 2015; Schlumberger Oilfield Glossary & Wikipedia, both accessed 18.06.2020)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:scopeNote "Involves assessment of rock properties, particularly porosity, permeability and compressibility, and of the timing and mechanism of trap formation, as petroleum source rocks, reservoir rocks, impermeable caprocks/seals (which, together with reservoir rocks, constitute what are termed conventional reservoirs where buoyant forces keep hydrocarbons in place below the sealing caprocks) must form in a favourable sequence to allow accumulation in reservoir rocks (following petroleum generation in source rocks and its ensuing migration therefrom). Conventional reservoirs are those which permit petroleum (oil and/or natural gas) to flow readily from reservoirs into wellbores."@en ;
-    skos:prefLabel "Conventional Reservoir Geology"@en .
-
-esdc:unconventional-reservoir-geology a skos:Concept ;
-    skos:broader esdc:reservoir-geology ;
-    skos:definition "The geological study of rocks hosting unconventional petroleum reservoirs, which comprise formations with tight gas, tight oil, oil sands, oil shale, bitumen, gas shales, coal seam gas/coalbed methane, and gas hydrates. (Definition and scopeNote after: Ganat, 2019; Schlumberger Oilfield Glossary, accessed 18.06.2020)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:scopeNote "Involves rocks where petroleum is distributed throughout the reservoir at basin-wide scale, and in which buoyant forces or the influence of a water column on the location of hydrocarbons in the reservoir are not significant."@en ;
-    skos:prefLabel "Unconventional Reservoir Geology"@en .
-
-esdc:coal-seam-gas-geology a skos:Concept ;
-    skos:altLabel "csg geology"@en,
-        "coalbed methane geology"@en,
-        "cbm geology"@en ;
-    skos:broader esdc:unconventional-reservoir-geology ;
-    skos:definition "The study of rocks that comprise, or are associated with, coal measures and contain coal-seam-gas resources. (Definition and scopeNote derived from Geoscience Australia; Department of Agriculture, Water and the Environment; Wikipedia: websites accessed 18.06.2020)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:scopeNote "The geological parameters under which coal seam gas (naturally occurring methane) is ‘reservoired’ within coal-bearing units differ from those associated with conventional gas reservoirs in that gas is adsosorbed into the coal matrix, permitting greater volumes of storage compared to conventional natural gas reservoirs of equal rock volume."@en ;
-    skos:prefLabel "Coal Seam Gas Geology"@en .
-
 esdc:sedimentology a skos:Concept ;
     skos:broader esdc:geology ;
     skos:definition "The scientific study of sedimentary rocks and of the processes by which they were formed; the description, classification, origin, and interpretation of sediments. Source: AGI"@en ;
@@ -412,6 +402,13 @@ esdc:structural-geology a skos:Concept ;
     skos:notation "040312" ;
     skos:prefLabel "Structural Geology"@en .
 
+esdc:surface-geology a skos:Concept ; 
+    skos:altLabel "surficial geology"@en ; 
+    skos:broader esdc:geology ; 
+    skos:definition " The study of rock formations, soils, unconsolidated sediments, geological structures and other features, as observed and recorded or mapped at or near the Earth's surface. (Modified from Neuendorf et al., 2011; www.mindat.org, 06.05.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:prefLabel "Surface Geology"@en .
+
 esdc:tectonics a skos:Concept ;
     skos:broader esdc:geology ;
     skos:definition "The branch of geology dealing with the broad architecture of the outer part of the Earth, i.e., the regional assembling of structural or deformational features, a study of their mutual relations, origin and historical evolution. It is closely related to structural geology, with which the distinctions are blurred, but tectonics generally deals with larger features. Source: Neuendorf et al., 2011"@en ;
@@ -428,32 +425,6 @@ esdc:volcanology a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:notation "040314" ;
     skos:prefLabel "Volcanology"@en .
-
-esdc:geothermal-energy a skos:Concept ;
-    skos:broader esdc:economic-geology ;
-    skos:definition "The study of energy generation from geothermal resources including the geological systems and the methods, materials and operations used in the production of energy."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:altLabel "Geothermal"@en ;
-    skos:prefLabel "Geothermal Energy"@en .
-
-esdc:hydrocarbon-occurrences a skos:Concept ;
-    skos:broader esdc:economic-geology ;
-    skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (i.e. plays and prospects), and limitations to development of hydrocarbon accumulations."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Hydrocarbon Occurrences"@en .
-
-esdc:mineral-occurrences a skos:Concept ;
-    skos:broader esdc:economic-geology ;
-    skos:definition "The quantification of the physical properties, chemical properties, volumes, systems of accumulation (e.g. ore body charictarization), and limitations to development of mineral occurences."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Mineral Occurrences"@en .
-
-esdc:quarry-resources a skos:Concept ;
-    skos:altLabel "Quarries, Sand, and Gravel Resources"@en ;
-    skos:broader esdc:economic-geology ;
-    skos:definition "The quantification of the physical properties, chemical properties, volumes, and limitations to development of quarry product accumulations. Quarry resources include, but may not be limited to, hardrock, sand and gravel."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Quarry Resources"@en .
 
 esdc:geology-not-elsewhere-classified a skos:Concept ;
     skos:broader esdc:geology ;
@@ -555,7 +526,7 @@ esdc:seismology-and-seismic-exploration a skos:Concept ;
 
 esdc:seismic-surveys a skos:Concept ;
     skos:broader esdc:seismology-and-seismic-exploration ;
-    skos:definition "The acquisition, processing, and analysis of seismic data sets measured and recorded with reference to a particular area of the Earth's surface, to evaluate the subsurface."@en ;
+    skos:definition "The science of the acquisition, processing, and analysis of seismic data sets measured and recorded with reference to a particular area of the Earth's surface, to evaluate the subsurface."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:prefLabel "Seismic Surveys"@en .
 
@@ -807,6 +778,31 @@ esdc:reservoir-engineering a skos:Concept ;
     skos:altLabel "Reservoir Engineering"@en ;
     skos:prefLabel "Petroleum and Reservoir Engineering"@en .
 
+esdc:built-environment-and-design a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:definition "Encompasses: Architecture; Building, Design Practice and Management; Engineering Design; Other Built Environment and Design; and Urban and Regional Planning. (Australian and New Zealand Standard Research Classification: Fields of Research; accessed 17.06.2020)."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/12> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "12" ;
+    skos:prefLabel "Built Environment and Design"@en .
+
+esdc:urban-and-regional-planning a skos:Concept ;
+    skos:broader esdc:built-environment-and-design ;
+    skos:definition "Encompasses: Community Planning, History and Theory of the Built Environment (excl. Architecture); Housing Markets, Development, Management; Land Use and Environmental Planning, Regional Analysis and Development, Transport Planning, Urban Analysis and Development; Urban and Regional Planning not elsewhere classified; and Urban Design. (Australian and New Zealand Standard Research Classification: Fields of Research; accessed 17.06.2020)."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/1205> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "1205" ;
+    skos:prefLabel "Urban and Regional Planning"@en .
+
+esdc:land-use-and-environmental-planning a skos:Concept ;
+    skos:broader esdc:urban-and-regional-planning ;
+    skos:definition "Land-use and environmental planning involves the regulation and commitment of land-use, as to how the landscape is used (whether for food production, forestry, nature conservation, water storage, urban development, mining, etc.), to ensure the most efficient, effective and beneficial management and utilization of resources, to provide optimal environmental and social outcomes."@en ;
+    skos:exactMatch <http://purl.org/au-research/vocabulary/anzsrc-for/2008/120504> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "120504" ;
+    skos:scopeNote "The Queensland Land Use Mapping Program (QLUMP) assesses land-use patterns and changes across the State, according to the Australian Land Use and Management Classification, and is part of the Australian Collaborative Land Use and Management Program (ACLUMP). This Program is coordinated by the Australian Bureau of Agricultural and Resource Economics and Sciences (ABARES) and promotes nationally-consistent, land-use data for natural resource assessment, monitoring and planning. The Australian Land Use and Management Classification has been provided as a vocabulary service by ABARES in collaboration with the National Environmental Information Infrastructure (NEII) and the Australian National Data Service (ANDS)."@en ;
+    skos:prefLabel "Land Use and Environmental Planning"@en .
+
 esdc:demography a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:definition "The statistical study of populations, especially human beings."@en ;
@@ -835,14 +831,13 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:mineralogy-and-crystallography,
         esdc:paleontology,
         esdc:palynology,
-        esdc:reservoir-geology,
-        esdc:reservoir-engineering,
         esdc:structural-geology,
-        esdc:economic-geology,
+        esdc:resource-geology,
         esdc:geothermal-energy,
-        esdc:quarry-resources,
+        esdc:mineral-resource-geology,
         esdc:coal-geology,
         esdc:petroleum-geology,
+        esdc:quarry-resources,
         esdc:geomechanics-and-resources-geotechnical-engineering,
         esdc:geophysics,
         esdc:electrical-geophysics,
@@ -858,9 +853,10 @@ esdc:lodgement-form a skos:OrderedCollection ;
         esdc:engineering,
         esdc:surveying,
         esdc:drilling-engineering,
+        esdc:reservoir-engineering,
         esdc:remote-sensing,
-        esdc:airborne-spectral,
         esdc:core-spectral,
+        esdc:airborne-spectral,
         esdc:satellite-spectral ,
         esdc:environmental-sciences ;
     skos:prefLabel "Lodgement form selection"@en .
