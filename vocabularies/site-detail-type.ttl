@@ -10,10 +10,10 @@
         skos:ConceptScheme ;
     dcterms:created "2020-03-30"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-05-27"^^xsd:date ;
+    dcterms:modified "2020-06-26"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
-    skos:definition "Miscellaneous Survey Details."@en ;
+    skos:definition "Miscellaneous Site Details."@en ;
     skos:prefLabel "Site Detail Type"@en .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
@@ -31,6 +31,12 @@ stdt:confidential a skos:Concept ;
     skos:definition "Whether the details pertaining to the entity are confidential records."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
     skos:prefLabel "Confidential"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
+
+stdt:date-confidence a skos:Concept ;
+    skos:definition "The confidence in the accuracy of a recorded date or dates. Includes notes for where dates are estimated or calculated."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
+    skos:prefLabel "Date Confidence"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
 
 stdt:drill-result a skos:Concept ;
