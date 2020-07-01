@@ -13,26 +13,19 @@
     dcterms:modified "2020-04-29"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
-    skos:definition "A definition for vocabulary that describes its purpose."@en ;
+    skos:definition "Miscellaneous details relating to reports and documents."@en ;
     skos:prefLabel "Report Detail Type"@en ;
-    skos:hasTopConcept rptdt:dummy,
-        rptdt:example,
+    skos:hasTopConcept rptdt:project-name,
         rptdt:placeholder .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
-rptdt:dummy a skos:Concept ;
-    skos:definition "Not areal concept, just here for looks."@en ;
+rptdt:project-name a skos:Concept ;
+    skos:definition "The name of the project to which a report relates."@en ;
     skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Dummy"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:example a skos:Concept ;
-    skos:definition "This just looks like what should actually be here."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Example"@en ;
+    skos:prefLabel "Project Name"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:placeholder a skos:Concept ;
