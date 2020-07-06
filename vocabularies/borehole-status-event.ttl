@@ -11,10 +11,11 @@
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2020-01-21"^^xsd:date ;
-    dcterms:modified "2020-06-17"^^xsd:date ;
+    dcterms:modified "2020-07-07"^^xsd:date ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Events that occur during the lifecycle a borehole that affect the status or history, or convert a borehole from one purpose to another."@en ;
     skos:hasTopConcept bhse:drilling-of-borehole-on-notice,
+        bhse:drilling-of-borehole-abandoned,
         bhse:completion,
         bhse:alteration,
         bhse:abandonment,
@@ -22,8 +23,8 @@
         bhse:hydraulic-fracturing-abandoned,
         bhse:hydraulic-fracturing-completed,
         bhse:conversion-to-water-supply-on-notice,
-        bhse:conversion-to-water-supply,
         bhse:conversion-to-water-observation-on-notice,
+        bhse:conversion-to-water-supply,
         bhse:conversion-to-water-observation,
         bhse:decommissioning,
         bhse:petroleum-production-commencement,
@@ -123,3 +124,28 @@ bhse:manual-update a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
     skos:prefLabel "Manual Update or Creation"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+#COLLECTIONS
+
+gsqdt:pggd-01 a skos:Collection ;
+    skos:definition "The borehole events that may be reported via a PGGD-02 form to change the status of a borehole."@en ;
+    skos:member bhse:drilling-of-borehole-on-notice ;
+    skos:prefLabel "PGGD-01"@en .
+
+gsqdt:pggd-02 a skos:Collection ;
+    skos:definition "The borehole events that may be reported via a PGGD-02 form to change the status of a borehole."@en ;
+    skos:member bhse:completion,
+        bhse:alteration,
+        bhse:abandonment ;
+    skos:prefLabel "PGGD-02"@en .
+
+gsqdt:pggd-03 a skos:Collection ;
+    skos:definition "The borehole events that may be reported via a PGGD-02 form to change the status of a borehole."@en ;
+    skos:member bhse:hydraulic-fracturing-on-notice;
+    skos:prefLabel "PGGD-03"@en .
+
+gsqdt:pggd-04 a skos:Collection ;
+    skos:definition "The borehole events that may be reported via a PGGD-02 form to change the status of a borehole."@en ;
+    skos:member bhse:hydraulic-fracturing-abandoned,
+        bhse:hydraulic-fracturing-completed;
+    skos:prefLabel "PGGD-04"@en .
