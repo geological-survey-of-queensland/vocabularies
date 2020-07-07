@@ -15,7 +15,8 @@
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Miscellaneous details relating to reports and documents."@en ;
     skos:prefLabel "Report Detail Type"@en ;
-    skos:hasTopConcept rptdt:address,
+    skos:hasTopConcept rptdt:activities,
+            rptdt:address,
             rptdt:comments,
             rptdt:contact,
             rptdt:contracting-company,
@@ -28,13 +29,7 @@
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
-   
-rptdt:address a skos:Concept ;
-    skos:definition "The address of the company submitting the report or form."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Address"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
+ 
 rptdt:activities a skos:Concept ;
     skos:altLabel "Summary"@en,
         "Plan"@en,
@@ -44,6 +39,12 @@ rptdt:activities a skos:Concept ;
     skos:definition "A description of the activities referred to in the report or form. This may be a summary of activities undertaken, or a summary of planned activities."@en ;
     skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Activities"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+  
+rptdt:address a skos:Concept ;
+    skos:definition "The address of the company submitting the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Address"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:comments a skos:Concept ;
