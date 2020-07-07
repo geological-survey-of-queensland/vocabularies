@@ -10,17 +10,80 @@
         skos:ConceptScheme ;
     dcterms:created "2020-04-29"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-04-29"^^xsd:date ;
+    dcterms:modified "2020-07-07"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Miscellaneous details relating to reports and documents."@en ;
     skos:prefLabel "Report Detail Type"@en ;
-    skos:hasTopConcept rptdt:project-name,
-        rptdt:placeholder .
+    skos:hasTopConcept rptdt:activities,
+            rptdt:address,
+            rptdt:comments,
+            rptdt:contact,
+            rptdt:contracting-company,
+            rptdt:email,
+            rptdt:operating-company,
+            rptdt:phone,
+            rptdt:project-name,
+            rptdt:reportable-incident .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+ 
+rptdt:activities a skos:Concept ;
+    skos:altLabel "Plan"@en,
+        "Planned Activities"@en,
+        "Activities Undertaken"@en,
+        "Activities to be Undertaken"@en ;
+    skos:definition "A description of the activities referred to in the report or form. This may be a summary of activities undertaken, or a summary of planned activities."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Activities"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+  
+rptdt:address a skos:Concept ;
+    skos:definition "The address of the company submitting the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Address"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+
+rptdt:comments a skos:Concept ;
+    skos:altLabel "Description"@en,
+        "Remarks"@en,
+        "Summary"@en ;         ;
+    skos:definition "Any general commentary regarding the report or form, not otherwise captured."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Comments"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+
+rptdt:contact a skos:Concept ;
+    skos:definition "The name of the individual contact for the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Contact Name"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+    
+rptdt:contracting-company a skos:Concept ;
+    skos:definition "The name of the company who conducted the activities referred to in the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Contractor Name"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+
+rptdt:email a skos:Concept ;
+    skos:definition "The contact email address for the submitter of the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "E-mail"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+
+rptdt:operating-company a skos:Concept ;
+    skos:definition "The name of the company submitting the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Company Name"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+
+rptdt:phone a skos:Concept ;
+    skos:definition "The contact phone number for the submitter of the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Phone Number"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:project-name a skos:Concept ;
     skos:definition "The name of the project to which a report relates."@en ;
@@ -28,8 +91,8 @@ rptdt:project-name a skos:Concept ;
     skos:prefLabel "Project Name"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
 
-rptdt:placeholder a skos:Concept ;
-    skos:definition "This is a placeholder."@en ;
+rptdt:reportable-incident a skos:Concept ;
+    skos:definition "An indication of the occurrence of a reportable incident to be recorded in the report or form."@en ;
     skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Placeholder"@en ;
+    skos:prefLabel "Reportable Incident"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
