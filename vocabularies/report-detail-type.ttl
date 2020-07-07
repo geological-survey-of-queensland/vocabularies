@@ -10,7 +10,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-04-29"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-07-03"^^xsd:date ;
+    dcterms:modified "2020-07-07"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Miscellaneous details relating to reports and documents."@en ;
@@ -22,7 +22,8 @@
             rptdt:email,
             rptdt:operating-company,
             rptdt:phone,
-            rptdt:project-name .
+            rptdt:project-name,
+            rptdt:reportable-incident .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
@@ -37,7 +38,9 @@ rptdt:address a skos:Concept ;
 rptdt:comments a skos:Concept ;
     skos:altLabel "Description"@en,
         "Summary"@en,
-        "Plan"@en ;
+        "Plan"@en,
+        "Activities Undertaken"@en,
+        "Activities to be Undertaken"@en ;
     skos:definition "A description of the activities referred to in the report or form. This may be a summary of activities undertaken, or a summary of planned activities."@en ;
     skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Comments"@en ;
@@ -77,4 +80,10 @@ rptdt:project-name a skos:Concept ;
     skos:definition "The name of the project to which a report relates."@en ;
     skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Project Name"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+
+rptdt:reportable-incident a skos:Concept ;
+    skos:definition "An indication of the occurrence of a reportable incident to be recorded in the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Reportable Incident"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
