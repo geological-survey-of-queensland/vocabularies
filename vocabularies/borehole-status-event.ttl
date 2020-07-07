@@ -11,19 +11,23 @@
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2020-01-21"^^xsd:date ;
-    dcterms:modified "2020-06-17"^^xsd:date ;
+    dcterms:modified "2020-07-07"^^xsd:date ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Events that occur during the lifecycle a borehole that affect the status or history, or convert a borehole from one purpose to another."@en ;
     skos:hasTopConcept bhse:drilling-of-borehole-on-notice,
+        bhse:borehole-never-drilled,
         bhse:completion,
         bhse:alteration,
         bhse:abandonment,
         bhse:hydraulic-fracturing-on-notice,
         bhse:hydraulic-fracturing-abandoned,
         bhse:hydraulic-fracturing-completed,
+        bhse:hydraulic-fracturing-altered,
+        bhse:hydraulic-fracturing-partial,
+        bhse:hydraulic-fracturing-related,
         bhse:conversion-to-water-supply-on-notice,
-        bhse:conversion-to-water-supply,
         bhse:conversion-to-water-observation-on-notice,
+        bhse:conversion-to-water-supply,
         bhse:conversion-to-water-observation,
         bhse:decommissioning,
         bhse:petroleum-production-commencement,
@@ -40,10 +44,11 @@ bhse:drilling-of-borehole-on-notice a skos:Concept ;
     skos:prefLabel "Drilling of borehole on notice"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
-bhse:drilling-of-borehole-abandoned a skos:Concept ;
+bhse:borehole-never-drilled a skos:Concept ;
+    skos:altLabel "Drilling of borehole cancelled"@en ;
     skos:definition "Recording that the intended drilling of a borehole was cancelled and abandoned and drilling was never undertaken. This event changes the status to Never Used."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
-    skos:prefLabel "Drilling of borehole cancelled"@en ;
+    skos:prefLabel "Never Drilled"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
 bhse:completion a skos:Concept ;
@@ -80,6 +85,24 @@ bhse:hydraulic-fracturing-completed a skos:Concept ;
     skos:definition "A Notice of completion of hydraulic fracturing activities. Lodgement of Form PGGD-04. This event is a recording of a reportable activity which does not change the status"@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
     skos:prefLabel "Hydraulic fracturing completed"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+bhse:hydraulic-fracturing-altered a skos:Concept ;
+    skos:definition "A Notice of completion of hydraulic fracturing activities, but with alteration. Lodgement of Form PGGD-04. The full well fracturing objectives were required to be changed due to unforeseen circumstances throughout the process, but hydraulic fracturing activities were carried out. This event is a recording of a reportable activity which does not change the status"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
+    skos:prefLabel "Hydraulic fracturing completed with alteration"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+bhse:hydraulic-fracturing-partial a skos:Concept ;
+    skos:definition "A Notice of a partial completion of hydraulic fracturing activities. The full well fracturing objectives were not acheived, but a portion of the planned hydraulic fracturing activities were carried out. Lodgement of Form PGGD-04. This event is a recording of a reportable activity which does not change the status"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
+    skos:prefLabel "Hydraulic fracturing partially completed"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+bhse:hydraulic-fracturing-related a skos:Concept ;
+    skos:definition """A Notice of other events relating to hydraulic fracturing activities. Any other related to hydraulic fracturing such as: industrial accident/s, adverse evironmental condition/s (such as too wet, too hot, electrical storm etc.) at the wellsite, or concerns over workplace health and safety. Lodgement of Form PGGD-04. This event is a recording of a reportable activity which does not change the status"""@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
+    skos:prefLabel "Hydraulic fracturing related events"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
 
 bhse:conversion-to-water-supply-on-notice a skos:Concept ;
@@ -123,3 +146,23 @@ bhse:manual-update a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-status-event> ;
     skos:prefLabel "Manual Update or Creation"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-status-event> .
+
+#COLLECTIONS
+
+bhse:pggd-02 a skos:Collection ;
+    skos:definition "The borehole events that may be reported via a PGGD-02 form to change the status of a borehole."@en ;
+    skos:member bhse:completion,
+        bhse:alteration,
+        bhse:abandonment,
+        bhse:borehole-never-drilled,
+        bhse:petroleum-production-commencement ;
+    skos:prefLabel "PGGD-02"@en .
+
+bhse:pggd-04 a skos:Collection ;
+    skos:definition "The borehole events that may be reported via a PGGD-04 form to change the status of a borehole."@en ;
+    skos:member bhse:hydraulic-fracturing-abandoned,
+        bhse:hydraulic-fracturing-completed,
+        bhse:hydraulic-fracturing-altered,
+        bhse:hydraulic-fracturing-partial,
+        bhse:hydraulic-fracturing-related ;
+    skos:prefLabel "PGGD-04"@en .
