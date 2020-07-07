@@ -35,13 +35,21 @@ rptdt:address a skos:Concept ;
     skos:prefLabel "Address"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
 
-rptdt:comments a skos:Concept ;
-    skos:altLabel "Description"@en,
-        "Summary"@en,
+rptdt:activities a skos:Concept ;
+    skos:altLabel "Summary"@en,
         "Plan"@en,
+        "Planned Activities"@en,
         "Activities Undertaken"@en,
         "Activities to be Undertaken"@en ;
     skos:definition "A description of the activities referred to in the report or form. This may be a summary of activities undertaken, or a summary of planned activities."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Activities"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+
+rptdt:comments a skos:Concept ;
+    skos:altLabel "Description"@en,
+        "Remarks"@en ;
+    skos:definition "Any general commentary regarding the report or form, not otherwise captured."@en ;
     skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Comments"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
