@@ -11,7 +11,7 @@
         skos:ConceptScheme ;
     dcterms:created "2019-09-06"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-06-26"^^xsd:date ;
+    dcterms:modified "2020-07-08"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Modified from the Fields of Research vocabulary from the Australian and New Zealand Standard Research Classification (ANZSRC). Relevant earth science categories have been extracted and augmented with narrower terms relevant for industry and research institutions." ;
     skos:definition "A classification that facilitates identification of the Fields of Research, or topics, to which a dataset, activity, or entity pertain."@en ;
@@ -255,22 +255,45 @@ esdc:unconventional-reservoir-geology a skos:Concept ;
     skos:scopeNote "Involves rocks where petroleum is distributed throughout the reservoir at basin-wide scale, and in which buoyant forces or the influence of a water column on the location of hydrocarbons in the reservoir are not significant."@en ;
     skos:prefLabel "Unconventional Reservoir Geology"@en .
 
+esdc:basin-centred-gas-geology a skos:Concept ;
+    skos:broader esdc:unconventional-reservoir-geology ;
+    skos:definition "The geological investigation of the resources embraced by regionally-pervasive, deep, basin-centered, gas accumulations (BCGAs), comprising basin-centered gas systems (BCGSs or regional low-permeability gas systems/RLPGS), that are gas saturated, abnormally pressured (high or low), commonly lack a downdip water contact, and have low-permeability, sandstone reservoirs. (Definition and scopeNote after: Law, 2002; Song et al., 2013; Sunjay, 2014; AAPG Wiki, accessed 08.07.2020)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Two types of BCGSs are recognised: a direct type, characterised by having gas-prone source rocks, and an indirect type, characterised by having oil-prone source rocks. The majority of known BCGAs are the direct type. Direct systems require gas-prone source rocks and low permeability reservoirs to be in close proximity to each other. In indirect systems, oil and gas are both generated and expelled and migrate to reservoirs where they may even accumulate in structural and stratigraphic traps as discrete, buoyant accumulations with downdip water contacts. Hybrid systems, in which gas-prone and liquid-prone source rocks have both contributed to the development of a BCGA, may also occur. BCGAs encompass very large areas and may occur as single, isolated reservoirs a few metres or less in thickness or range up to multiple, stacked reservoirs that are several thousands of metres in thickness. Conventional and unconventional petroleum systems can coexist."@en ;
+    skos:prefLabel "Basin-Centred Gas Geology"@en .
+
 esdc:coal-seam-gas-geology a skos:Concept ;
     skos:altLabel "csg geology"@en,
         "coalbed methane geology"@en,
-        "cbm geology"@en ;
+        "cbm geology"@en,
+        "coal seam methane geology"@en,
+        "csm geology"@en ;
     skos:broader esdc:unconventional-reservoir-geology ;
     skos:definition "The study of hydrocarbon bearing coal measures and coal-seam-gas resources. (Definition and scopeNote derived from Geoscience Australia; Department of Agriculture, Water and the Environment; Wikipedia: websites accessed 18.06.2020)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
     skos:scopeNote "The geological parameters under which coal seam gas (naturally occurring methane) is ‘reservoired’ within coal-bearing units differ from those associated with conventional gas reservoirs in that gas is adsosorbed into the coal matrix, permitting greater volumes of storage compared to conventional natural gas reservoirs of equal rock volume."@en ;
     skos:prefLabel "Coal Seam Gas Geology"@en .
 
+esdc:shale-oil-and-gas-geology a skos:Concept ;
+    skos:broader esdc:unconventional-reservoir-geology ;
+    skos:definition "The geological investigation of natural-gas-and-oil resources trapped in organic-rich rocks dominated by shale (including mudstone and siltstone), which acts as both the source and reservoir of the hydrocarbons, as the low permeability of such rocks inhibits their migration from the rock (Definition and scopeNote after: Speight, 2012; Song et al., 2013; Sunjay et al., 2014; and cited references)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Gas is either contained in pore spaces or fractures (referred to as free gas by Song et al., 2013), adsorbed in organic matter or on the surface of inorganic mineral grains in the rock, or dissolved in oil and water in the rock. Gas often changes between the two states (free and adsorbed) during accumulation as temperature and pressure conditions change. Gas and oil are trapped in the rock, as pore spaces and fractures are closed off because of its plastic nature and pressure of the overburden. Shale gas and shale oil, so constrained, is ‘tight’, but the latter term is generally applied in the petroleum-exploration industry to gas and oil trapped in low-permeability sandstones and carbonates/limestones which are not the source rocks."@en ;
+    skos:prefLabel "Shale Oil and Gas Geology"@en .
+
+esdc:tight-oil-and-gas-geology a skos:Concept ;
+    skos:broader esdc:unconventional-reservoir-geology ;
+    skos:definition "The geological investigation of natural gas and/or oil resources trapped, because of very-low-permeability constraints, in sandstone or limestone formations that are located adjacent to organic-rich source rocks (Definition and scopeNote after: Speight, 2012; Song et al., 2013; Zhao et al., 2019; and cited references)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:scopeNote "Tight gas and tight oil may accumulate in low-permeability sandstone or limestone units, representing unconventional reservoirs, that are in close proximity to, or even occur within, the source rocks, under the control of a pressure difference between the source rocks and the reservoir units. In source rocks that have contributed to adjacent tight reservoirs, varying amounts of gas or oil may remain, and this remains classified as shale gas and shale oil. Tight gas and tight oil are the terms applied in the petroleum-exploration industry to oil and gas which have been trapped in sandstone or carbonate/limestone units, and which have been derived from adjacent, organic rich shale units. Specifically, the classification of tight oil and gas refers to oil and gas accumulations that occurs in low-permeability reservoirs that are not the source rocks."@en ;
+    skos:prefLabel "Tight Oil and Gas Geology"@en .
+
 esdc:quarry-resource-geology a skos:Concept ;
     skos:altLabel "Quarries, Sand, and Gravel Resources"@en ;
     skos:broader esdc:resource-geology ;
     skos:definition "The quantification of the physical properties, chemical properties, volumes, and limitations to development of quarry product accumulations. Quarry resources include, but may not be limited to, hardrock, sand and gravel."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
-    skos:prefLabel "Quarry Resource Geology"@en .
+    skos:prefLabel "Quarry and Extractive Resource Geology"@en .
 
 esdc:petrology a skos:Concept ;
     skos:broader esdc:geology ;
@@ -319,7 +342,8 @@ esdc:mineralogy-and-crystallography a skos:Concept ;
 esdc:gemmology a skos:Concept ; 
     skos:altLabel "gemology"@en ;
     skos:hiddenLabel "gems"@en ,
-        "gemstones"@en ;
+        "gemstones"@en,
+        "fossicking"@en ;
     skos:broader esdc:mineralogy-and-crystallography ; 
     skos:definition "The science and study of gemstones, including their source, description, geology, origin, identification, grading and appraisal. (Neuendorf et al., 2011)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
