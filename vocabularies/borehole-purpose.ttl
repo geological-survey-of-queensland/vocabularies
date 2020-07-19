@@ -9,7 +9,7 @@
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-06-17"^^xsd:date ;
-    dcterms:created "2020-07-13"^^xsd:date ;
+    dcterms:created "2020-07-17"^^xsd:date ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The primary purpose of a borehole based on the legislative State Act and/or the resources industry sector."@en ;
     skos:hasTopConcept bhpur:coal,
@@ -94,10 +94,11 @@ bhpur:mineral a skos:Concept ;
 
 bhpur:non-industry a skos:Concept ;
     skos:altLabel "Collaborative Drilling"@en,
-        "Collaborative Exploration"@en ;
+        "Collaborative Exploration"@en,
+        "Non-Industry"@en ;
     skos:definition "Wells and bores drilled by non-industry agents outside of the State Resources Acts"@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-purpose> ;
-    skos:prefLabel "Non-Industry"@en ;
+    skos:prefLabel "Non-Industry and Collaborative Drilling"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-purpose> .
 
 bhpur:oil-shale a skos:Concept ;
@@ -136,3 +137,14 @@ bhpur:unconventional-petroleum a skos:Concept ;
     skos:definition "Wells targetting unconventional reservoirs whose properties including porosity, permeability, or trapping mechanism differ from conventional reservoirs"@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-purpose> ;
     skos:prefLabel "Unconventional Petroleum"@en .
+
+bhpur:pggd a skos:OrderedCollection ;
+    skos:definition "Borehole purposes applicable to regulatory notification forms."@en ;
+    skos:member bhpur:conventional-petroleum,
+            bhpur:coal-seam-gas,
+            bhpur:unconventional-petroleum,
+            bhpur:water,
+            bhpur:geothermal,
+            bhpur:greenhouse-gas-storage, 
+            bhpur:non-industry;
+    skos:prefLabel "PGGD selection"@en .
