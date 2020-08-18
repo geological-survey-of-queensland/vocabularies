@@ -377,6 +377,13 @@ grt:petroleum-end-tenure a skos:Concept ;
     skos:prefLabel "Petroleum Report - End of Tenure (ATP/PL)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
+grt:petroleum-report-annual a skos:Concept ;
+    skos:definition "A report detailing the activities that have occured on a petroleum authority for the 12 months ending on the last anniversary day, as mandatory in the Petroleum and Gas Act."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:notation "PETANN" ;
+    skos:prefLabel "Petroleum Report - Annual"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
 grt:petroleum-report-cumulative-water-production a skos:Concept ;
     skos:altLabel "Cumulative Prod/CSG Water Readings - Petroleum"@en ;
     skos:definition "A report detailing the cumulative total of water produced from a well, as mandatory in the Petroleum and Gas Act."@en ;
@@ -762,6 +769,7 @@ grt:petroleum-reports a skos:Collection ;
     skos:definition "Reports governed by the Petroleum and Gas Act of Queensland."@en ;
     skos:member grt:hydraulic-fracturing-activity-report,
         grt:permit-report-surrender,
+        grt:petroleum-report-annual,
         grt:petroleum-end-authority,
         grt:petroleum-end-tenure,
         grt:petroleum-report-cumulative-water-production,
@@ -830,6 +838,7 @@ grt:water-reports a skos:Collection ;
         grt:greenhouse-gas-report-storage-injection,
         grt:mine-plan-lodgement,
         grt:permit-report-mineral-associated-water,
+        grt:petroleum-report-annual,
         grt:petroleum-report-cumulative-water-production,
         grt:petroleum-report-field-information,
         grt:petroleum-report-infrastructure,
