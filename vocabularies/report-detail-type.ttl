@@ -23,6 +23,9 @@
             rptdt:email,
             rptdt:operating-company,
             rptdt:phone,
+            rptdt:state,
+            rptdt:suburb,
+            rptdt:postcode,
             rptdt:project-name,
             rptdt:reportable-incident .
 
@@ -77,6 +80,24 @@ rptdt:operating-company a skos:Concept ;
     skos:definition "The name of the company submitting the report or form."@en ;
     skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Company Name"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+
+rptdt:suburb a skos:Concept ;
+    skos:definition "The contact suburb for the submitter of the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Suburb"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+
+rptdt:postcode a skos:Concept ;
+    skos:definition "The contact postcode for the submitter of the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "Postcode"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
+
+rptdt:state a skos:Concept ;
+    skos:definition "The contact State for the submitter of the report or form."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
+    skos:prefLabel "State"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:phone a skos:Concept ;
