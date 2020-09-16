@@ -11,7 +11,7 @@
     dcterms:created "2020-01-23"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-07-13"^^xsd:date ;
+    dcterms:modified "2020-09-16"^^xsd:date ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The intended function of a borehole."@en ;
     skos:hasTopConcept bhfunc:blasthole,
@@ -126,11 +126,11 @@ bhfunc:goaf-drainage a skos:Concept ;
     skos:prefLabel "goaf drainage"@en .
 
 bhfunc:heat-flow a skos:Concept ;
-    skos:altLabel "geothermal heat flow"@en ;
+    skos:altLabel "Heat flow"@en ;
     skos:broader bhfunc:resource-assessment ;
     skos:definition "purposely drilled to directly measure downhole temperature gradient as well as collecting core samples (to measure thermal conductivity of formations intersected), then to be able to calculate / determine heat flow in the drilled section of the borehole."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-sub-purpose> ;
-    skos:prefLabel "Heat flow"@en .
+    skos:prefLabel "Geothermal heat flow"@en .
 
 bhfunc:intrusion-delineation a skos:Concept ;
     skos:broader bhfunc:structure ;
@@ -183,16 +183,9 @@ bhfunc:penetrometer a skos:Concept ;
 
 bhfunc:petroleum-reservoir-characterisation a skos:Concept ;
     skos:broader bhfunc:resource-assessment ;
-    skos:definition "A well drilled to determine how to develop a hydrocarbon field most efficiently or quantify reservoir characteristics such as pay zone thickness, porosity, permeability, saturation, fluid column heights, and the presence of cap rock."@en ;
+    skos:definition "A well drilled to determine how to develop a hydrocarbon field most efficiently or quantify reservoir characteristics such as pay zone thickness, porosity, permeability, saturation, fluid column heights, and the presence of cap rock. Most commonly associated with the Appraisal stage of the resource lifecycle."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-sub-purpose> ;
-    skos:prefLabel "Petroleum Reservoir Characterisation"@en .
-
-bhfunc:petroleum-prod-test a skos:Concept ;
-    skos:broader bhfunc:resource-assessment ;
-    skos:definition "A well drilled primarily to test the ability of a target reservoir to  produce hydrocarbons, and to measure production parameters such as flow rates, well interference, pressure decline etc."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/borehole-sub-purpose> ;
-    skos:prefLabel "Petroleum Production Testing"@en .
-
+    skos:prefLabel "Petroleum Resource Characterisation"@en .
 
 bhfunc:plug a skos:Concept ;
     skos:broader bhfunc:service ;
@@ -327,7 +320,7 @@ bhfunc:petroleum-injection a skos:Concept ;
 
 bhfunc:stratigraphic a skos:Concept ;
     skos:altLabel "Exploration"@en ;
-    skos:definition "A well determining the lithological intervals present at a location. Typically to determine on the presence, location and extent of a potential resource"@en ;
+    skos:definition "A well determining the lithological intervals present at a location. Typically to determine on the presence, location and extent of a potential resource. Most commonly associated with the Exploration stage of the resource lifecycle."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-sub-purpose> ;
     skos:notation "STRAT" ;
     skos:prefLabel "Stratigraphic"@en ;
@@ -403,7 +396,22 @@ bhfunc:service a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-sub-purpose> .
 
 bhfunc:gas-management a skos:Concept ;
-    skos:definition "Borehole drilled for gas analysis. Typical applications include exploration, compliance and greenhouse gas emissions."@en ;
+    skos:definition "Borehole drilled for gas analysis and management. Typical applications include exploration, management of gas in coal mines, compliance and greenhouse gas emissions."@en ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-sub-purpose> ;
     skos:prefLabel "Gas Management"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/borehole-sub-purpose> .
+
+bhfunc:pggd-functions a skos:Collection ;
+    skos:definition "The functions of boreholes specific to petroleum, greenhouse gas, and geothermal wells and bores i.e. those that require a PGGD-01 notification in Queensland regulation."@en ;
+    skos:member bhfunc:water-supply,
+        bhfunc:water-injection,
+        bhfunc:stratigraphic,
+        bhfunc:stimulation,
+        bhfunc:petroleum-reservoir-characterisation,
+        bhfunc:petroleum-production,
+        bhfunc:petroleum-prod-test,
+        bhfunc:petroleum-injection,
+        bhfunc:observation,
+        bhfunc:disposal,
+        bhfunc:heat-flow ;
+    skos:prefLabel "Petroleum Borehole Functions"@en .
