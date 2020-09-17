@@ -44,7 +44,7 @@ Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/voca
     1. Use the [online Skosify tool](http://demo.seco.tkk.fi/skosify/skosify). 
         - This tests for SKOS conformance
         - Tick the checkbox *Keep skos:related relationships within the same hierarchy*, leave the other checkboxes unticked.
-    2. The use the GSQ Vocab [SAHCL](https://www.w3.org/TR/shacl/) Shapes files
+    2. The use the GSQ Vocab [SHACL](https://www.w3.org/TR/shacl/) Shapes files
         - This tests for GSQ requirements over and beyond SKOS, such as particular metadata for the vocab
         - The files are stored in this repo, [shapes](shapes/)
         - Use the [pySHACL](https://github.com/RDFLib/pySHACL) tool on your desktop to do the validation
