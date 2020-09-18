@@ -16,6 +16,7 @@
     dcterms:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml> ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)"@en ;
     skos:hasTopConcept gsqr:contractor,
+        gsqr:manager,        
         gsqr:driller,
         gsqr:operator,
         datac:DataCollector,
@@ -33,6 +34,23 @@
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+
+des-im:administrator
+  a skos:Concept ;
+  a dcat:Role ;
+  rdfs:label "Data Administrator" ;
+  skos:broader des-im:manager ;
+  skos:definition "Design, implementation and maintenance of the technology environment that supports/enables the information management lifecycle."@en ;
+  skos:inScheme des-im:DES-IM-Roles ;
+  skos:prefLabel "Data Administrator" .
+
+gsqr:manager
+  a skos:Concept ;
+  a dcat:Role ;
+  rdfs:label "Data Manager" ;
+  skos:definition "The Data Manager is assigned to perform activities associated with the day-to-day interpretation, management, operation and support of data."@en ;
+  skos:inScheme des-im:DES-IM-Roles ;
+  skos:prefLabel "Data Manager" .
 
 gsqr:contractor a skos:Concept ;
     skos:prefLabel "Contractor"@en ;
