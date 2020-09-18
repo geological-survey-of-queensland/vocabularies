@@ -38,21 +38,19 @@
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 gsqr:administrator a skos:Concept ;
-  a skos:Concept ;
   a dcat:Role ;
-  rdfs:label "Data Administrator" ;
-  skos:broader gsqr:manager ;
+  rdfs:label "Data Administrator"@en ;
   skos:definition "Design, implementation and maintenance of the technology environment that supports/enables the information management lifecycle."@en ;
   skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
-  skos:prefLabel "Data Administrator" .
+  skos:prefLabel "Data Administrator"@en ; 
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
 gsqr:manager a skos:Concept ;
-  a skos:Concept ;
   a dcat:Role ;
-  rdfs:label "Data Manager" ;
+  rdfs:label "Data Manager"@en ;
   skos:definition "The Data Manager is assigned to perform activities associated with the day-to-day interpretation, management, operation and support of data."@en ;
   skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
-  skos:prefLabel "Data Manager" ;
+  skos:prefLabel "Data Manager"@en ;
   skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
 gsqr:contractor a skos:Concept ;
@@ -165,6 +163,7 @@ gsqr:QdexReportsRoles a skos:Collection ;
 
 gsqr:des-roles a skos:Collection ;
     skos:definition "A collection of roles used by DES"@en ;
+# for DES to review and update with creator, editor, data librarian, data manager,
     skos:member gsqr:administrator,
         gsqr:manager,
         gsqr:contractor,
