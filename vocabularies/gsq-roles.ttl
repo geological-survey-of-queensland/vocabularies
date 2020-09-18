@@ -11,7 +11,7 @@
 <http://linked.data.gov.au/def/gsq-roles> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-17"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-06-15"^^xsd:date ;
+    dcterms:modified "2020-09-18"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml> ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)"@en ;
@@ -35,22 +35,23 @@
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
-des-im:administrator
+gsqr:administrator a skos:Concept ;
   a skos:Concept ;
   a dcat:Role ;
   rdfs:label "Data Administrator" ;
   skos:broader des-im:manager ;
   skos:definition "Design, implementation and maintenance of the technology environment that supports/enables the information management lifecycle."@en ;
-  skos:inScheme des-im:DES-IM-Roles ;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
   skos:prefLabel "Data Administrator" .
 
-gsqr:manager
+gsqr:manager a skos:Concept ;
   a skos:Concept ;
   a dcat:Role ;
   rdfs:label "Data Manager" ;
   skos:definition "The Data Manager is assigned to perform activities associated with the day-to-day interpretation, management, operation and support of data."@en ;
-  skos:inScheme des-im:DES-IM-Roles ;
-  skos:prefLabel "Data Manager" .
+  skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+  skos:prefLabel "Data Manager" ;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
 gsqr:contractor a skos:Concept ;
     skos:prefLabel "Contractor"@en ;
@@ -159,3 +160,14 @@ gsqr:QdexReportsRoles a skos:Collection ;
         isorole:owner,
         isorole:publisher ;
     skos:prefLabel "Georesources Reports Roles"@en .
+
+gsqr:des-roles a skos:Collection ;
+    skos:definition "A collection of roles used by DES"@en ;
+    skos:member gsqr:administrator,
+        gsqr:manager,
+        gsqr:contractor,
+        iso11179:Submitter,
+        isorole:author,
+        isorole:owner,
+        isorole:publisher ;
+    skos:prefLabel "Department of Environment and Science Roles"@en .
