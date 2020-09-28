@@ -12,7 +12,7 @@
 <http://linked.data.gov.au/def/georesource-report> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-09"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-08-26"^^xsd:date ;
+    dcterms:modified "2020-09-28"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "The types of reports administered by the GeoResources division of the Department of Natural Resources, Mines and Energy."@en ;
@@ -362,7 +362,8 @@ grt:petroleum-end-authority a skos:Concept ;
     skos:altLabel "End of Authority Report (DAA)"@en,
         "End of Authority Report (PSL)"@en,
 	"Petroleum Report - End of Authority Report"@en;
-    skos:definition "A report that is required to be lodged at the end of tenure over a Data Acquisition Authority, detailing the work undertaken on the permit throughout the life of tenure."@en  ;
+    skos:definition "A report that is required to be lodged at the end of tenure over a Data Acquisition Authority or Petroleum Survey License, detailing the work undertaken on the authority throughout the life of tenure."@en  ;
+
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "PETAUT" ;
     skos:prefLabel "Petroleum Report - End of Authority (DAA/PSL)"@en ;
@@ -417,7 +418,7 @@ grt:petroleum-report-relinquishment a skos:Concept ;
         "Final Relinquishment (PL)"@en,
         "Petroleum Report - Final Relinquishment"@en,
         "Petroleum Report - Relinquishment"@en ;
-    skos:definition "A report that is required to be lodged with a partial of full surrender of a Petroleum Lease or Authority to Prospect, detailing the work undertaken on the permit throughout the life of tenure."@en  ;
+    skos:definition "A report that is required to be lodged with a partial or full relinquishment of a Petroleum Lease or Authority to Prospect, detailing the work undertaken on the relinquished portion of the permit throughout the life of tenure."@en  ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "PETREQ" ;
     skos:prefLabel "Petroleum Report - Relinquishment (ATP/PL)"@en ;
@@ -452,7 +453,7 @@ grt:petroleum-report-production-information a skos:Concept ;
     skos:definition "A report detailing the quantity, quality and other parameters of the production of petroleum and gas products from an ATP as required by the Petroleum and Gas Act and General Provisions. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline. These reports are submitted using the Queensland Government templates."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "PROINF" ;
-    skos:prefLabel "Petroleum Report - Production Information"@en ;
+    skos:prefLabel "Petroleum Report - Petroleum Production Report"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:petroleum-report-resource-and-reserves-information a skos:Concept ;
@@ -460,7 +461,7 @@ grt:petroleum-report-resource-and-reserves-information a skos:Concept ;
     skos:definition "A report detailing the quantity, quality and other parameters of the reserves of petroleum and gas on an ATP, as required by the Petroleum and Gas Act and General Provisions. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline. These reports are submitted using the Queensland Government templates."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "RESINF" ;
-    skos:prefLabel "Petroleum Report - Resource and Reserves Information"@en ;
+    skos:prefLabel "Petroleum Report - Petroleum Resources and Reserves Report"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:petroleum-report-surrender a skos:Concept ;
@@ -468,14 +469,14 @@ grt:petroleum-report-surrender a skos:Concept ;
         "Final Surrender (PL)"@en,
         "Petroleum Report - Final Surrender"@en,
         "Petroleum Report - Surrender"@en ;
-    skos:definition "A report that is required to be lodged with a partial of full surrender of a Petroleum Lease or Authority to Prospect, detailing the work undertaken on the permit throughout the life of tenure."@en ;
+    skos:definition "A report that is required to be lodged with a partial or full surrender of a Petroleum Lease or Authority to Prospect, detailing the work undertaken on the surrendered portion of the permit throughout the life of tenure."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "PETSUR" ;
     skos:prefLabel "Petroleum Report - Surrender (ATP/PL)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:pipeline-report-surrender a skos:Concept ;
-    skos:definition "A report that is required to be lodged with a partial of full surrender of a Petroleum Pipeline Lease, detailing the location of the pipeline and maintanence work undertaken throughout the life of tenure."@en ;
+    skos:definition "A report that is required to be lodged with a partial or full surrender of a Petroleum Pipeline Lease, detailing the location of the pipeline and maintanence work undertaken throughout the life of tenure."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "PIPSUR" ;
     skos:prefLabel "Petroleum Report - Pipeline Surrender (PPL)"@en ;
@@ -580,10 +581,11 @@ grt:water-report-performance-review a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:well-completion-report a skos:Concept ;
+    skos:altLabel "Well Completion Report"@en ;
     skos:definition "A report detailing the activities and results of drilling a well. Defined in detail as a part of the Reporting Guidelines."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "WELCOM" ;
-    skos:prefLabel "Well Completion Report"@en ;
+    skos:prefLabel "Well or Bore Completion Report"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:well-or-bore-abandonment-report a skos:Concept ;
@@ -853,6 +855,7 @@ grt:water-reports a skos:Collection ;
         grt:petroleum-report-surrender,
         grt:pipeline-report-surrender,
         grt:survey-plan,
+        grt:water-report-other,
         grt:water-report-performance-review,
         grt:pggd-01,
         grt:pggd-02,
@@ -865,3 +868,69 @@ grt:water-reports a skos:Collection ;
         grt:wra-05A,
         grt:mmol-44;   
     skos:prefLabel "Lodgement Portal Reports"@en .
+    
+ grt:lodgement-portal-internal a skos:Collection ;
+    skos:definition "Reports accepted by the DNRME Geoscience Open Data Portal Lodgement site that can be accessed by internal DNRME users."@en ;
+    skos:member  grt:hydraulic-fracturing-activity-report,
+        grt:petroleum-report-production-information,
+        grt:petroleum-report-resource-and-reserves-information,
+        grt:scientific-or-technical-survey-report,
+        grt:seismic-survey-report-final,
+        grt:seismic-survey-report-other,
+        grt:seismic-survey-report-reprocessing,
+        grt:well-completion-report,
+        grt:well-or-bore-abandonment-report,
+        grt:well-production-testing-report,
+        grt:permit-report-annual,
+        grt:permit-report-final,
+        grt:permit-report-final-relinquishment,
+        grt:permit-report-partial-relinquishment,
+        grt:permit-report-surrender,
+        grt:geophysical-survey-report-final,
+        grt:geothermal-report-annual-reserves,
+        grt:geothermal-report-injection,
+        grt:geothermal-report-injection-testing,
+        grt:geothermal-report-production,
+        grt:geothermal-report-production-testing,
+        grt:greenhouse-gas-report-injection,
+        grt:greenhouse-gas-report-storage-capacity,
+        grt:greenhouse-gas-report-storage-injection,
+        grt:mine-plan-lodgement,
+        grt:permit-report-mineral-associated-water,
+        grt:petroleum-report-cumulative-water-production,
+        grt:petroleum-report-field-information,
+        grt:petroleum-report-infrastructure,
+        grt:petroleum-report-non-associated-water,
+        grt:petroleum-report-annual,
+        grt:petroleum-end-authority,
+        grt:petroleum-end-tenure,
+        grt:petroleum-report-relinquishment,
+        grt:petroleum-report-surrender,
+        grt:pipeline-report-surrender,
+        grt:survey-plan,
+        grt:water-report-performance-review,
+        grt:pggd-01,
+        grt:pggd-02,
+        grt:pggd-03,
+        grt:pggd-04,
+        grt:pa-21A,
+        grt:pa-22A,
+        grt:pm-1-2013,
+        grt:pa-42,
+        grt:wra-05A,
+        grt:mmol-44,
+        grt:collaborative-exploration-initiative-proposals,
+        grt:collaborative-exploration-initiative-final,
+        grt:commissioned-industry-study-or-report,
+        grt:departmental-drilling,
+        grt:geological-survey-of-queensland-publication,
+        grt:geological-survey-of-queensland-record,
+        grt:permit-report-other,
+        grt:petroleum-report-other,
+        grt:presentation,
+        grt:queensland-government-mining-journal,
+        grt:technical-report,
+        grt:water-report-other,
+        grt:any-other-report;   
+
+    skos:prefLabel "Internal Lodgement Portal"@en .
