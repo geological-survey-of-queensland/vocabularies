@@ -12,7 +12,7 @@
 <http://linked.data.gov.au/def/georesource-report> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-09"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-09-28"^^xsd:date ;
+    dcterms:modified "2020-09-30"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "The types of reports administered by the GeoResources division of the Department of Natural Resources, Mines and Energy."@en ;
@@ -260,7 +260,7 @@ grt:greenhouse-gas-report-storage-injection a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:hydraulic-fracturing-activity-report a skos:Concept ;
-    skos:definition "A report detailing the activities and results of hydraulically fracturing activities conducted in a well. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:definition "A report detailing the activities and results of hydraulically fracturing activities conducted in a well."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "HFACR" ;
     skos:prefLabel "Hydraulic Fracturing Activity Report"@en ;
@@ -303,7 +303,14 @@ grt:permit-report-final a skos:Concept ;
     skos:definition "A report that is required to be lodged when the tenure over a resource permit ends, detailing the work undertaken on the permit throughout the life of tenure."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "FINAL" ;
-    skos:prefLabel "Coal or Mineral Permit Report - Final"@en ;
+    skos:prefLabel "Coal or Mineral Permit Report - Final (End of Tenure)"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:permit-report-final-higher-tenure a skos:Concept ;
+    skos:definition "A report that is required to be lodged when the tenure over a resource permit is superceded by grant of a higher tenure, detailing the work undertaken on the permit throughout the life of tenure."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:notation "FINALHT" ;
+    skos:prefLabel "Coal or Mineral Permit Report - Final (Higher Tenure)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:permit-report-final-relinquishment a skos:Concept ;
@@ -343,7 +350,7 @@ grt:permit-report-mineral-associated-water a skos:Concept ;
 
 grt:permit-report-six-month a skos:Concept ;
     skos:altLabel "Six Monthly Exploration Report"@en ;
-    skos:definition "A report detailing the activities undertaken on an exploration permit in the six months prior to the submission of the report. Mostly deprecated in favour of annual reports. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:definition "A report detailing the activities undertaken on an exploration permit in the six months prior to the submission of the report. Mostly deprecated in favour of annual reports."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "6MTH" ;
     skos:prefLabel "Permit Report - Six Month"@en ;
@@ -352,10 +359,17 @@ grt:permit-report-six-month a skos:Concept ;
 grt:permit-report-surrender a skos:Concept ;
     skos:altLabel "Surrender Report"@en,
         "Permit Report - Surrender"@en ;
-    skos:definition "A report that is required to be lodged as a part of the obligations of surrendering tenure over a Coal or Oil Shale Mining Lease. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:definition "A report that is required to be lodged as a part of the obligations of surrendering tenure over a Coal or Oil Shale Mining Lease or Mineral Development Licence where a higher tenure over the same area has not been granted."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "SURR" ;
-    skos:prefLabel "Coal or Mineral Permit Report - Surrender"@en ;
+    skos:prefLabel "Coal or Mineral Permit Report - Surrender (End of Tenure)"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:permit-report-surrender-higher-tenure a skos:Concept ;
+    skos:definition "A report that is required to be lodged as a part of the obligations of surrendering tenure over a Coal or Oil Shale Mining Lease or Mineral Development Licence upon grant of a higher tenure."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:notation "SURRHT" ;
+    skos:prefLabel "Coal or Mineral Permit Report - Surrender (Higher Tenure)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:petroleum-end-authority a skos:Concept ;
@@ -509,7 +523,7 @@ grt:queensland-government-mining-journal a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:scientific-or-technical-survey-report a skos:Concept ;
-    skos:definition "A report detailing the activities undertaken and their results, as a part of a scientific or non-geophysical survey. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:definition "A report detailing the activities undertaken and their results, as a part of a scientific or non-geophysical survey."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "STSURV" ;
     skos:prefLabel "Scientific or Technical Survey Report"@en ;
@@ -582,21 +596,21 @@ grt:water-report-performance-review a skos:Concept ;
 
 grt:well-completion-report a skos:Concept ;
     skos:altLabel "Well Completion Report"@en ;
-    skos:definition "A report detailing the activities and results of drilling a well. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:definition "A report detailing the activities and results of drilling a well."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "WELCOM" ;
     skos:prefLabel "Well or Bore Completion Report"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:well-or-bore-abandonment-report a skos:Concept ;
-    skos:definition "A report detailing the activities and results of abandoning a well. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:definition "A report detailing the activities and results of abandoning a well."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "WELAB" ;
     skos:prefLabel "Well or Bore Abandonment Report"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:well-production-testing-report a skos:Concept ;
-    skos:definition "A report detailing the testing of the production potential or performance of a petroleum well. Defined in detail as a part of the Reporting Guidelines."@en ;
+    skos:definition "A report detailing the testing of the production potential or performance of a petroleum well."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "WELTST" ;
     skos:prefLabel "Well Production Testing Report"@en ;
