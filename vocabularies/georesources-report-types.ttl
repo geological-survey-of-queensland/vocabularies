@@ -291,10 +291,17 @@ grt:mine-plan-lodgement a skos:Concept ;
 grt:permit-report-annual a skos:Concept ;
     skos:altLabel "Annual Resource Authority Report"@en,
         "Permit Report - Annual"@en ;
-    skos:definition "A report that is required to be lodged annually as a part of the obligations of holding tenure over a resource permit."@en ;
+    skos:definition "A report that is required to be lodged annually as a part of the obligations of holding exploration or development tenure (EPC, EPM, MDL) over a resource permit."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "ANNUAL" ;
-    skos:prefLabel "Coal or Mineral Permit Report - Annual"@en ;
+    skos:prefLabel "Coal or Mineral Permit Report - Annual (EPC, EPM, MDL)"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:permit-report-annual-ml a skos:Concept ;
+    skos:definition "A report that is required to be lodged annually as a part of the obligations of holding production tenure (ML) over a resource permit. Only applicable to Coal and Oil Shale Minng Leases in the Queensland Mineral and Resources Regulation 2020"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:notation "ANNML" ;
+    skos:prefLabel "Coal or Mineral Permit Report - Annual (ML)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:permit-report-final a skos:Concept ;
