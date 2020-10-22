@@ -408,6 +408,15 @@ geou:KiloBBL a skos:Concept ;
     skos:prefLabel "Thousand Barrels"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+geou:MegaBBL a skos:Concept ;
+    skos:altLabel "Million Barrels (MMBbl)"@en ;
+    rdfs:isDefinedBy geou: ;
+    skos:definition "A unit equivalent in volume to one thousand barrels."@en ;
+    skos:notation "MMbbl" ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Million Barrels"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 geou:KiloBBLOE a skos:Concept ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of oil quality or energy density defined as the energy equivalent to one thousand Barrel of Oil Equivalents (6.1178632×10e12 J) per million litres."@en ;
@@ -546,6 +555,7 @@ geou:MegaBBLOE a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaBOE a skos:Concept ;
+    skos:altLabel "Million BBLs Oil Equiv. (MMBOE)"@en,
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of energy  defined as the energy equivalent to one million Barrel of Oil (6.1178632×10e15 J)s."@en ;
     skos:notation "MMBOE" ;
@@ -601,12 +611,24 @@ geou:MegaM3 a skos:Concept ;
     skos:prefLabel "Million Cubic Metres"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+geou:kiloTON_M a skos:Concept ;
+    skos:altLabel "kilotonnes (kt)"@en,
+        "Thousand Tonnes"@en ;
+    rdfs:isDefinedBy geou: ;
+    skos:definition "A measure of mass equivalent to one thousand tonnes."@en ;
+    skos:notation "kt" ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Kilotonnes"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 geou:MegaTON_M a skos:Concept ;
+    skos:altLabel "Megatonnes (Mt)"@en,
+        "Million Tonnes"@en 
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of mass equivalent to one million tonnes."@en ;
     skos:notation "Mt" ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
-    skos:prefLabel "Million Tonnes"@en ;
+    skos:prefLabel "Megatonnes"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MicroS-PER-CentiM a skos:Concept ;
@@ -706,6 +728,7 @@ geou:PERCENT-PER-WEIGHT a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:PetaJ a skos:Concept ;
+    skos:altLabel "Petajoules (PJ)" ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The petajoule (PJ) is equal to one quadrillion (1015) joules. 210 PJ is about 50 megatons of TNT which is the amount of energy released by the Tsar Bomba, the largest man-made explosion ever."@en ;
     skos:notation "PJ" ;
