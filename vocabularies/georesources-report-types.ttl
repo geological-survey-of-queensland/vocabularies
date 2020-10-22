@@ -12,7 +12,7 @@
 <http://linked.data.gov.au/def/georesource-report> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-09"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-10-02"^^xsd:date ;
+    dcterms:modified "2020-10-22"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "The types of reports administered by the GeoResources division of the Department of Natural Resources, Mines and Energy."@en ;
@@ -209,6 +209,13 @@ grt:geophysical-survey-report-logistics a skos:Concept ;
     skos:definition "A report detailing the logistical requirements and procedures that were necessary to undertake an activity."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:prefLabel "Geophysical Survey Report - Logistics"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:geothermal-report-annual a skos:Concept ;
+    skos:definition """A report detailing the activities that have occured on a geothermal authority such as an EPG for the 12 months ending on the anniversary day of the permit."""@en ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:notation "GTHANN" ;
+    skos:prefLabel "Geothermal Report - Annual"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:geothermal-report-injection a skos:Concept ;
@@ -864,6 +871,7 @@ grt:water-reports a skos:Collection ;
         grt:permit-report-surrender-higher-tenure,
         grt:permit-report-mineral-associated-water,
         grt:geophysical-survey-report-final,
+        grt:geothermal-report-annual,
         grt:geothermal-report-annual-reserves,
         grt:geothermal-report-injection,
         grt:geothermal-report-injection-testing,
@@ -920,6 +928,7 @@ grt:water-reports a skos:Collection ;
         grt:permit-report-surrender-higher-tenure,
         grt:permit-report-mineral-associated-water,
         grt:geophysical-survey-report-final,
+        grt:geothermal-report-annual,
         grt:geothermal-report-annual-reserves,
         grt:geothermal-report-injection,
         grt:geothermal-report-injection-testing,
