@@ -12,7 +12,7 @@
 <http://linked.data.gov.au/def/georesource-report> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-09"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-10-02"^^xsd:date ;
+    dcterms:modified "2020-11-02"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Developed by the Geological Survey of Queensland." ;
     skos:definition "The types of reports administered by the GeoResources division of the Department of Natural Resources, Mines and Energy."@en ;
@@ -290,31 +290,35 @@ grt:mine-plan-lodgement a skos:Concept ;
 
 grt:permit-report-annual a skos:Concept ;
     skos:altLabel "Annual Resource Authority Report"@en,
-        "Permit Report - Annual"@en ;
-    skos:definition "A report that is required to be lodged annually as a part of the obligations of holding exploration or development tenure (EPC, EPM, MDL) over a resource permit."@en ;
+        "Permit Report - Annual"@en,
+        "Activity Report (EPC, EPM, MDL)"@en,
+        "Annual Report (EPC, EPM, MDL)"@en ;
+    skos:definition "A report that is required to be lodged annual as a part of the obligations of holding exploration or development tenure (EPC, EPM, MDL) over a resource permit detailing activities performed. Required under the Queensland Mineral and Resources Regulation 2013, s13."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "ANNUAL" ;
-    skos:prefLabel "Coal or Mineral Permit Report - Annual (EPC, EPM, MDL)"@en ;
+    skos:prefLabel "Coal or Mineral Permit Report - Activity Report (EPC, EPM, MDL)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:permit-report-annual-ml a skos:Concept ;
-    skos:definition "A report that is required to be lodged annually as a part of the obligations of holding production tenure (ML) over a resource permit. Only applicable to Coal and Oil Shale Minng Leases in the Queensland Mineral and Resources Regulation 2020"@en ;
+    skos:altLabel "Activity Report (ML)"@en,
+        "Annual Report (ML)"@en ;
+    skos:definition "A report that is required to be lodged annually as a part of the obligations of holding production tenure (ML) over a resource permit. Only applicable to Coal and Oil Shale Minng Leases in the Queensland Mineral and Resources Regulation 2013, s29A."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "ANNML" ;
-    skos:prefLabel "Coal or Mineral Permit Report - Annual (ML)"@en ;
+    skos:prefLabel "Coal or Mineral Permit Report - Activity Report (ML)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:permit-report-final a skos:Concept ;
     skos:altLabel "Final or End of Tenure Report"@en,
         "Permit Report - Final"@en ;
-    skos:definition "A report that is required to be lodged when the tenure over a resource permit ends, detailing the work undertaken on the permit throughout the life of tenure."@en ;
+    skos:definition "A report that is required to be lodged when the tenure over a resource permit ends, detailing the work undertaken on the permit throughout the life of tenure. Required under the Queensland Mineral and Resources Regulation 2013, s17."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "FINAL" ;
     skos:prefLabel "Coal or Mineral Permit Report - Final (End of Tenure)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:permit-report-final-higher-tenure a skos:Concept ;
-    skos:definition "A report that is required to be lodged when the tenure over a resource permit is superceded by grant of a higher tenure, detailing the work undertaken on the permit throughout the life of tenure."@en ;
+    skos:definition "A report that is required to be lodged when the tenure over a resource permit is superceded by grant of a higher tenure, detailing the work undertaken on the permit throughout the life of tenure. Required under the Queensland Mineral and Resources Regulation 2013, s17."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "FINALHT" ;
     skos:prefLabel "Coal or Mineral Permit Report - Final (Grant of higher tenure)"@en ;
@@ -341,7 +345,7 @@ grt:permit-report-other a skos:Concept ;
 grt:permit-report-partial-relinquishment a skos:Concept ;
     skos:altLabel "Partial Relinquishment Report"@en,
         "Permit Report - Partial Relinquishment"@en ;
-    skos:definition "A report detailing all the activities a holder has undertaken on a specific region of an exploration permit that has been relinquished. As required by the Mineral Resources Act and as defined by the Reporting Guidelines."@en ;
+    skos:definition "A report detailing all the activities a holder has undertaken on a specific region of an exploration permit that has been relinquished. As required by the Mineral Resources Act and as defined by the Practice Direction. Required under the Queensland Mineral and Resources Regulation 2013, s16 and s29B."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "RELINQ" ;
     skos:prefLabel "Coal or Mineral Permit Report - Partial Relinquishment"@en ;
@@ -367,14 +371,14 @@ grt:permit-report-six-month a skos:Concept ;
 grt:permit-report-surrender a skos:Concept ;
     skos:altLabel "Surrender Report"@en,
         "Permit Report - Surrender"@en ;
-    skos:definition "A report that is required to be lodged as a part of the obligations of surrendering tenure over a Coal or Oil Shale Mining Lease or Mineral Development Licence where a higher tenure over the same area has not been granted."@en ;
+    skos:definition "A report that is required to be lodged as a part of the obligations of surrendering tenure over a Coal or Oil Shale Mining Lease or Mineral Development Licence where a higher tenure over the same area has not been granted. Required under the Queensland Mineral and Resources Regulation 2013, s16 and s29C."@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "SURR" ;
     skos:prefLabel "Coal or Mineral Permit Report - Surrender (End of Tenure)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:permit-report-surrender-higher-tenure a skos:Concept ;
-    skos:definition "A report that is required to be lodged as a part of the obligations of surrendering tenure over a Coal or Oil Shale Mining Lease or Mineral Development Licence upon grant of a higher tenure."@en ;
+    skos:definition "A report that is required to be lodged as a part of the obligations of surrendering tenure over a Coal or Oil Shale Mining Lease or Mineral Development Licence upon grant of a higher tenure. Required under the Queensland Mineral and Resources Regulation 2013, s16 and s29C"@en ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "SURRHT" ;
     skos:prefLabel "Coal or Mineral Permit Report - Surrender (Grant of higher tenure)"@en ;
@@ -873,9 +877,7 @@ grt:water-reports a skos:Collection ;
         grt:greenhouse-gas-report-storage-capacity,
         grt:greenhouse-gas-report-storage-injection,
         grt:mine-plan-lodgement,
-        grt:petroleum-report-cumulative-water-production,
         grt:petroleum-report-field-information,
-        grt:petroleum-report-infrastructure,
         grt:petroleum-report-non-associated-water,
         grt:petroleum-report-annual,
         grt:petroleum-end-authority,
@@ -961,7 +963,5 @@ grt:water-reports a skos:Collection ;
         grt:petroleum-report-other,
         grt:presentation,
         grt:queensland-government-mining-journal,
-        grt:technical-report,
-        grt:water-report-other,
-        grt:any-other-report;   
+        grt:water-report-other;   
     skos:prefLabel "Internal Lodgement Portal"@en .
