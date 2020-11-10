@@ -28,14 +28,17 @@
         reg:forwardingCode    "307" .
 
 <http://registry.it.csiro.au/licence>
-        a                      ldp:Container , reg:Registerd , skos:Concept ;
-        skos:inScheme <http://registry.it.csiro.au/licence> ;
-        skos:topConceptOf <http://registry.it.csiro.au/licence> ;
-        skos:prefLabel        "Licences"@en ;
-        rdfs:label             "Licences"@en ;
-        rdfs:member            <http://registry.it.csiro.au/licence/cc-by-4.0> , <http://registry.it.csiro.au/licence/cc-by-nd-4.0> , <http://registry.it.csiro.au/licence/cc-by-sa-4.0> ;
-        skos:hasTopConcept     <http://registry.it.csiro.au/licence/cc-by-4.0> , <http://registry.it.csiro.au/licence/cc-by-nd-4.0> , <http://registry.it.csiro.au/licence/cc-by-sa-4.0> ;
+        a                      ldp:Container , reg:Registerd , skos:ConceptScheme ;
+        skos:prefLabel        "Creative Commons Licences"@en ;
+        rdfs:label            "Creative Commons Licences"@en ;
+        rdfs:member           <http://registry.it.csiro.au/licence/cc-by-4.0> , 
+                                        <http://registry.it.csiro.au/licence/cc-by-nd-4.0> ,
+                                        <http://registry.it.csiro.au/licence/cc-by-sa-4.0> ;
+        skos:hasTopConcept    <http://registry.it.csiro.au/licence/cc-by-4.0> ,
+                                         <http://registry.it.csiro.au/licence/cc-by-nd-4.0> ,
+                                         <http://registry.it.csiro.au/licence/cc-by-sa-4.0> ;
         dct:description        "Licences for use of software, data, documents and other resources"@en ;
+        skos:definition        "Licences for use of software, data, documents and other resources"@en ;
         dct:modified           "2015-08-10T10:18:29.275Z"^^xsd:dateTime ;
         reg:owner              rr-org:csiro ;
         owl:versionInfo        1 ;
