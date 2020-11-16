@@ -1,0 +1,685 @@
+# baseURI: https://linked.data.qld.gov.au/vocab
+# imports: https://linked.data.qld.gov.au/def/dcat
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dq-iso-19157: <https://linked.data.gov.au/def/ISO-19157/quality-dimension/> .
+@prefix dq-iso-25012: <https://linked.data.gov.au/def/ISO-IEC-25012/quality-dimension/> .
+@prefix dq-nsw: <https://linked.data.gov.au/def/NSW-OEH/quality-dimension/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sdo: <http://www.schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dq-iso-19157:Dimensions
+  a skos:ConceptScheme ;
+  dcterms:source "ISO 19157"@en ;
+  rdfs:label "Dimensions of data quailty (ISO 19157)"@en ;
+  skos:prefLabel "Dimensions of data quailty (ISO 19157)"@en ;
+  dcterms:created "2020-11-16"^^xsd:date ;
+  dcterms:creator <http://linked.data.gov.au/def/gsq-alias/des> ;
+dcterms:modified "2020-11-16"^^xsd:date ;
+dcterms:publisher <http://linked.data.gov.au/def/gsq-alias/des> ;
+  skos:hasTopConcept dq-iso-19157:Completeness ;
+  skos:hasTopConcept dq-iso-19157:LogicalConsistency ;
+  skos:hasTopConcept dq-iso-19157:Metaquality ;
+  skos:hasTopConcept dq-iso-19157:PositionalAccuracy ;
+  skos:hasTopConcept dq-iso-19157:TemporalQuality ;
+  skos:hasTopConcept dq-iso-19157:ThematicAccuracy ;
+  skos:hasTopConcept dq-iso-19157:UsabilityElement .
+
+dq-iso-19157:AbsoluteExternalPositionalAccuracy
+  a dqv:Dimension ; 
+  a skos:Concept ;
+  rdfs:label "AbsoluteExternalPositionalAccuracy"@en ;
+  skos:broader dq-iso-19157:PositionalAccuracy ;
+  skos:definition "Closeness of reported coordinate values to values accepted as or being true"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Absolute External Positional Accuracy"@en .
+
+dq-iso-19157:AccuracyOfATimeMeasurement
+  a dqv:Dimension ; 
+  a skos:Concept ;
+  rdfs:label "AccuracyOfATimeMeasurement"@en ;
+  skos:broader dq-iso-19157:TemporalQuality ;
+  skos:definition "Correctness of the temporal references of an item (reporting of error in time measurement)"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Accuracy of a Time Measurement"@en .
+
+dq-iso-19157:Completeness
+  a dqv:Dimension ; 
+  a skos:Concept ;
+  rdfs:label "Completeness"@en ;
+  skos:definition "Presence and absence of features, their attributes and their relationships"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Completeness"@en .
+
+dq-iso-19157:CompletenessCommission
+  a dqv:Dimension ; 
+  a skos:Concept ;
+  rdfs:label "CompletenessCommission"@en ;
+  skos:broader dq-iso-19157:Completeness ;
+  skos:definition "Excess data present in the data set, as described by the scope"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Completeness Commission"@en .
+
+dq-iso-19157:CompletenessOmission
+  a dqv:Dimension ; 
+  a skos:Concept ;
+  rdfs:label "CompletenessOmission"@en ;
+  skos:broader dq-iso-19157:Completeness ;
+  skos:definition "Data absent from the data set, as described by the scope"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Completeness Omission"@en .
+
+dq-iso-19157:ConceptualConsistency
+  a dqv:Dimension ; 
+  a skos:Concept ;
+  rdfs:label "ConceptualConsistency"@en ;
+  skos:broader dq-iso-19157:LogicalConsistency ;
+  skos:definition "Adherence to rules of the conceptual schema"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Conceptual Consistency"@en .
+  
+dq-iso-19157:DomainConsistency
+  a dqv:Dimension ; 
+  a skos:Concept ;
+  rdfs:label "DomainConsistency"@en ;
+  skos:broader dq-iso-19157:LogicalConsistency ;
+  skos:definition "Adherence of values to the value domains"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Domain Consistency"@en .
+
+dq-iso-19157:FormatConsistency
+  a dqv:Dimension ;
+  a skos:Concept ;
+  rdfs:label "FormatConsistency"@en ;
+  skos:broader dq-iso-19157:LogicalConsistency ;
+  skos:definition "Degree to which data are stored in accordance with the physical structure of the data set, as described by the scope"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Format Consistency"@en .
+
+dq-iso-19157:GriddedDataPositionalAccuracy
+  a dqv:Dimension ; 
+  a skos:Concept ;
+  rdfs:label "GriddedDataPositionalAccuracy"@en ;
+  skos:broader dq-iso-19157:PositionalAccuracy ;
+  skos:definition "Closeness of gridded data position values to values accepted as or being true"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Gridded Data Positional Accuracy"@en .
+
+dq-iso-19157:LogicalConsistency
+  a dqv:Dimension ; 
+  a skos:Concept ;
+  rdfs:label "LogicalConsistency"@en ;
+  skos:definition "Degree of adherence to logical rules of data structure, attribution and relationships (data structure can be conceptual, logical or physical)"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Logical Consistency"@en .
+  
+dq-iso-19157:Metaquality
+  a dqv:Dimension ; 
+  a skos:Concept ;
+  rdfs:label "Metaquality"@en ;
+  skos:definition "Information about the reliability of data quality results Use obligation from referencing object"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Metaquality"@en .
+
+dq-iso-19157:NonQuantitativeAttributeCorrectness
+  a dqv:Dimension ;
+   a skos:Concept ;
+  rdfs:label "NonQuantitativeAttributeCorrectness"@en ;
+  skos:broader dq-iso-19157:ThematicAccuracy ;
+  skos:definition "Correctness of non-quantitative attributes"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "NonQuantitative Attribute Correctness"@en .
+
+dq-iso-19157:PositionalAccuracy
+  a dqv:Dimension ;
+  a skos:Concept ;
+  rdfs:label "PositionalAccuracy"@en ;
+  skos:definition "Accuracy of the position of features"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Positional Accuracy"@en .
+
+dq-iso-19157:QuantitativeAttributeAccuracy
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "QuantitativeAttributeAccuracy"@en ;
+  skos:broader dq-iso-19157:ThematicAccuracy ;
+  skos:definition "Accuracy of quantitative attributes"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Quantitative Attribute Accuracy"@en ;
+.
+dq-iso-19157:RelativeInternalPositionalAccuracy
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "RelativeInternalPositionalAccuracy"@en ;
+  skos:broader dq-iso-19157:PositionalAccuracy ;
+  skos:definition "Closeness of the relative positions of features in the scope to their respective relative positions accepted as or being true"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Relative Internal Positional Accuracy"@en ;
+.
+dq-iso-19157:TemporalConsistency
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "TemporalConsistency"@en ;
+  skos:broader dq-iso-19157:TemporalQuality ;
+  skos:definition "Correctness of ordered events or sequences, if reported"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Temporal Consistency"@en ;
+.
+dq-iso-19157:TemporalQuality
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "TemporalQuality"@en ;
+  skos:definition "Accuracy of the temporal attributes and temporal relationships of features"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Temporal Quality"@en ;
+.
+dq-iso-19157:TemporalValidity
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "TemporalValidity"@en ;
+  skos:broader dq-iso-19157:TemporalQuality ;
+  skos:definition "Validity of data specified by the scope with respect to time"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Temporal Validity"@en ;
+.
+dq-iso-19157:ThematicAccuracy
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "ThematicAccuracy"@en ;
+  skos:definition "Accuracy of quantitative attributes and the correctness of non-quantitative attributes and of the classifications of features and their relationships"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Thematic Accuracy"@en ;
+.
+dq-iso-19157:ThematicClassificationCorrectness
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "ThematicClassificationCorrectness"@en ;
+  skos:broader dq-iso-19157:ThematicAccuracy ;
+  skos:definition "Comparison of the classes assigned to features or their attributes to a universe of discourse"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Thematic Classification Correctness"@en ;
+.
+dq-iso-19157:TopologicalConsistency
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "TopologicalConsistency"@en ;
+  skos:broader dq-iso-19157:LogicalConsistency ;
+  skos:definition "Correctness of the explicitly encoded topological characteristics of the data set as described by the scope"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Topological Consistency"@en ;
+.
+dq-iso-19157:UsabilityElement
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "UsabilityElement"@en ;
+  skos:definition "Degree of adherence of a data set to a specific set of requirements"@en ;
+  skos:inScheme dq-iso-19157:Dimensions ;
+  skos:prefLabel "Usability Element"@en ;
+.
+dq-iso-25012:Dimensions
+  a skos:ConceptScheme ;
+  rdfs:label "Dimensions of data quality (ISO 25012)"@en ;
+  skos:prefLabel "Dimensions of data quality (ISO 25012)"@en ;
+  dcterms:created "2020-11-16"^^xsd:date ;
+dcterms:creator <http://linked.data.gov.au/def/gsq-alias/des> ;
+dcterms:modified "2020-11-16"^^xsd:date ;
+dcterms:publisher <http://linked.data.gov.au/def/gsq-alias/des> ;
+  skos:hasTopConcept dq-iso-25012:inherentDataQuality ;
+  skos:hasTopConcept dq-iso-25012:inherentSystemDependentDataQuality ;
+  skos:hasTopConcept dq-iso-25012:systemDependentDataQuality ;
+.
+dq-iso-25012:accessibility
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Accessibility"@en ;
+  skos:definition "The degree to which data can be accessed in a specific context of use, particularly by people who need supporting technology or special configuration because of some disability."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Accessibility"@en ;
+  dqv:inCategory dq-iso-25012:inherentSystemDependentDataQuality ;
+  skos:broader dq-iso-25012:inherentSystemDependentDataQuality ;
+.
+dq-iso-25012:accuracy
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Accuracy"@en ;
+  skos:definition "The degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Accuracy"@en ;
+  dqv:inCategory dq-iso-25012:inherentDataQuality ;
+  skos:broader dq-iso-25012:inherentDataQuality ;
+.
+dq-iso-25012:availability
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Availability"@en ;
+  skos:definition "The degree to which data has attributes that enable it to be retrieved by authorized users and/or applications in a specific context of use."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Availability"@en ;
+  dqv:inCategory dq-iso-25012:systemDependentDataQuality ;
+  skos:broader dq-iso-25012:systemDependentDataQuality ;
+.
+dq-iso-25012:completeness
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Completeness"@en ;
+  skos:definition "The degree to which subject data associated with an entity has values for all expected attributes and related entity instances in a specific context of use."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Completeness"@en ;
+  dqv:inCategory dq-iso-25012:inherentDataQuality ;
+  skos:broader dq-iso-25012:inherentDataQuality ;
+.
+dq-iso-25012:compliance
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Compliance"@en ;
+  skos:definition "The degree to which data has attributes that adhere to standards, conventions or regulations in force and similar rules relating to data quality in a specific context of use."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Compliance"@en ;
+  dqv:inCategory dq-iso-25012:inherentSystemDependentDataQuality ;
+  skos:broader dq-iso-25012:inherentSystemDependentDataQuality ;
+.
+dq-iso-25012:confidentiality
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Confidentiality"@en ;
+  skos:definition "The degree to which data has attributes that ensure that it is only accessible and interpretable by authorized users in a specific context of use. Confidentiality is an aspect of information security (together with availability, integrity) as defined in ISO/IEC 13335-1:2004."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Confidentiality"@en ;
+  dqv:inCategory dq-iso-25012:inherentSystemDependentDataQuality ;
+  skos:broader dq-iso-25012:inherentSystemDependentDataQuality ;
+.
+dq-iso-25012:consistency
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Consistency"@en ;
+  skos:definition "The degree to which data has attributes that are free from contradiction and are coherent with other data in a specific context of use. It can be either or both among data regarding one entity and across similar data for comparable entities."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Consistency"@en ;
+  dqv:inCategory dq-iso-25012:inherentDataQuality ;
+  skos:broader dq-iso-25012:inherentDataQuality ;
+.
+dq-iso-25012:credibility
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Credibility"@en ;
+  skos:definition "The degree to which data has attributes that are regarded as true and believable by users in a specific context of use. Credibility includes the concept of authenticity (the truthfulness of origins, attributions, commitments)."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Credibility"@en ;
+  dqv:inCategory dq-iso-25012:inherentDataQuality ;
+  skos:broader dq-iso-25012:inherentDataQuality ;
+.
+dq-iso-25012:currentness
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Currentness"@en ;
+  skos:definition "The degree to which data has attributes that are of the right age in a specific context of use."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Currentness"@en ;
+  dqv:inCategory dq-iso-25012:inherentDataQuality ;
+  skos:broader dq-iso-25012:inherentDataQuality ;
+.
+dq-iso-25012:efficiency
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Efficiency"@en ;
+  skos:definition "The degree to which data has attributes that can be processed and provide the expected levels of performance by using the appropriate amounts and types of resources in a specific context of use."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Efficiency"@en ;
+  dqv:inCategory dq-iso-25012:inherentSystemDependentDataQuality ;
+  skos:broader dq-iso-25012:inherentSystemDependentDataQuality ;
+.
+dq-iso-25012:inherentDataQuality
+  a dqv:Category ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Inherent data quality"@en ;
+  skos:prefLabel "Inherent data quality"@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+.
+dq-iso-25012:inherentSystemDependentDataQuality
+  a dqv:Category ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Inherent system-dependent data quality"@en ;
+  skos:related dq-iso-25012:inherentDataQuality ;
+  skos:related dq-iso-25012:systemDependentDataQuality ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Inherent and System-Dependent Data Quality"@en ;
+.
+dq-iso-25012:portability
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Portability"@en ;
+  skos:definition "The degree to which data has attributes that enable it to be installed, replaced or moved from one system to another preserving the existing quality in a specific context of use."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Portability"@en ;
+  dqv:inCategory dq-iso-25012:systemDependentDataQuality ;
+  skos:broader dq-iso-25012:systemDependentDataQuality ;
+.
+dq-iso-25012:precision
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Precision"@en ;
+  skos:definition "The degree to which data has attributes that are exact or that provide discrimination in a specific context of use."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Precision"@en ;
+  dqv:inCategory dq-iso-25012:inherentSystemDependentDataQuality ;
+  skos:broader dq-iso-25012:inherentSystemDependentDataQuality ;
+.
+dq-iso-25012:recoverability
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Recoverability"@en ;
+  skos:definition "The degree to which data has attributes that enable it to maintain and preserve a specified level of operations and quality, even in the event of failure, in a specific context of use."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Recoverability"@en ;
+  dqv:inCategory dq-iso-25012:systemDependentDataQuality ;
+  skos:broader dq-iso-25012:systemDependentDataQuality ;
+.
+dq-iso-25012:systemDependentDataQuality
+  a dqv:Category ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "System-dependent data quality"@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "System-Dependent Data Quality"@en ;
+.
+dq-iso-25012:traceability
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Traceability"@en ;
+  skos:definition "The degree to which data has attributes that provide an audit trail of access to the data and of any changes made to the data in a specific context of use."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Traceability"@en ;
+  dqv:inCategory dq-iso-25012:inherentSystemDependentDataQuality ;
+  skos:broader dq-iso-25012:inherentSystemDependentDataQuality ;
+  .
+dq-iso-25012:understandability
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  rdfs:label "Understandability"@en ;
+  skos:definition "The degree to which data has attributes that enable it to be read and interpreted by users, and are expressed in appropriate languages, symbols and units in a specific context of use. Some information about data understandability are provided by metadata."@en ;
+  skos:inScheme dq-iso-25012:Dimensions ;
+  skos:prefLabel "Understandability"@en ;
+  dqv:inCategory dq-iso-25012:inherentSystemDependentDataQuality ;
+  skos:broader dq-iso-25012:inherentSystemDependentDataQuality ;
+.
+dq-nsw:Dimensions
+  a skos:ConceptScheme ;
+  rdfs:comment "Find out more about the quality assurance processes from the NSW Government Standard for Data Quality Reporting. https://www.finance.nsw.gov.au/ict/resources/data-quality-standard"@en ;
+  rdfs:label "Dimensions of data quality (NSW OEH)"@en ;
+  skos:prefLabel "Dimensions of data quality (NSW OEH)"@en ;
+  rdfs:seeAlso <https://www.finance.nsw.gov.au/ict/resources/data-quality-standard> ;
+  dcterms:created "2020-11-16"^^xsd:date ;
+dcterms:creator <http://linked.data.gov.au/def/gsq-alias/des> ;
+dcterms:modified "2020-11-16"^^xsd:date ;
+dcterms:publisher <http://linked.data.gov.au/def/gsq-alias/des> ;
+  skos:hasTopConcept dq-nsw:accessibility ;
+  skos:hasTopConcept dq-nsw:accuracy ;
+  skos:hasTopConcept dq-nsw:coherence ;
+  skos:hasTopConcept dq-nsw:institutional-environment ;
+  skos:hasTopConcept dq-nsw:interpretability ;
+.
+dq-nsw:accessibility
+  a dqv:Category ; a skos:Concept ;
+  rdfs:label "ACCESSIBILITY"@en ;
+  skos:prefLabel "Accessibility"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+.
+dq-nsw:accuracy
+  a dqv:Category ; a skos:Concept ;
+  rdfs:label "ACCURACY"@en ;
+  skos:prefLabel "Accuracy"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+.
+dq-nsw:assurance
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Data assurance"@en ;
+  skos:prefLabel "Data assurance"@en ;
+  skos:definition "Data has been subject to a data assurance process (for example: Checking for errors at each stage of data collection and processing, or verifying data entry and making corrections if necessary.)"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:accuracy ;
+  skos:broader dq-nsw:accuracy ;
+.
+dq-nsw:authorized
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Authorized data collection"@en ;
+  skos:prefLabel "Authorized data collection"@en ;
+  skos:definition "Data collection is authorised by law, regulation or agreement"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:institutional-environment ;
+  skos:broader dq-nsw:institutional-environment ;
+.
+dq-nsw:coherence
+  a dqv:Category ; a skos:Concept ;
+  rdfs:label "COHERENCE"@en ;
+  skos:prefLabel "Coherence"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+.
+dq-nsw:comparable
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Elements can be compared"@en ;
+  skos:prefLabel "Elements can be compared"@en ;
+  skos:definition "Elements within the data can be meaning fully compared."@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:coherence ;
+  skos:broader dq-nsw:coherence ;
+.
+dq-nsw:complete
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Data complete"@en ;
+  skos:prefLabel "Data complete"@en ;
+  skos:definition "There are no known gaps in the data or if there are gaps (for example: non-responses, missing records, data not collected), they have been identified in caveats attached to the dataset."@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:accuracy ;
+  skos:broader dq-nsw:accuracy ;
+.
+dq-nsw:concepts
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:comment "Find out more about concepts used in this dataset and how to understand or interpret the data from the Custodian (contact details below)."@en ;
+  rdfs:label "Concept explanations"@en ;
+  skos:prefLabel "Concept explanations"@en ;
+  skos:definition "Information is available to explain concepts, help users correctly interpret the data and understand how it can be used"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:interpretability ;
+  skos:broader dq-nsw:interpretability ;
+.
+dq-nsw:consistent
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Consistent with related datasets"@en ;
+  skos:prefLabel "Consistent with related datasets"@en ;
+  skos:definition "This data is generally consistent with similar or related data sources from the same discipline"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:coherence ;
+  skos:broader dq-nsw:coherence ;
+.
+dq-nsw:data-dictionary
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:comment "Find out more about the data dictionary from the Custodian (contact details below)."@en ;
+  rdfs:label "Data dictionary provided"@en ;
+  skos:prefLabel "Data dictionary provided"@en ;
+  skos:definition "A data dictionary is available to explain the meaning of data elements, their origin, format and relationships"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:interpretability ;
+  skos:broader dq-nsw:interpretability ;
+.
+dq-nsw:data-quality-framework
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Data quality framework"@en ;
+  skos:prefLabel "Data quality framework"@en ;
+  skos:definition """The data align swith the Data Quality Framework,including:
+- Legislation
+- Policies
+- Information Asset Governance
+- Standards
+- Data Management Plans"""@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:institutional-environment ;
+.
+dq-nsw:enhance
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Enhance services"@en ;
+  skos:prefLabel "Enhance services"@en ;
+  skos:definition "Does the information have the potential to enhance services or service delivery?"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:institutional-environment ;
+  skos:broader dq-nsw:institutional-environment ;
+.
+dq-nsw:evaluation
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Accuracy evaluation"@en ;
+  skos:prefLabel "Accuracy evaluation"@en ;
+  skos:definition "Information is available to help users evaluate the accuracy of the data and any level of error"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:interpretability ;
+  skos:broader dq-nsw:interpretability ;
+.
+dq-nsw:governance
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "governance roles"@en ;
+  skos:prefLabel "governance roles"@en ;
+  skos:definition """The following governance roles and responsibilities for this asset are clearly assigned:
+- Information Asset Owner
+- Information Asset Custodian
+- Information Steward"""@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:institutional-environment ;
+  skos:broader dq-nsw:institutional-environment ;
+.
+dq-nsw:institutional-environment
+  a dqv:Category ; a skos:Concept ;
+  rdfs:label "INSTITUTIONAL ENVIRONMENT"@en ;
+  skos:prefLabel "Institutional Environment"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+.
+dq-nsw:interpretability
+  a dqv:Category ; a skos:Concept ;
+  rdfs:label "INTERPRETABILITY"@en ;
+  skos:prefLabel "Interpretability"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+.
+dq-nsw:license
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Open license"@en ;
+  skos:prefLabel "Open license"@en ;
+  skos:definition "Data is available on line with an open licence"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:accessibility ;
+  skos:broader dq-nsw:accessibility ;
+.
+dq-nsw:linked
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Links to data and context"@en ;
+  skos:prefLabel "Links to data and context"@en ;
+  skos:definition "Data is linked to other data, to provide context (e.g.employee  ID is linked to employee name or species name is linked to genus)"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:accessibility ;
+  skos:broader dq-nsw:accessibility ;
+.
+dq-nsw:methodology
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Consistent methodology"@en ;
+  skos:prefLabel "Consistent methodology"@en ;
+  skos:definition "The data does not form part of a collection or, if it is the latest in a series of data releases, there have not been any changes in methodology or external impacts since the last data release."@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:coherence ;
+  skos:broader dq-nsw:coherence ;
+.
+dq-nsw:no-changes
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "No changes or flaws not explained"@en ;
+  skos:prefLabel "No changes or flaws not explained"@en ;
+  skos:definition "No changes have been made or other factors identified (for example: weighting, rounding, de-identification of data, changes or flaws in data collection or verification methods) that could affect the validity of the data; or any changes/factors have been identified in caveats attached to the asset."@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:accuracy ;
+  skos:broader dq-nsw:accuracy ;
+.
+dq-nsw:no-conflict
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "No commercial interest or conflict"@en ;
+  skos:prefLabel "No commercial interest or conflict"@en ;
+  skos:definition "The Custodial agency has no commercial interest or conflict of interest in the data"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:institutional-environment ;
+  skos:broader dq-nsw:institutional-environment ;
+.
+dq-nsw:non-proprietary
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Non-proprietary format"@en ;
+  skos:prefLabel "Non-proprietary format"@en ;
+  skos:definition "Data is available in a non-proprietary format (e.g.CSV, XML)"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:accessibility ;
+  skos:broader dq-nsw:accessibility ;
+.
+dq-nsw:open-standards
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Open standards"@en ;
+  skos:prefLabel "Open standards"@en ;
+  skos:definition "Data is described using open standards (e.g. RDF, SPARQL) and persistent identifiers (URIs or DOIs)"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:accessibility ;
+  skos:broader dq-nsw:accessibility ;
+.
+dq-nsw:primary-user
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Data met needs of primary user"@en ;
+  skos:prefLabel "Data met needs of primary user"@en ;
+  skos:definition "The data collection met the objectives of the primary user. The data correctly represents what it was designed to measure, monitor or report."@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:accuracy ;
+  skos:broader dq-nsw:accuracy ;
+.
+dq-nsw:revised
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Revised when errors detected"@en ;
+  skos:prefLabel "Revised when errors detected"@en ;
+  skos:definition "Data is revised and the revision is published if errors are identified"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:accuracy ;
+  skos:broader dq-nsw:accuracy ;
+.
+dq-nsw:sources
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:comment "Find out more about the primary data sources and methods of data collection from the Custodian (contact details below)."@en ;
+  rdfs:label "Data sources and methods"@en ;
+  skos:prefLabel "Data sources and methods"@en ;
+  skos:definition "Information is available about the primary data sources and methods of data collection (e.g. instruments, forms, instructions)."@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:interpretability ;
+  skos:broader dq-nsw:interpretability ;
+.
+dq-nsw:standards
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Standard definitions and practices"@en ;
+  skos:prefLabel "Standard definitions and practices"@en ;
+  skos:definition "Standard definitions, common concepts, classifications and data recording practices have been used."@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:coherence ;
+  skos:broader dq-nsw:coherence ;
+.
+dq-nsw:structured
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Structured data"@en ;
+  skos:prefLabel "Structured data"@en ;
+  skos:definition "Data is available in machine-processable, structured form (e.g. CSV format instead of an image scan of a table)"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:accessibility ;
+  skos:broader dq-nsw:accessibility ;
+.
+dq-nsw:technical
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:comment "Find out more about ambiguous or technical terms used in the data from the Custodian (contact details below)."@en ;
+  rdfs:label "Technical explanations"@en ;
+  skos:prefLabel "Technical explanations"@en ;
+  skos:definition "Information is available to explain ambiguous or technical terms used in the data"@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:interpretability ;
+  skos:broader dq-nsw:interpretability ;
+.
+dq-nsw:time
+  a dqv:Dimension ; a skos:Concept ;
+  rdfs:label "Consistent over time"@en ;
+  skos:prefLabel "Consistent over time"@en ;
+  skos:definition "The data can be analysed over time (for example,there have not been any significant changes in the way items are defined,classified or counted over time)."@en ;
+  skos:inScheme dq-nsw:Dimensions ;
+  dqv:inCategory dq-nsw:coherence ;
+  skos:broader dq-nsw:coherence ;
+.
+
+<http://linked.data.gov.au/def/gsq-alias/des>
+    a sdo:Organization ;
+    sdo:name "Department of Environment and Science"@en .
