@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/site-relationships> a owl:Ontology , skos:ConceptScheme ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2020-01-21"^^xsd:date ;
-    dcterms:modified "2020-06-24"^^xsd:date ;
+    dcterms:modified "2020-11-02"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The relationships between sites both topological and functional."@en ;
@@ -28,6 +28,7 @@
         strel:parent,
         strel:re-entry,
         strel:redrill,
+        strel:supersedes,
         strel:twinned,
         strel:well-pad ;
     skos:prefLabel "Site Relationships"@en .
@@ -180,4 +181,11 @@ strel:intersects a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Intersects"@en ;
     skos:scopeNote "Use of strel:intersects in a ternary relationship (A related_to B, related_to of type strel:intersects) entails A geo:sfIntersects B" ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:supersedes a skos:Concept ;
+    skos:definition "Object A supersedes object B. A temporal relationship whereby Object A follows, and is a direct result of the cessation of, Object B."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Supersedes"@en ;
+    skos:scopeNote """In the context of resource regulation, supersedes applies to the transition from an exploration permit to a 'higher tenure', such as a Mining Lease""" ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
