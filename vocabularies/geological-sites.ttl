@@ -13,7 +13,7 @@
         skos:ConceptScheme ;
     dct:created "2020-02-07"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-06-05"^^xsd:date ;
+    dct:modified "2020-11-23"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
@@ -26,6 +26,7 @@
         gsqst:mine,
         gsqst:pit,
         gsqst:project-site,
+        gsqst:rock-unit,
         gsqst:trench,
         #gsqst:wellbore,
         gsqst:unknown ;
@@ -240,6 +241,14 @@ gsqst:pit a skos:Concept ;
     skos:notation "pt" ;
     skos:prefLabel "Pit"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+
+gsqst:rock-unit a skos:Concept ;
+    skos:definition "Bodies of rock grouped by their characteristics, not by time. The units include (from major to minor) groups, formations, and members."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "ru" ;
+    skos:prefLabel "Rock unit"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+
 
 gsqst:project-site a skos:Concept ;
     skos:altLabel "Project"@en,
