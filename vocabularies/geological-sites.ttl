@@ -13,7 +13,7 @@
         skos:ConceptScheme ;
     dct:created "2020-02-07"^^xsd:date ;
     dct:creator <http://linked.data.gov.au/org/gsq> ;
-    dct:modified "2020-11-23"^^xsd:date ;
+    dct:modified "2020-11-26"^^xsd:date ;
     dct:publisher <http://linked.data.gov.au/org/gsq> ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
@@ -28,6 +28,7 @@
         gsqst:project-site,
         gsqst:rock-unit,
         gsqst:trench,
+        gsqst:resource-authority,
         #gsqst:wellbore,
         gsqst:unknown ;
     skos:prefLabel "Geological Sites"@en .
@@ -266,6 +267,15 @@ gsqst:trench a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
     skos:notation "th" ;
     skos:prefLabel "Trench"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+
+gsqst:resource-authority a skos:Concept ;
+    skos:altLabel "Permit"@en,
+        "Tenure"@en ;
+    skos:definition "Resource authorities are a license granted over a spatial region within the State of Queensland. Resource authorities govern the activities which can be conducted upon them. Activities include exploration, development, and extraction of a specific commodity or commodities."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "ra" ;
+    skos:prefLabel "Resource authority"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
 
 #gsqst:wellbore a skos:Concept ;
