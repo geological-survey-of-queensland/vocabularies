@@ -1,4 +1,4 @@
- @prefix natofrel: <http://linked.data.gov.au/def/nature-of-relationship/> .
+ @prefix datrel: <http://linked.data.gov.au/def/dataset-relationship/> .
  
  @prefix dc: <http://purl.org/dc/elements/1.1/> .
  @prefix dct: <http://purl.org/dc/terms/> .
@@ -34,13 +34,13 @@ skos:hasTopConcept
     <http://purl.org/dc/terms/requires> ,
     <http://purl.org/dc/terms/isRequiredBy> , 
     <https://www.w3.org/TR/prov-o/#wasDerivedFrom> ,
-    natofrel:hadDerivation ,
+    datrel:hadDerivation ,
     <https://www.w3.org/TR/prov-o/#wasInfluencedBy> ,
     <https://www.w3.org/TR/prov-o/#Influenced> ,
-    natofrel:quotedAs ,
+    datrel:quotedAs ,
     <https://www.w3.org/TR/prov-o/#wasQuotedFrom> ,
     <https://www.w3.org/TR/prov-o/#wasRevisionOf> , 
-    natofrel:hadRevision ,
+    datrel:hadRevision ,
     <https://www.w3.org/TR/prov-o/#alternateOf> ,
     <https://www.w3.org/TR/prov-o/#specializationOf> .
 
@@ -51,64 +51,64 @@ skos:hasTopConcept
 <http://purl.org/dc/terms/hasPart> a skos:Concept , 
     owl:objectproperty ; 
  skos:definition "A related resource that is included either physically or logically in the described resource."@en ;
- skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
- skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+ skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+ skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
  owl:inverseOf <http://purl.org/dc/terms/isPartOf> ;
  skos:prefLabel "Has Part"@en  .
 
 <http://purl.org/dc/terms/isPartOf> a skos:Concept , 
     owl:objectproperty ; 
  skos:definition "A related resource that is included either physically or logically in the described resource."@en ;
- skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
- skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+ skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+ skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
  owl:inverseOf <http://purl.org/dc/terms/hasPart> ;
  skos:prefLabel "Is Part Of"@en  .
    
 <http://purl.org/dc/terms/isFormatOf> a skos:Concept , 
     owl:objectproperty ; 
  skos:definition "A pre-existing related resource that is substantially the same as the described resource, but in another format."@en ;
- skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
- skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+ skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+ skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
  owl:inverseOf <http://purl.org/dc/terms/hasFormat> ;
  skos:prefLabel "Is Format Of"@en  .
 
  <http://purl.org/dc/terms/hasFormat> a skos:Concept , 
     owl:objectproperty ; 
  skos:definition "A related resource that is substantially the same as the pre-existing described resource, but in another format."@en ;
- skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
- skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+ skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+ skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
  owl:inverseOf <http://purl.org/dc/terms/isFormatOf> ;
  skos:prefLabel "Has Format"@en  .
 
 <http://purl.org/dc/terms/isVersionOf> a skos:Concept , 
     owl:objectproperty ; 
  skos:definition "A related resource of which the described resource is a version, edition, or adaptation."@en ;
- skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
- skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+ skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+ skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
  owl:inverseOf <http://purl.org/dc/terms/hasVersion> ;
  skos:prefLabel "Is Version Of"@en  .
 
 <http://purl.org/dc/terms/hasVersion> a skos:Concept , 
     owl:objectproperty ; 
  skos:definition "A related resource that is a version, edition, or adaptation of the described resource."@en ;
- skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
- skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+ skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+ skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
  owl:inverseOf  <http://purl.org/dc/terms/isVersionOf> ;
  skos:prefLabel "Has Version"@en  .
 
 <http://purl.org/dc/terms/replaces> a skos:Concept , 
     owl:objectproperty ; 
  skos:definition "A related resource that is supplanted, displaced, or superseded by the described resource."@en ; 
- skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
- skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+ skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+ skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
  owl:inverseOf <http://purl.org/dc/terms/isReplacedBy> ;
  skos:prefLabel "Replaces"@en  .
 
 <http://purl.org/dc/terms/isReplacedBy> a skos:Concept , 
     owl:objectproperty ;
  skos:definition "A related resource that supplants, displaces, or supersedes the described resource."@en ;
- skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
- skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+ skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+ skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
  owl:inverseOf <http://purl.org/dc/terms/replaces> ;
  skos:prefLabel "Is Replaced By"@en  .
 
@@ -116,49 +116,49 @@ skos:hasTopConcept
 <http://purl.org/dc/terms/references> a skos:Concept , 
     owl:objectproperty ;
 skos:definition "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 owl:inverseOf <http://purl.org/dc/terms/isReferencedBy>  ;
 skos:prefLabel "References"@en  .
 
 <http://purl.org/dc/terms/isReferencedBy> a skos:Concept , 
     owl:objectproperty ;
 skos:definition "A related resource that references, cites, or otherwise points to the described resource."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 owl:inverseOf <http://purl.org/dc/terms/references> ;
 skos:prefLabel "Is Referenced By"@en  .
 
 <http://purl.org/dc/terms/requires> a skos:Concept , 
     owl:objectproperty ;
 skos:definition "A related resource that is required by the described resource to support its function, delivery, or coherence."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 owl:inverseOf <http://purl.org/dc/terms/isRequiredBy> ;
 skos:prefLabel "Requires"@en  .
 
 <http://purl.org/dc/terms/isRequiredBy> a skos:Concept , 
     owl:objectproperty ;
 skos:definition "A related resource that requires the described resource to support its function, delivery, or coherence."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 owl:inverseOf <http://purl.org/dc/terms/requires> ;
 skos:prefLabel "Is Required By"@en  .
 
 <https://www.w3.org/TR/prov-o/#wasDerivedFrom> a skos:Concept , 
     owl:objectproperty ;
 skos:definition "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
-owl:inverseOf natofrel:hadDerivation ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
+owl:inverseOf datrel:hadDerivation ;
 skos:prefLabel "Was Derived From"@en  .
 
 #Inverse term hadDerivation does not exist in PROV - does this below create in vocprez?
-natofrel:hadDerivation a skos:Concept , 
+datrel:hadDerivation a skos:Concept , 
     owl:objectproperty ;
 skos:definition "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 owl:inverseOf <https://www.w3.org/TR/prov-o/#wasDerivedFrom> ;
 dct:source <https://www.w3.org/TR/prov-o/#inverse-names-table> ;
 skos:prefLabel "Was Derivation of"@en  .
@@ -166,25 +166,25 @@ skos:prefLabel "Was Derivation of"@en  .
 <https://www.w3.org/TR/prov-o/#wasInfluencedBy> a skos:Concept , 
     owl:objectproperty ;
 skos:definition "Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 owl:inverseOf prov:influenced ;
 skos:prefLabel "Was Influenced By"@en  .
 
 <https://www.w3.org/TR/prov-o/#Influenced> a skos:Concept , 
     owl:objectproperty ;
 skos:definition "Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 owl:inverseOf <https://www.w3.org/TR/prov-o/#wasInfluencedBy> ;
 skos:prefLabel "Influenced"@en  .
 
 #Inverse term was quoted As does not exist in PROV - does this below create in vocprez?
-natofrel:quotedAs  a skos:Concept , 
+datrel:quotedAs  a skos:Concept , 
     owl:objectproperty ;
 skos:definition "A quotation is the repeat of (some or all of) an entity, such as text or image, by someone who may or may not be its original author. Quotation is a particular case of derivation."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 dct:source <https://www.w3.org/TR/prov-o/#inverse-names-table> ;
 owl:inverseOf <https://www.w3.org/TR/prov-o/#wasQuotedFrom> ;
 skos:prefLabel "Quoted As"@en  .
@@ -192,24 +192,24 @@ skos:prefLabel "Quoted As"@en  .
 <https://www.w3.org/TR/prov-o/#wasQuotedFrom>  a skos:Concept , 
     owl:objectproperty ;
 skos:definition "A quotation is the repeat of (some or all of) an entity, such as text or image, by someone who may or may not be its original author. Quotation is a particular case of derivation."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
-owl:inverseOf natofrel:quotedAs ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
+owl:inverseOf datrel:quotedAs ;
 skos:prefLabel "Quoted From"@en  .
 
 <https://www.w3.org/TR/prov-o/#wasRevisionOf>  a skos:Concept , 
     owl:objectproperty ;
 skos:definition "A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. Revision is a particular case of derivation."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
-owl:inverseOf natofrel:hadRevision ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
+owl:inverseOf datrel:hadRevision ;
 skos:prefLabel "Was Revison Of"@en  .
 
-natofrel:hadRevision  a skos:Concept , 
+datrel:hadRevision  a skos:Concept , 
     owl:objectproperty ;
 skos:definition "A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. Revision is a particular case of derivation."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 owl:inverseOf <https://www.w3.org/TR/prov-o/#wasRevisionOf> ;
 dct:source <https://www.w3.org/TR/prov-o/#inverse-names-table> ;
 skos:prefLabel "Had Revison"@en .
@@ -217,8 +217,8 @@ skos:prefLabel "Had Revison"@en .
 <https://www.w3.org/TR/prov-o/#alternateOf> a skos:Concept , 
     owl:objectproperty ;
 skos:definition "Two alternate entities present aspects of the same thing. These aspects may be the same or different, and the alternate entities may or may not overlap in time."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 owl:inverseOf prov:alternateOf ;  
 skos:editorialNote "alternateOf is inversed to the same term as defined in PROV-O, alternates go will go either way."@en ;
 skos:prefLabel "Is Alternate Of"@en  .
@@ -226,16 +226,17 @@ skos:prefLabel "Is Alternate Of"@en  .
 <https://www.w3.org/TR/prov-o/#specializationOf> a skos:Concept , 
     owl:objectproperty ;
 skos:definition "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity."@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
-owl:inverseOf natofrel:generalisationOf ;  
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
+owl:inverseOf datrel:generalisationOf ;  
 skos:prefLabel "Is Specialization Of"@en  .
 
-natofrel:generalizationOf a skos:Concept , 
+datrel:generalizationOf a skos:Concept , 
     owl:objectproperty ;
 skos:definition "Inverse of Specialization Of"@en ;
-skos:topConceptOf <http://linked.data.gov.au/def/nature-of-relationship> ;  
-skos:inScheme <http://linked.data.gov.au/def/nature-of-relationship> ;
+skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationship> ;  
+skos:inScheme <http://linked.data.gov.au/def/dataset-relationship> ;
 owl:inverseOf <https://www.w3.org/TR/prov-o/#specializationOf> ; 
 dct:source <https://www.w3.org/TR/prov-o/#inverse-names-table> ; 
 skos:prefLabel "Is Generalization Of"@en  .
+
