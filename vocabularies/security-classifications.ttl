@@ -10,7 +10,6 @@
  @prefix sdo: <http://www.schema.org/> .
  @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-
 <http://linked.data.gov.au/def/qg-security-classifications> a owl:Ontology , skos:ConceptScheme ;
 dct:created "2020-11-11"^^xsd:date ;
 dct:creator <http://linked.data.gov.au/def/gsq-alias/des> ;
@@ -21,7 +20,7 @@ skos:definition "This is a vocabulary collection used by the DES data catalogue 
 skos:prefLabel "QG Information Security Classifications"@en ;
 rdfs:label   "Qld Gov Information Security Classification"@en ;
 skos:hasTopConcept 
-    qgiscf:official , 
+    qgiscf:official ,
     qgiscf:sensitive  ,
     qgiscf:protected .
 
@@ -36,6 +35,14 @@ qgiscf:official a skos:Concept ;
  skos:notation "off" ;
  rdfs:label "OFFICIAL"@en ;
  skos:prefLabel "OFFICIAL"@en  .
+
+qgiscf:official-public a skos:Concept ; 
+ skos:broader qgiscf:official ;
+ skos:definition "As per OFFICIAL with the Dissemination Limiting Marking (DLM) applied to indicates the information is publically available and may be accessed by or released to the public."@en ;
+ skos:inScheme <http://linked.data.gov.au/def/qg-security-classifications> ;
+ skos:notation "off" ;
+ rdfs:label "OFFICIAL-PUBLIC"@en ;
+ skos:prefLabel "OFFICIAL-PUBLIC"@en  .
 
 qgiscf:sensitive a skos:Concept ;  
  skos:topConceptOf <http://linked.data.gov.au/def/qg-security-classifications> ; 
@@ -56,9 +63,9 @@ qgiscf:protected a skos:Concept ;
 qgiscf:qgiscf a skos:Collection  ;
  skos:prefLabel "QGISCF"@en ;
  rdfs:label "Qld Gov Information Security Classification"@en ;
- skos:definition "Collection for the QGISCF vocab for the standard terms in the framework. "@en ;
+ skos:definition "Collection for the QGISCF vocab for the standard terms in the framework."@en ;
  skos:member 
     qgiscf:official , 
+    qgiscf:official-public ,
     qgiscf:sensitive  ,
     qgiscf:protected .
-    
