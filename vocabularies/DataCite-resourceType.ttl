@@ -4,177 +4,193 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct:   <http://purl.org/dc/terms/> .
-@prefix reg:   <http://purl.org/linked-data/registry#> .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Sound>
+<http://linked.data.gov.au/def/resource-type/Sound>
         a                skos:Concept ;
         skos:prefLabel   "Sound"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Sound> ;
         dct:description  "A resource primarily intended to be heard."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Sound" ;
+        skos:notation     "Sound" ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.7282/T3J67F05> ;
         skos:scopeNote   "Audio recording. Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.7282/T3J67F05"@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Workflow>
+<http://linked.data.gov.au/def/resource-type/Workflow>
         a                skos:Concept ;
         skos:prefLabel   "Workflow"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Workflow> ;;
         dct:description  "A structured series of steps which can be executed to produce a final outcome, allowing users a means to specify and enact their  work in a more reproducible manner.\n"@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Workflow" ;
+        skos:notation     "Workflow" ;
         skos:scopeNote   "Computational workflows involving sequential operations made on data by wrapped software and may be specified in a format belonging to a workflow management system, such as Taverna (http://www.taverna.org.uk/).An education module on workflows prepared by DataONE is available at http://www.dataone.org/sites/all/documents/L10_AnalysisWorkflows.pptx"@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Model>
+<http://linked.data.gov.au/def/resource-type/Model>
         a                skos:Concept ;
         skos:prefLabel   "Model"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Model> ;
         dct:description  "An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects, phenomena, or physical processes."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Model" ;
+        skos:notation     "Model" ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.5285/4D866CD2-C907-4CE2-B070-084CA9779DC2> ;
         skos:scopeNote   "Modelled descriptions of, for example, different aspects of languages or a molecular biology reaction chain. Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.5285/4D866CD2-C907-4CE2-B070-084CA9779DC2"@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType>
-        # a                reg:Register , ldp:Container ;
+<http://linked.data.gov.au/def/resource-type>
         a  owl:Ontology, skos:ConceptScheme ;
         skos:prefLabel   "DataCite v4.1 resource types"@en ;
-        rdfs:member      <http://registry.it.csiro.au/def/datacite/resourceType/Image> , <http://registry.it.csiro.au/def/datacite/resourceType/DataPaper> , <http://registry.it.csiro.au/def/datacite/resourceType/Text> , <http://registry.it.csiro.au/def/datacite/resourceType/Software> , <http://registry.it.csiro.au/def/datacite/resourceType/Workflow> , <http://registry.it.csiro.au/def/datacite/resourceType/Dataset> , <http://registry.it.csiro.au/def/datacite/resourceType/Model> , <http://registry.it.csiro.au/def/datacite/resourceType/InteractiveResource> , <http://registry.it.csiro.au/def/datacite/resourceType/Sound> , <http://registry.it.csiro.au/def/datacite/resourceType/PhysicalObject> , <http://registry.it.csiro.au/def/datacite/resourceType/Event> , <http://registry.it.csiro.au/def/datacite/resourceType/Collection> , <http://registry.it.csiro.au/def/datacite/resourceType/Audiovisual> , <http://registry.it.csiro.au/def/datacite/resourceType/Other> , <http://registry.it.csiro.au/def/datacite/resourceType/Service> ;
-        skos:hasTopConcept      <http://registry.it.csiro.au/def/datacite/resourceType/Image> , <http://registry.it.csiro.au/def/datacite/resourceType/DataPaper> , <http://registry.it.csiro.au/def/datacite/resourceType/Text> , <http://registry.it.csiro.au/def/datacite/resourceType/Software> , <http://registry.it.csiro.au/def/datacite/resourceType/Workflow> , <http://registry.it.csiro.au/def/datacite/resourceType/Dataset> , <http://registry.it.csiro.au/def/datacite/resourceType/Model> , <http://registry.it.csiro.au/def/datacite/resourceType/InteractiveResource> , <http://registry.it.csiro.au/def/datacite/resourceType/Sound> , <http://registry.it.csiro.au/def/datacite/resourceType/PhysicalObject> , <http://registry.it.csiro.au/def/datacite/resourceType/Event> , <http://registry.it.csiro.au/def/datacite/resourceType/Collection> , <http://registry.it.csiro.au/def/datacite/resourceType/Audiovisual> , <http://registry.it.csiro.au/def/datacite/resourceType/Other> , <http://registry.it.csiro.au/def/datacite/resourceType/Service> ;
+        rdfs:member      <http://linked.data.gov.au/def/resource-type/Image> , <http://linked.data.gov.au/def/resource-type/DataPaper> , <http://linked.data.gov.au/def/resource-type/Text> , <http://linked.data.gov.au/def/resource-type/Software> , <http://linked.data.gov.au/def/resource-type/Workflow> , <http://linked.data.gov.au/def/resource-type/Dataset> , <http://linked.data.gov.au/def/resource-type/Model> , <http://linked.data.gov.au/def/resource-type/InteractiveResource> , <http://linked.data.gov.au/def/resource-type/Sound> , <http://linked.data.gov.au/def/resource-type/PhysicalObject> , <http://linked.data.gov.au/def/resource-type/Event> , <http://linked.data.gov.au/def/resource-type/Collection> , <http://linked.data.gov.au/def/resource-type/Audiovisual> , <http://linked.data.gov.au/def/resource-type/Other> , <http://linked.data.gov.au/def/resource-type/Service> ;
+        skos:hasTopConcept      <http://linked.data.gov.au/def/resource-type/Image> , <http://linked.data.gov.au/def/resource-type/DataPaper> , <http://linked.data.gov.au/def/resource-type/Text> , <http://linked.data.gov.au/def/resource-type/Software> , <http://linked.data.gov.au/def/resource-type/Workflow> , <http://linked.data.gov.au/def/resource-type/Dataset> , <http://linked.data.gov.au/def/resource-type/Model> , <http://linked.data.gov.au/def/resource-type/InteractiveResource> , <http://linked.data.gov.au/def/resource-type/Sound> , <http://linked.data.gov.au/def/resource-type/PhysicalObject> , <http://linked.data.gov.au/def/resource-type/Event> , <http://linked.data.gov.au/def/resource-type/Collection> , <http://linked.data.gov.au/def/resource-type/Audiovisual> , <http://linked.data.gov.au/def/resource-type/Other> , <http://linked.data.gov.au/def/resource-type/Service> ;
         rdfs:seeAlso     <http://doi.org/10.5438/0014> ;
         dct:description  "List of resource-types from https://schema.datacite.org/meta/kernel-4.1/include/datacite-resourceType-v4.1.xsd DataCite metadata schema"@en ;
-        dct:modified     "2018-07-19"^^xsd:date ;
+        dct:modified     "2020-12-01"^^xsd:date ;
+        dct:publisher <http://linked.data.gov.au/org/des> ;
         dct:source       "DataCite Metadata Working Group. (2017). DataCite Metadata Schema Documentation for the Publication and Citation of Research Data. Version 4.1. DataCite e.V. 10.5438/0014."@en ;
-        reg:notation     "resourceType"@en ;
+        skos:notation     "resourceType"@en ;
         owl:versionInfo  17 .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Text>
+<http://linked.data.gov.au/def/resource-type/Text>
         a                skos:Concept ;
         skos:prefLabel   "Text"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Text> ;
         dct:description  "A resource consisting primarily of words for reading."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Text"@en ;
+        skos:notation     "Text"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.5682/9786065914018> ;
         skos:scopeNote   "Grey literature, lab notes, accompanying materials. Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.5682/9786065914018\n"@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Audiovisual>
+<http://linked.data.gov.au/def/resource-type/Audiovisual>
         a                skos:Concept ;
         skos:prefLabel   "Audiovisual"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Audiovisual> ;
         dct:description  "A series of visual\nrepresentations imparting an impression of motion when shown in succession. May or may not include sound."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Audiovisual"@en ;
+        skos:notation     "Audiovisual"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.17608/K6.AUCKLAND.4620790.V1> ;
         skos:scopeNote   "May be used for films, video, etc, Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.17608/K6.AUCKLAND.4620790.V1 "@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/PhysicalObject>
+<http://linked.data.gov.au/def/resource-type/PhysicalObject>
         a                skos:Concept ;
         skos:prefLabel   "Physical Object"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/PhysicalObject> ;
         dct:description  "An inanimate, three-dimensional object or substance."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "PhysicalObject"@en ;
+        skos:notation     "PhysicalObject"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.7299/X78052RB> ;
         skos:scopeNote   "Artifacts, specimens. Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.7299/X78052RB "@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Software>
+<http://linked.data.gov.au/def/resource-type/Software>
         a                skos:Concept ;
         skos:prefLabel   "Software"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Software> ;
         dct:description  "A computer program in source code (text) or compiled form. Use this type for all software components supporting scholarly research."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Software"@en ;
+        skos:notation     "Software"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.4225/03/5954F738EE5AA> ;
         skos:scopeNote   "Software supporting scholarly research. Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.4225/03/5954F738EE5AA"@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Service>
+<http://linked.data.gov.au/def/resource-type/Service>
         a                skos:Concept ;
         skos:prefLabel   "Service"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Service> ;
         dct:description  "An organized system of apparatus, appliances, staff, etc., for supplying some function(s) required by end users."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Service"@en ;
+        skos:notation     "Service"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.21938/3I01ISNUCODNH1ZJBCVUWA> ;
         skos:scopeNote   "Data management service, or long-term preservation service. Ex.: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.21938/3I01ISNUCODNH1ZJBCVUWA\n"@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Other>
+<http://linked.data.gov.au/def/resource-type/Other>
         a                skos:Concept ;
         skos:prefLabel   "Other"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Other> ;
         dct:description  "If selected, supply a value for ResourceType."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Other"@en .
+        skos:notation     "Other"@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Dataset>
+<http://linked.data.gov.au/def/resource-type/Dataset>
         a                skos:Concept ;
         skos:prefLabel   "Dataset"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Dataset> ;
         dct:description  "Data encoded in a defined structure."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Dataset"@en ;
+        skos:notation     "Dataset"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.1594/PANGAEA.804876> ;
         skos:scopeNote   "Data file or files. Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.1594/PANGAEA.804876"@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Event>
+<http://linked.data.gov.au/def/resource-type/Event>
         a                skos:Concept ;
         skos:prefLabel   "Event"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Event> ;
         dct:description  "A non-persistent, time-based occurrence."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Event"@en ;
+        skos:notation     "Event"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.7269/P3RN35SZ> ;
         skos:scopeNote   "Descriptive information and/or content that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event such as a webcast or convention. Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.7269/P3RN35SZ "@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Collection>
+<http://linked.data.gov.au/def/resource-type/Collection>
         a                skos:Concept ;
         skos:prefLabel   "Collection"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Collection> ;
         dct:description  "An aggregation of resources, which may encompass collections of one resourceType as well as those of mixed types. A collection is\ndescribed as a group; its parts may also be separately described."@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Collection"@en ;
+        skos:notation     "Collection"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.5284/1001038> ;
         skos:scopeNote   "A collection of samples, or various files making up a report.\nEx: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.5284/1001038\n"@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/InteractiveResource>
+<http://linked.data.gov.au/def/resource-type/InteractiveResource>
         a                skos:Concept ;
         skos:prefLabel   "Interactive Resource"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/InteractiveResource> ;
         dct:description  "A resource requiring interaction from the user to be understood, executed, or experienced"@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "InteractiveResource"@en ;
+        skos:notation     "InteractiveResource"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.7269/P3TB14TR> ;
         skos:scopeNote   "Training modules, files that require use of a viewer (e.g., Flash), or query/response portals. Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.7269/P3TB14TR "@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/Image>
+<http://linked.data.gov.au/def/resource-type/Image>
         a                skos:Concept ;
         skos:prefLabel   "Image"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/Image> ;
         dct:description  "A visual representation other than text.\n"@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "Image"@en ;
+        skos:notation     "Image"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.6083/M4QN65C5> ;
         skos:scopeNote   "Digitised or born digital images, drawings or photographs. Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.6083/M4QN65C5"@en .
 
-<http://registry.it.csiro.au/def/datacite/resourceType/DataPaper>
+<http://linked.data.gov.au/def/resource-type/DataPaper>
         a                skos:Concept ;
         skos:prefLabel   "Data Paper"@en ;
-        skos:inScheme    <http://registry.it.csiro.au/def/datacite/resourceType> ;
-        skos:topConceptOf    <http://registry.it.csiro.au/def/datacite/resourceType> ;
+        skos:inScheme    <http://linked.data.gov.au/def/resource-type> ;
+        skos:topConceptOf    <http://linked.data.gov.au/def/resource-type> ;
+        skos:exactMatch <http://registry.it.csiro.au/def/datacite/resourceType/DataPaper> ;
         dct:description  "A factual and objective publication with a focused intent to identify and describe specific data, sets of data, or data collections to facilitate discoverability. "@en ;
         dct:source       <https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf> ;
-        reg:notation     "DataPaper"@en ;
+        skos:notation     "DataPaper"@en ;
         skos:example     <https://data.datacite.org/application/vnd.datacite.datacite+xml/10.15470/5a5kni> ;
         skos:scopeNote   "A data paper describes data provenance and methodologies used in the gathering, processing, organizing, and representing the data. Ex: https://data.datacite.org/application/vnd.datacite.datacite+xml/10.15470/5a5kni"@en .
