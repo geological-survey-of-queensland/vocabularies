@@ -1,0 +1,189 @@
+@prefix qgorg: <https://linked.data.gov.au/qg-agent/> .
+@prefix qgsite: <https://linked.data.gov.au/qg-sites/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+ 
+@base <https://linked.data.gov.au/qg-agent> .
+
+<https://linked.data.gov.au/qg-agent> rdf:type owl:Ontology , skos:ConceptScheme ;
+      owl:imports <http://www.w3.org/2006/vcard/ns> ,
+         org: ,
+         <http://www.w3.org/ns/prov-o#> ;
+      dcterms:created "2020-05-21" ;
+      dcterms:creator <https://orcid.org/0000-0002-3884-3420> ,
+                      <https://orcid.org/0000-0003-0395-9703> ,
+                      <http://linked.data.gov.au/org/des> ;
+      dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+      dcterms:modified "2020-11-27" ;
+      dcterms:title "Queensland Governement organizations and agencies"@en ;
+      skos:prefLabel "QG Organisations"@en ;
+      rdfs:comment "RDF graph of Queensland Government organisations (departments) which may include some of the departmental divisions, used as an initial starting point for the DES Data Catalogue. Not a full organisational hierarchy but limited to higher levels which are useful to identify."@en .
+
+
+###  https://linked.data.gov.au/qg-agent/DES
+qgorg:DES rdf:type owl:NamedIndividual ,
+              org:FormalOrganization ,
+              prov:Organization ,
+              skos:Concept ;
+     org:hasPrimarySite qgsite:GeorgeSt ;
+     org:hasSite qgsite:Ecosciences ;
+     rdfs:label "Department of Environment and Science"@en ;
+     skos:prefLabel "Department of Environment and Science"@en ;
+     skos:altLabel "DES"@en ;
+     skos:exactmatch <http://linked.data.gov.au/org/des> .
+
+
+###  https://linked.data.gov.au/qg-agent/10157
+qgorg:10157 rdf:type owl:NamedIndividual ,
+                    org:OrganizationalUnit 
+                    skos:Concept ;
+           org:hasSite qgsite:Ecosciences ;
+           org:unitOf qgorg:DES ;
+           skos:broader qgorg:DES ;
+           rdfs:label "Science and Technology"@en ,
+                      "Science and Technology Division"@en ;
+           skos:prefLabel "Science and Technology"@en .
+
+
+###  https://linked.data.gov.au/qg-agent/11338
+qgorg:11338 rdf:type owl:NamedIndividual ,
+                    org:OrganizationalUnit ,
+                    skos:Concept ;
+           org:hasPrimarySite qgsite:Ecosciences ;
+           org:hasSite qgsite:Ecosciences ;
+           org:unitOf qgorg:10157 ;
+           skos:broader qgorg:10157 ;
+           rdfs:label "Science Delivery & Knowledge"@en ,
+                      "Science Delivery and Knowledge"@en ;
+           skos:prefLabel "Science Delivery & Knowledge"@en .
+
+
+###  https://linked.data.gov.au/qg-agent/11339
+qgorg:11339 rdf:type owl:NamedIndividual ,
+                    org:OrganizationalUnit  ,
+                    skos:Concept ;
+           org:hasSite qgsite:Ecosciences ;
+           org:unitOf qgorg:10157 ;
+           skos:broader qgorg:10157 ;
+           rdfs:label "Science Strategy & Partnerships"@en ;
+           skos:prefLabel "Science Strategy & Partnerships"@en .
+
+
+###  https://linked.data.gov.au/qg-agent/DNRME
+qgorg:DNRME rdf:type owl:NamedIndividual ,
+                org:FormalOrganization ,
+                prov:Organization ,
+                skos:Concept ;
+    rdfs:label "Department of Natural Resources, Mines and Energy"@en ;
+    skos:prefLabel "Department of Natural Resources, Mines and Energy"@en ;
+    skos:altLabel "DNRME"@en .
+
+###  https://linked.data.gov.au/qg-agent/DOR
+qgorg:DOR rdf:type owl:NamedIndividual ,
+                org:FormalOrganization ,
+                prov:Organization  ,
+                skos:Concept ;
+    rdfs:label "Department of  Resources"@en ;
+    skos:prefLabel "Department of Resources"@en ;
+    prov:wasDerivedFrom qgorg:DNRME .
+
+
+###  https://linked.data.gov.au/qg-sites
+<https://linked.data.gov.au/qg-sites>  rdf:type owl:Ontology, skos:ConceptScheme ;
+        owl:imports <http://www.w3.org/2006/vcard/ns> ,
+            org: ,
+            <http://www.w3.org/ns/prov-o#> ;
+        dcterms:created "2020-05-21" ;
+        dcterms:creator <https://orcid.org/0000-0002-3884-3420> ,
+                        <https://orcid.org/0000-0003-0395-9703> ,
+                        <http://linked.data.gov.au/org/des> ;
+        dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+        dcterms:modified "2020-11-27" ;
+        dcterms:title "Queensland Government office locations"@en ;
+        skos:prefLabel "QG Offices"@en ;
+        rdfs:comment "RDF graph of Queensland Government locations, used as an initial starting point for the DES Data Catalogue. The selected office locations may be used as part of contact details for the catalogue, not all locations have public access or information facilities."@en .
+
+
+###  https://linked.data.gov.au/qg-sites/Ecosciences
+qgsite:Ecosciences rdf:type owl:NamedIndividual ,
+                      org:Site  ,
+                      skos:Concept ;
+             org:siteAddress <http://linked.data.gov.au/dataset/gnaf-2016-05/address/GAQLD163292916> ,
+                             [ rdf:type vcard:Address ;
+                               vcard:country-name "Australia" ;
+                               vcard:locality "Dutton Park" ;
+                               vcard:postal-code "4102" ;
+                               vcard:region "QLD" ;
+                               vcard:street-address "41 Boggo Road"
+                             ] ;
+             rdfs:label "Ecosciences Precinct"@en ;
+             skos:prefLabel "Ecosciences Precinct"@en ;
+
+
+###  https://linked.data.gov.au/qg-sites/400GeorgeSt
+qgsite:400GeorgeSt rdf:type owl:NamedIndividual ,
+                   org:Site  ,
+              skos:Concept ;
+          org:siteAddress <http://linked.data.gov.au/dataset/gnaf-2016-05/address/GAQLD163137756> ,
+                          [ rdf:type vcard:Address ;
+                            vcard:country-name "Australia" ;
+                            vcard:locality "Brisbane" ;
+                            vcard:postal-code "4001" ;
+                            vcard:region "QLD" ;
+                            vcard:street-address "400 George Street"
+                          ] ;
+          rdfs:label "400 George Street, Brisbane"@en ;
+          skos:prefLabel "400 George Street, Brisbane"@en .
+
+
+###  https://linked.data.gov.au/qg-agent/Qld-Herb
+qgsite:Herb rdf:type owl:NamedIndividual ,
+               org:Site  ,
+              skos:Concept ;
+      rdfs:label "Queensland Herbarium (Toowong)"@en .
+      skos:prefLabel "Queensland Herbarium (Toowong)"@en .
+
+###  https://linked.data.gov.au/qg-agent/HydraulicsLab
+qgsite:HydraulicsLab rdf:type owl:NamedIndividual ,
+                        org:Site  ,
+              skos:Concept ;
+               rdfs:label "Queensland Government Hydraulics Lab - Deagon"@en ;
+               skos:prefLabel "Queensland Government Hydraulics Lab - Deagon"@en .
+
+###  https://linked.data.gov.au/qg-agent/Toowoomba_Tor_St
+qgsite:Toowoomba_Tor_St rdf:type owl:NamedIndividual ,
+                           org:Site  ,
+              skos:Concept ;
+                  rdfs:label "Toowoomba Tor Street Centre"@en ;
+                  skos:prefLabel "Toowoomba Tor Street Centre"@en .
+
+###  https://linked.data.gov.au/qg-agent/james_cook_university_cairns
+qgsite:james_cook_university_cairns rdf:type owl:NamedIndividual ,
+                                       org:Site  ,
+              skos:Concept ;
+                              rdfs:label "James Cook University (Cairns)"@en ;
+                              skos:prefLabel "James Cook University (Cairns)"@en .
+
+###  https://linked.data.gov.au/qg-agent/mareeba_peters
+qgsite:mareeba_office rdf:type owl:NamedIndividual ,
+                         org:Site  ,
+              skos:Concept ;
+                rdfs:label "Mareeba Office (Peters Street)"@en ;
+                skos:prefLabel "Mareeba Office"@en .
+
+###  https://linked.data.gov.au/qg-agent/Bundaberg_enterprise
+qgsite:Bundaberg_enterprise rdf:type owl:NamedIndividual ,
+                    org:Site  ,
+              skos:Concept ;
+           rdfs:label "Enterprise Street, Bundaberg"@en ;
+           skos:prefLabel "Enterprise Street, Bundaberg"@en .
