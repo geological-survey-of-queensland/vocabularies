@@ -40,6 +40,7 @@ qgorg:DES rdf:type owl:NamedIndividual ,
      rdfs:label "Department of Environment and Science"@en ;
      skos:prefLabel "Department of Environment and Science"@en ;
      skos:altLabel "DES"@en ;
+     skos:topConceptOf <https://linked.data.gov.au/qg-agent>: ;
      skos:exactMatch <http://linked.data.gov.au/org/des> .
 
 
@@ -86,6 +87,7 @@ qgorg:DNRME rdf:type owl:NamedIndividual ,
                 skos:Concept ;
     rdfs:label "Department of Natural Resources, Mines and Energy"@en ;
     skos:prefLabel "Department of Natural Resources, Mines and Energy"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/qg-agent>: ;
     skos:altLabel "DNRME"@en .
 
 ###  https://linked.data.gov.au/qg-agent/DOR
@@ -95,6 +97,7 @@ qgorg:DOR rdf:type owl:NamedIndividual ,
                 skos:Concept ;
     rdfs:label "Department of  Resources"@en ;
     skos:prefLabel "Department of Resources"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/qg-agent>: ;
     prov:wasDerivedFrom qgorg:DNRME .
 
 
@@ -125,8 +128,9 @@ qgsite:Ecosciences rdf:type owl:NamedIndividual ,
                                vcard:postal-code "4102" ;
                                vcard:region "QLD" ;
                                vcard:street-address "41 Boggo Road"
-                             ] ;
-             rdfs:label "Ecosciences Precinct"@en ;
+                             ] ;        
+     skos:topConceptOf <https://linked.data.gov.au/qg-sites>: ;
+     rdfs:label "Ecosciences Precinct"@en ;
              skos:prefLabel "Ecosciences Precinct"@en .
 
 
@@ -141,7 +145,8 @@ qgsite:400GeorgeSt rdf:type owl:NamedIndividual ,
                             vcard:postal-code "4001" ;
                             vcard:region "QLD" ;
                             vcard:street-address "400 George Street"
-                          ] ;
+                          ] ;        
+     skos:topConceptOf <https://linked.data.gov.au/qg-sites>: ;
           rdfs:label "400 George Street, Brisbane"@en ;
           skos:prefLabel "400 George Street, Brisbane"@en .
 
@@ -149,41 +154,47 @@ qgsite:400GeorgeSt rdf:type owl:NamedIndividual ,
 ###  https://linked.data.gov.au/qg-agent/Qld_Herb
 qgsite:Qld_Herb rdf:type owl:NamedIndividual ,
                org:Site  ,
-              skos:Concept ;
+              skos:Concept ;        
+     skos:topConceptOf <https://linked.data.gov.au/qg-sites>: ;
       rdfs:label "Queensland Herbarium - Toowong"@en ;
       skos:prefLabel "Queensland Herbarium - Toowong"@en .
 
 ###  https://linked.data.gov.au/qg-agent/HydraulicsLab
 qgsite:HydraulicsLab rdf:type owl:NamedIndividual ,
                         org:Site  ,
-              skos:Concept ;
+              skos:Concept ;        
+     skos:topConceptOf <https://linked.data.gov.au/qg-sites>: ;
                rdfs:label "Queensland Government Hydraulics Lab - Deagon"@en ;
                skos:prefLabel "Queensland Government Hydraulics Lab - Deagon"@en .
 
 ###  https://linked.data.gov.au/qg-agent/Toowoomba_Tor_St
 qgsite:Toowoomba_Tor_St rdf:type owl:NamedIndividual ,
                            org:Site  ,
-              skos:Concept ;
+              skos:Concept ;        
+     skos:topConceptOf <https://linked.data.gov.au/qg-sites>: ;
                   rdfs:label "Toowoomba Tor Street Centre"@en ;
                   skos:prefLabel "Toowoomba Tor Street Centre"@en .
 
 ###  https://linked.data.gov.au/qg-agent/james_cook_university_cairns
 qgsite:james_cook_university_cairns rdf:type owl:NamedIndividual ,
                                        org:Site  ,
-              skos:Concept ;
+              skos:Concept ;        
+     skos:topConceptOf <https://linked.data.gov.au/qg-sites>: ;
                               rdfs:label "James Cook University (Cairns)"@en ;
                               skos:prefLabel "James Cook University (Cairns)"@en .
 
 ###  https://linked.data.gov.au/qg-agent/mareeba_peters
 qgsite:mareeba_office rdf:type owl:NamedIndividual ,
                          org:Site  ,
-              skos:Concept ;
+              skos:Concept ;        
+     skos:topConceptOf <https://linked.data.gov.au/qg-sites>: ;
                 rdfs:label "Mareeba Office (Peters Street)"@en ;
                 skos:prefLabel "Mareeba Office"@en .
 
 ###  https://linked.data.gov.au/qg-agent/Bundaberg_enterprise
 qgsite:Bundaberg_enterprise rdf:type owl:NamedIndividual ,
                     org:Site  ,
-              skos:Concept ;
+              skos:Concept ;        
+     skos:topConceptOf <https://linked.data.gov.au/qg-sites>: ;
            rdfs:label "Enterprise Street, Bundaberg"@en ;
            skos:prefLabel "Enterprise Street, Bundaberg"@en .
