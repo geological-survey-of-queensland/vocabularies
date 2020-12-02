@@ -1,16 +1,17 @@
+@prefix licdoc: <http://linked.data.gov.au/def/licence-document/>
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix reg:   <http://purl.org/linked-data/registry#> .
 @prefix dct:   <http://purl.org/dc/terms/> .
 @prefix ldp:   <http://www.w3.org/ns/ldp#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rr-org: <http://registry.it.csiro.au/structure/org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://registry.it.csiro.au/licence/cc-by-nd-4.0>
+<http://linked.data.gov.au/def/licence-document/cc-by-nd-4.0>
         a                     reg:Delegated , reg:NamespaceForward , skos:Concept ;
-        skos:inScheme <http://registry.it.csiro.au/licence> ;
-        skos:topConceptOf <http://registry.it.csiro.au/licence> ;
+        skos:inScheme <http://linked.data.gov.au/def/licence-document> ;
+        skos:topConceptOf <http://linked.data.gov.au/def/licence-document> ;
+        skos:exactMatch <http://registry.it.csiro.au/licence/cc-by-nd-4.0> ;
         rdfs:label            "Creative Commons Attribution-NoDerivatives 4.0 International"@en ;
         skos:prefLabel        "Creative Commons Attribution-NoDerivatives 4.0 International"@en ;
         dct:description       "You are free to: Share - copy and redistribute the material in any medium or format for any purpose, even commercially. The licensor cannot revoke these freedoms as long as you follow the licence terms. Under the following terms: Attribution - You must give appropriate credit, provide a link to the licence, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. NoDerivatives - If you remix, transform, or build upon the material, you may not distribute the modified material. No additional restrictions - You may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits Notices - You do not have to comply with the licence for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The licence may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material."@en ;
@@ -18,37 +19,35 @@
         reg:delegationTarget  <https://creativecommons.org/licenses/by-nd/4.0/> ;
         reg:forwardingCode    "307" .
 
-<http://registry.it.csiro.au/licence/cc-by-4.0>
+<http://linked.data.gov.au/def/licence-document/cc-by-4.0>
         a                     reg:Delegated , reg:NamespaceForward , skos:Concept ;
-        skos:inScheme <http://registry.it.csiro.au/licence> ;
-        skos:topConceptOf <http://registry.it.csiro.au/licence> ;
+        skos:inScheme <http://linked.data.gov.au/def/licence-document> ;
+        skos:topConceptOf <http://linked.data.gov.au/def/licence-document> ;
+        skos:exactMatch <http://registry.it.csiro.au/licence/cc-by-4.0> ;
         skos:prefLabel        "Creative Commons Attribution 4.0 International"@en ;
         rdfs:label            "Creative Commons Attribution 4.0 International"@en ;
         dct:description       "You are free to: Share - copy and redistribute the material in any medium or format Adapt - remix, transform, and build upon the material for any purpose, even commercially. The licensor cannot revoke these freedoms as long as you follow the licence terms. Under the following terms: Attribution - You must give appropriate credit, provide a link to the licence, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions - You may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits. Notices - You do not have to comply with the licence for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The licence may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material."@en ;
         reg:delegationTarget  <https://creativecommons.org/licenses/by/4.0/> ;
         reg:forwardingCode    "307" .
 
-<http://registry.it.csiro.au/licence>
+<http://linked.data.gov.au/def/licence-document>
         a                      ldp:Container , reg:Registerd , skos:ConceptScheme ;
         skos:prefLabel        "Licences"@en ;
         rdfs:label            "Licences"@en ;
-        rdfs:member           <http://registry.it.csiro.au/licence/cc-by-4.0> , 
-                                        <http://registry.it.csiro.au/licence/cc-by-nd-4.0> ,
-                                        <http://registry.it.csiro.au/licence/cc-by-sa-4.0> ;
-        skos:hasTopConcept    <http://registry.it.csiro.au/licence/cc-by-4.0> ,
-                                         <http://registry.it.csiro.au/licence/cc-by-nd-4.0> ,
-                                         <http://registry.it.csiro.au/licence/cc-by-sa-4.0> ;
         dct:description        "Licences for use of software, data, documents and other resources"@en ;
         skos:definition        "Licences for use of software, data, documents and other resources"@en ;
-        dct:modified           "2015-08-10T10:18:29.275Z"^^xsd:dateTime ;
-        reg:owner              rr-org:csiro ;
+        dct:created "2020-12-02"^^xsd:date ;
+        dct:creator <http://linked.data.gov.au/org/des> ;
+        dct:modified "2020-12-02"^^xsd:date ;
+        dct:publisher <http://linked.data.gov.au/org/gsq> ;
         owl:versionInfo        1 ;
         ldp:hasMemberRelation  rdfs:member .
 
-<http://registry.it.csiro.au/licence/cc-by-sa-4.0>
+<http://linked.data.gov.au/def/licence-document/cc-by-sa-4.0>
         a                     reg:Delegated , reg:NamespaceForward , skos:Concept ;
-        skos:inScheme <http://registry.it.csiro.au/licence> ;
-        skos:topConceptOf <http://registry.it.csiro.au/licence> ;
+        skos:inScheme <http://linked.data.gov.au/def/licence-document> ;
+        skos:topConceptOf <http://linked.data.gov.au/def/licence-document> ;
+        skos:exactMatch <http://registry.it.csiro.au/licence/cc-by-sa-4.0> ;
         skos:prefLabel        "Creative Commons ShareAlike 4.0 International"@en ;
         rdfs:label            "Creative Commons ShareAlike 4.0 International"@en ;
         dct:description       "You are free to: Share - copy and redistribute the material in any medium or format Adapt - remix, transform, and build upon the material for any purpose, even commercially. The licensor cannot revoke these freedoms as long as you follow the licence terms. Under the following terms: Attribution - You must give appropriate credit, provide a link to the licence, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. ShareAlike - If you remix, transform, or build upon the material, you must distribute your contributions under the same licence as the original. No additional restrictions - You may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits. Notices - You do not have to comply with the licence for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The licence may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material."@en ;
