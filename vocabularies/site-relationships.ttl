@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/site-relationships> a owl:Ontology , skos:ConceptScheme ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2020-01-21"^^xsd:date ;
-    dcterms:modified "2020-11-02"^^xsd:date ;
+    dcterms:modified "2020-12-03"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The relationships between sites both topological and functional."@en ;
@@ -26,6 +26,8 @@
         strel:observation,
         strel:intersects,
         strel:parent,
+        strel:permits,
+        strel:has-permit,
         strel:re-entry,
         strel:redrill,
         strel:supersedes,
@@ -112,6 +114,19 @@ strel:parent a skos:Concept ;
     skos:definition "The parent wellbore that the subject wellbore originated from."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Has parent"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:permits a skos:Concept ;
+    skos:definition "The sites permitted to conduct activities under the license or authority issued under a legislation or regulation."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:scopeNote """This concept uses the verb 'permits'. The noun 'permit' is a GeoAdmin Feature concept defined at http://linked.data.gov.au/def/geoadminfeatures/permit"""@en ;
+    skos:prefLabel "Permits"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:has-permit a skos:Concept ;
+    skos:definition "Activities conducted at a site may be governed by a permit, license or authority issued under legislation or regulation. This concept is the inverse of Permits."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Has permit"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:re-entry a skos:Concept ;
