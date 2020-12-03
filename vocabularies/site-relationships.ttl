@@ -1,55 +1,54 @@
+@prefix strel: <http://linked.data.gov.au/def/site-relationships/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix strel: <http://linked.data.gov.au/def/site-relationships/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://linked.data.gov.au/def/site-relationships> a owl:Ontology , skos:ConceptScheme ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2020-01-21"^^xsd:date ;
-    dcterms:modified "2020-12-03"^^xsd:date ;
+    dcterms:modified "2020-12-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The relationships between sites both topological and functional."@en ;
     skos:hasTopConcept strel:above,
         strel:below,
-        strel:borehole-intersect,
+        strel:boreholeIntersect,
         strel:contains,
         strel:covers,
         strel:crosses,
         strel:disjoint,
         strel:equals,
-        strel:injection-extraction-pair,
+        strel:injectionExtractionPair,
         strel:touches,
         strel:observation,
         strel:intersects,
         strel:parent,
         strel:permits,
-        strel:has-permit,
-        strel:re-entry,
+        strel:hasPermit,
+        strel:reEntry,
         strel:redrill,
         strel:supersedes,
         strel:twinned,
-        strel:well-pad ;
+        strel:wellPad ;
     skos:prefLabel "Site Relationships"@en .
 
 <http://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> ;
-.
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 strel:borehole a skos:Collection ;
     skos:definition "Relationships between associated boreholes and boreholes with other operational sites such as well pads."@en ;
-    skos:member strel:borehole-intersect,
-        strel:injection-extraction-pair,
+    skos:member strel:boreholeIntersect,
+        strel:injectionExtractionPair,
         strel:observation,
-        strel:re-entry,
+        strel:reEntry,
         strel:redrill,
         strel:twinned,
-        strel:well-pad ;
+        strel:wellPad ;
     skos:prefLabel "Borehole"@en .
 
 strel:interval a skos:Collection ;
@@ -91,13 +90,13 @@ strel:below a skos:Concept ;
     skos:prefLabel "Below"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
-strel:borehole-intersect a skos:Concept ;
+strel:boreholeIntersect a skos:Concept ;
     skos:definition "A well that intersects the subject well."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Borehole Intersect"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
-strel:injection-extraction-pair a skos:Concept ;
+strel:injectionExtractionPair a skos:Concept ;
     skos:definition "Wells that exist in a pair, or system, in which a well or wells inject fluids and one or more offset wells extract fluids. Such as stimulated production, enhanced geothermale etc."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Injection-Extraction Pair"@en ;
@@ -123,13 +122,13 @@ strel:permits a skos:Concept ;
     skos:prefLabel "Permits"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
-strel:has-permit a skos:Concept ;
+strel:hasPermit a skos:Concept ;
     skos:definition "Activities conducted at a site may be governed by a permit, license or authority issued under legislation or regulation. This concept is the inverse of Permits."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Has permit"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
-strel:re-entry a skos:Concept ;
+strel:reEntry a skos:Concept ;
     skos:definition "A previously abandoned well that the subject well drilled from within. A re-entry drills out or removes any abandonment plugs or equipment from the previously abandoned well."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Re-Entry"@en ;
@@ -148,7 +147,7 @@ strel:twinned a skos:Concept ;
     skos:prefLabel "Twinned"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
-strel:well-pad a skos:Concept ;
+strel:wellPad a skos:Concept ;
     skos:definition "The well pad site from which a batch of wells or bores share a single operational area at surface but drill to different sub-surface targets."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Well Pad"@en ;
