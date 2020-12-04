@@ -8,10 +8,10 @@
 
 <http://linked.data.gov.au/def/gsq-alias> a owl:Ontology,
         skos:ConceptScheme ;
-    dcterms:created "2020-03-23T16:19:50+10:00"^^xsd:dateTime ;
+    dcterms:created "2020-03-23"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-03-23T16:38:10+10:00"^^xsd:dateTime ;
+    dcterms:modified "2020-12-04"^^xsd:date ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Sources for any alternate names for features, sites, surveys, or samples catalogued by the Geological Survey of Queensland."@en ;
     skos:hasTopConcept als:colloquial,
@@ -21,6 +21,7 @@
         als:igsn,
         als:mmol,
         als:ogia,
+        als:rshq,
         als:operator,
         als:service-provider,
         als:treasury ;
@@ -80,6 +81,13 @@ als:ogia a skos:Concept ;
     skos:definition "An identifier used by the Office of Groundwater Impact Assessment."@en ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
     skos:prefLabel "QWRC"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+
+als:rshq a skos:Concept ;
+    skos:altLabel "Resources Safety and Health Queensland"@en ;
+    skos:definition "An identifier used by Resources Safety and Health Queensland."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "RSHQ"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
 als:operator a skos:Concept ;
