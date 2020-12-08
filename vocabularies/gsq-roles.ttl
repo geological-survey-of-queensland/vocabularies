@@ -13,7 +13,7 @@
 <http://linked.data.gov.au/def/gsq-roles> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-17"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-09-18"^^xsd:date ;
+    dcterms:modified "2020-12-09"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml> ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)"@en ;
@@ -30,7 +30,11 @@
         isorole:owner,
         isorole:principalInvestigator,
         isorole:processor,
-        isorole:publisher ;
+        isorole:publisher ,
+        gsqr:data-creator ,
+        gsqr:administrator ,
+        gsqr:data-librarian ,
+        gsqr:data-steward ;
     skos:prefLabel "Geological Survey of Queensland's Agent Roles"@en .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
@@ -39,18 +43,18 @@
 
 gsqr:administrator a skos:Concept ;
   a dcat:Role ;
-  rdfs:label "Data Administrator"@en ;
   skos:definition "Design, implementation and maintenance of the technology environment that supports/enables the information management lifecycle."@en ;
   skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
   skos:prefLabel "Data Administrator"@en ; 
-  skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
+  skos:related gsqr:manager .
 
 gsqr:manager a skos:Concept ;
   a dcat:Role ;
   rdfs:label "Data Manager"@en ;
   skos:definition "The Data Manager is assigned to perform activities associated with the day-to-day interpretation, management, operation and support of data."@en ;
-  skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
   skos:prefLabel "Data Manager"@en ;
+  skos:narrower gsqr:data-librarian , gsqr:data-steward , gsqr:administrator ;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
   skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
 
 gsqr:contractor a skos:Concept ;
@@ -150,6 +154,32 @@ isorole:publisher a skos:Concept ;
     skos:prefLabel "Publisher"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles>.
         
+gsqr:data-creator
+  a skos:Concept ;
+  a dcat:Role ;
+  skos:closeMatch <http://linked.data.gov.au/def/iso19115-1/RoleCode/author>, <http://linked.data.gov.au/def/iso19115-1/RoleCode/originator> ;
+  skos:definition "Responsible for creating and updating data, products and metadata and storing in an appropriate system."@en ;
+  skos:prefLabel "Data Creator"@en ;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
+
+gsqr:data-librarian
+  a skos:Concept ;
+  a dcat:Role ;
+  skos:related gsqr:manager ;
+  skos:definition "Responsible for investigating and assisting with implementation of support services relating to description, storage and sharing of research metadata and datasets. Including standards, review processes and training."@en ;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+  skos:prefLabel "Data Librarian"@en .
+
+gsqr:data-steward
+  a skos:Concept ;
+  a dcat:Role ;
+  rdfs:label "Data Steward"@en ;
+  skos:related gsqr:manager ;
+  skos:definition "Responsible for approving the quality, integrity and use of data and applying data policies, procedures and rules to safeguard data. Provides guidance and training to ensure timely and correct input of quality data."@en ;
+  skos:prefLabel "Data Steward"@en ;
+  skos:inScheme <http://linked.data.gov.au/def/gsq-roles> .
+
 gsqr:QdexReportsRoles a skos:Collection ;
     skos:definition "A collection of roles used for Agents within the Georesources Reports regime"@en ;
     skos:member gsqr:contractor,
@@ -163,12 +193,18 @@ gsqr:QdexReportsRoles a skos:Collection ;
 
 gsqr:des-roles a skos:Collection ;
     skos:definition "A collection of roles used by DES"@en ;
-# for DES to review and update with creator, editor, data librarian, data manager,
     skos:member gsqr:administrator,
         gsqr:manager,
-        gsqr:contractor,
-        iso11179:Submitter,
-        isorole:author,
+        gsqr:data-steward,
+        gsqr:data-librarian,
+        gsqr:data-creator ,
         isorole:owner,
-        isorole:publisher ;
+        isorole:publisher ,
+        isorole:user ,
+        isorole:contributor ,
+        isorole:collaborator ,
+        datac:ProjectLeader ,
+        datac:ProjectManager ,
+        datac:ProjectMember ,
+        isorole:custodian ;
     skos:prefLabel "Department of Environment and Science Roles"@en .
