@@ -11,7 +11,7 @@
     a owl:Ontology , skos:ConceptScheme ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2020-03-12"^^xsd:date ;
-    dcterms:modified "2020-03-12"^^xsd:date ;
+    dcterms:modified "2020-11-05"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     skos:definition """A Geometry Role is the function a Geometry plays in relation to the Feature it is a Geometry for where Feature and Geometry are defined by the GeoSPARQL Ontology.
     
@@ -31,7 +31,7 @@ Geometry Role is not geometry type and does not indicate sub classes of geometry
 
 grole:centroid a skos:Concept ;
     dcterms:source <https://en.wikipedia.org/wiki/Centroid> ;
-    skos:altLabel "barycenter"@en ;
+    skos:altLabel "Barycenter"@en ;
     skos:definition "The arithmetic mean position of all the Points in a Feature's Geometry, expressed as a single Point."@en ;
     skos:hiddenLabel "center of mass"@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
@@ -73,6 +73,7 @@ grole:convex-hull a skos:Concept ;
     skos:prefLabel "Convex hull"@en .
 
 grole:detailed-geometry a skos:Concept ;
+    skos:altLabel "Precise location"@en ;
     skos:definition "A Feature's Geometry in detail. It may be regular or irrigular but it does not constitute a Boundary for the Feature."@en ;
     skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
     skos:prefLabel "Detailed geometry"@en ;
