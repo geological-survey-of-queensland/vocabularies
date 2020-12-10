@@ -1,6 +1,5 @@
 @prefix qgorg: <https://linked.data.gov.au/def/qg-agent/> .
-
-@prefix qgsite: <https://linked.data.gov.au/qg-sites/> .
+@prefix qgsite: <https://linked.data.gov.au/def/qg-sites/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -17,90 +16,71 @@
 @base <https://linked.data.gov.au/def/qg-agent> .
 
 
-<https://linked.data.gov.au/qg-agent> a owl:Ontology , skos:ConceptScheme ;
-
+<https://linked.data.gov.au/def/qg-agent> a owl:Ontology , skos:ConceptScheme ;
       owl:imports <http://www.w3.org/2006/vcard/ns> ,
          org: ,
          <http://www.w3.org/ns/prov-o#> ;
       dcterms:created "2020-05-21" ;
       dcterms:creator <http://linked.data.gov.au/org/des> ;
-
-
-
-
-
       dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
       dcterms:modified "2020-12-01" ;
       dcterms:title "Queensland Government organisations and agencies"@en ;
-
       skos:prefLabel "QG Organisations"@en ;
       rdfs:comment "RDF graph of Queensland Government organisations (departments) which may include some of the departmental divisions, used as an initial starting point for the DES Data Catalogue. Not a full organisational hierarchy but limited to higher levels which are useful to identify."@en .
 
-
-qgorg:DES rdf:type owl:NamedIndividual ,
+qgorg:DES a owl:NamedIndividual ,
               org:FormalOrganization ,
               prov:Organization ,
               skos:Concept ;
-     org:hasPrimarySite qgsite:GeorgeSt ;
+     org:hasPrimarySite qgsite:400GeorgeSt ;
      org:hasSite qgsite:Ecosciences ;
      skos:prefLabel "Department of Environment and Science"@en ;
      skos:altLabel "DES"@en ;
-     skos:topConceptOf <https://linked.data.gov.au/qg-agent> ;
+     skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
      skos:exactMatch <http://linked.data.gov.au/org/des> .
 
 
-###  https://linked.data.gov.au/qg-agent/10157
-qgorg:10157 rdf:type owl:NamedIndividual ,
+qgorg:10157 a owl:NamedIndividual ,
                     org:OrganizationalUnit ,
                     skos:Concept ;
            org:hasSite qgsite:Ecosciences ;
            org:unitOf qgorg:DES ;
            skos:broader qgorg:DES ;
-           rdfs:label "Science and Technology"@en ,
-                      "Science and Technology Division"@en ;
+           skos:altLabel "Science and Technology Division"@en ;
            skos:prefLabel "Science and Technology"@en .
 
 
-###  https://linked.data.gov.au/qg-agent/11338
-qgorg:11338 rdf:type owl:NamedIndividual ,
+qgorg:11338 a owl:NamedIndividual ,
                     org:OrganizationalUnit ,
                     skos:Concept ;
            org:hasPrimarySite qgsite:Ecosciences ;
            org:hasSite qgsite:Ecosciences ;
            org:unitOf qgorg:10157 ;
            skos:broader qgorg:10157 ;
-           rdfs:label "Science Delivery & Knowledge"@en ,
-                      "Science Delivery and Knowledge"@en ;
+           skos:altLabel "Science Delivery and Knowledge"@en ;
            skos:prefLabel "Science Delivery & Knowledge"@en .
 
-
-###  https://linked.data.gov.au/qg-agent/11339
-qgorg:11339 rdf:type owl:NamedIndividual ,
+qgorg:11339 a owl:NamedIndividual ,
                     org:OrganizationalUnit  ,
                     skos:Concept ;
            org:hasSite qgsite:Ecosciences ;
            org:unitOf qgorg:10157 ;
            skos:broader qgorg:10157 ;
-           rdfs:label "Science Strategy & Partnerships"@en ;
+           skos:altLabel "Science Strategy and Partnerships"@en ;
            skos:prefLabel "Science Strategy & Partnerships"@en .
 
-
-###  https://linked.data.gov.au/qg-agent/DNRME
-qgorg:DNRME rdf:type owl:NamedIndividual ,
+qgorg:DNRME a owl:NamedIndividual ,
                 org:FormalOrganization ,
                 prov:Organization ,
                 skos:Concept ;
-    rdfs:label "Department of Natural Resources, Mines and Energy"@en ;
     skos:prefLabel "Department of Natural Resources, Mines and Energy"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/qg-agent> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
     skos:altLabel "DNRME"@en .
 
-###  https://linked.data.gov.au/qg-agent/DOR
-qgorg:DOR rdf:type owl:NamedIndividual ,
+qgorg:DOR a owl:NamedIndividual ,
                 org:FormalOrganization ,
                 prov:Organization  ,
                 skos:Concept ;
-    rdfs:label "Department of  Resources"@en ;
     skos:prefLabel "Department of Resources"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/qg-agent> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
     org:resultedFrom qgorg:DNRME .
