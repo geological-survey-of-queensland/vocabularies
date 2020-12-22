@@ -1,5 +1,5 @@
-@prefix qgorg: <https://linked.data.gov.au/def/qg-agent/> .
-@prefix qgsite: <https://linked.data.gov.au/def/qg-sites/> .
+@prefix qgorg: <http://linked.data.gov.au/def/qg-agent/> .
+@prefix qgsite: <http://linked.data.gov.au/def/qg-sites/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -16,7 +16,7 @@
 @base <https://linked.data.gov.au/def/qg-agent> .
 
 
-<https://linked.data.gov.au/def/qg-agent> a owl:Ontology , skos:ConceptScheme ;
+<http://linked.data.gov.au/def/qg-agent> a owl:Ontology , skos:ConceptScheme ;
       owl:imports <http://www.w3.org/2006/vcard/ns> ,
          org: ,
          <http://www.w3.org/ns/prov-o#> ;
@@ -44,7 +44,7 @@ qgorg:DES a owl:NamedIndividual ,
      org:hasSite qgsite:Ecosciences ;
      skos:prefLabel "Department of Environment and Science"@en ;
      skos:altLabel "DES"@en ;
-     skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+     skos:topConceptOf <http://linked.data.gov.au/def/qg-agent> ;
      skos:exactMatch <http://linked.data.gov.au/org/des> .
 
 
@@ -82,7 +82,7 @@ qgorg:DNRME a owl:NamedIndividual ,
                 prov:Organization ,
                 skos:Concept ;
     skos:prefLabel "Department of Natural Resources, Mines and Energy"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qg-agent> ;
     skos:altLabel "DNRME"@en .
 
 qgorg:DOR a owl:NamedIndividual ,
@@ -90,5 +90,5 @@ qgorg:DOR a owl:NamedIndividual ,
                 prov:Organization  ,
                 skos:Concept ;
     skos:prefLabel "Department of Resources"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qg-agent> ;
     org:resultedFrom qgorg:DNRME .
