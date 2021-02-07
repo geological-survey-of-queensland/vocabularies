@@ -14,7 +14,7 @@
     dcterms:source <http://vocabularies.coar-repositories.org/documentation/access_rights/> ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2019-04-03"^^xsd:date ;
-    dcterms:modified "2019-09-10"^^xsd:date ;
+    dcterms:modified "2021-02-08"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
 .
 
@@ -53,6 +53,12 @@ da:protected a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
     skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> .
 
+da:conditional a skos:Concept ;
+    skos:prefLabel "Conditionally protected"@en ;
+    skos:definition "Conditionally protected access refers to a resource that is stored in a system but is not freely accessible and remains protected based on the satisfaction of other specified criteria. Access is limited to specific personnel or user groups. "@en ;
+    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> .
+
 da:open-access-rights a skos:Collection ;
     skos:prefLabel "Open data access rights"@en ;
     skos:definition "Data that is non-sensitive, freely available, easily discovered and accessed, and published in ways and with licences that allow easy reuse."@en ;
@@ -64,4 +70,5 @@ da:closed-access-rights a skos:Collection ;
     skos:member da:embargoed,
         da:metadata-only,
         da:protected,
-        da:restricted .
+        da:restricted,
+        da:conditional.
