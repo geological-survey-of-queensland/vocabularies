@@ -1,0 +1,153 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix fst: <http://linked.data.gov.au/def/gsq-feature-status/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/gsq-feature-status> a owl:Ontology,
+    skos:ConceptScheme ;
+    dcterms:created "2020-12-03T16:19:50+10:00"^^xsd:dateTime ; w
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-12-07T16:38:10+10:00"^^xsd:dateTime ;
+    dcterms:source "Compiled by the Geological Survey of Queensland" ;
+    skos:definition """The status of a geologic feature, which in name (and definition) may embrace formal, informal, obsolete or other terms, is generally regulated variously (depending on the feature type) by a national, international and/or other code or protocol that applies thereto, and, where applicable, may be administered and/or reviewed by a relevant authority, such as the Geological Survey of Queensland or (for Australian lithostratigraphic and lithodemic units) by Geoscience Australia in collaboration with the Australian Stratigraphy Commission of the Geological Society of Australia."""@en ;
+    skos:hasTopConcept fst:Ambiguous,
+        fst:CurrentFormal,
+        fst:CurrentInformal,
+        fst:Invalid,
+        fst:MissspeltMiscited,
+        fst:NotDefined, 
+        fst:ObsoleteAbandoned,
+        fst:ObsoleteDisused,
+        fst:ProbablyMissspeltMiscited, 
+        fst:ProbablyObsolete,
+        fst:ProcessingPending, 
+        fst:ReservedByGeoscienceAustralia, 
+        fst:Superseded, 
+        fst:Unnamed,
+        fst:UnpublishedInformal ; 
+    skos:prefLabel "Geologic Feature Status"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+
+fst: Ambiguous a skos:Concept ; 
+    skos:definition "The status of a geologic feature that has been ambiguously defined and/or termed and is questionable and uncertain in any aspect of its delineation."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "ambiguous"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .
+
+fst:CurrentFormal a skos:Concept ;
+    skos:altLabel "formal current"@en ;
+    skos:definition "The status of a geologic feature the name and parameters of which are in current use, and have been intentionally/formally defined and/or delineated by printed and/or digital publication in accordance, and where applicable, with a national, international and/or other code or protocol that applies thereto."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "current-formal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .
+        
+fst:CurrentInformal a skos:Concept ;
+    skos:altLabel "informal current"@en ;
+    skos:definition """The status of a geologic feature the name and parameters of which are in current use, and have been informally defined and/or delineated by printed and/or digital publication (albeit including the Australian Stratigraphic Units Database) in accordance, and where applicable, with a national, international and/or other code or protocol that applies thereto."""@en ;
+    skos:scopeNote """For example: The �Rodney Creek Sandstone� [Galilee Basin; Phillips et al., 2017:AJES 64(3), 283�300], as the name/unit was not published in accordance with The International Stratigraphic Guide. As of the current date (04.02.2021), this unit had not been entered into Geoscience Australia�s Australian Stratigraphic Units Database, and thus has not been superceded/replaced by an informal term (e.g., �Rodney Creek sandstone�) or otherwise dealt with, thus remaining 'invalid' (pending such supersedence)."""@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "current-informal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .
+        
+fst:Invalid a skos:Concept ;
+    skos:altLabel "unacceptable"@en ;
+    skos:altLabel "not valid"@en ;
+    skos:definition "The status of a geologic feature the name and parameters of which have been published, but not in full accordance with a national, international and/or other code or protocol that applies thereto.�@en ;
+    skos:scopeNote """For example: The �Rodney Creek Sandstone� [Galilee Basin; Phillips et al., 2017:AJES 64(3), 283�300], as the name/unit was not published in accordance with The International Stratigraphic Guide. As of the current date (04.02.2021), this unit has not been entered into Geoscience Australia�s Australian Stratigraphic Units Database, and has not been superceded/replaced by an informal term or otherwise dealt with, thus remaining 'invalid' pending supersedence."""@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "invalid"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .     
+    
+fst:MissspeltMiscited a skos:Concept ;
+    skos:altLabel "typographical error"@en ;
+    skos:altLabel "typo"@en ;
+    skos:altLabel "erratum"@en ;
+    skos:altLabel "error"@en ;
+    skos:altLabel "mistake"@en ; 
+    skos:definition "The provisional status applied to a geologic feature the name of which has been misspelt or incorrectly cited/interpreted prior to being superseded replaced by a valid term."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "misspelt/miscited"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .
+
+fst:NotDefined a skos:Concept ;
+    skos:altLabel "undefined" @en ;
+    skos:definition "The status of a geologic feature that has been recorded in published or unpublished reports, records, maps, etc., but has not been defined, either informally or formally."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "not defined"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .
+
+fst:ObsoleteAbandoned a skos:Concept ;
+    skos:definition "The status of a geologic feature the name of which has been abandoned/dropped and has not been replaced by another term."@en ;
+    scopeNote """Potential (lithostratigraphic) examples of this include: The name of a 'Member' which has been abandoned/dropped and the attendant rocks are no longer considered to be a distinct part of the formation that they were associated with; and the names of lithostratigraphic units that have been abandoned/dropped in areas where there has been a significant rearrangement of the description of the stratigraphy, such that the old units are dismembered and have no direct replacements (Cathy Brown, Geoscience Australia, pers. comm., 29.01.2021)."""@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "obsolete-abandoned"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .     
+
+fst:ObsoleteDisused a skos:Concept ;
+    skos:definition "The status of a geologic feature the name of which has not been superseded by another term and has fallen into disuse or with which there has been a persistent change in its application of use."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "obsolete-disused"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .     
+    
+fst:ProbablyMissspeltMiscited a skos:Concept ;     
+    skos:definition "The status or provisional status applied to a geologic feature the name of which has been probably misspelt or incorrectly cited/interpreted, perhaps pending further investigation prior to being superseded/replaced by a valid term."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "probably misspelt/miscited"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .
+        
+fst:ProbablyObsolete a skos:Concept ;
+    skos:definition "The status of a geologic feature the name of which has ostensibly fallen into disuse."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "probably obsolete"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> . 
+
+fst:ProcessingPending a skos:Concept ;
+    skos:definition "The temporary status accorded to a geologic feature during the procedure whereby the feature, its name, and other necessary parameters associated with it are being processed and recognised by a relevant organisation or authority or are in the process of being published, having already been provisionally subject to such recognition pending publication."@en ;
+    skos:scopeNote "For example: �Processing Pending� for the addition of a new, or changes to an existing, lithostratigraphic unit, in the Australian Stratigraphic Units Database, administered by Geoscience Australia. �Reserved� status may have been previously accorded to a new term submitted to this organisation for approval and reservation/registration."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "processing pending"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .
+
+fst:ReservedByGeoscienceAustralia a skos:Concept ;
+    skos:altLabel "reserved by GA" @en ;
+    skos:altLabel "reserved" @en ;
+    skos:definition """The status requested of, and accorded by, the Stratigraphic Index Officer of Geoscience Australia for the claim of a name for a lithostratigraphic feature/unit (reserved for up to five years) leading up to its hard-copy and/or digital publication."""@en ;
+    skos:scopeNote """For example: The �Baga beds�[AUSD Stratigraphic No. 81555, �Reserved by Geoscience Australia' at the request of Paul Blake (GSQ) on 20.08.2019] which superseded the �Jim Crow beds� (AUSD Stratigraphic No. 74880) on 02.02.2021 (AUSD, Geoscience Australia, accessed on 08.02.2021)."""@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "reserved by Geoscience Australia"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> . 
+
+fst:Superseded a skos:Concept ;
+    skos:altLabel "superceded"@en ;
+    skos:altLabel "superceeded"@en ;
+    skos:altLabel "replaced"@en ; 
+    skos:altLabel "redundant"@en ; 
+    skos:definition "The broadly-delimited, non-current status of a geologic feature that has been replaced in name by another term."@en ;
+    skos:scopeNote """Preferably, and when required, in a clear published record (outlining the reasons for replacement/change, and any specific accord with a national, international and/or other code or protocol). The non-current status of a geologic feature may result from: a change in, or a correction to, its rank, status, spelling/citation; a change in its name (in the case of a lithostratigraphic unit) where a lithologic term, used as a component of its name, has been either applied, withdrawn, or revised; amendment/modification where stratigraphic or other geologic terminology has been incorrectly applied or there has been a paradigm change; a change to its name when it is replaced by a senior synonymn/equivalent or homonym; or when the name, or the primary (name-giving) part thereof, is pre-occupied. Lithostratigraphic examples of supersedence include:�Brisbane tuff� (ASUD Strat. No. 2583, superseded) and �Brisbane Tuffs� (ASUD Strat. No. 32126, superseded) replaced by �Brisbane Tuff� [ASUD Strat No. 2579, formal (='current formal')]; Stanwell Coal Measures (ASUD Strat No. 17284) replaced by Stanwell Formation (Murray, 2007, Jell, 2013; absence of coal); and �Taroom beds� (ASUD Strat No. 39590, superseded) replaced by �Chong beds� (ASUD Strat No. 78567, 'current informal'), as �Taroom� is preoccupied (�Taroom Coal Measures�, ASUD Strat No. 24514, 'current formal'; Jell, 2013). [ASUD, Geoscience Australia, accessed 04.02.2021]."""@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "superseded"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> . 
+    
+fst:Unnamed a skos:Concept ;
+    skos:altLabel "nameless"@en ;
+    skos:altLabel "undefined"@en ;
+    skos:definition "The status of a geologic feature that is essentially nameless, as it has been loosely termed or referred to by the application of only broad phraseology, description and/or delineation, as it is largely unknown and yet-to-be defined, is questionable/enigmatic, has been referred to in a general sense, or simply has been unnamed."@en ;
+    scopeNote "For example: The broad (collective) reference to 'Middle to Late Triassic volcanic units, southeast Queensland' (ASUD Stratigraphic No. 78432, Geoscience Australia, accessed 08.02.2021)."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "unnamed"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> . 
+    
+fst:UnpublishedInformal a skos:Concept ;
+    skos:altLabel "not published"@en ;
+    skos:altLabel "not-published"@en ;
+    skos:definition """The informal status of a geologic feature the name and parameters of which have been provided in an unpublished thesis, report, record, map, etc. and thus do not conform with any national, international and/or other code or protocol that would otherwise apply thereto had the feature been published, either digitally and/or in hard copy."""@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:prefLabel "unpublished"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-feature-status> .      
