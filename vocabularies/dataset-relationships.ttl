@@ -1,7 +1,7 @@
  @prefix datrel: <http://linked.data.gov.au/def/dataset-relationships/> .
  @prefix dc: <http://purl.org/dc/elements/1.1/> .
  @prefix dct: <http://purl.org/dc/terms/> .
- @prefix prov: <https://www.w3.org/TR/prov-o/> .
+ @prefix prov: <http://www.w3.org/ns/prov#> .
  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
  @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
  @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -147,37 +147,35 @@ owl:inverseOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
 dct:source <https://www.w3.org/ns/prov-o-inverses> ;
 skos:prefLabel "Was Derivation of"@en  .
 
-<https://www.w3.org/TR/prov-o/#wasInfluencedBy> a skos:Concept ;
+<http://www.w3.org/ns/prov/#wasInfluencedBy> a skos:Concept ;
 skos:definition "Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation."@en ;
 skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationships> ;  
 skos:inScheme <http://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf prov:influenced ;
 skos:prefLabel "Was Influenced By"@en  .
 
-<https://www.w3.org/TR/prov-o/#influenced> a skos:Concept ;
+<http://www.w3.org/ns/prov/#influenced> a skos:Concept ;
 skos:definition "Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation."@en ;
 skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationships> ;  
 skos:inScheme <http://linked.data.gov.au/def/dataset-relationships> ;
-owl:inverseOf <https://www.w3.org/TR/prov-o/#wasInfluencedBy> ;
+owl:inverseOf <http://www.w3.org/ns/prov/#wasInfluencedBy> ;
 skos:prefLabel "Influenced"@en  .
 
-#Inverse term was quoted As does not exist in PROV - does this below create in vocprez?
 datrel:quotedAs  a skos:Concept ;
 skos:definition "A quotation is the repeat of (some or all of) an entity, such as text or image, by someone who may or may not be its original author. Quotation is a particular case of derivation."@en ;
 skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationships> ;  
 skos:inScheme <http://linked.data.gov.au/def/dataset-relationships> ;
-dct:source <https://www.w3.org/ns/prov-o-inverses> ;
-owl:inverseOf <https://www.w3.org/TR/prov-o/#wasQuotedFrom> ;
+owl:inverseOf <http://www.w3.org/ns/prov/#wasQuotedFrom> ;
 skos:prefLabel "Quoted As"@en  .
 
-<https://www.w3.org/TR/prov-o/#wasQuotedFrom>  a skos:Concept ;
+<http://www.w3.org/ns/prov/#wasQuotedFrom>  a skos:Concept ;
 skos:definition "A quotation is the repeat of (some or all of) an entity, such as text or image, by someone who may or may not be its original author. Quotation is a particular case of derivation."@en ;
 skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationships> ;  
 skos:inScheme <http://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf datrel:quotedAs ;
 skos:prefLabel "Quoted From"@en  .
 
-<https://www.w3.org/TR/prov-o/#wasRevisionOf>  a skos:Concept ;
+<http://www.w3.org/ns/prov/#wasRevisionOf>  a skos:Concept ;
 skos:definition "A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. Revision is a particular case of derivation."@en ;
 skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationships> ;  
 skos:inScheme <http://linked.data.gov.au/def/dataset-relationships> ;
@@ -188,11 +186,10 @@ datrel:hadRevision  a skos:Concept ;
 skos:definition "A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. Revision is a particular case of derivation."@en ;
 skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationships> ;  
 skos:inScheme <http://linked.data.gov.au/def/dataset-relationships> ;
-owl:inverseOf <https://www.w3.org/TR/prov-o/#wasRevisionOf> ;
-dct:source <https://www.w3.org/TR/prov-o/#inverse-names-table> ;
+owl:inverseOf <http://www.w3.org/ns/prov/#wasRevisionOf> ;
 skos:prefLabel "Had Revison"@en .
 
-<https://www.w3.org/TR/prov-o/#alternateOf> a skos:Concept ;
+<http://www.w3.org/ns/prov/#alternateOf> a skos:Concept ;
 skos:definition "Two alternate entities present aspects of the same thing. These aspects may be the same or different, and the alternate entities may or may not overlap in time."@en ;
 skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationships> ;  
 skos:inScheme <http://linked.data.gov.au/def/dataset-relationships> ;
@@ -200,7 +197,7 @@ owl:inverseOf prov:alternateOf ;
 skos:editorialNote "alternateOf is inversed to the same term as defined in PROV-O, alternates go will go either way."@en ;
 skos:prefLabel "Is Alternate Of"@en  .
 
-<https://www.w3.org/TR/prov-o/#specializationOf> a skos:Concept ;
+<http://www.w3.org/ns/prov/#specializationOf> a skos:Concept ;
 skos:definition "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity."@en ;
 skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationships> ;  
 skos:inScheme <http://linked.data.gov.au/def/dataset-relationships> ;
@@ -211,6 +208,5 @@ datrel:generalizationOf a skos:Concept ;
 skos:definition "Inverse of Specialization Of"@en ;
 skos:topConceptOf <http://linked.data.gov.au/def/dataset-relationships> ;  
 skos:inScheme <http://linked.data.gov.au/def/dataset-relationships> ;
-owl:inverseOf <https://www.w3.org/TR/prov-o/#specializationOf> ; 
-dct:source <https://www.w3.org/TR/prov-o/#inverse-names-table> ; 
+owl:inverseOf <http://www.w3.org/ns/prov/#specializationOf> ; 
 skos:prefLabel "Is Generalization Of"@en  .
