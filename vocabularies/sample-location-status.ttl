@@ -3,14 +3,14 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix smlcst: <http://linked.data.gov.au/def/sample-location-status/> .
+@prefix smlcst: <https://linked.data.gov.au/def/sample-location-status/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/sample-location-status> a owl:Ontology , skos:ConceptScheme ;
+<https://linked.data.gov.au/def/sample-location-status> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-02-07T13:27:05"^^xsd:dateTime ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-02-08T11:42:48"^^xsd:dateTime ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The status of a sample with respect to its location."@en ;
     skos:hasTopConcept smlcst:collected,
@@ -21,46 +21,46 @@
         smlcst:processing ;
     skos:prefLabel "Sample Location Status"@en .
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 smlcst:collected a skos:Concept ;
     skos:definition "Sample has been collected from a sampling location and is in temporary storage prior to transfer to permanent or semi-permanent storage"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "Collected"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> .
 
 smlcst:in-storage a skos:Concept ;
     skos:altLabel "Static"@en ;
     skos:definition "Held at a storage location in an archived state."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "In Storage"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> .
 
 smlcst:in-transit a skos:Concept ;
     skos:definition "In transit between locations."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "In transit"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> .
 
 smlcst:lost a skos:Concept ;
     skos:definition "Location of sample is not known"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "Lost"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> .
 
 smlcst:on-display a skos:Concept ;
     skos:definition "Held in a storage facility, museum, or other location for display and/or analysis."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "On Display"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> .
 
 smlcst:processing a skos:Concept ;
     skos:altLabel "Analysis"@en,
         "Laboratory"@en ;
     skos:definition "The sample is at a laboratory, university, or other facility external to its registered storage facility undergoing processing or analysis."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "Processing"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> .
 

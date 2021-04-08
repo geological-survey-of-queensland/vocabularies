@@ -1,17 +1,17 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix plife: <http://linked.data.gov.au/def/resource-project-lifecycle/> .
+@prefix plife: <https://linked.data.gov.au/def/resource-project-lifecycle/> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/resource-project-lifecycle> a owl:Ontology,
+<https://linked.data.gov.au/def/resource-project-lifecycle> a owl:Ontology,
         skos:ConceptScheme ;
     dcterms:created "2020-02-28"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-11-27"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The stage in the lifecycle of a project (e.g. mine site, petroleum field, quarry) that describes the maturity of resource defintion and production."@en ;
     skos:scopeNote "The lifecycle of a project of interelated activities. Each individual activity will typically be associated with a specific individual site with its own status, whereas the project lifecycle encompasses the collective status of multiple sites under a single coordinated body of work."@en ;
@@ -25,66 +25,66 @@
         plife:end-of-life;
     skos:prefLabel "Resource Project Lifecycle"@en .
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 plife:appraisal a skos:Concept ;
     skos:definition "The stage in the life-cycle of a resource where the quantification of resources and reserves is performed and the potential for commericality is assessed. Definition of the size, quality, and physical properties of the resource."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
+    skos:inScheme <https://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "APP" ;
     skos:prefLabel "Appraisal"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
+    skos:topConceptOf <https://linked.data.gov.au/def/resource-project-lifecycle> .
 
 plife:closed a skos:Concept ;
     skos:definition "The stage in the life-cycle of a resource where resources have been produced and development activity has now ceased, but prior to rehabilitation commencing. "@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
+    skos:inScheme <https://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "CLS" ;
     skos:prefLabel "Closed"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
+    skos:topConceptOf <https://linked.data.gov.au/def/resource-project-lifecycle> .
 
 plife:closed-with-near-field-exploration a skos:Concept ;
     skos:definition "The stage in the life-cycle of a resource where development activity has now ceased but there are exploration or appraisal activities to further expand or define the commercial bounds of the resource."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
+    skos:inScheme <https://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "CWE" ;
     skos:prefLabel "Closed with near-field exploration"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
+    skos:topConceptOf <https://linked.data.gov.au/def/resource-project-lifecycle> .
 
 plife:development a skos:Concept ;
     skos:altLabel "Production"@en ;
     skos:definition "The stage in the life-cycle of a resource where resources are produced or stored. Production may consist of hydrocarbon extraction, mining and quarrying. Storage may include underground storage of petroleum in natural underground reservoirs."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
+    skos:inScheme <https://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "DEV" ;
     skos:prefLabel "Development"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
+    skos:topConceptOf <https://linked.data.gov.au/def/resource-project-lifecycle> .
 
 plife:development-with-near-field-exploration a skos:Concept ;
     skos:definition "The stage in the life-cycle of a resource where resources are produced or stored in conjunction with exploration or appraisal activities in to further expand or define the commercial bounds of the resource."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
+    skos:inScheme <https://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "NFE" ;
     skos:prefLabel "Development with near-field exploration"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
+    skos:topConceptOf <https://linked.data.gov.au/def/resource-project-lifecycle> .
 
 plife:exploration a skos:Concept ;
     skos:definition "The stage in the life-cycle of a resource where exploration for the presence of natural resource accumulations is performed."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
+    skos:inScheme <https://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "EXP" ;
     skos:prefLabel "Exploration"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
+    skos:topConceptOf <https://linked.data.gov.au/def/resource-project-lifecycle> .
 
 plife:rehabilitation a skos:Concept ;
     skos:definition "The stage in the life-cycle of a resource where the resources have been extracted and the site is being rehabilitated back to its original condition or an acceptable environmental standard."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
+    skos:inScheme <https://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "RHB" ;
     skos:prefLabel "Rehabilitation"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
+    skos:topConceptOf <https://linked.data.gov.au/def/resource-project-lifecycle> .
 
 plife:end-of-life a skos:Concept ;
     skos:definition "The stage in the life-cycle of a resource where the resources have been extracted and the site has been rehabilitated back to its original condition or an acceptable environmental standard. The final state of the lifecycle where no further work is intended or required and the project can be considered defunct and no longer extant."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-project-lifecycle> ;
+    skos:inScheme <https://linked.data.gov.au/def/resource-project-lifecycle> ;
     skos:notation "END" ;
     skos:prefLabel "Project Abandoned"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/resource-project-lifecycle> .
+    skos:topConceptOf <https://linked.data.gov.au/def/resource-project-lifecycle> .
 
 plife:borehole-class a skos:Collection ;
     skos:definition "The stage in the lifecycle of a petroleum field, of which a borehole is part. Commonly used by regulatory agencies to define specific obligations for reporting, construction, or abandonment."@en ;

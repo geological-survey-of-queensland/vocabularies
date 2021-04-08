@@ -1,6 +1,6 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix gsqst: <http://linked.data.gov.au/def/geological-sites/> .
+@prefix gsqst: <https://linked.data.gov.au/def/geological-sites/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -9,12 +9,12 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/geological-sites> a owl:Ontology ,
+<https://linked.data.gov.au/def/geological-sites> a owl:Ontology ,
         skos:ConceptScheme ;
     dct:created "2020-02-07"^^xsd:date ;
-    dct:creator <http://linked.data.gov.au/org/gsq> ;
+    dct:creator <https://linked.data.gov.au/org/gsq> ;
     dct:modified "2020-11-26"^^xsd:date ;
-    dct:publisher <http://linked.data.gov.au/org/gsq> ;
+    dct:publisher <https://linked.data.gov.au/org/gsq> ;
     dct:source "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
     skos:hasTopConcept 
@@ -33,7 +33,7 @@
         gsqst:unknown ;
     skos:prefLabel "Geological Sites"@en .
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
@@ -41,17 +41,17 @@ gsqst:auger a skos:Concept ;
     skos:altLabel "Auger Hole"@en ;
     skos:definition "A shallow drill hole conducted for the purpose of extraction of soil or rock samples. Sources: GSQ."@en ;
     skos:scopeNote "In the context of administration by a regulatory body, a borehole exists as an entity once proposed-to-be-drilled, prior to drilling and having a tangible physical manifestation."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "au" ;
     skos:prefLabel "Auger"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:base-station a skos:Concept ;
     skos:definition "A site of known location for the samplng or measurement of a property or as a point with a known measurement of a property for the calibration of a larger survey."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "bs" ;
     skos:prefLabel "Base Station"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:borehole a skos:Concept ;
     skos:altLabel "Bore"@en,
@@ -61,10 +61,10 @@ gsqst:borehole a skos:Concept ;
         "Well"@en ;
     skos:definition "A Borehole is a hole in the ground designed to exchange (or facilitate the exchange of) fluids between a subsurface reservoir and the surface (or another reservoir), or to enable the detection and measurement of rock properties.  Boreholes are the sites of extraction or rock samples, as core or cuttings, and fluid samples. A Borehole has a single Origin and all Wellbore(s) that extend from this Well Origin are parts of the Borehole. Sources: PPDM What Is A Well, GSQ."@en ;
     skos:scopeNote "In the context of administration by a regulatory body, a borehole exists as an entity once proposed-to-be-drilled, prior to drilling and having a tangible physical manifestation."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "bh" ;
     skos:prefLabel "Borehole"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:cutting a skos:Concept ;
     skos:altLabel "Gutter"@en,
@@ -74,25 +74,25 @@ gsqst:cutting a skos:Concept ;
         "Tunnel"@en,
         "Drill Pad"@en ;
     skos:definition "A man-made excavation through the earth typically for infrastucture and/or transport."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "ct" ;
     skos:prefLabel "Cutting"@en ;
     skos:scopeNote "A drill pad may be used where an at-surface sample or observation is taken at a drilling location. All sites where samples and observations made downhole are classified as boreholes."@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:field-site a skos:Concept ;
     skos:altLabel "Dig site"@en ;
     skos:definition "An area, transect, or point where samples are taken or observations are made directly from earth materials."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "fs" ;
     skos:prefLabel "Field Site"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:alluvial a skos:Concept ;
     skos:altLabel "Alluvium"@en ;
     skos:broader gsqst:field-site ;
     skos:definition "A field site from which a sediment sample transported by transport in a medium (air, water, ice) is taken or observation is made."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "av" ;
     skos:prefLabel "Alluvial Site"@en .
 
@@ -105,7 +105,7 @@ gsqst:watercourse a skos:Concept ;
         "Stream"@en ;
     skos:broader gsqst:alluvial ;
     skos:definition "The channel that a flowing body of water follows."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "wc" ;
     skos:prefLabel "Watercourse"@en .
     
@@ -113,7 +113,7 @@ gsqst:beach a skos:Concept ;
     skos:altLabel "Shore"@en ;
     skos:broader gsqst:alluvial ;
     skos:definition "The channel that a flowing body of water follows."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "bc" ;
     skos:prefLabel "Beach"@en .
 
@@ -125,7 +125,7 @@ gsqst:waterbody a skos:Concept ;
     skos:broader gsqst:alluvial ;
     dct:source "Source: Merriam-Webster Dictionary" ;
     skos:definition "Any significant accumulation of typically non-flowing water, generally on a planet's surface. The term most often refers to oceans, seas, and lakes, but it includes smaller pools of water such as ponds, wetlands, or more rarely, puddles."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "wy" ;
     skos:prefLabel "Waterbody"@en .
 
@@ -139,14 +139,14 @@ gsqst:colluvial a skos:Concept ;
         "Talus"@en ;
     skos:broader gsqst:field-site ;
     skos:definition "A field site from which sediment is not primarily transported in a fluid, typically transported by gravity, where a sample is taken or observation is made. Bedrock is not exposed, but surface rock suggests bedrock is near surface."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "cv" ;
     skos:prefLabel "Colluvial Site"@en .
 
 gsqst:outcrop a skos:Concept ;
     skos:broader gsqst:field-site ;
     skos:definition "A field site where bedrock is exposed at the surface of the earth, and not concealed by regolith or water. There is a high degree of confidence that samples and observations from an outcrop site relate to the bedrock at that location."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "oc" ;
     skos:prefLabel "Outcrop"@en .
 
@@ -154,14 +154,14 @@ gsqst:subcrop a skos:Concept ;
     skos:altLabel "sub-outcrop"@en ;
     skos:broader gsqst:outcrop ;
     skos:definition "A field site where bedrock is only exposed over a small area with very little topographic relief, to such an extent that the bedrock is reasonably inferred to be in-situ. There is a reasonable degree of confidence that samples and observations from a subcrop site relate to the bedrock at that location."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "sc" ;
     skos:prefLabel "Subcrop"@en .
 
 gsqst:regolith a skos:Concept ;
     skos:broader gsqst:field-site ;
     skos:definition "A field site at a layer of loose, heterogeneous superficial deposits covering solid rock."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "rg" ;
     skos:prefLabel "Regolith"@en .
 
@@ -170,7 +170,7 @@ gsqst:pedolith a skos:Concept ;
         "Soil Horizon"@en ;
     skos:broader gsqst:regolith ;
     skos:definition "A field site that has undergone pedogenic processes. Typically where a sample is taken or observation is made of soil."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "pd" ;
     skos:prefLabel "Pedolith"@en .
 
@@ -181,7 +181,7 @@ gsqst:saprolith a skos:Concept ;
         "Weathering Profile"@en ;
     skos:broader gsqst:regolith ;
     skos:definition "A field site from which a sample is taken or observation is made of chemically weathered rock ."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "sr" ;
     skos:prefLabel "Saprolith"@en .
 
@@ -189,7 +189,7 @@ gsqst:tailings a skos:Concept ;
     skos:altLabel "Processing Plant"@en ;
     skos:broader gsqst:field-site ;
     skos:definition "An accumulation of material left over after the process of separating the valuable fraction from the uneconomic fraction (gangue) of an ore."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "tl" ;
     skos:prefLabel "Tailings"@en .
 
@@ -201,36 +201,36 @@ gsqst:spoil a skos:Concept ;
         "Waste"@en ;
     skos:broader gsqst:field-site ;
     skos:definition "An accumulation of material removed to access an economically significant resource or ore body. Distinct from tailings, as spoil is physically removed from the ore prior to processing."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "sl" ;
     skos:prefLabel "Spoil"@en .
 
 gsqst:mine a skos:Concept ;
     dct:source "Source: Merriam-Webster Dictionary" ;
     skos:definition "A pit or excavation in the earth from which mineral substances are taken. Source: Merriam-Webster Dictionary"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "mi" ;
     skos:prefLabel "Mine"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:open-cut-mine a skos:Concept ;
     skos:broader gsqst:mine ;
     skos:definition "A pit or excavation in the earth, open to the ground surface, from which mineral substances are taken. Source: Merriam-Webster Dictionary"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "om" ;
     skos:prefLabel "Open-Cut Mine"@en .
 
 gsqst:underground-mine a skos:Concept ;
     skos:broader gsqst:mine ;
     skos:definition "An excavation in the earth, under the ground surface, from which mineral substances are taken. Source: Merriam-Webster Dictionary"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "ug" ;
     skos:prefLabel "Underground Mine"@en .
 
 gsqst:quarry a skos:Concept ;
     skos:broader gsqst:mine ;
     skos:definition "Man-made excavation to extract building and road base material."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "qy" ;
     skos:prefLabel "Quarry"@en .
 
@@ -238,59 +238,59 @@ gsqst:pit a skos:Concept ;
     skos:altLabel "Gravel Scrape"@en,
         "Pits"@en ;
     skos:definition "A type of excavation or depression in the ground used for analysis or sample collection."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "pt" ;
     skos:prefLabel "Pit"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:rock-unit a skos:Concept ;
     skos:definition "Bodies of rock grouped by their characteristics, not by time. The units include (from major to minor) groups, formations, and members."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "ru" ;
     skos:prefLabel "Rock unit"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 
 gsqst:project-site a skos:Concept ;
     skos:altLabel "Project"@en,
         "Project Site"@en ;
     skos:definition "The location of a survey."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "pj" ;
     skos:prefLabel "Survey Site"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:trench a skos:Concept ;
     skos:altLabel "Box Cut"@en,
         "Costean"@en ;
     skos:definition "A narrow excavation in the ground."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "th" ;
     skos:prefLabel "Trench"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:resource-authority a skos:Concept ;
     skos:altLabel "Permit"@en,
         "Tenure"@en ;
     skos:definition "Resource authorities are a license granted over a spatial region within the State of Queensland. Resource authorities govern the activities which can be conducted upon them. Activities include exploration, development, and extraction of a specific commodity or commodities."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "ra" ;
     skos:prefLabel "Resource authority"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 #gsqst:wellbore a skos:Concept ;
 #    skos:altLabel "Branch"@en,
 #        "Sidetrack"@en ;
 #    skos:definition "A Wellbore is a path of drilled footage, from the Borehole Origin (top/start) to a terminating point (bottom/end). There are one or more Wellbores in a planned or drilled Borehole, namely the original Wellbore, and a Wellbore for each intended, actual or accidental sidetrack. Each Wellbore has a unique terminating point. A deepening of an existing Wellbore is considered a new Wellbore with the same Borehole Origin. Source: PPDM What Is A  Well."@en ;
-#    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+#    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
 #    skos:notation "wb" ;
 #    skos:prefLabel "Wellbore"@en ;
-#    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+#    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
 
 gsqst:unknown a skos:Concept ;
     skos:altLabel "Null"@en ;
     skos:definition "The site of a sampling, survey, or observation in which the type of stie is unknown."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "uk" ;
     skos:prefLabel "Unknown"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
