@@ -66,7 +66,8 @@
         quantitykind:MolalityOfSolute ,
         quantitykind:ForcePerArea ,
         quantitykind:Turbidity ,
-        quantitykind:Voltage
+        quantitykind:Voltage ,
+        quantitykind:LiquidVolume
     ;
 .
 
@@ -1125,6 +1126,28 @@ quantitykind:VoltagePercentage
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Voltage Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
+  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
+.
+
+quantitykind:LiquidVolume
+  a qudt:QuantityKind , skos:Concept ;
+  qudt:applicableUnit unit:CUP ;
+  qudt:applicableUnit unit:CUP_US ;
+  qudt:applicableUnit unit:CentiL ;
+  qudt:applicableUnit unit:GAL_IMP ;
+  qudt:applicableUnit unit:GAL_UK ;
+  qudt:applicableUnit unit:GAL_US ;
+  qudt:applicableUnit unit:L ;
+  qudt:applicableUnit unit:OZ_VOL_US ;
+  qudt:applicableUnit unit:PINT_US ;
+  qudt:applicableUnit unit:QT_US ;
+  qudt:hasDimensionVector qkdv:A0E0L3I0M0H0T0D0 ;
+  qudt:informativeReference "http://www.ehow.com/facts_6371078_liquid-volume_.html"^^xsd:anyURI ;
+  qudt:plainTextDescription "Liquid volume is the volume of a given amount of liquid, that is, the amount of space a liquid takes up. There are a number of different units used to measure liquid volume, but most of them fall under either the metric system of measurement or the Imperial system of measurement." ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
+  rdfs:label "Liquid Volume"@en ;
+  skos:broader quantitykind:Volume ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
