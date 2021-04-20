@@ -94,7 +94,7 @@ quantitykind:ActivityCoefficient
   qudt:informativeReference "http://en.wikipedia.org/wiki/Activity_coefficient"^^xsd:anyURI ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
   qudt:latexDefinition "\\(f_B = \\frac{\\lambda_B}{(\\lambda_B^*x_B)}\\), where \\(\\lambda_B\\) the absolute activity of substance \\(B\\), \\(\\lambda_B^*\\) is the absolute activity of the pure substance \\(B\\) at the same temperature and pressure, and \\(x_B\\) is the amount-of-substance fraction of substance \\(B\\)."^^qudt:LatexString ;
-  qudt:plainTextDescription "An \"Activity Coefficient\" is a factor used in thermodynamics to account for deviations from ideal behaviour in a mixture of chemical substances. In an ideal mixture, the interactions between each pair of chemical species are the same (or more formally, the enthalpy change of solution is zero) and, as a result, properties of the mixtures can be expressed directly in terms of simple concentrations or partial pressures of the substances present e.g. Raoult's law. Deviations from ideality are accommodated by modifying the concentration by an activity coefficient. " ;
+  qudt:plainTextDescription "An Activity Coefficient is a factor used in thermodynamics to account for deviations from ideal behaviour in a mixture of chemical substances. In an ideal mixture, the interactions between each pair of chemical species are the same (or more formally, the enthalpy change of solution is zero) and, as a result, properties of the mixtures can be expressed directly in terms of simple concentrations or partial pressures of the substances present e.g. Raoult's law. Deviations from ideality are accommodated by modifying the concentration by an activity coefficient." ;
   qudt:symbol "f_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Activity Coefficient"@en ;
@@ -105,6 +105,7 @@ quantitykind:ActivityCoefficient
 quantitykind:AmountOfSubstance
   a qudt:QuantityKind , skos:Concept ;
   dcterms:description "\"Amount of Substance\" is a standards-defined quantity that measures the size of an ensemble of elementary entities, such as atoms, molecules, electrons, and other particles. It is sometimes referred to as chemical amount. The International System of Units (SI) defines the amount of substance to be proportional to the number of elementary entities present. The SI unit for amount of substance is \\(mole\\). It has the unit symbol \\(mol\\). The mole is defined as the amount of substance that contains an equal number of elementary entities as there are atoms in 0.012kg of the isotope carbon-12. This number is called Avogadro's number and has the value \\(6.02214179(30) \\times 10\\). The only other unit of amount of substance in current use is the \\(pound-mole\\) with the symbol \\(lb-mol\\), which is sometimes used in chemical engineering in the United States. One \\(pound-mole\\) is exactly \\(453.59237 mol\\)."^^qudt:LatexString ;
+  qudt:plainTextDescription "Amount of Substance is a standards-defined quantity that measures the size of an ensemble of elementary entities, such as atoms, molecules, electrons, and other particles. It is sometimes referred to as chemical amount. The International System of Units (SI) defines the amount of substance to be proportional to the number of elementary entities present. The SI unit for amount of substance is mole. It has the unit symbol mol. The mole is defined as the amount of substance that contains an equal number of elementary entities as there are atoms in 0.012kg of the isotope carbon-12. This number is called Avogadro's number. and has the value 6.02214179(30) times 10 The only other unit of amount of substance in current use is the pound-mole with the symbol lb-mol, which is sometimes used in chemical engineering in the United States. One pound-mole is exactly 453.59237 mol." ;
   qudt:applicableUnit unit:IU ;
   qudt:applicableUnit unit:KiloMOL ;
   qudt:applicableUnit unit:MOL ;
@@ -129,7 +130,7 @@ quantitykind:AmountOfSubstanceFractionOfB
   qudt:informativeReference "http://en.wikipedia.org/wiki/Amount_fraction"^^xsd:anyURI ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
   qudt:latexDefinition "\\(x_B = \\frac{n_B}{n}\\), where \\(n_B\\) is the amount of substance \\(B\\) and \\(n\\) is the total amount of substance."^^qudt:LatexString ;
-  qudt:plainTextDescription "\"Amount of Substance of Fraction of B\" is defined as tthe amount of a constituent divided by the total amount of all constituents in a mixture." ;
+  qudt:plainTextDescription "Amount of Substance of Fraction of B is defined as the amount of a constituent divided by the total amount of all constituents in a mixture." ;
   qudt:symbol "X_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Amount of Substance of Fraction of B"@en ;
@@ -147,6 +148,7 @@ quantitykind:AmountOfSubstancePerUnitMass
   qudt:applicableUnit unit:MilliMOL-PER-KiloGM ;
   qudt:applicableUnit unit:NanoMOL-PER-KiloGM ;
   qudt:applicableUnit unit:PicoMOL-PER-KiloGM ;
+  qudt:plainTextDescription "Amount of Substance per Unit of Mass." ;
   qudt:baseUnitDimensions "N/M" ;
   qudt:hasDimensionVector qkdv:A1E0L0I0M-1H0T0D0 ;
   vaem:todo "fix the numerator and denominator dimensions" ;
@@ -195,7 +197,7 @@ quantitykind:CelsiusTemperature
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
   qudt:latexDefinition """\"Celsius Temperature\", the thermodynamic temperature \\(T_0\\), is exactly \\({0.01}{\\)kelvin below the thermodynamic temperature of the triple point of water.
 \\(t = T - T_0\\), where \\(T\\) is Thermodynamic Temperature and \\(T_0 = 273.15 K\\)."""^^qudt:LatexString ;
-  qudt:plainTextDescription "\"Celsius Temperature\", the thermodynamic temperature T_0, is exactly 0.01 kelvin below the thermodynamic temperature of the triple point of water." ;
+  qudt:plainTextDescription "Celsius Temperature, the thermodynamic temperature T_0, is exactly 0.01 kelvin below the thermodynamic temperature of the triple point of water." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Celsius temperature"@en ;
   skos:broader quantitykind:ThermodynamicTemperature ;
@@ -224,7 +226,7 @@ quantitykind:Conductivity
   qudt:latexDefinition "\\(\\mathbf{J} = \\sigma \\mathbf{E}\\), where \\(\\mathbf{J}\\) is electric current density, and \\(\\mathbf{E}\\) is electric field strength."^^qudt:LatexString ;
   qudt:latexSymbol "\\(\\gamma\\)"^^qudt:LatexString ;
   qudt:latexSymbol "\\(\\sigma\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "\"Conductivity\" is a scalar or tensor quantity the product of which by the electric field strength in a medium is equal to the electric current density. For an isotropic medium the conductivity is a scalar quantity; for an anisotropic medium it is a tensor quantity." ;
+  qudt:plainTextDescription "Conductivity is a scalar or tensor quantity the product of which by the electric field strength in a medium is equal to the electric current density. For an isotropic medium the conductivity is a scalar quantity; for an anisotropic medium it is a tensor quantity." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Conductivity"@en ;
   rdfs:seeAlso quantitykind:ElectricCurrentDensity ;
@@ -236,6 +238,7 @@ quantitykind:Conductivity
 quantitykind:Dimensionless
   a qudt:QuantityKind , skos:Concept ;
   dcterms:description "In dimensional analysis, a dimensionless quantity or quantity of dimension one is a quantity without an associated physical dimension. It is thus a \"pure\" number, and as such always has a dimension of 1. Dimensionless quantities are widely used in mathematics, physics, engineering, economics, and in everyday life (such as in counting). Numerous well-known quantities, such as \\(\\pi\\), \\(\\epsilon\\), and \\(\\psi\\), are dimensionless. By contrast, non-dimensionless quantities are measured in units of length, area, time, etc. Dimensionless quantities are often defined as products or ratios of quantities that are not dimensionless, but whose dimensions cancel out when their powers are multiplied."^^qudt:LatexString ;
+  qudt:plainTextDescription "In dimensional analysis, a dimensionless quantity or quantity of dimension one is a quantity without an associated physical dimension. It is thus a pure number, and as such always has a dimension of 1. Dimensionless quantities are widely used in mathematics, physics, engineering, economics, and in everyday life (such as in counting). Numerous well-known quantities, such as pi, epsilon, and psi, are dimensionless. By contrast, non-dimensionless quantities are measured in units of length, area, time, etc. Dimensionless quantities are often defined as products or ratios of quantities that are not dimensionless, but whose dimensions cancel out when their powers are multiplied." ;
   qudt:applicableUnit unit:DECADE ;
   qudt:applicableUnit unit:ExaBYTE ;
   qudt:applicableUnit unit:ExbiBYTE ;
@@ -280,6 +283,7 @@ quantitykind:DimensionlessRatio
   qudt:applicableUnit unit:PPTR ;
   qudt:applicableUnit unit:UNITLESS ;
   qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
+  qudt:plainTextDescription "A ratio that has no dimensions." ;
   qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Dimensionless Ratio"@en ;
@@ -291,6 +295,7 @@ quantitykind:DimensionlessRatio
 quantitykind:ElectricConductivity
   a qudt:QuantityKind , skos:Concept ;
   dcterms:description "\"Electric Conductivity} or \\textit{Specific Conductance\" is a measure of a material's ability to conduct an electric current. When an electrical potential difference is placed across a conductor, its movable charges flow, giving rise to an electric current. The conductivity \\(\\sigma\\) is defined as the ratio of the electric current density \\(J\\) to the electric field \\(E\\): \\(J = \\sigma E\\). In isotropic materials, conductivity is scalar-valued, however in general, conductivity is a tensor-valued quantity."^^qudt:LatexString ;
+  qudt:plainTextDescription "Electric Conductivity or Specific Conductance is a measure of a material's ability to conduct an electric current. When an electrical potential difference is placed across a conductor, its movable charges flow, giving rise to an electric current. The conductivity \\(\\sigma\\) is defined as the ratio of the electric current density (J) to the electric field (E): (J = sigma E). In isotropic materials, conductivity is scalar-valued, however in general, conductivity is a tensor-valued quantity." ;
   qudt:applicableUnit unit:A_Ab-CentiM2 ;
   qudt:applicableUnit unit:MHO ;
   qudt:applicableUnit unit:MHO_Stat ;
@@ -316,7 +321,7 @@ quantitykind:ExtentOfReaction
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
   qudt:latexDefinition "\\(dn_B = \\nu_B d\\xi\\), where \\(n_B\\) is the amount of substance \\(B\\) and \\(\\nu_B\\) is the stoichiometric number of substance \\(B\\)."^^qudt:LatexString ;
   qudt:latexSymbol "\\(\\xi\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "In physical chemistry, the \"Extent of Reaction\" is a quantity that measures the extent in which the reaction proceeds." ;
+  qudt:plainTextDescription "In physical chemistry, the Extent of Reaction is a quantity that measures the extent in which the reaction proceeds." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Extent of Reaction"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -398,7 +403,7 @@ quantitykind:IonicStrength
   qudt:informativeReference "http://en.wikipedia.org/wiki/Ionic_strength"^^xsd:anyURI ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
   qudt:latexDefinition "\\(I = \\frac{1}{2} \\sum z_i^2 b_i\\), where the summation is carried out over all ions with charge number \\(z_i\\) and molality \\(m_i\\)."^^qudt:LatexString ;
-  qudt:plainTextDescription "The \"Ionic Strength\" of a solution is a measure of the concentration of ions in that solution." ;
+  qudt:plainTextDescription "The Ionic Strength of a solution is a measure of the concentration of ions in that solution." ;
   qudt:symbol "I" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Ionic Strength"@en ;
@@ -448,7 +453,7 @@ quantitykind:Length
   qudt:dbpediaMatch "http://dbpedia.org/resource/Length"^^xsd:anyURI ;
   qudt:hasDimensionVector qkdv:A0E0L1I0M0H0T0D0 ;
   qudt:informativeReference "http://en.wikipedia.org/wiki/Length"^^xsd:anyURI ;
-  qudt:plainTextDescription "In geometric measurements, length most commonly refers to the est dimension of an object. In some contexts, the term \"length\" is reserved for a certain dimension of an object along which the length is measured." ;
+  qudt:plainTextDescription "In geometric measurements, length most commonly refers to the est dimension of an object. In some contexts, the term length is reserved for a certain dimension of an object along which the length is measured." ;
   qudt:symbol "l" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Length"@en ;
@@ -463,6 +468,7 @@ quantitykind:LengthPercentage
   qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
   qudt:qkdvDenominator qkdv:A0E0L1I0M0H0T0D0 ;
   qudt:qkdvNumerator qkdv:A0E0L1I0M0H0T0D0 ;
+  qudt:plainTextDescription "Length Percentage" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Length Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
@@ -473,6 +479,7 @@ quantitykind:LengthPercentage
 quantitykind:Mass
   a qudt:QuantityKind , skos:Concept ;
   dcterms:description "In physics, mass, more specifically inertial mass, can be defined as a quantitative measure of an object's resistance to acceleration. The SI unit of mass is the kilogram (\\(kg\\))"^^qudt:LatexString ;
+  qudt:plainTextDescription "In physics, mass, more specifically inertial mass, can be defined as a quantitative measure of an object's resistance to acceleration. The SI unit of mass is the kilogram (kg)" ;
   qudt:applicableUnit unit:AMU ;
   qudt:applicableUnit unit:CARAT ;
   qudt:applicableUnit unit:CWT_LONG ;
@@ -586,7 +593,7 @@ quantitykind:MassFraction
   qudt:informativeReference "http://en.wikipedia.org/wiki/Mass_fraction_(chemistry)"^^xsd:anyURI ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
   qudt:latexDefinition "\\(w_B = \\frac{m_B}{m}\\), where \\(m_B\\) is the mass of substance \\(B\\) and \\(m\\) is the total."^^qudt:LatexString ;
-  qudt:plainTextDescription "The \"Mass Fraction\" is the fraction of one substance with mass to the mass of the total mixture ." ;
+  qudt:plainTextDescription "The Mass Fraction is the fraction of one substance with mass to the mass of the total mixture." ;
   qudt:symbol "w_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Mass Fraction"@en ;
@@ -599,7 +606,7 @@ quantitykind:MassFractionOfDryMatter
   qudt:applicableUnit unit:UNITLESS ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
   qudt:latexDefinition "\\(w_d= 1 - w_{h2o}\\), where \\(w_{h2o}\\) is mass fraction of water."^^qudt:LatexString ;
-  qudt:plainTextDescription "\"Mass Fraction of Dry Matter} is one of a number of \\textit{Concentration\" quantities defined by ISO 8000." ;
+  qudt:plainTextDescription "Mass Fraction of Dry Matter is one of a number of Concentration quantities defined by ISO 8000." ;
   qudt:symbol "w_d" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Mass Fraction of Dry Matter"@en ;
@@ -613,7 +620,7 @@ quantitykind:MassFractionOfWater
   qudt:applicableUnit unit:UNITLESS ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
   qudt:latexDefinition "\\(w_{H_2o} = \\frac{u}{1+u}\\), where \\(u\\) is mass ratio of water to dry water."^^qudt:LatexString ;
-  qudt:plainTextDescription "\"Mass Fraction of Water} is one of a number of \\textit{Concentration\" quantities defined by ISO 8000." ;
+  qudt:plainTextDescription "Mass Fraction of Water is one of a number of Concentration quantities defined by ISO 8000." ;
   qudt:symbol "w_{H_2o}" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Mass Fraction of Water"@en ;
@@ -627,7 +634,7 @@ quantitykind:MassRatioOfWaterToDryMatter
   qudt:applicableUnit unit:UNITLESS ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
   qudt:latexDefinition "\\(u = m/m_d\\), where \\(m\\) is mass of water vapour and \\(m_d\\) is mass of dry matter. Mass ratio of water to dry matter at saturation is denoted \\(u_{sat}\\)."^^qudt:LatexString ;
-  qudt:plainTextDescription "\"Mass Ratio of Water to Dry Matter} is one of a number of \\textit{Concentration Ratio\" quantities  defined by ISO 8000." ;
+  qudt:plainTextDescription "Mass Ratio of Water to Dry Matter is one of a number of Concentration Ratio quantities  defined by ISO 8000." ;
   qudt:symbol "u" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Mass Concentration of Water To Dry Matter"@en ;
@@ -640,7 +647,7 @@ quantitykind:MassRatioOfWaterVapourToDryGas
   qudt:applicableUnit unit:UNITLESS ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
   qudt:latexDefinition "\\(x = m/m_d\\), where \\(m\\) is mass of water vapour and \\(m_d\\) is mass of dry gas. Mass ratio of water vapour to dry gas  at saturation is denoted \\(x_{sat}\\)."^^qudt:LatexString ;
-  qudt:plainTextDescription "\"Mass Ratio of Water Vapour to Dry Gas} is one of a number of \\textit{Concentration Ratio\" quantities  defined by ISO 8000." ;
+  qudt:plainTextDescription "Mass Ratio of Water Vapour to Dry Gas is one of a number of Concentration Ratio quantities  defined by ISO 8000." ;
   qudt:symbol "x" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Mass Ratio of Water Vapour to Dry Gas"@en ;
@@ -656,7 +663,7 @@ quantitykind:MolalityOfSolute
   qudt:informativeReference "http://en.wikipedia.org/wiki/Molality"^^xsd:anyURI ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
   qudt:latexDefinition "\\(b_B = \\frac{n_B}{m_a}\\), where \\(n_B\\) is the amount of substance and \\(m_A\\) is the mass."^^qudt:LatexString ;
-  qudt:plainTextDescription "The \"Molality of Solute\" of a solution is defined as the amount of substance of solute divided by the mass in kg of the solvent." ;
+  qudt:plainTextDescription "The Molality of Solute of a solution is defined as the amount of substance of solute divided by the mass in kg of the solvent." ;
   qudt:symbol "b_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Molality of Solute"@en ;
@@ -669,7 +676,7 @@ quantitykind:MultiplicationFactor
   qudt:applicableUnit unit:UNITLESS ;
   qudt:informativeReference "http://en.wikipedia.org/wiki/Neutron_multiplication_factor"^^xsd:anyURI ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31895"^^xsd:anyURI ;
-  qudt:plainTextDescription "The \"Multiplication Factor\" is the ratio of the total number of fission or fission-dependent neutrons produced in a time interval to the total number of neutrons lost by absorption and leakage during the same interval." ;
+  qudt:plainTextDescription "The Multiplication Factor is the ratio of the total number of fission or fission-dependent neutrons produced in a time interval to the total number of neutrons lost by absorption and leakage during the same interval." ;
   qudt:symbol "k" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Multiplication Factor"@en ;
@@ -694,6 +701,7 @@ quantitykind:PressurePercentage
   qudt:applicableUnit unit:PERCENT ;
   qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
   qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
+  qudt:plainTextDescription "Pressure Percentage" ;
   qudt:qkdvDenominator qkdv:A0E0L-1I0M1H0T-2D0 ;
   qudt:qkdvNumerator qkdv:A0E0L-1I0M1H0T-2D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
@@ -715,6 +723,7 @@ quantitykind:PressureRatio
   qudt:applicableUnit unit:PSI-PER-PSI ;
   qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
   qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
+  qudt:plainTextDescription "Pressure Ratio" ;
   qudt:qkdvDenominator qkdv:A0E0L-1I0M1H0T-2D0 ;
   qudt:qkdvNumerator qkdv:A0E0L-1I0M1H0T-2D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
@@ -727,6 +736,7 @@ quantitykind:PressureRatio
 quantitykind:RelativeHumidity
   a qudt:QuantityKind , skos:Concept ;
   dcterms:description "\"Relative Humidity} is the ratio of the partial pressure of water vapor in an air-water mixture to the saturated vapor pressure of water at a prescribed temperature. The relative humidity of air depends not only on temperature but also on the pressure of the system of interest. \\textit{Relative Humidity} is also referred to as \\text{Relative Partial Pressure\". Relative partial pressure is often referred to as \\(RH\\) and expressed in percent."^^qudt:LatexString ;
+  qudt:plainTextDescription "Relative Humidity is the ratio of the partial pressure of water vapor in an air-water mixture to the saturated vapor pressure of water at a prescribed temperature. The relative humidity of air depends not only on temperature but also on the pressure of the system of interest. Relative Humidity is also referred to as Relative Partial Pressure. Relative partial pressure is often referred to as RH and expressed in percent." ;
   qudt:applicableUnit unit:UNITLESS ;
   qudt:informativeReference "http://en.wikipedia.org/wiki/Relative_humidity"^^xsd:anyURI ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
@@ -747,7 +757,7 @@ quantitykind:RelativeMassConcentrationOfVapour
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
   qudt:latexDefinition "\\(\\varphi = v / v_{sat}\\), where \\(v\\) is mass concentration of water vapour,  \\(v_{sat}\\) is its mass concentration of water vapour at saturation (at the same temperature). For normal cases, the relative partial pressure may be assumed to be equal to relative mass concentration of vapour."^^qudt:LatexString ;
   qudt:latexSymbol "\\(\\varphi\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "\"Relative Mass Concentration of Vapour} is one of a number of \\textit{Relative Concentration\" quantities  defined by ISO 8000." ;
+  qudt:plainTextDescription "Relative Mass Concentration of Vapour is one of a number of Relative Concentration quantities  defined by ISO 8000." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Relative Mass Concentration of Vapour"@en ;
   rdfs:seeAlso quantitykind:RelativePartialPressure ;
@@ -775,6 +785,7 @@ quantitykind:RelativePartialPressure
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
   qudt:latexDefinition """\\(\\varphi = p / p_{sat}\\), where \\(p\\) is partial pressure of vapour,  \\(p_{sat}\\) is thermodynamic temperature and \\(V\\) is its
 partial pressure at saturation (at the same temperature). Relative partial pressure is often referred to as \\(RH\\) and expressed in percent. \"Relative Partial Pressure} is also referred to as \\text{Relative Humidity\"."""^^qudt:LatexString ;
+  qudt:plainTextDescription "Relative partial pressure is often referred to as RH and expressed in percent. Relative Partial Pressure is also referred to as Relative Humidity.  varphi = p / p_sat, where p is partial pressure of vapour,  p_sat is thermodynamic temperature and V is its partial pressure at saturation (at the same temperature). " ;
   qudt:latexSymbol "\\(\\varphi\\)"^^qudt:LatexString ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Relative Partial Pressure"@en ;
@@ -792,6 +803,7 @@ quantitykind:ResistancePercentage
   qudt:qkdvDenominator qkdv:A0E-2L2I0M1H0T-3D0 ;
   qudt:qkdvNumerator qkdv:A0E-2L2I0M1H0T-3D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
+  qudt:plainTextDescription "Resistance Percentage" ;
   rdfs:label "Resistance Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -803,7 +815,7 @@ quantitykind:StatisticalWeight
   qudt:applicableUnit unit:UNITLESS ;
   qudt:informativeReference "http://en.wikipedia.org/wiki/Statistical_weight"^^xsd:anyURI ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
-  qudt:plainTextDescription "A \"Statistical Weight\" is the relative probability (possibly unnormalized) of a particular feature of a state." ;
+  qudt:plainTextDescription "A Statistical Weight is the relative probability (possibly unnormalized) of a particular feature of a state." ;
   qudt:symbol "g" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Statistical Weight"@en ;
@@ -885,6 +897,7 @@ quantitykind:TimePercentage
   qudt:qkdvDenominator qkdv:A0E0L0I0M0H0T1D0 ;
   qudt:qkdvNumerator qkdv:A0E0L0I0M0H0T1D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
+  qudt:plainTextDescription "Time Percentage"@en ;
   rdfs:label "Time Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -906,7 +919,7 @@ quantitykind:Turbidity
 quantitykind:Turns
   a qudt:QuantityKind , skos:Concept ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:plainTextDescription "\"Turns\" is the number of turns in a winding." ;
+  qudt:plainTextDescription "Turns is the number of turns in a winding." ;
   qudt:symbol "N" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   rdfs:label "Turns"@en ;
@@ -916,8 +929,8 @@ quantitykind:Turns
 
 quantitykind:Voltage
   a qudt:QuantityKind , skos:Concept ;
-  dcterms:description """\\(\\textit{Voltage}\\), also referred to as \\(\\textit{Electric Tension}\\), is the difference between electrical potentials of two points. For an electric field within a medium, \\(U_{ab} = - \\int_{r_a}^{r_b} E . {dr}\\), where \\(E\\) is electric field strength.
-For an irrotational electric field, the voltage is independent of the path between the two points \\(a\\) and \\(b\\)."""^^qudt:LatexString ;
+  dcterms:description """\\(\\textit{Voltage}\\), also referred to as \\(\\textit{Electric Tension}\\), is the difference between electrical potentials of two points. For an electric field within a medium, \\(U_{ab} = - \\int_{r_a}^{r_b} E . {dr}\\), where \\(E\\) is electric field strength. For an irrotational electric field, the voltage is independent of the path between the two points \\(a\\) and \\(b\\)."""^^qudt:LatexString ;
+  qudt:plainTextDescription "Voltage, also referred to as Electric Tension, is the difference between electrical potentials of two points. For an electric field within a medium." ;
   qudt:applicableUnit unit:KiloV ;
   qudt:applicableUnit unit:MegaV ;
   qudt:applicableUnit unit:MicroV ;
@@ -1110,6 +1123,7 @@ quantitykind:VolumePerUnitTime
   qudt:baseUnitDimensions "m^3/s" ;
   qudt:hasDimensionVector qkdv:A0E0L3I0M0H0T-1D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
+  qudt:plainTextDescription "Volume per Unit Time" ;
   rdfs:label "Volume per Unit Time"@en ;
   owl:sameAs quantitykind:VolumeFlowRate ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -1124,6 +1138,7 @@ quantitykind:VoltagePercentage
   qudt:qkdvDenominator qkdv:A0E-1L2I0M1H0T-3D0 ;
   qudt:qkdvNumerator qkdv:A0E-1L2I0M1H0T-3D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
+  qudt:plainTextDescription "Voltage Percentage" ;
   rdfs:label "Voltage Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
