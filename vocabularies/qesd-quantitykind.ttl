@@ -10,6 +10,8 @@
 @prefix qkdv: <http://qudt.org/vocab/dimensionvector/> .
 @prefix sou: <http://qudt.org/vocab/sou/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
 
 <https://linked.data.gov.au/def/qesd-qkd> a owl:Ontology ,
         skos:ConceptScheme ;
@@ -34,7 +36,7 @@
         quantitykind:ExtentOfReaction ,
         quantitykind:Period ,
         quantitykind:Dimensionless ,
-        quantitykind:DimensionlessRatio ,
+        #quantitykind:DimensionlessRatio ,
         quantitykind:Absorptance ,
         quantitykind:ActivityCoefficient ,
         quantitykind:AmountOfSubstanceFractionOfB ,
@@ -50,24 +52,27 @@
         quantitykind:RelativePartialPressure ,
         quantitykind:StatisticalWeight ,
         quantitykind:Turns ,
-        quantitykind:LengthPercentage ,
-        quantitykind:PressurePercentage ,
-        quantitykind:ResistancePercentage ,
-        quantitykind:TimePercentage ,
-        quantitykind:VoltagePercentage ,
-        quantitykind:PressureRatio ,
-        quantitykind:CelsiusTemperature ,
+        #quantitykind:LengthPercentage ,
+        #quantitykind:PressurePercentage ,
+        #quantitykind:ResistancePercentage ,
+        #quantitykind:TimePercentage ,
+        #quantitykind:VoltagePercentage ,
+        #quantitykind:PressureRatio ,
+        #quantitykind:CelsiusTemperature ,
         quantitykind:Temperature ,
         quantitykind:MassDensity ,
         quantitykind:ElectricConductivity ,
         quantitykind:Conductivity ,
-        quantitykind:AmountOfSubstancePerUnitMass ,
+        #quantitykind:AmountOfSubstancePerUnitMass ,
         quantitykind:IonicStrength ,
         quantitykind:MolalityOfSolute ,
         quantitykind:ForcePerArea ,
         quantitykind:Turbidity ,
-        quantitykind:Voltage ,
-        quantitykind:LiquidVolume
+        #quantitykind:Voltage ,
+        #quantitykind:LiquidVolume ,
+        quantitykind:Concentration ,
+        quantitykind:EnergyPerElectricCharge ,
+        quantitykind:ThermodynamicTemperature
     ;
 .
 
@@ -82,7 +87,7 @@ quantitykind:Absorptance
   qudt:systemDerivedQuantityKind qudt:SOQ_SI ;
   vaem:todo "belongs to SOQ-ISO" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Absorptance"@en ;
+  skos:prefLabel "Absorptance"@en ;
   skos:exactMatch <http://en.wikipedia.org/wiki/Absorbance> ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -97,7 +102,7 @@ quantitykind:ActivityCoefficient
   qudt:plainTextDescription "An Activity Coefficient is a factor used in thermodynamics to account for deviations from ideal behaviour in a mixture of chemical substances. In an ideal mixture, the interactions between each pair of chemical species are the same (or more formally, the enthalpy change of solution is zero) and, as a result, properties of the mixtures can be expressed directly in terms of simple concentrations or partial pressures of the substances present e.g. Raoult's law. Deviations from ideality are accommodated by modifying the concentration by an activity coefficient." ;
   qudt:symbol "f_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Activity Coefficient"@en ;
+  skos:prefLabel "Activity Coefficient"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -119,7 +124,7 @@ quantitykind:AmountOfSubstance
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
   qudt:symbol "n" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Amount of Substance"@en ;
+  skos:prefLabel "Amount of Substance"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -133,7 +138,7 @@ quantitykind:AmountOfSubstanceFractionOfB
   qudt:plainTextDescription "Amount of Substance of Fraction of B is defined as the amount of a constituent divided by the total amount of all constituents in a mixture." ;
   qudt:symbol "X_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Amount of Substance of Fraction of B"@en ;
+  skos:prefLabel "Amount of Substance of Fraction of B"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -153,9 +158,9 @@ quantitykind:AmountOfSubstancePerUnitMass
   qudt:hasDimensionVector qkdv:A1E0L0I0M-1H0T0D0 ;
   vaem:todo "fix the numerator and denominator dimensions" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Amount of Substance per Unit Mass"@en ;
+  skos:prefLabel "Amount of Substance per Unit Mass"@en ;
   skos:broader quantitykind:Concentration ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -185,7 +190,7 @@ quantitykind:Area
   qudt:hasDimensionVector qkdv:A0E0L2I0M0H0T0D0 ;
   qudt:plainTextDescription "Area is a quantity expressing the two-dimensional size of a defined part of a surface, typically a region bounded by a closed curve." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Area"@en ;
+  skos:prefLabel "Area"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -195,14 +200,13 @@ quantitykind:CelsiusTemperature
   qudt:applicableUnit unit:DEG_C ;
   qudt:hasDimensionVector qkdv:A0E0L0I0M0H1T0D0 ;
   qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
-  qudt:latexDefinition """\"Celsius Temperature\", the thermodynamic temperature \\(T_0\\), is exactly \\({0.01}{\\)kelvin below the thermodynamic temperature of the triple point of water.
-\\(t = T - T_0\\), where \\(T\\) is Thermodynamic Temperature and \\(T_0 = 273.15 K\\)."""^^qudt:LatexString ;
+  qudt:latexDefinition """\"Celsius Temperature\", the thermodynamic temperature \\(T_0\\), is exactly \\({0.01}{\\)kelvin below the thermodynamic temperature of the triple point of water. \\(t = T - T_0\\), where \\(T\\) is Thermodynamic Temperature and \\(T_0 = 273.15 K\\)."""^^qudt:LatexString ;
   qudt:plainTextDescription "Celsius Temperature, the thermodynamic temperature T_0, is exactly 0.01 kelvin below the thermodynamic temperature of the triple point of water." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Celsius temperature"@en ;
+  skos:prefLabel "Celsius temperature"@en ;
   skos:broader quantitykind:ThermodynamicTemperature ;
   prov:wasDerivedFrom quantitykind:ThermodynamicTemperature ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -228,7 +232,7 @@ quantitykind:Conductivity
   qudt:latexSymbol "\\(\\sigma\\)"^^qudt:LatexString ;
   qudt:plainTextDescription "Conductivity is a scalar or tensor quantity the product of which by the electric field strength in a medium is equal to the electric current density. For an isotropic medium the conductivity is a scalar quantity; for an anisotropic medium it is a tensor quantity." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Conductivity"@en ;
+  skos:prefLabel "Conductivity"@en ;
   rdfs:seeAlso quantitykind:ElectricCurrentDensity ;
   rdfs:seeAlso quantitykind:ElectricFieldStrength ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -266,7 +270,7 @@ quantitykind:Dimensionless
   qudt:informativeReference "http://en.wikipedia.org/wiki/Dimensionless_quantity"^^xsd:anyURI ;
   qudt:symbol "U" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Dimensionless"@en ;
+  skos:prefLabel "Dimensionless"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -286,9 +290,9 @@ quantitykind:DimensionlessRatio
   qudt:plainTextDescription "A ratio that has no dimensions." ;
   qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Dimensionless Ratio"@en ;
+  skos:prefLabel "Dimensionless Ratio"@en ;
   skos:broader quantitykind:Dimensionless ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -309,7 +313,7 @@ quantitykind:ElectricConductivity
   qudt:hasDimensionVector qkdv:A0E2L-3I0M-1H0T3D0 ;
   qudt:latexSymbol "\\(\\sigma\\)"^^qudt:LatexString ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Electric Conductivity"@en ;
+  skos:prefLabel "Electric Conductivity"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -323,7 +327,7 @@ quantitykind:ExtentOfReaction
   qudt:latexSymbol "\\(\\xi\\)"^^qudt:LatexString ;
   qudt:plainTextDescription "In physical chemistry, the Extent of Reaction is a quantity that measures the extent in which the reaction proceeds." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Extent of Reaction"@en ;
+  skos:prefLabel "Extent of Reaction"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -389,7 +393,7 @@ quantitykind:ForcePerArea
   qudt:symbol "p" ;
   qudt:url "http://en.wikipedia.org/wiki/Pressure"^^xsd:anyURI ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Force Per Area"@en ;
+  skos:prefLabel "Force Per Area"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -406,7 +410,7 @@ quantitykind:IonicStrength
   qudt:plainTextDescription "The Ionic Strength of a solution is a measure of the concentration of ions in that solution." ;
   qudt:symbol "I" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Ionic Strength"@en ;
+  skos:prefLabel "Ionic Strength"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -456,7 +460,7 @@ quantitykind:Length
   qudt:plainTextDescription "In geometric measurements, length most commonly refers to the est dimension of an object. In some contexts, the term length is reserved for a certain dimension of an object along which the length is measured." ;
   qudt:symbol "l" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Length"@en ;
+  skos:prefLabel "Length"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -470,9 +474,9 @@ quantitykind:LengthPercentage
   qudt:qkdvNumerator qkdv:A0E0L1I0M0H0T0D0 ;
   qudt:plainTextDescription "Length Percentage" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Length Percentage"@en ;
+  skos:prefLabel "Length Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -530,7 +534,7 @@ quantitykind:Mass
   qudt:informativeReference "http://en.wikipedia.org/wiki/Mass"^^xsd:anyURI ;
   qudt:symbol "m" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Mass"@en ;
+  skos:prefLabel "Mass"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -581,7 +585,7 @@ quantitykind:MassDensity
   qudt:latexSymbol "\\(\\rho\\)"^^qudt:LatexString ;
   qudt:plainTextDescription "The mass density or density of a material is its mass per unit volume." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Mass Density"@en ;
+  skos:prefLabel "Mass Density"@en ;
   owl:sameAs quantitykind:Density ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -596,7 +600,7 @@ quantitykind:MassFraction
   qudt:plainTextDescription "The Mass Fraction is the fraction of one substance with mass to the mass of the total mixture." ;
   qudt:symbol "w_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Mass Fraction"@en ;
+  skos:prefLabel "Mass Fraction"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -609,7 +613,7 @@ quantitykind:MassFractionOfDryMatter
   qudt:plainTextDescription "Mass Fraction of Dry Matter is one of a number of Concentration quantities defined by ISO 8000." ;
   qudt:symbol "w_d" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Mass Fraction of Dry Matter"@en ;
+  skos:prefLabel "Mass Fraction of Dry Matter"@en ;
   rdfs:seeAlso quantitykind:MassFractionOfWater ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -623,7 +627,7 @@ quantitykind:MassFractionOfWater
   qudt:plainTextDescription "Mass Fraction of Water is one of a number of Concentration quantities defined by ISO 8000." ;
   qudt:symbol "w_{H_2o}" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Mass Fraction of Water"@en ;
+  skos:prefLabel "Mass Fraction of Water"@en ;
   rdfs:seeAlso quantitykind:MassFractionOfDryMatter ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -637,7 +641,7 @@ quantitykind:MassRatioOfWaterToDryMatter
   qudt:plainTextDescription "Mass Ratio of Water to Dry Matter is one of a number of Concentration Ratio quantities  defined by ISO 8000." ;
   qudt:symbol "u" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Mass Concentration of Water To Dry Matter"@en ;
+  skos:prefLabel "Mass Concentration of Water To Dry Matter"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -650,7 +654,7 @@ quantitykind:MassRatioOfWaterVapourToDryGas
   qudt:plainTextDescription "Mass Ratio of Water Vapour to Dry Gas is one of a number of Concentration Ratio quantities  defined by ISO 8000." ;
   qudt:symbol "x" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Mass Ratio of Water Vapour to Dry Gas"@en ;
+  skos:prefLabel "Mass Ratio of Water Vapour to Dry Gas"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -666,7 +670,7 @@ quantitykind:MolalityOfSolute
   qudt:plainTextDescription "The Molality of Solute of a solution is defined as the amount of substance of solute divided by the mass in kg of the solvent." ;
   qudt:symbol "b_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Molality of Solute"@en ;
+  skos:prefLabel "Molality of Solute"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -679,7 +683,7 @@ quantitykind:MultiplicationFactor
   qudt:plainTextDescription "The Multiplication Factor is the ratio of the total number of fission or fission-dependent neutrons produced in a time interval to the total number of neutrons lost by absorption and leakage during the same interval." ;
   qudt:symbol "k" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Multiplication Factor"@en ;
+  skos:prefLabel "Multiplication Factor"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -691,7 +695,7 @@ quantitykind:Period
   qudt:plainTextDescription "Duration of one cycle of a periodic phenomenon." ;
   vaem:todo "belongs to SOQ-ISO" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Period"@en ;
+  skos:prefLabel "Period"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -705,9 +709,9 @@ quantitykind:PressurePercentage
   qudt:qkdvDenominator qkdv:A0E0L-1I0M1H0T-2D0 ;
   qudt:qkdvNumerator qkdv:A0E0L-1I0M1H0T-2D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Pressure Percentage"@en ;
+  skos:prefLabel "Pressure Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -727,9 +731,9 @@ quantitykind:PressureRatio
   qudt:qkdvDenominator qkdv:A0E0L-1I0M1H0T-2D0 ;
   qudt:qkdvNumerator qkdv:A0E0L-1I0M1H0T-2D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Pressure Ratio"@en ;
+  skos:prefLabel "Pressure Ratio"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -743,7 +747,7 @@ quantitykind:RelativeHumidity
   qudt:latexDefinition "\\(\\varphi = p / p_{sat}\\), where \\(p\\) is partial pressure of vapour,  \\(p_{sat}\\) is thermodynamic temperature and \\(V\\) is its partial pressure at saturation (at the same temperature). Relative partial pressure is often referred to as \\(RH\\) and expressed in percent. \"Relative Humidity} is also referred to as \\text{Relative Partial Pressure\"."^^qudt:LatexString ;
   qudt:latexSymbol "\\(\\varphi\\)"^^qudt:LatexString ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Relative Humidity"@en ;
+  skos:prefLabel "Relative Humidity"@en ;
   rdfs:seeAlso quantitykind:AbsoluteHumidity ;
   owl:sameAs quantitykind:RelativePartialPressure ;
   skos:altLabel "RH" ;
@@ -759,7 +763,7 @@ quantitykind:RelativeMassConcentrationOfVapour
   qudt:latexSymbol "\\(\\varphi\\)"^^qudt:LatexString ;
   qudt:plainTextDescription "Relative Mass Concentration of Vapour is one of a number of Relative Concentration quantities  defined by ISO 8000." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Relative Mass Concentration of Vapour"@en ;
+  skos:prefLabel "Relative Mass Concentration of Vapour"@en ;
   rdfs:seeAlso quantitykind:RelativePartialPressure ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -774,7 +778,7 @@ quantitykind:RelativeMassDensity
   qudt:plainTextDescription "Relative density, or specific gravity, is the ratio of the density (mass of a unit volume) of a substance to the density of a given reference material." ;
   qudt:symbol "d" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Relative Mass Density"@en ;
+  skos:prefLabel "Relative Mass Density"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -788,7 +792,7 @@ partial pressure at saturation (at the same temperature). Relative partial press
   qudt:plainTextDescription "Relative partial pressure is often referred to as RH and expressed in percent. Relative Partial Pressure is also referred to as Relative Humidity.  varphi = p / p_sat, where p is partial pressure of vapour,  p_sat is thermodynamic temperature and V is its partial pressure at saturation (at the same temperature). " ;
   qudt:latexSymbol "\\(\\varphi\\)"^^qudt:LatexString ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Relative Partial Pressure"@en ;
+  skos:prefLabel "Relative Partial Pressure"@en ;
   owl:sameAs quantitykind:RelativeHumidity ;
   skos:altLabel "RH" ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -804,9 +808,9 @@ quantitykind:ResistancePercentage
   qudt:qkdvNumerator qkdv:A0E-2L2I0M1H0T-3D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   qudt:plainTextDescription "Resistance Percentage" ;
-  rdfs:label "Resistance Percentage"@en ;
+  skos:prefLabel "Resistance Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -818,7 +822,7 @@ quantitykind:StatisticalWeight
   qudt:plainTextDescription "A Statistical Weight is the relative probability (possibly unnormalized) of a particular feature of a state." ;
   qudt:symbol "g" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Statistical Weight"@en ;
+  skos:prefLabel "Statistical Weight"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -835,7 +839,7 @@ quantitykind:Temperature
   qudt:hasDimensionVector qkdv:A0E0L0I0M0H1T0D0 ;
   qudt:plainTextDescription "Temperature is a physical property of matter that quantitatively expresses the common notions of hot and cold. Objects of low temperature are cold, while various degrees of higher temperatures are referred to as warm or hot. Heat spontaneously flows from bodies of a higher temperature to bodies of lower temperature, at a rate that increases with the temperature difference and the thermal conductivity." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Temperature"@en ;
+  skos:prefLabel "Temperature"@en ;
   rdfs:seeAlso quantitykind:ThermodynamicTemperature ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -884,7 +888,7 @@ quantitykind:Time
   qudt:plainTextDescription "Time is a basic component of the measuring system used to sequence events, to compare the durations of events and the intervals between them, and to quantify the motions of objects." ;
   qudt:symbol "t" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Time"@en ;
+  skos:prefLabel "Time"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -898,9 +902,9 @@ quantitykind:TimePercentage
   qudt:qkdvNumerator qkdv:A0E0L0I0M0H0T1D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   qudt:plainTextDescription "Time Percentage"@en ;
-  rdfs:label "Time Percentage"@en ;
+  skos:prefLabel "Time Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -911,7 +915,7 @@ quantitykind:Turbidity
   qudt:informativeReference "http://en.wikipedia.org/wiki/Turbidity"^^xsd:anyURI ;
   qudt:plainTextDescription "Turbidity is the cloudiness or haziness of a fluid, or of air, caused by individual particles (suspended solids) that are generally invisible to the naked eye, similar to smoke in air. Turbidity in open water is often caused by phytoplankton and the measurement of turbidity is a key test of water quality. The higher the turbidity, the higher the risk of the drinkers developing gastrointestinal diseases, especially for immune-compromised people, because contaminants like virus or bacteria can become attached to the suspended solid. The suspended solids interfere with water disinfection with chlorine because the particles act as shields for the virus and bacteria. Similarly suspended solids can protect bacteria from UV sterilisation of water. Fluids can contain suspended solid matter consisting of particles of many different sizes. While some suspended material will be large enough and heavy enough to settle rapidly to the bottom container if a liquid sample is left to stand (the settleable solids), very small particles will settle only very slowly or not at all if the sample is regularly agitated or the particles are colloidal. These small solid particles cause the liquid to appear turbid." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Turbidity"@en ;
+  skos:prefLabel "Turbidity"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -922,7 +926,7 @@ quantitykind:Turns
   qudt:plainTextDescription "Turns is the number of turns in a winding." ;
   qudt:symbol "N" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Turns"@en ;
+  skos:prefLabel "Turns"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -941,10 +945,10 @@ quantitykind:Voltage
   qudt:latexSymbol "\\(\\(U_{ab}\\)\\)"^^qudt:LatexString ;
   qudt:symbol "U" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Voltage"@en ;
+  skos:prefLabel "Voltage"@en ;
   owl:sameAs quantitykind:EnergyPerElectricCharge ;
   skos:broader quantitykind:EnergyPerElectricCharge ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -994,7 +998,7 @@ quantitykind:Volume
   qudt:hasDimensionVector qkdv:A0E0L3I0M0H0T0D0 ;
   qudt:plainTextDescription "The volume of a solid object is the three-dimensional concept of how much space it occupies, often quantified numerically. One-dimensional figures (such as lines) and two-dimensional shapes (such as squares) are assigned zero volume in the three-dimensional space." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Volume"@en ;
+  skos:prefLabel "Volume"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
@@ -1103,7 +1107,7 @@ quantitykind:VolumeFlowRate
   qudt:plainTextDescription "Volumetric Flow Rate, (also known as volume flow rate, rate of fluid flow or volume velocity) is the volume of fluid which passes through a given surface per unit time." ;
   qudt:symbol "q_V" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Volume Flow Rate"@en ;
+  skos:prefLabel "Volume Flow Rate"@en ;
   owl:sameAs quantitykind:VolumePerUnitTime ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -1124,7 +1128,7 @@ quantitykind:VolumePerUnitTime
   qudt:hasDimensionVector qkdv:A0E0L3I0M0H0T-1D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   qudt:plainTextDescription "Volume per Unit Time" ;
-  rdfs:label "Volume per Unit Time"@en ;
+  skos:prefLabel "Volume per Unit Time"@en ;
   owl:sameAs quantitykind:VolumeFlowRate ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -1139,9 +1143,9 @@ quantitykind:VoltagePercentage
   qudt:qkdvNumerator qkdv:A0E-1L2I0M1H0T-3D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   qudt:plainTextDescription "Voltage Percentage" ;
-  rdfs:label "Voltage Percentage"@en ;
+  skos:prefLabel "Voltage Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -1161,8 +1165,62 @@ quantitykind:LiquidVolume
   qudt:informativeReference "http://www.ehow.com/facts_6371078_liquid-volume_.html"^^xsd:anyURI ;
   qudt:plainTextDescription "Liquid volume is the volume of a given amount of liquid, that is, the amount of space a liquid takes up. There are a number of different units used to measure liquid volume, but most of them fall under either the metric system of measurement or the Imperial system of measurement." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  rdfs:label "Liquid Volume"@en ;
+  skos:prefLabel "Liquid Volume"@en ;
   skos:broader quantitykind:Volume ;
+  #kos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
+.
+
+quantitykind:Concentration
+  a qudt:QuantityKind , skos:Concept ;
+  qudt:dbpediaMatch "http://dbpedia.org/resource/Concentration"^^xsd:anyURI ;
+  qudt:informativeReference "http://en.wikipedia.org/wiki/Concentration"^^xsd:anyURI ;
+  qudt:plainTextDescription "In chemistry, concentration is defined as the abundance of a constituent divided by the total volume of a mixture. Furthermore, in chemistry, four types of mathematical description can be distinguished: mass concentration, molar concentration, number concentration, and volume concentration. The term concentration can be applied to any kind of chemical mixture, but most frequently it refers to solutes in solutions." ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
+  skos:prefLabel "Concentration"@en ;
+  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
+.
+
+quantitykind:EnergyPerElectricCharge
+  a qudt:QuantityKind ;
+  dcterms:description "Voltage is a representation of the electric potential energy per unit charge. If a unit of electrical charge were placed in a location, the voltage indicates the potential energy of it at that point. In other words, it is a measurement of the energy contained within an electric field, or an electric circuit, at a given point. Voltage is a scalar quantity. The SI unit of voltage is the volt, such that \\(1 volt = 1 joule/coulomb\\)."^^qudt:LatexString ;
+  qudt:plainTextDescription "Voltage is a representation of the electric potential energy per unit charge. If a unit of electrical charge were placed in a location, the voltage indicates the potential energy of it at that point. In other words, it is a measurement of the energy contained within an electric field, or an electric circuit, at a given point. Voltage is a scalar quantity. The SI unit of voltage is the volt, such that 1 volt = 1 joule/coulomb.";
+  qudt:applicableUnit unit:PlanckVolt ;
+  qudt:applicableUnit unit:V ;
+  qudt:applicableUnit unit:V_Ab ;
+  qudt:applicableUnit unit:V_Stat ;
+  qudt:baseUnitDimensions "L^2 \\cdot M/I \\cdot T^3" ;
+  qudt:baseUnitDimensions "kg \\cdot m^2/A \\cdot s^3" ;
+  qudt:hasDimensionVector qkdv:A0E-1L2I0M1H0T-3D0 ;
+  qudt:informativeReference "http://physics.about.com/od/glossary/g/voltage.htm"^^xsd:anyURI ;
+  qudt:symbol "V" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
+  skos:prefLabel "Energy per electric charge"@en ;
+  owl:sameAs quantitykind:ElectricPotential ;
+  owl:sameAs quantitykind:ElectricPotentialDifference ;
+  owl:sameAs quantitykind:Voltage ;
+  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
+.
+
+quantitykind:ThermodynamicTemperature
+  a qudt:QuantityKind ;
+  qudt:applicableUnit unit:DEG_F ;
+  qudt:applicableUnit unit:DEG_R ;
+  qudt:applicableUnit unit:K ;
+  qudt:applicableUnit unit:MilliDEG_C ;
+  qudt:applicableUnit unit:PlanckTemperature ;
+  qudt:baseUnitDimensions "K" ;
+  qudt:baseUnitDimensions "\\Theta" ;
+  qudt:dbpediaMatch "http://dbpedia.org/page/Thermodynamic_temperature"^^xsd:anyURI ;
+  qudt:hasDimensionVector qkdv:A0E0L0I0M0H1T0D0 ;
+  qudt:latexSymbol "\\(\\Theta\\)"^^qudt:LatexString ;
+  qudt:plainTextDescription "Thermodynamic temperature is the absolute measure of temperature and is one of the principal parameters of thermodynamics. Temperature is a physical property of matter that quantitatively expresses the common notions of hot and cold. In thermodynamics, in a system of which the entropy is considered as an independent externally controlled variable, absolute, or thermodynamic temperature is defined as the derivative of the internal energy with respect to the entropy. This is a base quantity in the International System of Quantities, ISQ, on which the International System of Units, SI, is based." ;
+  qudt:symbol "T" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
+  skos:prefLabel "Thermodynamic Temperature"@en ;
+  rdfs:seeAlso quantitykind:Temperature ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
