@@ -13,13 +13,13 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 
-<https://linked.data.gov.au/def/qesd-qkd> a owl:Ontology ,
-        skos:ConceptScheme ;
+<https://linked.data.gov.au/def/qesd-qkd> 
+    a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2021-04-16"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/des> ;
-    dcterms:modified "2021-04-16"^^xsd:date ;
+    dcterms:modified "2021-04-27"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/des> ;
-    dcterms:source "Derived from QUDT (http://qudt.org/vocab/quantitykind)"@en ;
+    dcterms:provenance "Derived from QUDT (http://qudt.org/vocab/quantitykind)"@en ;
     skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to Queensland Environmental Science Data (QESD)."@en ;
     skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
     skos:prefLabel "Queensland Environmental Science Data Profile of QUDT Units"@en ;
@@ -42,23 +42,15 @@
         quantitykind:AmountOfSubstanceFractionOfB ,
         quantitykind:MassFraction ,
         quantitykind:MassFractionOfDryMatter ,
-        quantitykind:MassFractionOfWater ,
-        quantitykind:MassRatioOfWaterToDryMatter ,
-        quantitykind:MassRatioOfWaterVapourToDryGas ,
         quantitykind:MultiplicationFactor ,
         quantitykind:RelativeHumidity ,
-        quantitykind:RelativeMassConcentrationOfVapour ,
         quantitykind:RelativeMassDensity ,
         quantitykind:RelativePartialPressure ,
         quantitykind:StatisticalWeight ,
-        quantitykind:Turns ,
         #quantitykind:LengthPercentage ,
         #quantitykind:PressurePercentage ,
-        #quantitykind:ResistancePercentage ,
         #quantitykind:TimePercentage ,
-        #quantitykind:VoltagePercentage ,
         #quantitykind:PressureRatio ,
-        #quantitykind:CelsiusTemperature ,
         quantitykind:Temperature ,
         quantitykind:MassDensity ,
         quantitykind:ElectricConductivity ,
@@ -71,21 +63,14 @@
         #quantitykind:Voltage ,
         #quantitykind:LiquidVolume ,
         quantitykind:Concentration ,
-        quantitykind:EnergyPerElectricCharge ,
-        quantitykind:ThermodynamicTemperature
+        quantitykind:EnergyPerElectricCharge 
     ;
 .
 
 quantitykind:Absorptance
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Absorptance is the ratio of the radiation absorbed by a surface to that incident upon it. Also known as absorbance." ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:informativeReference "https://en.wikipedia.org/wiki/Absorptance"^^xsd:anyURI ;
-  qudt:informativeReference "https://www.researchgate.net/post/Absorptance_or_absorbance"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(\\alpha = \\frac{\\Phi_a}{\\Phi_m}\\), where \\(\\Phi_a\\) is the absorbed radiant flux or the absorbed luminous flux, and \\(\\Phi_m\\) is the radiant flux or luminous flux of the incident radiation."^^qudt:LatexString ;
-  qudt:latexSymbol "\\(\\alpha\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "Absorptance is the ratio of the radiation absorbed by a surface to that incident upon it. Also known as absorbance." ;
-  qudt:systemDerivedQuantityKind qudt:SOQ_SI ;
-  vaem:todo "belongs to SOQ-ISO" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Absorptance"@en ;
   skos:exactMatch <http://en.wikipedia.org/wiki/Absorbance> ;
@@ -95,12 +80,8 @@ quantitykind:Absorptance
 
 quantitykind:ActivityCoefficient
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "An Activity Coefficient is a factor used in thermodynamics to account for deviations from ideal behaviour in a mixture of chemical substances. In an ideal mixture, the interactions between each pair of chemical species are the same (or more formally, the enthalpy change of solution is zero) and, as a result, properties of the mixtures can be expressed directly in terms of simple concentrations or partial pressures of the substances present e.g. Raoult's law. Deviations from ideality are accommodated by modifying the concentration by an activity coefficient." ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Activity_coefficient"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(f_B = \\frac{\\lambda_B}{(\\lambda_B^*x_B)}\\), where \\(\\lambda_B\\) the absolute activity of substance \\(B\\), \\(\\lambda_B^*\\) is the absolute activity of the pure substance \\(B\\) at the same temperature and pressure, and \\(x_B\\) is the amount-of-substance fraction of substance \\(B\\)."^^qudt:LatexString ;
-  qudt:plainTextDescription "An Activity Coefficient is a factor used in thermodynamics to account for deviations from ideal behaviour in a mixture of chemical substances. In an ideal mixture, the interactions between each pair of chemical species are the same (or more formally, the enthalpy change of solution is zero) and, as a result, properties of the mixtures can be expressed directly in terms of simple concentrations or partial pressures of the substances present e.g. Raoult's law. Deviations from ideality are accommodated by modifying the concentration by an activity coefficient." ;
-  qudt:symbol "f_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Activity Coefficient"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -109,20 +90,8 @@ quantitykind:ActivityCoefficient
 
 quantitykind:AmountOfSubstance
   a qudt:QuantityKind , skos:Concept ;
-  dcterms:description "\"Amount of Substance\" is a standards-defined quantity that measures the size of an ensemble of elementary entities, such as atoms, molecules, electrons, and other particles. It is sometimes referred to as chemical amount. The International System of Units (SI) defines the amount of substance to be proportional to the number of elementary entities present. The SI unit for amount of substance is \\(mole\\). It has the unit symbol \\(mol\\). The mole is defined as the amount of substance that contains an equal number of elementary entities as there are atoms in 0.012kg of the isotope carbon-12. This number is called Avogadro's number and has the value \\(6.02214179(30) \\times 10\\). The only other unit of amount of substance in current use is the \\(pound-mole\\) with the symbol \\(lb-mol\\), which is sometimes used in chemical engineering in the United States. One \\(pound-mole\\) is exactly \\(453.59237 mol\\)."^^qudt:LatexString ;
-  qudt:plainTextDescription "Amount of Substance is a standards-defined quantity that measures the size of an ensemble of elementary entities, such as atoms, molecules, electrons, and other particles. It is sometimes referred to as chemical amount. The International System of Units (SI) defines the amount of substance to be proportional to the number of elementary entities present. The SI unit for amount of substance is mole. It has the unit symbol mol. The mole is defined as the amount of substance that contains an equal number of elementary entities as there are atoms in 0.012kg of the isotope carbon-12. This number is called Avogadro's number. and has the value 6.02214179(30) times 10 The only other unit of amount of substance in current use is the pound-mole with the symbol lb-mol, which is sometimes used in chemical engineering in the United States. One pound-mole is exactly 453.59237 mol." ;
-  qudt:applicableUnit unit:IU ;
-  qudt:applicableUnit unit:KiloMOL ;
+  skos:definition "Amount of Substance is a standards-defined quantity that measures the size of an ensemble of elementary entities, such as atoms, molecules, electrons, and other particles. It is sometimes referred to as chemical amount. The International System of Units (SI) defines the amount of substance to be proportional to the number of elementary entities present. The SI unit for amount of substance is mole. It has the unit symbol mol. The mole is defined as the amount of substance that contains an equal number of elementary entities as there are atoms in 0.012kg of the isotope carbon-12. This number is called Avogadro's number. and has the value 6.02214179(30) times 10 The only other unit of amount of substance in current use is the pound-mole with the symbol lb-mol, which is sometimes used in chemical engineering in the United States. One pound-mole is exactly 453.59237 mol." ;
   qudt:applicableUnit unit:MOL ;
-  qudt:applicableUnit unit:MicroMOL ;
-  qudt:applicableUnit unit:MilliMOL ;
-  qudt:baseUnitDimensions "M" ;
-  qudt:baseUnitDimensions "mol" ;
-  qudt:dbpediaMatch "http://dbpedia.org/resource/Amount_of_substance"^^xsd:anyURI ;
-  qudt:hasDimensionVector qkdv:A1E0L0I0M0H0T0D0 ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Amount_of_substance"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
-  qudt:symbol "n" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Amount of Substance"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -131,12 +100,8 @@ quantitykind:AmountOfSubstance
 
 quantitykind:AmountOfSubstanceFractionOfB
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Amount of Substance of Fraction of B is defined as the amount of a constituent divided by the total amount of all constituents in a mixture." ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Amount_fraction"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(x_B = \\frac{n_B}{n}\\), where \\(n_B\\) is the amount of substance \\(B\\) and \\(n\\) is the total amount of substance."^^qudt:LatexString ;
-  qudt:plainTextDescription "Amount of Substance of Fraction of B is defined as the amount of a constituent divided by the total amount of all constituents in a mixture." ;
-  qudt:symbol "X_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Amount of Substance of Fraction of B"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -145,130 +110,41 @@ quantitykind:AmountOfSubstanceFractionOfB
 
 quantitykind:AmountOfSubstancePerUnitMass
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Amount of Substance per Unit of Mass." ;
   qudt:applicableUnit unit:CentiMOL-PER-KiloGM ;
-  qudt:applicableUnit unit:FemtoMOL-PER-KiloGM ;
-  qudt:applicableUnit unit:MOL-PER-KiloGM ;
-  qudt:applicableUnit unit:MicroMOL-PER-KiloGM ;
-  qudt:applicableUnit unit:MilliMOL-PER-GM ;
-  qudt:applicableUnit unit:MilliMOL-PER-KiloGM ;
-  qudt:applicableUnit unit:NanoMOL-PER-KiloGM ;
-  qudt:applicableUnit unit:PicoMOL-PER-KiloGM ;
-  qudt:plainTextDescription "Amount of Substance per Unit of Mass." ;
-  qudt:baseUnitDimensions "N/M" ;
-  qudt:hasDimensionVector qkdv:A1E0L0I0M-1H0T0D0 ;
-  vaem:todo "fix the numerator and denominator dimensions" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Amount of Substance per Unit Mass"@en ;
   skos:broader quantitykind:Concentration ;
-  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
 quantitykind:Area
   a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:AC ;
-  qudt:applicableUnit unit:ARE ;
-  qudt:applicableUnit unit:BARN ;
+  skos:definition "Area is a quantity expressing the two-dimensional size of a defined part of a surface, typically a region bounded by a closed curve." ;
   qudt:applicableUnit unit:CentiM2 ;
-  qudt:applicableUnit unit:DecaARE ;
-  qudt:applicableUnit unit:DeciM2 ;
-  qudt:applicableUnit unit:FT2 ;
   qudt:applicableUnit unit:HA ;
-  qudt:applicableUnit unit:IN2 ;
   qudt:applicableUnit unit:M2 ;
-  qudt:applicableUnit unit:MI2 ;
-  qudt:applicableUnit unit:MIL_Circ ;
-  qudt:applicableUnit unit:MicroM2 ;
-  qudt:applicableUnit unit:MilliM2 ;
-  qudt:applicableUnit unit:NanoM2 ;
-  qudt:applicableUnit unit:PlanckArea ;
-  qudt:applicableUnit unit:YD2 ;
-  qudt:baseCGSUnitDimensions "cm^2" ;
-  qudt:baseSIUnitDimensions "\\(m^2\\)"^^qudt:LatexString ;
-  qudt:baseUnitDimensions "L^2" ;
-  qudt:dbpediaMatch "http://dbpedia.org/resource/Area"^^xsd:anyURI ;
-  qudt:hasDimensionVector qkdv:A0E0L2I0M0H0T0D0 ;
-  qudt:plainTextDescription "Area is a quantity expressing the two-dimensional size of a defined part of a surface, typically a region bounded by a closed curve." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Area"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
-quantitykind:CelsiusTemperature
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:DEG_C ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H1T0D0 ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
-  qudt:latexDefinition """\"Celsius Temperature\", the thermodynamic temperature \\(T_0\\), is exactly \\({0.01}{\\)kelvin below the thermodynamic temperature of the triple point of water. \\(t = T - T_0\\), where \\(T\\) is Thermodynamic Temperature and \\(T_0 = 273.15 K\\)."""^^qudt:LatexString ;
-  qudt:plainTextDescription "Celsius Temperature, the thermodynamic temperature T_0, is exactly 0.01 kelvin below the thermodynamic temperature of the triple point of water." ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  skos:prefLabel "Celsius temperature"@en ;
-  skos:broader quantitykind:ThermodynamicTemperature ;
-  prov:wasDerivedFrom quantitykind:ThermodynamicTemperature ;
-  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
-  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
-.
-
 quantitykind:Conductivity
   a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:DeciS-PER-M ;
-  qudt:applicableUnit unit:KiloS-PER-M ;
-  qudt:applicableUnit unit:MegaS-PER-M ;
+  skos:definition "Conductivity is a scalar or tensor quantity the product of which by the electric field strength in a medium is equal to the electric current density. For an isotropic medium the conductivity is a scalar quantity; for an anisotropic medium it is a tensor quantity." ;
   qudt:applicableUnit unit:MicroS-PER-CentiM ;
-  qudt:applicableUnit unit:MicroS-PER-M ;
-  qudt:applicableUnit unit:MilliS-PER-CentiM ;
-  qudt:applicableUnit unit:MilliS-PER-M ;
-  qudt:applicableUnit unit:NanoS-PER-CentiM ;
-  qudt:applicableUnit unit:NanoS-PER-M ;
-  qudt:applicableUnit unit:PicoS-PER-M ;
-  qudt:applicableUnit unit:S-PER-CentiM ;
-  qudt:applicableUnit unit:S-PER-M ;
-  qudt:hasDimensionVector qkdv:A0E2L-3I0M-1H0T3D0 ;
-  qudt:informativeReference "http://www.electropedia.org/iev/iev.nsf/display?openform&ievref=121-12-03"^^xsd:anyURI ;
-  qudt:informativeReference "http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=31891"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(\\mathbf{J} = \\sigma \\mathbf{E}\\), where \\(\\mathbf{J}\\) is electric current density, and \\(\\mathbf{E}\\) is electric field strength."^^qudt:LatexString ;
-  qudt:latexSymbol "\\(\\gamma\\)"^^qudt:LatexString ;
-  qudt:latexSymbol "\\(\\sigma\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "Conductivity is a scalar or tensor quantity the product of which by the electric field strength in a medium is equal to the electric current density. For an isotropic medium the conductivity is a scalar quantity; for an anisotropic medium it is a tensor quantity." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Conductivity"@en ;
-  rdfs:seeAlso quantitykind:ElectricCurrentDensity ;
-  rdfs:seeAlso quantitykind:ElectricFieldStrength ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
 quantitykind:Dimensionless
   a qudt:QuantityKind , skos:Concept ;
-  dcterms:description "In dimensional analysis, a dimensionless quantity or quantity of dimension one is a quantity without an associated physical dimension. It is thus a \"pure\" number, and as such always has a dimension of 1. Dimensionless quantities are widely used in mathematics, physics, engineering, economics, and in everyday life (such as in counting). Numerous well-known quantities, such as \\(\\pi\\), \\(\\epsilon\\), and \\(\\psi\\), are dimensionless. By contrast, non-dimensionless quantities are measured in units of length, area, time, etc. Dimensionless quantities are often defined as products or ratios of quantities that are not dimensionless, but whose dimensions cancel out when their powers are multiplied."^^qudt:LatexString ;
-  qudt:plainTextDescription "In dimensional analysis, a dimensionless quantity or quantity of dimension one is a quantity without an associated physical dimension. It is thus a pure number, and as such always has a dimension of 1. Dimensionless quantities are widely used in mathematics, physics, engineering, economics, and in everyday life (such as in counting). Numerous well-known quantities, such as pi, epsilon, and psi, are dimensionless. By contrast, non-dimensionless quantities are measured in units of length, area, time, etc. Dimensionless quantities are often defined as products or ratios of quantities that are not dimensionless, but whose dimensions cancel out when their powers are multiplied." ;
-  qudt:applicableUnit unit:DECADE ;
-  qudt:applicableUnit unit:ExaBYTE ;
-  qudt:applicableUnit unit:ExbiBYTE ;
-  qudt:applicableUnit unit:GibiBYTE ;
-  qudt:applicableUnit unit:GigaBYTE ;
-  qudt:applicableUnit unit:KibiBYTE ;
-  qudt:applicableUnit unit:KiloBYTE ;
-  qudt:applicableUnit unit:KiloBYTE-PER-SEC ;
-  qudt:applicableUnit unit:MebiBYTE ;
-  qudt:applicableUnit unit:MegaBYTE ;
-  qudt:applicableUnit unit:NP ;
+  skos:definition "In dimensional analysis, a dimensionless quantity or quantity of dimension one is a quantity without an associated physical dimension. It is thus a pure number, and as such always has a dimension of 1. Dimensionless quantities are widely used in mathematics, physics, engineering, economics, and in everyday life (such as in counting). Numerous well-known quantities, such as pi, epsilon, and psi, are dimensionless. By contrast, non-dimensionless quantities are measured in units of length, area, time, etc. Dimensionless quantities are often defined as products or ratios of quantities that are not dimensionless, but whose dimensions cancel out when their powers are multiplied." ;
   qudt:applicableUnit unit:NUM ;
-  qudt:applicableUnit unit:OCT ;
-  qudt:applicableUnit unit:PebiBYTE ;
-  qudt:applicableUnit unit:PetaBYTE ;
-  qudt:applicableUnit unit:SUSCEPTIBILITY_ELEC ;
-  qudt:applicableUnit unit:SUSCEPTIBILITY_MAG ;
-  qudt:applicableUnit unit:TebiBYTE ;
-  qudt:applicableUnit unit:TeraBYTE ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:baseUnitDimensions "" ;
-  qudt:baseUnitDimensions "U" ;
-  qudt:dbpediaMatch "http://dbpedia.org/resource/Dimensionless_quantity"^^xsd:anyURI ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Dimensionless_quantity"^^xsd:anyURI ;
-  qudt:symbol "U" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Dimensionless"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -277,41 +153,20 @@ quantitykind:Dimensionless
 
 quantitykind:DimensionlessRatio
   a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:DeciB_M ;
-  qudt:applicableUnit unit:GR ;
+  skos:definition "A ratio that has no dimensions." ;
   qudt:applicableUnit unit:NUM ;
   qudt:applicableUnit unit:PERCENT ;
-  qudt:applicableUnit unit:PPB ;
-  qudt:applicableUnit unit:PPM ;
-  qudt:applicableUnit unit:PPTH ;
-  qudt:applicableUnit unit:PPTR ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
-  qudt:plainTextDescription "A ratio that has no dimensions." ;
-  qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Dimensionless Ratio"@en ;
   skos:broader quantitykind:Dimensionless ;
-  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
 quantitykind:ElectricConductivity
   a qudt:QuantityKind , skos:Concept ;
-  dcterms:description "\"Electric Conductivity} or \\textit{Specific Conductance\" is a measure of a material's ability to conduct an electric current. When an electrical potential difference is placed across a conductor, its movable charges flow, giving rise to an electric current. The conductivity \\(\\sigma\\) is defined as the ratio of the electric current density \\(J\\) to the electric field \\(E\\): \\(J = \\sigma E\\). In isotropic materials, conductivity is scalar-valued, however in general, conductivity is a tensor-valued quantity."^^qudt:LatexString ;
-  qudt:plainTextDescription "Electric Conductivity or Specific Conductance is a measure of a material's ability to conduct an electric current. When an electrical potential difference is placed across a conductor, its movable charges flow, giving rise to an electric current. The conductivity \\(\\sigma\\) is defined as the ratio of the electric current density (J) to the electric field (E): (J = sigma E). In isotropic materials, conductivity is scalar-valued, however in general, conductivity is a tensor-valued quantity." ;
-  qudt:applicableUnit unit:A_Ab-CentiM2 ;
-  qudt:applicableUnit unit:MHO ;
-  qudt:applicableUnit unit:MHO_Stat ;
-  qudt:applicableUnit unit:MicroMHO ;
+  skos:definition "Electric Conductivity or Specific Conductance is a measure of a material's ability to conduct an electric current. When an electrical potential difference is placed across a conductor, its movable charges flow, giving rise to an electric current. The conductivity \\(\\sigma\\) is defined as the ratio of the electric current density (J) to the electric field (E): (J = sigma E). In isotropic materials, conductivity is scalar-valued, however in general, conductivity is a tensor-valued quantity." ;
   qudt:applicableUnit unit:MicroS ;
-  qudt:applicableUnit unit:S ;
-  qudt:applicableUnit unit:S_Ab ;
-  qudt:applicableUnit unit:S_Stat ;
-  qudt:baseUnitDimensions "A^2 \\cdot s^3/kg \\cdot m^2" ;
-  qudt:baseUnitDimensions "I^2 \\cdot T^3/L^2 \\cdot M" ;
-  qudt:hasDimensionVector qkdv:A0E2L-3I0M-1H0T3D0 ;
-  qudt:latexSymbol "\\(\\sigma\\)"^^qudt:LatexString ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Electric Conductivity"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -320,12 +175,8 @@ quantitykind:ElectricConductivity
 
 quantitykind:ExtentOfReaction
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "In physical chemistry, the Extent of Reaction is a quantity that measures the extent in which the reaction proceeds." ;
   qudt:applicableUnit unit:MOL ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Extent_of_reaction"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(dn_B = \\nu_B d\\xi\\), where \\(n_B\\) is the amount of substance \\(B\\) and \\(\\nu_B\\) is the stoichiometric number of substance \\(B\\)."^^qudt:LatexString ;
-  qudt:latexSymbol "\\(\\xi\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "In physical chemistry, the Extent of Reaction is a quantity that measures the extent in which the reaction proceeds." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Extent of Reaction"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -334,64 +185,8 @@ quantitykind:ExtentOfReaction
 
 quantitykind:ForcePerArea
   a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:ATM ;
-  qudt:applicableUnit unit:ATM_T ;
-  qudt:applicableUnit unit:BAR ;
-  qudt:applicableUnit unit:BARAD ;
-  qudt:applicableUnit unit:BARYE ;
-  qudt:applicableUnit unit:CM_H2O ;
-  qudt:applicableUnit unit:CentiBAR ;
-  qudt:applicableUnit unit:CentiM_H2O ;
-  qudt:applicableUnit unit:CentiM_HG ;
-  qudt:applicableUnit unit:DYN-PER-CentiM2 ;
-  qudt:applicableUnit unit:DecaPA ;
-  qudt:applicableUnit unit:DeciBAR ;
-  qudt:applicableUnit unit:FT_H2O ;
-  qudt:applicableUnit unit:FT_HG ;
-  qudt:applicableUnit unit:GM_F-PER-CentiM2 ;
-  qudt:applicableUnit unit:GigaPA ;
-  qudt:applicableUnit unit:HectoBAR ;
+  skos:definition "The force applied to a unit area of surface; measured in pascals (SI unit) or in dynes (cgs unit)" ;
   qudt:applicableUnit unit:HectoPA ;
-  qudt:applicableUnit unit:IN_H2O ;
-  qudt:applicableUnit unit:IN_HG ;
-  qudt:applicableUnit unit:KIP_F-PER-IN2 ;
-  qudt:applicableUnit unit:KiloBAR ;
-  qudt:applicableUnit unit:KiloGM_F-PER-CentiM2 ;
-  qudt:applicableUnit unit:KiloGM_F-PER-M2 ;
-  qudt:applicableUnit unit:KiloGM_F-PER-MilliM2 ;
-  qudt:applicableUnit unit:KiloLB_F-PER-IN2 ;
-  qudt:applicableUnit unit:KiloPA ;
-  qudt:applicableUnit unit:KiloPA_A ;
-  qudt:applicableUnit unit:LB_F-PER-FT2 ;
-  qudt:applicableUnit unit:LB_F-PER-IN2 ;
-  qudt:applicableUnit unit:MegaBAR ;
-  qudt:applicableUnit unit:MegaPA ;
-  qudt:applicableUnit unit:MicroATM ;
-  qudt:applicableUnit unit:MicroBAR ;
-  qudt:applicableUnit unit:MicroPA ;
-  qudt:applicableUnit unit:MicroTORR ;
-  qudt:applicableUnit unit:MilliBAR ;
-  qudt:applicableUnit unit:MilliM_H2O ;
-  qudt:applicableUnit unit:MilliM_HG ;
-  qudt:applicableUnit unit:MilliM_HGA ;
-  qudt:applicableUnit unit:MilliPA ;
-  qudt:applicableUnit unit:MilliTORR ;
-  qudt:applicableUnit unit:N-PER-CentiM2 ;
-  qudt:applicableUnit unit:N-PER-M2 ;
-  qudt:applicableUnit unit:N-PER-MilliM2 ;
-  qudt:applicableUnit unit:PA ;
-  qudt:applicableUnit unit:PDL-PER-FT2 ;
-  qudt:applicableUnit unit:PSI ;
-  qudt:applicableUnit unit:PlanckPressure ;
-  qudt:applicableUnit unit:TORR ;
-  qudt:baseUnitDimensions "M/L \\cdot T^2" ;
-  qudt:baseUnitDimensions "kg/m \\cdot s^2" ;
-  qudt:hasDimensionVector qkdv:A0E0L-1I0M1H0T-2D0 ;
-  qudt:informativeReference "http://www.thefreedictionary.com/force+per+unit+area"^^xsd:anyURI ;
-  qudt:outOfScope true ;
-  qudt:plainTextDescription "The force applied to a unit area of surface; measured in pascals (SI unit) or in dynes (cgs unit)" ;
-  qudt:symbol "p" ;
-  qudt:url "http://en.wikipedia.org/wiki/Pressure"^^xsd:anyURI ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Force Per Area"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -400,15 +195,8 @@ quantitykind:ForcePerArea
 
 quantitykind:IonicStrength
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "The Ionic Strength of a solution is a measure of the concentration of ions in that solution." ;
   qudt:applicableUnit unit:CentiMOL-PER-KiloGM ;
-  qudt:applicableUnit unit:MOL-PER-KiloGM ;
-  qudt:applicableUnit unit:MilliMOL-PER-GM ;
-  qudt:applicableUnit unit:MilliMOL-PER-KiloGM ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Ionic_strength"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(I = \\frac{1}{2} \\sum z_i^2 b_i\\), where the summation is carried out over all ions with charge number \\(z_i\\) and molality \\(m_i\\)."^^qudt:LatexString ;
-  qudt:plainTextDescription "The Ionic Strength of a solution is a measure of the concentration of ions in that solution." ;
-  qudt:symbol "I" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Ionic Strength"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -416,49 +204,13 @@ quantitykind:IonicStrength
 .
 
 quantitykind:Length
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:ANGSTROM ;
-  qudt:applicableUnit unit:AU ;
-  qudt:applicableUnit unit:CH ;
+  a qudt:QuantityKind , skos:Concept ;                                            
+  skos:definition "In geometric measurements, length most commonly refers to the est dimension of an object. In some contexts, the term length is reserved for a certain dimension of an object along which the length is measured." ;
   qudt:applicableUnit unit:CentiM ;
-  qudt:applicableUnit unit:DecaM ;
-  qudt:applicableUnit unit:DeciM ;
-  qudt:applicableUnit unit:FATH ;
-  qudt:applicableUnit unit:FM ;
-  qudt:applicableUnit unit:FT ;
-  qudt:applicableUnit unit:FT_US ;
-  qudt:applicableUnit unit:FUR ;
-  qudt:applicableUnit unit:FUR_Long ;
-  qudt:applicableUnit unit:FemtoM ;
-  qudt:applicableUnit unit:GAUGE_FR ;
-  qudt:applicableUnit unit:HectoM ;
-  qudt:applicableUnit unit:IN ;
   qudt:applicableUnit unit:KiloM ;
-  qudt:applicableUnit unit:LY ;
   qudt:applicableUnit unit:M ;
-  qudt:applicableUnit unit:MI ;
-  qudt:applicableUnit unit:MI_N ;
-  qudt:applicableUnit unit:MI_US ;
-  qudt:applicableUnit unit:MicroIN ;
   qudt:applicableUnit unit:MicroM ;
-  qudt:applicableUnit unit:MilLength ;
-  qudt:applicableUnit unit:MilliIN ;
   qudt:applicableUnit unit:MilliM ;
-  qudt:applicableUnit unit:NanoM ;
-  qudt:applicableUnit unit:PARSEC ;
-  qudt:applicableUnit unit:PCA ;
-  qudt:applicableUnit unit:PT ;
-  qudt:applicableUnit unit:PicoM ;
-  qudt:applicableUnit unit:PlanckLength ;
-  qudt:applicableUnit unit:ROD ;
-  qudt:applicableUnit unit:YD ;
-  qudt:baseUnitDimensions "L" ;
-  qudt:baseUnitDimensions "m" ;
-  qudt:dbpediaMatch "http://dbpedia.org/resource/Length"^^xsd:anyURI ;
-  qudt:hasDimensionVector qkdv:A0E0L1I0M0H0T0D0 ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Length"^^xsd:anyURI ;
-  qudt:plainTextDescription "In geometric measurements, length most commonly refers to the est dimension of an object. In some contexts, the term length is reserved for a certain dimension of an object along which the length is measured." ;
-  qudt:symbol "l" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Length"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -467,12 +219,8 @@ quantitykind:Length
 
 quantitykind:LengthPercentage
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Length Percentage" ;
   qudt:applicableUnit unit:PERCENT ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
-  qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
-  qudt:qkdvDenominator qkdv:A0E0L1I0M0H0T0D0 ;
-  qudt:qkdvNumerator qkdv:A0E0L1I0M0H0T0D0 ;
-  qudt:plainTextDescription "Length Percentage" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Length Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
@@ -482,57 +230,10 @@ quantitykind:LengthPercentage
 
 quantitykind:Mass
   a qudt:QuantityKind , skos:Concept ;
-  dcterms:description "In physics, mass, more specifically inertial mass, can be defined as a quantitative measure of an object's resistance to acceleration. The SI unit of mass is the kilogram (\\(kg\\))"^^qudt:LatexString ;
-  qudt:plainTextDescription "In physics, mass, more specifically inertial mass, can be defined as a quantitative measure of an object's resistance to acceleration. The SI unit of mass is the kilogram (kg)" ;
-  qudt:applicableUnit unit:AMU ;
-  qudt:applicableUnit unit:CARAT ;
-  qudt:applicableUnit unit:CWT_LONG ;
-  qudt:applicableUnit unit:CWT_SHORT ;
-  qudt:applicableUnit unit:CentiGM ;
-  qudt:applicableUnit unit:DRAM_UK ;
-  qudt:applicableUnit unit:DRAM_US ;
-  qudt:applicableUnit unit:DWT ;
-  qudt:applicableUnit unit:DecaGM ;
-  qudt:applicableUnit unit:DeciGM ;
-  qudt:applicableUnit unit:DeciTON_Metric ;
-  qudt:applicableUnit unit:EarthMass ;
+  skos:definition "In physics, mass, more specifically inertial mass, can be defined as a quantitative measure of an object's resistance to acceleration. The SI unit of mass is the kilogram (kg)" ;                                                                  
   qudt:applicableUnit unit:GM ;
-  qudt:applicableUnit unit:GRAIN ;
-  qudt:applicableUnit unit:HectoGM ;
-  qudt:applicableUnit unit:Hundredweight_UK ;
-  qudt:applicableUnit unit:Hundredweight_US ;
   qudt:applicableUnit unit:KiloGM ;
-  qudt:applicableUnit unit:KiloTON_Metric ;
-  qudt:applicableUnit unit:LB ;
-  qudt:applicableUnit unit:LB_T ;
-  qudt:applicableUnit unit:LunarMass ;
-  qudt:applicableUnit unit:MegaGM ;
-  qudt:applicableUnit unit:MicroGM ;
-  qudt:applicableUnit unit:MilliGM ;
-  qudt:applicableUnit unit:NanoGM ;
-  qudt:applicableUnit unit:OZ ;
-  qudt:applicableUnit unit:OZ_TROY ;
-  qudt:applicableUnit unit:Pennyweight ;
-  qudt:applicableUnit unit:PicoGM ;
-  qudt:applicableUnit unit:PlanckMass ;
-  qudt:applicableUnit unit:Quarter_UK ;
-  qudt:applicableUnit unit:SLUG ;
-  qudt:applicableUnit unit:SolarMass ;
-  qudt:applicableUnit unit:Stone_UK ;
   qudt:applicableUnit unit:TONNE ;
-  qudt:applicableUnit unit:TON_Assay ;
-  qudt:applicableUnit unit:TON_LONG ;
-  qudt:applicableUnit unit:TON_Metric ;
-  qudt:applicableUnit unit:TON_SHORT ;
-  qudt:applicableUnit unit:TON_UK ;
-  qudt:applicableUnit unit:TON_US ;
-  qudt:applicableUnit unit:U ;
-  qudt:baseUnitDimensions "M" ;
-  qudt:baseUnitDimensions "kg" ;
-  qudt:dbpediaMatch "http://dbpedia.org/resource/Mass"^^xsd:anyURI ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M1H0T0D0 ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Mass"^^xsd:anyURI ;
-  qudt:symbol "m" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Mass"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -541,64 +242,19 @@ quantitykind:Mass
 
 quantitykind:MassDensity
   a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:DEGREE_BALLING ;
-  qudt:applicableUnit unit:DEGREE_BAUME ;
-  qudt:applicableUnit unit:DEGREE_BAUME_US_HEAVY ;
-  qudt:applicableUnit unit:DEGREE_BAUME_US_LIGHT ;
-  qudt:applicableUnit unit:DEGREE_BRIX ;
-  qudt:applicableUnit unit:DEGREE_OECHSLE ;
-  qudt:applicableUnit unit:DEGREE_PLATO ;
-  qudt:applicableUnit unit:DEGREE_TWADDELL ;
-  qudt:applicableUnit unit:FemtoGM-PER-L ;
-  qudt:applicableUnit unit:GM-PER-CentiM3 ;
-  qudt:applicableUnit unit:GM-PER-DeciM3 ;
-  qudt:applicableUnit unit:GM-PER-L ;
-  qudt:applicableUnit unit:GM-PER-M3 ;
-  qudt:applicableUnit unit:GM-PER-MilliL ;
-  qudt:applicableUnit unit:GRAIN-PER-GAL_US ;
-  qudt:applicableUnit unit:KiloGM-PER-CentiM3 ;
-  qudt:applicableUnit unit:KiloGM-PER-DeciM3 ;
-  qudt:applicableUnit unit:KiloGM-PER-L ;
-  qudt:applicableUnit unit:KiloGM-PER-M3 ;
-  qudt:applicableUnit unit:MegaGM-PER-M3 ;
+  skos:definition "The mass density or density of a material is its mass per unit volume." ;
   qudt:applicableUnit unit:MicroGM-PER-L ;
-  qudt:applicableUnit unit:MicroGM-PER-M3 ;
   qudt:applicableUnit unit:MilliGM-PER-L ;
-  qudt:applicableUnit unit:MilliGM-PER-M3 ;
-  qudt:applicableUnit unit:NanoGM-PER-L ;
-  qudt:applicableUnit unit:NanoGM-PER-M3 ;
-  qudt:applicableUnit unit:NanoGM-PER-MicroL ;
-  qudt:applicableUnit unit:OZ-PER-GAL_US ;
-  qudt:applicableUnit unit:OZ-PER-YD3 ;
-  qudt:applicableUnit unit:OZ_PER-GAL_UK ;
-  qudt:applicableUnit unit:PicoGM-PER-L ;
-  qudt:applicableUnit unit:TONNE-PER-M3 ;
-  qudt:applicableUnit unit:TON_Metric-PER-M3 ;
-  qudt:applicableUnit unit:TON_UK-PER-YD3 ;
-  qudt:applicableUnit unit:TON_US-PER-YD3 ;
-  qudt:baseUnitDimensions "kg m^{-3}" ;
-  qudt:hasDimensionVector qkdv:A0E0L-3I0M1H0T0D0 ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Density"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31889"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(\\rho = \\frac{dm}{dV}\\), where \\(m\\) is mass and \\(V\\) is volume."^^qudt:LatexString ;
-  qudt:latexSymbol "\\(\\rho\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "The mass density or density of a material is its mass per unit volume." ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
+ rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Mass Density"@en ;
-  owl:sameAs quantitykind:Density ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
 quantitykind:MassFraction
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "The Mass Fraction is the fraction of one substance with mass to the mass of the total mixture." ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Mass_fraction_(chemistry)"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(w_B = \\frac{m_B}{m}\\), where \\(m_B\\) is the mass of substance \\(B\\) and \\(m\\) is the total."^^qudt:LatexString ;
-  qudt:plainTextDescription "The Mass Fraction is the fraction of one substance with mass to the mass of the total mixture." ;
-  qudt:symbol "w_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Mass Fraction"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -607,11 +263,8 @@ quantitykind:MassFraction
 
 quantitykind:MassFractionOfDryMatter
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Mass Fraction of Dry Matter is one of a number of Concentration quantities defined by ISO 8000." ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(w_d= 1 - w_{h2o}\\), where \\(w_{h2o}\\) is mass fraction of water."^^qudt:LatexString ;
-  qudt:plainTextDescription "Mass Fraction of Dry Matter is one of a number of Concentration quantities defined by ISO 8000." ;
-  qudt:symbol "w_d" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Mass Fraction of Dry Matter"@en ;
   rdfs:seeAlso quantitykind:MassFractionOfWater ;
@@ -619,56 +272,10 @@ quantitykind:MassFractionOfDryMatter
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
-quantitykind:MassFractionOfWater
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:UNITLESS ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(w_{H_2o} = \\frac{u}{1+u}\\), where \\(u\\) is mass ratio of water to dry water."^^qudt:LatexString ;
-  qudt:plainTextDescription "Mass Fraction of Water is one of a number of Concentration quantities defined by ISO 8000." ;
-  qudt:symbol "w_{H_2o}" ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  skos:prefLabel "Mass Fraction of Water"@en ;
-  rdfs:seeAlso quantitykind:MassFractionOfDryMatter ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
-  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
-.
-
-quantitykind:MassRatioOfWaterToDryMatter
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:UNITLESS ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(u = m/m_d\\), where \\(m\\) is mass of water vapour and \\(m_d\\) is mass of dry matter. Mass ratio of water to dry matter at saturation is denoted \\(u_{sat}\\)."^^qudt:LatexString ;
-  qudt:plainTextDescription "Mass Ratio of Water to Dry Matter is one of a number of Concentration Ratio quantities  defined by ISO 8000." ;
-  qudt:symbol "u" ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  skos:prefLabel "Mass Concentration of Water To Dry Matter"@en ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
-  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
-.
-
-quantitykind:MassRatioOfWaterVapourToDryGas
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:UNITLESS ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(x = m/m_d\\), where \\(m\\) is mass of water vapour and \\(m_d\\) is mass of dry gas. Mass ratio of water vapour to dry gas  at saturation is denoted \\(x_{sat}\\)."^^qudt:LatexString ;
-  qudt:plainTextDescription "Mass Ratio of Water Vapour to Dry Gas is one of a number of Concentration Ratio quantities  defined by ISO 8000." ;
-  qudt:symbol "x" ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  skos:prefLabel "Mass Ratio of Water Vapour to Dry Gas"@en ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
-  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
-.
-
 quantitykind:MolalityOfSolute
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "The Molality of Solute of a solution is defined as the amount of substance of solute divided by the mass in kg of the solvent." ;
   qudt:applicableUnit unit:CentiMOL-PER-KiloGM ;
-  qudt:applicableUnit unit:MOL-PER-KiloGM ;
-  qudt:hasDimensionVector qkdv:A1E0L0I0M-1H0T0D0 ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Molality"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(b_B = \\frac{n_B}{m_a}\\), where \\(n_B\\) is the amount of substance and \\(m_A\\) is the mass."^^qudt:LatexString ;
-  qudt:plainTextDescription "The Molality of Solute of a solution is defined as the amount of substance of solute divided by the mass in kg of the solvent." ;
-  qudt:symbol "b_B" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Molality of Solute"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -677,11 +284,8 @@ quantitykind:MolalityOfSolute
 
 quantitykind:MultiplicationFactor
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "The Multiplication Factor is the ratio of the total number of fission or fission-dependent neutrons produced in a time interval to the total number of neutrons lost by absorption and leakage during the same interval." ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Neutron_multiplication_factor"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31895"^^xsd:anyURI ;
-  qudt:plainTextDescription "The Multiplication Factor is the ratio of the total number of fission or fission-dependent neutrons produced in a time interval to the total number of neutrons lost by absorption and leakage during the same interval." ;
-  qudt:symbol "k" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Multiplication Factor"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -690,9 +294,8 @@ quantitykind:MultiplicationFactor
 
 quantitykind:Period
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Duration of one cycle of a periodic phenomenon." ;
   qudt:applicableUnit unit:SEC ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T1D0 ;
-  qudt:plainTextDescription "Duration of one cycle of a periodic phenomenon." ;
   vaem:todo "belongs to SOQ-ISO" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Period"@en ;
@@ -702,12 +305,8 @@ quantitykind:Period
 
 quantitykind:PressurePercentage
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Pressure Percentage" ;
   qudt:applicableUnit unit:PERCENT ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
-  qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "Pressure Percentage" ;
-  qudt:qkdvDenominator qkdv:A0E0L-1I0M1H0T-2D0 ;
-  qudt:qkdvNumerator qkdv:A0E0L-1I0M1H0T-2D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Pressure Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
@@ -717,19 +316,8 @@ quantitykind:PressurePercentage
 
 quantitykind:PressureRatio
   a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:BAR-PER-BAR ;
-  qudt:applicableUnit unit:HectoPA-PER-BAR ;
-  qudt:applicableUnit unit:KiloPA-PER-BAR ;
-  qudt:applicableUnit unit:MegaPA-PER-BAR ;
-  qudt:applicableUnit unit:MilliBAR-PER-BAR ;
-  qudt:applicableUnit unit:PA-PER-BAR ;
+  skos:definition "Pressure Ratio" ;
   qudt:applicableUnit unit:PERCENT_RH ;
-  qudt:applicableUnit unit:PSI-PER-PSI ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
-  qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "Pressure Ratio" ;
-  qudt:qkdvDenominator qkdv:A0E0L-1I0M1H0T-2D0 ;
-  qudt:qkdvNumerator qkdv:A0E0L-1I0M1H0T-2D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Pressure Ratio"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
@@ -739,44 +327,20 @@ quantitykind:PressureRatio
 
 quantitykind:RelativeHumidity
   a qudt:QuantityKind , skos:Concept ;
-  dcterms:description "\"Relative Humidity} is the ratio of the partial pressure of water vapor in an air-water mixture to the saturated vapor pressure of water at a prescribed temperature. The relative humidity of air depends not only on temperature but also on the pressure of the system of interest. \\textit{Relative Humidity} is also referred to as \\text{Relative Partial Pressure\". Relative partial pressure is often referred to as \\(RH\\) and expressed in percent."^^qudt:LatexString ;
-  qudt:plainTextDescription "Relative Humidity is the ratio of the partial pressure of water vapor in an air-water mixture to the saturated vapor pressure of water at a prescribed temperature. The relative humidity of air depends not only on temperature but also on the pressure of the system of interest. Relative Humidity is also referred to as Relative Partial Pressure. Relative partial pressure is often referred to as RH and expressed in percent." ;
+  skos:definition "Relative Humidity is the ratio of the partial pressure of water vapor in an air-water mixture to the saturated vapor pressure of water at a prescribed temperature. The relative humidity of air depends not only on temperature but also on the pressure of the system of interest. Relative Humidity is also referred to as Relative Partial Pressure. Relative partial pressure is often referred to as RH and expressed in percent." ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Relative_humidity"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(\\varphi = p / p_{sat}\\), where \\(p\\) is partial pressure of vapour,  \\(p_{sat}\\) is thermodynamic temperature and \\(V\\) is its partial pressure at saturation (at the same temperature). Relative partial pressure is often referred to as \\(RH\\) and expressed in percent. \"Relative Humidity} is also referred to as \\text{Relative Partial Pressure\"."^^qudt:LatexString ;
-  qudt:latexSymbol "\\(\\varphi\\)"^^qudt:LatexString ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Relative Humidity"@en ;
   rdfs:seeAlso quantitykind:AbsoluteHumidity ;
-  owl:sameAs quantitykind:RelativePartialPressure ;
   skos:altLabel "RH" ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
-  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
-.
-
-quantitykind:RelativeMassConcentrationOfVapour
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:UNITLESS ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(\\varphi = v / v_{sat}\\), where \\(v\\) is mass concentration of water vapour,  \\(v_{sat}\\) is its mass concentration of water vapour at saturation (at the same temperature). For normal cases, the relative partial pressure may be assumed to be equal to relative mass concentration of vapour."^^qudt:LatexString ;
-  qudt:latexSymbol "\\(\\varphi\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "Relative Mass Concentration of Vapour is one of a number of Relative Concentration quantities  defined by ISO 8000." ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  skos:prefLabel "Relative Mass Concentration of Vapour"@en ;
-  rdfs:seeAlso quantitykind:RelativePartialPressure ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
 quantitykind:RelativeMassDensity
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Relative density, or specific gravity, is the ratio of the density (mass of a unit volume) of a substance to the density of a given reference material." ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Relative_density"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31889"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(d = \\frac{\\rho}{\\rho_0}\\), where \\(\\rho\\) is mass density of a substance and \\(\\rho_0\\) is the mass density of a reference substance under conditions that should be specified for both substances."^^qudt:LatexString ;
-  qudt:plainTextDescription "Relative density, or specific gravity, is the ratio of the density (mass of a unit volume) of a substance to the density of a given reference material." ;
-  qudt:symbol "d" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Relative Mass Density"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -785,42 +349,19 @@ quantitykind:RelativeMassDensity
 
 quantitykind:RelativePartialPressure
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Relative partial pressure is often referred to as RH and expressed in percent. Relative Partial Pressure is also referred to as Relative Humidity.  varphi = p / p_sat, where p is partial pressure of vapour,  p_sat is thermodynamic temperature and V is its partial pressure at saturation (at the same temperature). " ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31890"^^xsd:anyURI ;
-  qudt:latexDefinition """\\(\\varphi = p / p_{sat}\\), where \\(p\\) is partial pressure of vapour,  \\(p_{sat}\\) is thermodynamic temperature and \\(V\\) is its
-partial pressure at saturation (at the same temperature). Relative partial pressure is often referred to as \\(RH\\) and expressed in percent. \"Relative Partial Pressure} is also referred to as \\text{Relative Humidity\"."""^^qudt:LatexString ;
-  qudt:plainTextDescription "Relative partial pressure is often referred to as RH and expressed in percent. Relative Partial Pressure is also referred to as Relative Humidity.  varphi = p / p_sat, where p is partial pressure of vapour,  p_sat is thermodynamic temperature and V is its partial pressure at saturation (at the same temperature). " ;
-  qudt:latexSymbol "\\(\\varphi\\)"^^qudt:LatexString ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Relative Partial Pressure"@en ;
-  owl:sameAs quantitykind:RelativeHumidity ;
   skos:altLabel "RH" ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
-quantitykind:ResistancePercentage
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:PERCENT ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
-  qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
-  qudt:qkdvDenominator qkdv:A0E-2L2I0M1H0T-3D0 ;
-  qudt:qkdvNumerator qkdv:A0E-2L2I0M1H0T-3D0 ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  qudt:plainTextDescription "Resistance Percentage" ;
-  skos:prefLabel "Resistance Percentage"@en ;
-  skos:broader quantitykind:DimensionlessRatio ;
-  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
-  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
-.
-
 quantitykind:StatisticalWeight
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "A Statistical Weight is the relative probability (possibly unnormalized) of a particular feature of a state." ;
   qudt:applicableUnit unit:UNITLESS ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Statistical_weight"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31894"^^xsd:anyURI ;
-  qudt:plainTextDescription "A Statistical Weight is the relative probability (possibly unnormalized) of a particular feature of a state." ;
-  qudt:symbol "g" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Statistical Weight"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -829,15 +370,8 @@ quantitykind:StatisticalWeight
 
 quantitykind:Temperature
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Temperature is a physical property of matter that quantitatively expresses the common notions of hot and cold. Objects of low temperature are cold, while various degrees of higher temperatures are referred to as warm or hot. Heat spontaneously flows from bodies of a higher temperature to bodies of lower temperature, at a rate that increases with the temperature difference and the thermal conductivity." ;
   qudt:applicableUnit unit:DEG_C ;
-  qudt:applicableUnit unit:DEG_F ;
-  qudt:applicableUnit unit:DEG_R ;
-  qudt:applicableUnit unit:K ;
-  qudt:applicableUnit unit:MilliDEG_C ;
-  qudt:applicableUnit unit:PlanckTemperature ;
-  qudt:dbpediaMatch "http://dbpedia.org/resource/Temperature"^^xsd:anyURI ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H1T0D0 ;
-  qudt:plainTextDescription "Temperature is a physical property of matter that quantitatively expresses the common notions of hot and cold. Objects of low temperature are cold, while various degrees of higher temperatures are referred to as warm or hot. Heat spontaneously flows from bodies of a higher temperature to bodies of lower temperature, at a rate that increases with the temperature difference and the thermal conductivity." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Temperature"@en ;
   rdfs:seeAlso quantitykind:ThermodynamicTemperature ;
@@ -846,48 +380,14 @@ quantitykind:Temperature
 .
 
 quantitykind:Time
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:CentiPOISE-PER-BAR ;
+  a qudt:QuantityKind , skos:Concept ;                              
+  skos:definition "Time is a basic component of the measuring system used to sequence events, to compare the durations of events and the intervals between them, and to quantify the motions of objects." ;
   qudt:applicableUnit unit:DAY ;
-  qudt:applicableUnit unit:DAY_Sidereal ;
-  qudt:applicableUnit unit:H-PER-KiloOHM ;
-  qudt:applicableUnit unit:H-PER-OHM ;
+  qrdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   qudt:applicableUnit unit:HR ;
-  qudt:applicableUnit unit:HR_Sidereal ;
-  qudt:applicableUnit unit:KiloSEC ;
   qudt:applicableUnit unit:MIN ;
-  qudt:applicableUnit unit:MIN_Sidereal ;
-  qudt:applicableUnit unit:MO ;
-  qudt:applicableUnit unit:MO_MeanGREGORIAN ;
-  qudt:applicableUnit unit:MO_MeanJulian ;
-  qudt:applicableUnit unit:MO_Synodic ;
-  qudt:applicableUnit unit:MegaYR ;
-  qudt:applicableUnit unit:MicroH-PER-KiloOHM ;
-  qudt:applicableUnit unit:MicroH-PER-OHM ;
-  qudt:applicableUnit unit:MicroSEC ;
-  qudt:applicableUnit unit:MilliH-PER-KiloOHM ;
-  qudt:applicableUnit unit:MilliH-PER-OHM ;
-  qudt:applicableUnit unit:MilliPA-SEC-PER-BAR ;
-  qudt:applicableUnit unit:MilliSEC ;
-  qudt:applicableUnit unit:NanoSEC ;
-  qudt:applicableUnit unit:PA-SEC-PER-BAR ;
-  qudt:applicableUnit unit:POISE-PER-BAR ;
-  qudt:applicableUnit unit:PicoSEC ;
-  qudt:applicableUnit unit:PlanckTime ;
   qudt:applicableUnit unit:SEC ;
-  qudt:applicableUnit unit:SH ;
-  qudt:applicableUnit unit:WK ;
   qudt:applicableUnit unit:YR ;
-  qudt:applicableUnit unit:YR_Common ;
-  qudt:applicableUnit unit:YR_Sidereal ;
-  qudt:applicableUnit unit:YR_TROPICAL ;
-  qudt:baseUnitDimensions "T" ;
-  qudt:baseUnitDimensions "s" ;
-  qudt:dbpediaMatch "http://dbpedia.org/resource/Time"^^xsd:anyURI ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T1D0 ;
-  qudt:plainTextDescription "Time is a basic component of the measuring system used to sequence events, to compare the durations of events and the intervals between them, and to quantify the motions of objects." ;
-  qudt:symbol "t" ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Time"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -896,12 +396,8 @@ quantitykind:Time
 quantitykind:TimePercentage
   a qudt:QuantityKind , skos:Concept ;
   qudt:applicableUnit unit:PERCENT ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
-  qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
-  qudt:qkdvDenominator qkdv:A0E0L0I0M0H0T1D0 ;
-  qudt:qkdvNumerator qkdv:A0E0L0I0M0H0T1D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  qudt:plainTextDescription "Time Percentage"@en ;
+  skos:definition "Time Percentage"@en ;
   skos:prefLabel "Time Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
   #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -910,93 +406,29 @@ quantitykind:TimePercentage
 
 quantitykind:Turbidity
   a qudt:QuantityKind , skos:Concept ;
+  skos:definition "Turbidity is the cloudiness or haziness of a fluid, or of air, caused by individual particles (suspended solids) that are generally invisible to the naked eye, similar to smoke in air. Turbidity in open water is often caused by phytoplankton and the measurement of turbidity is a key test of water quality. The higher the turbidity, the higher the risk of the drinkers developing gastrointestinal diseases, especially for immune-compromised people, because contaminants like virus or bacteria can become attached to the suspended solid. The suspended solids interfere with water disinfection with chlorine because the particles act as shields for the virus and bacteria. Similarly suspended solids can protect bacteria from UV sterilisation of water. Fluids can contain suspended solid matter consisting of particles of many different sizes. While some suspended material will be large enough and heavy enough to settle rapidly to the bottom container if a liquid sample is left to stand (the settleable solids), very small particles will settle only very slowly or not at all if the sample is regularly agitated or the particles are colloidal. These small solid particles cause the liquid to appear turbid." ;
   qudt:applicableUnit unit:NTU ;
-  qudt:dbpediaMatch "http://dbpedia.org/resource/Turbidity"^^xsd:anyURI ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Turbidity"^^xsd:anyURI ;
-  qudt:plainTextDescription "Turbidity is the cloudiness or haziness of a fluid, or of air, caused by individual particles (suspended solids) that are generally invisible to the naked eye, similar to smoke in air. Turbidity in open water is often caused by phytoplankton and the measurement of turbidity is a key test of water quality. The higher the turbidity, the higher the risk of the drinkers developing gastrointestinal diseases, especially for immune-compromised people, because contaminants like virus or bacteria can become attached to the suspended solid. The suspended solids interfere with water disinfection with chlorine because the particles act as shields for the virus and bacteria. Similarly suspended solids can protect bacteria from UV sterilisation of water. Fluids can contain suspended solid matter consisting of particles of many different sizes. While some suspended material will be large enough and heavy enough to settle rapidly to the bottom container if a liquid sample is left to stand (the settleable solids), very small particles will settle only very slowly or not at all if the sample is regularly agitated or the particles are colloidal. These small solid particles cause the liquid to appear turbid." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Turbidity"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
-quantitykind:Turns
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:UNITLESS ;
-  qudt:plainTextDescription "Turns is the number of turns in a winding." ;
-  qudt:symbol "N" ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  skos:prefLabel "Turns"@en ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
-  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
-.
-
 quantitykind:Voltage
   a qudt:QuantityKind , skos:Concept ;
-  dcterms:description """\\(\\textit{Voltage}\\), also referred to as \\(\\textit{Electric Tension}\\), is the difference between electrical potentials of two points. For an electric field within a medium, \\(U_{ab} = - \\int_{r_a}^{r_b} E . {dr}\\), where \\(E\\) is electric field strength. For an irrotational electric field, the voltage is independent of the path between the two points \\(a\\) and \\(b\\)."""^^qudt:LatexString ;
-  qudt:plainTextDescription "Voltage, also referred to as Electric Tension, is the difference between electrical potentials of two points. For an electric field within a medium." ;
-  qudt:applicableUnit unit:KiloV ;
-  qudt:applicableUnit unit:MegaV ;
-  qudt:applicableUnit unit:MicroV ;
+  skos:definition "Voltage, also referred to as Electric Tension, is the difference between electrical potentials of two points. For an electric field within a medium." ;
   qudt:applicableUnit unit:MilliV ;
-  qudt:hasDimensionVector qkdv:A0E-1L2I0M1H0T-3D0 ;
-  qudt:informativeReference "http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=31891"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(U_{ab} = V_a - V_b\\), where \\(V_a\\) and \\(V_b\\) are electric potentials at points \\(a\\) and \\(b\\), respectively."^^qudt:LatexString ;
-  qudt:latexSymbol "\\(\\(U_{ab}\\)\\)"^^qudt:LatexString ;
-  qudt:symbol "U" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Voltage"@en ;
-  owl:sameAs quantitykind:EnergyPerElectricCharge ;
   skos:broader quantitykind:EnergyPerElectricCharge ;
-  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
 quantitykind:Volume
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:AC-FT ;
-  qudt:applicableUnit unit:BBL ;
-  qudt:applicableUnit unit:BBL_UK_PET ;
-  qudt:applicableUnit unit:BBL_US ;
+  a qudt:QuantityKind , skos:Concept ;                                               
+  skos:definition "The volume of a solid object is the three-dimensional concept of how much space it occupies, often quantified numerically. One-dimensional figures (such as lines) and two-dimensional shapes (such as squares) are assigned zero volume in the three-dimensional space." ;
   qudt:applicableUnit unit:CentiM3 ;
-  qudt:applicableUnit unit:DecaL ;
-  qudt:applicableUnit unit:DecaM3 ;
-  qudt:applicableUnit unit:DeciL ;
-  qudt:applicableUnit unit:DeciM3 ;
-  qudt:applicableUnit unit:FBM ;
-  qudt:applicableUnit unit:FT3 ;
-  qudt:applicableUnit unit:GI_UK ;
-  qudt:applicableUnit unit:GI_US ;
-  qudt:applicableUnit unit:GT ;
-  qudt:applicableUnit unit:HectoL ;
-  qudt:applicableUnit unit:IN3 ;
-  qudt:applicableUnit unit:KiloL ;
   qudt:applicableUnit unit:M3 ;
-  qudt:applicableUnit unit:MI3 ;
-  qudt:applicableUnit unit:MegaL ;
-  qudt:applicableUnit unit:MicroL ;
-  qudt:applicableUnit unit:MicroM3 ;
-  qudt:applicableUnit unit:MilliL ;
-  qudt:applicableUnit unit:MilliM3 ;
-  qudt:applicableUnit unit:OZ_VOL_UK ;
-  qudt:applicableUnit unit:PINT ;
-  qudt:applicableUnit unit:PINT_UK ;
-  qudt:applicableUnit unit:PK_UK ;
-  qudt:applicableUnit unit:PlanckVolume ;
-  qudt:applicableUnit unit:QT_UK ;
-  qudt:applicableUnit unit:QT_US ;
-  qudt:applicableUnit unit:RT ;
-  qudt:applicableUnit unit:STR ;
-  qudt:applicableUnit unit:Standard ;
-  qudt:applicableUnit unit:TBSP ;
-  qudt:applicableUnit unit:TON_SHIPPING_US ;
-  qudt:applicableUnit unit:TSP ;
-  qudt:applicableUnit unit:YD3 ;
-  qudt:baseUnitDimensions "L^3" ;
-  qudt:baseUnitDimensions "m^3" ;
-  qudt:dbpediaMatch "http://dbpedia.org/resource/Volume"^^xsd:anyURI ;
-  qudt:hasDimensionVector qkdv:A0E0L3I0M0H0T0D0 ;
-  qudt:plainTextDescription "The volume of a solid object is the three-dimensional concept of how much space it occupies, often quantified numerically. One-dimensional figures (such as lines) and two-dimensional shapes (such as squares) are assigned zero volume in the three-dimensional space." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Volume"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -1005,177 +437,39 @@ quantitykind:Volume
 
 quantitykind:VolumeFlowRate
   a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:BBL_UK_PET-PER-DAY ;
-  qudt:applicableUnit unit:BBL_UK_PET-PER-HR ;
-  qudt:applicableUnit unit:BBL_UK_PET-PER-MIN ;
-  qudt:applicableUnit unit:BBL_UK_PET-PER-SEC ;
-  qudt:applicableUnit unit:BBL_US-PER-DAY ;
-  qudt:applicableUnit unit:BBL_US-PER-MIN ;
-  qudt:applicableUnit unit:BBL_US_PET-PER-HR ;
-  qudt:applicableUnit unit:BBL_US_PET-PER-SEC ;
-  qudt:applicableUnit unit:BU_UK-PER-DAY ;
-  qudt:applicableUnit unit:BU_UK-PER-HR ;
-  qudt:applicableUnit unit:BU_UK-PER-MIN ;
-  qudt:applicableUnit unit:BU_UK-PER-SEC ;
-  qudt:applicableUnit unit:BU_US_DRY-PER-DAY ;
-  qudt:applicableUnit unit:BU_US_DRY-PER-HR ;
-  qudt:applicableUnit unit:BU_US_DRY-PER-MIN ;
-  qudt:applicableUnit unit:BU_US_DRY-PER-SEC ;
-  qudt:applicableUnit unit:CentiM3-PER-DAY ;
-  qudt:applicableUnit unit:CentiM3-PER-HR ;
-  qudt:applicableUnit unit:CentiM3-PER-MIN ;
-  qudt:applicableUnit unit:CentiM3-PER-SEC ;
-  qudt:applicableUnit unit:DeciM3-PER-DAY ;
-  qudt:applicableUnit unit:DeciM3-PER-HR ;
-  qudt:applicableUnit unit:DeciM3-PER-MIN ;
-  qudt:applicableUnit unit:DeciM3-PER-SEC ;
-  qudt:applicableUnit unit:FT3-PER-DAY ;
-  qudt:applicableUnit unit:FT3-PER-HR ;
-  qudt:applicableUnit unit:FT3-PER-MIN ;
-  qudt:applicableUnit unit:FT3-PER-SEC ;
-  qudt:applicableUnit unit:GAL_UK-PER-DAY ;
-  qudt:applicableUnit unit:GAL_UK-PER-HR ;
-  qudt:applicableUnit unit:GAL_UK-PER-MIN ;
-  qudt:applicableUnit unit:GAL_UK-PER-SEC ;
-  qudt:applicableUnit unit:GAL_US-PER-HR ;
-  qudt:applicableUnit unit:GAL_US-PER-SEC ;
-  qudt:applicableUnit unit:GI_UK-PER-DAY ;
-  qudt:applicableUnit unit:GI_UK-PER-HR ;
-  qudt:applicableUnit unit:GI_UK-PER-MIN ;
-  qudt:applicableUnit unit:GI_UK-PER-SEC ;
-  qudt:applicableUnit unit:GI_US-PER-DAY ;
-  qudt:applicableUnit unit:GI_US-PER-HR ;
-  qudt:applicableUnit unit:GI_US-PER-MIN ;
-  qudt:applicableUnit unit:GI_US-PER-SEC ;
-  qudt:applicableUnit unit:IN3-PER-HR ;
-  qudt:applicableUnit unit:IN3-PER-MIN ;
-  qudt:applicableUnit unit:IN3-PER-SEC ;
-  qudt:applicableUnit unit:KiloL-PER-HR ;
-  qudt:applicableUnit unit:L-PER-DAY ;
-  qudt:applicableUnit unit:L-PER-HR ;
-  qudt:applicableUnit unit:L-PER-MIN ;
-  qudt:applicableUnit unit:L-PER-SEC ;
-  qudt:applicableUnit unit:M3-PER-DAY ;
+  skos:definition "Volumetric Flow Rate, (also known as volume flow rate, rate of fluid flow or volume velocity) is the volume of fluid which passes through a given surface per unit time." ;
   qudt:applicableUnit unit:M3-PER-HR ;
-  qudt:applicableUnit unit:M3-PER-MIN ;
   qudt:applicableUnit unit:M3-PER-SEC ;
-  qudt:applicableUnit unit:MilliL-PER-DAY ;
-  qudt:applicableUnit unit:MilliL-PER-HR ;
-  qudt:applicableUnit unit:MilliL-PER-MIN ;
-  qudt:applicableUnit unit:MilliL-PER-SEC ;
-  qudt:applicableUnit unit:OZ_VOL_UK-PER-DAY ;
-  qudt:applicableUnit unit:OZ_VOL_UK-PER-HR ;
-  qudt:applicableUnit unit:OZ_VOL_UK-PER-MIN ;
-  qudt:applicableUnit unit:OZ_VOL_UK-PER-SEC ;
-  qudt:applicableUnit unit:OZ_VOL_US-PER-DAY ;
-  qudt:applicableUnit unit:OZ_VOL_US-PER-HR ;
-  qudt:applicableUnit unit:OZ_VOL_US-PER-MIN ;
-  qudt:applicableUnit unit:OZ_VOL_US-PER-SEC ;
-  qudt:applicableUnit unit:PINT_UK-PER-DAY ;
-  qudt:applicableUnit unit:PINT_UK-PER-HR ;
-  qudt:applicableUnit unit:PINT_UK-PER-MIN ;
-  qudt:applicableUnit unit:PINT_UK-PER-SEC ;
-  qudt:applicableUnit unit:PINT_US-PER-DAY ;
-  qudt:applicableUnit unit:PINT_US-PER-HR ;
-  qudt:applicableUnit unit:PINT_US-PER-MIN ;
-  qudt:applicableUnit unit:PINT_US-PER-SEC ;
-  qudt:applicableUnit unit:PK_UK-PER-DAY ;
-  qudt:applicableUnit unit:PK_UK-PER-HR ;
-  qudt:applicableUnit unit:PK_UK-PER-MIN ;
-  qudt:applicableUnit unit:PK_UK-PER-SEC ;
-  qudt:applicableUnit unit:PK_US_DRY-PER-DAY ;
-  qudt:applicableUnit unit:PK_US_DRY-PER-HR ;
-  qudt:applicableUnit unit:PK_US_DRY-PER-MIN ;
-  qudt:applicableUnit unit:PK_US_DRY-PER-SEC ;
-  qudt:applicableUnit unit:QT_UK-PER-DAY ;
-  qudt:applicableUnit unit:QT_UK-PER-HR ;
-  qudt:applicableUnit unit:QT_UK-PER-MIN ;
-  qudt:applicableUnit unit:QT_UK-PER-SEC ;
-  qudt:applicableUnit unit:QT_US-PER-DAY ;
-  qudt:applicableUnit unit:QT_US-PER-HR ;
-  qudt:applicableUnit unit:QT_US-PER-MIN ;
-  qudt:applicableUnit unit:QT_US-PER-SEC ;
-  qudt:applicableUnit unit:YD3-PER-DAY ;
-  qudt:applicableUnit unit:YD3-PER-HR ;
-  qudt:applicableUnit unit:YD3-PER-MIN ;
-  qudt:applicableUnit unit:YD3-PER-SEC ;
-  qudt:baseUnitDimensions "m^{3} sec^{-1}" ;
-  qudt:hasDimensionVector qkdv:A0E0L3I0M0H0T-1D0 ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Volumetric_flow_rate"^^xsd:anyURI ;
-  qudt:isoNormativeReference "http://www.iso.org/iso/catalogue_detail?csnumber=31889"^^xsd:anyURI ;
-  qudt:latexDefinition "\\(q_V = \\frac{dV}{dt}\\), where \\(V\\) is volume and \\(t\\) is time."^^qudt:LatexString ;
-  qudt:plainTextDescription "Volumetric Flow Rate, (also known as volume flow rate, rate of fluid flow or volume velocity) is the volume of fluid which passes through a given surface per unit time." ;
-  qudt:symbol "q_V" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Volume Flow Rate"@en ;
-  owl:sameAs quantitykind:VolumePerUnitTime ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
 quantitykind:VolumePerUnitTime
   a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:FT3-PER-MIN ;
-  qudt:applicableUnit unit:FT3-PER-SEC ;
-  qudt:applicableUnit unit:GAL_US-PER-DAY ;
-  qudt:applicableUnit unit:GAL_US-PER-MIN ;
-  qudt:applicableUnit unit:IN3-PER-MIN ;
   qudt:applicableUnit unit:M3-PER-HR ;
   qudt:applicableUnit unit:M3-PER-SEC ;
-  qudt:applicableUnit unit:YD3-PER-MIN ;
-  qudt:baseUnitDimensions "L^3/T" ;
-  qudt:baseUnitDimensions "m^3/s" ;
-  qudt:hasDimensionVector qkdv:A0E0L3I0M0H0T-1D0 ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  qudt:plainTextDescription "Volume per Unit Time" ;
+  skos:definition "Volume per Unit Time" ;
   skos:prefLabel "Volume per Unit Time"@en ;
-  owl:sameAs quantitykind:VolumeFlowRate ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
-  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
-.
-
-quantitykind:VoltagePercentage
-  a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:PERCENT ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T0D1 ;
-  qudt:latexSymbol "\\(\\Uppsi\\)"^^qudt:LatexString ;
-  qudt:qkdvDenominator qkdv:A0E-1L2I0M1H0T-3D0 ;
-  qudt:qkdvNumerator qkdv:A0E-1L2I0M1H0T-3D0 ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  qudt:plainTextDescription "Voltage Percentage" ;
-  skos:prefLabel "Voltage Percentage"@en ;
-  skos:broader quantitykind:DimensionlessRatio ;
-  #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
 quantitykind:LiquidVolume
   a qudt:QuantityKind , skos:Concept ;
-  qudt:applicableUnit unit:CUP ;
-  qudt:applicableUnit unit:CUP_US ;
-  qudt:applicableUnit unit:CentiL ;
-  qudt:applicableUnit unit:GAL_IMP ;
-  qudt:applicableUnit unit:GAL_UK ;
-  qudt:applicableUnit unit:GAL_US ;
+  skos:definition "Liquid volume is the volume of a given amount of liquid, that is, the amount of space a liquid takes up. There are a number of different units used to measure liquid volume, but most of them fall under either the metric system of measurement or the Imperial system of measurement." ;
   qudt:applicableUnit unit:L ;
-  qudt:applicableUnit unit:OZ_VOL_US ;
-  qudt:applicableUnit unit:PINT_US ;
-  qudt:applicableUnit unit:QT_US ;
-  qudt:hasDimensionVector qkdv:A0E0L3I0M0H0T0D0 ;
-  qudt:informativeReference "http://www.ehow.com/facts_6371078_liquid-volume_.html"^^xsd:anyURI ;
-  qudt:plainTextDescription "Liquid volume is the volume of a given amount of liquid, that is, the amount of space a liquid takes up. There are a number of different units used to measure liquid volume, but most of them fall under either the metric system of measurement or the Imperial system of measurement." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Liquid Volume"@en ;
   skos:broader quantitykind:Volume ;
-  #kos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
 quantitykind:Concentration
   a qudt:QuantityKind , skos:Concept ;
-  qudt:dbpediaMatch "http://dbpedia.org/resource/Concentration"^^xsd:anyURI ;
-  qudt:informativeReference "http://en.wikipedia.org/wiki/Concentration"^^xsd:anyURI ;
-  qudt:plainTextDescription "In chemistry, concentration is defined as the abundance of a constituent divided by the total volume of a mixture. Furthermore, in chemistry, four types of mathematical description can be distinguished: mass concentration, molar concentration, number concentration, and volume concentration. The term concentration can be applied to any kind of chemical mixture, but most frequently it refers to solutes in solutions." ;
+  skos:definition "In chemistry, concentration is defined as the abundance of a constituent divided by the total volume of a mixture. Furthermore, in chemistry, four types of mathematical description can be distinguished: mass concentration, molar concentration, number concentration, and volume concentration. The term concentration can be applied to any kind of chemical mixture, but most frequently it refers to solutes in solutions." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Concentration"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
@@ -1184,43 +478,10 @@ quantitykind:Concentration
 
 quantitykind:EnergyPerElectricCharge
   a qudt:QuantityKind ;
-  dcterms:description "Voltage is a representation of the electric potential energy per unit charge. If a unit of electrical charge were placed in a location, the voltage indicates the potential energy of it at that point. In other words, it is a measurement of the energy contained within an electric field, or an electric circuit, at a given point. Voltage is a scalar quantity. The SI unit of voltage is the volt, such that \\(1 volt = 1 joule/coulomb\\)."^^qudt:LatexString ;
-  qudt:plainTextDescription "Voltage is a representation of the electric potential energy per unit charge. If a unit of electrical charge were placed in a location, the voltage indicates the potential energy of it at that point. In other words, it is a measurement of the energy contained within an electric field, or an electric circuit, at a given point. Voltage is a scalar quantity. The SI unit of voltage is the volt, such that 1 volt = 1 joule/coulomb.";
-  qudt:applicableUnit unit:PlanckVolt ;
+  skos:definition "Voltage is a representation of the electric potential energy per unit charge. If a unit of electrical charge were placed in a location, the voltage indicates the potential energy of it at that point. In other words, it is a measurement of the energy contained within an electric field, or an electric circuit, at a given point. Voltage is a scalar quantity. The SI unit of voltage is the volt, such that 1 volt = 1 joule/coulomb.";
   qudt:applicableUnit unit:V ;
-  qudt:applicableUnit unit:V_Ab ;
-  qudt:applicableUnit unit:V_Stat ;
-  qudt:baseUnitDimensions "L^2 \\cdot M/I \\cdot T^3" ;
-  qudt:baseUnitDimensions "kg \\cdot m^2/A \\cdot s^3" ;
-  qudt:hasDimensionVector qkdv:A0E-1L2I0M1H0T-3D0 ;
-  qudt:informativeReference "http://physics.about.com/od/glossary/g/voltage.htm"^^xsd:anyURI ;
-  qudt:symbol "V" ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Energy per electric charge"@en ;
-  owl:sameAs quantitykind:ElectricPotential ;
-  owl:sameAs quantitykind:ElectricPotentialDifference ;
-  owl:sameAs quantitykind:Voltage ;
-  skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
-  skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
-.
-
-quantitykind:ThermodynamicTemperature
-  a qudt:QuantityKind ;
-  qudt:applicableUnit unit:DEG_F ;
-  qudt:applicableUnit unit:DEG_R ;
-  qudt:applicableUnit unit:K ;
-  qudt:applicableUnit unit:MilliDEG_C ;
-  qudt:applicableUnit unit:PlanckTemperature ;
-  qudt:baseUnitDimensions "K" ;
-  qudt:baseUnitDimensions "\\Theta" ;
-  qudt:dbpediaMatch "http://dbpedia.org/page/Thermodynamic_temperature"^^xsd:anyURI ;
-  qudt:hasDimensionVector qkdv:A0E0L0I0M0H1T0D0 ;
-  qudt:latexSymbol "\\(\\Theta\\)"^^qudt:LatexString ;
-  qudt:plainTextDescription "Thermodynamic temperature is the absolute measure of temperature and is one of the principal parameters of thermodynamics. Temperature is a physical property of matter that quantitatively expresses the common notions of hot and cold. In thermodynamics, in a system of which the entropy is considered as an independent externally controlled variable, absolute, or thermodynamic temperature is defined as the derivative of the internal energy with respect to the entropy. This is a base quantity in the International System of Quantities, ISQ, on which the International System of Units, SI, is based." ;
-  qudt:symbol "T" ;
-  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
-  skos:prefLabel "Thermodynamic Temperature"@en ;
-  rdfs:seeAlso quantitykind:Temperature ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
