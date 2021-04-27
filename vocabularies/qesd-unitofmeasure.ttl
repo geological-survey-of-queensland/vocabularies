@@ -16,11 +16,11 @@
     dcterms:creator <https://linked.data.gov.au/org/des> ;
     dcterms:modified "2021-04-27"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/des> ;
-    dcterms:provenance "Derived from QUDT (http://qudt.org/vocab/unit)"@en ;
+    dcterms:provenance "Derived from QUDT (http://qudt.org/vocab/unit)" ;
     skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to Queensland Environmental Science Data (QESD)."@en ;
     skos:inScheme <https://linked.data.gov.au/def/qesd-uom> ;
     skos:prefLabel "Queensland Environmental Science Data Profile of QUDT Units"@en ;
-    skos:editorialNote "The units from QUDT are a direct copy from the list of items provided from the QUDT public GitHub repositories (https://github.com/qudt/qudt-public-repo). Any units created specificly for use in this vocabulary are to be explicitly marked with a source of this scheme. Additions to each term are to include them as an skos:Concept and include them explicitly in this ConceptScheme."@en ;
+    skos:editorialNote "The units from QUDT are a partial copy from the list of items provided from the QUDT public GitHub repositories (https://github.com/qudt/qudt-public-repo). Any units created specificly for use in this vocabulary are to be explicitly marked with a source of this scheme. Additions to each term are to include them as an skos:Concept and skos:definition and include them explicitly in this ConceptScheme."@en ;
     skos:hasTopConcept
         unit:UNITLESS ,
         unit:NUM ,
@@ -63,7 +63,7 @@
 unit:NUM
   a qudt:CountingUnit ;
   a qudt:Unit , skos:Concept ;
-  skos:definition "Number is a unit for  'Dimensionless' expressed as #." ;
+  skos:definition "Number is a unit for 'Dimensionless' expressed as #." ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
   skos:prefLabel "Number"@en ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-uom> ;
@@ -132,10 +132,10 @@ unit:MicroGM-PER-L
 unit:DEG_C
   a qudt:DerivedUnit ;
   a qudt:Unit , skos:Concept ;
+  skos:definition "Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely 273.15C." ;
   qudt:hasQuantityKind quantitykind:Temperature ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
   skos:prefLabel "Degree Celsius"@en ;
-  skos:altLabel "degree-centigrade" ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-uom> ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-uom> ;
 .
@@ -448,7 +448,7 @@ unit:MIN
 
 unit:YR
   a qudt:Unit ;
-  skos:definition "A year is any of the various periods equated with one passage of Earth about the Sun, and hence of roughly 365 days. The familiar calendar has a mixture of 365- and 366-day years, reflecting the fact that the time for one complete passage takes about 365¼ days; the precise value for this figure depends on the manner of defining the year."^^rdf:HTML ;
+  skos:definition "A year is any of the various periods equated with one passage of Earth about the Sun, and hence of roughly 365 days. The familiar calendar has a mixture of 365- and 366-day years, reflecting the fact that the time for one complete passage takes about 365¼ days; the precise value for this figure depends on the manner of defining the year." ;
   qudt:hasQuantityKind quantitykind:Time ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
   skos:prefLabel "Year"@en ;
