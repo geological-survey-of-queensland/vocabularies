@@ -64,6 +64,8 @@ unit:NUM
   a qudt:CountingUnit ;
   a qudt:Unit , skos:Concept ;
   skos:definition "Number is a unit for 'Dimensionless' expressed as #." ;
+  qudt:hasQuantityKind quantitykind:Dimensionless ;
+  qudt:hasQuantityKind quantitykind:DimensionlessRatio ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
   skos:prefLabel "Number"@en ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-uom> ;
@@ -82,8 +84,8 @@ unit:PH
 unit:MilliGM-PER-L
   a qudt:Unit , skos:Concept ;
   skos:definition "0.000001-fold of the SI base unit kilogram divided by the unit litre" ;
+  qudt:hasQuantityKind quantitykind:MassDensity ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-  rdfs:label "Milligram Per Liter"@en-us ;
   skos:prefLabel "Milligram Per Litre"@en ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-uom> ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-uom> ;
@@ -92,6 +94,7 @@ unit:MilliGM-PER-L
 unit:MicroS
   a qudt:Unit , skos:Concept ;
   skos:definition "0.000001-fold of the SI derived unit siemens" ;
+  qudt:hasQuantityKind quantitykind:ElectricConductivity ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
   skos:prefLabel "Microsiemens"@en ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-uom> ;
@@ -101,8 +104,8 @@ unit:MicroS
 unit:MicroS-PER-CentiM
   a qudt:Unit , skos:Concept ;
   skos:definition "0.000001-fold of the SI derived unit Siemens divided by the 0.01-fold of the SI base unit metre" ;
+  qudt:hasQuantityKind quantitykind:Conductivity ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-  rdfs:label "Microsiemens Per Centimeter"@en-us ;
   skos:prefLabel "Microsiemens Per Centimetre"@en ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-uom> ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-uom> ;
@@ -112,8 +115,8 @@ unit:MicroM
   a qudt:DerivedUnit ;
   a qudt:Unit , skos:Concept ;
   skos:definition "Micrometer is a unit for  'Length' expressed as (microm).";
+  qudt:hasQuantityKind quantitykind:Length ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-  rdfs:label "Micrometer"@en-us ;
   skos:prefLabel "Micrometre"@en ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-uom> ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-uom> ;
@@ -122,8 +125,8 @@ unit:MicroM
 unit:MicroGM-PER-L
   a qudt:Unit , skos:Concept ;
   skos:definition "0.000000001-fold of the SI base unit kilogram divided by the unit litre" ;
+  qudt:hasQuantityKind quantitykind:MassDensity ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-  rdfs:label "Microgram Per Liter"@en-us ;
   skos:prefLabel "Microgram Per Litre"@en ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-uom> ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-uom> ;
