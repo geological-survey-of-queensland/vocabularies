@@ -1,16 +1,16 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix qrps: <http://linked.data.gov.au/def/qld-resource-permit-status/> .
+@prefix qrps: <https://linked.data.gov.au/def/qld-resource-permit-status/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/qld-resource-permit-status> a owl:Ontology , skos:ConceptScheme ;
+<https://linked.data.gov.au/def/qld-resource-permit-status> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-09-13"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2019-09-13"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source <https://myminesonline.business.qld.gov.au> ;
     skos:definition "The stage in the life cycle of a Queensland Resource Permit."@en ;
     skos:hasTopConcept qrps:abandoned,
@@ -20,41 +20,41 @@
         qrps:unsuccessful ;
     skos:prefLabel "Queensland Resource Permit Status"@en .
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
 
 qrps:abandoned a skos:Concept ;
     skos:altLabel "Discarded"@en ;
     skos:definition "An application for a permit that has been abandoned or discarded by the applicant."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Abandoned"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/qld-resource-permit-status> .
 
 qrps:application a skos:Concept ;
     skos:altLabel "Submitted"@en ;
     skos:hiddenLabel "Not Accepted"@en,
         "Pre-Lodgement"@en ;
     skos:definition "An application has been made for a permit."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Application"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/qld-resource-permit-status> .
 
 qrps:granted a skos:Concept ;
     skos:altLabel "Current"@en ;
     skos:definition "A permit that has been granted under legislation."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Granted"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/qld-resource-permit-status> .
 
 qrps:non-current a skos:Concept ;
     skos:definition "A permit that was once granted but is now no longer active."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Non-Current"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/qld-resource-permit-status> .
 
 qrps:unsuccessful a skos:Concept ;
     skos:definition "An application for a permit that was deemed unsuccessful by the Department."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Unsuccessful"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> .
+    skos:topConceptOf <https://linked.data.gov.au/def/qld-resource-permit-status> .

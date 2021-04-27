@@ -13,7 +13,7 @@
 #
 # Ontologies
 #
-# http://linked.data.gov.au/def/borehole
+# https://linked.data.gov.au/def/borehole
 # all requests for RDF (tutle) just go to the single RDF file
 # requests for .../borehole/... go to .../borehole#...
 RewriteCond %{QUERY_STRING} ^_format=text/turtle$ [OR]
@@ -22,18 +22,18 @@ RewriteRule ^/def/borehole(.*)$                         https://raw.githack.com/
 RewriteRule ^/def/borehole(.*).ttl$                     https://raw.githack.com/geological-survey-of-queensland/gsq-borehole-profile/master/borehole.ttl [R=302,L]
 RewriteRule ^/def/borehole(.*)$                         https://raw.githack.com/geological-survey-of-queensland/gsq-borehole-profile/master/borehole.html$1 [R=302,L]
 
-# http://linked.data.gov.au/def/geoadminfeatures
+# https://linked.data.gov.au/def/geoadminfeatures
 RewriteCond %{QUERY_STRING} ^_format=text/turtle$ [OR]
 RewriteCond %{HTTP:Accept} text/turtle [NC]
 RewriteRule ^/def/geoadminfeatures                     https://raw.githubusercontent.com/geological-survey-of-queensland/geoadmin-features-ont/master/geoadminfeatures.ttl? [R=302,L]
 RewriteRule ^/def/geoadminfeatures.ttl$                https://raw.githubusercontent.com/geological-survey-of-queensland/geoadmin-features-ont/master/geoadminfeatures.ttl [R=302,L]
 RewriteRule ^/def/geoadminfeatures(.*)$                https://raw.githack.com/geological-survey-of-queensland/geoadmin-features-ont/master/geoadminfeatures.html$1 [R=302,L]
 
-# http://linked.data.gov.au/def/geofeatures
+# https://linked.data.gov.au/def/geofeatures
 include /etc/apache2/sites-available/def-geofeatures.conf
 #### def-geofeatures.conf
 # def-geofeatures.conf content, see https://github.com/AGLDWG/pid-proxy/blob/master/conf/def-geofeatures.conf
-# http://linked.data.gov.au/def/geofeatures
+# https://linked.data.gov.au/def/geofeatures
 #   Profiles: alt, skos, owl
 #   Media Types: HTML, RDF (turtle)
 
@@ -125,7 +125,7 @@ RewriteRule ^/def/(address-type|australian-phone-area-codes|australian-states-an
 #
 # Datasets
 #
-# http://linked.data.gov.au/dataset/qldgeofeatures
+# https://linked.data.gov.au/dataset/qldgeofeatures
 # Dataset
 RewriteCond %{QUERY_STRING} ^_format=text/turtle$ [OR]
 RewriteCond %{HTTP:Accept} text/turtle [NC]
