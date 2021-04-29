@@ -33,7 +33,7 @@
 <https://linked.data.gov.au/org/w3c> a sdo:Organization ;
     a sdo:Organization ;
     sdo:name "World Wide Web Consortium" ;
-    sdo:url <https://www.iso.org> ;
+    sdo:url "https://www.iso.org"^^xsd:anyURI ;
 .
 <https://orcid.org/0000-0002-8742-7730>
   a sdo:Person ;
@@ -45,7 +45,7 @@
 <https://surroundaustralia.com>
   a sdo:Organization ;
   sdo:name "SURROUND Australia Pty Ltd" ;
-  sdo:url <https://surroundaustralia.com> ;
+  sdo:url "https://surroundaustralia.com"^^xsd:anyURI ;
 .
 <http://orcid.org/0000-0002-3884-3420>
   a sdo:Person ;
@@ -57,12 +57,12 @@
 <https://linked.data.gov.au/org/csiro>
   a sdo:Organization ;
   sdo:name "CSIRO" ;
-  sdo:url <https://www.csiro.au> ;
+  sdo:url "https://www.csiro.au"^^xsd:anyURI ;
 .
 <https://www.w3.org>
   a sdo:Organization ;
   sdo:name "World Wide Web Consortium" ;
-  sdo:url <https://www.w3.org> ;
+  sdo:url "https://www.w3.org"^^xsd:anyURI ;
 .
 greg:April
   a skos:Concept , time:MonthOfYear ;
@@ -81,6 +81,7 @@ greg:April
   time:month "--04"^^xsd:gMonth ;
   time:unitType time:unitMonth ;
   skos:definition "April is the fourth month of the year in the Gregorian calendar, the fifth in the early Julian, the first of four months to have a length of 30 days, and the second of five months to have a length of less than 31 days."@en ;  
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/April> ;
 .
@@ -101,6 +102,7 @@ greg:August
   time:month "--08"^^xsd:gMonth ;
   time:unitType time:unitMonth ;
   skos:definition "August is the eighth month of the year in the Julian and Gregorian calendars, and the fifth of seven months to have a length of 31 days."@en ; 
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/August> ;
 .
@@ -120,6 +122,7 @@ greg:December
   skos:prefLabel "ديسمبر"@ar ;
   time:month "--12"^^xsd:gMonth ;
   skos:definition "December is the twelfth and final month of the year in the Julian and Gregorian Calendars. It is also the last of seven months to have a length of 31 days."@en ; 
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/December> ;
 .
@@ -139,6 +142,7 @@ greg:February
   skos:prefLabel "فبراير"@ar ;
   time:month "--02"^^xsd:gMonth ;
   skos:definition "February is the second month of the year in the Julian and Gregorian calendars, with 28 days in common years and 29 days in leap years, with the quadrennial 29th day being called the leap day."@en ; 
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/February> ;
 .
@@ -158,6 +162,7 @@ greg:January
   skos:prefLabel "StyczeD"@pl ;
   time:month "--01"^^xsd:gMonth ;
   skos:definition "January is the first month of the year in the Julian and Gregorian calendars and the first of seven months to have a length of 31 days."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/January> ;
 .
@@ -177,6 +182,7 @@ greg:July
   skos:prefLabel "Luglio"@it ;
   time:month "--07"^^xsd:gMonth ;
   skos:definition "July is the seventh month of the year (between June and August) in the Julian and Gregorian Calendars and the fourth of seven months to have a length of 31 days."@en ; 
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/July> ;
 .
@@ -196,6 +202,7 @@ greg:June
   skos:prefLabel "Junio"@es ;
   time:month "--06"^^xsd:gMonth ;
   skos:definition "June is the sixth month of the year in the Julian and Gregorian calendars, the second of four months to have a length of 30 days, and the third of five months to have a length of less than 31 days."@en ; 
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/June> ;
 .
@@ -215,6 +222,7 @@ greg:March
   skos:prefLabel "مارس"@ar ;
   time:month "--03"^^xsd:gMonth ;
   skos:definition "March is the third month of the year and named after Mars in both the Julian and Gregorian calendars. It is the second of seven months to have a length of 31 days."@en ; 
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/March> ;
 .
@@ -234,6 +242,7 @@ greg:May
   skos:prefLabel "مايو"@ar ;
   time:month "--05"^^xsd:gMonth ;
   skos:definition "May is the fifth month of the year in the Julian and Gregorian calendars and the third of seven months to have a length of 31 days."@en ; 
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/May> ;
 .
@@ -253,6 +262,7 @@ greg:November
   skos:prefLabel "نوفمبر"@ar ;
   time:month "--11"^^xsd:gMonth ;
   skos:definition "November is the eleventh month of the year in the Julian and Gregorian Calendars, the fourth and last of four months to have a length of 30 days and the fifth and last of five months to have a length of fewer than 31 days."@en ; 
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/November> ;
 .
@@ -272,6 +282,7 @@ greg:October
   skos:prefLabel "أكتوبر"@ar ;
   time:month "--10"^^xsd:gMonth ;
   skos:definition "October is the tenth month of the year in the Julian and Gregorian Calendars and the sixth of seven months to have a length of 31 days."@en ; 
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/October> ;
 .
@@ -292,5 +303,6 @@ greg:September
   time:month "--09"^^xsd:gMonth ;
   skos:definition "September is the ninth month of the year in the Julian and Gregorian calendars, the third of four months to have a length of 30 days, and the fourth of five months to have a length of less than 31 days."@en ; 
   rdfs:seeAlso <https://en.wikipedia.org/wiki/September> ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
   skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
 .

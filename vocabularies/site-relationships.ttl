@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/site-relationships> a owl:Ontology , skos:ConceptScheme ;
@@ -38,7 +39,7 @@
 <https://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 strel:borehole a skos:Collection ;
     skos:definition "Relationships between associated boreholes and boreholes with other operational sites such as well pads."@en ;
@@ -80,24 +81,28 @@ strel:wellbore a skos:Collection ;
 
 strel:above a skos:Concept ;
     skos:definition "Object or interval A is above object or interval B."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Above"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
 
 strel:below a skos:Concept ;
     skos:definition "Object or interval A is below object or interval B."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Below"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
 
 strel:boreholeIntersect a skos:Concept ;
     skos:definition "A well that intersects the subject well."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Borehole Intersect"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
 
 strel:injectionExtractionPair a skos:Concept ;
     skos:definition "Wells that exist in a pair, or system, in which a well or wells inject fluids and one or more offset wells extract fluids. Such as stimulated production, enhanced geothermale etc."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Injection-Extraction Pair"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
@@ -105,18 +110,21 @@ strel:injectionExtractionPair a skos:Concept ;
 strel:observation a skos:Concept ;
     skos:altLabel "Monitoring"@en ;
     skos:definition "A borehole drilled for the observation or monitoring of the subject well or bore"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Observation"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
 
 strel:parent a skos:Concept ;
     skos:definition "The parent wellbore that the subject wellbore originated from."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Has parent"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
 
 strel:permits a skos:Concept ;
     skos:definition "The sites permitted to conduct activities under the license or authority issued under a legislation or regulation."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:scopeNote """This concept uses the verb 'permits'. The noun 'permit' is a GeoAdmin Feature concept defined at https://linked.data.gov.au/def/geoadminfeatures/permit"""@en ;
     skos:prefLabel "Permits"@en ;
@@ -124,12 +132,14 @@ strel:permits a skos:Concept ;
 
 strel:hasPermit a skos:Concept ;
     skos:definition "Activities conducted at a site may be governed by a permit, license or authority issued under legislation or regulation. This concept is the inverse of Permits."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Has permit"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
 
 strel:re-entry a skos:Concept ;
     skos:definition "A previously abandoned well that the subject well drilled from within. A re-entry drills out or removes any abandonment plugs or equipment from the previously abandoned well."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Re-Entry"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
@@ -137,18 +147,21 @@ strel:re-entry a skos:Concept ;
 strel:redrill a skos:Concept ;
     skos:altLabel "Offset"@en ;
     skos:definition "A well in which drilling was abandoned that the subject well is drilled at an offset position to as a direct replacement. A redrill is drilled with the same intended target(s) and commonly the same general design."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Redrill"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
 
 strel:twinned a skos:Concept ;
     skos:definition "A twin of the subject well. A hole drilled separate to but in support of the subject wells purpose and intent."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Twinned"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
 
 strel:wellPad a skos:Concept ;
     skos:definition "The well pad site from which a batch of wells or bores share a single operational area at surface but drill to different sub-surface targets."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Well Pad"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
@@ -156,6 +169,7 @@ strel:wellPad a skos:Concept ;
 strel:contains a skos:Concept ;
     skos:altLabel "Within"@en ;
     skos:definition "Object A contains object B, and the boundaries do not intersect."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Contains"@en ;
     skos:scopeNote "Use of strel:contains in a ternary relationship (A related_to B, related_to of type strel:contains) entails A geo:sfContains B" ;
@@ -163,12 +177,14 @@ strel:contains a skos:Concept ;
 
 strel:covers a skos:Concept ;
     skos:definition "Object A covers object B, and the boundaries intersect."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Covers"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> .
 
 strel:disjoint a skos:Concept ;
     skos:definition "There is no intersection area between object A and object B."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Disjoint"@en ;
     skos:scopeNote "Use of strel:disjoint in a ternary relationship (A related_to B, related_to of type strel:disjoint) entails A geo:sfDisjoint B" ;
@@ -176,6 +192,7 @@ strel:disjoint a skos:Concept ;
 
 strel:equals a skos:Concept ;
     skos:definition "Object B and object A match."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Equals"@en ;
     skos:scopeNote "Use of strel:equals in a ternary relationship (A related_to B, related_to of type strel:equals) entails A geo:sfEquals B" ;
@@ -184,6 +201,7 @@ strel:equals a skos:Concept ;
 strel:touches a skos:Concept ;
     skos:altLabel "Meets"@en ;
     skos:definition "Object A and object B touch at the boundary."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Touches"@en ;
     skos:scopeNote "Use of strel:touches in a ternary relationship (A related_to B, related_to of type strel:touches) entails A geo:sfTouches B" ;
@@ -192,6 +210,7 @@ strel:touches a skos:Concept ;
 strel:intersects a skos:Concept ;
     skos:altLabel "Overlaps"@en ;
     skos:definition "Object A and B intersect spatially."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Intersects"@en ;
     skos:scopeNote "Use of strel:intersects in a ternary relationship (A related_to B, related_to of type strel:intersects) entails A geo:sfIntersects B" ;
@@ -199,6 +218,7 @@ strel:intersects a skos:Concept ;
 
 strel:supersedes a skos:Concept ;
     skos:definition "Object A supersedes object B. A temporal relationship whereby Object A follows, and is a direct result of the cessation of, Object B."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Supersedes"@en ;
     skos:scopeNote """In the context of resource regulation, supersedes applies to the transition from an exploration permit to a 'higher tenure', such as a Mining Lease""" ;

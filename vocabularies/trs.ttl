@@ -3,7 +3,7 @@
 # imports: http://www.w3.org/2006/time
 
 @prefix trs: <https://linked.data.gov.au/def/trs/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -19,10 +19,10 @@
   skos:prefLabel "Temporal Reference Systems"@en ;
   skos:definition "Temporal reference system, such temporal coordinate systems (with origin, directions, and scales), calendar-clock combinations, or a (possibly hierarchical) ordinal system."@en ;
   skos:historyNote "This vocabulary was established to provide instances of the Time Ontology in OWL's time:TRS class for reference. See <https://www.w3.org/TR/owl-time/#time:TRS> for the time:TRS definition."@en ;
-  dct:created "2019-10-17"^^xsd:date ;
-  dct:creator <https://orcid.org/0000-0002-8742-7730> ;
-  dct:modified "2020-06-11"^^xsd:date ;
-  dct:publisher <https://linked.data.gov.au/org/gsq> ;
+  dcterms:created "2019-10-17"^^xsd:date ;
+  dcterms:creator <https://orcid.org/0000-0002-8742-7730> ;
+  dcterms:modified "2020-06-11"^^xsd:date ;
+  dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
   skos:hasTopConcept 
     trs:BahaiCalendar ,
     trs:BeforePresent ,
@@ -45,7 +45,7 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 <https://orcid.org/0000-0002-8742-7730>
   a sdo:Person ;
@@ -57,13 +57,14 @@
 <https://surroundaustralia.com>
   a sdo:Organization ;
   sdo:name "SURROUND Australia Pty Ltd" ;
-  sdo:url <https://surroundaustralia.com> ;
+  sdo:url "https://surroundaustralia.com"^^xsd:anyURI ;
 .
 
 trs:BahaiCalendar
   a skos:Concept ;
   a time:TRS ;
   rdfs:seeAlso <http://calendar.bahaiq.com/about/> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "The Bahá'í calendar, or Badí calendar, was first established by the Báb in the Kitáb-i-Asmá (The Book of Names). Bahá'u'lláh later confirmed the calendar. The calendar is made up of 19 months of 19 days each, with an intercalary day period of four days (five during leap years). The new year (Naw-Rúz) begins on the March 21st of the Gregorian calendar, but is tied to the Spring Equinox so it is possible that it could be celebrated on the 22nd of March in some years."@en ;
   skos:altLabel "Badí calendar"@en ;
@@ -74,6 +75,7 @@ trs:BeforePresent
   a skos:Concept ;
   a time:TRS ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Before_Present> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "A time scale used mainly in archaeology, geology and other scientific disciplines to specify when events occurred in the past. Because the 'present' time changes, standard practice is to use 1 January 1950 as the commencement date (epoch) of the age scale"@en ;
   skos:prefLabel "Before Present"@en ;
@@ -84,6 +86,7 @@ trs:BeforePresentCalibrated
   a time:TRS ;
   skos:altLabel "BP-Cal"@en ;
   skos:broader trs:BeforePresent ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "A calibrated Before Present age that has been adjusted to correct for the variation of the carbon 14 to carbon 12 ratio in the atmosphere through time. A Before Present age is a time scale used to specify when events occurred in the past. It is primarily used when carbon dating the method of age determination. "@en ;
   skos:prefLabel "Calibrated Years Before Present"@en ;
@@ -91,8 +94,9 @@ trs:BeforePresentCalibrated
 trs:BIPM
   a skos:Concept ;
   a time:TRS ;
-  dct:source <http://www.opengis.net/def/trs/BIPM> ;
+  dcterms:source <http://www.opengis.net/def/trs/BIPM> ;
   rdfs:seeAlso <https://www.bipm.org/en/bipm/tai/tai> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:altLabel "BIPM"@en ;
   skos:altLabel "TAI"@en ;
@@ -103,8 +107,9 @@ trs:BIPM
 trs:ChineseCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Chinese_calendar> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "The traditional China calendar (officially known as the Rural Calendar [農曆; 农历; Nónglì; 'farming calendar']), or Former Calendar (舊曆; 旧历; Jiùlì), Traditional Calendar (老曆; 老历; Lǎolì) or Lunar Calendar (陰曆; 阴历; Yīnlì; 'yin calendar'), is a lunisolar calendar which reckons years, months and days according to astronomical phenomena. It is defined by GB/T 33661-2017, 'Calculation and promulgation of the Chinese calendar' issued by the Standardisation Administration of China on 12 May 2017."@en ;
   skos:prefLabel "Chinese Calendar"@en ;
@@ -114,6 +119,7 @@ trs:GPSTime
   a skos:Concept ;
   a time:TRS ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Global_Positioning_System#Timekeeping> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "GPS time is not corrected to match the rotation of the Earth, so it does not contain leap seconds or other corrections that are periodically added to UTC. GPS time was set to match UTC in 1980, but has since diverged. The lack of corrections means that GPS time remains at a constant offset with International Atomic Time (TAI) (TAI − GPS = 19 seconds)."@en ;
   skos:prefLabel "GPS Time"@en ;
@@ -123,6 +129,7 @@ trs:GeologicTimescale
   a skos:Concept ;
   a time:TRS ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Geologic_time_scale> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "The geologic time scale is a system of chronological dating that relates geological strata (stratigraphy) to time. It is used by geologists, paleontologists, and other Earth scientists to describe the timing and relationships of events that have occurred during Earth's history."@en ;
   skos:prefLabel "Geologic timescale"@en ;
@@ -131,8 +138,9 @@ trs:GeologicTimescale
 trs:GregorianCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Gregorian_calendar> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "The Gregorian calendar is the calendar used in most of the world. It is named after Pope Gregory XIII, who introduced it in October 1582. "@en ;
   skos:prefLabel "Gregorian Calendar"@en ;
@@ -141,9 +149,10 @@ trs:GregorianCalendar
 trs:HebrewCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <http://dbpedia.org/resource/Hebrew_calendar> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Hebrew_calendar> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:altLabel "Jewish Calendar"@en ;
   skos:definition "The Hebrew or Jewish calendar (Hebrew: הַלּוּחַ הָעִבְרִי, Ha-Luah ha-Ivri) is a lunisolar calendar used today predominantly for Jewish religious observances. It determines the dates for Jewish holidays and the appropriate public reading of Torah portions, yahrzeits (dates to commemorate the death of a relative), and daily Psalm readings, among many ceremonial uses. In Israel, it is used for religious purposes, provides a time frame for agriculture and is an official calendar for civil purposes, although the latter usage has been steadily declining in favor of the Gregorian calendar. "@en ;
@@ -153,8 +162,9 @@ trs:HebrewCalendar
 trs:IndianNationalCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Indian_national_calendar> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "The Indian national calendar, sometimes called the Shalivahana Shaka calendar is used, alongside the Gregorian calendar, by The Gazette of India, in news broadcasts by All India Radio and in calendars and communications issued by the Government of India."@en ;
   skos:prefLabel "Indian National Calendar"@en ;
@@ -164,6 +174,7 @@ trs:IranianCalendar
   a skos:Concept ;
   a time:TRS ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Iranian_calendars> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition """The Iranian calendars or Iranian chronology (Persian: گاه‌شماری ایرانی‎, Gāh-Shomāri-ye Irāni) are a succession of calendars invented or used for over two millennia in Iran also known as Persia. One of the longest chronological records in human history, the Iranian calendar has been modified time and time again during its history to suit administrative, climatic, and religious purposes.
 
@@ -174,9 +185,10 @@ As one of the few calendars designed in the era of accurate positional astronomy
 trs:IslamicCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <https://aa.usno.navy.mil/faq/docs/islamic.php> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Islamic_calendar> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "The Islamic, Muslim, or Hijri calendar (Arabic: التقويم الهجري‎ at-taqwīm al-hijrī) is a lunar calendar consisting of 12 lunar months in a year of 354 or 355 days. It is used to determine the proper days of Islamic holidays and rituals, such as the annual period of fasting and the proper time for the pilgrimage to Mecca."@en ;
   skos:prefLabel "Islamic Calendar"@en ;
@@ -185,8 +197,9 @@ trs:IslamicCalendar
 trs:JulianCalendar
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
+  dcterms:source <https://aa.usno.navy.mil/faq/docs/calendars.php> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Julian_calendar> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "The Julian calendar, proposed by Julius Caesar in 708 AUC (46 BC/BCE), was a reform of the Roman calendar. It took effect on 1 January 709 AUC (45 BC/BCE), by edict. It was designed with the aid of Greek mathematicians and Greek astronomers such as Sosigenes of Alexandria. "@en ;
   skos:prefLabel "Julian Calendar"@en ;
@@ -196,6 +209,7 @@ trs:JulianDay
   a skos:Concept ;
   a time:TRS ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Julian_day> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition """Julian day is the continuous count of days since the beginning of the Julian Period and is used primarily by astronomers, and in software for easily calculating elapsed days between two events (e.g. food production date and sell by date).
 
@@ -207,6 +221,7 @@ trs:MayaCalendar
   a skos:Concept ;
   a time:TRS ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Maya_calendar> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "The Maya calendar is a system of calendars used in pre-Columbian Mesoamerica and in many modern communities in the Guatemalan highlands, Veracruz, Oaxaca and Chiapas, Mexico."@en ;
   skos:prefLabel "Maya Calendar"@en ;
@@ -215,8 +230,9 @@ trs:MayaCalendar
 trs:ParliamentsOfAustraliaTimeline
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://en.wikipedia.org/wiki/Chronology_of_Australian_federal_parliaments> ;
+  dcterms:source <https://en.wikipedia.org/wiki/Chronology_of_Australian_federal_parliaments> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Parliament_of_Australia> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition """This timeline of Parliaments of Australia starts in 1901 (Gregorian Caledar) when Australia was formed as an country. Epochs within this timeline are parliaments which are formed after elections with the first parliament formed after the first election in 1901 and subsequently numbered 1st, 2nd, 3rd etc. up to (as of October, 2019, Gegorian Calendar) the 44th."""@en ;
   skos:prefLabel "Parliaments of Australia Timeline"@en ;
@@ -227,6 +243,7 @@ trs:SolarHijriCalendar
   a skos:Concept ;
   a time:TRS ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Solar_Hijri_calendar> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "The Solar Hijri calendar (Persian: گاه‌شماری هجری خورشیدی‎, romanized: gāh-shomāri-ye hejri-ye khorshidi; Pashto: لمريز لېږدیز کلیز‎), also called the Solar Hejri calendar or Shamsi Hijri calendar, and abbreviated as SH, is the official calendar of Iran and Afghanistan. It begins on the March equinox (Nowruz) as determined by astronomical calculation for the Iran Standard Time meridian (52.5°E, UTC+03:30) and has years of 365 or 366 days."@en ;
   skos:prefLabel "Solar Hijri Calendar"@en ;
@@ -236,6 +253,7 @@ trs:UNIXTime
   a skos:Concept ;
   a time:TRS ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Unix_time> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "Unix time (also known as Epoch time, POSIX time, seconds since the Epoch, or UNIX Epoch time) is a system for describing a point in time. It is the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970, minus leap seconds."@en ;
   skos:prefLabel "UNIX Time"@en ;
@@ -244,8 +262,9 @@ trs:UNIXTime
 trs:UTCTime
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://www.bipm.org/en/bipm-services/timescales/> ;
+  dcterms:source <https://www.bipm.org/en/bipm-services/timescales/> ;
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Unix_time> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "The atomic time scale that forms the basis for the coordinated dissemination of standard frequencies and time signals."@en ;
   skos:prefLabel "Coordinated Universal Time"@en ;
@@ -255,9 +274,10 @@ trs:UTCTime
 trs:ThousandsOfYearsAgo
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://www.bipm.org/en/bipm-services/timescales/> ;
+  dcterms:source <https://www.bipm.org/en/bipm-services/timescales/> ;
   skos:altLabel "ka"@en ;
   skos:broader trs:BeforePresent ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "Temporal position expressed numerically scaled in thousands of years increasing backwards relative to 1950. Calibration to 1950 not always significant or done, except when carbon dating methods are used."@en ;
   skos:prefLabel "Thousands of Years Ago"@en ;
@@ -266,9 +286,10 @@ trs:ThousandsOfYearsAgo
 trs:MillionsOfYearsAgo
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://www.bipm.org/en/bipm-services/timescales/> ;
+  dcterms:source <https://www.bipm.org/en/bipm-services/timescales/> ;
   skos:altLabel "Ma"@en ;
   skos:broader trs:BeforePresent ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "Temporal position expressed numerically scaled in millions of years increasing backwards relative to 1950. Calibration to 1950 usually not significant or done."@en ;
   skos:prefLabel "Millions of Years Ago"@en ;
@@ -277,9 +298,10 @@ trs:MillionsOfYearsAgo
 trs:BillionsOfYearsAgo
   a skos:Concept ;
   a time:TRS ;
-  dct:source <https://www.bipm.org/en/bipm-services/timescales/> ;
+  dcterms:source <https://www.bipm.org/en/bipm-services/timescales/> ;
   skos:altLabel "Ga"@en ;
   skos:broader trs:BeforePresent ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/trs> ;
   skos:inScheme <https://linked.data.gov.au/def/trs> ;
   skos:definition "Temporal position expressed numerically scaled in billions of years increasing backwards relative to 1950. Calibration to 1950 usually not significant or performed."@en ;
   skos:prefLabel "Billions of Years Ago"@en ;

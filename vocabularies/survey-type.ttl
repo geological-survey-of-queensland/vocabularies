@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/survey-type> a owl:Ontology,
@@ -28,10 +29,11 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 svytp:atmospheric a skos:Concept ;
     skos:definition "A survey measuring chemical and physical properties of the atmosphere."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-type> ;
     skos:notation "at" ;
     skos:prefLabel "Atmospheric"@en ;
@@ -39,6 +41,7 @@ svytp:atmospheric a skos:Concept ;
 
 svytp:geochemistry a skos:Concept ;
     skos:definition "A survey where the chemical properties of rocks, soil, or other geological material is assessed to determine mineralogical and/or elemental composition."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-type> ;
     skos:notation "gc" ;
     skos:prefLabel "Geochemistry"@en ;
@@ -46,6 +49,7 @@ svytp:geochemistry a skos:Concept ;
 
 svytp:geophysical a skos:Concept ;
     skos:definition "A survey where the geophysical properties of the earth is assessed."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-type> ;
     skos:notation "gp" ;
     skos:prefLabel "Geophysical"@en ;
@@ -54,6 +58,7 @@ svytp:geophysical a skos:Concept ;
 svytp:geotechnical a skos:Concept ;
     skos:altLabel "Geomechanical"@en ;
     skos:definition "A survey measuring the physical and mechanical properties of rocks, soil and earth material with particular focus on rock strength and competence."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-type> ;
     skos:notation "gt" ;
     skos:prefLabel "Geotechnical"@en ;
@@ -61,6 +66,7 @@ svytp:geotechnical a skos:Concept ;
 
 svytp:hydrochemistry a skos:Concept ;
     skos:definition "A survey of the chemical and physical properties of surface or ground water."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-type> ;
     skos:notation "hy" ;
     skos:prefLabel "Hydrochemistry"@en ;
@@ -68,6 +74,7 @@ svytp:hydrochemistry a skos:Concept ;
 
 svytp:petrophysical a skos:Concept ;
     skos:definition "A survey that records physical, chemical, electrical, or other properties of the rock/fluid mixtures. This may appliy to measurements derived via wireline logging, or properties analysed in a laboratory setting."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-type> ;
     skos:notation "py" ;
     skos:prefLabel "Petrophysical"@en ;
@@ -76,6 +83,7 @@ svytp:petrophysical a skos:Concept ;
 svytp:physical-geology a skos:Concept ;
     skos:altLabel "Field Mapping"@en ;
     skos:definition "A survey of physical geological features such as outcrop samples, structural measurements, sedimentological and stratigraphic observations."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-type> ;
     skos:notation "pg" ;
     skos:prefLabel "Physical Geology"@en ;
@@ -83,6 +91,7 @@ svytp:physical-geology a skos:Concept ;
 
 svytp:seismic a skos:Concept ;
     skos:definition "A survey using the interaction of seismic waves with sub-surface features of the earth to determine properties and morphology of those features."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-type> ;
     skos:notation "ss" ;
     skos:prefLabel "Seismic"@en ;
@@ -91,6 +100,7 @@ svytp:seismic a skos:Concept ;
 svytp:spatial a skos:Concept ;
     skos:altLabel "Location Survey"@en ;
     skos:definition "A survey measuring the spatial characteristics of an object or region."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-type> ;
     skos:notation "st" ;
     skos:prefLabel "Spatial"@en ;
@@ -98,6 +108,7 @@ svytp:spatial a skos:Concept ;
     
 svytp:spectral a skos:Concept ;
     skos:definition "A survey capturing image information and intensity-per-wavelength-band to be used for spectral analysis e.g. ASTER, MODIS."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-type> ;
     skos:notation "sp" ;
     skos:prefLabel "Spectral"@en ;

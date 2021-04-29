@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/survey-relationship-type> a owl:Ontology,
@@ -22,34 +23,39 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 srt:extension a skos:Concept ;
     skos:broader srt:follow-up ;
     skos:definition "A follow-up survey designed to extend the coverage of an existing survey, usually using the same parameters to ensure data compatibility."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:prefLabel "Extension"@en .
 
 srt:infill a skos:Concept ;
     skos:broader srt:follow-up ;
     skos:definition "A follow-up survey designed to increase the spatial resolution of a pre-existing survey, usually using the same parameters to ensure data compatibility."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:prefLabel "Infill"@en .
 
 srt:repeat a skos:Concept ;
     skos:broader srt:follow-up ;
     skos:definition "A follow-up survey designed to replicate the coverage and parameters of an existing survey. A repeat survey may, for example, be needed to correct errors or to reproduce results from the initial survey."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:prefLabel "Repeat"@en .
 
 srt:follow-up a skos:Concept ;
     skos:definition "A survey that was designed on the basis of lessons learned from a prior survey."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:prefLabel "Follow-up"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-relationship-type> .
 
 srt:reprocessing a skos:Concept ;
     skos:definition "Generating a new digital sample by reprocessing pre-existing raw data with a new algorithm or processing parameters."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:prefLabel "Reprocessing"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-relationship-type> .
@@ -57,12 +63,14 @@ srt:reprocessing a skos:Concept ;
 srt:resampling a skos:Concept ;
     skos:altLabel "subsampling"@en ;
     skos:definition "Generating a new physical sample from an existing sample."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:prefLabel "Resampling"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-relationship-type> .
 
 srt:same-project a skos:Concept ;
     skos:definition "Surveys that were conducted, concurrently or otherwise, during the course of a single project."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-relationship-type> ;
     skos:prefLabel "Same project"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-relationship-type> .

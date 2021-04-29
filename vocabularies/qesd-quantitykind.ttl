@@ -2,6 +2,7 @@
 @prefix qesdqk: <https://linked.data.gov.au/def/qesd-qkd/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
@@ -21,6 +22,7 @@
     dcterms:publisher <https://linked.data.gov.au/org/des> ;
     dcterms:provenance "Derived from QUDT (http://qudt.org/vocab/quantitykind)" ;
     skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to Queensland Environmental Science Data (QESD)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
     skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
     skos:prefLabel "Queensland Environmental Science Data Profile of QUDT Quantity Kinds"@en ;
     skos:editorialNote "The quantity kids from QUDT are a partial copy from the list of items provided from the QUDT public GitHub repositories (https://github.com/qudt/qudt-public-repo). Any quantity kinds created specificly for use in this vocabulary are to be explicitly marked with a source of this scheme. Additions to each term are to include them as an skos:Concept and skos:definition and include them explicitly in this ConceptScheme."@en ;
@@ -75,6 +77,7 @@ quantitykind:Absorptance
   skos:prefLabel "Absorptance"@en ;
   skos:exactMatch <http://en.wikipedia.org/wiki/Absorbance> ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -85,6 +88,7 @@ quantitykind:ActivityCoefficient
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Activity Coefficient"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -95,6 +99,7 @@ quantitykind:AmountOfSubstance
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Amount of Substance"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -105,6 +110,7 @@ quantitykind:AmountOfSubstanceFractionOfB
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Amount of Substance of Fraction of B"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -115,6 +121,7 @@ quantitykind:AmountOfSubstancePerUnitMass
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Amount of Substance per Unit Mass"@en ;
   skos:broader quantitykind:Concentration ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -127,6 +134,7 @@ quantitykind:Area
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Area"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -137,6 +145,7 @@ quantitykind:Conductivity
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Conductivity"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -148,6 +157,7 @@ quantitykind:Dimensionless
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Dimensionless"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -160,6 +170,7 @@ quantitykind:DimensionlessRatio
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Dimensionless Ratio"@en ;
   skos:broader quantitykind:Dimensionless ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -170,6 +181,7 @@ quantitykind:ElectricConductivity
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Electric Conductivity"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -180,6 +192,7 @@ quantitykind:ExtentOfReaction
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Extent of Reaction"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -190,6 +203,7 @@ quantitykind:ForcePerArea
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Force Per Area"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -200,6 +214,7 @@ quantitykind:IonicStrength
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Ionic Strength"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -214,6 +229,7 @@ quantitykind:Length
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Length"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -225,6 +241,7 @@ quantitykind:LengthPercentage
   skos:prefLabel "Length Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
   #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -237,6 +254,7 @@ quantitykind:Mass
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Mass"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -248,6 +266,7 @@ quantitykind:MassDensity
  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Mass Density"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -258,6 +277,7 @@ quantitykind:MassFraction
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Mass Fraction"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -269,6 +289,7 @@ quantitykind:MassFractionOfDryMatter
   skos:prefLabel "Mass Fraction of Dry Matter"@en ;
   rdfs:seeAlso quantitykind:MassFractionOfWater ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -279,6 +300,7 @@ quantitykind:MolalityOfSolute
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Molality of Solute"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -289,6 +311,7 @@ quantitykind:MultiplicationFactor
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Multiplication Factor"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -300,6 +323,7 @@ quantitykind:Period
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Period"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -311,6 +335,7 @@ quantitykind:PressurePercentage
   skos:prefLabel "Pressure Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
   #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -322,6 +347,7 @@ quantitykind:PressureRatio
   skos:prefLabel "Pressure Ratio"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
   #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -334,6 +360,7 @@ quantitykind:RelativeHumidity
   rdfs:seeAlso quantitykind:AbsoluteHumidity ;
   skos:altLabel "RH" ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -344,6 +371,7 @@ quantitykind:RelativeMassDensity
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Relative Mass Density"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -355,6 +383,7 @@ quantitykind:RelativePartialPressure
   skos:prefLabel "Relative Partial Pressure"@en ;
   skos:altLabel "RH" ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -365,6 +394,7 @@ quantitykind:StatisticalWeight
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Statistical Weight"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -376,6 +406,7 @@ quantitykind:Temperature
   skos:prefLabel "Temperature"@en ;
   rdfs:seeAlso quantitykind:ThermodynamicTemperature ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -390,6 +421,7 @@ quantitykind:Time
   qudt:applicableUnit unit:YR ;
   skos:prefLabel "Time"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -401,6 +433,7 @@ quantitykind:TimePercentage
   skos:prefLabel "Time Percentage"@en ;
   skos:broader quantitykind:DimensionlessRatio ;
   #skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -411,6 +444,7 @@ quantitykind:Turbidity
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Turbidity"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -421,6 +455,7 @@ quantitykind:Voltage
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Voltage"@en ;
   skos:broader quantitykind:EnergyPerElectricCharge ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -432,6 +467,7 @@ quantitykind:Volume
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Volume"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -443,6 +479,7 @@ quantitykind:VolumeFlowRate
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Volume Flow Rate"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -454,6 +491,7 @@ quantitykind:VolumePerUnitTime
   skos:definition "Volume per Unit Time" ;
   skos:prefLabel "Volume per Unit Time"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -464,6 +502,7 @@ quantitykind:LiquidVolume
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Liquid Volume"@en ;
   skos:broader quantitykind:Volume ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -473,6 +512,7 @@ quantitykind:Concentration
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Concentration"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .
 
@@ -483,5 +523,6 @@ quantitykind:EnergyPerElectricCharge
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
   skos:prefLabel "Energy per electric charge"@en ;
   skos:topConceptOf <https://linked.data.gov.au/def/qesd-qkd> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
   skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
 .

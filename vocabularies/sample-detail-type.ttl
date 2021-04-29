@@ -4,6 +4,7 @@
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix smpdt: <https://linked.data.gov.au/def/sample-detail-type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/sample-detail-type> a owl:Ontology,
@@ -21,22 +22,25 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 smpdt:dummy a skos:Concept ;
     skos:definition "Not areal concept, just here for looks."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-detail-type> ;
     skos:prefLabel "Dummy"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-detail-type> .
 
 smpdt:example a skos:Concept ;
     skos:definition "This just looks like what should actually be here."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-detail-type> ;
     skos:prefLabel "Example"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-detail-type> .
 
 smpdt:placeholder a skos:Concept ;
     skos:definition "This is a placeholder."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-detail-type> ;
     skos:prefLabel "Placeholder"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-detail-type> .

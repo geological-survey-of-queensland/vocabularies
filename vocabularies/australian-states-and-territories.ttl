@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/australian-states-and-territories> a owl:Ontology,
@@ -28,10 +29,11 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 <https://linked.data.gov.au/dataset/asgs2016/stateorterritory/8> a skos:Concept ;
     skos:definition "The Australian Capital Territory."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "ACT",
         "AU-ACT" ;
@@ -40,6 +42,7 @@
 
 <https://linked.data.gov.au/dataset/asgs2016/stateorterritory/1> a skos:Concept ;
     skos:definition "The State of New South Wales, in the country of Australia."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-NSW",
         "NSW" ;
@@ -48,6 +51,7 @@
 
 <https://linked.data.gov.au/dataset/asgs2016/stateorterritory/7> a skos:Concept ;
     skos:definition "The Northern Territory of Australia."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-NT",
         "NT" ;
@@ -56,6 +60,7 @@
 
 <https://linked.data.gov.au/dataset/asgs2016/stateorterritory/3> a skos:Concept ;
     skos:definition "The State of Queensland, in the country of Australia."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-QLD",
         "QLD" ;
@@ -64,6 +69,7 @@
 
 <https://linked.data.gov.au/dataset/asgs2016/stateorterritory/4> a skos:Concept ;
     skos:definition "The State of South Australia, in the country of Australia."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-SA",
         "SA" ;
@@ -72,6 +78,7 @@
 
 <https://linked.data.gov.au/dataset/asgs2016/stateorterritory/6> a skos:Concept ;
     skos:definition "The State of Tasmania, in the country of Australia."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-TAS",
         "TAS" ;
@@ -80,6 +87,7 @@
 
 <https://linked.data.gov.au/dataset/asgs2016/stateorterritory/2> a skos:Concept ;
     skos:definition "The State of Victoria, in the country of Australia."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-VIC",
         "VIC" ;
@@ -88,6 +96,7 @@
 
 <https://linked.data.gov.au/dataset/asgs2016/stateorterritory/5> a skos:Concept ;
     skos:definition "The State of Western Australia, in the country of Australia."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-WA",
         "WA" ;
@@ -96,6 +105,7 @@
 
 <https://linked.data.gov.au/dataset/asgs2016/stateorterritory/9> a skos:Concept ;
     skos:definition "Other Territories of Australia"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "AU-OT",
         "OT" ;

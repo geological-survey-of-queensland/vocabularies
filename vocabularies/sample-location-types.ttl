@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
@@ -31,7 +32,7 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 locdt:bag a skos:Concept ;
     skos:altLabel "Pack"@en,
@@ -39,12 +40,14 @@ locdt:bag a skos:Concept ;
         "Sac"@en,
         "Sack"@en ;
     skos:definition "A flexible container with an opening at the top, used for carrying or storing things."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Bag"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
     
 locdt:bin a skos:Concept ;
     skos:definition "A capacious receptacle for storing a substances and/or artifacts."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Bin"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
@@ -52,6 +55,7 @@ locdt:bin a skos:Concept ;
 locdt:cabinet a skos:Concept ;
     skos:altLabel "Cupboard"@en ;
     skos:definition "An enclosed piece of furniture, typically with internal shelves for the storage and organisation of items."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Cabinet"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
@@ -59,6 +63,7 @@ locdt:cabinet a skos:Concept ;
 locdt:drawer a skos:Concept ;
     skos:altLabel "Draw"@en ;
     skos:definition "A a box-shaped container that fits into a piece of furniture in such a way that it can be drawn out horizontally to reach its contents."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Drawer"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
@@ -69,12 +74,14 @@ locdt:drum a skos:Concept ;
         "Cask"@en,
         "Vat"@en ;
     skos:definition "A hollow cylindrical container with a bulging center, longer than it is wide."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Drum"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
 
 locdt:dumpster a skos:Concept ;
     skos:definition "A movable waste container designed to be brought and taken away by a special collection vehicle, or to a bin that a specially designed garbage truck lifts, empties into its hopper, and lowers, on the spot."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Dumpster"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
@@ -82,42 +89,49 @@ locdt:dumpster a skos:Concept ;
 locdt:envelope a skos:Concept ;
     skos:altLabel "File Folder"@en ;
     skos:definition "A packaging item, usually made of thin, flat material. It is designed to contain a flat object or objects, such as a letter, document, or card."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Envelope"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
 
 locdt:folder a skos:Concept ;
     skos:definition "A sheet of heavy paper stock or other thin, but stiff, material which is folded in half, and used to keep paper documents or other flat items."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Folder"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
 
 locdt:pallet a skos:Concept ;
     skos:definition "A flat transport structure, which supports goods in a stable fashion while being lifted by a forklift, a pallet jack, a front loader, a jacking device, or an erect crane."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Pallet"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
 
 locdt:rack a skos:Concept ;
     skos:definition "A material handling storage aid system designed to store materials on pallets or other standard storage platforms."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Rack"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
 
 locdt:room a skos:Concept ;
     skos:definition "Any enclosed space with walls, a ceiling and one-or-many entrances."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Room"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
 
 locdt:table a skos:Concept ;
     skos:definition "An item of furniture with a flat top and one or more legs, used as a surface for working at or storing items."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Table"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .
 
 locdt:tray a skos:Concept ;
     skos:definition "A shallow platform designed for the carrying or storing of items."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-types> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-location-types> ;
     skos:prefLabel "Tray"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-location-types> .

@@ -5,6 +5,7 @@
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix svydt: <https://linked.data.gov.au/def/survey-detail-type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/survey-detail-type> a owl:Ontology,
@@ -31,22 +32,25 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 svydt:ag-survey-type a skos:Concept ;
     skos:definition "Airborne geophysical survey type (exploration, government, open range, multi-client or experimental)"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "AG Survey Type"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:total-stations a skos:Concept ;
     skos:definition "Number of stations included in survey"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Total Stations"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:line-direction-degrees a skos:Concept ;
     skos:definition "Mean survey line direction (bearing) from true north.  Values between 000-359 degrees"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Line Direction (degrees)"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
@@ -54,12 +58,14 @@ svydt:line-direction-degrees a skos:Concept ;
 svydt:survey-height-m a skos:Concept ;
     skos:altLabel "terrain clearance"@en ;
     skos:definition "Mean survey height above ground surface (values in metres relative to AHD)"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Survey Height (m)"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:survey-line a skos:Concept ;
     skos:definition "List of survey lines (comma deliminated) included in the survey"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Survey Line"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
@@ -67,18 +73,21 @@ svydt:survey-line a skos:Concept ;
 svydt:tie-interval-m a skos:Concept ;
     skos:altLabel "tie line spacing"@en ;
     skos:definition "Mean distance in metres between survey tie lines (if used) in regularly spaced survey"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Tie Interval (m)"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:tie-line-direction-degrees a skos:Concept ;
     skos:definition "Mean survey tie line direction (bearing) from true north (often perpendicular to line direction).  Values between 000-359"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Tie Line Direction (degrees)"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:vessel-name a skos:Concept ;
     skos:definition "Name, or call sign, of survey vessel (plane, helicopter, boat).  Further information on vessel may also be added"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Vessel Name"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
@@ -87,30 +96,35 @@ svydt:interval-m a skos:Concept ;
     skos:altLabel "line spacing"@en,
         "station spacing"@en ;
     skos:definition "Mean distance in metres between survey lines or stations for a regularly spaced survey"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Interval (m)"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:total-line-kilometres a skos:Concept ;
     skos:definition "Sum of the length of lines contained in the survey in kilometres."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Total Line Kilometres"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:comments a skos:Concept ;
     skos:definition "Free text comments or notes regarding survey"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Comments"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:funding-program a skos:Concept ;
     skos:definition "Government funding program that survey was conducted under"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Funding program"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:job-number a skos:Concept ;
     skos:definition "Survey contractors job number / job identification"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Job Number"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> .

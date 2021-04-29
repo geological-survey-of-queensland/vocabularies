@@ -4,6 +4,7 @@
 @prefix sampfac: <https://linked.data.gov.au/def/gsq-sample-facility/> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/gsq-sample-facility> a owl:Ontology , skos:ConceptScheme ;
@@ -19,12 +20,13 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 sampfac:exploration-data-centre a skos:Concept ;
     skos:notation "EDC" ;
     skos:altLabel "EDC"@en ;
     skos:definition "The Exploration Data Centre is a warehouse and viewing facility for geological exploration materials and media based at 68 Pineapple Street, Zillmere, Queensland"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/gsq-sample-facility> ;
     skos:inScheme <https://linked.data.gov.au/def/gsq-sample-facility> ;
     skos:prefLabel "Exploration Data Centre"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/gsq-sample-facility> .
@@ -34,6 +36,7 @@ sampfac:john-campbell-miles-facility a skos:Concept ;
     skos:altLabel "MIDCF"@en,
         "John Campbell Miles Drill Core Storage Facility"@en ;
     skos:definition "The John Campbell Miles Drill Core Storage Facility is a warehouse and viewing facility for geological exploration materials and media based at Killara Crescent, Kalkadoon Industrial Estate, Mount Isa, Queensland"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/gsq-sample-facility> ;
     skos:inScheme <https://linked.data.gov.au/def/gsq-sample-facility> ;
     skos:prefLabel "Mount Isa Drill Core Facility"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/gsq-sample-facility> .

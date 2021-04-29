@@ -1,6 +1,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-sdo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -22,7 +22,7 @@
 <https://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 #sosa:hasSample
 #    a owl:ObjectProperty , skos:Concept ;
@@ -53,6 +53,7 @@ sosa:hasOriginalSample
     sdo:rangeIncludes sosa:Sample ;
     skos:definition "A link from the subject sample to the original sample of interest through a chain of isSampleOf relations."@en ;
     rdfs:domain sosa:Sample ;
+    rdfs:isDefinedBy sosa: ;
     rdfs:range sosa:Sample ;
     skos:inScheme <https://linked.data.gov.au/def/sample-relationship> ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-relationship> .

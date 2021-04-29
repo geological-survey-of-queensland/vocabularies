@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix tsl: <https://linked.data.gov.au/def/telephone-type/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -22,12 +23,13 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 vcard:Cell a skos:Concept , vcard:TelephoneType ;
     skos:altLabel "Cell"@en,
         "Cellular"@en ;
     skos:definition "A portable telephone that can make and receive calls over a radio frequency link while the user is moving within a telephone service area."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/telephone-type> ;
     skos:inScheme <https://linked.data.gov.au/def/telephone-type> ;
     skos:notation "01" ;
     skos:prefLabel "Mobile"@en ;
@@ -36,6 +38,7 @@ vcard:Cell a skos:Concept , vcard:TelephoneType ;
 vcard:Voice a skos:Concept ;
     skos:altLabel "Landline"@en , "voice"@en ;
     skos:definition "A telephone that can make and receive calls by transmission of communications signals via a cable to a fixed location."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/telephone-type> ;
     skos:inScheme <https://linked.data.gov.au/def/telephone-type> ;
     skos:notation "02" ;
     skos:prefLabel "Fixed Line"@en ;

@@ -4,6 +4,7 @@
 @prefix rptst: <https://linked.data.gov.au/def/report-status/> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/report-status> a owl:Ontology , skos:ConceptScheme ;
@@ -20,11 +21,12 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 rptst:abandoned a skos:Concept ;
     skos:altLabel "Cancelled"@en;
     skos:definition "The report was saved in the lodgement portal but not submitted within 90 days. Any S3 resources have been subsequently deleted."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-status> ;
     skos:inScheme <https://linked.data.gov.au/def/report-status> ;
     skos:prefLabel "Abandoned"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-status> .
@@ -34,18 +36,21 @@ rptst:in-progress a skos:Concept ;
         "Saved"@en,
         "Started"@en ;
     skos:definition "The report is in-progress and saved in the lodgement portal awaiting submission."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-status> ;
     skos:inScheme <https://linked.data.gov.au/def/report-status> ;
     skos:prefLabel "In-Progress"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-status> .
 
 rptst:screening a skos:Concept ;
     skos:definition "The report is held by the department for examination prior to submission being allowed"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-status> ;
     skos:inScheme <https://linked.data.gov.au/def/report-status> ;
     skos:prefLabel "Screening"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-status> .
 
 rptst:submitted a skos:Concept ;
     skos:definition "The report has been sucessfully submitted."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-status> ;
     skos:inScheme <https://linked.data.gov.au/def/report-status> ;
     skos:prefLabel "Submitted"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-status> .
