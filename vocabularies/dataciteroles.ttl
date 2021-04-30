@@ -3,6 +3,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix datac: <https://linked.data.gov.au/def/dataciteroles/> .
 
@@ -38,10 +39,11 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 datac:ContactPerson a skos:Concept ;
     skos:definition "Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Contact Person"@en ;
     skos:scopeNote "May also be 'Point of Contact' in organisation that controls access to the resource, if that organisation is different from Publisher, Distributor, Data Manager."@en ;
@@ -49,6 +51,7 @@ datac:ContactPerson a skos:Concept ;
 
 datac:DataCollector a skos:Concept ;
     skos:definition "Person/institution responsible for finding, gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Data Collector"@en ;
     skos:scopeNote "May also use when crediting survey conductors, interviewers, event or condition observers, person responsible for monitoring key instrument data."@en ;
@@ -56,6 +59,7 @@ datac:DataCollector a skos:Concept ;
 
 datac:DataCurator a skos:Concept ;
     skos:definition "Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a data centre or repository."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Data Curator"@en ;
     skos:scopeNote "While the DataManager is concerned with digital maintenance, the DataCurator's role encompasses quality assurance focused on content and metadata. This includes checking whether the submitted dataset is complete, with all files and components asdescribed by submitter, whether the metadata is standardized to appropriate systems and schema, whether specialized metadata is needed to add value and ensure access across disciplines, and determining how  the metadata might map to search engines, database products, and automated feeds."@en ;
@@ -63,6 +67,7 @@ datac:DataCurator a skos:Concept ;
 
 datac:DataManager a skos:Concept ;
     skos:definition "Person (or organisation with a staff of data managers, such as a data centre) responsible for maintaining the finished resource."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Data Manager"@en ;
     skos:scopeNote "The work done by this person or organisation ensures that the resource isperiodically 'refreshed' in terms of software/hardware support, is kept available or is protected from unauthorized access, is stored in accordance with industry standards, and is handled in accordance with the records management requirements applicable to it."@en ;
@@ -70,6 +75,7 @@ datac:DataManager a skos:Concept ;
 
 datac:Distributor a skos:Concept ;
     skos:definition "Institution tasked with responsibility to generate/disseminate copies of the resource in either electronic or print form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Distributor"@en ;
     skos:scopeNote "Works stored in more than one archive/repository may credit each as a distributor."@en ;
@@ -77,6 +83,7 @@ datac:Distributor a skos:Concept ;
 
 datac:Editor a skos:Concept ;
     skos:definition "A person who oversees the details related to the publication format of the resource."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Editor"@en ;
     skos:scopeNote "Note: if the Editor is to be credited in place of multiple creators, the Editor's name may be supplied as DataCite Metadata Schema V 4.336Creator, with '(Ed.)' appended to the name."@en ;
@@ -84,6 +91,7 @@ datac:Editor a skos:Concept ;
 
 datac:HostingInstitution a skos:Concept ;
     skos:definition "Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software/operating support."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Hosting Institution"@en ;
     skos:scopeNote "May also be used for an organisation that stores the data offline. Often a data centre (if that data centre is notthe 'publisher' of the resource.)"@en ;
@@ -91,6 +99,7 @@ datac:HostingInstitution a skos:Concept ;
 
 datac:Other a skos:Concept ;
     skos:definition "Any person or institution making a significant contribution to the development and/or maintenance of the resource, but whose contribution does not 'fit' other controlled vocabulary for contributorType."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Other"@en ;
     skos:scopeNote "Could be a photographer, artist, or writer whose contribution helped to publicize the resource (as opposed to creating it), a reviewer of the resource, someone providing administrative services to the author (such as depositing updates into an online repository, analysing usage, etc.), or one of many other roles."@en ;
@@ -98,6 +107,7 @@ datac:Other a skos:Concept ;
 
 datac:Producer a skos:Concept ;
     skos:definition "Typically a person or organisation responsible for the artistry and form of a media product."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Producer"@en ;
     skos:scopeNote "In the data industry, this may be a company 'producing' DVDs that package data for future dissemination by a distributor."@en ;
@@ -105,6 +115,7 @@ datac:Producer a skos:Concept ;
 
 datac:ProjectLeader a skos:Concept ;
     skos:definition "Person officially designated as head of project team or sub-project team instrumental in the work necessary to development of the resource."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Project Leader"@en ;
     skos:scopeNote "The Project Leader is not 'removed' from the work that resulted in the resource; he or she remains intimately involved throughout the life of the particular project team."@en ;
@@ -112,6 +123,7 @@ datac:ProjectLeader a skos:Concept ;
 
 datac:ProjectManager a skos:Concept ;
     skos:definition "Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Project Manager"@en ;
     skos:scopeNote "The manager of a project normally has more administrative responsibility than actual work involvement."@en ;
@@ -119,6 +131,7 @@ datac:ProjectManager a skos:Concept ;
 
 datac:ProjectMember a skos:Concept ;
     skos:definition "Person on the membership list of a designated project/project team."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Project Member"@en ;
     skos:scopeNote "This vocabulary may or may not indicate the quality, quantity, or substance of the person's involvement."@en ;
@@ -126,6 +139,7 @@ datac:ProjectMember a skos:Concept ;
 
 datac:RegistrationAgency a skos:Concept ;
     skos:definition "Institution/organisation officially appointed by a Registration Authority to handle specific tasks within a defined area of responsibility."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Registration Agency"@en ;
     skos:scopeNote "DataCite is a Registration Agency for the International DOI Foundation (IDF). One of DataCite's tasks is to assign DOI prefixes to the allocating agents who then assign the full, specific character string to data clients, provide metadata back to the DataCite registry, etc."@en ;
@@ -133,6 +147,7 @@ datac:RegistrationAgency a skos:Concept ;
 
 datac:RegistrationAuthority a skos:Concept ;
     skos:definition "A standards-setting body from which Registration Agencies obtain official recognition and guidance."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Registration Authority"@en ;
     skos:scopeNote "The IDF serves as the Registration Authority for the International Standards Organisation (ISO) in the area/domain of Digital Object Identifiers."@en ;
@@ -140,6 +155,7 @@ datac:RegistrationAuthority a skos:Concept ;
 
 datac:RelatedPerson a skos:Concept ;
     skos:definition "A person without a specifically defined role in the development of the resource, but who is someone the author wishes to recognize."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Related Person"@en ;
     skos:scopeNote "This person could be an author's intellectual mentor, a person providing intellectual leadership in the discipline or subject domain, etc."@en ;
@@ -147,6 +163,7 @@ datac:RelatedPerson a skos:Concept ;
 
 datac:ResearchGroup a skos:Concept ;
     skos:definition "Typically refers to a group of individuals with a lab, department, or division; the group has a particular, defined focus of activity."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Research Group"@en ;
     skos:scopeNote "May operate at a narrower level of scope; may or may not hold less administrative responsibility than a project team."@en ;
@@ -154,6 +171,7 @@ datac:ResearchGroup a skos:Concept ;
 
 datac:Researcher a skos:Concept ;
     skos:definition "A person involved in analyzing data or the results of an experiment or formal study. May indicate an intern or assistant to one of the authors who helped with research but who was not so 'key' as to be listed as an author."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Researcher"@en ;
     skos:scopeNote "Should be a person, not an institution.Note that a person involved in the gathering of data would fall under the contributorType 'DataCollector.'The researcher may find additional data online and correlate it to the data collected for the experiment or study, for example."@en ;
@@ -161,12 +179,14 @@ datac:Researcher a skos:Concept ;
 
 datac:RightsHolder a skos:Concept ;
     skos:definition "Person or institution owning or managing property rights, including intellectual property rights over the resource."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Rights Holder"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/dataciteroles> .
 
 datac:Sponsor a skos:Concept ;
     skos:definition "Person or organisation that issued a contract or under the auspices of which a work has been written, printed, published, developed, etc."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Sponsor"@en ;
     skos:scopeNote "Includes organisations that provide in-kind support, through donation, provision of people or a facility or instrumentation necessary for the development of the resource, etc."@en ;
@@ -174,12 +194,14 @@ datac:Sponsor a skos:Concept ;
 
 datac:Supervisor a skos:Concept ;
     skos:definition "Designated administrator over one or more groups/teams working to produce a resource or over one or more steps of a development process."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Supervisor"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/dataciteroles> .
 
 datac:WorkPackageLeader a skos:Concept ;
     skos:definition "A Work Package is a recognized data product, not all of which is included in publication. The package, instead, may include notes, discarded documents, etc. The Work Package Leader is responsible for ensuring the comprehensive contents, versioning, and availability of the Work Package during the development of the resource."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     skos:inScheme <https://linked.data.gov.au/def/dataciteroles> ;
     skos:prefLabel "Work Package Leader"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/dataciteroles> .

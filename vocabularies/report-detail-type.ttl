@@ -4,6 +4,7 @@
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rptdt: <https://linked.data.gov.au/def/report-detail-type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/report-detail-type> a owl:Ontology,
@@ -31,7 +32,7 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
  
 rptdt:activities a skos:Concept ;
     skos:altLabel "Plan"@en,
@@ -39,12 +40,14 @@ rptdt:activities a skos:Concept ;
         "Activities Undertaken"@en,
         "Activities to be Undertaken"@en ;
     skos:definition "A description of the activities referred to in the report or form. This may be a summary of activities undertaken, or a summary of planned activities."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Activities"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
   
 rptdt:address a skos:Concept ;
     skos:definition "The address of the company submitting the report or form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Address"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
@@ -54,66 +57,77 @@ rptdt:comments a skos:Concept ;
         "Remarks"@en,
         "Summary"@en ;         ;
     skos:definition "Any general commentary regarding the report or form, not otherwise captured."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Comments"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:contact a skos:Concept ;
     skos:definition "The name of the individual contact for the report or form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Contact Name"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
     
 rptdt:contracting-company a skos:Concept ;
     skos:definition "The name of the company who conducted the activities referred to in the report or form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Contractor Name"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:email a skos:Concept ;
     skos:definition "The contact email address for the submitter of the report or form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "E-mail"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:operating-company a skos:Concept ;
     skos:definition "The name of the company submitting the report or form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Company Name"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:suburb a skos:Concept ;
     skos:definition "The contact suburb for the submitter of the report or form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Suburb"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:postcode a skos:Concept ;
     skos:definition "The contact postcode for the submitter of the report or form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Postcode"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:state a skos:Concept ;
     skos:definition "The contact State for the submitter of the report or form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "State"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:phone a skos:Concept ;
     skos:definition "The contact phone number for the submitter of the report or form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Phone Number"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:project-name a skos:Concept ;
     skos:definition "The name of the project to which a report relates."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Project Name"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .
 
 rptdt:reportable-incident a skos:Concept ;
     skos:definition "An indication of the occurrence of a reportable incident to be recorded in the report or form."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/report-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/report-detail-type> ;
     skos:prefLabel "Reportable Incident"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/report-detail-type> .

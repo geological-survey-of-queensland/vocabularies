@@ -3,6 +3,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/australian-phone-area-codes> a owl:Ontology,
@@ -21,11 +22,12 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 aac:02 a skos:Concept ;
     skos:altLabel "(02)"@en ;
     skos:definition "The Australian telephone area code for New South Wales and the Australian Captial Territory. (ACMA)"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-phone-area-codes> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-phone-area-codes> ;
     skos:prefLabel "02"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-phone-area-codes> .
@@ -33,6 +35,7 @@ aac:02 a skos:Concept ;
 aac:03 a skos:Concept ;
     skos:altLabel "(03)"@en ;
     skos:definition "The Australian telephone area code for Victoria and Tasmania. (ACMA)"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-phone-area-codes> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-phone-area-codes> ;
     skos:prefLabel "03"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-phone-area-codes> .
@@ -40,6 +43,7 @@ aac:03 a skos:Concept ;
 aac:07 a skos:Concept ;
     skos:altLabel "(07)"@en ;
     skos:definition "The Australian telephone area code for Queensland. (ACMA)"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-phone-area-codes> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-phone-area-codes> ;
     skos:prefLabel "07"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-phone-area-codes> .
@@ -47,6 +51,7 @@ aac:07 a skos:Concept ;
 aac:08 a skos:Concept ;
     skos:altLabel "(08)"@en ;
     skos:definition "The Australian telephone area code for South Australia and Western Australia, including Christmas Island  and Cocos (Keeling) Islands. (ACMA)"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-phone-area-codes> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-phone-area-codes> ;
     skos:prefLabel "08"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-phone-area-codes> .

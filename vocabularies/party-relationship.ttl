@@ -4,6 +4,7 @@
 @prefix pyrl: <https://linked.data.gov.au/def/party-relationship/> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/party-relationship> a owl:Ontology,
@@ -27,58 +28,67 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 pyrl:adviser a skos:Concept ;
     skos:definition "An entity acting in an advisory capacity to the subject."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/party-relationship> ;
     skos:inScheme <https://linked.data.gov.au/def/party-relationship> ;
     skos:prefLabel "Adviser"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/party-relationship> .
 
 pyrl:contractor a skos:Concept ;
     skos:definition "An entity contracted to conduct work on behalf of the subject."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/party-relationship> ;
     skos:inScheme <https://linked.data.gov.au/def/party-relationship> ;
     skos:prefLabel "Contractor"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/party-relationship> .
 
 pyrl:director a skos:Concept ;
     skos:definition "The director of the subject company or business."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/party-relationship> ;
     skos:inScheme <https://linked.data.gov.au/def/party-relationship> ;
     skos:prefLabel "Director"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/party-relationship> .
 
 pyrl:employee a skos:Concept ;
     skos:definition "An individual in the paid employment of the subject entity."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/party-relationship> ;
     skos:inScheme <https://linked.data.gov.au/def/party-relationship> ;
     skos:prefLabel "Employee"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/party-relationship> .
 
 pyrl:joint-venture a skos:Concept ;
     skos:definition "A joint-venture entity to which the subject belongs, in partnership with other parties."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/party-relationship> ;
     skos:inScheme <https://linked.data.gov.au/def/party-relationship> ;
     skos:prefLabel "Joint Venture"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/party-relationship> .
 
 pyrl:owner a skos:Concept ;
     skos:definition "An individual who owns the subject business or company."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/party-relationship> ;
     skos:inScheme <https://linked.data.gov.au/def/party-relationship> ;
     skos:prefLabel "Owner"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/party-relationship> .
 
 pyrl:parent a skos:Concept ;
     skos:definition "The parent company of the subject."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/party-relationship> ;
     skos:inScheme <https://linked.data.gov.au/def/party-relationship> ;
     skos:prefLabel "Parent"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/party-relationship> .
 
 pyrl:subsidiary a skos:Concept ;
     skos:definition "A subsidiary of the subject company."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/party-relationship> ;
     skos:inScheme <https://linked.data.gov.au/def/party-relationship> ;
     skos:prefLabel "Subsidiary"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/party-relationship> .
 
 pyrl:volunteer a skos:Concept ;
     skos:definition "An unpaid individual volunteering services to the subject entity."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/party-relationship> ;
     skos:inScheme <https://linked.data.gov.au/def/party-relationship> ;
     skos:prefLabel "Volunteer"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/party-relationship> .

@@ -1,6 +1,6 @@
  @prefix datrel: <https://linked.data.gov.au/def/dataset-relationships/> .
  @prefix dc: <http://purl.org/dc/elements/1.1/> .
- @prefix dct: <http://purl.org/dc/terms/> .
+ @prefix dcterms: <http://purl.org/dc/terms/> .
  @prefix prov: <http://www.w3.org/ns/prov#> .
  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
  @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,11 +11,11 @@
 
 <https://linked.data.gov.au/def/dataset-relationships> 
 a skos:ConceptScheme ;
-dct:created "2020-11-10"^^xsd:date ;
-dct:creator <https://linked.data.gov.au/org/des> ;
-dct:modified "2021-03-05"^^xsd:date ;
-dct:publisher <https://linked.data.gov.au/org/des> ;
-dct:source "Derived from Qualified Relations ISO-19115-DCTERMS and PROV-O"@en ;
+dcterms:created "2020-11-10"^^xsd:date ;
+dcterms:creator <https://linked.data.gov.au/org/des> ;
+dcterms:modified "2021-03-05"^^xsd:date ;
+dcterms:publisher <https://linked.data.gov.au/org/des> ;
+dcterms:provenance "Derived from Qualified Relations ISO-19115-DCTERMS and PROV-O" ;
 skos:definition "This is a vocabulary collection used by the Queensland Government to determine relationships between catalogued datasets.  It is based on the DCAT qualified relation property https://www.w3.org/TR/vocab-dcat-2/#Property:resource_qualified_relation."@en ;
 skos:prefLabel "Dataset Relationships"@en ;
 skos:hasTopConcept 
@@ -50,6 +50,7 @@ skos:hasTopConcept
 <http://purl.org/dc/terms/hasPart> a skos:Concept ; 
  skos:definition "A related resource that is included either physically or logically in the described resource."@en ;
  skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
  skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
  owl:inverseOf <http://purl.org/dc/terms/isPartOf> ;
  skos:prefLabel "Has Part"@en  .
@@ -57,6 +58,7 @@ skos:hasTopConcept
 <http://purl.org/dc/terms/isPartOf> a skos:Concept ; 
  skos:definition "A related resource that is included either physically or logically in the described resource."@en ;
  skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
  skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
  owl:inverseOf <http://purl.org/dc/terms/hasPart> ;
  skos:prefLabel "Is Part Of"@en  .
@@ -64,6 +66,7 @@ skos:hasTopConcept
 <http://purl.org/dc/terms/isFormatOf> a skos:Concept ; 
  skos:definition "A pre-existing related resource that is substantially the same as the described resource, but in another format."@en ;
  skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
  skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
  owl:inverseOf <http://purl.org/dc/terms/hasFormat> ;
  skos:prefLabel "Is Format Of"@en  .
@@ -71,6 +74,7 @@ skos:hasTopConcept
  <http://purl.org/dc/terms/hasFormat> a skos:Concept ;
  skos:definition "A related resource that is substantially the same as the pre-existing described resource, but in another format."@en ;
  skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
  skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
  owl:inverseOf <http://purl.org/dc/terms/isFormatOf> ;
  skos:prefLabel "Has Format"@en  .
@@ -78,6 +82,7 @@ skos:hasTopConcept
 <http://purl.org/dc/terms/isVersionOf> a skos:Concept ;
  skos:definition "A related resource of which the described resource is a version, edition, or adaptation."@en ;
  skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
  skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
  owl:inverseOf <http://purl.org/dc/terms/hasVersion> ;
  skos:prefLabel "Is Version Of"@en  .
@@ -85,6 +90,7 @@ skos:hasTopConcept
 <http://purl.org/dc/terms/hasVersion> a skos:Concept ; 
  skos:definition "A related resource that is a version, edition, or adaptation of the described resource."@en ;
  skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
  skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
  owl:inverseOf  <http://purl.org/dc/terms/isVersionOf> ;
  skos:prefLabel "Has Version"@en  .
@@ -92,6 +98,7 @@ skos:hasTopConcept
 <http://purl.org/dc/terms/replaces> a skos:Concept ; 
  skos:definition "A related resource that is supplanted, displaced, or superseded by the described resource."@en ; 
  skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
  skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
  owl:inverseOf <http://purl.org/dc/terms/isReplacedBy> ;
  skos:prefLabel "Replaces"@en  .
@@ -99,6 +106,7 @@ skos:hasTopConcept
 <http://purl.org/dc/terms/isReplacedBy> a skos:Concept ;
  skos:definition "A related resource that supplants, displaces, or supersedes the described resource."@en ;
  skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
  skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
  owl:inverseOf <http://purl.org/dc/terms/replaces> ;
  skos:prefLabel "Is Replaced By"@en  .
@@ -107,6 +115,7 @@ skos:hasTopConcept
 <http://purl.org/dc/terms/references> a skos:Concept ;
 skos:definition "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf <http://purl.org/dc/terms/isReferencedBy>  ;
 skos:prefLabel "References"@en  .
@@ -114,6 +123,7 @@ skos:prefLabel "References"@en  .
 <http://purl.org/dc/terms/isReferencedBy> a skos:Concept ;
 skos:definition "A related resource that references, cites, or otherwise points to the described resource."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf <http://purl.org/dc/terms/references> ;
 skos:prefLabel "Is Referenced By"@en  .
@@ -121,6 +131,7 @@ skos:prefLabel "Is Referenced By"@en  .
 <http://purl.org/dc/terms/requires> a skos:Concept ;
 skos:definition "A related resource that is required by the described resource to support its function, delivery, or coherence."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf <http://purl.org/dc/terms/isRequiredBy> ;
 skos:prefLabel "Requires"@en  .
@@ -128,6 +139,7 @@ skos:prefLabel "Requires"@en  .
 <http://purl.org/dc/terms/isRequiredBy> a skos:Concept ;
 skos:definition "A related resource that requires the described resource to support its function, delivery, or coherence."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf <http://purl.org/dc/terms/requires> ;
 skos:prefLabel "Is Required By"@en  .
@@ -135,6 +147,7 @@ skos:prefLabel "Is Required By"@en  .
 <http://www.w3.org/ns/prov#wasDerivedFrom> a skos:Concept ;
 skos:definition "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf datrel:hadDerivation ;
 skos:prefLabel "Was Derived From"@en  .
@@ -142,14 +155,16 @@ skos:prefLabel "Was Derived From"@en  .
 datrel:hadDerivation a skos:Concept ;
 skos:definition "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
-dct:source <https://www.w3.org/ns/prov-o-inverses> ;
+dcterms:source <https://www.w3.org/ns/prov-o-inverses> ;
 skos:prefLabel "Was Derivation of"@en  .
 
 <http://www.w3.org/ns/prov/#wasInfluencedBy> a skos:Concept ;
 skos:definition "Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf prov:influenced ;
 skos:prefLabel "Was Influenced By"@en  .
@@ -157,6 +172,7 @@ skos:prefLabel "Was Influenced By"@en  .
 <http://www.w3.org/ns/prov/#influenced> a skos:Concept ;
 skos:definition "Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf <http://www.w3.org/ns/prov/#wasInfluencedBy> ;
 skos:prefLabel "Influenced"@en  .
@@ -164,6 +180,7 @@ skos:prefLabel "Influenced"@en  .
 datrel:quotedAs  a skos:Concept ;
 skos:definition "A quotation is the repeat of (some or all of) an entity, such as text or image, by someone who may or may not be its original author. Quotation is a particular case of derivation."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf <http://www.w3.org/ns/prov/#wasQuotedFrom> ;
 skos:prefLabel "Quoted As"@en  .
@@ -171,6 +188,7 @@ skos:prefLabel "Quoted As"@en  .
 <http://www.w3.org/ns/prov/#wasQuotedFrom>  a skos:Concept ;
 skos:definition "A quotation is the repeat of (some or all of) an entity, such as text or image, by someone who may or may not be its original author. Quotation is a particular case of derivation."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf datrel:quotedAs ;
 skos:prefLabel "Quoted From"@en  .
@@ -178,6 +196,7 @@ skos:prefLabel "Quoted From"@en  .
 <http://www.w3.org/ns/prov/#wasRevisionOf>  a skos:Concept ;
 skos:definition "A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. Revision is a particular case of derivation."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf datrel:hadRevision ;
 skos:prefLabel "Was Revision Of"@en  .
@@ -185,6 +204,7 @@ skos:prefLabel "Was Revision Of"@en  .
 datrel:hadRevision  a skos:Concept ;
 skos:definition "A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. Revision is a particular case of derivation."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf <http://www.w3.org/ns/prov/#wasRevisionOf> ;
 skos:prefLabel "Had Revision"@en .
@@ -192,6 +212,7 @@ skos:prefLabel "Had Revision"@en .
 <http://www.w3.org/ns/prov/#alternateOf> a skos:Concept ;
 skos:definition "Two alternate entities present aspects of the same thing. These aspects may be the same or different, and the alternate entities may or may not overlap in time."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf prov:alternateOf ;  
 skos:editorialNote "alternateOf is inversed to the same term as defined in PROV-O, alternates go will go either way."@en ;
@@ -200,6 +221,7 @@ skos:prefLabel "Is Alternate Of"@en  .
 <http://www.w3.org/ns/prov/#specializationOf> a skos:Concept ;
 skos:definition "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf datrel:generalisationOf ;  
 skos:prefLabel "Is Specialization Of"@en  .
@@ -207,6 +229,7 @@ skos:prefLabel "Is Specialization Of"@en  .
 datrel:generalizationOf a skos:Concept ;
 skos:definition "Inverse of Specialization Of"@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf <http://www.w3.org/ns/prov/#specializationOf> ; 
 skos:prefLabel "Is Generalization Of"@en  .

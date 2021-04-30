@@ -71,17 +71,19 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 sampty:image-log a skos:Concept ;
     skos:broader sampty:petrophysical-log ;
     skos:definition "A petrophysical log comprised of multiple directional measurements around the circumference of a wellbore to create an image detailing variation of properties around the borehole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "IMLG" ;
     skos:prefLabel "Image Log"@en .
 
 sampty:blasted-sample a skos:Concept ;
     skos:definition "Sample collected by drilling and blasting"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "BLSAMP" ;
     skos:prefLabel "Blasted Sample"@en ;
@@ -89,6 +91,7 @@ sampty:blasted-sample a skos:Concept ;
 
 sampty:borehole-cement a skos:Concept ;
     skos:definition "The cement used to bind casing to the wall of a well or bore, for borehole integrity."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "BHCM" ;
     skos:prefLabel "Borehole Cement"@en ;
@@ -96,6 +99,7 @@ sampty:borehole-cement a skos:Concept ;
 
 sampty:boxed-core a skos:Concept ;
     skos:definition "A part of a core sample which has been broken into shorter lengths and placed into boxes or trays for ease of storage."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "BOXCORE" ;
     skos:altLabel "Core Tray"@en , "Core Box"@en;
@@ -104,6 +108,7 @@ sampty:boxed-core a skos:Concept ;
 
 sampty:bulk-cyanide-leach-sample a skos:Concept ;
     skos:definition "Sample collected to test for extraction by bulk cyanide leach process"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "BCL" ;
     skos:prefLabel "Bulk Cyanide Leach Sample"@en ;
@@ -111,6 +116,7 @@ sampty:bulk-cyanide-leach-sample a skos:Concept ;
 
 sampty:channel-sample a skos:Concept ;
     skos:definition "A sample composed of pieces of vein or mineral deposit that have been cut out of a small trench or channel, usually about 10 cm wide and 2 cm deep."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "CSAMP" ;
     skos:prefLabel "Channel Sample"@en ;
@@ -118,6 +124,7 @@ sampty:channel-sample a skos:Concept ;
 
 sampty:composited-core a skos:Concept ;
     skos:definition "Core combined from various sources to create a representative sample."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "CCO" ;
     skos:prefLabel "Composited Core"@en ;
@@ -125,6 +132,7 @@ sampty:composited-core a skos:Concept ;
 
 sampty:composited-cuttings a skos:Concept ;
     skos:definition "Cuttings combined from various sources to create a representative sample."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "CCU" ;
     skos:prefLabel "Composited Cuttings"@en ;
@@ -132,6 +140,7 @@ sampty:composited-cuttings a skos:Concept ;
 
 sampty:continuous-channel-sample a skos:Concept ;
     skos:definition "A composite channel sample taken from multiple points within a channel."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "CCSAMP" ;
     skos:prefLabel "Continuous Channel Sample"@en ;
@@ -139,6 +148,7 @@ sampty:continuous-channel-sample a skos:Concept ;
 
 sampty:core a skos:Concept ;
     skos:definition "A core sample is a cylindrical section of (usually) a naturally occurring substance."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "CORE" ;
     skos:prefLabel "Core"@en ;
@@ -146,6 +156,7 @@ sampty:core a skos:Concept ;
 
 sampty:hcore a skos:Concept ;
     skos:definition "A core sample that has been cut in half parallel to its length."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "HCORE" ;
     skos:prefLabel "Half Core"@en ;
@@ -153,6 +164,7 @@ sampty:hcore a skos:Concept ;
 
 sampty:qcore a skos:Concept ;
     skos:definition "A core sample that has been cut in quarters parallel to its length."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "QCORE" ;
     skos:prefLabel "Quarter Core"@en ;
@@ -160,6 +172,7 @@ sampty:qcore a skos:Concept ;
 
 sampty:core-plug a skos:Concept ;
     skos:definition "A plug, or sample, taken from a core sample for analysis."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "PLUG" ;
     skos:prefLabel "Core Plug"@en ;
@@ -167,6 +180,7 @@ sampty:core-plug a skos:Concept ;
 
 sampty:crushed-rock a skos:Concept ;
     skos:definition "A sample of rock that has been artificially crushed, milled, or ground."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "CRUSH" ;
     skos:altLabel "Milled rock"@en,
@@ -176,6 +190,7 @@ sampty:crushed-rock a skos:Concept ;
 
 sampty:cuttings a skos:Concept ;
     skos:definition "Cuttings are the small pieces of rock that are chipped away by the bit while a well is being drilled."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "CUT" ;
     skos:prefLabel "Cuttings"@en ;
@@ -183,6 +198,7 @@ sampty:cuttings a skos:Concept ;
 
 sampty:deviation-log a skos:Concept ;
     skos:definition "A file containing information such as aziumth and inclination or positional offset to describe the downhole geometry of a borehole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "DVLG" ;
     skos:prefLabel "Deviation Log"@en ;
@@ -190,6 +206,7 @@ sampty:deviation-log a skos:Concept ;
 
 sampty:drill-fluid a skos:Concept ;
     skos:definition "Fluid used for drill bit lubrication and return of ground rock material from the drill bit."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "DLFD" ;
     skos:altLabel "Drill Mud"@en,
@@ -200,6 +217,7 @@ sampty:drill-fluid a skos:Concept ;
 
 sampty:drill-spoil a skos:Concept ;
     skos:definition "Undifferentiated material generated during drilling."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "DSPOIN" ;
     skos:prefLabel "Drill Spoil"@en ;
@@ -207,6 +225,7 @@ sampty:drill-spoil a skos:Concept ;
 
 sampty:drill-stem-test a skos:Concept ;
     skos:definition "Test for pressure, permeability and production capabity of a reservoir"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "DSTEM" ;
     skos:prefLabel "Drill Stem Test"@en ;
@@ -214,6 +233,7 @@ sampty:drill-stem-test a skos:Concept ;
 
 sampty:feather-and-wedge-sample a skos:Concept ;
     skos:definition "Sample collected by drilling and feathers and wedges."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "FWSAMP" ;
     skos:prefLabel "Feather & Wedge Sample"@en ;
@@ -221,6 +241,7 @@ sampty:feather-and-wedge-sample a skos:Concept ;
 
 sampty:float a skos:Concept ;
     skos:definition "Loose rock collected at the surface"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "FLOAT" ;
     skos:prefLabel "Float"@en ;
@@ -228,6 +249,7 @@ sampty:float a skos:Concept ;
 
 sampty:hand-sample a skos:Concept ;
     skos:definition "Representative sample collected from outcrop usually by geopick"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "HAND" ;
     skos:prefLabel "Hand Sample"@en ;
@@ -235,12 +257,14 @@ sampty:hand-sample a skos:Concept ;
 
 sampty:hydraulic-fracturing-fluid a skos:Concept ;
     skos:definition "Fluid used in the hydraulic fracturing process."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:prefLabel "Hyperspectral Scan"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-type> .
 
 sampty:hyperspectral-scan a skos:Concept ;
     skos:definition "A composite image comprised of multiple wavelength bands across the electromagnetic spectrum."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "HYSN" ;
     skos:prefLabel "Hydraulic Fracturing Fluid"@en ;
@@ -248,6 +272,7 @@ sampty:hyperspectral-scan a skos:Concept ;
 
 sampty:macrofossil a skos:Concept ;
     skos:definition "Macrofossils collected for identification"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "MACFOS" ;
     skos:prefLabel "Macrofossil"@en ;
@@ -255,6 +280,7 @@ sampty:macrofossil a skos:Concept ;
 
 sampty:microfossil a skos:Concept ;
     skos:definition "Sample collected to be processed for microfossil extraction"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "MICFOS" ;
     skos:prefLabel "Microfossil"@en ;
@@ -262,6 +288,7 @@ sampty:microfossil a skos:Concept ;
 
 sampty:ore-sample a skos:Concept ;
     skos:definition "Representative sample of ore sampled as a specimen or for analysis"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "ORE" ;
     skos:prefLabel "Ore Sample"@en ;
@@ -269,6 +296,7 @@ sampty:ore-sample a skos:Concept ;
 
 sampty:oriented-or-orientation-sample a skos:Concept ;
     skos:definition "A sample collected as a known reference for the orientation of other samples."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "ORIENT" ;
     skos:prefLabel "Oriented Or Orientation Sample"@en ;
@@ -276,6 +304,7 @@ sampty:oriented-or-orientation-sample a skos:Concept ;
 
 sampty:oriented-sample a skos:Concept ;
     skos:definition "Sample collected with orientation recorded for detailed structural geology analysis"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "OSAMP" ;
     skos:altLabel "Oriented Section"@en ;
@@ -284,13 +313,15 @@ sampty:oriented-sample a skos:Concept ;
 
 sampty:paleomagnetic-sample a skos:Concept ;
     skos:definition "Orientated hand-drill sample for paleomagnetic analysis"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "PMAG" ;
     skos:prefLabel "Paleomagnetic Sample"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/sample-type> .
 
 sampty:pan-concentrate a skos:Concept ;
     skos:definition "Stream sediment that has been panned to concentrate heavy minerals"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "PCON" ;
     skos:prefLabel "Pan Concentrate"@en ;
@@ -298,6 +329,7 @@ sampty:pan-concentrate a skos:Concept ;
 
 sampty:photograph a skos:Concept ;
     skos:definition "An image created by light falling on a photosensitive surface, usually photographic film or an electronic image sensor, such as a CCD or a CMOS chip."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "PHGR" ;
     skos:prefLabel "Photograph"@en ;
@@ -305,6 +337,7 @@ sampty:photograph a skos:Concept ;
 
 sampty:polished-block a skos:Concept ;
     skos:definition "Rock samples that are bonded in epoxy and polished as small round blocks for reflected light microscopy."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "PBLK" ;
     skos:prefLabel "Polished Block"@en ;
@@ -312,6 +345,7 @@ sampty:polished-block a skos:Concept ;
 
 sampty:powdered-chip a skos:Concept ;
     skos:definition "A rock chip sample that has subsequently been powdered."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "PCHIP" ;
     skos:prefLabel "Powdered Chip"@en ;
@@ -319,6 +353,7 @@ sampty:powdered-chip a skos:Concept ;
 
 sampty:pulp a skos:Concept ;
     skos:definition "A rock sample that has been pulverised sample to a very fine powder and homogenised to be representative of a parent sample, or interval. "@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "PULP" ;
     skos:prefLabel "Pulp"@en ;
@@ -326,6 +361,7 @@ sampty:pulp a skos:Concept ;
 
 sampty:random-dump-sample a skos:Concept ;
     skos:definition "Sample collected from mine dump at random"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "RDSAMP" ;
     skos:prefLabel "Random Dump Sample"@en ;
@@ -333,6 +369,7 @@ sampty:random-dump-sample a skos:Concept ;
 
 sampty:random-sample a skos:Concept ;
     skos:definition "A randomly collected sample"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "RSAMP" ;
     skos:prefLabel "Random Sample"@en ;
@@ -340,6 +377,7 @@ sampty:random-sample a skos:Concept ;
 
 sampty:rock-chips a skos:Concept ;
     skos:definition "Sample gathered as rock chips for geochemistry"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "CHIP" ;
     skos:prefLabel "Rock Chips"@en ;
@@ -347,6 +385,7 @@ sampty:rock-chips a skos:Concept ;
 
 sampty:scree a skos:Concept ;
     skos:definition "Loose rock collected downslope from a ridge"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "SCREE" ;
     skos:prefLabel "Scree"@en ;
@@ -354,6 +393,7 @@ sampty:scree a skos:Concept ;
 
 sampty:selected-dump-sample a skos:Concept ;
     skos:definition "Sample collected from mine dump with suspected mineralisation"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "SDSAMP" ;
     skos:prefLabel "Selected Dump Sample"@en ;
@@ -361,6 +401,7 @@ sampty:selected-dump-sample a skos:Concept ;
 
 sampty:selected-sample a skos:Concept ;
     skos:definition "A sample that was specifically selected for analysis"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "SEL" ;
     skos:prefLabel "Selected Sample"@en ;
@@ -368,6 +409,7 @@ sampty:selected-sample a skos:Concept ;
 
 sampty:side-wall-core a skos:Concept ;
     skos:definition "A core taken from the side of the borehole, usually by a wireline tool."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "SWC" ;
     skos:prefLabel "Side Wall Core"@en ;
@@ -375,6 +417,7 @@ sampty:side-wall-core a skos:Concept ;
 
 sampty:sieved-stream-sediment-sample a skos:Concept ;
     skos:definition "Stream sediment that has been sieved to break it up into different grainsize fractions"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "SSS" ;
     skos:prefLabel "Sieved Stream Sediment Sample"@en ;
@@ -382,6 +425,7 @@ sampty:sieved-stream-sediment-sample a skos:Concept ;
 
 sampty:sledge-hammer-sample a skos:Concept ;
     skos:definition "Representative sample collected from outcrop by sledgehammer"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "SHSAMP" ;
     skos:prefLabel "Sledge Hammer Sample"@en ;
@@ -389,6 +433,7 @@ sampty:sledge-hammer-sample a skos:Concept ;
 
 sampty:soil-sample a skos:Concept ;
     skos:definition "Sample of soil taken from an exposure or auger sample"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "SOIL" ;
     skos:prefLabel "Soil Sample"@en ;
@@ -396,6 +441,7 @@ sampty:soil-sample a skos:Concept ;
 
 sampty:stream-sediment-sample a skos:Concept ;
     skos:definition "Sample of sediment from active streams"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "STRSED" ;
     skos:prefLabel "Stream Sediment Sample"@en ;
@@ -403,6 +449,7 @@ sampty:stream-sediment-sample a skos:Concept ;
 
 sampty:suspended-silt-sample a skos:Concept ;
     skos:definition "A water sample containing suspended sediment"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "SUSP" ;
     skos:prefLabel "Suspended Silt Sample"@en ;
@@ -410,6 +457,7 @@ sampty:suspended-silt-sample a skos:Concept ;
 
 sampty:termite-mound a skos:Concept ;
     skos:definition "Sample collected from termite mounds"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "TMOUND" ;
     skos:prefLabel "Termite Mound"@en ;
@@ -417,6 +465,7 @@ sampty:termite-mound a skos:Concept ;
 
 sampty:thin-section a skos:Concept ;
     skos:definition "A laboratory preparation of a rock, mineral, soil, pottery, bones, or even metal sample for use with a polarizing petrographic microscope, electron microscope and electron microprobe. A thin sliver of rock is cut from the sample with a diamond saw and ground optically flat. It is then mounted on a glass slide and then ground smooth using progressively finer abrasive grit until the sample is only 30 μm thick. "@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "THINS" ;
     skos:prefLabel "Thin Section"@en ;
@@ -424,6 +473,7 @@ sampty:thin-section a skos:Concept ;
 
 sampty:trench-spoil a skos:Concept ;
     skos:definition "Undifferentiated material generated from sampling within a trench or pit."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "TSPOIL" ;
     skos:prefLabel "Trench Spoil"@en ;
@@ -431,6 +481,7 @@ sampty:trench-spoil a skos:Concept ;
 
 sampty:unspecified a skos:Concept ;
     skos:definition "An unknown or unspecified sample"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "UNSP" ;
     skos:prefLabel "Unspecified"@en ;
@@ -438,6 +489,7 @@ sampty:unspecified a skos:Concept ;
 
 sampty:video a skos:Concept ;
     skos:definition "An moving image created by light falling on a series of photosensitive surfaces, usually videographic film or an electronic image sensor, such as a CCD or a CMOS chip."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "VIDO" ;
     skos:prefLabel "video"@en ;
@@ -445,6 +497,7 @@ sampty:video a skos:Concept ;
 
 sampty:water-specimen a skos:Concept ;
     skos:definition "A generic specimen of water of any type. Includes water specimen types collected by any method."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "WTRS" ;
     skos:prefLabel "Water specimen"@en ;
@@ -452,6 +505,7 @@ sampty:water-specimen a skos:Concept ;
 
 sampty:wellhead a skos:Concept ;
     skos:definition "Component at surface that provides structural and pressue interface"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "WHEAD" ;
     skos:prefLabel "Wellhead"@en ;
@@ -459,6 +513,7 @@ sampty:wellhead a skos:Concept ;
 
 sampty:petrophysical-log a skos:Concept ;
     skos:definition "A digital file or image containing physical and chemical measurements from the logging of a borehole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-type> ;
     skos:notation "PETL" ;
     skos:prefLabel "Petrophysical Log"@en ;

@@ -35,7 +35,7 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland"@en ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
     
 qgorg:DES a owl:NamedIndividual ,
               org:FormalOrganization ,
@@ -46,6 +46,7 @@ qgorg:DES a owl:NamedIndividual ,
      skos:prefLabel "Department of Environment and Science"@en ;
      skos:altLabel "DES"@en ;
      skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
      skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
      skos:exactMatch <https://linked.data.gov.au/org/des> .
 
@@ -56,6 +57,7 @@ qgorg:10157 a owl:NamedIndividual ,
            org:hasSite qgsite:Ecosciences ;
            org:unitOf qgorg:DES ;
            skos:broader qgorg:DES ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
            skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
            skos:altLabel "Science and Technology Division"@en ;
            skos:prefLabel "Science and Technology"@en .
@@ -68,6 +70,7 @@ qgorg:11338 a owl:NamedIndividual ,
            org:hasSite qgsite:Ecosciences ;
            org:unitOf qgorg:10157 ;
            skos:broader qgorg:10157 ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
            skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
            skos:altLabel "Science Delivery and Knowledge"@en ;
            skos:prefLabel "Science Delivery & Knowledge"@en .
@@ -78,6 +81,7 @@ qgorg:11339 a owl:NamedIndividual ,
            org:hasSite qgsite:Ecosciences ;
            org:unitOf qgorg:10157 ;
            skos:broader qgorg:10157 ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
            skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
            skos:altLabel "Science Strategy and Partnerships"@en ;
            skos:prefLabel "Science Strategy & Partnerships"@en .
@@ -88,6 +92,7 @@ qgorg:DNRME a owl:NamedIndividual ,
                 skos:Concept ;
     skos:prefLabel "Department of Natural Resources, Mines and Energy"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
     skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
     skos:altLabel "DNRME"@en .
 
@@ -97,5 +102,6 @@ qgorg:DOR a owl:NamedIndividual ,
                 skos:Concept ;
     skos:prefLabel "Department of Resources"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
     skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
     org:resultedFrom qgorg:DNRME .

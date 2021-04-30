@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/organisation-name-types> a owl:Ontology,
@@ -25,10 +26,11 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 orgnt:legal-organisation-name a skos:Concept ;
     skos:definition "This is the name of the owner of the organisation that appears on all legal papers (AS4590.1:2017)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "LGL" ;
     skos:prefLabel "Legal Organisation Name"@en ;
@@ -36,6 +38,7 @@ orgnt:legal-organisation-name a skos:Concept ;
 
 orgnt:main-organisation a skos:Concept ;
     skos:definition "Main name of the organisation. This is the name of the entity that appears on all official documents or legal papers. May be the registered Business name where it is different to the Trading name (AS4590.1:2017)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "MN" ;
     skos:prefLabel "Main Organisation"@en ;
@@ -44,6 +47,7 @@ orgnt:main-organisation a skos:Concept ;
 orgnt:main-trading-name a skos:Concept ;
     skos:altLabel "Trading Name"@en ;
     skos:definition "The main name that the organisation trades under or the name by which suppliers or customers know the organisation (AS4590.1:2017)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "MTR" ;
     skos:prefLabel "Main Trading Name"@en ;
@@ -51,6 +55,7 @@ orgnt:main-trading-name a skos:Concept ;
 
 orgnt:management-accounting-unit a skos:Concept ;
     skos:definition "Management accounting unit. These are principal business units for which regular accounts are maintained, e.g. a division of a large business such as BHP's Steel Division. MAUs are ABS defined but are a popular way for large businesses to manage diverse undertakings (AS4590.1:2017)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "MAU" ;
     skos:prefLabel "Management Accounting Unit"@en ;
@@ -58,6 +63,7 @@ orgnt:management-accounting-unit a skos:Concept ;
 
 orgnt:other-name a skos:Concept ;
     skos:definition "Other name type not listed, e.g. sales and marketing  (AS4590.1:2017)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "OTH" ;
     skos:prefLabel "Other Name"@en ;
@@ -65,6 +71,7 @@ orgnt:other-name a skos:Concept ;
 
 orgnt:other-trading-name a skos:Concept ;
     skos:definition "Alternative trading name for an organisation that is not registered (AS4590.1:2017)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "OTR" ;
     skos:prefLabel "Other Trading Name"@en ;
@@ -72,6 +79,7 @@ orgnt:other-trading-name a skos:Concept ;
 
 orgnt:unknown a skos:Concept ;
     skos:definition "There is no information about the name type (AS4590.1:2017)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:inScheme <https://linked.data.gov.au/def/organisation-name-types> ;
     skos:notation "UNK" ;
     skos:prefLabel "Unknown"@en ;

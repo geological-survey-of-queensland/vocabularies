@@ -5,6 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/qld-resource-permit> a owl:Ontology ,
@@ -45,7 +46,7 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 respermit:GeothermalAuthorities a skos:Collection ;
     skos:altLabel "Geothermal permits"@en ;
@@ -106,6 +107,7 @@ respermit:ProspectingPermit a skos:Concept ;
 A prospecting permit allows you to prospect, hand-mine and peg a mining lease or mining claim (if marking out is required) on the available land specified in the permit.
 
 Hand-mining means using hand-operated tools, such as jackhammers, picks, shovels, gads, sieves and windlasses. A prospecting permit, however, does not allow hand mining for coal."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "PP" ;
     skos:prefLabel "PP - Prospecting Permit"@en ;
@@ -122,6 +124,7 @@ Explore for petroleum,
 Test for petroleum production,
 Evaluate the feasibility of petroleum production,
 Evaluate or test natural underground reservoirs for the storage of petroleum or a prescribed storage gas."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "ATP" ;
     skos:prefLabel "ATP - Authority to Prospect"@en ;
@@ -131,6 +134,7 @@ respermit:ExplorationPermitCoal a skos:Concept ;
     skos:altLabel "EPC"@en,
         "Exploration Permit Coal"@en ;
     skos:definition "Exploration permit for coal allows you to use more advanced exploration methods to determine the quantity and quality of coal present."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "EPC" ;
     skos:prefLabel "EPC - Exploration Permit Coal"@en ;
@@ -140,6 +144,7 @@ respermit:ExplorationPermitGeothermal a skos:Concept ;
     skos:altLabel "EPG"@en,
         "Exploration Permit Geothermal"@en ;
     skos:definition "An EPG allows you to explore for geothermal resources and evaluate the feasibility of geothermal production, including by production testing."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "EPG" ;
     skos:prefLabel "EPG - Exploration Permit Geothermal"@en ;
@@ -151,6 +156,7 @@ respermit:ExplorationPermitGreenhouseGas a skos:Concept ;
     skos:definition """To search for greenhouse gas (GHG) capture and storage locations in Queensland you need an exploration permit for greenhouse gas (EPQ).
 
 An EPQ allows you to explore for GHG storage reservoirs within the permit area. It also allows you to carry out injection testing (with ministerial approval) and activities necessary for exploration."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "EPQ" ;
     skos:prefLabel "EPQ - Exploration Permit Greenhouse Gas(GHG)"@en ;
@@ -164,6 +170,7 @@ respermit:ExplorationPermitMineral a skos:Concept ;
     skos:definition """Exploration permits allow you to use more advanced exploration methods to determine the quantity and quality of minerals present.
 
 An exploration permit allows you to prospect, conduct geophysical surveys, drilling, and sampling and testing of materials."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "EPM" ;
     skos:prefLabel "EPM - Exploration Permit Mineral"@en ;
@@ -173,6 +180,7 @@ respermit:GeothermalLease a skos:Concept ;
     skos:altLabel "GL"@en,
         "Geothermal Lease"@en ;
     skos:definition "Geothermal leases are long-term authorities to allow the commercial development of the resource. A geothermal lease allows you to carry out a range of activities related to exploration, testing and production of geothermal energy."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "GL" ;
     skos:prefLabel "GL - Geothermal Lease"@en ;
@@ -195,6 +203,7 @@ Compress or otherwise process a GHG stream for GHG stream storage
 Store a GHG stream
 
 Monitor and verify the behaviour of the GHG streams."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "QL" ;
     skos:prefLabel "QL - Greenhouse Gas (GHG) Lease"@en ;
@@ -208,6 +217,7 @@ respermit:MineralDevelopmentLicence a skos:Concept ;
 Permitted activities: 
 
 The MDL allows you to conduct geoscientific programs (e.g. drilling, seismic surveys), mining feasibility studies, metallurgical testing and marketing, and environmental, engineering and design studies."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "MDL" ;
     skos:prefLabel "MDL - Mineral Development Licence"@en ;
@@ -217,6 +227,7 @@ respermit:MineralFreeholdSelection a skos:Concept ;
     skos:altLabel "MFS"@en,
         "Mineral Freehold Selection"@en ;
     skos:definition "A historical freehold mining permit, issued between 1862 and 1883."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "MFS" ;
     skos:prefLabel "MFS - Mineral Freehold Selection"@en ;
@@ -226,6 +237,7 @@ respermit:MiningClaim a skos:Concept ;
     skos:altLabel "MC"@en,
         "Mining Claim"@en ;
     skos:definition "This claim is required by small miners to prospect for minerals and hand mine on an area of land using permitted equipment only. The size of a mining claim can be determined by a regulation for a particular mining district any may not be more than 20 hectares. A mining claim cannot be granted for coal."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "MC" ;
     skos:prefLabel "MC - Mining Claim"@en ;
@@ -235,6 +247,7 @@ respermit:MiningLease a skos:Concept ;
     skos:altLabel "ML"@en,
         "Mining Lease"@en ;
     skos:definition "A mining lease allows you to conduct larger scale mining operations. Mining leases can be issued for any specified mineral, minerals, or coal. A mining lease allows you to machine-mine for specified minerals and conduct other activities associated with mining or promoting the activity of mining."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "ML" ;
     skos:prefLabel "ML - Mining Lease"@en ;
@@ -244,6 +257,7 @@ respermit:OffshoreExplorationPermit
     skos:altLabel "OEP"@en,
         "Offshore Exploration Permit"@en ;
     skos:definition "A permit allowing for petroleum exploration within three nautical miles of the Queensland sea baseline. Beyond this limit, activities are administered under Commonwealth legislation."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "OEP" ;
     skos:prefLabel "OEP - Offshore Exploration Permit"@en ;
@@ -260,6 +274,7 @@ An easement
 A written agreement with a landowner to enter to construct and operate the facility on their land
 
 A Part 5 permission."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "PFL" ;
     skos:prefLabel "PFL - Petroleum Facility Licence"@en ;
@@ -269,6 +284,7 @@ respermit:PetroleumLease a skos:Concept ;
     skos:altLabel "PL"@en,
         "Petroleum Lease"@en ;
     skos:definition "You can apply for a petroleum lease over an area of your authority to prospect (ATP) if you make a discovery that is currently commercially viable. If the lease is granted, the area is excised from the ATP."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "PL" ;
     skos:prefLabel "PL - Petroleum Lease"@en ;
@@ -286,6 +302,7 @@ An easement
 A written agreement with the landowner to enter to construct and operate the pipeline
 
 A Part 5 permission."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "PPL" ;
     skos:prefLabel "PPL - Petroleum Pipeline Licence"@en ;
@@ -295,6 +312,7 @@ respermit:PetroleumProspectingPermit a skos:Concept ;
     skos:altLabel "PPP"@en,
         "Petroleum Prospecting Permit"@en ;
     skos:definition "A historic and now deprecated permit type that allowed for exclusive petroleum prospecting activities."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "PPP" ;
     skos:prefLabel "PPP - Petroleum Prospecting Permit"@en ;
@@ -304,6 +322,7 @@ respermit:PetroleumSurveyLicence a skos:Concept ;
     skos:altLabel "PSL"@en,
         "Petroleum Survey Licence"@en ;
     skos:definition "A petroleum survey licence (PSL) gives you the right to enter land to survey the proposed route of a pipeline or the suitability of land for a petroleum facility licence. It can be granted for a maximum of 2 years and only allows you to conduct activities that have a minimal impact on the land. There are no area limitations."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "PSL" ;
     skos:prefLabel "PSL - Petroleum Survey Licence"@en ;
@@ -317,6 +336,7 @@ respermit:PotentialCommercialArea a skos:Concept ;
 The PCA is a way of retaining an area of your ATP beyond its term to provide extra time to commercialise the resource. The maximum term for an ATP is 12 years, while the declaration for the PCA can be for up to 15 years.
 
 When you apply for a PCA, you must include a commercial viability report that shows that the area is likely to be commercially viable within 15 years. You must also include an evaluation program showing how you will overcome any factors inhibiting the commercial viability of the project."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "PCA" ;
     skos:prefLabel "PCA - Potential Commercial Area"@en ;
@@ -330,6 +350,7 @@ respermit:PotentialGeothermalCommercialArea a skos:Concept ;
 When an area is declared as a potential commercial area, it remains part of the exploration permit.
 
 The land must be brought into production through an application for a production lease within 5 years of the declaration or before the exploration permit expires. If you do not make an application for a lease within the accepted time frame, the potential commercial area lapses and the land ceases to be part of the exploration permit."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "PGA" ;
     skos:prefLabel "PGA - Potential Geothermal Commercial Area"@en ;
@@ -339,6 +360,7 @@ respermit:PotentialGreenhouseGasStorageCommercialArea a skos:Concept ;
     skos:altLabel "PSA"@en,
         "Potential Greenhouse Gas Storage Commercial Area"@en ;
     skos:definition "If you discover a potential storage area, you can apply to have an area of your exploration permit declared as a potential greenhouse gas storage commercial area (PSA). This will allow you to evaluate the areaâ€™s potential and market opportunities.."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "PSA" ;
     skos:prefLabel "PSA - Potential Greenhouse Gas (GHG) Storage Commercial Area"@en ;
@@ -348,6 +370,7 @@ respermit:DataAcquisitionAuthority a skos:Concept ;
     skos:altLabel "DAA"@en,
         "Data Acquisition Authority"@en ;
     skos:definition "A data acquisition authority (DAA) authorises you to conduct limited geophysical survey activities and collect data outside the area of your authority to prospect (ATP) or petroleum lease (PL). A DAA is only granted on land that is contiguous to the granted ATP or PL and for activities that are directly relevant to authorised activities of your ATP or PL."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "DAA" ;
     skos:prefLabel "DAA - Data Acquisition Authority"@en ;
@@ -357,6 +380,7 @@ respermit:WaterMonitoringAuthority a skos:Concept ;
     skos:altLabel "WMA"@en,
         "Water Monitoring Authority"@en ;
     skos:definition "As the holder of a mining lease, mineral development licence, authority to prospect or petroleum lease, you have an obligation to make good any damage you cause to surrounding water bores. You can apply for a water monitoring authority over land outside the area of your lease/licence to comply with your obligations."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit> ;
     skos:notation "WMA" ;
     skos:prefLabel "WMA - Water Monitoring Authority"@en ;

@@ -4,6 +4,7 @@
 @prefix qldutm: <https://linked.data.gov.au/def/qld-utm-zones/> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/qld-utm-zones> a owl:Ontology , skos:ConceptScheme ;
@@ -11,6 +12,7 @@
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2020-01-31T08:40:52"^^xsd:dateTime ;
+    dcterms:provenance "Concepts extracted from OGC sources" ;
     skos:definition "The universal transverse mercator (UTM) zones used and referred to within Queensland. The UTM system divides the Earth into 60 zones, each 6 degrees of longitude in width. Zone 1 covers longitude 180 to 174 W; zone numbering increases eastward to zone 60, which covers longitude 174 to 180E. The polar regions south of 80S and north of 84N are excluded."@en ;
     skos:hasTopConcept qldutm:z54,
         qldutm:z55,
@@ -19,22 +21,25 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 qldutm:z54 a skos:Concept ;
     skos:definition "The 54th UTM zone spanning from 138 to 144 degrees of longitude east. Central Meridian 141 degrees east"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-utm-zones> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-utm-zones> ;
     skos:prefLabel "Z54"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/qld-utm-zones> .
 
 qldutm:z55 a skos:Concept ;
     skos:definition "The 55th UTM zone spanning from 144 to 150 degrees of longitude east. Central Meridian 147 degrees east"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-utm-zones> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-utm-zones> ;
     skos:prefLabel "Z55"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/qld-utm-zones> .
 
 qldutm:z56 a skos:Concept ;
     skos:definition "The 56th UTM zone spanning from 150 to 156 degrees of longitude east. Central Meridian 153 degrees east"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-utm-zones> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-utm-zones> ;
     skos:prefLabel "Z56"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/qld-utm-zones> .

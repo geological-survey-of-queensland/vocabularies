@@ -14,13 +14,13 @@
 
 <https://linked.data.gov.au/def/iso-iec-25012-data-quality-dimension>
   a skos:ConceptScheme ;
+  skos:definition "ISO25012 Data Quality Dimensions, as extracted from the standard"@en ;
   skos:prefLabel "ISO25012 Data Quality Dimensions"@en ;
   dcterms:created "2020-11-16"^^xsd:date ;
-dcterms:creator <https://linked.data.gov.au/def/gsq-alias/des> ;
-dcterms:modified "2021-03-03"^^xsd:date ;
-dcterms:publisher <https://linked.data.gov.au/def/gsq-alias/des> ;
-dcterms:provenance "Data quality terms as defined in ISO25012" ;
-skos:definition "Data quality terms as defined in ISO25012" ;
+  dcterms:creator <https://linked.data.gov.au/def/gsq-alias/des> ;
+  dcterms:modified "2021-03-03"^^xsd:date ;
+  dcterms:provenance "Extracted from ISO 25012" ;
+  dcterms:publisher <https://linked.data.gov.au/def/gsq-alias/gsq> ;
   skos:hasTopConcept dq-iso-25012:inherentDataQuality ;
   skos:hasTopConcept dq-iso-25012:inherentSystemDependentDataQuality ;
   skos:hasTopConcept dq-iso-25012:systemDependentDataQuality ;
@@ -186,6 +186,7 @@ dq-iso-25012:systemDependentDataQuality
   a dqv:Category ; a skos:Concept ;
   dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
   skos:definition "System dependent data quality refers to the degree to which data quality is reached and preserved within a computer system when data is used under specified conditions."@en ;
+  rdfs:label "System-dependent data quality"@en ;
   skos:inScheme <https://linked.data.gov.au/def/iso-iec-25012-data-quality-dimension> ;
   skos:topConceptOf <https://linked.data.gov.au/def/iso-iec-25012-data-quality-dimension> ;
   rdfs:isDefinedBy <https://iso25000.com/index.php/en/iso-25000-standards/iso-25012> ;

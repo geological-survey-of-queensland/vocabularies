@@ -1,7 +1,7 @@
 @prefix qlic: <https://linked.data.gov.au/def/qld-data-licenses/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -12,14 +12,15 @@
          <https://linked.data.gov.au/def/qld-data-licenses/cc-by-sa-4.0> ;
         skos:prefLabel "Queensland Government Software and Data Licenses"@en ;
         skos:definition "Licenses for use of software, data, documents and other resources within Queensland Government"@en ;
-        dct:created "2020-12-02"^^xsd:date ;
-        dct:creator <https://linked.data.gov.au/org/des> ;
-        dct:modified "2021-03-03"^^xsd:date ;
-        dct:publisher <https://linked.data.gov.au/org/des> ;
-        skos:editorialNote """Vocabulary built from original sourced from http://registry.it.csiro.au/_licence."""@en .
+        dcterms:created "2020-12-02"^^xsd:date ;
+        dcterms:creator <https://linked.data.gov.au/org/des> ;
+        dcterms:modified "2021-03-03"^^xsd:date ;
+        dcterms:publisher <https://linked.data.gov.au/org/des> ;
+        dcterms:provenance "Vocabulary built from original sourced from http://registry.it.csiro.au/_licence." .
 
 <https://linked.data.gov.au/def/licence-document/cc-by-nd-4.0>
         a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-data-licenses> ;
         skos:inScheme <https://linked.data.gov.au/def/qld-data-licenses> ;
         skos:topConceptOf <https://linked.data.gov.au/def/qld-data-licenses> ;
         skos:exactMatch <http://registry.it.csiro.au/licence/cc-by-nd-4.0> ;
@@ -28,6 +29,7 @@
        
 <https://linked.data.gov.au/def/licence-document/cc-by-4.0>
         a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-data-licenses> ;
         skos:inScheme <https://linked.data.gov.au/def/qld-data-licenses> ;
         skos:topConceptOf <https://linked.data.gov.au/def/qld-data-licenses> ;
         skos:exactMatch <http://registry.it.csiro.au/licence/cc-by-4.0> ;
@@ -36,6 +38,7 @@
        
 <https://linked.data.gov.au/def/licence-document/cc-by-sa-4.0>
         a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-data-licenses> ;
         skos:inScheme <https://linked.data.gov.au/def/qld-data-licenses> ;
         skos:topConceptOf <https://linked.data.gov.au/def/qld-data-licenses> ;
         skos:exactMatch <http://registry.it.csiro.au/licence/cc-by-sa-4.0> ;

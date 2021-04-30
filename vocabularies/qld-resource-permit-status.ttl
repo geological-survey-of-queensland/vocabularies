@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/qld-resource-permit-status> a owl:Ontology , skos:ConceptScheme ;
@@ -22,11 +23,12 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 qrps:abandoned a skos:Concept ;
     skos:altLabel "Discarded"@en ;
     skos:definition "An application for a permit that has been abandoned or discarded by the applicant."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Abandoned"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/qld-resource-permit-status> .
@@ -36,6 +38,7 @@ qrps:application a skos:Concept ;
     skos:hiddenLabel "Not Accepted"@en,
         "Pre-Lodgement"@en ;
     skos:definition "An application has been made for a permit."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Application"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/qld-resource-permit-status> .
@@ -43,18 +46,21 @@ qrps:application a skos:Concept ;
 qrps:granted a skos:Concept ;
     skos:altLabel "Current"@en ;
     skos:definition "A permit that has been granted under legislation."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Granted"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/qld-resource-permit-status> .
 
 qrps:non-current a skos:Concept ;
     skos:definition "A permit that was once granted but is now no longer active."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Non-Current"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/qld-resource-permit-status> .
 
 qrps:unsuccessful a skos:Concept ;
     skos:definition "An application for a permit that was deemed unsuccessful by the Department."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-resource-permit-status> ;
     skos:prefLabel "Unsuccessful"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/qld-resource-permit-status> .

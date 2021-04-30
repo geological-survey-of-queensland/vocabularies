@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://linked.data.gov.au/def/geological-observation-type> a owl:Ontology,
@@ -76,10 +77,11 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 obstp:alteration a skos:Concept ;
     skos:definition "A change in the mineralogic composition of a rock brought about by physical or chemical means, esp. by the action of hydrothermal solutions; also, a secondary, i.e., supergene, change in a rock or mineral. Alteration excludes that specifically resulting from metamorphic alteration, which is characterised in a unique observation type, Metamorphism."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "ALTN" ;
     skos:prefLabel "Alteration"@en ;
@@ -87,6 +89,7 @@ obstp:alteration a skos:Concept ;
 
 obstp:auger-hole-description a skos:Concept ;
     skos:definition "A description of an auger hole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "AUGR" ;
     skos:prefLabel "Auger Hole Description"@en ;
@@ -94,6 +97,7 @@ obstp:auger-hole-description a skos:Concept ;
 
 obstp:cement-int a skos:Concept ;
     skos:definition "An observation detailing the emplacement of cement in a borehole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "CMNT" ;
     skos:prefLabel "Cementing Interval"@en ;
@@ -101,6 +105,7 @@ obstp:cement-int a skos:Concept ;
 
 obstp:coal-seam-properties a skos:Concept ;
     skos:definition "An observation of the properties of a coal seam using a variety of analytical techniques."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "CSPR" ;
     skos:prefLabel "Coal Seam Properties"@en ;
@@ -108,6 +113,7 @@ obstp:coal-seam-properties a skos:Concept ;
 
 obstp:coal-type a skos:Concept ;
     skos:definition "A definition of the type of coal according to a classification scheme."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "COAL" ;
     skos:prefLabel "Coal Type"@en ;
@@ -115,6 +121,7 @@ obstp:coal-type a skos:Concept ;
 
 obstp:coherance a skos:Concept ;
     skos:definition "How well a rock is lithified."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "COHR" ;
     skos:prefLabel "Coherance"@en ;
@@ -122,6 +129,7 @@ obstp:coherance a skos:Concept ;
 
 obstp:depths-of-supergene-alteration a skos:Concept ;
     skos:definition "The depths at which supergene alteration occurred."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "DSUP" ;
     skos:prefLabel "Depths of Supergene Alteration"@en ;
@@ -129,6 +137,7 @@ obstp:depths-of-supergene-alteration a skos:Concept ;
 
 obstp:directional a skos:Concept ;
     skos:definition "The process of recording the subsurface geometry of a borehole i.e. direction and position of a wellbore."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "DRCT" ;
     skos:altLabel "Deviation"@en ;
@@ -137,6 +146,7 @@ obstp:directional a skos:Concept ;
 
 obstp:drilling-int a skos:Concept ;
     skos:definition "The observation of a drilled interval by a specific wellbit in a borehole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "DRLL" ;
     skos:prefLabel "Drilling Interval"@en ;
@@ -144,6 +154,7 @@ obstp:drilling-int a skos:Concept ;
 
 obstp:drill-fluid-int a skos:Concept ;
     skos:definition "The observation of an interval within a wellbore that used a specific drilling fluid."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "DRFD" ;
     skos:prefLabel "Drill Fluid Interval"@en ;
@@ -151,6 +162,7 @@ obstp:drill-fluid-int a skos:Concept ;
 
 obstp:electrical a skos:Concept ;
     skos:definition "The observations of measuring electrical currents as they travel through conductive pathways in the near surface."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "EL" ;
     skos:altLabel "Electric"@en ;
@@ -159,6 +171,7 @@ obstp:electrical a skos:Concept ;
 
 obstp:electromagnetic a skos:Concept ;
     skos:definition "A survey measuring induced electromagnetic fields from the earth to determine the resistive/conductive structure of the earth."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "EM" ;
     skos:altLabel "EM"@en,
@@ -168,6 +181,7 @@ obstp:electromagnetic a skos:Concept ;
 
 obstp:fabric a skos:Concept ;
     skos:definition "The spatial and geometric configuration of a sample."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "FABR" ;
     skos:prefLabel "Fabric"@en ;
@@ -175,6 +189,7 @@ obstp:fabric a skos:Concept ;
 
 obstp:fossils a skos:Concept ;
     skos:definition "Fossils observed."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "FOSS" ;
     skos:prefLabel "Fossils"@en ;
@@ -182,6 +197,7 @@ obstp:fossils a skos:Concept ;
 
 obstp:geochemical-signature a skos:Concept ;
     skos:definition "The geochemical signature observed."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "GEOC" ;
     skos:prefLabel "Geochemical signature"@en ;
@@ -189,6 +205,7 @@ obstp:geochemical-signature a skos:Concept ;
 
 obstp:geothermics a skos:Concept ;
     skos:definition "An observation measuring variations of heat flow within the Earth."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "GE" ;
     skos:prefLabel "Geothermics"@en ;
@@ -196,6 +213,7 @@ obstp:geothermics a skos:Concept ;
 
 obstp:gravity a skos:Concept ;
     skos:definition "A survey where the variation of the Earth's gravity field in measured to determine the distribution of density in the region."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "GV" ;
     skos:prefLabel "Gravity"@en ;
@@ -203,6 +221,7 @@ obstp:gravity a skos:Concept ;
 
 obstp:gravity-gradiometry a skos:Concept ;
     skos:definition "A variation of gravity observations where the gradient of the gravity field is measured instead of the field directly."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "GG" ;
     skos:altLabel "Full tensor gravimetry"@en ;
@@ -211,6 +230,7 @@ obstp:gravity-gradiometry a skos:Concept ;
 
 obstp:hyperspectral a skos:Concept ;
     skos:definition "A spectral observation type that captures between greater than 10 frequency bands. Hyperspectal observations typically consist of hundred of narrow bands (10-20nm)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "HYPR" ;
     skos:prefLabel "Hyperspectral"@en ;
@@ -218,6 +238,7 @@ obstp:hyperspectral a skos:Concept ;
 
 obstp:igneous-structures a skos:Concept ;
     skos:definition "The types of igneous structures observed."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "IGST" ;
     skos:prefLabel "Igneous Structures"@en ;
@@ -225,6 +246,7 @@ obstp:igneous-structures a skos:Concept ;
 
 obstp:internal-sequences a skos:Concept ;
     skos:definition "The sequences observable inside a sample."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "SEQU" ;
     skos:prefLabel "Internal Sequences"@en ;
@@ -232,6 +254,7 @@ obstp:internal-sequences a skos:Concept ;
 
 obstp:lith-int a skos:Concept ;
     skos:definition "An observation detailing the lithological characteristics of a defined interval."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "LITH" ;
     skos:altLabel "Lithology Interval"@en ;
@@ -240,6 +263,7 @@ obstp:lith-int a skos:Concept ;
 
 obstp:magnetic a skos:Concept ;
     skos:definition "The intensity of magnetism observed."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "MG" ;
     skos:altLabel "magnetism"@en ;
@@ -248,6 +272,7 @@ obstp:magnetic a skos:Concept ;
 
 obstp:magnetic-gradiometry a skos:Concept ;
     skos:definition "A variation of magnetic observations where the gradient of the magnetic field is measured instead of the field directly."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "MY" ;
     skos:prefLabel "Magnetic Gradiometry"@en ;
@@ -255,6 +280,7 @@ obstp:magnetic-gradiometry a skos:Concept ;
 
 obstp:magnetotelluric a skos:Concept ;
     skos:definition "A survey where recordings of the Earths electric and magnetic fields are taken concurrently to determine the subsurface electrical resistivity at a range of scales."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "MT" ;
     skos:altLabel "MT"@en,
@@ -264,6 +290,7 @@ obstp:magnetotelluric a skos:Concept ;
 
 obstp:metamorphic-structures a skos:Concept ;
     skos:definition "The metamorphic structures observed."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "METS" ;
     skos:prefLabel "Metamorphic Structures"@en ;
@@ -271,6 +298,7 @@ obstp:metamorphic-structures a skos:Concept ;
 
 obstp:metamorphic-type a skos:Concept ;
     skos:definition "The type of metamorphism observed."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "METTYP" ;
     skos:prefLabel "Metamorphic Type"@en ;
@@ -278,6 +306,7 @@ obstp:metamorphic-type a skos:Concept ;
 
 obstp:metamorphism a skos:Concept ;
     skos:definition "Mineralogical alterations specifically related to metamorphism."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "META" ;
     skos:altLabel "Metamorphic Alteration"@en ;
@@ -286,6 +315,7 @@ obstp:metamorphism a skos:Concept ;
 
 obstp:mineral-deposit-expression a skos:Concept ;
     skos:definition "The type expressed by a mineral deposit"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "DEXP" ;
     skos:prefLabel "Mineral Deposit Expression"@en ;
@@ -293,6 +323,7 @@ obstp:mineral-deposit-expression a skos:Concept ;
 
 obstp:mineral-deposit-form a skos:Concept ;
     skos:definition "The form expressed by a mineral deposit"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "DFRM" ;
     skos:prefLabel "Mineral Deposit Form"@en ;
@@ -300,6 +331,7 @@ obstp:mineral-deposit-form a skos:Concept ;
 
 obstp:mineralisation a skos:Concept ;
     skos:definition "The observation of minerals or materials that are of potential economic interest."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "MINOCC" ;
     skos:altLabel "Mineral Occurrence"@en ;
@@ -308,6 +340,7 @@ obstp:mineralisation a skos:Concept ;
 
 obstp:mineralogical-components a skos:Concept ;
     skos:definition "The mineralogical components of a sample."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "COMPON" ;
     skos:prefLabel "Components"@en ;
@@ -315,6 +348,7 @@ obstp:mineralogical-components a skos:Concept ;
 
 obstp:miscellaneous-observation a skos:Concept ;
     skos:definition "A trivial type of observation, not elsewhere classified."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "MISC" ;
     skos:prefLabel "Miscellaneous Observation"@en ;
@@ -322,6 +356,7 @@ obstp:miscellaneous-observation a skos:Concept ;
 
 obstp:multispectral a skos:Concept ;
     skos:definition "A spectral observation type that captures between 3 and 10 frequency bands."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "MULT" ;
     skos:prefLabel "Multispectral"@en ;
@@ -329,6 +364,7 @@ obstp:multispectral a skos:Concept ;
 
 obstp:ore-textures a skos:Concept ;
     skos:definition "The textures apparently in an ore."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "OTEX" ;
     skos:prefLabel "Ore Textures"@en ;
@@ -336,6 +372,7 @@ obstp:ore-textures a skos:Concept ;
 
 obstp:panchromatic a skos:Concept ;
     skos:definition "A spectral observation type that captures light across a wide bandwidth, typically spanning hundreds of nanometers, as a single band."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "PANC" ;
     skos:altLabel "Monochromatic"@en ;
@@ -344,6 +381,7 @@ obstp:panchromatic a skos:Concept ;
 
 obstp:perf-int a skos:Concept ;
     skos:definition "An observation detailing the perforations through casing of a defined interval in a borehole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "PERF" ;
     skos:prefLabel "Perforations"@en ;
@@ -351,6 +389,7 @@ obstp:perf-int a skos:Concept ;
 
 obstp:photographic a skos:Concept ;
     skos:definition "The details observable via photogrammetry using standard photographic equipment for image capture without intention for spectral analysis. Including land-based geological photography."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "PHOT" ;
     skos:altLabel "Photographic details"@en ;
@@ -359,6 +398,7 @@ obstp:photographic a skos:Concept ;
 
 obstp:physical a skos:Concept ;
     skos:definition "An observation of the fundamental physical properties of an entity such as shape, size, colour, mass, porosity, permeability, strength, stiffness, composition."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "PHYS" ;
     skos:prefLabel "Physical Properties"@en ;
@@ -366,6 +406,7 @@ obstp:physical a skos:Concept ;
 
 obstp:positional a skos:Concept ;
     skos:definition "An observation of the fundamental physical properties of an entity such as shape, size, colour, mass, porosity, permeability, strength, stiffness, composition."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "PSTN" ;
     skos:altLabel "Surveying"@en,
@@ -378,6 +419,7 @@ obstp:positional a skos:Concept ;
 
 obstp:quartz-textures a skos:Concept ;
     skos:definition "The textures visible in quartz."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "QTEX" ;
     skos:prefLabel "Quartz Textures"@en ;
@@ -385,6 +427,7 @@ obstp:quartz-textures a skos:Concept ;
 
 obstp:radiometric a skos:Concept ;
     skos:definition "A survey where the emissions of natural gamma-rays are recorded to determine the quantity of radioelements (Potassium, Uranium, Thorium)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "RM" ;
     skos:altLabel "Gamma Logs"@en,
@@ -394,6 +437,7 @@ obstp:radiometric a skos:Concept ;
 
 obstp:regolith-observations a skos:Concept ;
     skos:definition "Observations of regolith."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "REGO" ;
     skos:prefLabel "Regolith Observations"@en ;
@@ -401,6 +445,7 @@ obstp:regolith-observations a skos:Concept ;
 
 obstp:reservoir-int a skos:Concept ;
     skos:definition "Observations of reservoir properties within a specific interval within a borehole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "RSVR" ;
     skos:altLabel "Reservoir Interval"@en,
@@ -410,6 +455,7 @@ obstp:reservoir-int a skos:Concept ;
 
 obstp:rock-classification a skos:Concept ;
     skos:definition "The classification of a rock."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "RCLASS" ;
     skos:prefLabel "Rock Classification"@en ;
@@ -417,6 +463,7 @@ obstp:rock-classification a skos:Concept ;
 
 obstp:sedimentary-lithofacies a skos:Concept ;
     skos:definition "The lithofacies observable in a sedimentary sequence."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "SEDFAC" ;
     skos:prefLabel "Sedimentary Lithofacies"@en ;
@@ -424,6 +471,7 @@ obstp:sedimentary-lithofacies a skos:Concept ;
 
 obstp:sedimentary-structures a skos:Concept ;
     skos:definition "The structures observable in a sedimentary sequence."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "SEDS" ;
     skos:prefLabel "Sedimentary Structures"@en ;
@@ -431,6 +479,7 @@ obstp:sedimentary-structures a skos:Concept ;
 
 obstp:seismic-2d a skos:Concept ;
     skos:definition "The Fundamental Dataset of a 2D seismic survey is the 'Line'; the Line dataset is a 2D cross-section of the subsurface measured by a chain of geophones. It is described by a function of two parameters : 1) Trace Number and 2) Two-Way Time. A 2D seismic survey may be composed of one or many lines that may or may not intersect with each other."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "2d" ;
     skos:altLabel "Seismic 2D"@en,
@@ -442,6 +491,7 @@ obstp:seismic-2d a skos:Concept ;
 
 obstp:seismic-3d a skos:Concept ;
     skos:definition "The Fundamental Dataset of a 3D seismic survey is the 'Volume'; the Volume dataset is a 3D model of the subsurface measured by a grid/array of geophones. It is described by a function of three parameters : 1) In-Line, 2) Cross-Line and 3) Two-Way Time. A 3D seismic survey contains many In-Lines and Cross-Lines that intersect with each other."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "3d" ;
     skos:altLabel "Seismic 3D"@en,
@@ -453,6 +503,7 @@ obstp:seismic-3d a skos:Concept ;
 
 obstp:seismic-4d a skos:Concept ;
     skos:definition "The Fundamental Dataset of a 4D seismic survey is the 'Temporal Volume'; The Temporal Volume is a collection of multiple discrete recordings of a volume of the subsurface measured at successive time intervals. It is described by a function of four parameters: 1) In-Line, 2) Cross-Line, 3) Two-Way Time and 4) Repeat Index. The In-Lines and Cross-Lines intersect with each other."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "4d" ;
     skos:altLabel "Seismic 4D"@en,
@@ -470,6 +521,7 @@ obstp:seismic-4d a skos:Concept ;
 
 obstp:strat-int a skos:Concept ;
     skos:definition "Observations of the formal rock units formations and their depth intervals intersected within a borehole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "STRT" ;
     skos:altLabel "Stratigraphic Interval"@en ;
@@ -478,6 +530,7 @@ obstp:strat-int a skos:Concept ;
 
 obstp:tectonic-structures a skos:Concept ;
     skos:definition "The observable tectonic structures."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "TCST" ;
     skos:prefLabel "Tectonic Structures"@en ;
@@ -485,6 +538,7 @@ obstp:tectonic-structures a skos:Concept ;
 
 obstp:textures a skos:Concept ;
     skos:definition "The textures observable of a sample."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "TEXT" ;
     skos:prefLabel "Textures"@en ;
@@ -492,6 +546,7 @@ obstp:textures a skos:Concept ;
 
 obstp:tubular-int a skos:Concept ;
     skos:definition "The observations of tubular equipment (casing, tubing, liner) installed in a borehole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "TBLR" ;
     skos:altLabel "Tubular"@en,
@@ -505,6 +560,7 @@ obstp:tubular-int a skos:Concept ;
 
 obstp:velocity-survey a skos:Concept ;
     skos:definition "Observations that generate measurements used to determine average velocity versus depth in a borehole."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "VELS" ;
     skos:altLabel "Seismic Velocity"@en ;
@@ -513,6 +569,7 @@ obstp:velocity-survey a skos:Concept ;
 
 obstp:weathering-features a skos:Concept ;
     skos:definition "The weathering features observable in a sample."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "WETH" ;
     skos:prefLabel "Weathering Features"@en ;
@@ -520,6 +577,7 @@ obstp:weathering-features a skos:Concept ;
 
 obstp:well-completion-int a skos:Concept ;
     skos:definition "The observations of the interval over which a well is completed. The contact interval or intervals with the reservoir(s) that function as a single unit to produce or inject fluids."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "WCPI" ;
     skos:altLabel "Well Completion Interval"@en,
@@ -530,6 +588,7 @@ obstp:well-completion-int a skos:Concept ;
 
 obstp:younging a skos:Concept ;
     skos:definition "The younging direction observed in a sequence."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "YOUNG" ;
     skos:prefLabel "Younging"@en ;
