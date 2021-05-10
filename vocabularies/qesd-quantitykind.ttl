@@ -23,7 +23,6 @@
     dcterms:provenance "Derived from QUDT (http://qudt.org/vocab/quantitykind)" ;
     skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to Queensland Environmental Science Data (QESD)."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qkd> ;
-    skos:inScheme <https://linked.data.gov.au/def/qesd-qkd> ;
     skos:prefLabel "Queensland Environmental Science Data Profile of QUDT Quantity Kinds"@en ;
     skos:editorialNote "The quantity kids from QUDT are a partial copy from the list of items provided from the QUDT public GitHub repositories (https://github.com/qudt/qudt-public-repo). Any quantity kinds created specificly for use in this vocabulary are to be explicitly marked with a source of this scheme. Additions to each term are to include them as an skos:Concept and skos:definition and include them explicitly in this ConceptScheme."@en ;
     skos:hasTopConcept
@@ -517,7 +516,7 @@ quantitykind:Concentration
 .
 
 quantitykind:EnergyPerElectricCharge
-  a qudt:QuantityKind ;
+  a qudt:QuantityKind , skos:Concept ;
   skos:definition "Voltage is a representation of the electric potential energy per unit charge. If a unit of electrical charge were placed in a location, the voltage indicates the potential energy of it at that point. In other words, it is a measurement of the energy contained within an electric field, or an electric circuit, at a given point. Voltage is a scalar quantity. The SI unit of voltage is the volt, such that 1 volt = 1 joule/coulomb.";
   qudt:applicableUnit unit:V ;
   rdfs:isDefinedBy <http://qudt.org/2.1/vocab/quantitykind> ;
