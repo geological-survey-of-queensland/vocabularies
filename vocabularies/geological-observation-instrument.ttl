@@ -15,7 +15,8 @@
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland." ;
     skos:definition "Types of instruments used to perform geological observations."@en ;
-    skos:hasTopConcept obsin:aster,
+    skos:hasTopConcept 
+    obsin:aster,
         obsin:digital-globe,
         obsin:exploranium,
         obsin:falcon,
@@ -163,6 +164,13 @@ obsin:geometrics-g-823b-caesium-vapour a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-instrument> ;
     skos:prefLabel "GEOMETRICS G-823B CAESIUM VAPOUR"@en .
 
+obsin:geometrics-g-83 a skos:Concept ;
+    skos:broader obsin:geometrics ;
+    skos:definition "The  G-83 model magnetometer built by Geometrics."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "GEOMETRICS G-83"@en .
+
 obsin:geometrics-g-833 a skos:Concept ;
     skos:broader obsin:geometrics ;
     skos:definition "The  G-833 model magnetometer built by Geometrics."@en ;
@@ -260,6 +268,13 @@ obsin:scintrex-v2321 a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-instrument> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-instrument> ;
     skos:prefLabel "SCINTREX V2321"@en .
+
+obsin:scintrex-v21 a skos:Concept ;
+    skos:broader obsin:scintrex ;
+    skos:definition "The V21 model magnetometer built by Scintrex."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-observation-instrument> ;
+    skos:prefLabel "SCINTREX V21"@en .
 
 obsin:supracon-jessy-deep a skos:Concept ;
     skos:broader obsin:supracon ;
@@ -491,7 +506,8 @@ obsin:gravity-gradiometry a skos:Collection ;
     
 obsin:magnetic a skos:Collection ;
     skos:definition "Instruments used in Magnetic surveys."@en ;
-    skos:member obsin:fasdas-mag-decoupler-unit,
+    skos:member 
+        obsin:fasdas-mag-decoupler-unit,
         obsin:geometrics,
         obsin:geometrics-g-813,
         obsin:geometrics-g-822,
