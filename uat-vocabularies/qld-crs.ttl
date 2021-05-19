@@ -1,0 +1,216 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qldcrs: <http://linked.data.gov.au/def/queensland-crs/> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/queensland-crs> a owl:Ontology , skos:ConceptScheme ;
+    dcterms:created "2020-01-30T15:57:41"^^xsd:dateTime ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-01-30T15:57:41"^^xsd:dateTime ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The coordinate reference systems used and referred to within Queensland."@en ;
+    skos:hasTopConcept qldcrs:gda2020,
+        qldcrs:gda1994,
+        qldcrs:wgs1984 ,
+        qldcrs:agd1984,
+        qldcrs:agd1966,
+        qldcrs:mga2020-z54,
+        qldcrs:mga2020-z55,
+        qldcrs:mga2020-z56,
+        qldcrs:mga1994-z54,
+        qldcrs:mga1994-z55,
+        qldcrs:mga1994-z56,
+        qldcrs:amg1984-z54,
+        qldcrs:amg1984-z55,
+        qldcrs:amg1984-z56,
+        qldcrs:amg1966-z54,
+        qldcrs:amg1966-z55,
+        qldcrs:amg1966-z56 ;
+    skos:prefLabel "Queensland CRS"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
+qldcrs:geographic a skos:Collection ;
+    skos:definition "A geographic coordinate system (GCS) is a coordinate system which uses a three-dimensional spherical surface (ellipsoid) to define locations on the earth. A common choice of coordinates is latitude and longitude."@en ;
+    skos:member qldcrs:agd1966,
+        qldcrs:agd1984,
+        qldcrs:gda1994,
+        qldcrs:gda2020,
+        qldcrs:wgs1984 ;
+    skos:prefLabel "Geographic Coordinate Systems"@en .
+
+qldcrs:projected a skos:Collection ;
+    skos:definition "A projected coordinate system (PCS) is a projection of the geographic coordinate to, on two-dimensional surface (the map). The used to convert between Australian Geodetic Data and their Projected equivalents is the Universal Transverse Mercator projection."@en ;
+    skos:member qldcrs:mga2020-z54,
+        qldcrs:mga2020-z55,
+        qldcrs:mga2020-z56,
+        qldcrs:mga1994-z54,
+        qldcrs:mga1994-z55,
+        qldcrs:mga1994-z56,
+        qldcrs:amg1984-z54,
+        qldcrs:amg1984-z55,
+        qldcrs:amg1984-z56,
+        qldcrs:amg1966-z54,
+        qldcrs:amg1966-z55,
+        qldcrs:amg1966-z56 ;
+    skos:prefLabel "Projected Coordinate Systems"@en .
+
+qldcrs:gda2020 a skos:Concept ;
+    skos:definition "The official geodetic datum adopted nationally in June 2020. GDA2020 is a coordinate reference system whose origin coincides with a determination of the centre of mass of the earth, hence the term geocentric. GDA2020 is a plate-fixed or static coordinate datum based on the International Terrestrial Reference Frame 1992 (ITRF92), held at the reference epoch of 1 January 2020."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "7844" ;
+    skos:altLabel "Geocentric Datum of Australia 2020"@en ;
+    skos:prefLabel "GDA2020"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:gda1994 a skos:Concept ;
+    skos:definition "The official geodetic datum adopted nationally in January 2000. GDA94 is a coordinate reference system whose origin coincides with a determination of the centre of mass of the earth, hence the term geocentric. GDA94 is a plate-fixed or static coordinate datum based on the International Terrestrial Reference Frame 1992 (ITRF92), held at the reference epoch of 1 January 1994."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "4283" ;
+    skos:altLabel "Geocentric Datum of Australia 1994"@en ;
+    skos:prefLabel "GDA94"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:wgs1984 a skos:Concept ;
+    skos:definition "The official world geodetic datum adopted in 1984. WGS84 is a coordinate reference system whose origin coincides with a determination of the centre of mass of the earth. The datum defines meridan 0 as IERS Reference Meridian and the datum surface is an oblate spheroid."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "4326" ;
+    skos:altLabel "World Geodetic System 1984"@en ;
+    skos:prefLabel "WGS84"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:agd1984 a skos:Concept ;
+    skos:definition "The update to the official Australian geodetic datum, adopted and in effect from 1984"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "4203" ;
+    skos:altLabel "Australian Geodetic Datum 1984"@en ;
+    skos:prefLabel "AGD84"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:agd1966 a skos:Concept ;
+    skos:definition "The first official national Australian geodetic datum proclaimed in the Australian Commonwealth Gazette No. 84 of 6 October 1966."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "4202" ;
+    skos:altLabel "Australian Geodetic Datum 1966"@en ;
+    skos:prefLabel "AGD66"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:mga2020-z54 a skos:Concept ;
+    skos:definition "The accompanying national map projection to GDA2020, a transverse Mercator projection that conforms to zone 54 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "7854" ;
+    skos:altLabel "Map Grid of Australia 2020 zone 54"@en ;
+    skos:prefLabel "MGA2020 z54"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:mga2020-z55 a skos:Concept ;
+    skos:definition "The accompanying national map projection to GDA2020, a transverse Mercator projection that conforms to zone 55 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "7855" ;
+    skos:altLabel "Map Grid of Australia 2020 zone 55"@en ;
+    skos:prefLabel "MGA2020 z55"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:mga2020-z56 a skos:Concept ;
+    skos:definition "The accompanying national map projection to GDA2020, a transverse Mercator projection that conforms to zone 56 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "7856" ;
+    skos:altLabel "Map Grid of Australia 2020 zone 56"@en ;
+    skos:prefLabel "MGA2020 z56"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:mga1994-z54 a skos:Concept ;
+    skos:definition "The accompanying national map projection to GDA94, a transverse Mercator projection that conforms to zone 54 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "28354" ;
+    skos:altLabel "Map Grid of Australia 1994 zone 54"@en ;
+    skos:prefLabel "MGA94 z54"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:mga1994-z55 a skos:Concept ;
+    skos:definition "The accompanying national map projection to GDA94, a transverse Mercator projection that conforms to zone 55 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "28355" ;
+    skos:altLabel "Map Grid of Australia 1994 zone 55"@en ;
+    skos:prefLabel "MGA94 z55"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:mga1994-z56 a skos:Concept ;
+    skos:definition "The accompanying national map projection to GDA94, a transverse Mercator projection that conforms to zone 56 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "28356" ;
+    skos:altLabel "Map Grid of Australia 1994 zone 56"@en ;
+    skos:prefLabel "MGA94 z56"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:amg1984-z54 a skos:Concept ;
+    skos:definition "The accompanying national map projection to AGD84, a transverse Mercator projection that conforms to zone 54 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "20354" ;
+    skos:altLabel "Australian Map Grid 1984 zone 54"@en ;
+    skos:prefLabel "AMG84 z54"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:amg1984-z55 a skos:Concept ;
+    skos:definition "The accompanying national map projection to AGD84, a transverse Mercator projection that conforms to zone 55 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "20355" ;
+    skos:altLabel "Australian Map Grid 1984 zone 55"@en ;
+    skos:prefLabel "AMG84 z55"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:amg1984-z56 a skos:Concept ;
+    skos:definition "The accompanying national map projection to AGD84, a transverse Mercator projection that conforms to zone 56 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "20356" ;
+    skos:altLabel "Australian Map Grid 1984 zone 56"@en ;
+    skos:prefLabel "AMG84 z56"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:amg1966-z54 a skos:Concept ;
+    skos:definition "The accompanying national map projection to AGD66, a transverse Mercator projection that conforms to zone 54 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "20254" ;
+    skos:altLabel "Australian Map Grid 1966 zone 54"@en ;
+    skos:prefLabel "AMG66 z54"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:amg1966-z55 a skos:Concept ;
+    skos:definition "The accompanying national map projection to AGD66, a transverse Mercator projection that conforms to zone 55 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "20255" ;
+    skos:altLabel "Australian Map Grid 1966 zone 55"@en ;
+    skos:prefLabel "AMG66 z55"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .
+
+qldcrs:amg1966-z56 a skos:Concept ;
+    skos:definition "The accompanying national map projection to AGD66, a transverse Mercator projection that conforms to zone 56 of the internationally accepted Universal Transverse Mercator Grid system."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:inScheme <http://linked.data.gov.au/def/queensland-crs> ;
+    skos:notation "20256" ;
+    skos:altLabel "Australian Map Grid 1966 zone 56"@en ;
+    skos:prefLabel "AMG66 z56"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/queensland-crs> .

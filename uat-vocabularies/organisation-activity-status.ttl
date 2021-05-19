@@ -1,0 +1,60 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oas: <http://linked.data.gov.au/def/organisation-activity-status/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/organisation-activity-status> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:created "2020-03-25"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-08-21"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:provenance "Derived from Australian Standard AS4590.1:2017 and ASIC." ;
+    skos:definition "Descriptions of the business activity of an organisation at a point in time."@en ;
+    skos:prefLabel "Organisation Activity Status"@en ;
+    skos:hasTopConcept oas:strike-off-action-in-progress,
+        oas:suspended-trading,
+        oas:trading,
+        oas:under-external-administration-and-or-controller-appointed .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
+oas:strike-off-action-in-progress a skos:Concept ;
+    skos:definition "The organisation is being removed from the ASIC organisational register."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:notation "SOFF" ;
+    skos:prefLabel "Strike off action in progress"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-activity-status> .
+
+oas:suspended-trading a skos:Concept ;
+    skos:definition "The organisation has suspended trading or has been suspended from trading on an exchange."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:prefLabel "Suspended Trading"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-activity-status> .
+
+oas:trading a skos:Concept ;
+    skos:definition "The organisation is trading and carrying out business activities."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:prefLabel "Trading"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-activity-status> .
+
+oas:under-external-administration-and-or-controller-appointed a skos:Concept ;
+    skos:altLabel "Controller Appointed",
+        "Under External Administration" ;
+    skos:definition "The organisation is being administered or controlled by a person or persons independent of that organisation."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/organisation-activity-status> ;
+    skos:notation "EXAD" ;
+    skos:prefLabel "Under external administration and/or controller appointed"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/organisation-activity-status> .

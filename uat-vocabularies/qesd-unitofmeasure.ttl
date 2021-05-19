@@ -1,0 +1,493 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qesduom: <http://linked.data.gov.au/def/qesd-uom/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qkdv: <http://qudt.org/vocab/dimensionvector/> .
+@prefix sou: <http://qudt.org/vocab/sou/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+
+<http://linked.data.gov.au/def/qesd-uom> 
+    a owl:Ontology , skos:ConceptScheme ;
+    dcterms:created "2021-04-15"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/des> ;
+    dcterms:modified "2021-04-27"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:provenance "Derived from QUDT (http://qudt.org/vocab/unit)" ; 
+    skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to Queensland Environmental Science Data (QESD)."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+    skos:prefLabel "Queensland Environmental Science Data Profile of QUDT Units"@en ;
+    skos:editorialNote "The units from QUDT are a partial copy from the list of items provided from the QUDT public GitHub repositories (http://github.com/qudt/qudt-public-repo). Any units created specificly for use in this vocabulary are to be explicitly marked with a source of this scheme. Additions to each term are to include them as an skos:Concept and skos:definition and include them explicitly in this ConceptScheme."@en ;
+    skos:hasTopConcept
+        unit:UNITLESS ,
+        unit:NUM ,
+        unit:M ,
+        unit:MilliM ,
+        unit:CentiM ,
+        unit:KiloM ,
+        unit:MicroM ,
+        unit:CentiM2 ,
+        unit:CentiM3 ,
+        unit:GM ,
+        unit:KiloGM ,
+        unit:TONNE ,
+        unit:SEC ,
+        unit:HR ,
+        unit:MOL ,
+        unit:DEG_C ,
+        unit:PERCENT ,
+        unit:PERCENT_RH ,
+        unit:M3-PER-SEC ,
+        unit:M3-PER-HR ,
+        unit:MilliM-PER-DAY ,
+        unit:MicroGM-PER-L ,
+        unit:MicroS ,
+        unit:MicroS-PER-CentiM ,
+        unit:MilliGM-PER-L ,
+        unit:PH ,
+        unit:CentiMOL-PER-KiloGM ,
+        unit:NTU ,
+        unit:MilliV ,
+        unit:L ,
+        unit:HA ,
+        unit:M2 ,
+        unit:MIN ,
+        unit:YR ,
+        unit:M3 
+;
+.
+
+unit:NUM
+  a qudt:CountingUnit , qudt:Unit , skos:Concept ;
+  skos:definition "Number is a unit for 'Dimensionless' expressed as #." ;
+  qudt:hasQuantityKind quantitykind:Dimensionless ;
+  qudt:hasQuantityKind quantitykind:DimensionlessRatio ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Number"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:PH
+  a qudt:Unit , skos:Concept ;
+  skos:definition "the negative decadic logarithmus of the concentration of free protons (or hydronium ions) expressed in 1 mol/l."@en ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Acidity"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:MilliGM-PER-L
+  a qudt:Unit , skos:Concept ;
+  skos:definition "0.000001-fold of the SI base unit kilogram divided by the unit litre" ;
+  qudt:hasQuantityKind quantitykind:MassDensity ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Milligram Per Litre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:MicroS
+  a qudt:Unit , skos:Concept ;
+  skos:definition "0.000001-fold of the SI derived unit siemens" ;
+  qudt:hasQuantityKind quantitykind:ElectricConductivity ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Microsiemens"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:MicroS-PER-CentiM
+  a qudt:Unit , skos:Concept ;
+  skos:definition "0.000001-fold of the SI derived unit Siemens divided by the 0.01-fold of the SI base unit metre" ;
+  qudt:hasQuantityKind quantitykind:Conductivity ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Microsiemens Per Centimetre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:MicroM
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "Micrometer is a unit for  'Length' expressed as (microm).";
+  qudt:hasQuantityKind quantitykind:Length ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Micrometre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:MicroGM-PER-L
+  a qudt:Unit , skos:Concept ;
+  skos:definition "0.000000001-fold of the SI base unit kilogram divided by the unit litre" ;
+  qudt:hasQuantityKind quantitykind:MassDensity ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Microgram Per Litre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:DEG_C
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely 273.15C." ;
+  qudt:hasQuantityKind quantitykind:Temperature ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Degree Celsius"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:M3-PER-SEC
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "A cubic metre per second m^3/s, cumecs or cubic meter per second in American English) is a derived SI unit of flow rate equal to that of a stere or cube with sides of one metre in length exchanged or moving each second. It is popularly used for water flow, especially in rivers and streams, and fractions for HVAC values measuring air flow." ;
+  qudt:hasQuantityKind quantitykind:VolumeFlowRate ;
+  qudt:hasQuantityKind quantitykind:VolumePerUnitTime ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  rdfs:label "Cubic Meter per Second"@en-us ;
+  skos:prefLabel "Cubic Metre per Second"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:TONNE
+  a qudt:Unit , skos:Concept ;
+  skos:definition "1,000-fold of the SI base unit kilogram" ;
+  qudt:hasQuantityKind quantitykind:Mass ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Tonne"@en ;
+  owl:sameAs unit:TON_Metric ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:M
+  a qudt:Unit , skos:Concept ;
+  qudt:hasQuantityKind quantitykind:Length ;
+  skos:definition "The metric and SI base unit of distance.   The meter is equal to approximately 1.093 613 3 yards, 3.280 840 feet, or 39.370 079 inches." ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Metre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:CentiM
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units." ;
+  qudt:hasQuantityKind quantitykind:Length ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Centimetre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:CentiM2
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "A unit of area equal to that of a square, of sides 1cm" ;
+  qudt:hasQuantityKind quantitykind:Area ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Square Centimetre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:CentiM3
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "The CGS unit of volume, equal to 10-6 cubic meter, 1 milliliter, or about 0.061 023 7 cubic inch" ;
+  qudt:hasQuantityKind quantitykind:Volume ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "cubic centimetre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:GM
+  a qudt:Unit , skos:Concept ;
+  skos:definition "A unit of mass in the metric system. The name comes from the Greek gramma, a small weight identified in later Roman and Byzantine times with the Latin scripulum or scruple (the English scruple is equal to about 1.3 grams). The gram was originally defined to be the mass of one cubic centimeter of pure water, but to provide precise standards it was necessary to construct physical objects of specified mass. One gram is now defined to be 1/1000 of the mass of the standard kilogram, a platinum-iridium bar carefully guarded by the International Bureau of Weights and Measures in Paris for more than a century. (The kilogram, rather than the gram, is considered the base unit of mass in the SI.) The gram is a small mass, equal to about 15.432 grains or 0.035 273 966 ounce. " ;
+  qudt:hasQuantityKind quantitykind:Mass ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Gram"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:HR
+  a qudt:Unit , skos:Concept ;
+  skos:definition "The hour (common symbol: h or hr) is a unit of measurement of time. In modern usage, an hour comprises 60 minutes, or 3,600 seconds. It is approximately 1/24 of a mean solar day. An hour in the Universal Coordinated Time (UTC) time standard can include a negative or positive leap second, and may therefore have a duration of 3,599 or 3,601 seconds for adjustment purposes. Although it is not a standard defined by the International System of Units, the hour is a unit accepted for use with SI, represented by the symbol h." ;
+  qudt:hasQuantityKind quantitykind:Time ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Hour"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:HectoPA
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "Hectopascal is a unit of pressure. 1 Pa is approximately the pressure exerted by a 10-g mass resting on a 1-cm2 area. 1013 hPa = 1 atm. There are 100 pascals in 1 hectopascal." ;
+  qudt:hasQuantityKind quantitykind:ForcePerArea ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Hectopascal"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:KiloGM
+  a qudt:Unit , skos:Concept ;
+  qudt:hasQuantityKind quantitykind:Mass ;
+  skos:definition "The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water. The avoirdupois (or international) pound, used in both the Imperial system and U.S. customary units, is defined as exactly 0.45359237 kg, making one kilogram approximately equal to 2.2046 avoirdupois pounds." ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Kilogram"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:KiloM
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "A common metric unit of length or distance. One kilometer equals exactly 1000 meters, about 0.621 371 19 mile, 1093.6133 yards, or 3280.8399 feet. Oddly, higher multiples of the meter are rarely used; even the distances to the farthest galaxies are usually measured in kilometers. " ;
+  qudt:hasQuantityKind quantitykind:Length ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Kilometre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:M3-PER-HR
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "Cubic Meter Per Hour (m3/h) is a unit in the category of Volume flow rate. It is also known as cubic meters per hour, cubic metre per hour, cubic metres per hour, cubic meter/hour, cubic metre/hour, cubic meter/hr, cubic metre/hr, flowrate. Cubic Meter Per Hour (m3/h) has a dimension of L3T-1 where L is length, and T is time. It can be converted to the corresponding standard SI unit m3/s by multiplying its value by a factor of 0.00027777777." ;
+  qudt:hasQuantityKind quantitykind:VolumeFlowRate ;
+  qudt:hasQuantityKind quantitykind:VolumePerUnitTime ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Cubic Metre per Hour"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:MOL
+  a qudt:Unit , skos:Concept ;
+  skos:definition "The mole is a unit of measurement used in chemistry to express amounts of a chemical substance. The official definition, adopted as part of the SI system in 1971, is that one mole of a substance contains just as many elementary entities (atoms, molecules, ions, or other kinds of particles) as there are atoms in 12 grams of carbon-12 (carbon-12 is the most common atomic form of carbon, consisting of atoms having 6 protons and 6 neutrons).  This corresponds to a value of 6.02214179 times 10(23) elementary entities of the substance. It is one of the base units in the International System of Units, and has the unit symbol (mol). A Mole is the SI base unit of the amount of a substance (as distinct from its mass or weight). Moles measure the actual number of atoms or molecules in an object. An earlier name is gram molecular weight, because one mole of a chemical compound is the same number of grams as the molecular weight of a molecule of that compound measured in atomic mass units." ;
+  qudt:hasQuantityKind quantitykind:AmountOfSubstance ;
+  qudt:hasQuantityKind quantitykind:ExtentOfReaction ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Mole"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:SEC
+  a qudt:Unit , skos:Concept ;
+  skos:definition "The Second (symbol: s) is the base unit of time in the International System of Units (SI) and is also a unit of time in other systems of measurement." ;
+  qudt:hasQuantityKind quantitykind:Period ;
+  qudt:hasQuantityKind quantitykind:Time ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Second"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:UNITLESS
+  a qudt:CountingUnit , qudt:DimensionlessUnit , qudt:Unit , skos:Concept ;
+  skos:definition "An explicit unit to say something has no units." ;
+  qudt:hasQuantityKind quantitykind:Absorptance ;
+  qudt:hasQuantityKind quantitykind:ActivityCoefficient ;
+  qudt:hasQuantityKind quantitykind:AmountOfSubstanceFractionOfB ;
+  qudt:hasQuantityKind quantitykind:Dimensionless ;
+  qudt:hasQuantityKind quantitykind:DimensionlessRatio ;
+  qudt:hasQuantityKind quantitykind:MassFraction ;
+  qudt:hasQuantityKind quantitykind:MassFractionOfDryMatter ;
+  qudt:hasQuantityKind quantitykind:MultiplicationFactor ;
+  qudt:hasQuantityKind quantitykind:RelativeHumidity ;
+  qudt:hasQuantityKind quantitykind:RelativeMassConcentrationOfVapour ;
+  qudt:hasQuantityKind quantitykind:RelativeMassDensity ;
+  qudt:hasQuantityKind quantitykind:RelativePartialPressure ;
+  qudt:hasQuantityKind quantitykind:StatisticalWeight ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Unitless"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:PERCENT
+  a qudt:Unit , skos:Concept ;
+  skos:definition "Percent is a unit for  'Dimensionless Ratio' expressed as %." ;
+  qudt:hasQuantityKind quantitykind:DimensionlessRatio ;
+  qudt:hasQuantityKind quantitykind:LengthPercentage ;
+  qudt:hasQuantityKind quantitykind:PressurePercentage ;
+  qudt:hasQuantityKind quantitykind:ResistancePercentage ;
+  qudt:hasQuantityKind quantitykind:TimePercentage ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Percent"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:PERCENT_RH
+  a qudt:Unit , skos:Concept ;
+  qudt:hasQuantityKind quantitykind:PressureRatio ;
+  skos:definition "Percent relative humidity is the ratio of the partial pressure of water vapor to the equilibrium vapor pressure of water at a given temperature, expressed as a percentage." ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Percent Relative Humidity"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:CentiMOL-PER-KiloGM
+  a qudt:Unit , skos:Concept ;
+  qudt:hasQuantityKind quantitykind:AmountOfSubstancePerUnitMass ;
+  qudt:hasQuantityKind quantitykind:IonicStrength ;
+  qudt:hasQuantityKind quantitykind:MolalityOfSolute ;
+  skos:definition "1/100 of SI unit of amount of substance per kilogram" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Centimole per kilogram"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:NTU
+  a qudt:Unit , skos:Concept;
+  skos:definition "Nephelometry Turbidity Unit is a C.G.S System unit for  'Turbidity' expressed as NTU" ;
+  qudt:hasQuantityKind quantitykind:Turbidity ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Nephelometry Turbidity Unit"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:MilliV
+  a qudt:Unit , skos:Concept ;
+  qudt:hasQuantityKind quantitykind:Voltage ;
+  skos:definition "0,001-fold of the SI derived unit volt" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Millivolt"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:KiloGM
+  a qudt:Unit , skos:Concept ;
+  qudt:hasQuantityKind quantitykind:Mass ;
+  skos:definition "The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water. The avoirdupois (or international) pound, used in both the Imperial system and U.S. customary units, is defined as exactly 0.45359237 kg, making one kilogram approximately equal to 2.2046 avoirdupois pounds." ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Kilogram"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:L
+  a qudt:Unit , skos:Concept ;
+  skos:definition "The litre, SI symbol l or L is a non-SI metric system unit of volume equal to 1 cubic decimetre (dm^3), 1,000 cubic centimetres (cm^3) or 1/1000 cubic metre. If the lower case L is used as the symbol, it is sometimes rendered as a cursive l to help distinguish it from the capital I, although this usage has no official approval by any international bureau." ;
+  qudt:hasQuantityKind quantitykind:LiquidVolume ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Litre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:MilliM
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactly 5/127 (approximately 0.039370) of an inch." ;
+  qudt:hasQuantityKind quantitykind:Length ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Millimetre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:MilliM-PER-DAY
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  qudt:hasQuantityKind quantitykind:Velocity ;
+  skos:definition "A measure of change in depth over time for a specific area, typically used to express precipitation intensity or evaporation (the amount of liquid water evaporated per unit of time from the area)" ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "millimetres per day"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:HA
+  a qudt:Unit , skos:Concept ;
+  skos:definition "The customary metric unit of land area, equal to 100 ares. One hectare is a square hectometer, that is, the area of a square 100 meters on each side: exactly 10 000 square meters or approximately 107 639.1 square feet, 11 959.9 square yards, or 2.471 054 acres.";
+  qudt:hasQuantityKind quantitykind:Area ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Hectare"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:M2
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "The S I unit of area is the square metre." ;
+  qudt:hasQuantityKind quantitykind:Area ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Square Metre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:MIN
+  a qudt:Unit , skos:Concept ;
+  skos:definition "A minute is a unit of measurement of time. The minute is a unit of time equal to 1/60 (the first sexagesimal fraction of an hour or 60 seconds. In the UTC time scale, a minute on rare occasions has 59 or 61 seconds; see leap second. The minute is not an SI unit; however, it is accepted for use with SI units. The SI symbol for minute or minutes is min (for time measurement) or the prime symbol after a number, e.g. 5' (for angle measurement, even if it is informally used for time)." ;
+  qudt:hasQuantityKind quantitykind:Time ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Minute"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:YR
+  a qudt:Unit , skos:Concept ;
+  skos:definition "A year is any of the various periods equated with one passage of Earth about the Sun, and hence of roughly 365 days. The familiar calendar has a mixture of 365- and 366-day years, reflecting the fact that the time for one complete passage takes about 365¼ days; the precise value for this figure depends on the manner of defining the year." ;
+  qudt:hasQuantityKind quantitykind:Time ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Year"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.
+
+unit:M3
+  a qudt:DerivedUnit , qudt:Unit , skos:Concept ;
+  skos:definition "The SI unit of volume, equal to 1.0e6 cm3, 1000 liters, 35.3147 ft3, or 1.30795 yd3. A cubic meter holds about 264.17 U.S. liquid gallons or 219.99 British Imperial gallons." ;
+  qudt:hasQuantityKind quantitykind:Volume ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  skos:prefLabel "Cubic Metre"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:inScheme <http://linked.data.gov.au/def/qesd-uom> ;
+  skos:topConceptOf <http://linked.data.gov.au/def/qesd-uom> ;
+.

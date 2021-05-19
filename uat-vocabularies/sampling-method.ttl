@@ -1,0 +1,994 @@
+@prefix smpmh: <http://linked.data.gov.au/def/sampling-method/> .
+@prefix gasmp: <http://pid.geoscience.gov.au/def/voc/ga/samplingmethod/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/sampling-method> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2019-06-03"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-06-15"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    skos:definition "The method of sample collection."@en ;
+    skos:hasTopConcept gasmp:airfall_dust_collector , 
+        gasmp:borehole_fluid_sampling , 
+        gasmp:borehole_logging_tool , 
+        gasmp:bottle_incubation , 
+        gasmp:camera , 
+        gasmp:chamber_incubation , 
+        gasmp:core_incubation_dark , 
+        gasmp:core_incubation_light , 
+        gasmp:current_meter , 
+        gasmp:drilling , 
+        gasmp:field_mapping_observation , 
+        gasmp:filtered_dust_collector , 
+        gasmp:filtration , 
+        gasmp:grainsize_separation , 
+        gasmp:marine_survey_observation , 
+        gasmp:marine_survey_sampling , 
+        gasmp:sediment_trap , 
+        gasmp:sonde , 
+        gasmp:still_photography , 
+        gasmp:surface_material_sampling , 
+        gasmp:undergound_mine_sampling , 
+        gasmp:underwater_camera , 
+        gasmp:unknown , 
+        gasmp:video_photography , 
+        gasmp:water_sampling ;
+    skos:prefLabel "Sampling Method"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
+smpmh:unconsolidated_sediment_sampling a skos:Concept ;
+	dcterms:created "2020-06-03"^^xsd:date ;
+	dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Collection of unconsolidated samples of sediment, regolith or soil using shovels, sieves, buckets or PVC pipes. "@en ;
+	skos:prefLabel "Unconsolidated sediment sampling"@en ;
+	skos:broader gasmp:surface_material_sampling .
+
+gasmp:airfall_dust_collector a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Sample of fine-grained solid material that is passively collected by airfall from the atmosphere."@en ;
+	skos:prefLabel "airfall dust collector"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:borehole_fluid_sampling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Sampling of fluids (oil, gas, or water) from a borehole by an unspecified method."@en ;
+	skos:prefLabel "borehole fluid sampling"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:borehole_logging_tool a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Observation of measurement of physical properties down a borehole by an instrument in a continuous linear format.  (e.g. a gamma log)"@en ;
+	skos:prefLabel "borehole logging tool"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:bottle_incubation a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method to derive the oxygen consumption rate/respiration rates of organic matter conducted in a bottle or vial  under controlled light and temperature conditions."@en ;
+	skos:prefLabel "bottle incubation"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:camera a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "The process of capturing a still image or moving scene of a feature by a video or still photographic camera"@en ;
+	skos:prefLabel "camera"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:chamber_incubation a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method that isolates sediment and overlying water in a benthic chamber. Water samples are collected from the benthic chamber during the incubation."@en ;
+	skos:prefLabel "chamber incubation"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:core_incubation_dark a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method whereby a sediment core is collected along with overlying water. The sediment and water are incubated under no light and controlled temperature conditions."@en ;
+	skos:prefLabel "core incubation dark"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:core_incubation_light a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method whereby a sediment core is collected along with overlying water. The sediment and water are incubated under controlled light and temperature conditions."@en ;
+	skos:prefLabel "core incubation light"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:current_meter a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A mooring deployed on the seabed for a finite time during a marine survey to measure sea-levels and current velocities near to the seafloor. Moorings may contain a suite of instruments measuring other parameters."@en ;
+	skos:prefLabel "current meter"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:drilling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Sampling by a hole drilled into the Earth by any method"@en ;
+	skos:prefLabel "drilling"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:field_mapping_observation a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A mapping survey undertaken in a land environment. May include observations and/or sampling."@en ;
+	skos:prefLabel "field mapping survey"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:filtered_dust_collector a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Sample of fine-grained solid material that is actively collected from the atmosphere by pumping and filtration."@en ;
+	skos:prefLabel "filtered dust collector"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:filtration a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Separation of undissolved sediment and biological particles collected from a water column by filtration. For total dissolved solids measurements the sample is filtered through a glass fibre filter under controlled conditions.  The type of filter is dependent on the method used and the purpose of the determination."@en ;
+	skos:prefLabel "filtration"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:grainsize_separation a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Separation of various size fractions of mineral or rock particles from the original specimen. For example, by using a seive."@en ;
+	skos:prefLabel "grainsize separation"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> ;
+	skos:altLabel "seive"@en .
+
+gasmp:marine_survey_observation a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A mapping survey undertaken in a marine environment. May include observations and/or sampling."@en ;
+	skos:prefLabel "marine survey"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:marine_survey_sampling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Collection of materials from a marine or coastal survey by any method."@en ;
+	skos:prefLabel "marine survey sampling"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:sediment_trap a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Sediment traps are containers placed in the water column to collect particles falling toward the sea floor. The traps collect tiny sediment or larger accumulations called marine snow - made up of organic matter, dead sea creatures, tiny shells, dust and minerals."@en ;
+	skos:prefLabel "sediment trap"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:sonde a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A sonde (French for probe) is a water quality monitoring instrument, that may be stationary or may move up and down a water column, measuring, but not limited to, the following water attributes; temperature, conductivity, salinity, dissolved oxygen, pH, turbidity, light, flourescence and depth. This includes CTDs, light meters or any other probes. They may be lowered through the water column by hand, or mechanically (e.g. by a winch), and measurements can be taken continuously or at discrete depth intervals. The probes may be attached to a frame (e.g. a CTD frame) with other instruments (e.g. niskin bottles, cameras), or they may be stand-alone probes attached to a meter by a cable."@en ;
+	skos:prefLabel "sonde"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> ;
+	skos:altLabel "probe"@en .
+
+gasmp:still_photography a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A still image captured by a camera. Platform independent, i.e. image may be captured via a handheld camera, drone, camera trap, fixed camera."@en ;
+	skos:prefLabel "still photography"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:surface_material_sampling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Collection of earth materials at the ground surface on land."@en ;
+	skos:prefLabel "surface material sampling"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:undergound_mine_sampling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Collection of material from a rock outcrop exposed beneath the ground surface (eg, a mine), typically using a hammer."@en ;
+	skos:prefLabel "undergound mine sampling"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:underwater_camera a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "The process of capturing a still image or moving scene of an underwater feature by a video or still photographic camera."@en ;
+	skos:prefLabel "underwater camera"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:unknown a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	skos:definition "The sampling method is unknown."@en ;
+	skos:prefLabel "unknown"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:video_photography a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Moving images captured by a video camera, either digital or film. Platform independent, i.e. image may be captured via a handheld camera, drone, camera trap, fixed camera."@en ;
+	skos:prefLabel "video photography"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:water_sampling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Any method used to sample water."@en ;
+	skos:prefLabel "water sampling"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:airlift a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Compressed air is used to extract groundwater"@en ;
+	skos:prefLabel "airlift"@en ;
+	skos:broader gasmp:borehole_fluid_sampling , gasmp:water_sampling .
+
+gasmp:artesian_flow a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Groundwater sample obtained from flowing artesian bore"@en ;
+	skos:prefLabel "artesian flow"@en ;
+	skos:broader gasmp:borehole_fluid_sampling , gasmp:water_sampling .
+
+gasmp:auger a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Specimens collected by hand or mechanical auger which enable samples to be taken at intervals down profile. For example regolith, soil or sediment."@en ;
+	skos:prefLabel "auger"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:bailer a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Bailer is a hollow tube used to retrieve groundwater samples from monitoring wells. A bailer is tied to a piece of rope or wire and lowered into the water column to collect a sample."@en ;
+	skos:prefLabel "bailer"@en ;
+	skos:broader gasmp:borehole_fluid_sampling , gasmp:water_sampling  .
+
+gasmp:in_situ_grab_sampler a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A point souce bailer that has a check valve at each end of the bailer allowing sample collection from a discrete depth"@en ;
+	skos:prefLabel "in situ grab sampler"@en ;
+	skos:broader gasmp:bailer .
+
+gasmp:baited_remote_underwater_still_photograph a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A photograph taken using a baited remote underwater camera."@en ;
+	skos:prefLabel "baited remote underwater still photograph"@en ;
+	skos:broader gasmp:underwater_still_photograph .
+
+gasmp:underwater_still_photograph a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A video/still camera used under water to take picture images /observations of the sea floor (incl. sediment, rocks and biota). Cameras can be vertically dropped from the ship, towed, hand-held by divers, or mounted on remotely operated vehicles (ROVs)."@en ;
+	skos:prefLabel "underwater still photograph"@en ;
+	skos:broader gasmp:still_photography , gasmp:underwater_camera .
+
+gasmp:baited_remote_underwater_video a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A video taken using a baited remote underwater video camera."@en ;
+	skos:prefLabel "baited remote underwater video"@en ;
+	skos:broader gasmp:underwater_video ;
+	skos:altLabel "BRUV"@en .
+
+gasmp:underwater_video a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A video taken underwater."@en ;
+	skos:prefLabel "underwater video"@en ;
+	skos:broader gasmp:underwater_camera , gasmp:video_photography .
+
+gasmp:benthic_dredge a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Seabed sampling taken over a small area seaward of the continental shelf. Sample of the upper few cm of rocky sea floor particularly for biota."@en ;
+	skos:prefLabel "dredge benthic"@en ;
+	skos:broader gasmp:dredge .
+
+gasmp:dredge a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Sampling of either benthic or pelagic material using a dredge method."@en ;
+	skos:prefLabel "dredge"@en ;
+	skos:broader gasmp:marine_survey_sampling .
+
+gasmp:borehole_dst_test a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A sample is collected during drilling by a test using a hydrostatic head to measure the formation pressures and to bring the formation fluids to the surface. The test can provide information for determination of potential petroleum producing formations and their exact depth."@en ;
+	skos:prefLabel "borehole DST test"@en ;
+	skos:broader gasmp:borehole_fluid_sampling ;
+	skos:altLabel "drill stem test"@en .
+
+gasmp:borehole_prod_test a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A borehole sampling test similar to DST test, but on a larger scale and under the production conditions after the well completion is conducted."@en ;
+	skos:prefLabel "borehole PROD test"@en ;
+	skos:broader gasmp:borehole_fluid_sampling ;
+	skos:altLabel "well production test"@en .
+
+gasmp:borehole_wft_test a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A sample is taken from a borehole with a wireline formation tester by inserting a probe into a well wall to withdraw a small amount of formation fluid and to measure the formation pore pressure. This measurement can provide formation pressures along the well hole, thereby giving a measure of pressure with depth or along a horizontal borehole."@en ;
+	skos:prefLabel "borehole WFT test"@en ;
+	skos:broader gasmp:borehole_fluid_sampling ;
+	skos:altLabel "wireline formation test"@en .
+
+gasmp:electric_submersible_pump a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Water is collected by pumping using an electric submersible pump"@en ;
+	skos:prefLabel "electric submersible pump"@en ;
+	skos:broader gasmp:water_pump .
+
+gasmp:helical_coil_pump a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Water is collected by pumping using a helical coil pump"@en ;
+	skos:prefLabel "helical coil pump"@en ;
+	skos:broader gasmp:water_pump .
+
+gasmp:jet_pump a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Water is collected by pumping using a jet pump"@en ;
+	skos:prefLabel "jet pump"@en ;
+	skos:broader gasmp:water_pump .
+
+gasmp:liquid-gas_separation a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Separation of natural gas from a liquid phase at a surface separator."@en ;
+	skos:prefLabel "liquid-gas separation"@en ;
+	skos:broader gasmp:borehole_fluid_sampling .
+
+gasmp:low_flow_pump a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Groundwater sample collected while flow is low"@en ;
+	skos:prefLabel "low flow pump"@en ;
+	skos:broader gasmp:water_pump .
+
+gasmp:pump_jack a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Water is collected by pumping using a pump jack"@en ;
+	skos:prefLabel "pump jack"@en ;
+	skos:broader gasmp:water_pump .
+
+gasmp:water_pump a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Water is collected by pumping"@en ;
+	skos:prefLabel "water pump"@en ;
+	skos:broader gasmp:borehole_fluid_sampling , gasmp:water_sampling .
+
+gasmp:windmill a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Water is collected by pumping from a water bore using a windmill"@en ;
+	skos:prefLabel "windmill"@en ;
+	skos:broader gasmp:water_pump .
+
+gasmp:bottle_incubation_dark a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method to derive the oxygen consumption rate/respiration rates of organic matter conducted in a bottle or vial  under controlled light and temperature conditions."@en ;
+	skos:prefLabel "bottle incubation dark"@en ;
+	skos:broader gasmp:bottle_incubation .
+
+gasmp:bottle_incubation_light a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method to derive the oxygen consumption rate/respiration rates of organic matter conducted in a bottle or vial  under controlled light and temperature conditions."@en ;
+	skos:prefLabel "bottle incubation light"@en ;
+	skos:broader gasmp:bottle_incubation .
+
+gasmp:cable_tool_drilling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "National Groundwater Information System (NGIS)"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A percussion drilling method that uses a heavy drilling tool that is raised and lowered with enough force to pulverise the rock, with the debris removed by a bailer."@en ;
+	skos:prefLabel "cable tool drilling"@en ;
+	skos:broader gasmp:percussion_drilling .
+
+gasmp:percussion_drilling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Rock or sediment chips or fragments derived from a percussion (hammer) method."@en ;
+	skos:prefLabel "percussion drilling"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:chain_bag_dredge a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Sampling of large rocks from the sea floor using a chain bag"@en ;
+	skos:prefLabel "dredge chain bag"@en ;
+	skos:broader gasmp:dredge .
+
+gasmp:chamber_incubation_dark a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A in situ method that isolates sediment and overlying water in a dark benthic chamber. Incubation water samples are collected from the benthic chamber during the incubation. The dark chamber restricts light penetration and therefore stops the process of photosynthesis. This enables benthic respiration to be measured."@en ;
+	skos:prefLabel "chamber incubation dark"@en ;
+	skos:broader gasmp:chamber_incubation .
+
+gasmp:chamber_incubation_light a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A in situ method that isolates sediment and overlying water in a light benthic chamber. Incubation water samples are collected from the benthic chamber during the incubation. The  transparent walls of the chamber allow light penetration and enables benthic respiration and photosynthesis to be measured."@en ;
+	skos:prefLabel "chamber incubation light"@en ;
+	skos:broader gasmp:chamber_incubation .
+
+gasmp:core_air a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Rock or sediment core derived from a dry, air-cooled diamond drilling method."@en ;
+	skos:prefLabel "core air"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_box a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method that obtains a large volume or large surface area core with shallow penetration and minimum disturbance. Commonly uses a double spade system."@en ;
+	skos:prefLabel "core box"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_catcher a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method by which a specimen of sediment is collected from the end of the core in the core catcher. The core catcher has curved finger-like projections that extend down to the lowest part of the core liner. The core catcher helps keep the sediment in the core liner when the core is being removed from the surface."@en ;
+	skos:prefLabel "core catcher"@en ;
+	skos:broader gasmp:core_incubation_light .
+
+gasmp:core_conventional a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Core drilling using diamond or tungsten carbide bit using a core barrel with fibreglass inner sleeves. Used in the oil industry."@en ;
+	skos:prefLabel "core conventional"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_cutter a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method by which a specimen of sediment is collected from the lowest part of a coring assembly at the core cutter. The core cutter has sharp edges which cut and shape the sediment entering the core liner as the corer goes into the sediment."@en ;
+	skos:prefLabel "core cutter"@en ;
+	skos:broader gasmp:core_incubation_light .
+
+gasmp:core_diamond a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Rock or sediment core drilling using a liquid-cooled, diamond or tungsten carbide bit."@en ;
+	skos:prefLabel "core diamond"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_drilling_unspecified a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Sampling of a core of earth material by an unspecified drilling method"@en ;
+	skos:prefLabel "core drilling, unspecified"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_geoprobe a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "High quality core extracted by hydraulic power. Used in rough terrain, soft sand, mud, shallow water, or tight, congested areas. Long high quality cores."@en ;
+	skos:prefLabel "core geoprobe"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_gravity a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Used only where short cores are required. Core barrel is gravity forced. Near surface high quality core."@en ;
+	skos:prefLabel "core gravity"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_kasten a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Large volume, reletatively undisturbed sediment core (~3m long) from a Kasten Corer. The corer is constructed of stainless steel and is square in cross-section. A weight of several hundred kilograms on top of the corer pushes it 2-3 metres into the seabed. It is designed for sedimentological and geochemical sampling of fine-grained sediments. This type of corer obtains relatively undisturbed cores and can preserve the sediment/water interface. This type of core is useful for determining sediment accumulation rates."@en ;
+	skos:prefLabel "core Kasten"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_mackereth a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "The Mackereth is a complex coring system utilizing compressed gas to penetrate and recover single-drive moderate (up to 12 m) cores from lakes of diverse depths.  Mackereth cores can be deployed on virutally any small craft and and can be used in water depths up to 80 m."@en ;
+	skos:prefLabel "core Mackereth"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_piston a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Uses a piston to drive the core barrel. High quality long cores."@en ;
+	skos:prefLabel "core piston"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_press a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Pore water is extracted from core material under pressure."@en ;
+	skos:prefLabel "core press"@en ;
+	skos:broader gasmp:water_sampling .
+
+gasmp:core_push a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A pipe that is pushed into the sediment to gain a core that is no longer than 2m long. Can be used in up to 5m of water. Core pipe has a valve on top that is used to create a vacuum  at the top of the core when pulling the core out of the sediment."@en ;
+	skos:prefLabel "core push"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_rov a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A core drilled from a remotely operated vehicle"@en ;
+	skos:prefLabel "core ROV"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_sonic a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Similar to the vibro-core technique, the drill stem and barrel are vibrated vertically at frequencies between 50Hz and 180Hz such that the sampler barrel advances by slicing through the regolith."@en ;
+	skos:prefLabel "core sonic"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_spike a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A core of surficial material taken by driving a spike into the ground."@en ;
+	skos:prefLabel "core spike"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:core_vibro a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "http://www.pvltech.com"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A core tube is attached to a source of mechanical vibration (the power head) and lowered into  sediment. The vibrations provide energy for rearranging the particles within the sediment in such a way that the coretube penetrates under the static weight of the vibracoring apparatus. Samples include stiff and stony clays, soft rock and sands, and saturated sediments which can not be sampled using gravity or piston corers. Also know as VIBRA."@en ;
+	skos:prefLabel "core vibro"@en ;
+	skos:broader gasmp:drilling ;
+	skos:altLabel "vibracore"@en , "vibrocore"@en .
+
+gasmp:diamantina_dredge a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Used as a spot dredge to quickly ascertain sea bed geology. Samples give the seabed character unless it is deep when any mud is washed out during retrieval. In shallow water this dredge will return rock, mud, benthic samples and any thing else that is on the bottom."@en ;
+	skos:prefLabel "dredge diamantina"@en ;
+	skos:broader gasmp:dredge .
+
+gasmp:diver_operated_underwater_still_photograph a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A photograph taken by a diver using an underwater camera."@en ;
+	skos:prefLabel "diver-operated underwater still photograph"@en ;
+	skos:broader gasmp:underwater_still_photograph .
+
+gasmp:diver_operated_underwater_video a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A video taken by a diver using an underwater camera."@en ;
+	skos:prefLabel "diver-operated underwater video"@en ;
+	skos:broader gasmp:underwater_video ;
+	skos:altLabel "DOV"@en .
+
+gasmp:epibenthic_sled a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method designed to collect benthic and benthopelagic faunas from the deep sea. The sled is made from a steel frame consisting of two skids and stabilizing planes to keep it from sinking too deep into the mud."@en ;
+	skos:prefLabel "epibenthic sled"@en ;
+	skos:broader gasmp:dredge ;
+	skos:altLabel "sled benthic"@en .
+
+gasmp:pipe_dredge a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Sampling of small fragments and mud from the sea floor, using a metal pipe linked to the tow cable. Total weight of the dredge is around 25kg."@en ;
+	skos:prefLabel "dredge pipe"@en ;
+	skos:broader gasmp:dredge .
+
+gasmp:reverse_circulation_drilling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "National Groundwater Information System (NGIS)"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A drilling technique similar to rotary drilling except that drilling fluid flow down the annular space between the drilling stem and the wall of the hole forcing cuttings up through the inside of the drill stem ."@en ;
+	skos:prefLabel "reverse circulation drilling"@en ;
+	skos:broader gasmp:drilling ;
+	skos:altLabel "RC"@en .
+
+gasmp:rotary_drilling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "National Groundwater Information System (NGIS)"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A drilling method using a drill stem equipped with a bit that is rotated to cut and grind the rock with a fluid pumped down the stem to force cuttings up through the annular space between the stem and the wall of the hole"@en ;
+	skos:prefLabel "rotary drilling"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:sidewall_core a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A method to extract core or plug from the sidewall of a borehole."@en ;
+	skos:prefLabel "sidewall core"@en ;
+	skos:broader gasmp:drilling .
+
+gasmp:plantobenthic_sampler a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Mounted Assembly for Planktobenthic Sampling (MAPS) - a trilayered net with a seafloor-triggered opening and closing mechanism attached to an epibenthic sled"@en ;
+	skos:prefLabel "plantobenthic sampler"@en ;
+	skos:broader gasmp:epibenthic_sled ;
+	skos:altLabel "Mounted Assembly for Planktobenthic Sampling (MAPS)"@en .
+
+gasmp:grab a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Specimens gathered from the bed of a water body by a mechanical grab primarily for lithogical and petrographical analyses."@en ;
+	skos:prefLabel "grab"@en ;
+	skos:broader gasmp:marine_survey_sampling .
+
+gasmp:grab_eckman a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "The Eckman Bottom Grab sampler is designed for sampling in soft bottomed lakes and rivers composed of muck, mud or fine peat"@en ;
+	skos:prefLabel "grab Eckman"@en ;
+	skos:broader gasmp:grab .
+
+gasmp:grab_rov a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A grad sampling method mounted on a remotely operated vehicle."@en ;
+	skos:prefLabel "grab ROV"@en ;
+	skos:broader gasmp:grab .
+
+gasmp:grab_shipek a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Near surface unconsolidated marine sediment sample taken using the Shipek Method."@en ;
+	skos:prefLabel "grab Shipek"@en ;
+	skos:broader gasmp:grab .
+
+gasmp:grab_smith_mcintyre a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Near surface sediment grab sample. Sample has a surface area of 0.1m2. It is useful for quantitative macrobenthos sampling in either shallow or deep water."@en ;
+	skos:prefLabel "grab Smith Mcintyre"@en ;
+	skos:broader gasmp:grab .
+
+gasmp:grab_van_veen a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Quantitative sample of the sediment. Van Veen grab has long arms for levering the clam shell scoop."@en ;
+	skos:prefLabel "grab Van Veen"@en ;
+	skos:broader gasmp:grab .
+
+gasmp:niskin_bottle a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Surface water/seawater collection. A device for collection of water samples from a specific depth in the water column."@en ;
+	skos:prefLabel "Niskin Bottle"@en ;
+	skos:broader gasmp:water_sampling .
+
+gasmp:outcrop_sampling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Collection of material from a rock outcrop or subcrop at the ground surface, typically using a hammer, or feathers and wedges."@en ;
+	skos:prefLabel "outcrop sampling"@en ;
+	skos:broader gasmp:surface_material_sampling .
+
+gasmp:rab_drilling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "http://www.foragefte.com; http://www.masterdrilling.com"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "RAB, rotary air blast, or Down-the-hole drilling. Rock or sediment chips or fragments are derived from a percussion drilling method where the cuttings are blown up the outside of the rods and collected at surface, using air or a combination of air and foam lift the cuttings."@en ;
+	skos:prefLabel "RAB drilling"@en ;
+	skos:broader gasmp:percussion_drilling ;
+	skos:altLabel "rotary air blast drilling"@en .
+
+gasmp:rotary_hammer_drilling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "National Groundwater Information System (NGIS)"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A percussion drilling method using a cutting tool powered by compressed air that creates a rapid percussion effect coupled with rotary action to drill hard rocks."@en ;
+	skos:prefLabel "rotary hammer drilling"@en ;
+	skos:broader gasmp:percussion_drilling ;
+	skos:altLabel "hammer drilling"@en .
+
+gasmp:pit_or_trench_sampling a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Collection of materials, typically regolith, near the ground surface from a pit, trench, or costean dug by spade or other mechanical means (not drilling)."@en ;
+	skos:prefLabel "pit or trench sampling"@en ;
+	skos:broader gasmp:surface_material_sampling ;
+	skos:altLabel "costean"@en .
+
+gasmp:rain_gauge a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Rainwater is collected using an approved rain gauge/collector method."@en ;
+	skos:prefLabel "rain gauge"@en ;
+	skos:broader gasmp:water_sampling .
+
+gasmp:sidewall_core_bullet a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Percussion cores are taken by firing hollow bullets into the formation. The bullets are attached to the tool by fasteners, and are retrieved, along with the core inside, by pulling up the tool and the fasteners. Percussion coring tools typically hold 20 to 30 bullets, but two or three tools can be combined on one run in the hole."@en ;
+	skos:prefLabel "sidewall core, bullet"@en ;
+	skos:broader gasmp:sidewall_core .
+
+gasmp:sidewall_core_mechanical a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "Mechanical tools use hollow rotary drills to cut and then pull out core plugs. Up to 75 plugs can be recovered on one run. With full recovery, cores from typical percussion tools are 1 in. [2.5 cm] in diameter by 1 3/4 in. [4.4 cm] long, while those from mechanical tools are 0.91 in. [2.3 cm] in diameter by 2 in. [5 cm] long. The latter are also known as rotary sidewall cores."@en ;
+	skos:prefLabel "sidewall core, mechanical"@en ;
+	skos:broader gasmp:sidewall_core .
+
+gasmp:stereo_towed_underwater_still_photograph a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A photograph taken using a towed underwater stereo camera."@en ;
+	skos:prefLabel "stereo towed underwater still photograph"@en ;
+	skos:broader gasmp:underwater_still_photograph .
+
+gasmp:stereo_towed_underwater_video a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A video taken using a towed underwater stereo video camera."@en ;
+	skos:prefLabel "stereo towed underwater video"@en ;
+	skos:broader gasmp:underwater_video ;
+	skos:altLabel "STV"@en .
+
+gasmp:towed_underwater_still_photograph a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A photograph taken using a towed underwater camera."@en ;
+	skos:prefLabel "towed underwater still photograph"@en ;
+	skos:broader gasmp:underwater_still_photograph .
+
+gasmp:towed_underwater_video a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A video taken using a towed underwater video camera."@en ;
+	skos:prefLabel "towed underwater video"@en ;
+	skos:broader gasmp:underwater_video .
+
+gasmp:underwater_still_photograph_auv a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A photograph taken using a camera on an autonomous underwater vehicle."@en ;
+	skos:prefLabel "underwater still photograph AUV"@en ;
+	skos:broader gasmp:underwater_still_photograph .
+
+gasmp:underwater_still_photograph_rov a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A photograph taken using an underwater camera on a remotely operated vehicle."@en ;
+	skos:prefLabel "underwater still photograph ROV"@en ;
+	skos:broader gasmp:underwater_still_photograph .
+
+gasmp:underwater_video_auv a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A video taken using a camera on an autonomous underwater vehicle."@en ;
+	skos:prefLabel "underwater video AUV"@en ;
+	skos:broader gasmp:underwater_video .
+
+gasmp:underwater_video_rov a skos:Concept ;
+	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
+	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
+	dcterms:provenance "Geoscience Australia"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "A video taken using an underwater camera on a remotely operated vehicle."@en ;
+	skos:prefLabel "underwater video ROV"@en ;
+	skos:broader gasmp:underwater_video .

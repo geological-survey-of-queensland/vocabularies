@@ -1,0 +1,47 @@
+@prefix qlic: <http://linked.data.gov.au/def/qld-data-licenses/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/qld-data-licenses> a owl:Ontology,
+        skos:ConceptScheme ;
+        skos:hasTopConcept <http://linked.data.gov.au/def/qld-data-licenses/cc-by-nd-4.0>, 
+         <http://linked.data.gov.au/def/qld-data-licenses/cc-by-4.0>, 
+         <http://linked.data.gov.au/def/qld-data-licenses/cc-by-sa-4.0> ;
+        skos:prefLabel "Queensland Government Software and Data Licenses"@en ;
+        skos:definition "Licenses for use of software, data, documents and other resources within Queensland Government"@en ;
+        dcterms:created "2020-12-02"^^xsd:date ;
+        dcterms:creator <http://linked.data.gov.au/org/des> ;
+        dcterms:modified "2021-03-03"^^xsd:date ;
+        dcterms:publisher <http://linked.data.gov.au/org/des> ;
+        dcterms:provenance "Vocabulary built from original sourced from http://registry.it.csiro.au/_licence." .
+
+<http://linked.data.gov.au/def/licence-document/cc-by-nd-4.0>
+        a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-data-licenses> ;
+        skos:inScheme <http://linked.data.gov.au/def/qld-data-licenses> ;
+        skos:topConceptOf <http://linked.data.gov.au/def/qld-data-licenses> ;
+        skos:exactMatch <http://registry.it.csiro.au/licence/cc-by-nd-4.0> ;
+        skos:prefLabel        "Creative Commons Attribution-NoDerivatives 4.0 International"@en ;
+        skos:definition       """You are free to: Share - copy and redistribute the material in any medium or format for any purpose, even commercially. The licensor cannot revoke these freedoms as long as you follow the licence terms. Under the following terms: Attribution - You must give appropriate credit, provide a link to the licence, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. NoDerivatives - If you remix, transform, or build upon the material, you may not distribute the modified material. No additional restrictions - You may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits Notices - You do not have to comply with the licence for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The licence may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material."""@en .
+       
+<http://linked.data.gov.au/def/licence-document/cc-by-4.0>
+        a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-data-licenses> ;
+        skos:inScheme <http://linked.data.gov.au/def/qld-data-licenses> ;
+        skos:topConceptOf <http://linked.data.gov.au/def/qld-data-licenses> ;
+        skos:exactMatch <http://registry.it.csiro.au/licence/cc-by-4.0> ;
+        skos:prefLabel        "Creative Commons Attribution 4.0 International"@en ;
+        skos:definition       """You are free to: Share - copy and redistribute the material in any medium or format Adapt - remix, transform, and build upon the material for any purpose, even commercially. The licensor cannot revoke these freedoms as long as you follow the licence terms. Under the following terms: Attribution - You must give appropriate credit, provide a link to the licence, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions - You may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits. Notices - You do not have to comply with the licence for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The licence may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material."""@en .
+       
+<http://linked.data.gov.au/def/licence-document/cc-by-sa-4.0>
+        a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-data-licenses> ;
+        skos:inScheme <http://linked.data.gov.au/def/qld-data-licenses> ;
+        skos:topConceptOf <http://linked.data.gov.au/def/qld-data-licenses> ;
+        skos:exactMatch <http://registry.it.csiro.au/licence/cc-by-sa-4.0> ;
+        skos:prefLabel        "Creative Commons ShareAlike 4.0 International"@en ;
+        skos:definition       """You are free to: Share - copy and redistribute the material in any medium or format Adapt - remix, transform, and build upon the material for any purpose, even commercially. The licensor cannot revoke these freedoms as long as you follow the licence terms. Under the following terms: Attribution - You must give appropriate credit, provide a link to the licence, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. ShareAlike - If you remix, transform, or build upon the material, you must distribute your contributions under the same licence as the original. No additional restrictions - You may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits. Notices - You do not have to comply with the licence for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The licence may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material."""@en .
+       
