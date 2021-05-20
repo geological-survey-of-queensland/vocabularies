@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-07-29"^^xsd:date ;
+    dcterms:modified "2021-05-20"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -27,7 +27,7 @@
 <http://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
 .
 
 cdt:undefined a skos:Concept ;
@@ -505,15 +505,15 @@ cdt:onyx a skos:Concept ;
     skos:prefLabel "Onyx"@en .
 
 cdt:carnelian a skos:Concept ;
-    skos:altLabel "jasper"@en,
-        "sard"@en ;
+    skos:altLabel "Carnelian"@en,
+        "Sard"@en ;
     skos:broader cdt:chalcedony ;
     skos:definition "A variety of chalcedony coloured by iron oxide, which is commonly used as a semi-precious gemstone. The colour can vary greatly, ranging from pale orange to an intense almost-black colouration. When Carnelian grades into brown it is known as Sard. Some very dark brown Carnelian can be classified as Jasper. The distinction between these is very fine and relies more on visual appearance than scientific analysis. As a result, it is very possible that one man's Carnelian may be another man's Sard, Agate or Jasper."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/carnelian> ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "JASP" ;
-    skos:prefLabel "Carnelian"@en .
+    skos:prefLabel "Jasper"@en .
 
 cdt:chrysoprase a skos:Concept ;
     skos:altLabel "chrysophrase"@en,
@@ -535,6 +535,40 @@ cdt:opal a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "OP" ;
     skos:prefLabel "Opal"@en .
+
+cdt:black-opal a skos:Concept ;
+    skos:altLabel "Dark Opal"@en ;
+    skos:broader cdt:opal ;
+    skos:definition "Opal that has a dark bodycolor, often black or dark gray. The term is also used for opal that has a dark blue or dark green bodycolor. Source: geology.com"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "BOP" ;
+    skos:prefLabel "Black Opal"@en .
+
+cdt:boulder-opal a skos:Concept ;
+    skos:broader cdt:opal ;
+    skos:definition "A rough or cut opal that displays precious opal within its host rock, or precious opal attached to its host rock. Much opal forms within the voids and fractures of its host rock, and specimens of boulder opal can reveal this aspect of opal's origin. Some boulder opal occurs in thin seams and layers that can be cut into a stone that displays only precious opal in the face-up position. Source: geology.com"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "BLP" ;
+    skos:prefLabel "Boulder Opal"@en .
+
+cdt:matrix-opal a skos:Concept ;
+    skos:broader cdt:opal ;
+    skos:definition "Rough or finished gemstones in which precious opal occurs in intimate mixture with the parent rock. This differs from boulder opal, in which the opal is confined mainly to seams and fractures. Source: geology.com"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "MXO" ;
+    skos:prefLabel "Matrix Opal"@en .
+
+cdt:white-opal a skos:Concept ;
+    skos:altLabel "Light Opal"@en ;
+    skos:broader cdt:opal ;
+    skos:definition "Precious opal with a white, yellow or cream bodycolor. Source: geology.com"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "WOP" ;
+    skos:prefLabel "White Opal"@en .
 
 cdt:sinhalite a skos:Concept ;
     skos:broader cdt:gemstone ;
@@ -907,15 +941,6 @@ cdt:asphalt-sand a skos:Concept ;
     skos:notation "ASSD" ;
     skos:prefLabel "Asphalt Sand"@en .
 
-cdt:frac-sand a skos:Concept ;
-    skos:broader cdt:sand ;
-    skos:definition "Frac sand is a high-purity quartz sand with very durable and very round grains. It is a crush-resistant material used in the hydraulic fracturing process to produce petroleum fluids, such as oil, natural gas and natural gas liquids from rock units that lack adequate pore space for these fluids to flow to a well."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/frac-sand> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
-    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
-    skos:notation "FRAC" ;
-    skos:prefLabel "Frac Sand"@en .
-
 cdt:horticultural-sand a skos:Concept ;
     skos:altLabel "Soil, loam & garden sand"@en,
         "Soil"@en,
@@ -1117,6 +1142,14 @@ cdt:sandstone a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "SST" ;
     skos:prefLabel "Sandstone"@en .
+
+cdt:siltstone a skos:Concept ;
+    skos:broader cdt:dimension-stone ;
+    skos:definition "Siltstone is a clastic sedimentary rock that is composed mostly of silt."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "SLT" ;
+    skos:prefLabel "Siltstone"@en .
 
 cdt:slate a skos:Concept ;
     skos:broader cdt:dimension-stone ;
@@ -1359,6 +1392,39 @@ cdt:thermal-coal a skos:Concept ;
     skos:notation "CNC" ;
     skos:prefLabel "Thermal Coal"@en .
 
+cdt:bituminous-fuel-coal a skos:Concept ;
+    skos:broader cdt:thermal-coal ;
+    skos:definition "A coal used for generation of thermal energy with between 75-90% carbon content dry ash free and between 14-46% volatiles. A 'soft' coal, often containing substantial admixed sulfur. It is of higher quality than lignite coal but of poorer quality than anthracite. The colour ranges from black to dark brown."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "CBTF" ;
+    skos:prefLabel "Bituminous Fuel Coal"@en .
+
+cdt:cannel-coal a skos:Concept ;
+    skos:broader cdt:bituminous-fuel-coal ;
+    skos:definition "A hard, compact kind of bituminous coal."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "CCAN" ;
+    skos:prefLabel "Cannel Coal"@en .
+
+cdt:semi-anthracite-fuel-coal a skos:Concept ;
+    skos:broader cdt:thermal-coal ;
+    skos:definition "A coal used for generation of thermal energy with A coal with properties intermediate between bituminous coal and anthracite."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "CSAF" ;
+    skos:prefLabel "Semi-Anthracite Fuel Coal"@en .
+
+cdt:sub-bituminous-fuel-coal a skos:Concept ;
+    skos:altLabel "sub-bituminous coal"@en ;
+    skos:broader cdt:thermal-coal ;
+    skos:definition "A coal used for generation of thermal energy with A coal with properties intermediate between lignite and bituminous coal."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "CSBF" ;
+    skos:prefLabel "Sub-Bituminous Fuel Coal"@en .
+
 cdt:boghead-coal a skos:Concept ;
     skos:altLabel "torbanite"@en ;
     skos:broader cdt:coal ;
@@ -1369,23 +1435,14 @@ cdt:boghead-coal a skos:Concept ;
     skos:prefLabel "Boghead Coal"@en .
 
 cdt:brown-coal a skos:Concept ;
-    skos:altLabel "lignite"@en,
-        "sub-bituminous coal"@en ;
+    skos:altLabel "lignite"@en ;
     skos:broader cdt:coal ;
-    skos:definition "Lignite, often referred to as sub-bituminous or brown coal, is a soft brown combustible sedimentary rock that is formed from naturally compressed peat. It is considered the lowest rank of coal due to its relatively low heat content. It is mined in Bulgaria, Kosovo, Greece, Germany, Poland, Serbia, Russia, Turkey, the United States, Canada, India, Australia and many other parts of Europe and it is used almost exclusively as a fuel for steam-electric power generation. 25.7% of Germany's electricity comes from lignite power plants, while in Greece lignite provides about 50% of its power needs."@en ;
+    skos:definition "Lignite, often referred to as brown coal, is a soft brown combustible sedimentary rock that is formed from naturally compressed peat. It is considered the lowest rank of coal due to its relatively low heat content. It is mined in Bulgaria, Kosovo, Greece, Germany, Poland, Serbia, Russia, Turkey, the United States, Canada, India, Australia and many other parts of Europe and it is used almost exclusively as a fuel for steam-electric power generation. 25.7% of Germany's electricity comes from lignite power plants, while in Greece lignite provides about 50% of its power needs."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/brown-coal> ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "CWB" ;
     skos:prefLabel "Brown Coal"@en .
-
-cdt:cannel-coal a skos:Concept ;
-    skos:broader cdt:coal ;
-    skos:definition "A hard, compact kind of bituminous coal."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
-    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
-    skos:notation "CCAN" ;
-    skos:prefLabel "Cannel Coal"@en .
 
 cdt:peat a skos:Concept ;
     skos:broader cdt:carbonaceous-material ;
@@ -1551,6 +1608,22 @@ cdt:wax a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "PWAX" ;
     skos:prefLabel "Wax"@en .
+
+cdt:mineral-wool a skos:Concept ;
+    skos:altLabel "Rock Wool"@en,
+        "Mineral Fibre"@en,
+        "Mineral Fiber"@en,
+        "Mineral Cotton"@en,
+        "Man-made Mineral Fibre"@en,
+        "MMMF"@en,
+        "Man-made Vitreous Fibre"@en,
+        "MMVF"@en ;
+    skos:broader cdt:industrial-material ;
+    skos:definition "A fibrous material formed by spinning or drawing molten mineral or rock materials such as slag and ceramics."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "MNWL" ;
+    skos:prefLabel "Mineral Wool"@en .
 
 cdt:industrial-mineral a skos:Concept ;
     skos:hiddenLabel "All minerals other than coal"@en ;
@@ -1954,6 +2027,34 @@ cdt:feldspar a skos:Concept ;
     skos:notation "FS" ;
     skos:prefLabel "Feldspar"@en .
 
+cdt:albite a skos:Concept ;
+    skos:altLabel "Sodium Feldspar"@en ;
+    skos:broader cdt:feldspar ;
+    skos:definition "Albite is a plagioclase feldspar mineral. It is the sodium endmember of the plagioclase solid solution series. It represents a plagioclase with less than 10% anorthite content. The pure albite endmember has the formula NaAlSi3O8."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "ALB" ;
+    skos:prefLabel "Albite"@en .
+
+cdt:anorthite a skos:Concept ;
+    skos:altLabel "Calcium Feldspar"@en ;
+    skos:broader cdt:feldspar ;
+    skos:definition "Anorthite is the calcium endmember of the plagioclase feldspar mineral series. The chemical formula of pure anorthite is CaAl2Si2O8. Anorthite is found in mafic igneous rocks."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "ANT" ;
+    skos:prefLabel "Anorthite"@en .
+
+cdt:orthoclase a skos:Concept ;
+    skos:altLabel "Potassium Feldspar"@en,
+        "K-Feldspar"@en ;
+    skos:broader cdt:feldspar ;
+    skos:definition "Orthoclase is a feldspar mineral with a chemical composition of KAlSi3O8. It is one of the most abundant rock-forming minerals of the continental crust. Orthoclase is most widely known as the pink feldspar found in many granites."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "ORT" ;
+    skos:prefLabel "Orthoclase"@en .
+
 cdt:fluorite a skos:Concept ;
     skos:altLabel "fluorspar"@en,
         "flurospar"@en ;
@@ -1964,17 +2065,6 @@ cdt:fluorite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "FL" ;
     skos:prefLabel "Fluorite"@en .
-
-cdt:foundry-sand a skos:Concept ;
-    skos:altLabel "molding sand"@en ;
-    skos:broader cdt:industrial-mineral ;
-    skos:definition "Sand that when moistened or oiled tends to pack well and hold its shape. It is used in the process of sand casting."@en ;
-    skos:scopeNote "Used in the industrial process of sand-casting, but not used as a building, construction, or landscaping aggregate. Therefore foundry sand is considered an industrial mineral and not a type of sand within the aggregate class."@en ;
-    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/foundry-sand> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
-    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
-    skos:notation "SF" ;
-    skos:prefLabel "Foundry Sand"@en .
 
 cdt:garnet a skos:Concept ;
     skos:broader cdt:industrial-mineral ;
@@ -2162,14 +2252,88 @@ cdt:silica a skos:Concept ;
     skos:notation "SIO" ;
     skos:prefLabel "Silica"@en .
 
-cdt:chert a skos:Concept ;
+cdt:silica-sand a skos:Concept ;
+    skos:altLabel "Industrial Sand"@en,
+        "Quartz Sand"@en,
+        "White Sand"@en ;
     skos:broader cdt:silica ;
-    skos:definition "A dense, hard siliceous-rock with low porosity. Cherts are tough, compact rocks with low porosity that are composed mainly of microcrystalline quartz and varying amounts of impurities (Folk et al 1952; Smith 1960). The quartz occurs as randomly interlocked, microscopic quartz grains (microquartz) or fibrous chalcedony (Folk et al 1952; Smith 1960; Oldershaw 1968; Knauth 1994)."@en ;
+    skos:definition "Silica sand is a sand which has very few impurities, with compositions of 90% silica or greater. Common uses of silica sand include glass making and as a feed stock for industrial processes."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "SIS" ;
+    skos:prefLabel "Silica Sand"@en .
+
+cdt:ceramic-sand a skos:Concept ;
+    skos:broader cdt:silica-sand ;
+    skos:definition "High purity silica sand used in the manufacture of ceramics."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "CMS" ;
+    skos:prefLabel "Ceramic Sand"@en .
+
+cdt:filter-sand a skos:Concept ;
+    skos:broader cdt:silica-sand ;
+    skos:definition "High purity silica sand used in filters."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "FLS" ;
+    skos:prefLabel "Filter Sand"@en .
+
+cdt:foundry-sand a skos:Concept ;
+    skos:altLabel "molding sand"@en ;
+    skos:broader cdt:silica-sand ;
+    skos:definition "Sand that when moistened or oiled tends to pack well and hold its shape. It is used in the process of sand casting."@en ;
+    skos:scopeNote "Used in the industrial process of sand-casting, but not used as a building, construction, or landscaping aggregate. Therefore foundry sand is considered an industrial mineral and not a type of sand within the aggregate class."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/foundry-sand> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "SF" ;
+    skos:prefLabel "Foundry Sand"@en .
+
+cdt:frac-sand a skos:Concept ;
+    skos:broader cdt:silica-sand ;
+    skos:definition "Frac sand is a high-purity quartz sand with very durable and very round grains. It is a crush-resistant material used in the hydraulic fracturing process to produce petroleum fluids, such as oil, natural gas and natural gas liquids from rock units that lack adequate pore space for these fluids to flow to a well."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/frac-sand> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "FRAC" ;
+    skos:prefLabel "Frac Sand"@en .
+
+cdt:glass-sand a skos:Concept ;
+    skos:broader cdt:silica-sand ;
+    skos:definition "High purity silica sand used in glassmaking."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "GLS" ;
+    skos:prefLabel "Glass Sand"@en .
+
+cdt:chert a skos:Concept ;
+    skos:altLabel "Flint"@en,
+        "Grinding Silica"@en,
+        "Silica Pebbles"@en ;
+    skos:broader cdt:silica ;
+    skos:definition "Chert is a sedimentary rock composed of microcrystalline or cryptocrystalline quartz, the mineral form of silicon dioxide (SiO2). It occurs as nodules, concretionary masses, and as layered deposits. Chert breaks with a conchoidal fracture, often producing very sharp edges. source: geology.com"@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/chert> ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "CHRT" ;
     skos:prefLabel "Chert"@en .
+
+cdt:flux-silica a skos:Concept ;
+    skos:broader cdt:silica ;
+    skos:definition "Silica used as a flux."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "FXS" ;
+    skos:prefLabel "Flux Silica"@en .
+
+cdt:refractory-silica a skos:Concept ;
+    skos:broader cdt:silica ;
+    skos:definition "Quartzite that has a low thermal expansion under load and a high chemical purity."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "RFS" ;
+    skos:prefLabel "Refractory Silica"@en .
 
 cdt:sodium-bicarbonate a skos:Concept ;
     skos:altLabel "sodium bicarb"@en,
@@ -2232,6 +2396,14 @@ cdt:thenardite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "TND" ;
     skos:prefLabel "Thenardite"@en .
+
+cdt:titanomagnetite a skos:Concept ;
+    skos:broader cdt:industrial-mineral ;
+    skos:definition "Titanomagnetite is a mineral containing oxides of titanium and iron, with the formula Fe2+(Fe3+,Ti)2O4. It is also known as titaniferous magnetite. It is part of the spinel group of minerals. The Curie temperature for titanomagnetite has been found to have a wide range of 200 to 580°C."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "TTMG" ;
+    skos:prefLabel "Titanomagnetite"@en .
 
 cdt:vermiculite a skos:Concept ;
     skos:broader cdt:industrial-mineral ;
@@ -2550,6 +2722,19 @@ cdt:soda-ash a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "SODA" ;
     skos:prefLabel "Soda Ash"@en .
+
+cdt:sulphuric-acid a skos:Concept ;
+    skos:altLabel "Sulfuric Acid"@en,
+        "Oil of Vitriol"@en,
+        "Hydrogen Sulfate"@en,
+        "Hydrogen Sulphate"@en,
+        "Battery Acid"@en ;
+    skos:broader cdt:chemical-compound-product ;
+    skos:definition "Sulfuric acid is a mineral acid composed of the elements sulfur, oxygen and hydrogen, with molecular formula H2SO4. It is a colorless, odorless and viscous liquid that is miscible with water at all concentrations."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "HSO" ;
+    skos:prefLabel "Sulphuric Acid"@en .
 
 cdt:metal a skos:Concept ;
     skos:broader cdt:produced-commodity ;
@@ -3418,7 +3603,7 @@ cdt:greenhouse-gases a skos:Concept ;
 
     #ORDERED COLLECTION
 
-    cdt:lodgement-form a skos:OrderedCollection ;
+    cdt:lodgement-form a skos:Collection ;
     skos:definition "Ordered commodities for selection on lodgement forms."@en ;
     skos:member cdt:undefined,
         cdt:amber,
