@@ -14,7 +14,7 @@
 <https://linked.data.gov.au/def/gsq-roles> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-17"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-12-09"^^xsd:date ;
+    dcterms:modified "2021-05-20"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml> ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)."@en ;
@@ -23,15 +23,21 @@
         gsqr:driller,
         gsqr:operator,
         datac:DataCollector,
+        datac:ProjectLeader ,
+        datac:ProjectManager ,
+        datac:ProjectMember ,
         iso11179:Submitter,
         isorole:author,
         isorole:collaborator,
+        isorole:contributor,
+        isorole:custodian,
         isorole:editor,
         isorole:originator,
         isorole:owner,
         isorole:principalInvestigator,
         isorole:processor,
         isorole:publisher ,
+        isorole:user,
         gsqr:data-creator ,
         gsqr:administrator ,
         gsqr:data-librarian ,
@@ -106,6 +112,20 @@ isorole:collaborator a skos:Concept ;
     skos:prefLabel "Collaborator"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> .
 
+isorole:contributor a skos:Concept ;
+    skos:definition "Party contributing to the resource"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/iso19115-1/RoleCode> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
+    skos:prefLabel "Contributor"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> .
+
+isorole:custodian a skos:Concept ;
+    skos:definition "Party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/iso19115-1/RoleCode> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
+    skos:prefLabel "Custodian"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> .
+
 datac:DataCollector a skos:Concept ;
     skos:definition "Person/institution responsible for finding, gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI)."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
@@ -158,13 +178,44 @@ isorole:processor a skos:Concept ;
     skos:prefLabel "Processor"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles>.
 
+datac:ProjectLeader a skos:Concept ;
+    skos:definition "Person officially designated as head of project team or sub-project team instrumental in the work necessary to development of the resource."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
+    skos:prefLabel "Project Leader"@en ;
+    skos:scopeNote "The Project Leader is not 'removed' from the work that resulted in the resource; he or she remains intimately involved throughout the life of the particular project team."@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> .
+
+datac:ProjectManager a skos:Concept ;
+    skos:definition "Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
+    skos:prefLabel "Project Manager"@en ;
+    skos:scopeNote "The manager of a project normally has more administrative responsibility than actual work involvement."@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> .
+
+datac:ProjectMember a skos:Concept ;
+    skos:definition "Person on the membership list of a designated project/project team."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
+    skos:prefLabel "Project Member"@en ;
+    skos:scopeNote "This vocabulary may or may not indicate the quality, quantity, or substance of the person's involvement."@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> .
+
 isorole:publisher a skos:Concept ;
     skos:definition "Agent who published the resource"@en ;
     skos:inScheme <https://linked.data.gov.au/def/gsq-roles>;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
     skos:prefLabel "Publisher"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles>.
-        
+ 
+isorole:user a skos:Concept ;
+    skos:definition "Party who uses the resource"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles>;
+    skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
+    skos:prefLabel "User"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles>.
+       
 gsqr:data-creator
   a skos:Concept ;
   a dcat:Role ;
@@ -211,10 +262,10 @@ gsqr:des-roles a skos:Collection ;
         gsqr:manager,
         gsqr:data-steward,
         gsqr:data-librarian,
-        gsqr:data-creator ,
+        gsqr:data-creator,
         isorole:owner,
-        isorole:publisher ,
-        isorole:user ,
+        isorole:publisher,
+        isorole:user,
         isorole:contributor ,
         isorole:collaborator ,
         datac:ProjectLeader ,
