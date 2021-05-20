@@ -2,7 +2,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix obsin: <https://linked.data.gov.au/def/geological-observation-instrument/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <https://schema.org/> .
+@prefix sdo: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -11,7 +11,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-05-11"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-05-14"^^xsd:date ;
+    dcterms:modified "2021-05-20"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland." ;
     skos:definition "Types of instruments used to perform geological observations."@en ;
@@ -87,7 +87,7 @@ obsin:helitem30 a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-instrument> ;
     skos:prefLabel "HELITEM30"@en .
 
-obsin:picodas-pgam-1000- a skos:Concept ;
+obsin:picodas-pgam-1000 a skos:Concept ;
     skos:broader obsin:picodas ;
     skos:definition "The PGAM-1000 model gamma-ray spectrometer built by Picodas."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-instrument> ;
@@ -96,14 +96,14 @@ obsin:picodas-pgam-1000- a skos:Concept ;
 
 obsin:radiation-solution-rs-400 a skos:Concept ;
     skos:broader obsin:radiations-solutions ;
-    skos:definition "The RS-500 model radiation monitoring instrument built by Radiation Solutions."@en ;
+    skos:definition "The RS-400 model radiation monitoring instrument built by Radiation Solutions."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-instrument> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-instrument> ;
     skos:prefLabel "RADIATION SOLUTION RS-400"@en .
 
 obsin:radiation-solutions-rs-500 a skos:Concept ;
     skos:broader obsin:radiations-solutions ;
-    skos:definition "The RS-400 model radiation monitoring instrument built by Radiation Solutions."@en ;
+    skos:definition "The RS-500 model radiation monitoring instrument built by Radiation Solutions."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-instrument> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-observation-instrument> ;
     skos:prefLabel "RADIATION SOLUTIONS RS-500"@en .
@@ -530,14 +530,14 @@ obsin:magnetic a skos:Collection ;
 obsin:radiometric a skos:Collection ;
     skos:definition "Instruments used in Radiometric surveys."@en ;
     skos:member obsin:exploranium,
-        obsin:exploranium-gr-8,
-        obsin:exploranium-gr-82,
-        obsin:geometrics-gr-8,
+        obsin:exploranium-gr-800,
+        obsin:exploranium-gr-820,
+        obsin:geometrics-gr-800,
         obsin:nuclear-data,
         obsin:picodas,
-        obsin:picodas-pgam-1-,
-        obsin:radiation-solution-rs-4,
-        obsin:radiation-solutions-rs-5,
+        obsin:picodas-pgam-1000,
+        obsin:radiation-solution-rs-400,
+        obsin:radiation-solutions-rs-500,
         obsin:radiation-solutions-rsx-3,
         obsin:radiation-solutions-rsx-4,
         obsin:radiation-solutions-rsx-5,
