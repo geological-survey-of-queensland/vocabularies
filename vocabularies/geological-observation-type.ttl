@@ -11,7 +11,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-06-18"^^xsd:date ;
+    dcterms:modified "2021-05-24"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The types of observation in geoscience."@en ;
@@ -235,6 +235,14 @@ obstp:hyperspectral a skos:Concept ;
     skos:notation "HYPR" ;
     skos:prefLabel "Hyperspectral"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/geological-observation-type> .
+
+obstp:hylogger a skos:Concept ;
+    skos:definition "HyLogger is a high resolution hyperspectral core scanner which can interpret mineralogy of up to four dominant minerals, as well as 2D and 3D profiling of alteration signatures from depth to surface."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-observation-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-observation-type> ;
+    skos:notation "HYLG" ;
+    skos:prefLabel "Hylogger"@en ;
+    skos:broader obstp:hyperspectral .
 
 obstp:igneous-structures a skos:Concept ;
     skos:definition "The types of igneous structures observed."@en ;
@@ -682,6 +690,7 @@ obstp:survey-obs a skos:Collection ;
         obstp:gravity,
         obstp:gravity-gradiometry,
         obstp:hyperspectral,
+        obstp:hylogger,
         obstp:magnetic,
         obstp:magnetic-gradiometry,
         obstp:magnetotelluric,
@@ -704,6 +713,7 @@ obstp:sample-obs a skos:Collection ;
         obstp:fossils,
         obstp:geochemical-signature,
         obstp:hyperspectral,
+        obstp:hylogger,
         obstp:igneous-structures,
         obstp:internal-sequences,
         obstp:magnetic,
