@@ -12,15 +12,18 @@
         skos:ConceptScheme ;
     dcterms:created "2020-03-30"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-05-22"^^xsd:date ;
+    dcterms:modified "2021-05-28"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     skos:definition "Miscellaneous Survey Details."@en ;
     skos:hasTopConcept svydt:ag-survey-type,
         svydt:comments,
         svydt:funding-program,
+        svydt:historic-tenure,
+        svydt:historic-title,
         svydt:interval-m,
         svydt:job-number,
         svydt:line-direction-degrees,
+        svydt:locality,
         svydt:survey-height-m,
         svydt:survey-line,
         svydt:tie-interval-m,
@@ -32,7 +35,7 @@
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 svydt:ag-survey-type a skos:Concept ;
     skos:definition "Airborne geophysical survey type (exploration, government, open range, multi-client or experimental)"@en ;
@@ -46,6 +49,33 @@ svydt:total-stations a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Total Stations"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+
+svydt:historic-tenure a skos:Concept ;
+    skos:altLabel "Historic Permit"@en,
+        "Legacy Permit"@en ,
+        "Legacy Tenure"@en,
+        "Previous System Tenure"@en ;
+    skos:definition "A legacy tenure or permit identifier that is not in current usage."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "Historic Tenure"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+
+svydt:historic-title a skos:Concept ;
+    skos:altLabel "Legacy Title"@en,
+        "Former Plan Number"@en ;
+    skos:definition "A previous title or reference to the survey or document that has been edited, amended, or replaced."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "Historic Title"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+
+svydt:locality a skos:Concept ;
+    skos:definition "A geographic subdivision or district used in rural and regional Australia. Localities are commonly based on a local feature or township, but some occurrences may be subjectively named."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "Locality"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:line-direction-degrees a skos:Concept ;
@@ -176,3 +206,11 @@ svydt:seismic-surveys a skos:Collection ;
         svydt:survey-line,
         svydt:total-line-kilometres ;
     skos:prefLabel "Seismic Surveys"@en .
+
+svydt:survey-plans a skos:Collection ;
+    skos:definition "Additional details that describe Survey Plans."@en ;
+    skos:member svydt:comments,
+        svydt:historic-tenure,
+        svydt:historic-title,
+        svydt:locality ;
+    skos:prefLabel "Survey Plans"@en .
