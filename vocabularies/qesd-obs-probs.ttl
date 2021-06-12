@@ -11,7 +11,6 @@
 <https://linked.data.gov.au/def/qld-obsprop> a skos:ConceptScheme ;
     dcterms:created "2021-06-06"^^xsd:date ;
     dcterms:modified "2021-06-06"^^xsd:date ;
-    owl:imports <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
     dcterms:creator <https://linked.data.gov.au/org/des> ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     skos:prefLabel "QESD Observed Properties vocabulary"@en ;
@@ -247,6 +246,8 @@
     rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
     skos:prefLabel "genetic parameter"@en ; 
     skos:definition "Measures concern with the study of genes, genetic variation, and heredity in organisms."@en ; 
+    dcterms:created "2020-11-09T04:58:07"^^xsd:datetime ; 
+    dcterms:modified "2020-12-19T07:22:09"^^xsd:datetime ; 
 .
 
 <http://linked.data.gov.au/def/tern-cv/68add852-0a47-4412-8f8c-52bd8d0151b1>
@@ -256,6 +257,8 @@
     rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
     skos:prefLabel "agricultural parameter"@en ; 
     skos:definition "Measures related to the cultivation of plants and livestock."@en ; 
+    dcterms:created "2020-11-09T04:56:37"^^xsd:datetime ; 
+    dcterms:modified "2020-12-19T07:25:07"^^xsd:datetime ; 
 .
 
 <http://linked.data.gov.au/def/tern-cv/6e2ede4b-1e6f-4ea0-93d9-6597c5666d62>
@@ -445,6 +448,7 @@
     rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
     skos:prefLabel "land use"@en ; 
     skos:definition "land use"@en ; 
+    skos:narrower <http://linked.data.gov.au/def/tern-cv/e926b2ca-2688-486c-aa28-435f91c3c110> ;
 .
 
 <http://linked.data.gov.au/def/tern-cv/d62a4664-89a1-49a1-9ef0-f30ee2c6d22b> 
@@ -454,6 +458,8 @@
     rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
     skos:prefLabel "environmental parameter"@en ; 
     skos:definition "The external elements and conditions which surround, influence, and affect the life and development of an organism or population."@en ; 
+    skos:narrower <http://linked.data.gov.au/def/tern-cv/76806e0f-61a2-447c-8177-7e666637e23a>,
+        <http://linked.data.gov.au/def/tern-cv/7dc7ae5c-f074-4536-9032-f59eba3f9270> ;
 .
 
 <http://linked.data.gov.au/def/tern-cv/bb5c1354-8d70-47b2-b333-87e3bf1157d6>
@@ -1203,8 +1209,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/1daa8af7-36ee-589c-86d9-c5fd93205d36> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Total Carbon "@en ; 
-    skos:definition "Total Carbon "@en ; 
+    skos:prefLabel "Total Carbon"@en ; 
+    skos:definition "Total Carbon"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/93ea25c2-3eca-5881-8bda-39e93b75a3c1> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1418,8 +1424,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/7dd33da5-2064-5592-872b-b9697b545731> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "0-methoate "@en ; 
-    skos:definition "0-methoate "@en ; 
+    skos:prefLabel "0-methoate"@en ; 
+    skos:definition "0-methoate"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1454,8 +1460,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/ed6f916c-4807-5478-8ae0-dc0c89abc220> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "1H-Benzotriazole, 4-methyl "@en ; 
-    skos:definition "1H-Benzotriazole, 4-methyl "@en ; 
+    skos:prefLabel "1H-Benzotriazole, 4-methyl"@en ; 
+    skos:definition "1H-Benzotriazole, 4-methyl"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1478,8 +1484,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/1afaf982-38e5-5ac7-8835-0346e2613875> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "2,4-D "@en ; 
-    skos:definition "2,4-D "@en ; 
+    skos:prefLabel "2,4-D"@en ; 
+    skos:definition "2,4-D"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1490,8 +1496,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/1ba71f92-173c-578f-8735-5eb2063fa620> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "2,4-DB "@en ; 
-    skos:definition "2,4-DB "@en ; 
+    skos:prefLabel "2,4-DB"@en ; 
+    skos:definition "2,4-DB"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1514,8 +1520,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/d6f78c6f-4169-543a-81d7-1c5eff8ab1d7> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "2,4-DP (Dichlorprop) "@en ; 
-    skos:definition "2,4-DP (Dichlorprop) "@en ; 
+    skos:prefLabel "2,4-DP (Dichlorprop)"@en ; 
+    skos:definition "2,4-DP (Dichlorprop)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1526,8 +1532,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/ca38cd35-44e7-5894-9943-fc174d583c96> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "2,4,5-T "@en ; 
-    skos:definition "2,4,5-T "@en ; 
+    skos:prefLabel "2,4,5-T"@en ; 
+    skos:definition "2,4,5-T"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1538,8 +1544,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/703befc5-a297-539c-99b7-23f9aa1bbd30> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "2,4,5-T (acid) "@en ; 
-    skos:definition "2,4,5-T (acid) "@en ; 
+    skos:prefLabel "2,4,5-T (acid)"@en ; 
+    skos:definition "2,4,5-T (acid)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1598,8 +1604,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/0efd8094-c329-5145-91a9-e557129a686f> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "3,4-Dichloroaniline "@en ; 
-    skos:definition "3,4-Dichloroaniline "@en ; 
+    skos:prefLabel "3,4-Dichloroaniline"@en ; 
+    skos:definition "3,4-Dichloroaniline"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1694,8 +1700,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/a969e979-bd9f-5529-91ca-cdaf27f845ae> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Acetamiprid "@en ; 
-    skos:definition "Acetamiprid "@en ; 
+    skos:prefLabel "Acetamiprid"@en ; 
+    skos:definition "Acetamiprid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1706,8 +1712,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/dca257e7-852e-517d-9c50-6743e3386a0e> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Acifluorfen "@en ; 
-    skos:definition "Acifluorfen "@en ; 
+    skos:prefLabel "Acifluorfen"@en ; 
+    skos:definition "Acifluorfen"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1742,8 +1748,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/1e1541b0-c21a-5ece-982f-eeffc61a3848> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Ametryn "@en ; 
-    skos:definition "Ametryn "@en ; 
+    skos:prefLabel "Ametryn"@en ; 
+    skos:definition "Ametryn"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1754,8 +1760,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/ae0796de-63ce-5785-8b0f-d925eccfa9e0> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Amicarbazone "@en ; 
-    skos:definition "Amicarbazone "@en ; 
+    skos:prefLabel "Amicarbazone"@en ; 
+    skos:definition "Amicarbazone"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1778,8 +1784,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/022ab78e-7eae-5f25-9007-ff7f779dd7cc> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "AMPA "@en ; 
-    skos:definition "AMPA "@en ; 
+    skos:prefLabel "AMPA"@en ; 
+    skos:definition "AMPA"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1790,8 +1796,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/09c15989-f07e-5337-886e-eb3ccbce34aa> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Asulam "@en ; 
-    skos:definition "Asulam "@en ; 
+    skos:prefLabel "Asulam"@en ; 
+    skos:definition "Asulam"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1802,8 +1808,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/504de239-1fa8-5ba5-9386-7a6e0d5a2f35> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Atrazine "@en ; 
-    skos:definition "Atrazine "@en ; 
+    skos:prefLabel "Atrazine"@en ; 
+    skos:definition "Atrazine"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1814,8 +1820,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/67c350b9-8bf5-5872-99b6-da777e3c09d2> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Atrazine, 2-hydroxy "@en ; 
-    skos:definition "Atrazine, 2-hydroxy "@en ; 
+    skos:prefLabel "Atrazine, 2-hydroxy"@en ; 
+    skos:definition "Atrazine, 2-hydroxy"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1922,8 +1928,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/ce969807-0540-5dba-9aab-e8fd4b504315> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Bromacil "@en ; 
-    skos:definition "Bromacil "@en ; 
+    skos:prefLabel "Bromacil"@en ; 
+    skos:definition "Bromacil"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -1946,8 +1952,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/25eece93-2497-5ed2-9797-ac458c9b491e> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Bromoxynil "@en ; 
-    skos:definition "Bromoxynil "@en ; 
+    skos:prefLabel "Bromoxynil"@en ; 
+    skos:definition "Bromoxynil"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2006,8 +2012,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/59c7f466-3c20-567f-9928-61bb68290005> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Carfentrazone (acid) "@en ; 
-    skos:definition "Carfentrazone (acid) "@en ; 
+    skos:prefLabel "Carfentrazone (acid)"@en ; 
+    skos:definition "Carfentrazone (acid)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2162,8 +2168,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/48341f96-8bd5-549f-9b17-16d4ea2ee0ed> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Clomazone "@en ; 
-    skos:definition "Clomazone "@en ; 
+    skos:prefLabel "Clomazone"@en ; 
+    skos:definition "Clomazone"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2186,8 +2192,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/88bb0b40-73cb-520d-8a0a-c360cd97ce6e> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Clothianidin "@en ; 
-    skos:definition "Clothianidin "@en ; 
+    skos:prefLabel "Clothianidin"@en ; 
+    skos:definition "Clothianidin"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2198,8 +2204,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/3a878537-d839-5989-8c93-b249aae39833> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Coumaphos "@en ; 
-    skos:definition "Coumaphos "@en ; 
+    skos:prefLabel "Coumaphos"@en ; 
+    skos:definition "Coumaphos"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2210,8 +2216,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/f6df0c9b-a5cc-5e2a-88b9-a3e2e64b1562> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Cyanazine "@en ; 
-    skos:definition "Cyanazine "@en ; 
+    skos:prefLabel "Cyanazine"@en ; 
+    skos:definition "Cyanazine"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2246,8 +2252,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/d6919eed-d37e-57db-9a0f-c4ffad8b73f0> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Dalapon (2,2-DPA) "@en ; 
-    skos:definition "Dalapon (2,2-DPA) "@en ; 
+    skos:prefLabel "Dalapon (2,2-DPA)"@en ; 
+    skos:definition "Dalapon (2,2-DPA)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2258,8 +2264,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/deabcda6-f614-52b8-90b6-2724e1057e92> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "DCPMU "@en ; 
-    skos:definition "DCPMU "@en ; 
+    skos:prefLabel "DCPMU"@en ; 
+    skos:definition "DCPMU"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2270,8 +2276,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/06b289ab-4ddd-537a-80a5-dbe99cfe6b5f> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "DCPU "@en ; 
-    skos:definition "DCPU "@en ; 
+    skos:prefLabel "DCPU"@en ; 
+    skos:definition "DCPU"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2318,8 +2324,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/73055bd8-a0bb-588b-82b7-1d74f292c679> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Desethyl Atrazine  "@en ; 
-    skos:definition "Desethyl Atrazine  "@en ; 
+    skos:prefLabel "Desethyl Atrazine"@en ; 
+    skos:definition "Desethyl Atrazine"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2330,8 +2336,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/8839d2a4-9f5d-5cd7-8160-39d1ce9b829a> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Desisopropyl Atrazine "@en ; 
-    skos:definition "Desisopropyl Atrazine "@en ; 
+    skos:prefLabel "Desisopropyl Atrazine"@en ; 
+    skos:definition "Desisopropyl Atrazine"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2342,8 +2348,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/30488022-4cb7-5e90-9ef4-a3982f806722> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Diazinon "@en ; 
-    skos:definition "Diazinon "@en ; 
+    skos:prefLabel "Diazinon"@en ; 
+    skos:definition "Diazinon"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2462,8 +2468,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/9d3ca887-cdb2-58cd-8975-866fa44464d3> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Dinotefuran "@en ; 
-    skos:definition "Dinotefuran "@en ; 
+    skos:prefLabel "Dinotefuran"@en ; 
+    skos:definition "Dinotefuran"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2498,8 +2504,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/259ce947-2ff5-5daa-9718-b3e1bd2f8e9a> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Diuron "@en ; 
-    skos:definition "Diuron "@en ; 
+    skos:prefLabel "Diuron"@en ; 
+    skos:definition "Diuron"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2582,8 +2588,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/9c3b2b2e-ccf2-5e6c-89ab-f38cc42b4552> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Endrin "@en ; 
-    skos:definition "Endrin "@en ; 
+    skos:prefLabel "Endrin"@en ; 
+    skos:definition "Endrin"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2606,8 +2612,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/81d63f82-5039-5681-8db6-20a9ac9ebd08> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Ethametsulfuron methyl "@en ; 
-    skos:definition "Ethametsulfuron methyl "@en ; 
+    skos:prefLabel "Ethametsulfuron methyl"@en ; 
+    skos:definition "Ethametsulfuron methyl"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2642,8 +2648,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/7c3627da-0abc-5650-92bf-386eeff7e3d3> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Ethoxysulfuron "@en ; 
-    skos:definition "Ethoxysulfuron "@en ; 
+    skos:prefLabel "Ethoxysulfuron"@en ; 
+    skos:definition "Ethoxysulfuron"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2762,8 +2768,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/3e499121-3bd8-581c-9f61-d061bcc46074> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Fipronil Desulfinyl "@en ; 
-    skos:definition "Fipronil Desulfinyl "@en ; 
+    skos:prefLabel "Fipronil Desulfinyl"@en ; 
+    skos:definition "Fipronil Desulfinyl"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2774,8 +2780,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/1cb421ff-85bf-5532-98f0-9024825be998> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Fipronil sulfide "@en ; 
-    skos:definition "Fipronil sulfide "@en ; 
+    skos:prefLabel "Fipronil sulfide"@en ; 
+    skos:definition "Fipronil sulfide"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2786,8 +2792,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/c68d7f58-089b-5409-8ab1-e0b5662903bb> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Fipronil sulfone "@en ; 
-    skos:definition "Fipronil sulfone "@en ; 
+    skos:prefLabel "Fipronil sulfone"@en ; 
+    skos:definition "Fipronil sulfone"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2798,8 +2804,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/5fbe82fd-9079-5451-8b2e-6169d30b9b97> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Flamprop-methyl "@en ; 
-    skos:definition "Flamprop-methyl "@en ; 
+    skos:prefLabel "Flamprop-methyl"@en ; 
+    skos:definition "Flamprop-methyl"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2810,8 +2816,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/cfa6af4a-4486-5e89-8948-6d7a2a72296e> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Fluazifop (acid) "@en ; 
-    skos:definition "Fluazifop (acid) "@en ; 
+    skos:prefLabel "Fluazifop (acid)"@en ; 
+    skos:definition "Fluazifop (acid)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2822,8 +2828,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/557785d6-5dd0-56c7-8ec7-b742de7fe7b0> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Fluazifop-P-butyl "@en ; 
-    skos:definition "Fluazifop-P-butyl "@en ; 
+    skos:prefLabel "Fluazifop-P-butyl"@en ; 
+    skos:definition "Fluazifop-P-butyl"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2834,8 +2840,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/67c31228-64fe-5dac-8bc2-3e75a5e59c3d> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Fluometuron "@en ; 
-    skos:definition "Fluometuron "@en ; 
+    skos:prefLabel "Fluometuron"@en ; 
+    skos:definition "Fluometuron"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2846,8 +2852,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/e307f491-61fa-5a93-954d-25c2a8d954c5> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Fluroxypyr "@en ; 
-    skos:definition "Fluroxypyr "@en ; 
+    skos:prefLabel "Fluroxypyr"@en ; 
+    skos:definition "Fluroxypyr"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2858,8 +2864,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/ef44c1ae-0e57-5f34-83cc-e44c9a5b21fd> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Flusilazole  "@en ; 
-    skos:definition "Flusilazole  "@en ; 
+    skos:prefLabel "Flusilazole"@en ; 
+    skos:definition "Flusilazole"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2870,8 +2876,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/c19899d4-2891-5248-95b2-6041f93fad92> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Flutriafol "@en ; 
-    skos:definition "Flutriafol "@en ; 
+    skos:prefLabel "Flutriafol"@en ; 
+    skos:definition "Flutriafol"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2882,8 +2888,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/8df4c1d0-f84d-5fbe-87da-4873f09b5fc5> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Fluvalinate "@en ; 
-    skos:definition "Fluvalinate "@en ; 
+    skos:prefLabel "Fluvalinate"@en ; 
+    skos:definition "Fluvalinate"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2930,8 +2936,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/54b91ee8-09b6-5f23-9b45-c4290f7beb4b> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Glyphosate "@en ; 
-    skos:definition "Glyphosate "@en ; 
+    skos:prefLabel "Glyphosate"@en ; 
+    skos:definition "Glyphosate"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2942,8 +2948,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/683f39e4-03df-56bd-858a-81ff55858b42> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Halosulfuron methyl "@en ; 
-    skos:definition "Halosulfuron methyl "@en ; 
+    skos:prefLabel "Halosulfuron methyl"@en ; 
+    skos:definition "Halosulfuron methyl"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -2954,8 +2960,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/c67967a4-2dde-5259-8311-cd83d62c2276> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Haloxyfop (acid) "@en ; 
-    skos:definition "Haloxyfop (acid) "@en ; 
+    skos:prefLabel "Haloxyfop (acid)"@en ; 
+    skos:definition "Haloxyfop (acid)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3002,8 +3008,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/2b7b1576-84ba-55e0-932c-b1f3596dd570> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "HCH (alpha isomer) "@en ; 
-    skos:definition "HCH (alpha isomer) "@en ; 
+    skos:prefLabel "HCH (alpha isomer)"@en ; 
+    skos:definition "HCH (alpha isomer)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3098,8 +3104,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/ece041db-c3f1-59f2-9d73-51a5e26b1631> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Hexazinone "@en ; 
-    skos:definition "Hexazinone "@en ; 
+    skos:prefLabel "Hexazinone"@en ; 
+    skos:definition "Hexazinone"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3122,8 +3128,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/d21636d4-703e-5e29-93a9-192746537190> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Imazapic "@en ; 
-    skos:definition "Imazapic "@en ; 
+    skos:prefLabel "Imazapic"@en ; 
+    skos:definition "Imazapic"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3146,8 +3152,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/c0aebf2f-2ccd-5001-91c9-ada7e17357e3> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Imazapyr "@en ; 
-    skos:definition "Imazapyr "@en ; 
+    skos:prefLabel "Imazapyr"@en ; 
+    skos:definition "Imazapyr"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3158,8 +3164,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/dae4e889-1d40-5484-8b32-fe6fb8260fa9> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Imazethapyr "@en ; 
-    skos:definition "Imazethapyr "@en ; 
+    skos:prefLabel "Imazethapyr"@en ; 
+    skos:definition "Imazethapyr"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3170,8 +3176,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/3eb63e18-326b-51d7-99a9-986004fac09a> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Imidacloprid "@en ; 
-    skos:definition "Imidacloprid "@en ; 
+    skos:prefLabel "Imidacloprid"@en ; 
+    skos:definition "Imidacloprid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3182,8 +3188,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/05ddf7ba-91e9-51cf-832e-fcb2e6379380> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Imidacloprid metabolites "@en ; 
-    skos:definition "Imidacloprid metabolites "@en ; 
+    skos:prefLabel "Imidacloprid metabolites"@en ; 
+    skos:definition "Imidacloprid metabolites"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3203,23 +3209,11 @@
     dcterms:modified "2021-06-07"^^xsd:date ;
 .
 
-<https://linked.data.gov.au/def/qld-obsprop/1258df23-3217-5ad9-99d8-e13681e631fe> 
-    a skos:Concept ; 
-    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Ioxynil "@en ; 
-    skos:definition "Ioxynil "@en ; 
-    skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
-    qudt:hasQuantityKind quantitykind:MassDensity ; 
-    dcterms:created "2021-06-07"^^xsd:date ; 
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
-.
-
 <https://linked.data.gov.au/def/qld-obsprop/13b03185-8952-5c76-8d9e-27f8daef2372> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Isoxaflutole metabolite (DKN) "@en ; 
-    skos:definition "Isoxaflutole metabolite (DKN) "@en ; 
+    skos:prefLabel "Isoxaflutole metabolite (DKN)"@en ; 
+    skos:definition "Isoxaflutole metabolite (DKN)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3242,8 +3236,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/f9067a8f-0e71-5095-8162-e7a5206698df> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "MCPA "@en ; 
-    skos:definition "MCPA "@en ; 
+    skos:prefLabel "MCPA"@en ; 
+    skos:definition "MCPA"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3254,8 +3248,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/616cc59b-d991-57ee-9228-690f5dd4189b> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "MCPB "@en ; 
-    skos:definition "MCPB "@en ; 
+    skos:prefLabel "MCPB"@en ; 
+    skos:definition "MCPB"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3266,8 +3260,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/bdb68088-2a94-5b17-8634-adfa72c28ffe> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Mecoprop "@en ; 
-    skos:definition "Mecoprop "@en ; 
+    skos:prefLabel "Mecoprop"@en ; 
+    skos:definition "Mecoprop"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3278,8 +3272,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/76a5d91e-0836-5507-8b88-16abc90856da> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Mesosulfuron methyl "@en ; 
-    skos:definition "Mesosulfuron methyl "@en ; 
+    skos:prefLabel "Mesosulfuron methyl"@en ; 
+    skos:definition "Mesosulfuron methyl"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3326,8 +3320,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/556029ea-22ed-5a41-8594-8fd7965cc125> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Methoxyfenozide "@en ; 
-    skos:definition "Methoxyfenozide "@en ; 
+    skos:prefLabel "Methoxyfenozide"@en ; 
+    skos:definition "Methoxyfenozide"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3338,8 +3332,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/fc665864-e991-5283-925a-9d8424eeb992> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Metolachlor "@en ; 
-    skos:definition "Metolachlor "@en ; 
+    skos:prefLabel "Metolachlor"@en ; 
+    skos:definition "Metolachlor"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3350,8 +3344,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/5720f525-f17c-5c97-8341-c970a2e18fe3> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Metolachlor-OXA "@en ; 
-    skos:definition "Metolachlor-OXA "@en ; 
+    skos:prefLabel "Metolachlor-OXA"@en ; 
+    skos:definition "Metolachlor-OXA"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3362,8 +3356,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/1325c816-83ec-5df7-834f-3c8ebbd5ae35> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Metribuzin "@en ; 
-    skos:definition "Metribuzin "@en ; 
+    skos:prefLabel "Metribuzin"@en ; 
+    skos:definition "Metribuzin"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3374,8 +3368,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/e306e5c7-dabf-53c9-84bd-266b4ac5558a> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Metsulfuron methyl "@en ; 
-    skos:definition "Metsulfuron methyl "@en ; 
+    skos:prefLabel "Metsulfuron methyl"@en ; 
+    skos:definition "Metsulfuron methyl"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3410,8 +3404,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/47988792-6307-5176-9dfb-50edf884a3af> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Molinate "@en ; 
-    skos:definition "Molinate "@en ; 
+    skos:prefLabel "Molinate"@en ; 
+    skos:definition "Molinate"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3482,8 +3476,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/304e4fd3-beb4-5b93-9f4e-e818870b55c7> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "N-Desmethyl Acetamiprid "@en ; 
-    skos:definition "N-Desmethyl Acetamiprid "@en ; 
+    skos:prefLabel "N-Desmethyl Acetamiprid"@en ; 
+    skos:definition "N-Desmethyl Acetamiprid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3494,8 +3488,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/d894f372-b18b-592b-9fa8-ba290eb28df2> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Napropamide "@en ; 
-    skos:definition "Napropamide "@en ; 
+    skos:prefLabel "Napropamide"@en ; 
+    skos:definition "Napropamide"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3578,8 +3572,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/4cd4017f-8325-5ef8-81c4-8af97fdfbec6> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Oxyfluorfen "@en ; 
-    skos:definition "Oxyfluorfen "@en ; 
+    skos:prefLabel "Oxyfluorfen"@en ; 
+    skos:definition "Oxyfluorfen"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3758,8 +3752,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/4ca28071-0cf5-5d5a-8bf5-5592ee82f6f6> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Prometryn "@en ; 
-    skos:definition "Prometryn "@en ; 
+    skos:prefLabel "Prometryn"@en ; 
+    skos:definition "Prometryn"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3770,8 +3764,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/45c30fb4-52b9-5fe5-9aa6-9abb54e69da5> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Propachlor "@en ; 
-    skos:definition "Propachlor "@en ; 
+    skos:prefLabel "Propachlor"@en ; 
+    skos:definition "Propachlor"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3794,8 +3788,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/312df677-216f-5157-935e-a95def92a049> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Propazin-2-hydroxy "@en ; 
-    skos:definition "Propazin-2-hydroxy "@en ; 
+    skos:prefLabel "Propazin-2-hydroxy"@en ; 
+    skos:definition "Propazin-2-hydroxy"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3878,8 +3872,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/76b35340-6ff5-5bc3-9d86-5f4408cacc2e> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Sethoxydim "@en ; 
-    skos:definition "Sethoxydim "@en ; 
+    skos:prefLabel "Sethoxydim"@en ; 
+    skos:definition "Sethoxydim"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3890,8 +3884,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/8817fa32-de7a-5fae-9a46-d18239da82d7> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Simazine "@en ; 
-    skos:definition "Simazine "@en ; 
+    skos:prefLabel "Simazine"@en ; 
+    skos:definition "Simazine"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3902,8 +3896,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/db213410-7c56-513b-8981-50c979c2a432> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Sulfosulfuron "@en ; 
-    skos:definition "Sulfosulfuron "@en ; 
+    skos:prefLabel "Sulfosulfuron"@en ; 
+    skos:definition "Sulfosulfuron"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3938,8 +3932,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/3eaecc65-5172-5778-89e7-6774361ee707> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Tebuthiuron "@en ; 
-    skos:definition "Tebuthiuron "@en ; 
+    skos:prefLabel "Tebuthiuron"@en ; 
+    skos:definition "Tebuthiuron"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3974,8 +3968,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/236a9305-1136-506a-841d-cc0ce02551a3> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Terbuthylazine "@en ; 
-    skos:definition "Terbuthylazine "@en ; 
+    skos:prefLabel "Terbuthylazine"@en ; 
+    skos:definition "Terbuthylazine"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3986,8 +3980,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/28b34712-1174-54d5-9f6e-553c5efad767> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Terbuthylazine desethyl "@en ; 
-    skos:definition "Terbuthylazine desethyl "@en ; 
+    skos:prefLabel "Terbuthylazine desethyl"@en ; 
+    skos:definition "Terbuthylazine desethyl"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -3998,8 +3992,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/70d074d5-5328-5c08-89a4-45328ad3bc76> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Terbutryn "@en ; 
-    skos:definition "Terbutryn "@en ; 
+    skos:prefLabel "Terbutryn"@en ; 
+    skos:definition "Terbutryn"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4058,8 +4052,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/aceeb202-16a4-5f53-9af3-ebabe2bb57a0> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Thiacloprid "@en ; 
-    skos:definition "Thiacloprid "@en ; 
+    skos:prefLabel "Thiacloprid"@en ; 
+    skos:definition "Thiacloprid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4070,8 +4064,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/6fdf1ec5-75ac-5941-8afe-456ddc0648e2> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Thiamethoxam "@en ; 
-    skos:definition "Thiamethoxam "@en ; 
+    skos:prefLabel "Thiamethoxam"@en ; 
+    skos:definition "Thiamethoxam"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4094,8 +4088,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/3fad39c9-2668-5da2-98a3-fa1685758d3e> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Total Acetamiprid  "@en ; 
-    skos:definition "Total Acetamiprid  "@en ; 
+    skos:prefLabel "Total Acetamiprid"@en ; 
+    skos:definition "Total Acetamiprid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4130,8 +4124,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/75e40a73-f917-5696-992a-9f961ee95466> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Total Diuron "@en ; 
-    skos:definition "Total Diuron "@en ; 
+    skos:prefLabel "Total Diuron"@en ; 
+    skos:definition "Total Diuron"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4142,8 +4136,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/e9155f01-f807-549e-80b9-0ca0ae9c6f75> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Total Fipronil "@en ; 
-    skos:definition "Total Fipronil "@en ; 
+    skos:prefLabel "Total Fipronil"@en ; 
+    skos:definition "Total Fipronil"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4166,8 +4160,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/90e548a5-88dc-5b0f-945e-4e4ad84a75fc> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Total Imazapic "@en ; 
-    skos:definition "Total Imazapic "@en ; 
+    skos:prefLabel "Total Imazapic"@en ; 
+    skos:definition "Total Imazapic"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4178,8 +4172,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/d1cea4bf-5222-5c53-9940-e553ac69d6cb> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Total Imidacloprid "@en ; 
-    skos:definition "Total Imidacloprid "@en ; 
+    skos:prefLabel "Total Imidacloprid"@en ; 
+    skos:definition "Total Imidacloprid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4262,8 +4256,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/ff36668e-49ff-517d-8e47-2094e274f45a> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Triclopyr "@en ; 
-    skos:definition "Triclopyr "@en ; 
+    skos:prefLabel "Triclopyr"@en ; 
+    skos:definition "Triclopyr"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4310,8 +4304,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/37a1ad60-d764-5767-9cda-c4468c2ee9a5> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Trifloxysulfuron "@en ; 
-    skos:definition "Trifloxysulfuron "@en ; 
+    skos:prefLabel "Trifloxysulfuron"@en ; 
+    skos:definition "Trifloxysulfuron"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4334,8 +4328,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/ad050032-7e95-5a86-9375-9e2ee8f79f36> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Trinexapac (acid) "@en ; 
-    skos:definition "Trinexapac (acid) "@en ; 
+    skos:prefLabel "Trinexapac (acid)"@en ; 
+    skos:definition "Trinexapac (acid)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/a701413c-2fdb-5eab-a0bc-b71a0eabde3c> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4802,8 +4796,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/7965df1e-4842-5955-9727-f1803f793442> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Conductivity "@en ; 
-    skos:definition "Conductivity "@en ; 
+    skos:prefLabel "Conductivity"@en ; 
+    skos:definition "Conductivity"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/414e519e-56a9-59d3-8675-862a51348026> ; 
     qudt:hasQuantityKind quantitykind:Conductivity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4838,8 +4832,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/ac2d0160-494e-57e1-9841-6ec9c030ab8f> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Distance below water surface "@en ; 
-    skos:definition "Distance below water surface "@en ; 
+    skos:prefLabel "Distance below water surface"@en ; 
+    skos:definition "Distance below water surface"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/414e519e-56a9-59d3-8675-862a51348026> ; 
     qudt:hasQuantityKind quantitykind:Length ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4861,8 +4855,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/0ff11efb-ed24-5667-8345-97d29b106611> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Stream Discharge "@en ; 
-    skos:definition "Stream Discharge "@en ; 
+    skos:prefLabel "Stream Discharge"@en ; 
+    skos:definition "Stream Discharge"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/414e519e-56a9-59d3-8675-862a51348026> ; 
     qudt:hasQuantityKind quantitykind:VolumePerUnitTime ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4873,8 +4867,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/ad324c9a-dec6-56a5-8b86-96f585fc2664> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Stream Water Level "@en ; 
-    skos:definition "Stream Water Level "@en ; 
+    skos:prefLabel "Stream Water Level"@en ; 
+    skos:definition "Stream Water Level"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/414e519e-56a9-59d3-8675-862a51348026> ; 
     qudt:hasQuantityKind quantitykind:Length ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -4885,8 +4879,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/b7724086-ba40-5102-91c4-0d7c0896141e> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Turbidity "@en ; 
-    skos:definition "Turbidity "@en ; 
+    skos:prefLabel "Turbidity"@en ; 
+    skos:definition "Turbidity"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/414e519e-56a9-59d3-8675-862a51348026> ; 
     qudt:hasQuantityKind quantitykind:Turbidity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -5137,8 +5131,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/f7e7d3f5-d85b-5c00-8d95-dfbe30372094> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Aluminium as Al - soluble "@en ; 
-    skos:definition "Aluminium as Al - soluble "@en ; 
+    skos:prefLabel "Aluminium as Al - soluble"@en ; 
+    skos:definition "Aluminium as Al - soluble"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/9a2bcb89-8bf7-5037-b074-d40fa704e591> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -5245,8 +5239,8 @@
 <https://linked.data.gov.au/def/qld-obsprop/b5ad9fb7-ee62-5857-8f6a-29164e9af1a1> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Boron as B - soluble "@en ; 
-    skos:definition "Boron as B - soluble "@en ; 
+    skos:prefLabel "Boron as B - soluble"@en ; 
+    skos:definition "Boron as B - soluble"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/9a2bcb89-8bf7-5037-b074-d40fa704e591> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
@@ -7122,17 +7116,6 @@
     dcterms:modified "2021-01-05T00:25:06"^^xsd:datetime ; 
 . 
 
-<http://linked.data.gov.au/def/tern-cv/68add852-0a47-4412-8f8c-52bd8d0151b1> 
-    a skos:Concept ; 
-    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ; 
-    skos:prefLabel "agricultural parameter"@en ; 
-    skos:definition "Measures related to the cultivation of plants and livestock."@en ; 
-    skos:topConceptOf <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e>  ; 
-    dcterms:created "2020-11-09T04:56:37"^^xsd:datetime ; 
-    dcterms:modified "2020-12-19T07:25:07"^^xsd:datetime ; 
-. 
-
 <http://linked.data.gov.au/def/tern-cv/2ffe4363-dea1-4188-9f8f-835983d47fe2> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
@@ -7177,17 +7160,6 @@
         <http://linked.data.gov.au/def/tern-cv/7dc7ae5c-f074-4536-9032-f59eba3f9270> ;
     dcterms:created "2020-11-09T04:57:55"^^xsd:datetime ; 
     dcterms:modified "2021-01-05T00:28:35"^^xsd:datetime ; 
-. 
-
-<http://linked.data.gov.au/def/tern-cv/50b9def1-660b-4274-b10e-6dbe57243305> 
-    a skos:Concept ; 
-    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ; 
-    skos:prefLabel "genetic parameter"@en ; 
-    skos:definition "Measures concern with the study of genes, genetic variation, and heredity in organisms."@en ; 
-    skos:topConceptOf <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e>  ; 
-    dcterms:created "2020-11-09T04:58:07"^^xsd:datetime ; 
-    dcterms:modified "2020-12-19T07:22:09"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/29bd4356-5638-49c0-8d3e-57598ac2ea6c> 
@@ -7798,18 +7770,6 @@
     skos:broader <http://linked.data.gov.au/def/tern-cv/8fa1c4bd-73b3-432a-ab49-9ee89928e6d9> ; 
     dcterms:modified "2021-05-10T00:39:11"^^xsd:datetime ; 
 . 
-
-<http://linked.data.gov.au/def/tern-cv/c_012ebf32> 
-    a skos:Concept ; 
-    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ; 
-    skos:prefLabel "land use"@en ; 
-    skos:definition "land use"@en ; 
-    skos:narrower <http://linked.data.gov.au/def/tern-cv/e926b2ca-2688-486c-aa28-435f91c3c110> ;
-    skos:topConceptOf <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
-    dcterms:created "2021-02-08T01:49:47"^^xsd:datetime ; 
-.
-
 <http://linked.data.gov.au/def/tern-cv/43ed01cc-0089-4a6b-8754-0990dd0f697b> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
@@ -7890,45 +7850,6 @@
     skos:broader <http://linked.data.gov.au/def/tern-cv/2ffe4363-dea1-4188-9f8f-835983d47fe2> ; 
     dcterms:created "2021-02-18T01:50:11"^^xsd:datetime ; 
     dcterms:modified "2021-02-18T01:54:47"^^xsd:datetime ; 
-. 
-
-<http://linked.data.gov.au/def/tern-cv/777773d0-cfb4-44ff-85e2-08b48e10ac52> 
-    a skos:Concept ; 
-    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ; 
-    skos:prefLabel "disturbance parameter"@en ; 
-    skos:definition "disturbance parameter"@en ; 
-    skos:topConceptOf <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
-    skos:narrower <http://linked.data.gov.au/def/tern-cv/18d64def-df3b-4fa2-ba2d-967c6e392406>,
-        <http://linked.data.gov.au/def/tern-cv/1d1a868a-74f9-4d7b-8d70-f97d9530098e>,
-        <http://linked.data.gov.au/def/tern-cv/20a2ab2e-cdbd-4c56-9e68-9c926fd589eb>,
-        <http://linked.data.gov.au/def/tern-cv/28874068-9b9b-49b0-a754-0b7bd988d97c>,
-        <http://linked.data.gov.au/def/tern-cv/29241828-9973-4854-a4b9-e972cd58c22a>,
-        <http://linked.data.gov.au/def/tern-cv/3826b5a3-7128-4df3-90f3-8196c4c20d45>,
-        <http://linked.data.gov.au/def/tern-cv/3ab5a014-78d0-4424-9329-8dc370701f1a>,
-        <http://linked.data.gov.au/def/tern-cv/486e60ea-affa-45ad-b331-027167d866bf>,
-        <http://linked.data.gov.au/def/tern-cv/4e272650-c4f7-412b-b7bf-031af0611acc>,
-        <http://linked.data.gov.au/def/tern-cv/5a95ac61-94c5-4993-aad2-3e891156efe0>,
-        <http://linked.data.gov.au/def/tern-cv/5d13d5e9-4465-4c75-8a41-60bf84882696>,
-        <http://linked.data.gov.au/def/tern-cv/71934567-a90d-433c-a040-63df566c9faa>,
-        <http://linked.data.gov.au/def/tern-cv/79b5755c-6de7-42e9-a652-c402faec2826>,
-        <http://linked.data.gov.au/def/tern-cv/7e75402d-e3c6-41dd-9e17-7f44b26bbb10>,
-        <http://linked.data.gov.au/def/tern-cv/800cf33b-1c44-435d-89bd-5d80e3e8aba1>,
-        <http://linked.data.gov.au/def/tern-cv/8c20f342-39fd-4abf-ab97-218c7c1ce499>,
-        <http://linked.data.gov.au/def/tern-cv/8f220426-6b5a-4b8f-a995-8eea263a4a19>,
-        <http://linked.data.gov.au/def/tern-cv/a8e12e7f-6052-4e87-a69e-ceb34ad5c45d>,
-        <http://linked.data.gov.au/def/tern-cv/b0dff759-ae91-4801-b520-b27e27215a40>,
-        <http://linked.data.gov.au/def/tern-cv/be1916fa-a0cf-4e86-a0dc-dd49f7a78af7>,
-        <http://linked.data.gov.au/def/tern-cv/c55de6b4-72f2-42ad-ad6e-f611db272e78>,
-        <http://linked.data.gov.au/def/tern-cv/c5f99536-8986-418e-932d-ae5d77312adc>,
-        <http://linked.data.gov.au/def/tern-cv/d33f60ee-1934-4bd8-9919-06c0d54eee1a>,
-        <http://linked.data.gov.au/def/tern-cv/d5635c66-06d2-48e4-98ff-7e83e8a2b265>,
-        <http://linked.data.gov.au/def/tern-cv/f3888501-98b1-4a53-a788-20b0f0b8a7e6>,
-        <http://linked.data.gov.au/def/tern-cv/f57f6bf8-2a5e-47c5-bcc2-4ce7bb4b9dc7>,
-        <http://linked.data.gov.au/def/tern-cv/fe9c70d4-415b-4152-b517-a8e7a15e36f7>,
-        <http://linked.data.gov.au/def/tern-cv/ff4ce8d1-4c2b-4d6e-8aea-be4138fea452> ;
-    dcterms:created "2021-02-26T03:30:24"^^xsd:datetime ; 
-    dcterms:modified "2021-03-11T03:53:45"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/1d1a868a-74f9-4d7b-8d70-f97d9530098e> 
@@ -8171,33 +8092,12 @@
     dcterms:modified "2021-03-11T04:18:34"^^xsd:datetime ; 
 . 
 
-<http://linked.data.gov.au/def/tern-cv/6f726a59-c330-44eb-898e-7d42d5fbdada> 
-    a skos:Concept ; 
-    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ; 
-    skos:prefLabel "land surface parameter"@en ; 
-    skos:definition "land surface parameter"@en ; 
-    skos:topConceptOf <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
-    dcterms:created "2021-03-11T04:17:12"^^xsd:datetime ; 
-. 
-
 #<http://linked.data.gov.au/def/tern-cv/8e7a785a-8c57-4415-855f-cb6d35ad58bb> 
 #    a skos:Concept ; 
 #    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
 #    skos:prefLabel "CF standard name"@en ; 
 #    dcterms:created "2021-03-11T04:24:29"^^xsd:datetime ; 
 #. 
-
-<http://linked.data.gov.au/def/tern-cv/8fa1c4bd-73b3-432a-ab49-9ee89928e6d9> 
-    a skos:Concept ; 
-    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ; 
-    skos:prefLabel "vegetation parameter"@en ; 
-    skos:definition "vegetation parameter"@en ; 
-    skos:topConceptOf <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
-    dcterms:created "2021-03-11T04:54:26"^^xsd:datetime ; 
-    dcterms:modified "2021-03-11T04:54:54"^^xsd:datetime ; 
-. 
 
 <http://linked.data.gov.au/def/tern-cv/3ab5a014-78d0-4424-9329-8dc370701f1a> 
     a skos:Concept ; 
