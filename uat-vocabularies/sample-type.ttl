@@ -4,7 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sampty: <http://linked.data.gov.au/def/sample-type/> .
-@prefix sdo: <http://schema.org/> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -12,7 +12,7 @@
 <http://linked.data.gov.au/def/sample-type> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-06-24"^^xsd:date ;
+    dcterms:modified "2021-06-21"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Types of sample used in Geoscience."@en ;
@@ -41,6 +41,7 @@
         sampty:ore-sample,
         sampty:oriented-or-orientation-sample,
         sampty:oriented-sample,
+        sampty:pallet-core,
         sampty:paleomagnetic-sample,
         sampty:pan-concentrate,
         sampty:petrophysical-log,
@@ -71,7 +72,7 @@
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 sampty:image-log a skos:Concept ;
     skos:broader sampty:petrophysical-log ;
@@ -319,6 +320,15 @@ sampty:paleomagnetic-sample a skos:Concept ;
     skos:prefLabel "Paleomagnetic Sample"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
 
+sampty:pallet-core a skos:Concept ;
+    skos:definition "A collection of core samples, typically boxed, placed on a pallet for the purpose of movement, storage, and logistics."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
+    skos:notation "PALCORE" ;
+    skos:altLabel "Pallet Core"@en , "Core Pallet"@en;
+    skos:prefLabel "Palletised Core"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
+
 sampty:pan-concentrate a skos:Concept ;
     skos:definition "Stream sediment that has been panned to concentrate heavy minerals"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-type> ;
@@ -504,7 +514,7 @@ sampty:water-specimen a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
 
 sampty:wellhead a skos:Concept ;
-    skos:definition "Component at surface that provides structural and pressue interface"@en ;
+    skos:definition "Component at surface that provides structural and pressure interface"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-type> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
     skos:notation "WHEAD" ;
