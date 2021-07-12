@@ -1,7 +1,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <https://schema.org/> .
+@prefix sdo: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix smpdt: <https://linked.data.gov.au/def/sample-detail-type/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,36 +11,44 @@
         skos:ConceptScheme ;
     dcterms:created "2020-03-30"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-03-30"^^xsd:date ;
+    dcterms:modified "2021-07-13"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "A definition for vocabulary that describes its purpose."@en ;
     skos:prefLabel "Sample Detail Type"@en ;
-    skos:hasTopConcept smpdt:dummy,
-        smpdt:example,
-        smpdt:placeholder .
+    skos:hasTopConcept smpdt:pallet-weight,
+        smpdt:pallet-condition,
+        smpdt:core-condition,
+        smpdt:core-tray-condition .
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
-smpdt:dummy a skos:Concept ;
-    skos:definition "Not areal concept, just here for looks."@en ;
+smpdt:pallet-weight a skos:Concept ;
+    skos:definition "Weight of pallet in kg"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-detail-type> ;
-    skos:prefLabel "Dummy"@en ;
+    skos:prefLabel "Pallet Weight"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-detail-type> .
 
-smpdt:example a skos:Concept ;
-    skos:definition "This just looks like what should actually be here."@en ;
+smpdt:pallet-condition a skos:Concept ;
+    skos:definition "Condition of a storage pallet"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-detail-type> ;
-    skos:prefLabel "Example"@en ;
+    skos:prefLabel "Pallet Condition"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-detail-type> .
 
-smpdt:placeholder a skos:Concept ;
-    skos:definition "This is a placeholder."@en ;
+smpdt:core-condition a skos:Concept ;
+    skos:definition "Condition of borehole core"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-detail-type> ;
     skos:inScheme <https://linked.data.gov.au/def/sample-detail-type> ;
-    skos:prefLabel "Placeholder"@en ;
+    skos:prefLabel "Core Condition"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/sample-detail-type> .
+
+smpdt:core-tray-condition a skos:Concept ;
+    skos:definition "Condition of tray used to store borehole core"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/sample-detail-type> ;
+    skos:prefLabel "Core Tray Condition"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/sample-detail-type> .
