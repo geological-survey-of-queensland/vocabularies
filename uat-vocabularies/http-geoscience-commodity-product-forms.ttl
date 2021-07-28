@@ -1,0 +1,152 @@
+@prefix gcpf: <http://linked.data.gov.au/def/geo-product-form/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/geo-product-form> a owl:Ontology ,
+skos:ConceptScheme ;
+dcterms:created "2021-07-29"^^xsd:date ;
+dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+dcterms:modified "2021-07-29"^^xsd:date ;
+dcterms:provenance "Derived by the Geological Survey of Queensland to describe the forms in which geo-commodities are produced and sold by miners, fossickers, and extractive industries." ;
+skos:definition "The forms of geo-commodities as produced and sold by miners, quarries, fossickers and other extractive operations. The form of a metallic commodity may imply levels and methods of processing and refinement from raw material such as ore, to partially refined concentrates, to highly processed and refined bullion."@en ;
+skos:hasTopConcept gcpf:alluvial,
+gcpf:bulk-metal,
+gcpf:bullion,
+gcpf:cathode,
+gcpf:construction,
+gcpf:dimension-stone,
+gcpf:fuel,
+gcpf:gemstone,
+gcpf:concentrate,
+gcpf:non-metal,
+gcpf:ore,
+gcpf:sulphate ;
+skos:prefLabel "Geoscience Commodity Product Forms"@en .
+
+<http://linked.data.gov.au/org/gsq>
+a sdo:Organization ;
+sdo:name "Geological Survey of Queensland" ;
+sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+gcpf:alluvial a skos:Concept ;
+skos:prefLabel "Alluvial Metal"@en ;
+skos:definition "A metallic product consisting of the commodity in its natural alluvial state separated from its host material or as unconsolidated sediment hosting the target commodity."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:bulk-metal a skos:Concept ;
+skos:prefLabel "Bulk Metal"@en ;
+skos:definition "A product of processed and refined or undifferentiated metal(s)."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:bullion a skos:Concept ;
+skos:prefLabel "Bullion"@en ;
+skos:definition "Metal formed into bars or ingots. Typically of high purity. source: https://www.sec.gov/"@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:cathode a skos:Concept ;
+skos:prefLabel "Cathode"@en ;
+skos:definition "A metal plate, produced by electrolytic refining, which is melted into commercial shapes such as wirebars, billets, ingots, etc. source:https://www.sec.gov/"@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:construction a skos:Concept ;
+skos:prefLabel "Construction and Extractive"@en ;
+skos:definition "A broad category of particulate products used as materials for construction, landscaping, infrastructure. Excludes cut and fabricated dimension stone."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:dimension-stone a skos:Concept ;
+skos:prefLabel "Dimension Stone"@en ;
+skos:definition "Dimension stone is natural stone or rock that has been selected and fabricated (i.e., trimmed, cut, drilled, ground, or other) to specific sizes or shapes."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:fuel a skos:Concept ;
+skos:prefLabel "Fuel"@en ;
+skos:definition "A mined or extracted combustible product that is used primarily as a source of thermal energy for heating, transport, or power generation."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:gemstone a skos:Concept ;
+skos:prefLabel "Gemstone"@en ;
+skos:altLabel "Gem"@en,
+"Precious Stone"@en,
+"Jewel"@en ;
+skos:definition "A gemstone or gem (also called a precious or semi-precious stone, a fine gem, or jewel) is a piece of mineral, which, in cut and polished form, is used to make jewelry or other adornments"@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:concentrate a skos:Concept ;
+skos:prefLabel "Metal Concentrate"@en ;
+skos:definition "Metal concentrates are produced by the beneficiation, or upgrading, of ore. For example a typical copper ore would be 0.7% to 2% copper, a typical copper concentrate would grade around 25% to 35% copper."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:metallurgic a skos:Concept ;
+skos:prefLabel "Metallurgical Fuel"@en ;
+skos:definition "Combustible material used primarily as a reducing agent in the manufacture, refining, and metallurgy of saleable metals and alloys."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:non-metal a skos:Concept ;
+skos:prefLabel "Mineral and Non-Metal"@en ;
+skos:definition "Minerals, rocks, and clays used in industrial, manufacturing, agricultural, horticultural or other processes for thier physical or chemical properties, rather than any specific metal content. Distinguished by usage from gemstones, constructive aggregates, and dimmension stone. For example, this category includes industrial diamonds but not gemstone diamonds, and includes limestone as an industrial product for agriculture or as a reagent in cement making, but not as a dimension (building) stone or as limestone aggregate used as a construction material. This category includes silica sand for foundries, filters, glass-making, and ceramics, but not sand for use as a construction aggregate."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:ore a skos:Concept ;
+skos:prefLabel "Ore"@en ;
+skos:definition "A mixture of ore minerals and gangue from which at least one of the contained metals can be extracted at a profit."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
+gcpf:carbonate-ore a skos:Concept ;
+skos:prefLabel "Ore (Carbonate)"@en ;
+skos:altLabel "Carbonate Ore"@en ;
+skos:definition "A mixture of ore minerals and gangue from which at least one of the metals can be extracted at a profit where the primary economic mineral is a carbonate."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:broader gcpf:ore .
+
+gcpf:sulphide-ore a skos:Concept ;
+skos:prefLabel "Ore (Sulphide)"@en ;
+skos:altLabel "Sulphide Ore"@en,
+"Ore (Sulfide)"@en,
+"Sulfide Ore"@en ;
+skos:definition "A mixture of ore minerals and gangue from which at least one of the metals can be extracted at a profit where the primary economic mineral is a carbonate."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:broader gcpf:ore .
+
+gcpf:sulphate a skos:Concept ;
+skos:prefLabel "Sulphate"@en ;
+skos:altLabel "Sulfate"@en ;
+skos:definition "A sulphate salt of a metallic commodity. Most commonly encountered as a form of copper."@en ;
+rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-product-form> ;
+skos:inScheme <http://linked.data.gov.au/def/geo-product-form> ;
+skos:topConceptOf <http://linked.data.gov.au/def/geo-product-form> .
+
