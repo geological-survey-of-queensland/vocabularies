@@ -4,7 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <https://schema.org/> .
+@prefix sdo: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-05-20"^^xsd:date ;
+    dcterms:modified "2021-08-10"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -1371,6 +1371,30 @@ cdt:coking-coal a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "CCOK" ;
     skos:prefLabel "Coking Coal"@en .
+
+cdt:hard-coking-coal a skos:Concept ;
+    skos:broader cdt:coking-coal ;
+    skos:definition "A coal used as input in the production of strong coke. When heated in coke oven (which has an absence of oxygen), hard coking coal will swell to form coke. Source:minerals.org.au"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <https://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "HCC" ;
+    skos:prefLabel "Hard Coking Coal"@en .
+
+cdt:semi-hard-coking-coal a skos:Concept ;
+    skos:broader cdt:coking-coal ;
+    skos:definition "A coal used in coke blends along with hard coking coal that results in a coke with a greater proportion of impurities than hard coking coal alone."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <https://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "SHCC" ;
+    skos:prefLabel "Semi-Hard Coking Coal"@en .
+
+cdt:semi-soft-coking-coal a skos:Concept ;
+    skos:broader cdt:coking-coal ;
+    skos:definition "A coal used in coke blends along with hard coking coal that results in a low coke quality with more impurities. Semi-soft coking coal can also be sold as thermal coal. Source:minerals.org.au"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <https://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "SSCC" ;
+    skos:prefLabel "Semi-Soft Coking Coal"@en .
 
 cdt:pulverised-coal-injection a skos:Concept ;
     skos:altLabel "PCI"@en ;
