@@ -1,7 +1,7 @@
 @prefix rslt: <http://linked.data.gov.au/def/result-type/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <http://schema.org/> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -93,7 +93,7 @@
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 rslt:age a skos:Concept ;
     skos:definition "The time before a reference time. Commonly referenced to time before present (BP), before current era (BCE), or represented as Millions of Years Ago (Ma) in geological disciplines"@en ;
@@ -110,6 +110,30 @@ rslt:angle a skos:Concept ;
     skos:notation "rang" ;
     skos:prefLabel "Angle"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
+rslt:azimuth a skos:Concept ;
+    skos:definition "An angle in the horizontal plane relative to North. By default azimuth is relative to True North, but may also be qualified as relative to Magnetic North or Grid North"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/result-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "razi" ;
+    skos:prefLabel "Azimuth"@en ;
+    skos:broader rslt:angle .
+
+rslt:dip a skos:Concept ;
+    skos:definition "An angle in the vertrical plane relative to a horizontal reference. 90 degrees is vertical downwards, 0 degrees horizontal, -90 degrees is vertical upwards."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/result-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rdip" ;
+    skos:prefLabel "Dip"@en ;
+    skos:broader rslt:angle .
+
+rslt:inclination a skos:Concept ;
+    skos:definition "An angle in the vertrical plane relative to a reference vector parallel to the force of gravity, i.e. downwards. 0 degrees is vertical downwards, 90 degrees horizontal, 180 degrees is vertical upwards."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/result-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rinc" ;
+    skos:prefLabel "Inclination"@en ;
+    skos:broader rslt:angle .
 
 rslt:api-gravity a skos:Concept ;
     skos:altLabel "Oil Gravity"@en ;
