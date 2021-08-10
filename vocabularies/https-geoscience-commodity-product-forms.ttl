@@ -4,7 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <https://schema.org/> .
+@prefix sdo: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -14,7 +14,7 @@ skos:ConceptScheme ;
 dcterms:created "2021-07-29"^^xsd:date ;
 dcterms:creator <https://linked.data.gov.au/org/gsq> ;
 dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
-dcterms:modified "2021-07-29"^^xsd:date ;
+dcterms:modified "2021-08-10"^^xsd:date ;
 dcterms:provenance "Derived by the Geological Survey of Queensland to describe the forms in which geo-commodities are produced and sold by miners, fossickers, and extractive industries." ;
 skos:definition "The forms of geo-commodities as produced and sold by miners, quarries, fossickers and other extractive operations. The form of a metallic commodity may imply levels and methods of processing and refinement from raw material such as ore, to partially refined concentrates, to highly processed and refined bullion."@en ;
 skos:hasTopConcept gcpf:alluvial,
@@ -88,8 +88,8 @@ skos:inScheme <https://linked.data.gov.au/def/geo-product-form> ;
 skos:topConceptOf <https://linked.data.gov.au/def/geo-product-form> .
 
 gcpf:fuel a skos:Concept ;
-skos:prefLabel "Fuel"@en ;
-skos:definition "A mined or extracted combustible product that is used primarily as a source of thermal energy for heating, transport, or power generation."@en ;
+skos:prefLabel "Coal"@en ;
+skos:definition "A mined or extracted combustible product that is used primarily as a source of thermal energy for heating, transport, or power generation; or as a reducing agent in the manufacture, refining, and metallurgy of saleable metals and alloys."@en ;
 rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-product-form> ;
 skos:inScheme <https://linked.data.gov.au/def/geo-product-form> ;
 skos:topConceptOf <https://linked.data.gov.au/def/geo-product-form> .
@@ -107,13 +107,6 @@ skos:topConceptOf <https://linked.data.gov.au/def/geo-product-form> .
 gcpf:concentrate a skos:Concept ;
 skos:prefLabel "Metal Concentrate"@en ;
 skos:definition "Metal concentrates are produced by the beneficiation, or upgrading, of ore. For example a typical copper ore would be 0.7% to 2% copper, a typical copper concentrate would grade around 25% to 35% copper."@en ;
-rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-product-form> ;
-skos:inScheme <https://linked.data.gov.au/def/geo-product-form> ;
-skos:topConceptOf <https://linked.data.gov.au/def/geo-product-form> .
-
-gcpf:metallurgic a skos:Concept ;
-skos:prefLabel "Metallurgical Fuel"@en ;
-skos:definition "Combustible material used primarily as a reducing agent in the manufacture, refining, and metallurgy of saleable metals and alloys."@en ;
 rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-product-form> ;
 skos:inScheme <https://linked.data.gov.au/def/geo-product-form> ;
 skos:topConceptOf <https://linked.data.gov.au/def/geo-product-form> .
