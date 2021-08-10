@@ -111,6 +111,30 @@ rslt:angle a skos:Concept ;
     skos:prefLabel "Angle"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/result-type> .
 
+rslt:azimuth a skos:Concept ;
+    skos:definition "An angle in the horizontal plane relative to North. By default azimuth is relative to True North, but may also be qualified as relative to Magnetic North or Grid North"@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/result-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/result-type> ;
+    skos:notation "razi" ;
+    skos:prefLabel "Azimuth"@en ;
+    skos:broader rslt:angle .
+
+rslt:dip a skos:Concept ;
+    skos:definition "An angle in the vertrical plane relative to a horizontal reference. 90 degrees is vertical downwards, 0 degrees horizontal, -90 degrees is vertical upwards."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/result-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/result-type> ;
+    skos:notation "rdip" ;
+    skos:prefLabel "Dip"@en ;
+    skos:broader rslt:angle .
+
+rslt:inclination a skos:Concept ;
+    skos:definition "An angle in the vertrical plane relative to a reference vector parallel to the force of gravity, i.e. downwards. 0 degrees is vertical downwards, 90 degrees horizontal, 180 degrees is vertical upwards."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/result-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/result-type> ;
+    skos:notation "rinc" ;
+    skos:prefLabel "Inclination"@en ;
+    skos:broader rslt:angle .
+
 rslt:api-gravity a skos:Concept ;
     skos:altLabel "Oil Gravity"@en ;
     skos:definition "A measure of how heavy or light a petroleum liquid is compared to water: if its API gravity is greater than 10, it is lighter and floats on water; if less than 10, it is heavier and sinks."@en ;
