@@ -12,7 +12,7 @@
 <https://linked.data.gov.au/def/georesource-report> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-09"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-06-29"^^xsd:date ;
+    dcterms:modified "2021-08-20"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Developed by the Geological Survey of Queensland." ;
     skos:definition "The types of reports administered by the GeoResources Division of the Department of Resources."@en ;
@@ -604,19 +604,19 @@ grt:presentation a skos:Concept ;
     skos:topConceptOf <https://linked.data.gov.au/def/georesource-report> .
 
 grt:production-petroleum a skos:Concept ;
-    skos:definition "A report detailing the quantity, quality and other parameters of the production of petroleum and gas products from an ATP as required by the Petroleum and Gas Act and General Provisions. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline."@en ;
+    skos:definition "A report detailing the quantity, quality and other parameters of the production of petroleum and gas products from an ATP as required by the Petroleum and Gas Act and General Provisions. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline. The legacy format of reporting prior to introduction of the data submission templates and GSQ Lodgement Portal."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/georesource-report> ;
     skos:inScheme <https://linked.data.gov.au/def/georesource-report> ;
     skos:notation "PROD" ;
-    skos:prefLabel "Production (Petroleum)"@en ;
+    skos:prefLabel "Production (Petroleum) - Legacy Format"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/georesource-report> .
 
 grt:reserves-petroleum a skos:Concept ;
-    skos:definition "A report detailing the quantity, quality and other parameters of the reserves of petroleum and gas on an ATP, as required by the Petroleum and Gas Act and General Provisions. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline."@en ;
+    skos:definition "A report detailing the quantity, quality and other parameters of the reserves of petroleum and gas on an ATP, as required by the Petroleum and Gas Act and General Provisions. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline. The legacy format of reporting prior to introduction of the data submission templates and GSQ Lodgement Portal."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/georesource-report> ;
     skos:inScheme <https://linked.data.gov.au/def/georesource-report> ;
     skos:notation "RESERV" ;
-    skos:prefLabel "Reserves (Petroleum)"@en ;
+    skos:prefLabel "Reserves (Petroleum) - Legacy Format"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/georesource-report> .
 
 grt:queensland-government-mining-journal a skos:Concept ;
@@ -1010,6 +1010,8 @@ grt:water-reports a skos:Collection ;
     skos:member  grt:hydraulic-fracturing-activity-report,
         grt:petroleum-report-production-information,
         grt:petroleum-report-resource-and-reserves-information,
+        grt:production-petroleum,
+        grt:reserves-petroleum,
         grt:scientific-or-technical-survey-report,
         grt:seismic-survey-report-final,
         grt:seismic-survey-report-other,
