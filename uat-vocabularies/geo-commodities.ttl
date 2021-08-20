@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-08-10"^^xsd:date ;
+    dcterms:modified "2021-08-20"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -2171,6 +2171,26 @@ cdt:mica a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "MI" ;
     skos:prefLabel "Mica"@en .
+
+cdt:sheet-mica a skos:Concept ;
+    skos:broader cdt:mica ;
+    skos:definition """Sheet mica occurs in crystal forms (known as ‘books’) which are several centimetres in diameterand can be split into thin sheets. and are considerably less abundant than flake and scrap mica."""@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "SHMI" ;
+    skos:prefLabel "Sheet Mica"@en .
+
+cdt:scrap-mica a skos:Concept ;
+    skos:altLabel "Flake Mica"@en,
+        "Ground Mica"@en,
+        "Flake or Scrap Mica"@en,
+        "Flake, Scrap or Ground Mica"@en ;
+    skos:broader cdt:mica ;
+    skos:definition """Flake, scrap or ground mica is fine-grained mica ground for use in a wide variety of applications. In the past, flake mica was produced as a waste product from processing sheet mica hence the name ‘scrap mica’. However, today flake mica is largely a by-product from mining pegmatites or alaskites for feldspar and other minerals."""@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "SCMI" ;
+    skos:prefLabel "Scrap Mica"@en .
 
 cdt:mineral-sand a skos:Concept ;
     skos:altLabel "Mineral Sands"@en,
