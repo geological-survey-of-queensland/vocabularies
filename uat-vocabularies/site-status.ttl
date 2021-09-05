@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/site-status> a owl:Ontology, skos:ConceptScheme ;
     dcterms:created "2020-02-28"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-11-27"^^xsd:date ;
+    dcterms:modified "2021-09-06"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "The status of an individual site (e.g. mine, well) or single activity (e.g.survey) describing the current state within the lifecycle from proposed through operational through to abandonment. Lifecycle stages are commonly related to regulatory conditions administered by government agencies."@en ;
@@ -150,6 +150,13 @@ ststs:inactive a skos:Concept ;
     skos:prefLabel "Inactive"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
 
+ststs:rehabilitation a skos:Concept ;
+    skos:definition "The stage in the life-cycle of a project or mine where the resources have been extracted and the site is being rehabilitated back to its original condition or an acceptable environmental standard."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Rehabilitation"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
+
 ststs:borehole-status a skos:Collection ;
     skos:definition "Project statuses pertaining to the construction, usage, maintenance and abandonment of a well or bore."@en ;
     skos:member ststs:cased-and-suspended,
@@ -176,5 +183,6 @@ ststs:minocc a skos:Collection ;
         ststs:never-used,
         ststs:on-hold,
         ststs:proposed,
+        ststs:rehabilitation,
         ststs:unknown ;
     skos:prefLabel "minocc"@en .
