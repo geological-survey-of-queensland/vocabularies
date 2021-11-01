@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-08-20"^^xsd:date ;
+    dcterms:modified "2021-11-01"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -699,6 +699,8 @@ cdt:industrial-material a skos:Concept ;
     skos:prefLabel "Industrial Material"@en .
 
 cdt:aggregate a skos:Concept ;
+    skos:altLabel "Basalt Aggregate"@en,
+         "Basalt (Aggregate)"@en ;
     skos:broader cdt:industrial-material ;
     skos:definition "Broad category for coarse particulate material used in construction, including sand, gravel, crushed stone, waste rock, recycled concrete and geosynthetic aggregates."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/aggregate> ;
@@ -1234,6 +1236,14 @@ cdt:diatomite a skos:Concept ;
     skos:notation "DIAT" ;
     skos:prefLabel "Diatomite"@en .
 
+cdt:guano a skos:Concept ;
+    skos:broader cdt:industrial-rock ;
+    skos:definition "The excrement of seabirds and bats, used as fertilizer."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <https://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "GUAN" ;
+    skos:prefLabel "Guano"@en .
+
 cdt:laterite a skos:Concept ;
     skos:broader cdt:industrial-rock ;
     skos:definition "A highly weathered, generally indurated, red subsoil nearly devoid of primary silicates, rich in hydrous iron oxides, +/- kaolinite +/- quartz +/- gibbsite. Red residual soil developed in humid, tropical, and subtropical regions of good drainage. It is leached of silica and contains concentrations particularly of iron oxides and hydroxides and aluminum hydroxides. It may be an ore of iron, aluminum, manganese, or nickel. Adj. lateritic. Synonym of: latosol"@en ;
@@ -1441,7 +1451,7 @@ cdt:semi-anthracite-fuel-coal a skos:Concept ;
     skos:prefLabel "Semi-Anthracite Fuel Coal"@en .
 
 cdt:sub-bituminous-fuel-coal a skos:Concept ;
-    skos:altLabel "sub-bituminous coal"@en ;
+    skos:altLabel "Sub-bituminous coal"@en ;
     skos:broader cdt:thermal-coal ;
     skos:definition "A coal used for generation of thermal energy with A coal with properties intermediate between lignite and bituminous coal."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
@@ -1450,7 +1460,7 @@ cdt:sub-bituminous-fuel-coal a skos:Concept ;
     skos:prefLabel "Sub-Bituminous Fuel Coal"@en .
 
 cdt:boghead-coal a skos:Concept ;
-    skos:altLabel "torbanite"@en ;
+    skos:altLabel "Torbanite"@en ;
     skos:broader cdt:coal ;
     skos:definition "A variety of fine-grained black oil shale. It is characterized by a high percentage of algal remains and volatile matter. Upon distillation it gives exceptionally high yields of tar and oil."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
@@ -1459,7 +1469,7 @@ cdt:boghead-coal a skos:Concept ;
     skos:prefLabel "Boghead Coal"@en .
 
 cdt:brown-coal a skos:Concept ;
-    skos:altLabel "lignite"@en ;
+    skos:altLabel "Lignite"@en ;
     skos:broader cdt:coal ;
     skos:definition "Lignite, often referred to as brown coal, is a soft brown combustible sedimentary rock that is formed from naturally compressed peat. It is considered the lowest rank of coal due to its relatively low heat content. It is mined in Bulgaria, Kosovo, Greece, Germany, Poland, Serbia, Russia, Turkey, the United States, Canada, India, Australia and many other parts of Europe and it is used almost exclusively as a fuel for steam-electric power generation. 25.7% of Germany's electricity comes from lignite power plants, while in Greece lignite provides about 50% of its power needs."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/brown-coal> ;
@@ -1488,8 +1498,7 @@ cdt:petroleum a skos:Concept ;
     skos:prefLabel "Petroleum"@en .
 
 cdt:gaseous-hydrocarbons a skos:Concept ;
-    skos:altLabel "Gaseous Hydrocarbons"@en,
-        "Natural gas"@en ;
+    skos:altLabel "Gaseous Hydrocarbons"@en ;
     skos:broader cdt:petroleum ;
     skos:definition "A hydrocarbon gas mixture consisting primarily of methane, but commonly includes varying amounts of other higher alkanes and even a lesser percentage of carbon dioxide, nitrogen, and hydrogen sulfide."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/gaseous-hydrocarbons> ;
@@ -1505,7 +1514,7 @@ cdt:coal-bed-methane a skos:Concept ;
         "CBM"@en,
         "CSM"@en ;
     skos:broader cdt:gaseous-hydrocarbons ;
-    skos:definition "Coal bed methane (CBM) or coal seam gas (CSG) is a form of natural gas extracted from coal beds. Coal bed methane contains very little heavier hydrocarbons such as propane or butane, and no natural-gas condensate. It often contains up to a few percent carbon dioxide. Gas is primarily contained within the reservoir by the adsorption of gas onto the surface of the coal and held in place by hydrostatic pressure."@en ;
+    skos:definition "Coal bed methane (CBM) or coal seam gas (CSG) is a form of hydrocarbon gas extracted from coal beds. Coal bed methane contains very little heavier hydrocarbons such as propane or butane, and no natural-gas condensate. It often contains up to a few percent carbon dioxide. Gas is primarily contained within the reservoir by the adsorption of gas onto the surface of the coal and held in place by hydrostatic pressure."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/coal-bed-methane> ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <https://linked.data.gov.au/def/geo-commodities> ;
@@ -1513,7 +1522,7 @@ cdt:coal-bed-methane a skos:Concept ;
     skos:prefLabel "Coal Seam Gas"@en .
 
 cdt:gas-hydrate a skos:Concept ;
-    skos:altLabel "methane clathrate"@en ;
+    skos:altLabel "Methane Clathrate"@en ;
     skos:broader cdt:gaseous-hydrocarbons ;
     skos:definition "Gas hydrate, is a solid clathrate compound (more specifically, a clathrate hydrate) in which a large amount of methane is trapped within a crystal structure of water, forming a solid similar to ice. Significant deposits of methane clathrate have been found under sediments on the ocean floors of the Earth."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/gas-hydrate> ;
@@ -1523,6 +1532,8 @@ cdt:gas-hydrate a skos:Concept ;
     skos:prefLabel "Gas Hydrate"@en .
 
 cdt:reservoir-gas a skos:Concept ;
+    skos:altLabel "Gas (Natural)"@en,
+        "Reservoir gas"@en ;
     skos:hiddenLabel "Conventional Gas"@en ;
     skos:broader cdt:gaseous-hydrocarbons ;
     skos:definition "Hydrocarbon gas derived from non-coal seam reservoirs, i.e. conventional clastic or carbonate underground rock reservoirs, tight gas reservoirs, shale reservoirs, and basin-centred gas plays. Typically containing methane with lesser amounts of ethane, propane, butane and pentane. Natural gas is commonly associated with liquid petroleum in the reservoirs but is extracted and managed differently. Gas is primarily contained in the reservoir within pore space and held in place by a physical barrier such as an impermeable seal rock."@en ;
@@ -1530,10 +1541,9 @@ cdt:reservoir-gas a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <https://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "RGAS" ;
-    skos:prefLabel  "Reservoir gas"@en .
+    skos:prefLabel "Natural Gas"@en .
 
 #cdt:shale-gas a skos:Concept ;
-#    skos:altLabel "gas shale"@en ;
 #    skos:broader cdt:gaseous-hydrocarbons ;
 #    skos:definition "Natural gas produced from gas shale formations (Schlumberger Oilfield Glossary)."@en ;
 #    rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
@@ -1586,7 +1596,8 @@ cdt:lpg a skos:Concept ;
     skos:prefLabel "Liquid Petroleum Gas"@en .
 
 cdt:oil a skos:Concept ;
-    skos:altLabel "crude oil"@en ;
+    skos:altLabel "Crude oil"@en,
+        "Mineral Oil"@en ;
     skos:broader cdt:liquid-hydrocarbons ;
     skos:definition "Oil or petroleum consists of hydrocarbons of various molecular weights such as alkanes (pentane, hexane, heptane, octane) and other liquid organic compounds, typically recovered from drilling of underground reservoirs."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/oil> ;
@@ -1788,7 +1799,9 @@ cdt:chrysotile a skos:Concept ;
     skos:prefLabel "Chrysotile"@en .
 
 cdt:baryte a skos:Concept ;
-    skos:altLabel "baryte"@en ;
+    skos:altLabel "Baryte"@en,
+         "Barytes"@en,
+         "Barites"@en ;
     skos:broader cdt:industrial-mineral ;
     skos:definition "An orthorhombic barium sulfate mineral BaSO4 used as a filler or extender, an addition to industrial products, or a weighting agent in petroleum well drilling mud."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/baryte> ;
@@ -1853,6 +1866,15 @@ cdt:brick-clay a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "BKCY" ;
     skos:prefLabel "Brick clay"@en .
+
+cdt:expanded-clay a skos:Concept ;
+    skos:altLabel "Bloated clay"@en ;
+    skos:broader cdt:clay ;
+    skos:definition "Clay which has been heated to a semiplastic condition and expanded to many times its original volume by the formation of internal gas. Used as a lightweight aggregate."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <https://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "EXCY" ;
+    skos:prefLabel "Expanded clay"@en .
 
 cdt:fire-clay a skos:Concept ;
     skos:altLabel "firing-clay"@en,
@@ -1932,6 +1954,7 @@ cdt:montmorillonite a skos:Concept ;
     skos:prefLabel "Montmorillonite"@en .
 
 cdt:sepiolite a skos:Concept ;
+    skos:altLabel "Meerschaum"@en ;
     skos:broader cdt:clay ;
     skos:definition "Sepiolite is used in oil drilling, for cat litter and in a solid form for carving, where it is known as Meerschaum. In construction, sepiolite can be used in lime mortars as water reservoir."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sepiolite> ;
@@ -1941,6 +1964,7 @@ cdt:sepiolite a skos:Concept ;
     skos:prefLabel "Sepiolite"@en .
 
 cdt:corundum a skos:Concept ;
+    skos:altLabel "Emery"@en ;
     skos:broader cdt:industrial-mineral ;
     skos:definition "Trigonal form of aluminium oxide Al2O3 with exceptional hardness used as an abrasive in sandpaper to machinery."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/corundum> ;
@@ -2024,6 +2048,7 @@ cdt:gypsum a skos:Concept ;
 
 cdt:salt a skos:Concept ;
     skos:altLabel "halite"@en,
+        "brine"@en,
         "rock salt"@en ;
     skos:broader cdt:evaporite ;
     skos:definition "Common salt is a mineral substance composed primarily of sodium chloride (NaCl), a chemical compound belonging to the larger class of ionic salts; salt in its natural form as a crystalline mineral is known as rock salt or halite. Salt is present in vast quantities in the sea where it is the main mineral constituent, with the open ocean having about 35 grams (1.2 oz) of solids per litre, a salinity of 3.5%."@en ;
@@ -2080,8 +2105,8 @@ cdt:orthoclase a skos:Concept ;
     skos:prefLabel "Orthoclase"@en .
 
 cdt:fluorite a skos:Concept ;
-    skos:altLabel "fluorspar"@en,
-        "flurospar"@en ;
+    skos:altLabel "Fluorspar"@en,
+        "Flurospar"@en ;
     skos:broader cdt:industrial-mineral ;
     skos:definition "Fluorite is a mineral with a veritable bouquet of brilliant colours. Fluorite is well known and prized for its glassy luster and rich variety of colours. The range of common colours for fluorite starting from the hallmark colour purple, then blue, green, yellow, colourless, brown, pink, black and reddish orange is amazing and is only rivaled in colour range by quartz."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/fluorite> ;
@@ -2197,7 +2222,10 @@ cdt:mineral-sand a skos:Concept ;
         "Heavy Mineral Sand"@en,
         "Heavy Mineral Sands"@en,
         "Mineral Sand - Heavy"@en,
-        "Mineral Sands - Heavy"@en ;
+        "Mineral Sands - Heavy"@en,
+        "Beach Sand"@en,
+        "Beach Sands"@en ;
+    skos:hiddenLabel "Sands"@en ;
     skos:broader cdt:industrial-mineral ;
     skos:definition "Heavy minerals that accumulate and concentrate in placer deposits. Mineral sands are an important source of  zirconium, titanium, thorium, tungsten, rare-earth elements, the industrial minerals diamond, sapphire, garnet, and occasionally precious metals or gemstones."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geo-commodities> ;
@@ -2206,6 +2234,8 @@ cdt:mineral-sand a skos:Concept ;
     skos:prefLabel "Mineral Sand"@en .
 
 cdt:molybdenite a skos:Concept ;
+    skos:altLabel "Lead/Molybdate"@en,
+        "Molybdate"@en ;
     skos:broader cdt:industrial-mineral ;
     skos:definition "Molybdenite is a very soft metallic mineral. It can be easily confused with graphite, but not with many other minerals. Graphite has a darker black-silver colour and a black-gray to brown-gray streak, whereas molybdenite has a bluish-silver colour and streak."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/molybdenite> ;
@@ -2324,7 +2354,8 @@ cdt:filter-sand a skos:Concept ;
     skos:prefLabel "Filter Sand"@en .
 
 cdt:foundry-sand a skos:Concept ;
-    skos:altLabel "molding sand"@en ;
+    skos:altLabel "Molding Sand"@en,
+        "Moulding Sand"@en ;
     skos:broader cdt:silica-sand ;
     skos:definition "Sand that when moistened or oiled tends to pack well and hold its shape. It is used in the process of sand casting."@en ;
     skos:scopeNote "Used in the industrial process of sand-casting, but not used as a building, construction, or landscaping aggregate. Therefore foundry sand is considered an industrial mineral and not a type of sand within the aggregate class."@en ;
@@ -2594,7 +2625,7 @@ cdt:iron-oxide a skos:Concept ;
     skos:prefLabel "Iron Oxide"@en .
 
 cdt:magnetite a skos:Concept ;
-    skos:altLabel "lodestone"@en ;
+    skos:altLabel "Lodestone"@en ;
     skos:broader cdt:industrial-mineral,
         cdt:iron-oxide ;
     skos:definition "Magnetite is an oxide of iron (as is hematite). It is not a component of ordinary rust, although it can form as iron oxidizes in a dry environment."@en ;
@@ -2605,6 +2636,8 @@ cdt:magnetite a skos:Concept ;
     skos:prefLabel "Magnetite"@en .
 
 cdt:ochre a skos:Concept ;
+    skos:altLabel "Ochre and Pigments"@en,
+         "Ochre & Pigments"@en  ;
     skos:broader cdt:iron-oxide ;
     skos:definition "Ochre is a natural earth pigment containing hydrated iron oxide, which ranges in colour from yellow to deep orange or brown. It is also the name of the colours produced by this pigment, especially a light brownish-yellow. A variant of ochre containing a large amount of hematite, or dehydrated iron oxide, has a reddish tint known as 'red ochre'."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/ochre> ;
@@ -2727,9 +2760,10 @@ cdt:zirconia a skos:Concept ;
     skos:prefLabel "Zirconia"@en .
 
 cdt:lime a skos:Concept ;
-    skos:altLabel "calcium hydroxide"@en,
-        "slaked lime"@en,
-        "earthy lime"@en ;
+    skos:altLabel "Calcium hydroxide"@en,
+        "Slaked lime"@en,
+        "Earthy lime"@en,
+        "Chalk"@en ;
     skos:broader cdt:chemical-compound-product ;
     skos:definition "Lime is calcium oxide or calcium hydroxide, but the category is commonly applied to calcium-containing inorganic material in which carbonates, oxides and hydroxides predominate."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/lime> ;
@@ -3456,7 +3490,8 @@ cdt:tin a skos:Concept ;
     skos:prefLabel "Tin (Sn)"@en .
 
 cdt:tungsten a skos:Concept ;
-    skos:altLabel "wolfram"@en,
+    skos:altLabel "Wolfram"@en,
+        "Wolfram (W)"@en,
         "Tungsten"@en ;
     skos:broader cdt:metal ;
     skos:definition "Tungsten, also known as wolfram, is a chemical element with the chemical symbol W and atomic number 74. The word tungsten comes from the Swedish language tung sten directly translatable to heavy stone."@en ;
