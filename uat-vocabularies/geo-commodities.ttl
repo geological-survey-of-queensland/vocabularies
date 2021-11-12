@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-11-01"^^xsd:date ;
+    dcterms:modified "2021-11-12"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -767,9 +767,6 @@ cdt:coarse-aggregate a skos:Concept ;
         "Unknown Aggregate"@en,
         "Unspecified Aggregate"@en,
         "General Aggregate"@en,
-        "Other Coarse Aggregate"@en,
-        "Unknown Coarse Aggregate"@en,
-        "Unspecified Coarse Aggregate"@en,
         "General Coarse Aggregate"@en ;
     skos:broader cdt:crushed-rock ;
     skos:definition "Crushed rock with an average particle size greater than 5mm."@en ;
@@ -779,7 +776,8 @@ cdt:coarse-aggregate a skos:Concept ;
     skos:prefLabel "Coarse Aggregate"@en .
 
 cdt:asphalt-aggregate a skos:Concept ;
-    skos:altLabel "Bituminous Aggregate"@en ;
+    skos:altLabel "Bituminous Aggregate"@en,
+         "Asphalt (bituminous aggregate)"@en ;
     skos:broader cdt:coarse-aggregate ;
     skos:definition "A granular material produced from rock deposits. Supplied as single sized material typically 20mm, 14mm, 10mm, or 7mm.  Specification requirements include grading, stone, Los Angeles abrasion (LA) and polished stone value (PSV). Crushed and screened aggregate for pre-mixing with bitumen. Asphalt applied as hotmix."@en ;
     rdfs:seeAlso <http://www.boral.com.au/products/quarry-materials/aggregates/asphalt-aggregates> ;
@@ -805,19 +803,33 @@ cdt:decorative-crushed-rock a skos:Concept ;
     skos:notation "DCRK" ;
     skos:prefLabel "Decorative Crushed Rock"@en .
 
+cdt:other-coarse-aggregate a skos:Concept ;
+    skos:broader cdt:coarse-aggregate ;
+    skos:altLabel "Other coarse aggregate"@en,
+        "Unknown coarse aggregate"@en,
+        "Unspecified coarse aggregate"@en,    
+        "Other Coarse Aggregate"@en,
+        "Unknown Coarse Aggregate"@en,
+        "Unspecified Coarse Aggregate"@en ;
+    skos:definition "Natural coarse aggregate for sales of unknown use and sales that are explicitly not described by any other coarse aggregate sub-category."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "OTCA" ;
+    skos:prefLabel "Other and/or unspecified coarse aggregate"@en .
+
 cdt:rail-ballast a skos:Concept ;
     skos:altLabel "Railway Aggregate"@en,
         "Railway Base"@en,
         "Rail Aggregate"@en,
         "Rail Base"@en,
-        "Railway Ballast"@en ;
+        "Rail Ballast"@en ;
     skos:broader cdt:coarse-aggregate ;
     skos:definition "Single size aggregate crushed and screened for use in rail track construction. Generally has a nominal size of 63mm or 53mm. Can be used as a very coarse drainage material."@en ;
     rdfs:seeAlso <http://www.boral.com.au/products/quarry-materials/aggregates/rail-ballast> ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "RAIL" ;
-    skos:prefLabel "Rail Ballast"@en .
+    skos:prefLabel "Railway Ballast"@en .
 
 cdt:sealing-aggregate a skos:Concept ;
     skos:broader cdt:coarse-aggregate ;
@@ -893,14 +905,15 @@ cdt:crushed-gravel a skos:Concept ;
 
 cdt:decorative-gravel a skos:Concept ;
     skos:altLabel "Landscaping Gravel"@en,
-        "Gardening Gravel"@en ;
+        "Gardening Gravel"@en,
+        "Decorative Gravel"@en ;
     skos:broader cdt:river-gravel,
         cdt:decorative-aggregate ;
     skos:definition "River gravel rounded, washed and screened to specifications. For use as exposed aggregate or terrazzo. Commonly used in landscaping and gardening."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "DCGV" ;
-    skos:prefLabel "Decorative Gravel"@en .
+    skos:prefLabel "Decorative River Gravel"@en .
 
 cdt:unprocessed-gravel a skos:Concept ;
     skos:broader cdt:river-gravel,
@@ -912,20 +925,18 @@ cdt:unprocessed-gravel a skos:Concept ;
     skos:prefLabel "Unprocessed River Gravel"@en .
 
 cdt:ridge-gravel a skos:Concept ;
-    skos:altLabel "Other Gravel"@en ;
+    skos:altLabel "Ridge Gravel"@en,
+        "Other Gravel"@en ;
     skos:broader cdt:gravel,
         cdt:unprocessed-construction-material  ;
     skos:definition "Low grade, unprocessed gravel-sized material. Pisolitic material and gravel derived from weathering processes (ridge gravel), accommodates parocial and historical meanings of the term gravel that do not conform to the definition of river gravel."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "RDGV" ;
-    skos:prefLabel "Ridge Gravel"@en .
+    skos:prefLabel "Other Non-River Gravel"@en .
 
 cdt:sand a skos:Concept ;
-    skos:altLabel "Other Sand"@en,
-        "Unknown Sand"@en,
-        "Unspecified Sand"@en,
-        "General Sand"@en ;
+    skos:altLabel "General Sand"@en ;
     skos:broader cdt:sand-and-gravel;
     skos:definition "A sand-grade clastic-sediment. A rock fragment or detrital particle smaller than a granule and larger than a coarse silt grain, having a diameter in range of 1/16 to 2 mm (62 to 2,000 mu m, or 0.0025 to 0.08 in, or 4 to 1 phi units, or a size between that at the lower limit of visibility of an individual particle with the unaided eye and that of the head of a small wooden match), being somewhat rounded by abrasion in the course of transport. In Great Britain, the range of 0.1 to 1 mm has been used.  Ref: AGI."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/sand> ;
@@ -944,7 +955,7 @@ cdt:asphalt-sand a skos:Concept ;
     skos:prefLabel "Asphalt Sand"@en .
 
 cdt:horticultural-sand a skos:Concept ;
-    skos:altLabel "Soil, loam & garden sand"@en,
+    skos:altLabel "Horticultural Sand"@en,
         "Soil"@en,
         "Loam"@en,
         "Horticultural Aggregates"@en,
@@ -954,7 +965,7 @@ cdt:horticultural-sand a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "HTSD" ;
-    skos:prefLabel "Horticultural Sand"@en .
+    skos:prefLabel "Soil, loam & garden sand"@en .
 
 cdt:mortar-sand a skos:Concept ;  
     skos:broader cdt:sand ;
@@ -964,14 +975,25 @@ cdt:mortar-sand a skos:Concept ;
     skos:notation "MRSD" ;
     skos:prefLabel "Mortar Sand"@en .
 
+cdt:other-sand a skos:Concept ;  
+    skos:altLabel "Other Sand"@en,
+        "Unknown Sand"@en,
+        "Unspecified Sand"@en ;
+    skos:broader cdt:sand ;
+    skos:definition "Natural sand for sales of unknown use and sales that are explicitly not described by any other Natural/Construction Sand sub-category."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "OTSD" ;
+    skos:prefLabel "Other and/or unspecified sand"@en .
+
 cdt:packing-sand a skos:Concept ;
-    skos:altLabel "Filling sand"@en;    
+    skos:altLabel "Packing Sand"@en;    
     skos:broader cdt:sand ;
     skos:definition "Sand, used for infill or packing. Lower grade and usually unprocessed."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "PKSD" ;
-    skos:prefLabel "Packing Sand"@en .
+    skos:prefLabel "Filling sand"@en .
 
 cdt:plaster-sand a skos:Concept ;  
     skos:broader cdt:sand ;
@@ -1026,7 +1048,8 @@ cdt:roadbase a skos:Concept ;
         "Road Sub base"@en,
         "Prepared Road Base"@en,
         "Prepared Road Sub-base"@en,
-        "Road Base and Sub Base"@en ;
+        "Road Base and Sub Base"@en,
+        "Prepared road base and sub-base"@en ;
     skos:broader cdt:aggregate ;
     skos:definition "Aggregate that has been prepared for use by in roadbase or sub-base through blending and grading."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
@@ -1035,6 +1058,7 @@ cdt:roadbase a skos:Concept ;
     skos:prefLabel "Road Base"@en .
 
 cdt:unprocessed-construction-material a skos:Concept ;
+    skos:altLabel "Unprocessed Construction Materials"@en ;
     skos:broader cdt:aggregate ;
     skos:definition "Unprocessed material such as weathered rock for road base & land fill"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
@@ -1364,31 +1388,54 @@ cdt:black-coal a skos:Concept ;
     skos:notation "CB" ;
     skos:prefLabel "Black Coal"@en .
 
-cdt:metallurgical-coal a skos:Concept ;
-    skos:altLabel "Met Coal"@en,
-        "Metallurgic Coal"@en ;
-    skos:broader cdt:black-coal ;
-    skos:definition "Coals which are used in refining or alloying processes."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
-    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
-    skos:notation "METC" ;
-    skos:prefLabel "Metallurgical Coal"@en .
-
 cdt:coking-coal a skos:Concept ;
-    skos:broader cdt:metallurgical-coal ;
-    skos:definition "A grade of coal that can be used to produce good-quality coke. Coke is an essential fuel and reactant in the blast furnace process for primary steelmaking."@en ;
+    skos:altLabel "Met Coal"@en,
+        "Metallurgic Coal"@en,
+        "Metallurgical Coal"@en ;
+    skos:broader cdt:black-coal ;
+    skos:definition "Coals which are used in refining or alloying processes. A grade of coal that can be used to produce good-quality coke. Coke is an essential fuel and reactant in the blast furnace process for primary steel making."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "CCOK" ;
     skos:prefLabel "Coking Coal"@en .
 
 cdt:hard-coking-coal a skos:Concept ;
+    skos:altLabel "Hard Coking Coal"@en,
+        "Second-Tier Hard Coking Coal"@en,
+        "Standard Hard Coking Coal"@en ;
     skos:broader cdt:coking-coal ;
     skos:definition "A coal used as input in the production of strong coke. When heated in coke oven (which has an absence of oxygen), hard coking coal will swell to form coke. Source:minerals.org.au"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "HCC" ;
-    skos:prefLabel "Hard Coking Coal"@en .
+    skos:prefLabel "Standard/Second-Tier Hard Coking Coal"@en .
+
+cdt:premium-hard-coking-coal a skos:Concept ;
+    skos:broader cdt:coking-coal ;
+    skos:definition "A coal used as input in the production of strong coke with a high (typically >60%) Coke Strength After Reaction (CSR) index and high (7+) Crucible Swelling Number (CSN). When heated in coke oven (which has an absence of oxygen), hard coking coal will swell to form coke. Source:minerals.org.au"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "PHCC" ;
+    skos:prefLabel "Premium Hard Coking Coal"@en .
+
+cdt:lv-premium-hard-coking-coal a skos:Concept ;
+    skos:altLabel "Low-Volatile Premium Hard Coking Coal"@en ;
+    skos:broader cdt:premium-hard-coking-coal ;
+    skos:definition "A premium hard coking coal with low (<21.5%) volatile matter and very high (>65%) Coke Strength After Reaction (CSR) index"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "LVPHCC" ;
+    skos:prefLabel "Low-Vol Premium Hard Coking Coal"@en .
+
+cdt:mv-premium-hard-coking-coal a skos:Concept ;
+    skos:altLabel "Mid-Volatile Premium Hard Coking Coal"@en,
+        "Middle-Volatile Premium Hard Coking Coal"@en ;
+    skos:broader cdt:premium-hard-coking-coal ;
+    skos:definition "A premium hard coking coal with medium (19-23%) volatile matter and high (60-65%) Coke Strength After Reaction (CSR) index"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "MVPHCC" ;
+    skos:prefLabel "Mid-Vol Premium Hard Coking Coal"@en .
 
 cdt:semi-hard-coking-coal a skos:Concept ;
     skos:broader cdt:coking-coal ;
@@ -1407,13 +1454,34 @@ cdt:semi-soft-coking-coal a skos:Concept ;
     skos:prefLabel "Semi-Soft Coking Coal"@en .
 
 cdt:pulverised-coal-injection a skos:Concept ;
-    skos:altLabel "PCI"@en ;
-    skos:broader cdt:metallurgical-coal ;
+    skos:altLabel "PCI"@en,
+         "P.C.I."@en ;
+    skos:broader cdt:coking-coal ;
     skos:definition "A coal used for its heat value and injected directly into blast furnaces (without an intermediate coking phase) as a supplementary fuel, which reduces the amount of coke required and therefore costs."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "CPCI" ;
     skos:prefLabel "Pulverised Coal Injection"@en .
+
+cdt:lv-pulverised-coal-injection a skos:Concept ;
+    skos:altLabel "Low-Vol P.C.I."@en,
+        "Low-Volatile PCI"@en,
+        "Low-Volatile P.C.I."@en ;
+    skos:broader cdt:pulverised-coal-injection ;
+    skos:definition "A coal used for pulverised coal injection with low (<13%) volatile matter and less than 11% ash."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "LVPCI" ;
+    skos:prefLabel "Low-Vol PCI"@en .
+
+cdt:mt-pulverised-coal-injection a skos:Concept ;
+    skos:altLabel "Mid-Tier P.C.I."@en;
+    skos:broader cdt:pulverised-coal-injection ;
+    skos:definition "A coal used for pulverised coal injection with medium (13-20%) volatile matter and less than 12% ash."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "MTPCI" ;
+    skos:prefLabel "Mid-Tier PCI"@en .
 
 cdt:thermal-coal a skos:Concept ;
     skos:altLabel "Raising Coal"@en,
@@ -1425,6 +1493,29 @@ cdt:thermal-coal a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "CNC" ;
     skos:prefLabel "Thermal Coal"@en .
+
+cdt:thermal-coal6000 a skos:Concept ;
+    skos:altLabel "6000 NAR"@en,
+        "6300 GAR"@en,
+        "6000cv"@en,
+        "Newcastle 6000 NAR"@en,
+        "Newcastle 6300 GAR"@en ;
+    skos:broader cdt:thermal-coal ;
+    skos:definition "A coal which is used in the generation of thermal energy with a Net as Received calorific value of 6000kcal/kg (minimum of 5850)."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "6000N" ;
+    skos:prefLabel "6300 GAR/6000 NAR"@en .
+
+cdt:thermal-coal5500 a skos:Concept ;
+    skos:altLabel "5500cv"@en,
+        "Newcastle 5500 NAR"@en ;
+    skos:broader cdt:thermal-coal ;
+    skos:definition "A coal which is used in the generation of thermal energy with a Net as Received calorific value of 5500kcal/kg (5300-2700)."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "5500N" ;
+    skos:prefLabel "5500 NAR"@en .
 
 cdt:bituminous-fuel-coal a skos:Concept ;
     skos:broader cdt:thermal-coal ;
@@ -1574,9 +1665,9 @@ cdt:asphalt a skos:Concept ;
     skos:prefLabel "Bitumen"@en .
 
 cdt:condensate a skos:Concept ;
-    skos:altLabel "Natural-gas Condensate"@en,
+    skos:altLabel "Natural-Gas Condensate"@en,
         "Natural Gas Condensate"@en,
-        "Natural-gas Liquids"@en,
+        "Natural-Gas Liquids"@en,
         "Natural Gas Liquids"@en ;
     skos:broader cdt:liquid-hydrocarbons ;
     skos:definition "Liquid hydrocarbons formed from the condensation of hydrocarbons that are in a gaseous state in a natural underground reservoir.  Condensation is caused by a decrease in temperature and/or an increase in pressure."@en ;
@@ -3683,9 +3774,9 @@ cdt:greenhouse-gases a skos:Concept ;
         "Carbon Capture"@en ;
     skos:prefLabel "Greenhouse Gases"@en .
 
-    #ORDERED COLLECTION
+    #COLLECTIONS
 
-    cdt:lodgement-form a skos:Collection ;
+cdt:lodgement-form a skos:Collection ;
     skos:definition "Ordered commodities for selection on lodgement forms."@en ;
     skos:member cdt:undefined,
         cdt:amber,
@@ -3812,7 +3903,6 @@ cdt:greenhouse-gases a skos:Concept ;
         cdt:spongolite,
         cdt:anthracite,
         cdt:black-coal,
-        cdt:metallurgical-coal,
         cdt:coking-coal,
         cdt:pulverised-coal-injection,
         cdt:thermal-coal,
@@ -4010,3 +4100,44 @@ cdt:greenhouse-gases a skos:Concept ;
         cdt:sulphur,
         cdt:greenhouse-gases ;
     skos:prefLabel "Ordered Lodgement List"@en .
+
+cdt:qld-coal-sales a skos:Collection ;
+    skos:definition "Coal types applicable to Queensland statisical sales reporting."@en ;
+    skos:member cdt:anthracite,
+        cdt:hard-coking-coal,
+        cdt:lv-premium-hard-coking-coal,
+        cdt:mv-premium-hard-coking-coal,
+        cdt:semi-soft-coking-coal,
+        cdt:lv-pulverised-coal-injection,
+        cdt:mt-pulverised-coal-injection,
+        cdt:thermal-coal6000,
+        cdt:thermal-coal5500,
+        cdt:brown-coal ;
+    skos:prefLabel "Queensland Coal Sales"@en .
+
+cdt:qld-extractive-sales a skos:Collection ;
+    skos:definition "Extractive commodities applicable to Queensland statisical sales reporting."@en ;
+    skos:member cdt:broken-rock,
+        cdt:concrete-aggregate,
+        cdt:sealing-aggregate,
+        cdt:asphalt-aggregate,
+        cdt:rail-ballast,
+        cdt:crusher-fines,
+        cdt:other-coarse-aggregate,
+        cdt:manufactured-sand,
+        cdt:roadbase,
+        cdt:unprocessed-construction-material,
+        cdt:pre-mix-concrete-sand,
+        cdt:pre-cast-concrete-sand,
+        cdt:asphalt-sand,
+        cdt:mortar-sand,
+        cdt:plaster-sand,
+        cdt:packing-sand,
+        cdt:other-sand,
+        cdt:crushed-gravel,
+        cdt:unprocessed-gravel,
+        cdt:ridge-gravel,
+        cdt:decorative-crushed-rock,
+        cdt:decorative-gravel,
+        cdt:horticultural-sand ;
+    skos:prefLabel "Queensland Extractive Sales"@en .
