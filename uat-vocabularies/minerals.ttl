@@ -12,7 +12,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-03-13"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-07-01"^^xsd:date ;
+    dcterms:modified "2021-11-01"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:sourceNote "This vocabulary broadly follows the Nickel-Strunz Version 10 classification system. Some minerals have been tentatively classified by the GSQ for search and utility, but do not represent official designations. These speculative classifications have been identified in the definitions of those minerals. Using the Nickel-Strunz system has been chosen for ease-of-use, but the GSQ does not endorse its use over other classification systems. Definitions are based on chemical composition, therefore care should be taken with dimorphic and polymorphic minerals. Visit rruff.info/ima/ for further information on mineral species and mineralogical distinction between polymorphs." ;
     skos:definition "A naturally occurring inorganic element or compound having an orderly internal structure and characteristic chemical composition, crystal form, and physical properties."@en ;
@@ -79,6 +79,13 @@ min:abramovite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Abramovite"@en .
 
+min:absite a skos:Concept ;
+    skos:broader min:metal-oxygen-equals-1-2-and-similar-with-large-plus-medium-sized-cations-sheets-of-edge-sharing-octahedra ;
+    skos:definition "Ti7U2ThO20.5H2O Nickel-Strunz 04.DH.05"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Absite"@en .
+
 min:abswurmbachite a skos:Concept ;
     skos:broader min:nesosilicates-nesosilicates-with-additional-anions-cations-in-greaterthan-6-plus-6-coordination ;
     skos:definition "CuMn3+6(SiO4)O8 Nickel-Strunz 09.AG.05"@en ;
@@ -94,6 +101,7 @@ min:abuite a skos:Concept ;
     skos:prefLabel "Abuite"@en .
 
 min:acanthite a skos:Concept ;
+    skos:altLabel "Argentite"@en ;
     skos:broader min:metal-sulfides-m-s-greaterthan-1-1-mainly-2-1-with-cu-ag-au ;
     skos:definition "Ag2S Nickel-Strunz 02.BA.35"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
@@ -877,15 +885,22 @@ min:altisite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Altisite"@en .
 
-min:alum-k a skos:Concept ;
+min:alum a skos:Concept ;
     skos:broader min:sulfates-selenates-etc-without-additional-anions-with-h2o-with-medium-sized-and-large-cations ;
+    skos:definition "(K, Na)Al(SO4)2·12 H2O Nickel-Strunz 07.CC.20"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Alum"@en .
+
+min:alum-k a skos:Concept ;
+    skos:broader min:alum ;
     skos:definition "KAl(SO4)2 · 12H2O Nickel-Strunz 07.CC.20"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Alum-(K)"@en .
 
 min:alum-na a skos:Concept ;
-    skos:broader min:sulfates-selenates-etc-without-additional-anions-with-h2o-with-medium-sized-and-large-cations ;
+    skos:broader min:alum ;
     skos:definition "NaAl(SO4)2 · 12H2O Nickel-Strunz 07.CC.20"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
@@ -907,7 +922,7 @@ min:aluminium a skos:Concept ;
 
 min:alumino-ottoliniite a skos:Concept ;
     skos:broader min:clinoamphibole ;
-    skos:definition "—»NaLi(Mg3Al2)Si8O22(OH)2 Nickel-Strunz 09.DE.15 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "->>NaLi(Mg3Al2)Si8O22(OH)2 Nickel-Strunz 09.DE.15 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Alumino-ottoliniite"@en .
@@ -1193,6 +1208,7 @@ min:amstallite a skos:Concept ;
     skos:prefLabel "Amstallite"@en .
 
 min:analcime a skos:Concept ;
+    skos:altLabel "Analcite"@en ;
     skos:broader min:tektosilicates-with-zeolitic-h2o-zeolite-family-chains-of-single-connected-4-membered-rings ;
     skos:definition "Na(AlSi2O6) · H2O Nickel-Strunz 09.GB.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
@@ -1649,7 +1665,7 @@ min:arangasite a skos:Concept ;
 
 min:arapovite a skos:Concept ;
     skos:broader min:cyclosilicates-si4o128-4-membered-double-rings ;
-    skos:definition "(K1-x—»x)(Ca,Na)2U4+Si8O20 (x ~ 0.5) Nickel-Strunz 09.CH.10"@en ;
+    skos:definition "(K1-x->>x)(Ca,Na)2U4+Si8O20 (x ~ 0.5) Nickel-Strunz 09.CH.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Arapovite"@en .
@@ -1901,7 +1917,7 @@ min:arnhemite a skos:Concept ;
 
 min:arrojadite-bafe a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-large-cations-oh-etc-ro4lessthan-0_5-1 ;
-    skos:definition "{Ba—»}{Fe2+—»}{Ca}{Na2—»}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
+    skos:definition "{Ba->>}{Fe2+->>}{Ca}{Na2->>}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Arrojadite-(BaFe)"@en .
@@ -1915,35 +1931,35 @@ min:arrojadite-bana a skos:Concept ;
 
 min:arrojadite-kfe a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-large-cations-oh-etc-ro4lessthan-0_5-1 ;
-    skos:definition "{KNa}{Fe2+—»}{Ca}{Na2—»}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
+    skos:definition "{KNa}{Fe2+->>}{Ca}{Na2->>}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Arrojadite-(KFe)"@en .
 
 min:arrojadite-kna a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-large-cations-oh-etc-ro4lessthan-0_5-1 ;
-    skos:definition "{KNa}{Na2}{Ca}{Na2—»}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
+    skos:definition "{KNa}{Na2}{Ca}{Na2->>}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Arrojadite-(KNa)"@en .
 
 min:arrojadite-nafe a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-large-cations-oh-etc-ro4lessthan-0_5-1 ;
-    skos:definition "{Na2}{Fe2+—»}{Ca}{Na2—»}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
+    skos:definition "{Na2}{Fe2+->>}{Ca}{Na2->>}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Arrojadite-(NaFe)"@en .
 
 min:arrojadite-pbfe a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-large-cations-oh-etc-ro4lessthan-0_5-1 ;
-    skos:definition "{Pb—»}{Fe2+—»}{Ca}{Na2—»}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
+    skos:definition "{Pb->>}{Fe2+->>}{Ca}{Na2->>}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Arrojadite-(PbFe)"@en .
 
 min:arrojadite-srfe a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-large-cations-oh-etc-ro4lessthan-0_5-1 ;
-    skos:definition "{Sr—»}{Fe2+—»}{Ca}{Na2—»}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
+    skos:definition "{Sr->>}{Fe2+->>}{Ca}{Na2->>}{Fe2+13}{Al}(PO4)11(HPO4)(OH)2 Nickel-Strunz 08.BF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Arrojadite-(SrFe)"@en .
@@ -2543,22 +2559,29 @@ min:axelite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Axelite"@en .
 
-min:axinite-fe a skos:Concept ;
+min:axinite a skos:Concept ;
     skos:broader min:sorosilicates-si2o7-groups-with-additional-anions-cations-in-tetrahedral-4-and-greater-coordination ;
+    skos:definition "(Ca,Fe,Mn)3Al2BO3Si4O12OH Nickel-Strunz 09.BD.20"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Axinite"@en .
+
+min:axinite-fe a skos:Concept ;
+    skos:broader min:axinite ;
     skos:definition "Ca2Fe2+Al2BSi4O15OH Nickel-Strunz 09.BD.20"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Axinite-(Fe)"@en .
 
 min:axinite-mg a skos:Concept ;
-    skos:broader min:sorosilicates-si2o7-groups-with-additional-anions-cations-in-tetrahedral-4-and-greater-coordination ;
+    skos:broader min:axinite ;
     skos:definition "Ca2MgAl2BSi4O15OH Nickel-Strunz 09.BD.20"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Axinite-(Mg)"@en .
 
 min:axinite-mn a skos:Concept ;
-    skos:broader min:sorosilicates-si2o7-groups-with-additional-anions-cations-in-tetrahedral-4-and-greater-coordination ;
+    skos:broader min:axinite ;
     skos:definition "Ca2Mn2+Al2BSi4O15(OH) Nickel-Strunz 09.BD.20"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
@@ -2664,7 +2687,7 @@ min:baileychlore a skos:Concept ;
 
 min:bairdite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "Pb2Cu2+4Te6+2O10(OH)2(SO4)€¢H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Pb2Cu2+4Te6+2O10(OH)2(SO4).H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Bairdite"@en .
@@ -3647,7 +3670,7 @@ min:berzeliite a skos:Concept ;
 
 min:beshtauite a skos:Concept ;
     skos:broader min:sulfates-selenates-etc-with-additional-anions-with-h2o-with-large-and-medium-sized-cations-with-no3-co3-boh4-sio4-or-io3 ;
-    skos:definition "(NH4)2(UO2)(SO4)2€¢2H2O Nickel-Strunz 07.E0 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(NH4)2(UO2)(SO4)2.2H2O Nickel-Strunz 07.E0 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Beshtauite"@en .
@@ -4229,7 +4252,7 @@ min:bohseite a skos:Concept ;
 
 min:bohuslavite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "Fe3+4(PO4)3(SO4)(OH)·nH2O (15 ‰¤ n ‰¤ 24) Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Fe3+4(PO4)3(SO4)(OH)·nH2O (15  > n  > 24) Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Bohuslavite"@en .
@@ -5300,7 +5323,7 @@ min:caichengyunite a skos:Concept ;
 
 min:cairncrossite a skos:Concept ;
     skos:broader min:phyllosilicates-single-tetrahedral-nets-of-6-membered-rings-connected-by-octahedral-nets-or-octahedral-bands ;
-    skos:definition "Sr2Ca7€“xNa2x(Si4O10)4(OH)2(H2O)15€“x (with 0€‰‰¤€‰x€‰‰¤€‰1) Nickel-Strunz 09.EE. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Sr2Ca7 xNa2x(Si4O10)4(OH)2(H2O)15-x Nickel-Strunz 09.EE. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Cairncrossite"@en .
@@ -5596,7 +5619,7 @@ min:camaraite a skos:Concept ;
 
 min:camaronesite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "[Fe3+(H2O)2(PO3OH)]2(SO4) · 1€“2H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "[Fe3+(H2O)2(PO3OH)]2(SO4) · 1 2H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Camaronesite"@en .
@@ -5940,7 +5963,7 @@ min:carlosruizite a skos:Concept ;
 
 min:carlosturanite a skos:Concept ;
     skos:broader min:inosilicates-inosilicates-with-4-periodic-double-and-triple-chains ;
-    skos:definition "(Mg,Fe,Ti)21(Si,Al)12O28(OH)34€¢H2O Nickel-Strunz 09.DJ.25"@en ;
+    skos:definition "(Mg,Fe,Ti)21(Si,Al)12O28(OH)34.H2O Nickel-Strunz 09.DJ.25"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Carlosturanite"@en .
@@ -6393,15 +6416,22 @@ min:cetineite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Cetineite"@en .
 
-min:chabazite-ca a skos:Concept ;
+min:chabazite a skos:Concept ;
     skos:broader min:tektosilicates-with-zeolitic-h2o-zeolite-family-chains-of-6-membered-rings-tabular-zeolites ;
+    skos:definition "(Ca,Sr,K2,Na2)2[Al2Si4O12]2 · 12H2O Nickel-Strunz 09.GD.10"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Chabazite"@en .
+
+min:chabazite-ca a skos:Concept ;
+    skos:broader min:chabazite ;
     skos:definition "(Ca,K2,Na2)2[Al2Si4O12]2 · 12H2O Nickel-Strunz 09.GD.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Chabazite-Ca"@en .
 
 min:chabazite-k a skos:Concept ;
-    skos:broader min:tektosilicates-with-zeolitic-h2o-zeolite-family-chains-of-6-membered-rings-tabular-zeolites ;
+    skos:broader min:chabazite ;
     skos:definition "(K2,Ca,Na2,Sr,Mg)2[Al2Si4O12]2 · 12H2O Nickel-Strunz 09.GD.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
@@ -6415,14 +6445,14 @@ min:chabazite-mg a skos:Concept ;
     skos:prefLabel "Chabazite-Mg"@en .
 
 min:chabazite-na a skos:Concept ;
-    skos:broader min:tektosilicates-with-zeolitic-h2o-zeolite-family-chains-of-6-membered-rings-tabular-zeolites ;
+    skos:broader min:chabazite ;
     skos:definition "(Na2,K2,Ca,Sr,Mg)2[Al2Si4O12]2 · 12H2O Nickel-Strunz 09.GD.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Chabazite-Na"@en .
 
 min:chabazite-sr a skos:Concept ;
-    skos:broader min:tektosilicates-with-zeolitic-h2o-zeolite-family-chains-of-6-membered-rings-tabular-zeolites ;
+    skos:broader min:chabazite ;
     skos:definition "Sr2[Al2Si4O12]2 · 12H2O Nickel-Strunz 09.GD.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
@@ -6933,6 +6963,7 @@ min:chlorapatite a skos:Concept ;
     skos:prefLabel "Chlorapatite"@en .
 
 min:chlorargyrite a skos:Concept ;
+    skos:altLabel "Cerargyite"@en ;
     skos:broader min:simple-halides-without-h2o-m-x-equals-1-1-2-3-3-5-etc ;
     skos:definition "AgCl Nickel-Strunz 03.AA.15"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
@@ -6992,7 +7023,7 @@ min:chlormanganokalite a skos:Concept ;
 min:chlormayenite a skos:Concept ;
     skos:altLabel "Brearleyite"@en ;
     skos:broader min:metal-oxygen-equals-2-33-5-and-similar-with-large-and-medium-sized-cations ;
-    skos:definition "Ca12Al14O32[—»4Cl2] Nickel-Strunz 04.CC.20"@en ;
+    skos:definition "Ca12Al14O32[->>4Cl2] Nickel-Strunz 04.CC.20"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Chlormayenite"@en .
@@ -7413,7 +7444,7 @@ min:cliffordite a skos:Concept ;
 
 min:clino-ferro-ferri-holmquistite a skos:Concept ;
     skos:broader min:clinoamphibole ;
-    skos:definition "—»{Li2}{Fe2+3Fe3+2}(Si8O22)(OH)2 Nickel-Strunz 09.DE.25"@en ;
+    skos:definition "->>{Li2}{Fe2+3Fe3+2}(Si8O22)(OH)2 Nickel-Strunz 09.DE.25"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Clino-ferro-ferri-holmquistite"@en .
@@ -7689,7 +7720,7 @@ min:cobaltneustadtelite a skos:Concept ;
 
 min:cobaltoblodite a skos:Concept ;
     skos:broader min:sulfates-selenates-etc-without-additional-anions-with-h2o-with-medium-sized-and-large-cations ;
-    skos:definition "Na2Co(SO4)2€¢4H2O Nickel-Strunz 07.CC."@en ;
+    skos:definition "Na2Co(SO4)2.4H2O Nickel-Strunz 07.CC."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Cobaltoblödite"@en .
@@ -7745,7 +7776,7 @@ min:coconinoite a skos:Concept ;
 
 min:coeruleolactite a skos:Concept ;
     skos:broader min:miscellaneous-unclassified-phosphates-arsenates-vanadates ;
-    skos:definition "(Ca,Cu)Al6(PO4)4(OH)8€¢4-5(H2O) Nickel-Strunz 08.00.00"@en ;
+    skos:definition "(Ca,Cu)Al6(PO4)4(OH)8.4-5(H2O) Nickel-Strunz 08.00.00"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Coeruleolactite"@en .
@@ -7827,22 +7858,29 @@ min:colquiriite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Colquiriite"@en .
 
-min:columbite-fe a skos:Concept ;
+min:columbite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
+    skos:definition "(Fe,Mn)Nb2O6 Nickel-Strunz 04.DB.35"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Columbite"@en .
+
+min:columbite-fe a skos:Concept ;
+    skos:broader min:columbite ;
     skos:definition "Fe2+Nb2O6 Nickel-Strunz 04.DB.35"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Columbite-(Fe)"@en .
 
 min:columbite-mg a skos:Concept ;
-    skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
+    skos:broader min:columbite ;
     skos:definition "(Mg,Fe,Mn)(Nb,Ta)2O6 Nickel-Strunz 04.DB.35"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Columbite-(Mg)"@en .
 
 min:columbite-mn a skos:Concept ;
-    skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
+    skos:broader min:columbite ;
     skos:definition "Mn2+Nb2O6 Nickel-Strunz 04.DB.35"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
@@ -7857,7 +7895,7 @@ min:colusite a skos:Concept ;
 
 min:comancheite a skos:Concept ;
     skos:broader min:oxyhalides-hydroxyhalides-and-related-double-halides-with-hg ;
-    skos:definition "Hg2+55N3€“24(NH2,OH)4(Cl,Br)34 Nickel-Strunz 03.DD.65"@en ;
+    skos:definition "Hg2+55N3 24(NH2,OH)4(Cl,Br)34 Nickel-Strunz 03.DD.65"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Comancheite"@en .
@@ -8081,7 +8119,7 @@ min:coskrenite-ce a skos:Concept ;
 
 min:cossaite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "(Mg0.5,—»)Al6(SO4)6(HSO4)F6 · 36H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(Mg0.5,->>)Al6(SO4)6(HSO4)F6 · 36H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Cossaite"@en .
@@ -8312,14 +8350,14 @@ min:cualstibite a skos:Concept ;
 
 min:cuatrocapaite-k a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "K3(NaMg—»)(As2O3)6Cl6·16H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "K3(NaMg->>)(As2O3)6Cl6·16H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Cuatrocapaite-(K)"@en .
 
 min:cuatrocapaite-nh4 a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "(NH4)3(NaMg—»)(As2O3)6Cl6·16H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(NH4)3(NaMg->>)(As2O3)6Cl6·16H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Cuatrocapaite-(NH4)"@en .
@@ -8753,7 +8791,7 @@ min:daqingshanite-ce a skos:Concept ;
 
 min:darapiosite a skos:Concept ;
     skos:broader min:cyclosilicates-si6o1812-6-membered-double-rings-sechser-doppelringe ;
-    skos:definition "K(Na,—»,K)2(Li,Zn,Fe)3(Mn,Zr,Y)2[Si12O30] Nickel-Strunz 09.CM.05"@en ;
+    skos:definition "K(Na,->>,K)2(Li,Zn,Fe)3(Mn,Zr,Y)2[Si12O30] Nickel-Strunz 09.CM.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Darapiosite"@en .
@@ -8821,23 +8859,30 @@ min:davidbrownite-nh4 a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Davidbrownite-(NH4)"@en .
 
-min:davidite-ce a skos:Concept ;
+min:davidite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-2-33-5-and-similar-with-large-and-medium-sized-cations ;
+    skos:definition "(La,Ce)(La,Ce,Ca)(Y,U)(Ti,Fe)20O38 Nickel-Strunz 04.CC.40"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Davidite"@en .
+
+min:davidite-ce a skos:Concept ;
+    skos:broader min:davidite ;
     skos:definition "(Ce,La)(Y,U,Fe)(Ti,Fe)20(O,OH)38 Nickel-Strunz 04.CC.40"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Davidite-(Ce)"@en .
 
 min:davidite-la a skos:Concept ;
-    skos:broader min:metal-oxygen-equals-2-33-5-and-similar-with-large-and-medium-sized-cations ;
+    skos:broader min:davidite ;
     skos:definition "(La,Ce)(Y,U,Fe)(Ti,Fe)20(O,OH)38 Nickel-Strunz 04.CC.40"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Davidite-(La)"@en .
 
 min:davidite-y a skos:Concept ;
-    skos:broader min:metal-oxygen-equals-2-33-5-and-similar-with-large-and-medium-sized-cations ;
-    skos:definition "(La,Ce,Na,Ca,Pb)(Y,Fe2+,—»)(Fe2+,Mn2+)2(Ti,Fe3+,Nb,Zr)18O38 (hypothetical) Nickel-Strunz 04.CC.40"@en ;
+    skos:broader min:davidite ;
+    skos:definition "(La,Ce,Na,Ca,Pb)(Y,Fe2+,->>)(Fe2+,Mn2+)2(Ti,Fe3+,Nb,Zr)18O38 (hypothetical) Nickel-Strunz 04.CC.40"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Davidite-(Y)"@en .
@@ -9215,7 +9260,7 @@ min:diaspore a skos:Concept ;
 
 min:dickinsonite-kmnna a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-large-cations-oh-etc-ro4lessthan-0_5-1 ;
-    skos:definition "{KNa}{Mn2+—»}{Ca}{Na3}{Mn2+13}{Al}(PO4)12(OH)2 Nickel-Strunz 08.BF.05"@en ;
+    skos:definition "{KNa}{Mn2+->>}{Ca}{Na3}{Mn2+13}{Al}(PO4)12(OH)2 Nickel-Strunz 08.BF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Dickinsonite-(KMnNa)"@en .
@@ -10091,7 +10136,7 @@ min:eliseevite a skos:Concept ;
 
 min:ellenbergerite a skos:Concept ;
     skos:broader min:nesosilicates-nesosilicates-with-additional-anions-cations-in-4-5-and-or-only-6-coordination ;
-    skos:definition "Mg6(Mg,Ti,Zr,—»)2(Al,Mg)6Si8O28(OH)10 Nickel-Strunz 09.AF.80"@en ;
+    skos:definition "Mg6(Mg,Ti,Zr,->>)2(Al,Mg)6Si8O28(OH)10 Nickel-Strunz 09.AF.80"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Ellenbergerite"@en .
@@ -10708,7 +10753,7 @@ min:fabianite a skos:Concept ;
 
 min:fabriesite a skos:Concept ;
     skos:broader min:polyphosphates-polyarsenates-4-polyvanadates-ino-4-vanadates ;
-    skos:definition "Na3Al3Si3O12€¢2H2O Nickel-Strunz 09.00. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Na3Al3Si3O12.2H2O Nickel-Strunz 09.00. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Fabrièsite"@en .
@@ -10960,7 +11005,7 @@ min:fencooperite a skos:Concept ;
 
 min:fengchengite a skos:Concept ;
     skos:broader min:cyclosilicates-si9o2718-9-membered-rings ;
-    skos:definition "Na12—»3(Ca,Sr)6Fe3+3 Zr3Si(Si25O73)(H2O,OH)3(OH,Cl)2 Nickel-Strunz 09.CO. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Na12->>3(Ca,Sr)6Fe3+3 Zr3Si(Si25O73)(H2O,OH)3(OH,Cl)2 Nickel-Strunz 09.CO. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Fengchengite"@en .
@@ -10973,7 +11018,7 @@ min:feodosiyite a skos:Concept ;
     skos:prefLabel "Feodosiyite"@en .
 
 min:ferberite a skos:Concept ;
-    skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
+    skos:broader min:wolframite ;
     skos:definition "FeWO4 Nickel-Strunz 04.DB.30"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
@@ -11165,7 +11210,7 @@ min:ferri-magnesiotaramite a skos:Concept ;
 
 min:ferri-mottanaite-ce a skos:Concept ;
     skos:broader min:inosilicates-inosilicates-with-5-periodic-single-chains ;
-    skos:definition "Ca4Ce2Fe3+(Be1.5—»0.5)[Si4B4O22]O2 Nickel-Strunz 09.DK. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Ca4Ce2Fe3+(Be1.5->>0.5)[Si4B4O22]O2 Nickel-Strunz 09.DK. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Ferri-mottanaite-(Ce)"@en .
@@ -11187,7 +11232,7 @@ min:ferri-obertiite a skos:Concept ;
 min:ferri-ottoliniite a skos:Concept ;
     skos:altLabel "Clino-ferri-holmquistite"@en ;
     skos:broader min:clinoamphibole ;
-    skos:definition "—»{Li2}{Mg3Fe3+2}(Si8O22)(OH)2 Nickel-Strunz 09.DE.15"@en ;
+    skos:definition "->>{Li2}{Mg3Fe3+2}(Si8O22)(OH)2 Nickel-Strunz 09.DE.15"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Ferri-ottoliniite"@en .
@@ -11577,7 +11622,7 @@ min:ferro-gedrite a skos:Concept ;
 
 min:ferro-glaucophane a skos:Concept ;
     skos:broader min:clinoamphibole ;
-    skos:definition "—»[Na2][Fe2+3Al2]Si8O22(OH)2 Nickel-Strunz 09.DE.25"@en ;
+    skos:definition "->>[Na2][Fe2+3Al2]Si8O22(OH)2 Nickel-Strunz 09.DE.25"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Ferro-glaucophane"@en .
@@ -11850,7 +11895,7 @@ min:ferrorockbridgeite a skos:Concept ;
 
 min:ferrorosemaryite a skos:Concept ;
     skos:broader min:phosphates-etc-without-additional-anions-without-h2o-with-medium-sized-and-large-cations ;
-    skos:definition "—»NaFe2+Fe3+Al(PO4)3 Nickel-Strunz 08.AC.15"@en ;
+    skos:definition "->>NaFe2+Fe3+Al(PO4)3 Nickel-Strunz 08.AC.15"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Ferrorosemaryite"@en .
@@ -12348,7 +12393,7 @@ min:fluorapophyllite-na a skos:Concept ;
 
 min:fluorarrojadite-bafe a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-large-cations-oh-etc-ro4lessthan-0_5-1 ;
-    skos:definition "{Ba—»}{Fe2+—»}{Ca}{Na2—»}{Fe2+13}{Al}(PO4)11(HPO4)F2 Nickel-Strunz 08.BF.05"@en ;
+    skos:definition "{Ba->>}{Fe2+->>}{Ca}{Na2->>}{Fe2+13}{Al}(PO4)11(HPO4)F2 Nickel-Strunz 08.BF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Fluorarrojadite-(BaFe)"@en .
@@ -12362,14 +12407,14 @@ min:fluorarrojadite-bana a skos:Concept ;
 
 min:fluorarrojadite-kna a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-large-cations-oh-etc-ro4lessthan-0_5-1 ;
-    skos:definition "{KNa}{Na2}{Ca}{Na2—»}{Fe2+13}{Al}(PO4)11(HPO4)F2 Nickel-Strunz 08.BF.05"@en ;
+    skos:definition "{KNa}{Na2}{Ca}{Na2->>}{Fe2+13}{Al}(PO4)11(HPO4)F2 Nickel-Strunz 08.BF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Fluorarrojadite-(KNa)"@en .
 
 min:fluorarrojadite-nafe a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-large-cations-oh-etc-ro4lessthan-0_5-1 ;
-    skos:definition "{Na2}{Fe2+—»}{Ca}{Na2—»}{Fe2+13}{Al}(PO4)11(HPO4)F2 Nickel-Strunz 08.BF.05"@en ;
+    skos:definition "{Na2}{Fe2+->>}{Ca}{Na2->>}{Fe2+13}{Al}(PO4)11(HPO4)F2 Nickel-Strunz 08.BF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Fluorarrojadite-(NaFe)"@en .
@@ -12418,7 +12463,7 @@ min:fluorcalciopyrochlore a skos:Concept ;
 
 min:fluorcalcioromeite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-1-2-and-similar-with-large-plus-medium-sized-cations-sheets-of-edge-sharing-octahedra ;
-    skos:definition "(Ca,Na,—»)2Sb5+2(O,OH)6F Nickel-Strunz 04.DH. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(Ca,Na,->>)2Sb5+2(O,OH)6F Nickel-Strunz 04.DH. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Fluorcalcioroméite"@en .
@@ -12587,7 +12632,7 @@ min:fluoro-richterite a skos:Concept ;
 
 min:fluoro-riebeckite a skos:Concept ;
     skos:broader min:clinoamphibole ;
-    skos:definition "—»{Na2}{Fe2+3Fe3+2}(Si8O22)F2 Nickel-Strunz 09.DE.25 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "->>{Na2}{Fe2+3Fe3+2}(Si8O22)F2 Nickel-Strunz 09.DE.25 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Fluoro-riebeckite"@en .
@@ -12945,7 +12990,7 @@ min:freedite a skos:Concept ;
 
 min:freibergite a skos:Concept ;
     skos:broader min:sulfarsenites-sulfantimonites-sulfbismuthites-neso-sulfarsenites-etc-with-additional-s ;
-    skos:definition "(Ag,Cu,—»)10Fe2+2Sb4S12—» Nickel-Strunz 02.GB.05"@en ;
+    skos:definition "(Ag,Cu,->>)10Fe2+2Sb4S12->> Nickel-Strunz 02.GB.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Freibergite"@en .
@@ -13027,9 +13072,16 @@ min:froodite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Froodite"@en .
 
+min:fuchsite a skos:Concept ;
+    skos:broader min:phyllosilicates-phyllosilicates-with-mica-sheets-composed-of-tetrahedral-and-octahedral-nets ;
+    skos:definition "K6(Na,K)4Na6Mg10(SO4)12(IO3)12 · 12H2O Nickel-Strunz 09.EC.15"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Fuchsite"@en .
+
 min:fuenzalidaite a skos:Concept ;
     skos:broader min:sulfates-selenates-etc-with-additional-anions-with-h2o-with-large-and-medium-sized-cations-with-no3-co3-boh4-sio4-or-io3 ;
-    skos:definition "K6(Na,K)4Na6Mg10(SO4)12(IO3)12 · 12H2O Nickel-Strunz 07.DG.40"@en ;
+    skos:definition "K(Al,Cr)2(AlSi3O10)(OH)2 Nickel-Strunz 07.DG.40"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Fuenzalidaite"@en .
@@ -13519,7 +13571,7 @@ min:geikielite a skos:Concept ;
 
 min:gelosaite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "BiMo6+(2-5x)Mo5+6xO7(OH)·H2O (0 ‰¤ x ‰¤ 0.4) Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "BiMo6+(2-5x)Mo5+6xO7(OH)·H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Gelosaite"@en .
@@ -13722,7 +13774,7 @@ min:geversite a skos:Concept ;
 
 min:ghiaraite a skos:Concept ;
     skos:broader min:simple-halides-with-h2o-m-x-equals-1-2 ;
-    skos:definition "CaCl2€¢4H2O Nickel-Strunz 03.BB. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "CaCl2.4H2O Nickel-Strunz 03.BB. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Ghiaraite"@en .
@@ -13834,7 +13886,7 @@ min:girvasite a skos:Concept ;
 
 min:gismondine a skos:Concept ;
     skos:broader min:tektosilicates-with-zeolitic-h2o-zeolite-family-chains-of-doubly-connected-4-membered-rings ;
-    skos:definition "Ca2Al4Si4O16€¢9(H2O) Nickel-Strunz 09.GC.05"@en ;
+    skos:definition "Ca2Al4Si4O16.9(H2O) Nickel-Strunz 09.GC.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Gismondine"@en .
@@ -13946,7 +13998,7 @@ min:glaucodot a skos:Concept ;
 
 min:glaucophane a skos:Concept ;
     skos:broader min:clinoamphibole ;
-    skos:definition "—»[Na2][Mg3Al2]Si8O22(OH)2 Nickel-Strunz 09.DE.25"@en ;
+    skos:definition "->>[Na2][Mg3Al2]Si8O22(OH)2 Nickel-Strunz 09.DE.25"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Glaucophane"@en .
@@ -14051,7 +14103,7 @@ min:goldamalgam a skos:Concept ;
 
 min:goldfieldite a skos:Concept ;
     skos:broader min:sulfarsenites-sulfantimonites-sulfbismuthites-neso-sulfarsenites-etc-with-additional-s ;
-    skos:definition "(Cu10—»2)Te4S12S Nickel-Strunz 02.GB.05"@en ;
+    skos:definition "(Cu10->>2)Te4S12S Nickel-Strunz 02.GB.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Goldfieldite"@en .
@@ -14807,7 +14859,7 @@ min:halite a skos:Concept ;
 
 min:hallimondite a skos:Concept ;
     skos:broader min:uranyl-phosphates-and-arsenates-uo2-ro4-equals-1-2 ;
-    skos:definition "Pb2(UO2)(AsO4)2 · nH2O, 0 ‰¤ n ‰¤ 0.5 Nickel-Strunz 08.EA.10"@en ;
+    skos:definition "Pb2(UO2)(AsO4)2 · nH2O, 0 n 0.5 Nickel-Strunz 08.EA.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hallimondite"@en .
@@ -14834,6 +14886,7 @@ min:halloysite-7a a skos:Concept ;
     skos:prefLabel "Halloysite-7Å"@en .
 
 min:halotrichite a skos:Concept ;
+    skos:altLabel "Alum (Ferrous)"@en ;
     skos:broader min:sulfates-selenates-etc-without-additional-anions-with-h2o-with-only-medium-sized-cations ;
     skos:definition "FeAl2(SO4)4 · 22H2O Nickel-Strunz 07.CB.85"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
@@ -15234,7 +15287,7 @@ min:hellandite-ce a skos:Concept ;
 
 min:hellandite-y a skos:Concept ;
     skos:broader min:inosilicates-inosilicates-with-5-periodic-single-chains ;
-    skos:definition "(Ca,REE)4Y2Al—»2(B4Si4O22) (OH)2 Nickel-Strunz 09.DK.20"@en ;
+    skos:definition "(Ca,REE)4Y2Al->>2(B4Si4O22) (OH)2 Nickel-Strunz 09.DK.20"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hellandite-(Y)"@en .
@@ -15261,6 +15314,7 @@ min:helvine a skos:Concept ;
     skos:prefLabel "Helvine"@en .
 
 min:hematite a skos:Concept ;
+    skos:altLabel "Martite"@en ;
     skos:broader min:metal-oxygen-equals-2-33-5-and-similar-with-medium-sized-cations ;
     skos:definition "Fe2O3 Nickel-Strunz 04.CB.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
@@ -15703,7 +15757,7 @@ min:hingganite-ce a skos:Concept ;
 
 min:hingganite-nd a skos:Concept ;
     skos:broader min:nesosilicates-nesosilicates-with-bo3-triangles-and-or-b4-be4-tetrahedra-cornersharing-with-sio4 ;
-    skos:definition "(Nd,Y,Ce,Sm)2(—»,Fe2+)Be2[SiO4]2(OH)2 Nickel-Strunz 09.AJ."@en ;
+    skos:definition "(Nd,Y,Ce,Sm)2(->>,Fe2+)Be2[SiO4]2(OH)2 Nickel-Strunz 09.AJ."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hingganite-(Nd)"@en .
@@ -15913,7 +15967,7 @@ min:holtedahlite a skos:Concept ;
 
 min:holtite a skos:Concept ;
     skos:broader min:nesosilicates-nesosilicates-with-bo3-triangles-and-or-b4-be4-tetrahedra-cornersharing-with-sio4 ;
-    skos:definition "(Ta0.6—»0.4)Al6BSi3O18(O,OH)2.25 Nickel-Strunz 09.AJ.10"@en ;
+    skos:definition "(Ta0.6->>0.4)Al6BSi3O18(O,OH)2.25 Nickel-Strunz 09.AJ.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Holtite"@en .
@@ -15948,7 +16002,7 @@ min:honessite a skos:Concept ;
 
 min:hongheite a skos:Concept ;
     skos:broader min:sorosilicates-sorosilicates-with-mixed-sio4-and-si2o7-groups-cations-in-octahedral-6-and-greater-coordination ;
-    skos:definition "Ca19Fe2+Al4(Fe3+,Mg,Al)8(—»,B)4BSi18O69(O,OH)9 Nickel-Strunz 09.BG.35 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Ca19Fe2+Al4(Fe3+,Mg,Al)8(->>,B)4BSi18O69(O,OH)9 Nickel-Strunz 09.BG.35 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hongheite"@en .
@@ -16094,7 +16148,7 @@ min:hubeite a skos:Concept ;
     skos:prefLabel "Hubeite"@en .
 
 min:hubnerite a skos:Concept ;
-    skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
+    skos:broader min:wolframite ;
     skos:definition "MnWO4 Nickel-Strunz 04.DB.30"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
@@ -16123,7 +16177,7 @@ min:hugelite a skos:Concept ;
 
 min:hughesite a skos:Concept ;
     skos:broader min:miscellaneous-phosphates-without-additional-anions-with-h2o ;
-    skos:definition "Na3Al(V10O28)€¢22H2O Nickel-Strunz 08.C0. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Na3Al(V10O28).22H2O Nickel-Strunz 08.C0. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hughesite"@en .
@@ -16347,14 +16401,14 @@ min:hydrohonessite a skos:Concept ;
 
 min:hydrokenoelsmoreite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-1-2-and-similar-with-large-plus-medium-sized-cations-sheets-of-edge-sharing-octahedra ;
-    skos:definition "—»2W2O6(H2O) Nickel-Strunz 04.DH.15"@en ;
+    skos:definition "->>2W2O6(H2O) Nickel-Strunz 04.DH.15"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hydrokenoelsmoreite"@en .
 
 min:hydrokenomicrolite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-1-2-and-similar-with-large-plus-medium-sized-cations-sheets-of-edge-sharing-octahedra ;
-    skos:definition "(—»,H2O)2Ta2(O,OH)6(H2O) Nickel-Strunz 04.DH.15 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(->>,H2O)2Ta2(O,OH)6(H2O) Nickel-Strunz 04.DH.15 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hydrokenomicrolite"@en .
@@ -16368,7 +16422,7 @@ min:hydrokenopyrochlore a skos:Concept ;
 
 min:hydrokenoralstonite a skos:Concept ;
     skos:broader min:complex-halides-tekto-aluminofluorides ;
-    skos:definition "Na0.5(Al,Mg)2(F,OH)6€¢H2O Nickel-Strunz 03.CF.05"@en ;
+    skos:definition "Na0.5(Al,Mg)2(F,OH)6.H2O Nickel-Strunz 03.CF.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hydrokenoralstonite"@en .
@@ -16389,7 +16443,7 @@ min:hydrombobomkulite a skos:Concept ;
 
 min:hydromolysite a skos:Concept ;
     skos:broader min:miscellaneous-unclassified-halides ;
-    skos:definition "Fe3+Cl3€¢6(H2O) Nickel-Strunz 03.00.00"@en ;
+    skos:definition "Fe3+Cl3.6(H2O) Nickel-Strunz 03.00.00"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hydromolysite"@en .
@@ -16545,7 +16599,7 @@ min:hydroxykenoelsmoreite a skos:Concept ;
 
 min:hydroxykenomicrolite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-1-2-and-similar-with-large-plus-medium-sized-cations-sheets-of-edge-sharing-octahedra ;
-    skos:definition "(—»,Na,Sb3+)2Ta2O6(OH) Nickel-Strunz 04.DH."@en ;
+    skos:definition "(->>,Na,Sb3+)2Ta2O6(OH) Nickel-Strunz 04.DH."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hydroxykenomicrolite"@en .
@@ -17680,7 +17734,7 @@ min:javorieite a skos:Concept ;
 
 min:jeanbandyite a skos:Concept ;
     skos:broader min:hydroxides-without-v-or-u-hydroxides-with-oh-without-h2o-corner-sharing-octahedra ;
-    skos:definition "Fe3+xFe2+1-xSn(OH)6-xOx (1 ‰¥ x > 0.5) Nickel-Strunz 04.FC.15"@en ;
+    skos:definition "Fe3+xFe2+1-xSn(OH)6-xOx (1 > x > 0.5) Nickel-Strunz 04.FC.15"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Jeanbandyite"@en .
@@ -17993,22 +18047,29 @@ min:jorgkellerite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Jörgkellerite"@en .
 
-min:joseite-a a skos:Concept ;
+min:joseite a skos:Concept ;
     skos:broader min:metal-sulfides-m-s-equals-3-4-and-2-3-variable-m-s ;
+    skos:definition "Bi4(S,Te)3 Nickel-Strunz 02.DC.05 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Joséite"@en .
+
+min:joseite-a a skos:Concept ;
+    skos:broader min:joseite ;
     skos:definition "Bi4TeS2 Nickel-Strunz 02.DC.05 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Joséite-A"@en .
 
 min:joseite-b a skos:Concept ;
-    skos:broader min:metal-sulfides-m-s-equals-3-4-and-2-3-variable-m-s ;
+    skos:broader min:joseite ;
     skos:definition "Bi4Te2S Nickel-Strunz 02.DC.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Joséite-B"@en .
 
 min:joseite-c a skos:Concept ;
-    skos:broader min:metal-sulfides-m-s-equals-3-4-and-2-3-variable-m-s ;
+    skos:broader min:joseite ;
     skos:definition "Bi16Te3S9 Nickel-Strunz 02.DC.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
@@ -18765,7 +18826,7 @@ min:kenngottite a skos:Concept ;
 
 min:kenoplumbomicrolite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-1-2-and-similar-with-large-plus-medium-sized-cations-sheets-of-edge-sharing-octahedra ;
-    skos:definition "(Pb,—»)2Ta2O6(—»,OH,O) Nickel-Strunz 04.DH.15 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(Pb,->>)2Ta2O6(->>,OH,O) Nickel-Strunz 04.DH.15 Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Kenoplumbomicrolite"@en .
@@ -19333,7 +19394,7 @@ min:kogarkoite a skos:Concept ;
 
 min:kojonenite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "Pd7-xSnTe2 (0.3 ‰¤ x ‰¤ 0.8) Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Pd7-xSnTe2 (0.3  > x  > 0.8) Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Kojonenite"@en .
@@ -19969,6 +20030,13 @@ min:kupcikite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Kupčíkite"@en .
 
+min:kupfferite a skos:Concept ;
+    skos:broader min:orthoamphibole ;
+    skos:definition "Mg7Si8O22(OH)2 Nickel-Strunz 09.DD.05"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Kupfferite"@en .
+
 min:kupletskite a skos:Concept ;
     skos:broader min:inosilicates-inosilicates-with-branched-2-periodic-single-chains-si2o6-plus-2sio3-si4o12 ;
     skos:definition "(K,Na)3(Mn,Fe)7Ti2Si8O26(OH)4F Nickel-Strunz 09.DC.05"@en ;
@@ -20110,6 +20178,7 @@ min:kvanefjeldite a skos:Concept ;
     skos:prefLabel "Kvanefjeldite"@en .
 
 min:kyanite a skos:Concept ;
+    skos:altLabel "Cyanite"@en ;
     skos:broader min:nesosilicates-nesosilicates-with-additional-anions-cations-in-4-5-and-or-only-6-coordination ;
     skos:definition "Al2(SiO4)O Nickel-Strunz 09.AF.15"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
@@ -20223,7 +20292,7 @@ min:lafossaite a skos:Concept ;
 
 min:lagalyite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "Ca2xMn1-xO2·1.5-2H2O (x = 0.05€“0.08) Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Ca2xMn1-xO2·1.5-2H2O (x = 0.05 0.08) Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Lagalyite"@en .
@@ -21008,7 +21077,7 @@ min:levyne-na a skos:Concept ;
 
 min:leydetite a skos:Concept ;
     skos:broader min:uranyl-sulfates-with-medium-sized-cations ;
-    skos:definition "Fe(UO2)(SO4)2€¢11H2O Nickel-Strunz 07.EB. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Fe(UO2)(SO4)2.11H2O Nickel-Strunz 07.EB. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Leydetite"@en .
@@ -21330,7 +21399,7 @@ min:litochlebite a skos:Concept ;
 
 min:litvinskite a skos:Concept ;
     skos:broader min:cyclosilicates-si6o1812-6-membered-single-rings-sechser-einfachringe-without-insular-complex-anions ;
-    skos:definition "Na2(—»,Na,Mn)ZrSi6O12(OH,O)6 Nickel-Strunz 09.CJ.15a"@en ;
+    skos:definition "Na2(->>,Na,Mn)ZrSi6O12(OH,O)6 Nickel-Strunz 09.CJ.15a"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Litvinskite"@en .
@@ -21841,7 +21910,7 @@ min:maghagendorfite a skos:Concept ;
 
 min:maghemite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-3-4-and-similar-with-only-medium-sized-cations ;
-    skos:definition "(Fe3+0.67—»0.33)Fe3+2O4 Nickel-Strunz 04.BB.15"@en ;
+    skos:definition "(Fe3+0.67->>0.33)Fe3+2O4 Nickel-Strunz 04.BB.15"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Maghemite"@en .
@@ -21919,7 +21988,7 @@ min:magnesio-hornblende a skos:Concept ;
 
 min:magnesio-riebeckite a skos:Concept ;
     skos:broader min:clinoamphibole ;
-    skos:definition "—»{Na2}{Mg3Fe3+2}(Si8O22)(OH)2 Nickel-Strunz 09.DE.25"@en ;
+    skos:definition "->>{Na2}{Mg3Fe3+2}(Si8O22)(OH)2 Nickel-Strunz 09.DE.25"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Magnesio-riebeckite"@en .
@@ -21996,7 +22065,7 @@ min:magnesiocoulsonite a skos:Concept ;
 
 min:magnesiodumortierite a skos:Concept ;
     skos:broader min:nesosilicates-nesosilicates-with-bo3-triangles-and-or-b4-be4-tetrahedra-cornersharing-with-sio4 ;
-    skos:definition "(Mg,Ti,—»(Al,Mg)2Al4Si3O18-y(OH)yB y = 2-3 Nickel-Strunz 09.AJ.10"@en ;
+    skos:definition "(Mg,Ti,->>(Al,Mg)2Al4Si3O18-y(OH)yB y = 2-3 Nickel-Strunz 09.AJ.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Magnesiodumortierite"@en .
@@ -22402,7 +22471,7 @@ min:mandarinoite a skos:Concept ;
 
 min:maneckiite a skos:Concept ;
     skos:broader min:phosphates-without-additional-anions-with-h2o-with-large-and-medium-sized-cations-ro4-h2o-greaterthan-1-1 ;
-    skos:definition "(Na—»)Ca2Fe2+2(Fe3+Mg)Mn2(PO4)6 · 2H2O Nickel-Strunz 08.CF. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(Na->>)Ca2Fe2+2(Fe3+Mg)Mn2(PO4)6 · 2H2O Nickel-Strunz 08.CF. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Maneckiite"@en .
@@ -22731,7 +22800,7 @@ min:maohokite a skos:Concept ;
 
 min:maoniupingite-ce a skos:Concept ;
     skos:broader min:sorosilicates-si2o7-groups-with-additional-anions-cations-in-octahedral-6-and-greater-coordination ;
-    skos:definition "(Ce,Ca)4(Fe3+,Ti,Fe2+,—»)(Ti,Fe3+,Fe2+,Nb)4(Si2O7)2O8 Nickel-Strunz 09.BE.70"@en ;
+    skos:definition "(Ce,Ca)4(Fe3+,Ti,Fe2+,->>)(Ti,Fe3+,Fe2+,Nb)4(Si2O7)2O8 Nickel-Strunz 09.BE.70"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Maoniupingite-(Ce)"@en .
@@ -22941,7 +23010,7 @@ min:martinandresite a skos:Concept ;
 
 min:martinite a skos:Concept ;
     skos:broader min:phyllosilicates-single-tetrahedral-nets-of-6-membered-rings-connected-by-octahedral-nets-or-octahedral-bands ;
-    skos:definition "(Na,—»,Ca)12Ca4(Si,S,B)14B2O38(OH,Cl)2F2·4H2O Nickel-Strunz 09.EE.80"@en ;
+    skos:definition "(Na,->>,Ca)12Ca4(Si,S,B)14B2O38(OH,Cl)2F2·4H2O Nickel-Strunz 09.EE.80"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Martinite"@en .
@@ -24084,7 +24153,7 @@ min:mgriite a skos:Concept ;
 
 min:mianningite a skos:Concept ;
     skos:broader min:miscellaneous-unclassified-oxides-hydroxides-v56-vanadates-arsenites-antimonites-bismuthites-sulfites-selenites-tellurites-iodates ;
-    skos:definition "(—»,Pb,Ce,Na)(U4+,Mn,U6+)Fe3+2 (Ti,Fe3+)18O38 Nickel-Strunz 04.00. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(->>,Pb,Ce,Na)(U4+,Mn,U6+)Fe3+2 (Ti,Fe3+)18O38 Nickel-Strunz 04.00. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Mianningite"@en .
@@ -24315,7 +24384,7 @@ min:minnesotaite a skos:Concept ;
 
 min:minohlite a skos:Concept ;
     skos:broader min:sulfates-selenates-etc-with-additional-anions-with-h2o-with-only-medium-sized-cations-sheets-of-edge-sharing-octahedra ;
-    skos:definition "(Cu,Zn)7(SO4)2(OH)10€¢8H2O Nickel-Strunz 07.DD. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(Cu,Zn)7(SO4)2(OH)10.8H2O Nickel-Strunz 07.DD. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Minohlite"@en .
@@ -25477,7 +25546,7 @@ min:natrodufrenite a skos:Concept ;
 
 min:natroglaucocerinite a skos:Concept ;
     skos:broader min:sulfates-selenates-etc-with-additional-anions-with-h2o-with-only-medium-sized-cations-sheets-of-edge-sharing-octahedra ;
-    skos:definition "Zn6Al3(OH)18[Na(H2O)6](SO4)2€¢6H2O Nickel-Strunz 07.DD.35"@en ;
+    skos:definition "Zn6Al3(OH)18[Na(H2O)6](SO4)2.6H2O Nickel-Strunz 07.DD.35"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Natroglaucocerinite"@en .
@@ -25498,7 +25567,7 @@ min:natrokomarovite a skos:Concept ;
 
 min:natrolemoynite a skos:Concept ;
     skos:broader min:inosilicates-transitional-ino-phyllosilicate-structures ;
-    skos:definition "Na4Zr2Si10O26€¢9H2O Nickel-Strunz 09.DP.35"@en ;
+    skos:definition "Na4Zr2Si10O26.9H2O Nickel-Strunz 09.DP.35"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Natrolemoynite"@en .
@@ -25722,7 +25791,7 @@ min:neltnerite a skos:Concept ;
 
 min:nenadkevichite a skos:Concept ;
     skos:broader min:cyclosilicates-si4o128-4-membered-single-rings-vierer-einfachringe-without-insular-complex-anions ;
-    skos:definition "(Na,—»)8Nb4(Si4O12)2(O,OH)4 · 8H2O Nickel-Strunz 09.CE.30a"@en ;
+    skos:definition "(Na,->>)8Nb4(Si4O12)2(O,OH)4 · 8H2O Nickel-Strunz 09.CE.30a"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Nenadkevichite"@en .
@@ -25911,7 +25980,7 @@ min:nickelphosphide a skos:Concept ;
 
 min:nickelpicromerite a skos:Concept ;
     skos:broader min:sulfates-selenates-etc-without-additional-anions-with-h2o-with-medium-sized-and-large-cations ;
-    skos:definition "K2Ni(SO4)2€¢6H2O Nickel-Strunz 07.CC. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "K2Ni(SO4)2.6H2O Nickel-Strunz 07.CC. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Nickelpicromerite"@en .
@@ -26100,7 +26169,7 @@ min:niobocarbide a skos:Concept ;
 
 min:nioboholtite a skos:Concept ;
     skos:broader min:nesosilicates-nesosilicates-with-bo3-triangles-and-or-b4-be4-tetrahedra-cornersharing-with-sio4 ;
-    skos:definition "(Nb0.6—»0.4)Al6BSi3O18 Nickel-Strunz 09.AJ. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(Nb0.6->>0.4)Al6BSi3O18 Nickel-Strunz 09.AJ. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Nioboholtite"@en .
@@ -26555,7 +26624,7 @@ min:offretite a skos:Concept ;
 
 min:oftedalite a skos:Concept ;
     skos:broader min:cyclosilicates-si6o1812-6-membered-double-rings-sechser-doppelringe ;
-    skos:definition "K(Sc,Ca,Mn2+)2—»2[(Be,Al)3Si12O30] Nickel-Strunz 09.CM.05"@en ;
+    skos:definition "K(Sc,Ca,Mn2+)2->>2[(Be,Al)3Si12O30] Nickel-Strunz 09.CM.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Oftedalite"@en .
@@ -27297,7 +27366,7 @@ min:oxystibiomicrolite a skos:Concept ;
 
 min:oxyuranobetafite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "(U,Ca,—»)2(Ti,Nb)2O6O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(U,Ca,->>)2(Ti,Nb)2O6O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Oxyuranobetafite"@en .
@@ -28074,7 +28143,7 @@ min:parsonsite a skos:Concept ;
 
 min:partheite a skos:Concept ;
     skos:broader min:tektosilicates-with-zeolitic-h2o-zeolite-family-chains-of-single-connected-4-membered-rings ;
-    skos:definition "Ca2(Si4Al4) O15 (OH)2€¢4H2O Nickel-Strunz 09.GB.35"@en ;
+    skos:definition "Ca2(Si4Al4) O15 (OH)2.4H2O Nickel-Strunz 09.GB.35"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Parthéite"@en .
@@ -28130,7 +28199,7 @@ min:pascoite a skos:Concept ;
 
 min:paseroite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-2-33-5-and-similar-with-large-and-medium-sized-cations ;
-    skos:definition "PbMn2+(Mn2+,Fe3+)2(V5+,Ti,—»)18O38 Nickel-Strunz 04.CC. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "PbMn2+(Mn2+,Fe3+)2(V5+,Ti,->>)18O38 Nickel-Strunz 04.CC. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Paseroite"@en .
@@ -28165,7 +28234,7 @@ min:pauladamsite a skos:Concept ;
 
 min:paulingite-ca a skos:Concept ;
     skos:broader min:tektosilicates-with-zeolitic-h2o-zeolite-family-chains-of-doubly-connected-4-membered-rings ;
-    skos:definition "(Ca,K,Na,Ba,—»)10 (Si, Al)42O84€¢34H2O Nickel-Strunz 09.GC.35"@en ;
+    skos:definition "(Ca,K,Na,Ba,->>)10 (Si, Al)42O84.34H2O Nickel-Strunz 09.GC.35"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Paulingite-Ca"@en .
@@ -28284,7 +28353,7 @@ min:pedrizite a skos:Concept ;
 
 min:peisleyite a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-with-h2o-with-co3-so4-sio4 ;
-    skos:definition "Na2Al9[(P,S)O4]8(OH)6€¢28H2O Nickel-Strunz 08.DO.15"@en ;
+    skos:definition "Na2Al9[(P,S)O4]8(OH)6.28H2O Nickel-Strunz 08.DO.15"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Peisleyite"@en .
@@ -28844,7 +28913,7 @@ min:phosphates-etc-with-additional-anions-without-h2o-with-medium-sized-and-larg
 
 min:phosphoellenbergerite a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-without-h2o-with-only-medium-sized-cations-oh-etc-ro4-about-1-1 ;
-    skos:definition "(Mg,—»)2Mg12(PO4,PO3OH)6(PO3OH,CO3)2(OH)6 Nickel-Strunz 08.BB.55"@en ;
+    skos:definition "(Mg,->>)2Mg12(PO4,PO3OH)6(PO3OH,CO3)2(OH)6 Nickel-Strunz 08.BB.55"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Phosphoellenbergerite"@en .
@@ -29040,7 +29109,7 @@ min:piemontite-sr a skos:Concept ;
 
 min:piergorite-ce a skos:Concept ;
     skos:broader min:inosilicates-inosilicates-with-5-periodic-double-chains-si10o28 ;
-    skos:definition "Ca8(Ce,Th,La,Nd)2(Al0.5,Fe3+0.5)(—»,Li,Be)2Si6B8O36(OH,F)2 Nickel-Strunz 09.DL.10"@en ;
+    skos:definition "Ca8(Ce,Th,La,Nd)2(Al0.5,Fe3+0.5)(->>,Li,Be)2Si6B8O36(OH,F)2 Nickel-Strunz 09.DL.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Piergorite-(Ce)"@en .
@@ -29882,7 +29951,7 @@ min:pringleite a skos:Concept ;
 
 min:prismatine a skos:Concept ;
     skos:broader min:sorosilicates-sorosilicates-with-si3o10-si4o11-etc-anions-cations-in-octahedral-6-and-greater-coordination ;
-    skos:definition "(—»,Fe,Mg)(Mg,Al,Fe)5Al4Si2(Si,Al)2(B,Si,Al)(O,OH,F)22 Nickel-Strunz 09.BJ.50"@en ;
+    skos:definition "(->>,Fe,Mg)(Mg,Al,Fe)5Al4Si2(Si,Al)2(B,Si,Al)(O,OH,F)22 Nickel-Strunz 09.BJ.50"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Prismatine"@en .
@@ -29903,7 +29972,7 @@ min:proshchenkoite-y a skos:Concept ;
 
 min:prosopite a skos:Concept ;
     skos:broader min:complex-halides-ino-aluminofluorides ;
-    skos:definition "CaAl2F4[(OH)4-xFx], x = 0.0€“1.0 Nickel-Strunz 03.CD.10"@en ;
+    skos:definition "CaAl2F4[(OH)4-xFx], x = 0.0 1.0 Nickel-Strunz 03.CD.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Prosopite"@en .
@@ -30086,7 +30155,7 @@ min:pseudowollastonite a skos:Concept ;
 
 min:psilomelane a skos:Concept ;
     skos:broader min:miscellaneous-unclassified-oxides-hydroxides-v56-vanadates-arsenites-antimonites-bismuthites-sulfites-selenites-tellurites-iodates ;
-    skos:definition "Ba€¢(H2O)Mn3+5O10 Nickel-Strunz 04.00.00"@en ;
+    skos:definition "Ba.(H2O)Mn3+5O10 Nickel-Strunz 04.00.00"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Psilomelane"@en .
@@ -30941,7 +31010,7 @@ min:remondite-la a skos:Concept ;
 
 min:renardite a skos:Concept ;
     skos:broader min:uranyl-phosphates-and-arsenates-uo2-ro4-equals-3-2 ;
-    skos:definition "Pb(UO2)4(PO4)2(OH)4€¢H2O Nickel-Strunz 08.EC.10"@en ;
+    skos:definition "Pb(UO2)4(PO4)2(OH)4.H2O Nickel-Strunz 08.EC.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Renardite"@en .
@@ -31025,7 +31094,7 @@ min:rhabdoborite-v a skos:Concept ;
 
 min:rhabdoborite-w a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "Mg12(W6+,V5+)1 · 5O6{[BO3]6€“x[(P,As)O4]xF2€“x} (x < 1) Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Mg12(W6+,V5+)1 · 5O6{[BO3]6 x[(P,As)O4]xF2 x} (x < 1) Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Rhabdoborite-(W)"@en .
@@ -31172,7 +31241,7 @@ min:richelsdorfite a skos:Concept ;
 
 min:richetite a skos:Concept ;
     skos:broader min:uranyl-hydroxides-with-additional-cations-k-ca-ba-pb-etc-with-mainly-uo2ooh5-pentagonal-polyhedra ;
-    skos:definition "(Fe3+,Mg)Pb 8.6(UO2)36O36(OH)24€¢41H2O Nickel-Strunz 04.GB.15"@en ;
+    skos:definition "(Fe3+,Mg)Pb 8.6(UO2)36O36(OH)24.41H2O Nickel-Strunz 04.GB.15"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Richetite"@en .
@@ -31200,7 +31269,7 @@ min:rickturnerite a skos:Concept ;
 
 min:riebeckite a skos:Concept ;
     skos:broader min:clinoamphibole ;
-    skos:definition "—»[Na2][Fe2+3Fe3+2]Si8O22(OH)2 Nickel-Strunz 09.DE.25"@en ;
+    skos:definition "->>[Na2][Fe2+3Fe3+2]Si8O22(OH)2 Nickel-Strunz 09.DE.25"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Riebeckite"@en .
@@ -31445,7 +31514,7 @@ min:romarchite a skos:Concept ;
 
 min:romeite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-1-2-and-similar-with-large-plus-medium-sized-cations-sheets-of-edge-sharing-octahedra ;
-    skos:definition "Pb2Sb2O6O to (Ca,Na,—»)2Sb25+(O,OH)6F Nickel-Strunz 04.DH. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Pb2Sb2O6O to (Ca,Na,->>)2Sb25+(O,OH)6F Nickel-Strunz 04.DH. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Roméite"@en .
@@ -31613,7 +31682,7 @@ min:rossiantonite a skos:Concept ;
 
 min:rossite a skos:Concept ;
     skos:broader min:v56-vanadates-inovanadates ;
-    skos:definition "Ca(VO3)2€¢4H2O Nickel-Strunz 04.HD.05"@en ;
+    skos:definition "Ca(VO3)2.4H2O Nickel-Strunz 04.HD.05"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Rossite"@en .
@@ -31655,14 +31724,14 @@ min:rouaite a skos:Concept ;
 
 min:roubaultite a skos:Concept ;
     skos:broader min:uranyl-carbonates-uo2-co3-greaterthan-1-1 ;
-    skos:definition "Cu2(UO2)3(CO3)2O2(OH)2€¢4H2O Nickel-Strunz 05.EA.25"@en ;
+    skos:definition "Cu2(UO2)3(CO3)2O2(OH)2.4H2O Nickel-Strunz 05.EA.25"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Roubaultite"@en .
 
 min:roumaite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "(Ca,Na,REE,—»)7(Nb,Ti)[Si2O7]2OF3 Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(Ca,Na,REE,->>)7(Nb,Ti)[Si2O7]2OF3 Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Roumaite"@en .
@@ -31810,7 +31879,7 @@ min:rudlingerite a skos:Concept ;
 
 min:ruifrancoite a skos:Concept ;
     skos:broader min:phosphates-etc-with-additional-anions-with-h2o-with-small-and-occasionally-larger-cations ;
-    skos:definition "Ca2(—»,Mn)2(Fe3+,Mn,Mg)4Be4(PO4)6(OH)4(OH,H2O)2 · 4H2O Nickel-Strunz 08.DA.10"@en ;
+    skos:definition "Ca2(->>,Mn)2(Fe3+,Mn,Mg)4Be4(PO4)6(OH)4(OH,H2O)2 · 4H2O Nickel-Strunz 08.DA.10"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/minerals> ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Ruifrancoite"@en .
@@ -31959,7 +32028,7 @@ min:sabugalite a skos:Concept ;
 
 min:sacrofanite a skos:Concept ;
     skos:broader min:tektosilicates-without-zeolitic-h2o-tektosilicates-with-additional-anions ;
-    skos:definition "(Na61K19Ca32)(Si84Al84O336)(SO4)26Cl2F6€¢2H2O Nickel-Strunz 09.FB.05"@en ;
+    skos:definition "(Na61K19Ca32)(Si84Al84O336)(SO4)26Cl2F6.2H2O Nickel-Strunz 09.FB.05"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Sacrofanite"@en .
 
@@ -32302,7 +32371,7 @@ min:sayrite a skos:Concept ;
 
 min:sazhinite-ce a skos:Concept ;
     skos:broader min:phyllosilicates-single-nets-of-tetrahedra-with-4-5-6-and-8-membered-rings ;
-    skos:definition "Na2CeSi6O14€¢6H2O Nickel-Strunz 09.EA.30"@en ;
+    skos:definition "Na2CeSi6O14.6H2O Nickel-Strunz 09.EA.30"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Sazhinite-(Ce)"@en .
 
@@ -32464,7 +32533,7 @@ min:schlegelite a skos:Concept ;
 
 min:schlemaite a skos:Concept ;
     skos:broader min:metal-sulfides-m-s-greaterthan-1-1-mainly-2-1-with-pb-bi ;
-    skos:definition "(Cu,—»)6(Pb,Bi)Se4 Nickel-Strunz 02.BE.25"@en ;
+    skos:definition "(Cu,->>)6(Pb,Bi)Se4 Nickel-Strunz 02.BE.25"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Schlemaite"@en .
 
@@ -32873,7 +32942,7 @@ min:serendibite a skos:Concept ;
 
 min:sergeevite a skos:Concept ;
     skos:broader min:carbonates-with-additional-anions-with-h2o-with-large-and-medium-sized-cations ;
-    skos:definition "Ca2Mg11(CO3)9(HCO3)4(OH)4€¢6H2O Nickel-Strunz 05.DB.25"@en ;
+    skos:definition "Ca2Mg11(CO3)9(HCO3)4(OH)4.6H2O Nickel-Strunz 05.DB.25"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Sergeevite"@en .
 
@@ -33035,7 +33104,7 @@ min:shirozulite a skos:Concept ;
 
 min:shkatulkalite a skos:Concept ;
     skos:broader min:sorosilicates-si2o7-groups-with-additional-anions-cations-in-octahedral-6-and-greater-coordination ;
-    skos:definition "Na5(Nb1ˆ’xTix)2(Ti1ˆ’yMn2+y)[Si2O7]2O2(OH)2·nH2O (x + y = 0.5; n ‰¤ 10) Nickel-Strunz 09.BE.50"@en ;
+    skos:definition "Na5(Nb1ˆ’xTix)2(Ti1ˆ’yMn2+y)[Si2O7]2O2(OH)2·nH2O (x + y = 0.5; n  > 10) Nickel-Strunz 09.BE.50"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Shkatulkalite"@en .
 
@@ -33323,7 +33392,7 @@ min:sitinakite a skos:Concept ;
 
 min:siudaite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "Na8(Mn2+2Na)Ca6(Fe3+,Mn2+)3Zr3NbSi24(Si,—»,Ti)O74(OH)2Cl·5H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "Na8(Mn2+2Na)Ca6(Fe3+,Mn2+)3Zr3NbSi24(Si,->>,Ti)O74(OH)2Cl·5H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Siudaite"@en .
 
@@ -33581,7 +33650,7 @@ min:sorosilicates-unclassified-sorosilicates a skos:Concept ;
 
 min:sorosite a skos:Concept ;
     skos:broader min:metals-and-intermetallic-alloys-indium-tin-family ;
-    skos:definition "Cu1+x(Sn,Sb), where 0.1 ‰¤ x ‰¤ 0.2 Nickel-Strunz 01.AC.15"@en ;
+    skos:definition "Cu1+x(Sn,Sb), where 0.1  > x  > 0.2 Nickel-Strunz 01.AC.15"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Sorosite"@en .
 
@@ -33658,6 +33727,7 @@ min:sphaerobismoite a skos:Concept ;
     skos:prefLabel "Sphaerobismoite"@en .
 
 min:sphalerite a skos:Concept ;
+    skos:altLabel "Zincblende"@en ;
     skos:broader min:metal-sulfides-m-s-equals-1-1-and-similar-with-zn-fe-cu-ag-etc ;
     skos:definition "ZnS Nickel-Strunz 02.CB.05a"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
@@ -34147,7 +34217,7 @@ min:stoppaniite a skos:Concept ;
 
 min:stornesite-y a skos:Concept ;
     skos:broader min:phosphates-etc-without-additional-anions-without-h2o-with-medium-sized-and-large-cations ;
-    skos:definition "{(Y, Ca)}{Na6—»2}{(Ca,Na)8}{(Mg,Fe2+)43}(PO4)36 Nickel-Strunz 08.AC.50"@en ;
+    skos:definition "{(Y, Ca)}{Na6->>2}{(Ca,Na)8}{(Mg,Fe2+)43}(PO4)36 Nickel-Strunz 08.AC.50"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Stornesite-(Y)"@en .
 
@@ -34723,7 +34793,7 @@ min:szenicsite a skos:Concept ;
 
 min:szklaryite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "—»Al6BAs3+3O15 Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "->>Al6BAs3+3O15 Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Szklaryite"@en .
 
@@ -34747,7 +34817,7 @@ min:sztrokayite a skos:Concept ;
 
 min:szymanskiite a skos:Concept ;
     skos:broader min:carbonates-with-additional-anions-with-h2o-with-large-and-medium-sized-cations ;
-    skos:definition "Hg16(Ni,Mg)6(CO3)12(OH)12(H3O)8€¢3H2O Nickel-Strunz 05.DB.30"@en ;
+    skos:definition "Hg16(Ni,Mg)6(CO3)12(OH)12(H3O)8.3H2O Nickel-Strunz 05.DB.30"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Szymańskiite"@en .
 
@@ -34765,7 +34835,7 @@ min:tachyhydrite a skos:Concept ;
 
 min:tadzhikite-ce a skos:Concept ;
     skos:broader min:inosilicates-inosilicates-with-5-periodic-single-chains ;
-    skos:definition "Ca4Ce3+2Ti—»(B4Si4O22)(OH)2 Nickel-Strunz 09.DK.20"@en ;
+    skos:definition "Ca4Ce3+2Ti->>(B4Si4O22)(OH)2 Nickel-Strunz 09.DK.20"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Tadzhikite-(Ce)"@en .
 
@@ -34932,27 +35002,33 @@ min:tantalcarbide a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Tantalcarbide"@en .
 
-min:tantalite-fe a skos:Concept ;
+min:tantalite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
+    skos:definition "(Fe, Mn)Ta2O6 Nickel-Strunz 04.DB.35"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Tantalite"@en .
+
+min:tantalite-fe a skos:Concept ;
+    skos:broader min:tantalite ;
     skos:definition "Fe2+Ta2O6 Nickel-Strunz 04.DB.35"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Tantalite-(Fe)"@en .
 
 min:tantalite-mg a skos:Concept ;
-    skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
+    skos:broader min:tantalite ;
     skos:definition "(Mg,Fe2+)(Ta,Nb)2O6 Nickel-Strunz 04.DB.35"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Tantalite-(Mg)"@en .
 
 min:tantalite-mn a skos:Concept ;
-    skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
+    skos:broader min:tantalite ;
     skos:definition "Mn2+Ta2O6 Nickel-Strunz 04.DB.35"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Tantalite-(Mn)"@en .
 
 min:tantalowodginite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
-    skos:definition "(Mn2+0.5—»0.5)TaTa2O8 Nickel-Strunz 04.DB.40"@en ;
+    skos:definition "(Mn2+0.5->>0.5)TaTa2O8 Nickel-Strunz 04.DB.40"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Tantalowodginite"@en .
 
@@ -35043,7 +35119,7 @@ min:tashelgite a skos:Concept ;
 
 min:tassieite a skos:Concept ;
     skos:broader min:phosphates-without-additional-anions-with-h2o-with-large-and-medium-sized-cations-ro4-h2o-greaterthan-1-1 ;
-    skos:definition "(Na,—»)Ca2(Mg,Fe2+,Fe3+)2(Fe2+,Mg)2(Fe3+,Mg)2(PO4)6 · 2H2O Nickel-Strunz 08.CF.05"@en ;
+    skos:definition "(Na,->>)Ca2(Mg,Fe2+,Fe3+)2(Fe2+,Mg)2(Fe3+,Mg)2(PO4)6 · 2H2O Nickel-Strunz 08.CF.05"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Tassieite"@en .
 
@@ -35760,13 +35836,13 @@ min:titanium a skos:Concept ;
 
 min:titanoholtite a skos:Concept ;
     skos:broader min:nesosilicates-nesosilicates-with-bo3-triangles-and-or-b4-be4-tetrahedra-cornersharing-with-sio4 ;
-    skos:definition "(Ti0.75—»0.25)Al6BSi3O18 Nickel-Strunz 09.AJ. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(Ti0.75->>0.25)Al6BSi3O18 Nickel-Strunz 09.AJ. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Titanoholtite"@en .
 
 min:titanomaghemite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-3-4-and-similar-with-only-medium-sized-cations ;
-    skos:definition "(Ti4+0.5—»0.5)Fe2O4 Nickel-Strunz 04.BB.15"@en ;
+    skos:definition "(Ti4+0.5->>0.5)Fe2O4 Nickel-Strunz 04.BB.15"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Titanomaghemite"@en .
 
@@ -35903,6 +35979,7 @@ min:topsoeite a skos:Concept ;
     skos:prefLabel "Topsøeite"@en .
 
 min:torbernite a skos:Concept ;
+    skos:altLabel "Chalcolite"@en ;
     skos:broader min:uranyl-phosphates-and-arsenates-uo2-ro4-equals-1-1 ;
     skos:definition "Cu(UO2)2(PO4)2 · 12H2O Nickel-Strunz 08.EB.05"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
@@ -36427,7 +36504,7 @@ min:turanite a skos:Concept ;
 
 min:turkestanite a skos:Concept ;
     skos:broader min:cyclosilicates-si4o128-4-membered-double-rings ;
-    skos:definition "(K,—»)(Ca,Na)2ThSi8O20 · nH2O Nickel-Strunz 09.CH.10"@en ;
+    skos:definition "(K,->>)(Ca,Na)2ThSi8O20 · nH2O Nickel-Strunz 09.CH.10"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Turkestanite"@en .
 
@@ -37808,7 +37885,7 @@ min:virgilite a skos:Concept ;
 
 min:viseite a skos:Concept ;
     skos:broader min:miscellaneous-unclassified-phosphates-arsenates-vanadates ;
-    skos:definition "Ca10Al23(SiO4)6(PO4)7O22F3€¢72(H2O) Nickel-Strunz 08.00.00"@en ;
+    skos:definition "Ca10Al23(SiO4)6(PO4)7O22F3.72(H2O) Nickel-Strunz 08.00.00"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Viseite"@en .
 
@@ -38054,7 +38131,7 @@ min:vymazalovaite a skos:Concept ;
 
 min:vysokyite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "U4+[AsO2(OH)2]4€¢4H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "U4+[AsO2(OH)2]4.4H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Vysokýite"@en .
 
@@ -38156,7 +38233,7 @@ min:walfordite a skos:Concept ;
 
 min:walkerite a skos:Concept ;
     skos:broader min:heptaborates-and-other-megaborates-phyllo-nonborates-etc ;
-    skos:definition "Ca16(Mg,Li,—»)2[B13O17(OH)12]4Cl6·28H2O Nickel-Strunz 06.GB.20"@en ;
+    skos:definition "Ca16(Mg,Li,->>)2[B13O17(OH)12]4Cl6·28H2O Nickel-Strunz 06.GB.20"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Walkerite"@en .
 
@@ -38714,6 +38791,12 @@ min:wolfeite a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Wolfeite"@en .
 
+min:wolframite a skos:Concept ;
+    skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
+    skos:definition "(Fe,Mn)WO4 Nickel-Strunz 04.DB.40"@en ;
+    skos:inScheme <http://linked.data.gov.au/def/minerals> ;
+    skos:prefLabel "Wolframite"@en .
+
 min:wolframowodginite a skos:Concept ;
     skos:broader min:metal-oxygen-equals-1-2-and-similar-with-medium-sized-cations-chains-of-edge-sharing-octahedra ;
     skos:definition "Mn(Mn,Sn,Fe,Ta)(W,Ta,Nb)2O8 Nickel-Strunz 04.DB.40"@en ;
@@ -38992,7 +39075,7 @@ min:yancowinnaite a skos:Concept ;
 
 min:yangite a skos:Concept ;
     skos:broader min:unclassified-minerals-unclassified-minerals ;
-    skos:definition "PbMnSi3O8€¢H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "PbMnSi3O8.H2O Nickel-Strunz 99.99. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Yangite"@en .
 
@@ -39226,7 +39309,7 @@ min:yukonite a skos:Concept ;
 
 min:yuksporite a skos:Concept ;
     skos:broader min:inosilicates-inosilicates-with-3-periodic-single-and-multiple-chains ;
-    skos:definition "K4(Ca,Na)14(Sr,Ba)2(—»,Mn,Fe)(Ti,Nb)4(O,OH)4(Si6O17)2(Si2O7)3(H2O,OH)3 Nickel-Strunz 09.DG.95"@en ;
+    skos:definition "K4(Ca,Na)14(Sr,Ba)2(->>,Mn,Fe)(Ti,Nb)4(O,OH)4(Si6O17)2(Si2O7)3(H2O,OH)3 Nickel-Strunz 09.DG.95"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Yuksporite"@en .
 
@@ -41291,9 +41374,9 @@ min:phyllosilicates a skos:Concept ;
 
 min:tektosilicates-with-zeolitic-h2o-zeolite-family-zeolites-with-t5o10-units-the-fibrous-zeolites a skos:Concept ;
     skos:broader min:tektosilicates-with-zeolitic-h2o-zeolite-family ;
-    skos:definition "Tektosilicates with zeolitic H2O; zeolite family - Zeolites with T5O10 Units €“ The Fibrous Zeolites. Nickel-Strunz 09.GA"@en ;
+    skos:definition "Tektosilicates with zeolitic H2O; zeolite family - Zeolites with T5O10 Units   The Fibrous Zeolites. Nickel-Strunz 09.GA"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
-    skos:prefLabel "Tektosilicates with zeolitic H2O; zeolite family - Zeolites with T5O10 Units €“ The Fibrous Zeolites"@en .
+    skos:prefLabel "Tektosilicates with zeolitic H2O; zeolite family - Zeolites with T5O10 Units   The Fibrous Zeolites"@en .
 
 min:carbonates-with-additional-anions-without-h2o-with-pb-bi a skos:Concept ;
     skos:broader min:carbonates-with-additional-anions-without-h2o ;
@@ -41916,7 +41999,7 @@ min:carbonates-without-additional-anions-with-h2o-with-rare-earth-elements-ree a
 
 min:hornblende a skos:Concept ;
     skos:broader min:clinoamphibole ;
-    skos:definition "(Ca,Na)2€“3(Mg,Fe,Al)5(Al,Si)8O22(OH,F)2 Nickel-Strunz 09.DE. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
+    skos:definition "(Ca,Na)2 3(Mg,Fe,Al)5(Al,Si)8O22(OH,F)2 Nickel-Strunz 09.DE. Speculative Nickel-Strunz classification by the GSQ, Not approved by AMA."@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
     skos:prefLabel "Hornblende"@en .
 
@@ -42267,9 +42350,9 @@ min:polyphosphates-polyarsenates-4-polyvanadates-ino-4-vanadates a skos:Concept 
 
 min:tektosilicates-with-zeolitic-h2o-zeolite-family-chains-of-6-membered-rings-tabular-zeolites a skos:Concept ;
     skos:broader min:tektosilicates-with-zeolitic-h2o-zeolite-family ;
-    skos:definition "Tektosilicates with zeolitic H2O; zeolite family - Chains of 6-membered rings €“ tabular zeolites. Nickel-Strunz 09.GD"@en ;
+    skos:definition "Tektosilicates with zeolitic H2O; zeolite family - Chains of 6-membered rings - tabular zeolites. Nickel-Strunz 09.GD"@en ;
     skos:inScheme <http://linked.data.gov.au/def/minerals> ;
-    skos:prefLabel "Tektosilicates with zeolitic H2O; zeolite family - Chains of 6-membered rings €“ tabular zeolites"@en .
+    skos:prefLabel "Tektosilicates with zeolitic H2O; zeolite family - Chains of 6-membered rings - tabular zeolites"@en .
 
 min:metal-sulfides-m-s-equals-1-1-and-similar-with-ni-fe-co-pge-etc a skos:Concept ;
     skos:broader min:metal-sulfides-m-s-equals-1-1-and-similar ;
