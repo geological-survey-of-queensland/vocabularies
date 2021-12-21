@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <https://schema.org/> .
+@prefix sdo: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -29,13 +29,15 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 <https://linked.data.gov.au/dataset/asgs2016/stateorterritory/8> a skos:Concept ;
     skos:definition "The Australian Capital Territory."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "ACT";
+    skos:altLabel "ACT"@en,
+        "A.C.T."@en ;
     skos:prefLabel "Australian Capital Territory"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-states-and-territories> .
 
@@ -44,6 +46,8 @@
     rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "NSW" ;
+    skos:altLabel "NSW"@en,
+        "N.S.W."@en ;
     skos:prefLabel "New South Wales"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-states-and-territories> .
 
@@ -52,6 +56,8 @@
     rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "NT" ;
+    skos:altLabel "NT"@en,
+        "N.T."@en ;
     skos:prefLabel "Northern Territory"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-states-and-territories> .
 
@@ -60,6 +66,8 @@
     rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "QLD" ;
+    skos:altLabel "QLD"@en,
+        "Qld"@en ;
     skos:prefLabel "Queensland"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-states-and-territories> .
 
@@ -68,6 +76,8 @@
     rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "SA" ;
+    skos:altLabel "SA"@en,
+        "S.A."@en ;
     skos:prefLabel "South Australia"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-states-and-territories> .
 
@@ -76,6 +86,8 @@
     rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "TAS" ;
+    skos:altLabel "TAS"@en,
+        "Tas"@en ;
     skos:prefLabel "Tasmania"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-states-and-territories> .
 
@@ -84,6 +96,8 @@
     rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "VIC" ;
+    skos:altLabel "VIC"@en,
+        "Vic"@en ;
     skos:prefLabel "Victoria"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-states-and-territories> .
 
@@ -92,6 +106,8 @@
     rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "WA" ;
+    skos:altLabel "WA"@en,
+        "W.A."@en ;
     skos:prefLabel "Western Australia"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-states-and-territories> .
 
@@ -100,5 +116,7 @@
     rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:inScheme <https://linked.data.gov.au/def/australian-states-and-territories> ;
     skos:notation "OTHER" ;
+    skos:altLabel "OTHER"@en,
+        "Other"@en ;
     skos:prefLabel "Other Territories"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-states-and-territories> .
