@@ -12,7 +12,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-05-26"^^xsd:date ;
+    dcterms:modified "2022-01-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
@@ -25,6 +25,7 @@
         gsqst:mine,
         gsqst:pit,
         gsqst:project-site,
+        gsqst:quarry,
         gsqst:rock-unit,
         gsqst:trench,
         gsqst:resource-authority,
@@ -247,12 +248,44 @@ gsqst:underground-mine a skos:Concept ;
     skos:prefLabel "Underground Mine"@en .
 
 gsqst:quarry a skos:Concept ;
-    skos:broader gsqst:mine ;
     skos:definition "Man-made excavation to extract building and road base material."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
     skos:notation "qy" ;
-    skos:prefLabel "Quarry"@en .
+    skos:prefLabel "Quarry"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+
+gsqst:quarry-hardrock a skos:Concept ;
+    skos:broader gsqst:quarry ;
+    skos:definition "A quarry in which the dominant commodities extracted over the life of the quarry are hardrock commodities. Classification is based on long term activity and annual variations may occur where a hardrock quarry does not predominantly produce hardrock in particular years."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "qyhr" ;
+    skos:prefLabel "Quarry - Hardrock"@en .
+
+gsqst:quarry-sandgravel a skos:Concept ;
+    skos:broader gsqst:quarry ;
+    skos:definition "A quarry in which the dominant commodities extracted over the life of the quarry are sand and gravel commodities. Classification is based on long term activity and annual variations may occur where a sand and gravel quarry does not predominantly produce sand and gravel in particular years."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "qysg" ;
+    skos:prefLabel "Quarry - Sand and Gravel"@en .
+
+gsqst:quarry-sand a skos:Concept ;
+    skos:broader gsqst:quarry ;
+    skos:definition "A quarry in which the dominant commodities extracted over the life of the quarry are sand commodities. Classification is based on long term activity and annual variations may occur where a sand quarry does not predominantly produce sand in particular years."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "qysd" ;
+    skos:prefLabel "Quarry - Sand"@en .
+
+gsqst:quarry-gravel a skos:Concept ;
+    skos:broader gsqst:quarry ;
+    skos:definition "A quarry in which the dominant commodities extracted over the life of the quarry are gravel commodities. Classification is based on long term activity and annual variations may occur where a gravel quarry does not predominantly produce gravel in particular years."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "qygv" ;
+    skos:prefLabel "Quarry - Gravel"@en .
 
 gsqst:pit a skos:Concept ;
     skos:altLabel "Gravel Scrape"@en,

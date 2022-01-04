@@ -4,7 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <https://schema.org/> .
+@prefix sdo: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -12,7 +12,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-05-26"^^xsd:date ;
+    dcterms:modified "2022-01-04"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
@@ -25,6 +25,7 @@
         gsqst:mine,
         gsqst:pit,
         gsqst:project-site,
+        gsqst:quarry,
         gsqst:rock-unit,
         gsqst:trench,
         gsqst:resource-authority,
@@ -34,7 +35,7 @@
 
 <https://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 gsqst:auger a skos:Concept ;
     skos:altLabel "Auger Hole"@en ;
@@ -60,7 +61,7 @@ gsqst:borehole a skos:Concept ;
         "Corehole"@en,
         "Drillhole"@en,
         "Well"@en ;
-    skos:definition "A Borehole is a deep and narrow hole in the ground typically made by a drilling rig. Boreholes are the sites of extraction or rock samples, such as core cuttings, aor rock chips, and fluid samples. They may be designed primarily to extract rock samples, to exchange (or facilitate the exchange of) fluids between a subsurface reservoir and the surface (or another reservoir), or to enable the detection and measurement of rock or fluid properties. A Borehole has a single Origin and all Wellbore(s) that extend from this Well Origin are parts of the Borehole. The term borehole is generic and has variations in terminology that are industry and location specific. Some industries and locations may not recognise the term borehole as a standard designation. Sources: PPDM What Is A Well, GSQ."@en ;
+    skos:definition "A Borehole is a deep and narrow hole in the ground typically made by a drilling rig. Boreholes are the sites of extraction of rock samples, such as core, cuttings, and rock chips, and fluid samples. They may be designed primarily to extract rock or fluid samples, to exchange (or facilitate the exchange of) fluids between a subsurface reservoir and the surface (or another reservoir), or to enable the detection and measurement of rock or fluid properties. A Borehole has a single Origin and all Wellbore(s) that extend from this Well Origin are parts of the Borehole. The term borehole is generic and has variations in terminology that are industry and location specific. Some industries and locations may not recognise the term borehole as a standard designation. Sources: PPDM What Is A Well, GSQ."@en ;
     skos:scopeNote "In the context of administration by a regulatory body, a borehole exists as an entity once proposed-to-be-drilled and prior to physical creation through the act of drilling."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-sites> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
@@ -247,12 +248,44 @@ gsqst:underground-mine a skos:Concept ;
     skos:prefLabel "Underground Mine"@en .
 
 gsqst:quarry a skos:Concept ;
-    skos:broader gsqst:mine ;
     skos:definition "Man-made excavation to extract building and road base material."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-sites> ;
     skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
     skos:notation "qy" ;
-    skos:prefLabel "Quarry"@en .
+    skos:prefLabel "Quarry"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-sites> .
+
+gsqst:quarry-hardrock a skos:Concept ;
+    skos:broader gsqst:quarry ;
+    skos:definition "A quarry in which the dominant commodities extracted over the life of the quarry are hardrock commodities. Classification is based on long term activity and annual variations may occur where a hardrock quarry does not predominantly produce hardrock in particular years."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "qyhr" ;
+    skos:prefLabel "Quarry - Hardrock"@en .
+
+gsqst:quarry-sandgravel a skos:Concept ;
+    skos:broader gsqst:quarry ;
+    skos:definition "A quarry in which the dominant commodities extracted over the life of the quarry are sand and gravel commodities. Classification is based on long term activity and annual variations may occur where a sand and gravel quarry does not predominantly produce sand and gravel in particular years."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "qysg" ;
+    skos:prefLabel "Quarry - Sand and Gravel"@en .
+
+gsqst:quarry-sand a skos:Concept ;
+    skos:broader gsqst:quarry ;
+    skos:definition "A quarry in which the dominant commodities extracted over the life of the quarry are sand commodities. Classification is based on long term activity and annual variations may occur where a sand quarry does not predominantly produce sand in particular years."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "qysd" ;
+    skos:prefLabel "Quarry - Sand"@en .
+
+gsqst:quarry-gravel a skos:Concept ;
+    skos:broader gsqst:quarry ;
+    skos:definition "A quarry in which the dominant commodities extracted over the life of the quarry are gravel commodities. Classification is based on long term activity and annual variations may occur where a gravel quarry does not predominantly produce gravel in particular years."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "qygv" ;
+    skos:prefLabel "Quarry - Gravel"@en .
 
 gsqst:pit a skos:Concept ;
     skos:altLabel "Gravel Scrape"@en,
