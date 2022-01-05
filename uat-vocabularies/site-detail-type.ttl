@@ -11,7 +11,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-03-30"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-06-26"^^xsd:date ;
+    dcterms:modified "2022-01-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Miscellaneous Site Details."@en ;
@@ -25,7 +25,8 @@
         stdt:location-accuracy ,
         stdt:location-method ,
         stdt:extent-of-workings ,
-        stdt:original-crs ;
+        stdt:original-crs,
+        stdt:site-phone ;
 .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
@@ -98,4 +99,11 @@ stdt:original-crs a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
     skos:prefLabel "Original CRS"@en ;
     skos:scopeNote "For use in data migration. Used for data previously stored in MERLIN that was converted to GDA94 in 2005."@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
+
+stdt:site-phone a skos:Concept ;
+    skos:definition "The contact phone number associated with a site, such as a mine or quarry, during operation."@en ; 
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
+    skos:prefLabel "Site Contact Phone"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
