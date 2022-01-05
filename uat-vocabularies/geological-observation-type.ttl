@@ -60,6 +60,7 @@
         obstp:regolith-observations,
         obstp:reservoir-int,
         obstp:rock-classification,
+        obstp:sale,
         obstp:sedimentary-lithofacies,
         obstp:sedimentary-structures,
         obstp:seismic-2d,
@@ -467,6 +468,14 @@ obstp:rock-classification a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "RCLASS" ;
     skos:prefLabel "Rock Classification"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type> .
+
+obstp:sale a skos:Concept ;
+    skos:definition "An observation of the metrics of a geological resource sale, such as the tonnage, grade, value, and shipping information."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-observation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-type> ;
+    skos:notation "SALES" ;
+    skos:prefLabel "Sale"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type> .
 
 obstp:sedimentary-lithofacies a skos:Concept ;
