@@ -1,3 +1,4 @@
+@prefix smrl: <http://linked.data.gov.au/def/sample-relationship/>
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -9,12 +10,13 @@
 <http://linked.data.gov.au/def/sample-relationship> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-03-24"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-06-23"^^xsd:date ;
+    dcterms:modified "2022-01-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Source information from http://www.w3.org/TR/vocab-ssn/#Sample_Relations and the SOSA Extensions ontology, modified by the Geological Survey of Queensland." ;
     skos:definition """Relationships between Samples. This vocabulary is derived from the SOSA Ontology and the SOSA Extensions Ontology where the Samples are defined by the class sosa:Sample and the relationships are OWL objectProperties. It reuses the original ontology URIs directly and retains the relationship's non-SKSO properties too so it is a SKOS+ ontology (SKOS + other things)."""@en ;
     skos:hasTopConcept
         #sosa:hasSample ,
+        smrl:isAggregateOf ,
         sosa:isSampleOf ,
         sosa:hasOriginalSample ;
     skos:prefLabel "Sample Relationship"@en .
@@ -34,6 +36,15 @@
 #    rdfs:isDefinedBy sosa: ;
 #    skos:inScheme <http://linked.data.gov.au/def/sample-relationship> ;
 #    skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> .
+
+smrl:isAggregateOf
+    a skos:Concept ;
+    skos:prefLabel "is aggregate of"@en ;
+    skos:definition "Relation from a Sample to an entity that it was dervied from, where multiple sources have been aggregated into a composite sample."@en ;
+    sdo:domainIncludes sosa:Sample ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-relationship> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-relationship> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> .
 
 sosa:isSampleOf
     a owl:ObjectProperty , skos:Concept ;
