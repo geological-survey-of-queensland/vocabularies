@@ -10,7 +10,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-02-08"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-05-28"^^xsd:date ;
+    dcterms:modified "2022-01-05"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The description and definition of the qualitative and quantitative results obtained through geoscience observations."@en ;
@@ -63,6 +63,7 @@
         rslt:power,
         rslt:pressure,
         rslt:radioactivity,
+        rslt:recovery,
         rslt:resitivity,
         rslt:rotation,
         rslt:sales-volumetric,
@@ -531,6 +532,14 @@ rslt:radioactivity a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/result-type> ;
     skos:notation "rrad" ;
     skos:prefLabel "Radioactivity"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
+
+rslt:recovery a skos:Concept ;
+    skos:definition "The amount of a target material recovered from an input mixture relative to the total amount of the target material initially present in the input. Expressed as a percentage."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/result-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/result-type> ;
+    skos:notation "rrec" ;
+    skos:prefLabel "Recovery"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/result-type> .
 
 rslt:resitivity a skos:Concept ;
