@@ -11,10 +11,10 @@
         skos:ConceptScheme ;
     dcterms:created "2020-04-15"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-06-18"^^xsd:date ;
+    dcterms:modified "2022-01-11"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Derived from the geo-profile of QUDT (http://linked.data.gov.au/def/geou)"@en ;
-    skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to the geosciences." ;
+    skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to the geosciences."@en ;
     skos:hasTopConcept geou:BBLOE,
         geou:BBL_US-PER-HR,
         geou:BBL_US-PER-MIN,
@@ -40,7 +40,9 @@
         geou:GM-PER-TON_M,
         geou:GigaJ,
         geou:GigaJ-PER-MegaL,
+        geou:GigaM3,
         geou:HR-PER-FT,
+        geou:HR-PER-M,
         geou:KiloBBL,
         geou:KiloBBLOE,
         geou:KiloBTU,
@@ -71,9 +73,10 @@
         geou:MicroS-PER-CentiM,
         geou:MicroS-PER-M,
         geou:MilliD,
-        geou:MilliGM,
+        geou:MilliGM-PER-GM,
         geou:MilliGM-PER-TOC,
         geou:MilliGM-PER-TON_M,
+        geou:MilliL,
         geou:MilliM-PER-SEC,
         geou:N-PER-M,
         geou:OZ-PER-TON_LONG,
@@ -87,7 +90,7 @@
         geou:SHOTS-PER-FT,
         geou:SHOTS-PER-M,
         geou:TOC,
-        geou:TON_M-PER-M,
+        geou:TROYOZ,
         <http://qudt.org/vocab/unit/ARCMIN>,
         <http://qudt.org/vocab/unit/ARCSEC>,
         <http://qudt.org/vocab/unit/ATM>,
@@ -156,11 +159,13 @@
         <http://qudt.org/vocab/unit/MilliM>,
         <http://qudt.org/vocab/unit/MilliRAD>,
         <http://qudt.org/vocab/unit/MilliS>,
+        <http://qudt.org/vocab/unit/MilliSEC>,
         <http://qudt.org/vocab/unit/N>,
         <http://qudt.org/vocab/unit/NanoSEC>,
         <http://qudt.org/vocab/unit/OHM-M>,
         <http://qudt.org/vocab/unit/OZ>,
         <http://qudt.org/vocab/unit/PA>,
+        <http://qudt.org/vocab/unit/PA-SEC>,
         <http://qudt.org/vocab/unit/PA-PER-SEC>,
         <http://qudt.org/vocab/unit/PERCENT>,
         <http://qudt.org/vocab/unit/PPB>,
@@ -171,6 +176,7 @@
         <http://qudt.org/vocab/unit/REV-PER-MIN>,
         <http://qudt.org/vocab/unit/SEC>,
         <http://qudt.org/vocab/unit/TOE>,
+        <http://qudt.org/vocab/unit/TONNE-PER-M3>,
         <http://qudt.org/vocab/unit/TON_LONG>,
         <http://qudt.org/vocab/unit/TON_M>,
         <http://qudt.org/vocab/unit/TeraBYTE>,
@@ -186,16 +192,16 @@
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 <http://qudt.org/vocab/unit/CentiM> a skos:Concept;
+    skos:hiddenLabel "CENTIMETRES (cm)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units."@en ;
-    skos:notation "CM",
-        "CMT",
-        "cm" ;
+    skos:notation "cm" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Centimeter"@en .
 
 geou:BBLOE a skos:Concept ;
+    skos:hiddenLabel "BARREL OF OIL EQUIVALENT PER MEGALITRE (BOE/ML)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of oil quality or energy density defined as the energy in Barrel of Oil Equivalent (6.1178632×10e9 J) per million litres."@en ;
     skos:notation "BOE/ML" ;
@@ -205,6 +211,7 @@ geou:BBLOE a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:BBL_US-PER-HR a skos:Concept ;
+    skos:hiddenLabel "BARRELS PER HOUR (bbl/hr)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of flow rate, typically used for oil production. The number of standard US barrels flowing past a given point per hour."@en ;
     skos:notation "bbl/hr" ;
@@ -214,6 +221,7 @@ geou:BBL_US-PER-HR a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:BBL_US-PER-MIN a skos:Concept ;
+    skos:hiddenLabel "BARRELS PER MINUTE (bbl/min)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of flow rate, typically used for oil production. The number of standard US barrels flowing past a given point per minute."@en ;
     skos:notation "bbl/min" ;
@@ -232,6 +240,7 @@ geou:BOE a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:BTU-PER-MegaL a skos:Concept ;
+    skos:hiddenLabel "BRITISH THERMAL UNIT PER MEGALITRE (BTU/ML)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of oil quality or energy density defined as the energy in one BTU (1055 J) per million litres."@en ;
     skos:notation "BTU/ML" ;
@@ -241,6 +250,7 @@ geou:BTU-PER-MegaL a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:BWOC a skos:Concept ;
+    skos:hiddenLabel "BY WEIGHT OF CEMENT (BWOC)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration within Cement. The amount of an additives mass per unit mass of cement."@en ;
     skos:notation "BWOC" ;
@@ -250,6 +260,7 @@ geou:BWOC a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:BWOW a skos:Concept ;
+    skos:hiddenLabel "BY WEIGHT OF WATER (BWOW)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration within Water. The amount of an additives mass per unit mass of water."@en ;
     skos:notation "BWOW" ;
@@ -259,6 +270,7 @@ geou:BWOW a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:COUNT a skos:Concept ;
+    skos:hiddenLabel "COUNT (n)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The number of unique and discrete objects or entities in a set."@en ;
     skos:notation "n" ;
@@ -268,6 +280,8 @@ geou:COUNT a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:CentiM3-PER-TON_M a skos:Concept ;
+    skos:altLabel "CUBIC CENTIMETRES PER TONNE"@en ;
+    skos:hiddenLabel "CUBIC CENTIMETRES PER TONNE (cm3/t)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration, typically a fluid held within a solid. The cubic centimetres or mL of a substance per ton of host material."@en ;
     skos:notation "cm3/t" ;
@@ -277,6 +291,7 @@ geou:CentiM3-PER-TON_M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:D a skos:Concept ;
+    skos:hiddenLabel "DARCY (D)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of permeability. A medium with a permeability of 1 darcy permits a flow of 1 cm³/s of a fluid with viscosity 1 cP (1 mPa·s) under a pressure gradient of 1 atm/cm acting across an area of 1 cm²."@en ;
     skos:notation "D" ;
@@ -286,15 +301,17 @@ geou:D a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:DEG-PER-100F a skos:Concept ;
+    skos:hiddenLabel "DEGREES PER 100 FEET (°/100ft)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of curvature. The deviation (in degrees) of a line over an arc length of 100 feet."@en ;
-    skos:notation "°/100ft" ;
+    skos:notation """°/100ft""" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Degrees per Hundred Feet"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:DEG-PER-30M a skos:Concept ;
+    skos:hiddenLabel "DEGREES PER 30 METRES (°/30m)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of curvature. The deviation (in degrees) of a line over an arc length of 30 metres."@en ;
     skos:notation "°/30m" ;
@@ -304,6 +321,7 @@ geou:DEG-PER-30M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:DEG-PER-F a skos:Concept ;
+    skos:hiddenLabel "DEGREES PER METRE (°/m)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of curvature. The deviation (in degrees) of a line over an arc length of 1 feet."@en ;
     skos:notation "°/ft" ;
@@ -313,6 +331,7 @@ geou:DEG-PER-F a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:DEG-PER-M a skos:Concept ;
+    skos:hiddenLabel "DEGREES PER FOOR (°/ft)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of curvature. The deviation (in degrees) of a line over an arc length of 1 metre."@en ;
     skos:notation "°/m" ;
@@ -322,6 +341,7 @@ geou:DEG-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:DecaREV-PER-MIN a skos:Concept ;
+    skos:hiddenLabel "HUNDRED REVOLUTIONS PER MINUTE (hRPM)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of rotation or Angular Velocity. The number of revolutions of an object relative to a fixed frame of reference in one minute, divided by 100."@en ;
     skos:notation "hRPM" ;
@@ -331,6 +351,7 @@ geou:DecaREV-PER-MIN a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:ExaBYTE a skos:Concept ;
+    skos:hiddenLabel "EXABYTE (EB)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The exabyte is a multiple of the unit byte for digital information. In the International System of Units (SI), the prefix exa indicates multiplication by the sixth power of 1000 (1018). Therefore, one exabyte is one quintillion bytes (short scale)."@en ;
     skos:notation "EB" ;
@@ -340,6 +361,7 @@ geou:ExaBYTE a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:FRAC a skos:Concept ;
+    skos:hiddenLabel "DECIMAL FRACTION (.)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A fraction whose denominator is a power of ten and whose numerator is expressed by figures placed to the right of a decimal point."@en ;
     skos:notation "." ;
@@ -349,6 +371,7 @@ geou:FRAC a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:FT-PER-MilliSEC a skos:Concept ;
+    skos:hiddenLabel "FEET PER MILLISECOND (ft/ms)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "An imperial measure of velocity. The number of feet traversed in the time of 1 millisecond."@en ;
     skos:notation "ft/ms" ;
@@ -358,6 +381,9 @@ geou:FT-PER-MilliSEC a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:FT3-PER-TON a skos:Concept ;
+    skos:altLabel "STANDARD CUBIC FEET PER TON"@en ;
+    skos:hiddenLabel "STANDARD CUBIC FEET PER TON (scf/ton)"@en,
+        "CUBIC FEET PER TON (scf/ton)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration or gas content. Typically used in the resource industry to refer to the number of cubic feet of a gas contained within one ton of host material."@en ;
     skos:notation "scf/ton" ;
@@ -367,6 +393,8 @@ geou:FT3-PER-TON a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:FT3-PER-TON_M a skos:Concept ;
+    skos:altLabel "CUBIC FEET PER TON"@en ;
+    skos:hiddenLabel "CUBIC FEET PER TON (ft3/ton)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration. The number of cubic feet of a fluid contained within one tonne of host material."@en ;
     skos:notation "ft3/ton" ;
@@ -376,6 +404,7 @@ geou:FT3-PER-TON_M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:GAL_IMP-PER-50SACK a skos:Concept ;
+    skos:hiddenLabel "GALLONS PER 50kg SACK"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A proportional concentration ratio typically used for cement mixtures. The number of gallons of water added to 50kg of additive(s)."@en ;
     skos:notation "gal/50kg" ;
@@ -385,8 +414,10 @@ geou:GAL_IMP-PER-50SACK a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:GM-PER-KiloGM a skos:Concept ;
+    skos:altLabel "GRAMS PER KILOGRAM"@en ;
+    skos:hiddenLabel "GRAMS PER KILOGRAM (g/kg)"@en ;
     rdfs:isDefinedBy geou: ;
-    skos:definition ""@en ;
+    skos:definition "A measure of concentration. The number of grams of a material of interest within the mass of one kilogram of total material."@en ;
     skos:notation "g/kg" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
@@ -394,6 +425,8 @@ geou:GM-PER-KiloGM a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:GM-PER-TON_M a skos:Concept ;
+    skos:altLabel "GRAMS PER TONNE"@en ;
+    skos:hiddenLabel "GRAMS PER TONNE (g/t)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration. The number of grams of a material of interest within the mass of one tonne of total material."@en ;
     skos:notation "g/t" ;
@@ -403,6 +436,10 @@ geou:GM-PER-TON_M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:GigaJ a skos:Concept ;
+    skos:altLabel "Gigajoules"@en,
+        "GIGAJOULE"@en,
+        "GIGAJOULES"@en ;
+    skos:hiddenLabel "GIGAJOULES (GJ)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The gigajoule (GJ) is equal to one billion (10e9) joules. 6 GJ is about the chemical energy of combusting 1 barrel (159 l) of crude oil."@en ;
     skos:notation "GJ" ;
@@ -412,6 +449,7 @@ geou:GigaJ a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:GigaJ-PER-MegaL a skos:Concept ;
+    skos:hiddenLabel "GIGAJOULES PER MEGALITRE (GJ/ML)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of energy density defined as the energy in Gigajoules per million litres."@en ;
     skos:notation "GJ/ML" ;
@@ -420,7 +458,19 @@ geou:GigaJ-PER-MegaL a skos:Concept ;
     skos:prefLabel "Gigajoules per Megalitre"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+geou:GigaM3 a skos:Concept ;
+    skos:altLabel "BILLION CUBIC METRES"@en ;
+    skos:hiddenLabel "BILLION CUBIC METRES (Gm3)"@en;
+    rdfs:isDefinedBy geou: ;
+    skos:definition "A measure of volume equivalent to one billion cubic metres."@en ;
+    skos:notation "Gm3" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Billion Cubic Metres"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 geou:HR-PER-FT a skos:Concept ;
+    skos:hiddenLabel "HOURS PER FOOT (hrs/ft)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "An Imperial unit for Linear Velocity. Used in borehole drilling to describe the rate of pentration. The number of hours taken to penetrate one foot of material."@en ;
     skos:notation "hr/ft" ;
@@ -429,7 +479,18 @@ geou:HR-PER-FT a skos:Concept ;
     skos:prefLabel "Hours per Foot"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+geou:HR-PER-M a skos:Concept ;
+    skos:hiddenLabel "HOURS PER METRE (hrs/m)"@en ;
+    rdfs:isDefinedBy geou: ;
+    skos:definition "A unit for Linear Velocity. Used in borehole drilling to describe the rate of pentration. The number of hours taken to penetrate one metre of material."@en ;
+    skos:notation "hr/ft" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Hours per Metre"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 geou:KiloBBL a skos:Concept ;
+    skos:hiddenLabel "THOUSAND BARRELS (Mbbl)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A unit equivalent in volume to one thousand barrels."@en ;
     skos:notation "Mbbl" ;
@@ -439,7 +500,8 @@ geou:KiloBBL a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaBBL a skos:Concept ;
-    skos:altLabel "Million Barrels (MMBbl)"@en ;
+    skos:hiddenLabel "MILLION BARRELS (MMbbl)"@en ;
+    skos:altLabel "Million Barrel"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A unit equivalent in volume to one million barrels."@en ;
     skos:notation "MMbbl" ;
@@ -449,6 +511,7 @@ geou:MegaBBL a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:KiloBBLOE a skos:Concept ;
+    skos:hiddenLabel "THOUSAND BARREL OF OIL EQUIVALENT PER MEGALITRE (MBOE/ML)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of oil quality or energy density defined as the energy equivalent to one thousand Barrel of Oil Equivalents (6.1178632×10e12 J) per million litres."@en ;
     skos:notation "MBOE/ML" ;
@@ -458,6 +521,7 @@ geou:KiloBBLOE a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:KiloBTU a skos:Concept ;
+    skos:hiddenLabel "THOUSAND BRITISH THERMAL UNITS (MBTU)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "An Imperial measure unit of energy, defined as one thousand British thermal units."@en ;
     skos:notation "MBTU" ;
@@ -467,6 +531,7 @@ geou:KiloBTU a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:KiloBTU-PER-MegaL a skos:Concept ;
+    skos:hiddenLabel "THOUSAND BRITISH THERMAL UNITS PER MEGALITRE (MBTU/ML)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of oil quality or energy density defined as the energy in one thousand BTU (1,055,000 J) per million litres."@en ;
     skos:notation "MBTU/ML" ;
@@ -476,6 +541,7 @@ geou:KiloBTU-PER-MegaL a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:KiloL-PER-DAY a skos:Concept ;
+    skos:hiddenLabel "KILOLITRES PER DAY (kl/d)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of volume flow rate Thousands of litres divided by number of days."@en ;
     skos:notation "kl/d" ;
@@ -485,8 +551,12 @@ geou:KiloL-PER-DAY a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:KiloLB_F a skos:Concept ;
+    skos:hiddenLabel "KILOPOUND FORCE (klbf)"@en ;
     rdfs:isDefinedBy geou: ;
-    skos:altLabel "kip"@en ;
+    skos:altLabel "kip"@en,
+        "Kilopound Force"@en,
+        "Kilopounds Force"@en,
+        "Thousand Pound Force"@en ;
     skos:definition "A US customary unit of force. It equals 1000 pounds-force, used primarily by American architects and engineers to measure engineering loads."@en ;
     skos:notation "klbf" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
@@ -495,6 +565,7 @@ geou:KiloLB_F a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:KiloLB_M a skos:Concept ;
+    skos:hiddenLabel "THOUSAND POUNDS (klbs)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A mass equivalent to one thousand pounds."@en ;
     skos:notation "klbs" ;
@@ -504,6 +575,7 @@ geou:KiloLB_M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:KiloREV-PER-MIN a skos:Concept ;
+    skos:hiddenLabel "THOUSAND REVOLUTIONS PER MINUTE (kRPM)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of rotation or Angular Velocity. The number of revolutions of an object relative to a fixed frame of reference in one minute, divided by 1000."@en ;
     skos:notation "kRPM" ;
@@ -513,6 +585,7 @@ geou:KiloREV-PER-MIN a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:L-PER-50SACK a skos:Concept ;
+    skos:hiddenLabel "LITRES PER 50kg SACK"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A proportional concentration ratio typically used for cement mixtures. The number of litres of water added to 50kg of additive(s)."@en ;
     skos:notation "l/50kg" ;
@@ -522,6 +595,7 @@ geou:L-PER-50SACK a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:LB_F-PER-100FT2 a skos:Concept ;
+    skos:hiddenLabel "POUNDS FORCE PER 100 SQUARE FEET (lbf/100ft2)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "Pounds Force per 100 Square Feet is a British (Imperial) and American pressure unit. The number of pounds force applied to an area of 100 square feet."@en ;
     skos:notation "lbf/100ft2" ;
@@ -540,6 +614,7 @@ geou:LB_F-PER-IN a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:LB_M-PER-100FT2 a skos:Concept ;
+    skos:hiddenLabel "POUNDS PER 100 SQUARE FEET (lb/100ft2)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "Pounds per 100 Square Feet is a British (Imperial) and American pressure unit. The force equivalent to the number of pounds mass under standard gravity conditions applied to an area of 100 square feet."@en ;
     skos:notation "lb/100ft2" ;
@@ -549,6 +624,7 @@ geou:LB_M-PER-100FT2 a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:LB_M-PER-50SACK a skos:Concept ;
+    skos:hiddenLabel "POUNDS PER 50kg SACK"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A proportional concentration ratio typically used for cement mixtures. The number of pounds of water added to 50kg of additive(s)."@en ;
     skos:notation "lb/50kg" ;
@@ -558,6 +634,8 @@ geou:LB_M-PER-50SACK a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:LB_M-PER-BBL a skos:Concept ;
+    skos:hiddenLabel "POUNDS PER BARREL (lb/bbl)"@en,
+        "POUNDS PER BARREL (lbs/bbl)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of fluid density. The weight in pounds equivalent to one barrel of fluid."@en ;
     skos:notation "lbs/bbl" ;
@@ -567,6 +645,9 @@ geou:LB_M-PER-BBL a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:M2-PER-N a skos:Concept ;
+    skos:altLabel "Inverse Newton"@en ;
+    skos:hiddenLabel "INVERSE NEWTON (Pa−1)"@en,
+        "METRE SQUARED PER NEWTON (m²/N)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of compressibility equivalent to the inverse of one Pascal."@en ;
     skos:notation "m2/N" ;
@@ -576,6 +657,8 @@ geou:M2-PER-N a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:M3-PER-TON_M a skos:Concept ;
+    skos:altLabel "CUBIC METRES PER TONNE"@en ;
+    skos:hiddenLabel "CUBIC METRES PER TONNE (m3/t)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration. The number of cubic metres of a fluid contained within one tonne of host material."@en ;
     skos:notation "m3/t" ;
@@ -594,6 +677,7 @@ geou:MYR a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaBBLOE a skos:Concept ;
+    skos:hiddenLabel "MILLION BARREL OF OIL EQUIVALENT PER MEGALITRE (MMBOE/ML)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of oil quality or energy density defined as the energy equivalent to one million Barrel of Oil Equivalents (6.1178632×10e15 J) per million litres."@en ;
     skos:notation "MMBOE/ML" ;
@@ -603,7 +687,7 @@ geou:MegaBBLOE a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaBOE a skos:Concept ;
-    skos:altLabel "Million BBLs Oil Equiv. (MMBOE)"@en ;
+    skos:altLabel "Million BBLs Oil Equivalent"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of energy  defined as the energy equivalent to one million Barrel of Oil (6.1178632×10e15 J)s."@en ;
     skos:notation "MMBOE" ;
@@ -613,6 +697,7 @@ geou:MegaBOE a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaBTU a skos:Concept ;
+    skos:hiddenLabel "MILLION BRITISH THERMAL UNITS (MMBTU)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "An Imperial measure unit of energy, defined as one million British thermal units."@en ;
     skos:notation "MMBTU" ;
@@ -622,6 +707,7 @@ geou:MegaBTU a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaBTU-PER-MegaL a skos:Concept ;
+    skos:hiddenLabel "MILLION BRITISH THERMAL UNITS PER MEGALITRE (MMBTU/ML)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of oil quality or energy density defined as the energy in one million BTU (1,055,000,000 J) per million litres."@en ;
     skos:notation "MMBTU/ML" ;
@@ -631,6 +717,7 @@ geou:MegaBTU-PER-MegaL a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaF3-PER-DAY a skos:Concept ;
+    skos:hiddenLabel "MILLION CUBIC FEET PER DAY (MMcf/d)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of volume flow rate Millions of cubic feet divided by number of days."@en ;
     skos:notation "MMscf/d" ;
@@ -640,6 +727,7 @@ geou:MegaF3-PER-DAY a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaFT3 a skos:Concept ;
+    skos:hiddenLabel "MILLION CUBIC FEET (MMcf )"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "An Imperial measure of volume equivalent to one million cubic feet."@en ;
     skos:notation "MMcf" ;
@@ -649,6 +737,7 @@ geou:MegaFT3 a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaL-PER-DAY a skos:Concept ;
+    skos:hiddenLabel "MEGALITRES PER DAY (ML/d)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of volume flow rate Millions of litres divided by number of days"@en ;
     skos:notation "ML/d" ;
@@ -658,6 +747,9 @@ geou:MegaL-PER-DAY a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaM3 a skos:Concept ;
+    skos:altLabel "MILLION CUBIC METRES"@en ;
+    skos:hiddenLabel "MILLION CUBIC METRES (Mm3)"@en,
+        "MILLION CUBIC METRES (MMm3)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of volume equivalent to one million cubic metres."@en ;
     skos:notation "MMm3" ;
@@ -678,8 +770,10 @@ geou:kiloTON_M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MegaTON_M a skos:Concept ;
-    skos:altLabel "Megatonnes (Mt)"@en,
-        "Million Tonnes"@en ;
+    skos:hiddenLabel "MILLION TONNES (Mt)"@en ;
+    skos:altLabel "Megatonne"@en,
+        "Million Tonnes"@en,
+        "Million Tonne"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of mass equivalent to one million tonnes."@en ;
     skos:notation "Mt" ;
@@ -689,6 +783,7 @@ geou:MegaTON_M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MicroS-PER-CentiM a skos:Concept ;
+    skos:hiddenLabel "MICRO-SIEMENS PER CENTIMETRE (µS/cm)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A unit of Electric conductivity. It is also known as microsiemens per centimetre, microsiemens/centimeter. Microsiemens Per Centimeter (µS/cm) has a dimension of M-1L-3T3I2 where M is mass, L is length, T is time, and I is electric current. It can be converted to the corresponding standard SI unit S/m by multiplying its value by a factor of 0.0001."@en ;
     skos:notation "µS/cm" ;
@@ -698,6 +793,7 @@ geou:MicroS-PER-CentiM a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MicroS-PER-M a skos:Concept ;
+    skos:hiddenLabel "MICRO-SIEMENS PER METRE (µS/m)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A unit of Electric conductivity. It is also known as microsiemens per metre, microsiemens/meter. This unit is commonly used in the SI unit system. Microsiemens Per Meter (µS/m) has a dimension of M-1L-3T3I2 where M is mass, L is length, T is time, and I is electric current. It can be converted to the corresponding standard SI unit S/m by multiplying its value by a factor of 1E-006."@en ;
     skos:notation "µS/m" ;
@@ -707,6 +803,7 @@ geou:MicroS-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MilliD a skos:Concept ;
+    skos:hiddenLabel "MILLIDARCY (mD)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of permeability. A medium with a permeability of 1 millidarcy permits a flow of 0.001 cm³/s of a fluid with viscosity 1 cP (1 mPa·s) under a pressure gradient of 1 atm/cm acting across an area of 1 cm²."@en ;
     skos:notation "mD" ;
@@ -715,7 +812,24 @@ geou:MilliD a skos:Concept ;
     skos:prefLabel "Millidarcy"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+geou:MilliGM-PER-GM a skos:Concept ;
+    skos:altLabel "MILLIGRAMS PER GRAM"@en ;
+    skos:hiddenLabel "MILLIGRAMS PER GRAM (mg/g)"@en ;
+    rdfs:isDefinedBy geou: ;
+    skos:definition "A measure of concentration. The number of milligrams of material of interest per gram of total material in a sample."@en ;
+    skos:notation "mg/g" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Milligrams per gram"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 geou:MilliGM-PER-TOC a skos:Concept ;
+    skos:altLabel "MILLIGRAMS PER GRAM TOC"@en,
+        "MILLIGRAMS PER GRAM TOTAL ORGANIC CARBON"@en,
+        "MILLIGRAMS TOTAL ORGANIC CARBON PER GRAM"@en,
+        "MILLIGRAMS TOC PER GRAM"@en,
+        "Milligrams per gram Total Organic Carbon"@en ;
+    skos:hiddenLabel "MILLIGRAMS PER GRAM TOC (mg/gTOC)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration. The number of milligrams of hydrocarbon per gram of Total Organic Carbon in a sample."@en ;
     skos:notation "mg/gTOC" ;
@@ -725,6 +839,8 @@ geou:MilliGM-PER-TOC a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MilliGM-PER-TON_M a skos:Concept ;
+    skos:altLabel "MILLIGRAMS PER TONNE"@en ;
+    skos:hiddenLabel "MILLIGRAMS PER TONNE (mg/t)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration. The number of milligrams of a material of interest within the mass of one tonne of total material."@en ;
     skos:notation "mg/t" ;
@@ -733,7 +849,18 @@ geou:MilliGM-PER-TON_M a skos:Concept ;
     skos:prefLabel "Milligrams per Tonne"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+geou:MilliL a skos:Concept ;
+    skos:hiddenLabel "MILLILITRES (ml)"@en ;
+    rdfs:isDefinedBy geou: ;
+    skos:definition "The CGS unit of volume, equal to 10-6 cubic meter, 1 milliliter, or about 0.061 023 7 cubic inch."@en ;
+    skos:notation "ml" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Millilitres"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 geou:MilliM-PER-SEC a skos:Concept ;
+    skos:hiddenLabel "METRES PER MILLISECOND (m/ms)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of velocity. The number of metres traversed in the time of 1 millisecond."@en ;
     skos:notation "m/ms" ;
@@ -752,6 +879,8 @@ geou:N-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:OZ-PER-TON_LONG a skos:Concept ;
+    skos:altLabel "OUNCE PER TON"@en ;
+    skos:hiddenLabel "OUNCE PER TON (oz/ton)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration. The number of ounces of a material of interest within the mass of one ton of total material."@en ;
     skos:notation "oz/ton" ;
@@ -761,6 +890,8 @@ geou:OZ-PER-TON_LONG a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:OZ-PER-TON_M a skos:Concept ;
+    skos:altLabel "OUNCE PER TONNE"@en ;
+    skos:hiddenLabel "OUNCE PER TONNE (oz/t)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of concentration. The number of ounces of a material of interest within the mass of one tonne of total material."@en ;
     skos:notation "oz/t" ;
@@ -779,6 +910,9 @@ geou:PER-PA a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:PERCENT-PER-VOL a skos:Concept ;
+    skos:altLabel "PERCENT PER VOLUME"@en,
+        "PERCENT BY VOLUME"@en ;
+    skos:hiddenLabel "PERCENT BY VOLUME (vol%)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The proportion of the volume of a material of interest within the volume of a total sample expressed as a percentage."@en ;
     skos:notation "vo%" ;
@@ -788,6 +922,9 @@ geou:PERCENT-PER-VOL a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:PERCENT-PER-WEIGHT a skos:Concept ;
+    skos:altLabel "PERCENT PER WEIGHT"@en,
+        "PERCENT BY WEIGHT"@en ;
+    skos:hiddenLabel "PERCENT BY WEIGHT (wt%)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The proportion of the weight or mass of a material of interest within the weight or mass of a total sample expressed as a percentage."@en ;
     skos:notation "wt%" ;
@@ -797,7 +934,9 @@ geou:PERCENT-PER-WEIGHT a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:PetaJ a skos:Concept ;
-    skos:altLabel "Petajoules (PJ)"@en ;
+    skos:altLabel "Petajoules"@en,
+        "PETAJOULE"@en ;
+    skos:hiddenLabel "PETAJOULES (PJ)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The petajoule (PJ) is equal to one quadrillion (1015) joules. 210 PJ is about 50 megatons of TNT which is the amount of energy released by the Tsar Bomba, the largest man-made explosion ever."@en ;
     skos:notation "PJ" ;
@@ -807,6 +946,7 @@ geou:PetaJ a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:PetaJ-PER-MegaL a skos:Concept ;
+    skos:hiddenLabel "PETAJOULES PER MEGALITRE (PJ/ML)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of energy density defined as the energy in Petajoules per million litres."@en ;
     skos:notation "PJ/ML" ;
@@ -816,6 +956,7 @@ geou:PetaJ-PER-MegaL a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:RATIO a skos:Concept ;
+    skos:hiddenLabel "RATIO (1:x)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The quantitative relation between two amounts showing the number of times one value contains or is contained within the other."@en ;
     skos:notation ":" ;
@@ -825,6 +966,7 @@ geou:RATIO a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:SHOTS-PER-FT a skos:Concept ;
+    skos:hiddenLabel "SHOTS PER FOOT (sht/ft)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The number of perforation shots in a borehole casing or liner per foot."@en ;
     skos:notation "sht/ft" ;
@@ -834,6 +976,7 @@ geou:SHOTS-PER-FT a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:SHOTS-PER-M a skos:Concept ;
+    skos:hiddenLabel "SHOTS PER METRE (sht/m)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The number of perforation shots in a borehole casing or liner per metre."@en ;
     skos:notation "sht/m" ;
@@ -851,21 +994,25 @@ geou:TOC a skos:Concept ;
     skos:prefLabel "Total Organic Carbon"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
-geou:TON_M-PER-M a skos:Concept ;
+geou:TROYOZ a skos:Concept ;
+    skos:altLabel "TROY OUNCE"@en,
+        "Troy Ounces"@en,
+        "troy ounce"@en,
+        "TROY OUNCES"@en ;
+    skos:hiddenLabel "TROY OUNCE (t oz)"@en,
+        "TROY OUNCES (t oz)"@en ;
     rdfs:isDefinedBy geou: ;
-    skos:definition "Tonnes per cubic metre is an SI derived unit of density, defined by mass in tonnes divided by volume in cubic metres."@en ;
-    skos:notation "t/m3" ;
+    skos:definition "The troy ounce is a metric used in weighing precious metals. The troy ounce is the equivalent of 31.1034768 grams, whereas the ounce is the equivalent of 28.349 grams. 12. A troy pound (12 troy ounces) is lighter than a standard pound (14.6 troy ounces)."@en ;
+    skos:notation "t oz" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
-    skos:prefLabel "Tonnes per Cubic Metre"@en ;
+    skos:prefLabel "Troy Ounce"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/ARCMIN> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A minute of arc, arcminute, or minute arc (MOA), is a unit of angular measurement equal to one sixtieth (1/60) of one degree (circle/21,600), or \\(\\pi /10,800 radians\\). In turn, a second of arc or arcsecond is one sixtieth (1/60) of one minute of arc. Since one degree is defined as one three hundred and sixtieth (1/360) of a rotation, one minute of arc is 1/21,600 of a rotation. "@en ;
-    skos:notation "'",
-        "D61",
-        "arcMin" ;
+    skos:notation "'" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "ArcMinute"@en ;
@@ -874,57 +1021,60 @@ geou:TON_M-PER-M a skos:Concept ;
 <http://qudt.org/vocab/unit/ARCSEC> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Arc Second\" is a unit of angular measure, also called the \\(\\textit{second of arc}\\), equal to \\(1/60 \\; arcminute\\). One arcsecond is a very small angle: there are 1,296,000 in a circle. The SI recommends \\(\\textit{double prime}\\) (\\(''\\)) as the symbol for the arcsecond. The symbol has become common in astronomy, where very small angles are stated in milliarcseconds (\\(mas\\))."@en ;
-    skos:notation "\"",
-        "''",
-        "D62" ;
+    skos:notation "''";
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "ArcSecond"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/ATM> a skos:Concept ;
+    skos:hiddenLabel "ATMOSPHERES (atm)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "<p class=\"lm-para\">The standard atmosphere (symbol: atm) is an international reference pressure defined as \\(101.325 \\,kPa\\) and formerly used as unit of pressure. For practical purposes it has been replaced by the bar which is \\(100 kPa\\). The difference of about 1% is not significant for many applications, and is within the error range of common pressure gauges.</p>"@en ;
-    skos:notation "ATM",
-        "atm" ;
+    skos:notation "atm" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Standard Atmosphere"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/BAR> a skos:Concept ;
+    skos:hiddenLabel "BAR (bar)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition """<p class="lm-para">The bar is a non-SI unit of pressure, defined by the IUPAC as exactly equal to \\(100,000\\,Pa\\). It is about equal to the atmospheric pressure on Earth at sea level, and since 1982 the IUPAC has recommended that the standard for atmospheric pressure should be harmonized to \\(100,000\\,Pa = 1 \\,bar \\approx 750.0616827\\, Torr\\). </p>
 <p class="lm-para">Units derived from the bar are the megabar (symbol: Mbar), kilobar (symbol: kbar), decibar (symbol: dbar), centibar (symbol: cbar), and millibar (symbol: mbar or mb). They are not SI or cgs units, but they are accepted for use with the SI.</p>"""@en ;
-    skos:notation "BAR",
-        "bar" ;
+    skos:notation "bar" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Bar"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/BBL> a skos:Concept ;
+    skos:altLabel "Barrels"@en ;
+    skos:hiddenLabel "BARRELS (bbl)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-    skos:definition "A barrel is one of several units of volume, with dry barrels, fluid barrels (UK beer barrel, U.S. beer barrel), oil barrel, etc. The volume of some barrel units is double others, with various volumes in the range of about 100-200 litres (22-44 impÂ gal; 26-53 USÂ gal)."@en ;
-    skos:notation "BLL",
-        "[BBL_US]",
-        "[bbl_us]",
-        "bbl" ;
+    skos:definition "A barrel is one of several units of volume, with dry barrels, fluid barrels (UK beer barrel, U.S. beer barrel), oil barrel, etc. The volume of some barrel units is double others, with various volumes in the range of about 100-200 litres (22-44 imp gal; 26-53 US gal)."@en ;
+    skos:notation "bbl" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Barrel"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/BBL_US-PER-DAY> a skos:Concept ;
+    skos:hiddenLabel "BARRELS PER DAY (bbl/d)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
-    skos:notation "B1" ;
+    skos:notation "bbl/day" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "barrel (US) per day"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/BTU_IT> a skos:Concept ;
+    skos:altLabel "British Thermal Unit"@en,
+        "British Thermal Units"@en,
+        "BRITISH THERMAL UNIT"@en,
+        "BRITISH THERMAL UNITS"@en ;
+    skos:hiddenLabel "BRITISH THERMAL UNITS (BTU)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\\(\\textit{British Thermal Unit}\\) (BTU or Btu) is a traditional unit of energy equal to about \\(1.0550558526 \\textit{ kilojoule}\\). It is approximately the amount of energy needed to heat 1 pound (0.454 kg) of water from \\(39 \\,^{\\circ}{\\rm F}\\)  to \\(40 \\,^{\\circ}{\\rm F}\\) . The unit is most often used in the power, steam generation, heating and air conditioning industries. In scientific contexts the BTU has largely been replaced by the SI unit of energy, the \\(joule\\), though it may be used as a measure of agricultural energy production (BTU/kg). It is still used unofficially in metric English-speaking countries (such as Canada), and remains the standard unit of classification for air conditioning units manufactured and sold in many non-English-speaking metric countries."@en ;
     skos:notation "Btu_{it}" ;
@@ -934,41 +1084,43 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/BYTE> a skos:Concept ;
+    skos:hiddenLabel "BYTE (B)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The byte is a unit of digital information in computing and telecommunications that most commonly consists of eight bits."@en ;
-    skos:notation "AD",
-        "B" ;
+    skos:notation "B" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Byte"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/CentiM3> a skos:Concept ;
+    skos:altLabel "Cubic Centimetre"@en,
+        "Centimetre Cubed"@en ;
+    skos:hiddenLabel "CUBIC CENTIMETRES (cc)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The CGS unit of volume, equal to 10-6 cubic meter, 1 milliliter, or about 0.061 023 7 cubic inch"@en ;
-    skos:notation "CM3",
-        "CMQ",
-        "cm3" ;
+    skos:notation "cm3" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "cubic centimeter"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/CentiP> a skos:Concept ;
+    skos:hiddenLabel "CENTIPOISE (cp)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "<p class=\"lm-para\"><em>Centipoise</em> is a C.G.S System unit for  'Dynamic Viscosity' expressed as \\(cP\\).</p>"@en ;
-    skos:notation "C7",
-        "cP" ;
+    skos:notation "cP" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Centipoise"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/DAY> a skos:Concept ;
+    skos:altLabel "Days"@en ;
+    skos:hiddenLabel "DAYS (d)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Mean solar day"@en ;
-    skos:notation "DAY",
-        "d" ;
+    skos:notation "d" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Day"@en ;
@@ -977,86 +1129,82 @@ geou:TON_M-PER-M a skos:Concept ;
 <http://qudt.org/vocab/unit/DEG> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A degree (in full, a degree of arc, arc degree, or arcdegree), usually denoted by \\(^\\circ\\) (the degree symbol), is a measurement of plane angle, representing 1/360 of a full rotation; one degree is equivalent to  \\(2\\pi /360 rad\\), \\(0.017453 rad\\). It is not an SI unit, as the SI unit for angles is radian, but is an accepted SI unit."@en ;
-    skos:notation "DD",
-        "DEG",
-        "\\,^{\\circ}",
-        "deg" ;
+    skos:notation """°""" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Degree"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/DEG_C> a skos:Concept ;
+    skos:hiddenLabel "DEGREES CELSIUS (degc)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-    skos:altLabel "degree-centigrade" ;
+    skos:altLabel "degree-centigrade"@en,
+        "Degree Centigrade"@en ;
     skos:definition "\\(\\textit{Celsius}\\), also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales' null points as being precisely \\(273.15\\,^{\\circ}{\\rm C}\\).</p>"@en ;
-    skos:notation "CEL" ;
+    skos:notation """°C""" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Degree Celsius"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/DEG_F> a skos:Concept ;
+    skos:hiddenLabel "DEGREES FARENHEIT (degf)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "<em>Degree Fahrenheit</em> is an Imperial unit for 'Thermodynamic Temperature' expressed as \\(\\,^{\\circ}{\\rm F}\\)"@en ;
-    skos:notation "FAH" ;
+    skos:notation """°F""" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Degree Fahrenheit"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/FT> a skos:Concept ;
+    skos:altLabel "Feet"@en ;
+    skos:hiddenLabel "FEET (ft)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A foot is a unit of length defined as being 0.3048m exactly and used in the imperial system of units and United States customary units. It is subdivided into 12Â inches. The foot is still officially used in Canada and still commonly used in the United Kingdom, although the latter has partially metricated its units of measurement. "@en ;
-    skos:notation "FOT",
-        "[FT_I]",
-        "[ft_i]",
-        "ft" ;
+    skos:notation "ft" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Foot"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/FT-PER-HR> a skos:Concept ;
+    skos:hiddenLabel "FEET PER HOUR (ft/hr)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Foot per Hour\" is an Imperial unit for  'Linear Velocity' expressed as \\(ft/hr\\)."@en ;
-    skos:notation "K14",
-        "[FT_I].HR-1",
-        "[FT_I]/HR",
-        "[ft_i].h-1",
-        "[ft_i]/h" ;
+    skos:notation "ft/hr" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Foot per Hour"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/FT-PER-SEC> a skos:Concept ;
+    skos:hiddenLabel "FEET PER SECOND (ft/s)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\\(\\textit{foot per second}\\) (plural \\(\\textit{feet per second}\\)) is a unit of both speed (scalar) and velocity (vector quantity, which includes direction). It expresses the distance in feet (\\(ft\\)) traveled or displaced, divided by the time in seconds (\\(s\\), or \\(sec\\)). The corresponding unit in the International System of Units (SI) is the \\(\\textit{metre per second}\\). Abbreviations include \\(ft/s\\), \\(ft/sec\\) and \\(fps\\), and the rarely used scientific notation \\(ft\\,s\\)."@en ;
-    skos:notation "FS",
-        "[FT_I].S-1",
-        "[FT_I]/S",
-        "[ft_i].s-1",
-        "[ft_i]/s" ;
+    skos:notation "ft/s" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Foot per Second"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/FT3> a skos:Concept ;
+    skos:hiddenLabel "CUBIC FEET (cf)"@en,
+        "CUBIC FEET (ft3 or cf)"@en,
+        "CUBIC FEET (ft3)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The cubic foot is an Imperial and US customary unit of volume, used in the United States and the United Kingdom. It is defined as the volume of a cube with sides of one foot (0.3048 m) in length. To calculate cubic feet multiply length X width X height. "@en ;
-    skos:notation "FTQ",
-        "[CFT_I]",
-        "[FT_I]3",
-        "[cft_i]",
-        "[ft_i]3" ;
+    skos:notation "ft3" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Cubic Foot"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/FT3-PER-DAY> a skos:Concept ;
+    skos:altLabel "Cubic foot per day"@en,
+        "Cubic feet per day"@en ;
+    skos:hiddenLabel "CUBIC FEET PER DAY (cf/d)"@en,
+        "CUBIC FEET PER DAY (ft3/d)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "K22" ;
@@ -1066,6 +1214,11 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/FT3-PER-HR> a skos:Concept ;
+    skos:altLabel "Cubic foot per hour"@en,
+        "Cubic feet per hour"@en ;
+    skos:hiddenLabel "CUBIC FEET PER HOUR (cf/hr)"@en,
+        "CUBIC FEET PER DAY (ft3/hr)"@en,
+        "CUBIC FEET PER HOUR (cf/hr or ft3/d)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "2K" ;
@@ -1077,38 +1230,43 @@ geou:TON_M-PER-M a skos:Concept ;
 <http://qudt.org/vocab/unit/GAL_IMP> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Imperial Gallon\" is an Imperial unit for  'Liquid Volume' expressed as \\(galIMP\\)."@en ;
-    skos:notation "[GAL_BR]",
-        "[gal_br]",
-        "gal" ;
+    skos:notation "gal" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Imperial Gallon"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/GAL_US> a skos:Concept ;
+    skos:hiddenLabel "GALLONS (gal)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-    skos:altLabel "Queen Anne's wine gallon" ;
+    skos:altLabel "Queen Anne's wine gallon"@en ;
     skos:definition "\"US Gallon\" is a unit for  'Liquid Volume' expressed as \\(galUS\\)."@en ;
-    skos:notation "[GAL_US]",
-        "[gal_us]",
-        "gal" ;
+    skos:notation "gal (US)" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "US Gallon"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/GM> a skos:Concept ;
+    skos:altLabel "GRAM"@en,
+        "Grams"@en,
+        "GRAMS"@en ;
+    skos:hiddenLabel "GRAMS (g)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A unit of mass in the metric system. The name comes from the Greek gramma, a small weight identified in later Roman and Byzantine times with the Latin scripulum or scruple (the English scruple is equal to about 1.3 grams). The gram was originally defined to be the mass of one cubic centimeter of pure water, but to provide precise standards it was necessary to construct physical objects of specified mass. One gram is now defined to be 1/1000 of the mass of the standard kilogram, a platinum-iridium bar carefully guarded by the International Bureau of Weights and Measures in Paris for more than a century. (The kilogram, rather than the gram, is considered the base unit of mass in the SI.) The gram is a small mass, equal to about 15.432 grains or 0.035 273 966 ounce. "@en ;
-    skos:notation "G",
-        "GRM",
-        "g" ;
+    skos:notation "g" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Gram"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/GM-PER-CentiM3> a skos:Concept ;
+    skos:altLabel "Gram per centimetre cubed"@en,
+        "Gram per cubic centimetre"@en,
+        "GRAM PER CUBIC CENTIMETRE"@en,
+        "GRAM PER CENTIMETRE CUBED"@en ;
+    skos:hiddenLabel "GRAMS PER CUBIC CENTIMETRE (g/cc)"@en,
+        "GRAMS PER CUBIC CENTIMETRE (g/cm3)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "23" ;
@@ -1120,14 +1278,14 @@ geou:TON_M-PER-M a skos:Concept ;
 <http://qudt.org/vocab/unit/GRAD> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Grad\" is a unit for  'Plane Angle' expressed as \\(grad\\)."@en ;
-    skos:notation "A91",
-        "grad" ;
+    skos:notation "grad" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Grad"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/G_REL> a skos:Concept ;
+    skos:hiddenLabel "SPECIFIC GRAVITY (sg)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:altLabel "Relative Density"@en ;
     skos:definition "The ratio of the density of a substance to the density of water."@en ;
@@ -1138,46 +1296,43 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/GigaBYTE> a skos:Concept ;
+    skos:hiddenLabel "GIGABYTE (GB)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-    skos:altLabel "gbyte" ;
+    skos:altLabel "gbyte"@en ;
     skos:definition "The gigabyte is a multiple of the unit byte for digital information storage. The prefix giga means 10 in the International System of Units (SI), therefore 1 gigabyte is \\(1,000,000,000 \\; bytes\\). The unit symbol for the gigabyte is \\(GB\\) or \\(Gbyte\\), but not \\(Gb\\) (lower case b) which is typically used for the gigabit. Historically, the term has also been used in some fields of computer science and information technology to denote the \\(gibibyte\\), or \\(1073741824 \\; bytes\\)."@en ;
-    skos:notation "E34",
-        "GB" ;
+    skos:notation "GB" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "GigaByte"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/HR> a skos:Concept ;
+    skos:altLabel "Hours"@en ;
+    skos:hiddenLabel "HOURS (hr)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The hour (common symbol: h or hr) is a unit of measurement of time. In modern usage, an hour comprises 60 minutes, or 3,600 seconds. It is approximately 1/24 of a mean solar day. An hour in the Universal Coordinated Time (UTC) time standard can include a negative or positive leap second, and may therefore have a duration of 3,599 or 3,601 seconds for adjustment purposes. Although it is not a standard defined by the International System of Units, the hour is a unit accepted for use with SI, represented by the symbol h."@en ;
-    skos:notation "HR",
-        "K42",
-        "h",
-        "hr" ;
+    skos:notation "hr" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Hour"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/HZ> a skos:Concept ;
+    skos:hiddenLabel "HERTZ (Hz)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The hertz (symbol Hz) is the SI unit of frequency defined as the number of cycles per second of a periodic phenomenon. One of its most common uses is the description of the sine wave, particularly those used in radio and audio applications, such as the frequency of musical tones. The word \"hertz\" is named for Heinrich Rudolf Hertz, who was the first to conclusively prove the existence of electromagnetic waves."@en ;
-    skos:notation "HTZ",
-        "HZ",
-        "Hz" ;
+    skos:notation "Hz" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Hertz"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/IN> a skos:Concept ;
+    skos:altLabel "Inches"@en ;
+    skos:hiddenLabel "INCHES (in)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "An inch is the name of a unit of length in a number of different systems, including Imperial units, and United States customary units. There are 36Â inches in a yard and 12Â inches in a foot. Corresponding units of area and volume are the square inch and the cubic inch."@en ;
-    skos:notation "INH",
-        "[IN_I]",
-        "[in_i]",
-        "in" ;
+    skos:notation "in" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Inch"@en ;
@@ -1186,24 +1341,24 @@ geou:TON_M-PER-M a skos:Concept ;
 <http://qudt.org/vocab/unit/J> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The SI unit of work or energy, defined to be the work done by a force of one newton acting to move an object through a distance of one meter in the direction in which the force is applied. Equivalently, since kinetic energy is one half the mass times the square of the velocity, one joule is the kinetic energy of a mass of two kilograms moving at a velocity of \\(1 m/s\\)."@en ;
-    skos:notation "J",
-        "JOU" ;
+    skos:notation "J" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Joule"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/K> a skos:Concept ;
+    skos:hiddenLabel "KELVIN (K)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "<p>The SI base unit of temperature, previously called the degree Kelvin. One kelvin represents the same temperature difference as one degree Celsius. In 1967 the General Conference on Weights and Measures defined the temperature of the triple point of water (the temperature at which water exists simultaneously in the gaseous, liquid, and solid states) to be exactly 273.16 kelvins. Since this temperature is also equal to 0.01 u00b0C, the temperature in kelvins is always equal to 273.15 plus the temperature in degrees Celsius. The kelvin equals exactly 1.8 degrees Fahrenheit. The unit is named for the British mathematician and physicist William Thomson (1824-1907), later known as Lord Kelvin after he was named Baron Kelvin of Largs.</p>"@en ;
-    skos:notation "K",
-        "KEL" ;
+    skos:notation "K" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Kelvin"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloBYTE> a skos:Concept ;
+    skos:hiddenLabel "KILOBYTE (kB)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The kilobyte is a multiple of the unit byte for digital information equivalent to 1024 bytes. Although the prefix kilo- means 1000, the term kilobyte and symbol kB have historically been used to refer to either 1024 (210) bytes or 1000 (103) bytes, dependent upon context, in the fields of computer science and information technology."@en ;
     skos:notation "kB" ;
@@ -1213,27 +1368,33 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloFT3> a skos:Concept ;
+    skos:altLabel "Thousand cubic feet"@en,
+        "Thousand Cubic Feet"@en ;
+    skos:hiddenLabel "THOUSAND CUBIC FEET (Mcf)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition ""@en ;
-    skos:notation "" ;
+    skos:notation "Mcf" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "thousand cubic feet"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloGM> a skos:Concept ;
+    skos:altLabel "KILOGRAM"@en,
+        "Kilograms"@en,
+        "KILOGRAMS"@en ;
+    skos:hiddenLabel "KILOGRAMS (kg)"@en ;
     dcterms:plainTextDescription "The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water. The avoirdupois (or international) pound, used in both the Imperial system and U.S. customary units, is defined as exactly 0.45359237 kg, making one kilogram approximately equal to 2.2046 avoirdupois pounds."@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-    skos:definition ""@en ;
-    skos:notation "KG",
-        "KGM",
-        "kg" ;
+    skos:definition "The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water. The avoirdupois (or international) pound, used in both the Imperial system and U.S. customary units, is defined as exactly 0.45359237 kg, making one kilogram approximately equal to 2.2046 avoirdupois pounds."@en ;
+    skos:notation "kg" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Kilogram"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloGM-PER-L> a skos:Concept ;
+    skos:hiddenLabel "KILOGRAMS PER LITRE (kg/L)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "B35" ;
@@ -1243,6 +1404,7 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloGM-PER-M> a skos:Concept ;
+    skos:hiddenLabel "KILOGRAMS PER METRE (kg/m)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Kilogram Per Meter (kg/m) is a unit in the category of Linear mass density. It is also known as kilogram/meter, kilogram/metre, kilograms per meter, kilogram per metre, kilograms per metre. This unit is commonly used in the SI unit system. Kilogram Per Meter (kg/m) has a dimension of ML-1 where M is mass, and L is length. This unit is the standard SI unit in this category. "@en ;
     skos:notation "KL" ;
@@ -1252,6 +1414,16 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloGM-PER-M3> a skos:Concept ;
+    skos:altLabel "Kilogram per metre cubed"@en,
+        "Kilogram per cubic metre"@en,
+        "KILOGRAM PER CUBIC METRE"@en,
+        "KILOGRAM PER METRE CUBED"@en,
+        "Kilograms per metre cubed"@en,
+        "Kilograms per cubic metre"@en,
+        "KILOGRAMS PER CUBIC METRE"@en,
+        "KILOGRAMS PER METRE CUBED"@en ;
+    skos:hiddenLabel "KILOGRAMS PER CUBIC METRE (kg/m3)"@en,
+        "KILOGRAMS PER METRE CUBED (kg/m3)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Kilogram per cubic metre is an SI derived unit of density, defined by mass in kilograms divided by volume in cubic metres. The official SI symbolic abbreviation is \\(kg \\cdot m^{-3}\\), or equivalently either \\(kg/m^3\\)."@en ;
     skos:notation "KMQ" ;
@@ -1261,6 +1433,8 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloL> a skos:Concept ;
+    skos:altLabel "Kilolitre"@en ;
+    skos:hiddenLabel "KILOLITRES (kl)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "K6" ;
@@ -1270,6 +1444,7 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloLB_M-PER-IN2> a skos:Concept ;
+    skos:hiddenLabel "THOUSAND POUNDS PER SQUARE INCH (kpsi)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A scaled unit derived from psi, equivalent to a thousand psi (1000 lbf/in2)."@en ;
     skos:notation "kpsi" ;
@@ -1279,6 +1454,7 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloN> a skos:Concept ;
+    skos:hiddenLabel "KILONETWTON (kN)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "B47" ;
@@ -1288,27 +1464,30 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/KiloPA> a skos:Concept ;
+    skos:hiddenLabel "KILOPASCAL (kpa)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Kilopascal is a unit of pressure. 1 kPa is approximately the pressure exerted by a 10-g mass resting on a 1-cm2 area. 101.3 kPa = 1 atm. There are 1,000 pascals in 1 kilopascal."@en ;
-    skos:notation "KPA",
-        "KPa" ;
+    skos:notation "kPa" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Kilopascal"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/L> a skos:Concept ;
+    skos:hiddenLabel "LITRES (l)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-    skos:altLabel "litre" ;
+    skos:altLabel "litre"@en ;
     skos:definition "<p class=\"lm-para\">The \\(litre\\) (American spelling: \\(\\textit{liter}\\); SI symbol \\(l\\) or \\(L\\)) is a non-SI metric system unit of volume equal to \\(1 \\textit{cubic decimetre}\\) (\\(dm^3\\)), 1,000 cubic centimetres (\\(cm^3\\)) or \\(1/1000 \\textit{cubic metre}\\). If the lower case \"L\" is used as the symbol, it is sometimes rendered as a cursive \"l\" to help distinguish it from the capital \"I\", although this usage has no official approval by any international bureau.</p>"@en ;
-    skos:notation "L",
-        "l" ;
+    skos:notation "l" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Liter"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/L-PER-DAY> a skos:Concept ;
+    skos:altLabel "Litre per day"@en,
+        "Litres per day"@en ;
+    skos:hiddenLabel "LITRES PER DAY (l/d)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "LD" ;
@@ -1318,6 +1497,9 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/L-PER-HR> a skos:Concept ;
+    skos:altLabel "Litre per hour"@en,
+        "Litres per hour"@en ;
+    skos:hiddenLabel "LITRES PER HOUR (l/hr)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "E32" ;
@@ -1327,6 +1509,9 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/L-PER-MIN> a skos:Concept ;
+    skos:altLabel "Litre per minute"@en,
+        "Litres per minute"@en ;
+    skos:hiddenLabel "LITRES PER MINUTE (l/min)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "L2" ;
@@ -1336,17 +1521,19 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/LB_F> a skos:Concept ;
+    skos:hiddenLabel "POUND FORCE (lbf)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Pound Force\" is an Imperial unit for  'Force' expressed as \\(lbf\\)."@en ;
-    skos:notation "[LBF_AV]",
-        "[lbf_av]",
-        "lbf" ;
+    skos:notation "lbf" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Pound Force"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/LB_M> a skos:Concept ;
+    skos:altLabel "Pound"@en,
+        "Pounds"@en ;
+    skos:hiddenLabel "POUNDS (lbs)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A pound of mass, based on the international standard definition of the pound as exactly 0.45359237 kg."@en ;
     skos:notation "lbm" ;
@@ -1356,14 +1543,20 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/LB_M-PER-FT> a skos:Concept ;
+    skos:altLabel "Pounds per Foot"@en ;
+    skos:hiddenLabel "POUNDS PER FOOT (lbs/ft)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Pound per Foot\" is an Imperial unit for  'Mass Per Length' expressed as \\(lb/ft\\)."@en ;
+    skos:notation "lbs/ft" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Pound per Foot"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/LB_M-PER-FT3> a skos:Concept ;
+    skos:altLabel "Pounds per Cubic Foot"@en,
+        "Pounds per Cubic Feet"@en ;
+    skos:hiddenLabel "POUNDS PER CUBIC FEET (lbs/ft3)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Pound per Cubic Foot\" is an Imperial unit for  'Density' expressed as \\(lb/ft^{3}\\)."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
@@ -1372,14 +1565,21 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/LB_M-PER-GAL> a skos:Concept ;
+    skos:hiddenLabel "POUNDS PER GALLON (lbs/gal)"@en,
+        "POUNDS PER GALLON (lbs/gal or ppg)"@en,
+        "POUNDS PER GALLON (ppg)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Pound per Gallon\" is an Imperial unit for  'Density' expressed as \\(lb/gal\\)."@en ;
+    skos:notation "lbs/gal" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Pound per Gallon"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/LB_M-PER-IN2> a skos:Concept ;
+    skos:altLabel "Pound per square inch"@en,
+        "Pounds per square inch"@en ;
+    skos:hiddenLabel "POUNDS PER SQUARE INCH (psi)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "80" ;
@@ -1389,97 +1589,102 @@ geou:TON_M-PER-M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/M> a skos:Concept ;
+    skos:hiddenLabel "METRES (m)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The metric and SI base unit of distance.  The 17th General Conference on Weights and Measures in 1983 defined the meter as that distance that makes the speed of light in a vacuum equal to exactly 299 792 458 meters per second. The speed of light in a vacuum, \\(c\\), is one of the fundamental constants of nature. The meter is equal to approximately 1.093 613 3 yards, 3.280 840 feet, or 39.370 079 inches."@en ;
-    skos:notation "M",
-        "MTR",
-        "m" ;
+    skos:notation "m" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Meter"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/M-PER-HR> a skos:Concept ;
+    skos:hiddenLabel "METRES PER HOUR (m/hr)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Metre per hour is a metric unit of both speed (scalar) and velocity (Vector (geometry)). Its symbol is m/h or mu00b7h-1 (not to be confused with the imperial unit symbol mph. By definition, an object travelling at a speed of 1 m/h for an hour would move 1 metre."@en ;
-    skos:notation "M.HR-1",
-        "M/HR",
-        "m.h-1",
-        "m/h" ;
+    skos:notation "m/h" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Meter per Hour"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/M-PER-SEC> a skos:Concept ;
+    skos:hiddenLabel "METRES PER SECOND (m/s)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition """Metre per second is an SI derived unit of both speed (scalar) and velocity (vector quantity which specifies both magnitude and a specific direction), defined by distance in metres divided by time in seconds.
 The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."""@en ;
-    skos:notation "M.S-1",
-        "M/S",
-        "MTS",
-        "m.s-1",
-        "m/s" ;
+    skos:notation "m/s" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Meter per Second"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/M3> a skos:Concept ;
+    skos:hiddenLabel "CUBIC METRES (m3)"@en ;
+    skos:altLabel "Cubic Metres"@en,
+        "Cubic metres"@en,
+        "cubic-metres"@en,
+        "CUBIC METRES"@en,
+        "CUBIC METRE"@en,
+        "Cubic Meter"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The SI unit of volume, equal to 1.0e6 cm3, 1000 liters, 35.3147 ft3, or 1.30795 yd3. A cubic meter holds about 264.17 U.S. liquid gallons or 219.99 British Imperial gallons."@en ;
-    skos:notation "M3",
-        "MTQ",
-        "m3" ;
+    skos:notation "m3" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
-    skos:prefLabel "Cubic Meter"@en ;
+    skos:prefLabel "Cubic Metre"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/M3-PER-DAY> a skos:Concept ;
+    skos:altLabel "M3 PER DAY"@en,
+        "CUBIC METER PER DAY"@en,
+        "Cubic metre per day"@en,
+        "CUBIC METRE PER DAY"@en ;
+    skos:hiddenLabel "CUBIC METRES PER DAY (m3/d)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
-    skos:notation "G52" ;
+    skos:notation "m3/d" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
-    skos:prefLabel "M3 PER DAY"@en ;
+    skos:prefLabel "Cubic Meter per Day"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/M3-PER-HR> a skos:Concept ;
+    skos:altLabel "M3 PER HOUR"@en,
+        "CUBIC METER PER HOUR"@en,
+        "Cubic metre per hour"@en,
+        "CUBIC METRE PER HOUR"@en ;
+    skos:hiddenLabel "CUBIC METRES PER HOUR (m3/hr)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Cubic Meter Per Hour (m3/h) is a unit in the category of Volume flow rate. It is also known as cubic meters per hour, cubic metre per hour, cubic metres per hour, cubic meter/hour, cubic metre/hour, cubic meter/hr, cubic metre/hr, flowrate. Cubic Meter Per Hour (m3/h) has a dimension of L3T-1 where L is length, and T is time. It can be converted to the corresponding standard SI unit m3/s by multiplying its value by a factor of 0.00027777777."@en ;
-    skos:notation "M3.HR-1",
-        "M3/HR",
-        "MQH",
-        "m3.h-1",
-        "m3/h" ;
+    skos:notation "m3/h" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Cubic Meter per Hour"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MIN> a skos:Concept ;
+    skos:hiddenLabel "MINUTES (min)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A minute is a unit of measurement of time. The minute is a unit of time equal to 1/60 (the first sexagesimal fraction of an hour or 60 seconds. In the UTC time scale, a minute on rare occasions has 59 or 61 seconds; see leap second. The minute is not an SI unit; however, it is accepted for use with SI units. The SI symbol for minute or minutes is min (for time measurement) or the prime symbol after a number, e.g. 5' (for angle measurement, even if it is informally used for time)."@en ;
-    skos:notation "MIN",
-        "min" ;
+    skos:notation "min" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Minute"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MO> a skos:Concept ;
+    skos:hiddenLabel "MONTHS (m)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A unit of time corresponding approximately to one cycle of the moon's phases, or about 30 days or 4 weeks. Also known as the 'Synodic Month' and calculated as 29.53059 days."@en ;
-    skos:notation "MO",
-        "MON",
-        "mo" ;
+    skos:notation "mo" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Month"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MegaBYTE> a skos:Concept ;
+    skos:hiddenLabel "MEGABYTE (MB)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The megabyte is a multiple of the unit byte for digital information equivalent to \\(2^{6} bytes\\). Although the prefix mega means \\(10^{6}\\), the term megabyte and symbol \\(mB\\) have historically been used to refer to \\(1024^{3} bytes\\) or \\(2^{30} bytes\\). The megabyte is a multiple of the unit byte for digital information storage or transmission with three different values depending on context: 1048576 bytes generally for computer memory; and one million bytes (10, see prefix mega-) generally for computer storage. In rare cases, it is used to mean \\(1000 \\times 1024 (1024,000) bytes\\). The IEEE Standards Board has confirmed that mega means \\(1000,000\\), with exceptions allowed for the base-two meaning."@en ;
     skos:notation "mB" ;
@@ -1489,6 +1694,9 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MegaL> a skos:Concept ;
+    skos:altLabel "Megalitre"@en,
+        "Megalitres"@en ;
+    skos:hiddenLabel "MEGALITRES (Ml)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "MAL" ;
@@ -1507,6 +1715,8 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MegaPA> a skos:Concept ;
+    skos:hiddenLabel "MEGAPASCAL (mpa)"@en,
+        "MEGAPASCAL (MPa)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "MPA" ;
@@ -1516,6 +1726,7 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MilliGM> a skos:Concept ;
+    skos:hiddenLabel "MILLIGRAMS (mg)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
     skos:notation "MGM" ;
@@ -1525,11 +1736,10 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MilliM> a skos:Concept ;
+    skos:hiddenLabel "MILLIMETRES (mm)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-    skos:definition "The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactlyâ5/127 (approximately 0.039370) of an inch."@en ;
-    skos:notation "MM",
-        "MMT",
-        "mm" ;
+    skos:definition "The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to approximately 0.039370 of an inch."@en ;
+    skos:notation "mm" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Millimeter"@en ;
@@ -1538,9 +1748,7 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
 <http://qudt.org/vocab/unit/MilliRAD> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
-    skos:notation "C25",
-        "MRAD",
-        "mrad" ;
+    skos:notation "mrad" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "milliradian"@en ;
@@ -1549,60 +1757,91 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
 <http://qudt.org/vocab/unit/MilliS> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
-    skos:notation "C27" ;
+    skos:notation "mS" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "millisiemens"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+<http://qudt.org/vocab/unit/MilliSEC> a skos:Concept ;
+    skos:hiddenLabel "MILLISECONDS (ms)"@en ;
+    skos:altLabel "Millisecond"@en,
+        "MILLISECOND"@en ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:definition ""@en ;
+    skos:notation "ms" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "millisecond"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 <http://qudt.org/vocab/unit/N> a skos:Concept ;
+    skos:hiddenLabel "NEWTON (N)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The \"Newton\" is the SI unit of force. A force of one newton will accelerate a mass of one kilogram at the rate of one meter per second per second. The newton is named for Isaac Newton (1642-1727), the British mathematician, physicist, and natural philosopher. He was the first person to understand clearly the relationship between force (F), mass (m), and acceleration (a) expressed by the formula \\(F = m \\cdot a\\)."@en ;
-    skos:notation "N",
-        "NEW" ;
+    skos:notation "N" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Newton"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/NanoSEC> a skos:Concept ;
+    skos:altLabel "Nanosecond"@en ;
+    skos:hiddenLabel "NANOSECONDS (ns)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A nanosecond is a SI unit of time equal to one billionth of a second (10e-9 or 1/1,000,000,000 s). One nanosecond is to one second as one second is to 31.69 years. The word nanosecond is formed by the prefix nano and the unit second."@en ;
-    skos:notation "C47",
-        "NS",
-        "ms",
-        "ns" ;
+    skos:notation "ns" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "nanosecond"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/OHM-M> a skos:Concept ;
+    skos:altLabel "Ohmmetre"@en,
+        "Ohm metre"@en,
+        "Ohms"@en ;
+    skos:hiddenLabel "OHMMETRES (ohmms)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
-    skos:notation "C61" ;
+    skos:notation "ohm" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Ohm Meter"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/OZ> a skos:Concept ;
+    skos:altLabel "OUNCE"@en,
+        "Ounces"@en,
+        "ounce"@en,
+        "OUNCES"@en ;
+    skos:hiddenLabel "OUNCE (oz)"@en,
+        "OUNCES (oz)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition ""@en ;
-    skos:notation "" ;
+    skos:notation "oz" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
-    skos:prefLabel "ounce"@en ;
+    skos:prefLabel "Ounce"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/PA> a skos:Concept ;
+    skos:hiddenLabel "PASCAL (pa)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The SI unit of pressure. The pascal is the standard pressure unit in the MKS metric system, equal to one newton per square meter or one \"kilogram per meter per second per second.\" The unit is named for Blaise Pascal (1623-1662), French philosopher and mathematician, who was the first person to use a barometer to measure differences in altitude."@en ;
-    skos:notation "PAL",
-        "Pa" ;
+    skos:notation "Pa" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Pascal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
+<http://qudt.org/vocab/unit/PA-SEC> a skos:Concept ;
+    skos:hiddenLabel "PASCAL SECOND (pa.s)"@en ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:definition "The SI unit of dynamic viscosity, equal to 10 poises or 1000 centipoises."@en ;
+    skos:notation "Pa.s" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Pascal Second"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/PA-PER-SEC> a skos:Concept ;
@@ -1614,17 +1853,18 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/PERCENT> a skos:Concept ;
+    skos:hiddenLabel "PERCENT (%)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Percent\" is a unit for  'Dimensionless Ratio' expressed as \\(\\%\\)."@en ;
-    skos:notation "%",
-        "P1",
-        "\\%" ;
+    skos:notation "%" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Percent"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/PPB> a skos:Concept ;
+    skos:altLabel "PARTS PER BILLION"@en ;
+    skos:hiddenLabel "PARTS PER BILLION (ppb)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Dimensionless unit for concentration. Recommended practice is to use specific units such as \\(ug/l\\)."@en ;
     skos:notation "ppb" ;
@@ -1634,6 +1874,8 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/PPM> a skos:Concept ;
+    skos:altLabel "PARTS PER MILLION"@en ;
+    skos:hiddenLabel "PARTS PER MILLION (ppm)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Dimensionless unit for concentration. Recommended practice is to use specific units such as \\(ug/l\\)."@en ;
     skos:notation "ppm" ;
@@ -1643,10 +1885,10 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/PetaBYTE> a skos:Concept ;
+    skos:hiddenLabel "PETABYTE (PB)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A petabyte is a unit of information equal to one quadrillion bytes, or 1024 terabytes. The unit symbol for the petabyte is PB. The prefix peta (P) indicates the fifth power to 1000: 1 PB = 1000000000000000B, 1 million gigabytes = 1 thousand terabytes The pebibyte (PiB), using a binary prefix, is the corresponding power of 1024, which is more than \\(12\\% \\)greater (\\(2^{50} bytes = 1,125,899,906,842,624 bytes\\))."@en ;
-    skos:notation "E36",
-        "PB" ;
+    skos:notation "PB" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "PetaByte"@en ;
@@ -1655,15 +1897,14 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
 <http://qudt.org/vocab/unit/RAD> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The radian is the standard unit of angular measure, used in many areas of mathematics. It describes the plane angle subtended by a circular arc as the length of the arc divided by the radius of the arc. In the absence of any symbol radians are assumed, and when degrees are meant the symbol \\(^{\\ circ}\\) is used. "@en ;
-    skos:notation "C81",
-        "RAD",
-        "rad" ;
+    skos:notation "rad" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Radian"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/REV-PER-HR> a skos:Concept ;
+    skos:hiddenLabel "REVOLUTIONS PER HOUR (RPH)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Revolution per Hour\" is a unit for  'Angular Velocity' expressed as \\(rev/h\\)."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
@@ -1672,6 +1913,7 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/REV-PER-MIN> a skos:Concept ;
+    skos:hiddenLabel "REVOLUTIONS PER MINUTE (RPM)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "\"Revolution per Minute\" is a unit for  'Angular Velocity' expressed as \\(rev/min\\)."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
@@ -1680,12 +1922,11 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/SEC> a skos:Concept ;
+    skos:hiddenLabel "SECONDS (sec)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition """The \\(Second\\) (symbol: \\(s\\)) is the base unit of time in the International System of Units (SI) and is also a unit of time in other systems of measurement. Between the years1000 (when al-Biruni used seconds) and 1960 the second was defined as \\(1/86400\\) of a mean solar day (that definition still applies in some astronomical and legal contexts). Between 1960 and 1967, it was defined in terms of the period of the Earth's orbit around the Sun in 1900, but it is now defined more precisely in atomic terms.  
 Under the International System of Units (via the International Committee for Weights and Measures, or CIPM), since 1967 the second has been defined as the duration of \\({9192631770}\\) periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium 133 atom.In 1997 CIPM added that the periods would be defined for a caesium atom at rest, and approaching the theoretical temperature of absolute zero, and in 1999, it included corrections from ambient radiation."""@en ;
-    skos:notation "S",
-        "SEC",
-        "s" ;
+    skos:notation "s" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Second"@en ;
@@ -1701,13 +1942,21 @@ Under the International System of Units (via the International Committee for Wei
     skos:prefLabel "Ton of Oil Equivalent"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+<http://qudt.org/vocab/unit/TONNE-PER-M3> a skos:Concept ;
+    skos:hiddenLabel "TONNES PER CUBIC METRE (t/m3)"@en ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:definition "Tonnes per cubic metre is an SI derived unit of density, defined by mass in tonnes divided by volume in cubic metres."@en ;
+    skos:notation "t/m3" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Tonnes per Cubic Metre"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 <http://qudt.org/vocab/unit/TON_LONG> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition """<p class="lm-para">Long ton (weight ton or imperial ton) is the name for the unit called the "ton" in the avoirdupois or Imperial system of measurements, as used in the United Kingdom and several other Commonwealth countries. One long ton is equal to 2,240 pounds (1,016 kg), 1.12 times as much as a short ton, or 35 cubic feet (0.9911 m3) of salt water with a density of 64 lb/ft3 (1.025 g/ml).</p>
 <p class="lm-para">It has some limited use in the United States, most commonly in measuring the displacement of ships, and was the unit prescribed for warships by the Washington Naval Treaty 1922-for example battleships were limited to a mass of 35,000 long tons (36,000 t; 39,000 short tons).</p>"""@en ;
-    skos:notation "[LTON_AV]",
-        "[lton_av]",
-        "ton" ;
+    skos:notation "ton" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Long Ton"@en ;
@@ -1715,21 +1964,24 @@ Under the International System of Units (via the International Committee for Wei
 
 <http://qudt.org/vocab/unit/TON_M> a skos:Concept ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
-    skos:altLabel "metric-tonne" ;
+    skos:altLabel "metric-tonne"@en,
+        "Tonne"@en,
+        "TONNE"@en,
+        "Tonnes"@en,
+        "TONNES"@en ;
+    skos:hiddenLabel "TONNES (t)"@en ;
     skos:definition "The tonne (SI unit symbol: t) is a metric system unit of mass equal to 1,000 kilograms (2,204.6 pounds). It is a non-SI unit accepted for use with SI. To avoid confusion with the ton, it is also known as the metric tonne and metric ton in the United States[3] and occasionally in the United Kingdom. In SI units and prefixes, the tonne is a megagram (Mg), a rarely-used symbol, easily confused with mg, for milligram."@en ;
-    skos:notation "TNE",
-        "mT",
-        "t" ;
+    skos:notation "t" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Metric Ton"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/TeraBYTE> a skos:Concept ;
+    skos:hiddenLabel "TERABYTE (TB)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "The terabyte is a multiple of the unit byte for digital information. The prefix tera means 10 in the International System of Units (SI), and therefore 1 terabyte is 1000000000000bytes, or 1 trillion bytes, or 1000 gigabytes. 1 terabyte in binary prefixes is 0.9095 tebibytes, or 931.32 gibibytes. The unit symbol for the terabyte is TB or TByte, but not Tb (lower case b) which refers to terabit."@en ;
-    skos:notation "E35",
-        "TB" ;
+    skos:notation "TB" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "TeraByte"@en ;
@@ -1745,22 +1997,20 @@ Under the International System of Units (via the International Committee for Wei
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/WK> a skos:Concept ;
+    skos:hiddenLabel "WEEKS (w)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Mean solar week"@en ;
-    skos:notation "WEE",
-        "WK",
-        "wk" ;
+    skos:notation "wk" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Week"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/YR> a skos:Concept ;
+    skos:hiddenLabel "YEARS (yrs)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "A year is any of the various periods equated with one passage of Earth about the Sun, and hence of roughly 365 days. The familiar calendar has a mixture of 365- and 366-day years, reflecting the fact that the time for one complete passage takes about 365Â¼ days; the precise value for this figure depends on the manner of defining the year."@en ;
-    skos:notation "ANN",
-        "a",
-        "yr" ;
+    skos:notation "a" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Year"@en ;
