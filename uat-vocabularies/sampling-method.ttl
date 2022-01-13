@@ -11,9 +11,9 @@
         skos:ConceptScheme ;
     dcterms:created "2019-06-03"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-06-15"^^xsd:date ;
+    dcterms:modified "2022-01-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    skos:definition "The method of sample collection."@en ;
+    skos:definition "The method of sample acquisition. This may be primary collection of a new sample, or the method in which a party acquires or generates a sample."@en ;
     skos:hasTopConcept gasmp:airfall_dust_collector , 
         gasmp:borehole_fluid_sampling , 
         gasmp:borehole_logging_tool , 
@@ -29,9 +29,14 @@
         gasmp:filtration , 
         gasmp:grainsize_separation , 
         gasmp:marine_survey_observation , 
-        gasmp:marine_survey_sampling , 
+        gasmp:marine_survey_sampling ,
+        gasmp:material-combination ,
+        gasmp:material-transfer ,
+        gasmp:mine-processing ,
+        gasmp:mining ,
         gasmp:sediment_trap , 
-        gasmp:sonde , 
+        gasmp:sonde ,
+        gasmp:stockpiling ,
         gasmp:still_photography , 
         gasmp:surface_material_sampling , 
         gasmp:undergound_mine_sampling , 
@@ -198,6 +203,40 @@ gasmp:marine_survey_sampling a skos:Concept ;
 	skos:prefLabel "marine survey sampling"@en ;
 	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
 
+gasmp:material-combination a skos:Concept ;
+	skos:altLabel "Material Combination"@en ;
+	skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "The generation of a new sample by the combination or aggregation of multiple materials."@en ;
+        rdfs:isDefinedBy <http://linked.data.gov.au/def/sampling-method> ;
+	skos:prefLabel "material combination"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:material-transfer a skos:Concept ;
+	skos:altLabel "Material Transfer"@en ;
+	skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "The movement of material from one site to another and the associated change in ownership or custodianship."@en ;
+        rdfs:isDefinedBy <http://linked.data.gov.au/def/sampling-method> ;
+	skos:prefLabel "material transfer"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:mine-processing a skos:Concept ;
+	skos:altLabel "Mine Processing"@en ;
+	skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "The generation of a sample by the processing of raw mined material to create a refined or intermediary product."@en ;
+        rdfs:isDefinedBy <http://linked.data.gov.au/def/sampling-method> ;
+	skos:prefLabel "mine processing"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:mining a skos:Concept ;
+	skos:altLabel "Mining"@en,
+		"Quarrying"@en,
+		"quarrying"@en ;
+	skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "The generation of a sample through the extraction of raw natural resource material from the earth, i.e. mining, quarrying, and fluid extraction. The displacement of material to access or quantify an exploitable commodity."@en ;
+        rdfs:isDefinedBy <http://linked.data.gov.au/def/sampling-method> ;
+	skos:prefLabel "mining"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
 gasmp:sediment_trap a skos:Concept ;
 	dcterms:created "2018-01-30T23:26:29Z"^^xsd:dateTime ;
 	dcterms:creator <http://editor.vocabs.ands.org.au/user/GA_Sedgmen.Lara_Admin> ;
@@ -224,6 +263,16 @@ gasmp:still_photography a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
 	skos:definition "A still image captured by a camera. Platform independent, i.e. image may be captured via a handheld camera, drone, camera trap, fixed camera."@en ;
 	skos:prefLabel "still photography"@en ;
+	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
+
+gasmp:stockpiling a skos:Concept ;
+	skos:altLabel "Stockpile"@en,
+		"Stockpiling"@en,
+		"stockpile"@en ;
+	skos:inScheme <http://linked.data.gov.au/def/sampling-method> ;
+	skos:definition "The modification of a stockpile by addition and/or subtraction of material."@en ;
+        rdfs:isDefinedBy <http://linked.data.gov.au/def/sampling-method> ;
+	skos:prefLabel "stockpiling"@en ;
 	skos:topConceptOf <http://linked.data.gov.au/def/sampling-method> .
 
 gasmp:surface_material_sampling a skos:Concept ;

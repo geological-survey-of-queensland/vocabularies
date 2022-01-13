@@ -10,18 +10,25 @@
         skos:ConceptScheme ;
     dcterms:created "2020-03-30"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-09-01"^^xsd:date ;
+    dcterms:modified "2022-01-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Miscellaneous details that describe samples that are outside the common core observation profile."@en ;
     skos:prefLabel "Observation Detail Type"@en ;
-    skos:hasTopConcept obsdt:reading-interval-hz,
+    skos:hasTopConcept obsdt:blended,
+        obsdt:reading-interval-hz,
         obsdt:reading-interval-m,
         obsdt:survey-configuration .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
+obsdt:blended a skos:Concept ;
+    skos:definition "A true-false flag indicating whether the observation is of a blended sample. In the case of a resource sale this may refer to the blending of material from different sources (i.e. mines) into a single sale volume."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
+    skos:prefLabel "Blended Sample"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
 
 obsdt:reading-interval-hz a skos:Concept ;
     skos:definition "Frequency of readings or observations in Hertz (1/s)"@en ;

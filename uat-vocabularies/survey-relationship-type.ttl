@@ -11,7 +11,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-04-08"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-02-20"^^xsd:date ;
+    dcterms:modified "2022-01-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Developed by the Geological Survey of Queensland." ;
     skos:definition "The relationships that exist between surveys."@en ;
@@ -74,3 +74,17 @@ srt:same-project a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/survey-relationship-type> ;
     skos:prefLabel "Same project"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-relationship-type> .
+
+srt:dependent a skos:Concept ;
+    skos:broader srt:same-project ;
+    skos:definition "A survey that was conducted during the course of a single project that was dependent on the completion of the referenced survey, i.e. a survey that is part of the same project as another survey but is reliant on the other survey has been conducted."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-relationship-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-relationship-type> ;
+    skos:prefLabel "Same Project - Dependent"@en .
+
+srt:independent a skos:Concept ;
+    skos:broader srt:same-project ;
+    skos:definition "A survey that was conducted during the course of a single project that is not reliant on another survey or activity within the project, i.e. a survey that can be performed independently of any other surveys within a project."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-relationship-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-relationship-type> ;
+    skos:prefLabel "Same Project - independent"@en .

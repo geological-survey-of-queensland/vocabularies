@@ -11,12 +11,13 @@
         skos:ConceptScheme ;
     dcterms:created "2020-03-30"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-08-31"^^xsd:date ;
+    dcterms:modified "2022-01-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Miscellaneous details that describe samples that are outside the common core sample profile."@en ;
     skos:prefLabel "Sample Detail Type"@en ;
-    skos:hasTopConcept smpdt:pallet-weight,
+    skos:hasTopConcept smpdt:sample-transactor,
+        smpdt:pallet-weight,
         smpdt:pallet-condition,
         smpdt:core-condition,
         smpdt:core-tray-condition .
@@ -24,6 +25,18 @@
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
+smpdt:sample-transactor a skos:Concept ;
+    skos:altLabel "Buyer"@en,
+        "Seller"@en,
+        "Giver"@en,
+        "Donor"@en,
+        "Recipient"@en ;
+    skos:definition "The other party to a transaction with the party-of-interest in which a sample changes possession, ownership, or custodianship. The party who are the giver of a sample received or purchased by the party-of-interest.  The party who are the recipient of a sample given or sold by the party-of-interest."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-detail-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-detail-type> ;
+    skos:prefLabel "Sample Transactor"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-detail-type> .
 
 smpdt:pallet-weight a skos:Concept ;
     skos:definition "Weight of pallet in kg"@en ;
