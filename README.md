@@ -96,16 +96,16 @@ This code repository's content are licensed under the [Creative Commons Attribut
 *Vocabularies owner*:  
 **Mark Gordon**  
 Geological Survey of Quensland  
-Department of Natural Resources, Mines and Energy  
+Department of Resources  
 Brisbane, QLD, Australia  
-<mark.gordon@dnrme.qld.gov.au>  
+<mark.gordon@resources.qld.gov.au>  
 
 *Technical contact*:  
 **Vance Kelly**  
 Geological Survey of Quensland  
-Department of Natural Resources, Mines and Energy  
+Department of Resources
 Brisbane, QLD, Australia    
-<vance.kelly@dnrme.qld.gov.au>  
+<vance.kelly@resources.qld.gov.au>  
 
 *Author*:  
 **David Crosswell**  
