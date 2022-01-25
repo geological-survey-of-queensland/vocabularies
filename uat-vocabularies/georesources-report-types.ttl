@@ -12,7 +12,7 @@
 <http://linked.data.gov.au/def/georesource-report> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-09"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-01-04"^^xsd:date ;
+    dcterms:modified "2022-01-25"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Developed by the Geological Survey of Queensland." ;
     skos:definition "The types of reports administered by the GeoResources Division of the Department of Resources."@en ;
@@ -136,7 +136,6 @@ grt:article a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:collaborative-drilling-initiative-proposals a skos:Concept ;
-    skos:altLabel "Collaborative Drilling Initiative - Proposals"@en ;
     skos:definition "A propsal detailing the activities and results of a project that received support from the Collaborative Drilling Initiative. The details of which have been defined as a part of the terms and conditions of that initiative."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/georesource-report> ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
@@ -279,6 +278,44 @@ grt:geothermal-report-production-testing a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
     skos:notation "GTHPT" ;
     skos:prefLabel "Geothermal Report - Production Testing"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:geothermal-report-surrender a skos:Concept ;
+    skos:altLabel "Final Surrender (EPG)"@en,
+        "Final Surrender (GL)"@en,
+        "Geothermal Report - Final Surrender"@en,
+        "Geothermal Report - Surrender"@en ;
+    skos:definition "A report that is required to be lodged with a partial or full surrender of a Geothermal Lease or Exploration Permit Geothermal, detailing the work undertaken on the surrendered portion of the permit throughout the life of tenure."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/georesource-report> ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:notation "GEOSUR" ;
+    skos:prefLabel "Geothermal Report - Surrender (EPG/GL)"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+grt:geothermal-report-relinquishment a skos:Concept ;
+    skos:altLabel "Final Relinquishment (EPG)"@en,
+        "Final Relinquishment (GL)"@en,
+        "Geothermal Report - Final Relinquishment"@en,
+        "Geothermal Report - Relinquishment"@en ;
+    skos:definition "A report that is required to be lodged with a partial or full relinquishment of a Geothermal Lease or Exploration Permit Geothermal, detailing the work undertaken on the relinquished portion of the permit throughout the life of tenure."@en  ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/georesource-report> ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:notation "GEOREQ" ;
+    skos:prefLabel "Geothermal Report - Relinquishment (EPG/GL)"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
+
+    grt:geothermal-end-tenure a skos:Concept ;
+    skos:altLabel "End of Tenure Report (EPG)"@en,
+        "End of Tenure Report (GL)"@en,
+        "Geothermal Report - End of Tenure Report"@en,
+        "Geothermal Report - Final Report"@en,
+        "Geothermal Report - End of Tenure"@en,
+        "Geothermal Report - Final"@en;
+    skos:definition "A report that is required to be lodged at the end of tenure over a Geothermal Lease or Exploration Permit Geothermal, detailing the work undertaken on the permit throughout the life of tenure."@en  ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/georesource-report> ;
+    skos:inScheme <http://linked.data.gov.au/def/georesource-report> ;
+    skos:notation "GEOEND" ;
+    skos:prefLabel "Geothermal Report - End of Tenure (EPG/GL)"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/georesource-report> .
 
 grt:greenhouse-gas-report-injection a skos:Concept ;
@@ -843,7 +880,10 @@ grt:geothermal-reports a skos:Collection ;
         grt:geothermal-report-injection,
         grt:geothermal-report-injection-testing,
         grt:geothermal-report-production,
-        grt:geothermal-report-production-testing ;
+        grt:geothermal-report-production-testing,
+        grt:geothermal-report-surrender,
+        grt:geothermal-report-relinquishment,
+        grt:geothermal-end-tenure ;
     skos:prefLabel "Geothermal Reports"@en .
 	
 grt:greenhouse-gas-reports a skos:Collection ; 
@@ -891,6 +931,9 @@ grt:permit-reports a skos:Collection ;
         grt:geothermal-report-injection-testing,
         grt:geothermal-report-production,
         grt:geothermal-report-production-testing,
+        grt:geothermal-report-surrender,
+        grt:geothermal-report-relinquishment,
+        grt:geothermal-end-tenure,
         grt:greenhouse-gas-report-injection,
         grt:greenhouse-gas-report-storage-capacity,
         grt:greenhouse-gas-report-storage-injection,
@@ -1064,6 +1107,9 @@ grt:water-reports a skos:Collection ;
         grt:geothermal-report-injection-testing,
         grt:geothermal-report-production,
         grt:geothermal-report-production-testing,
+        grt:geothermal-report-surrender,
+        grt:geothermal-report-relinquishment,
+        grt:geothermal-end-tenure,
         grt:greenhouse-gas-report-injection,
         grt:greenhouse-gas-report-storage-capacity,
         grt:greenhouse-gas-report-storage-injection,
