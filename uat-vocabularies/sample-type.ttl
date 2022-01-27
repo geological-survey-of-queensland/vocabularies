@@ -12,7 +12,7 @@
 <http://linked.data.gov.au/def/sample-type> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-06-21"^^xsd:date ;
+    dcterms:modified "2022-01-14"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Types of sample used in Geoscience."@en ;
@@ -34,6 +34,9 @@
         sampty:drill-stem-test,
         sampty:feather-and-wedge-sample,
         sampty:float,
+        sampty:georesource-process-input,
+        sampty:georesource-product,
+        sampty:georesource-raw-material,
         sampty:hand-sample,
         sampty:hyperspectral-scan,
         sampty:macrofossil,
@@ -66,6 +69,7 @@
         sampty:trench-spoil,
         sampty:unspecified,
         sampty:video,
+        sampty:waste-rock,
         sampty:water-specimen, 
         sampty:wellhead ;
     skos:prefLabel "Sample Type"@en .
@@ -527,4 +531,38 @@ sampty:petrophysical-log a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
     skos:notation "PETL" ;
     skos:prefLabel "Petrophysical Log"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
+
+sampty:georesource-raw-material a skos:Concept ;
+    skos:definition "The raw resource of interest in mining or processing."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
+    skos:notation "GRM" ;
+    skos:prefLabel "Georesource Raw Material"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
+
+sampty:georesource-process-input a skos:Concept ;
+    skos:altLabel "Mine Process Stock"@en ;
+    skos:definition "Material feed for a mine processing plant or other refining facility that produced benefacted products. Feed may as mined or a blend of input materials with different attributes."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
+    skos:notation "GPM" ;
+    skos:prefLabel "Georesource Process Material"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
+
+sampty:waste-rock a skos:Concept ;
+    skos:altLabel "Overburden"@en ;
+    skos:definition "The rock removed during mining to reach resource."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
+    skos:notation "WR" ;
+    skos:prefLabel "Waste Rock"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .
+
+sampty:georesource-product a skos:Concept ;
+    skos:definition "The resource mined or material produced via a mine processing plant or other refining facility that is the final product."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-type> ;
+    skos:notation "GP" ;
+    skos:prefLabel "Georesource Product"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-type> .

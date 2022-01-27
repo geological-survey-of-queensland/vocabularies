@@ -1,0 +1,66 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tnst: <http://linked.data.gov.au/def/transaction-status/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/transaction-status> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:created "2022-01-10"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2022-01-10"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The status of a transaction contracted for sale or the type of sales value information being recorded."@en ;
+    skos:hasTopConcept tnst:completed,
+        tnst:replacement,
+        tnst:adjustment,
+        tnst:cancelled,
+        tnst:held ;
+    skos:prefLabel "Transaction Status"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
+tnst:completed a skos:Concept ;
+    skos:altLabel "Original"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/transaction-status> ;
+    skos:definition "A standard sales record detailing the expected or finalised tonnage and value."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/transaction-status> ;
+    skos:prefLabel "Completed"@en .
+
+tnst:replacement a skos:Concept ;
+    skos:altLabel "Amended"@en,
+        "Amendment"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/transaction-status> ;
+    skos:definition "A sales record that has been amended with a final tonnage and value correction to a completed sale, replacing the originally reported values with new total values, i.e. the amended value"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/transaction-status> ;
+    skos:prefLabel "Replacement"@en .
+
+tnst:adjustment a skos:Concept ;
+    skos:altLabel "Varied"@en,
+        "Variation"@en  ;
+    skos:topConceptOf <http://linked.data.gov.au/def/transaction-status> ;
+    skos:definition "A sales record that has been corrected with a plus-or-minus variation to a completed sale, i.e. the difference in value and tonnage from originally recorded or reported."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/transaction-status> ;
+    skos:prefLabel "Adjustment"@en .
+
+tnst:cancelled a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/transaction-status> ;
+    skos:definition "A record that a previously recorded or reported contracted sale has subsequently been cancelled by the buyer or seller."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/transaction-status> ;
+    skos:prefLabel "Cancelled"@en .
+
+tnst:held a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/transaction-status> ;
+    skos:definition "A record that a sale is in dispute or is held by an entity that is preventing completion of sale. Where a sale is prevented by an authorised entity, such as a border and customs agency or a financial administrator"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/transaction-status> ;
+    skos:prefLabel "Held"@en .
