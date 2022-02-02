@@ -57,6 +57,7 @@ ststs:on-injection a skos:Concept ;
 ststs:on-production a skos:Concept ;
     skos:altLabel "Extraction"@en,
         "Mining"@en ;
+        "Producing"@en ;
     skos:broader ststs:active ;
     skos:definition "A well that is producing hydrocarbons or other non-water resources, or a mine or quarry that is actively extracting coal, minerals, or other resources."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
@@ -93,9 +94,10 @@ ststs:on-hold a skos:Concept ;
 
 ststs:suspended a skos:Concept ;
     skos:altLabel "Drilled"@en,
+        "Not Producing"@en,
         "Retention"@en ;
     skos:broader ststs:inactive ;
-    skos:definition "A project or activity that is temporarily not active, such as during the interval between construction and commencement of production or extraction."@en ;
+    skos:definition "A site such as mine or quarry, project or activity that is temporarily not active, such as during the interval between construction and commencement of production or extraction."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/retention> ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Suspended"@en .
@@ -157,6 +159,13 @@ ststs:rehabilitation a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Rehabilitation"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
+
+ststs:processing a skos:Concept ;
+    skos:broader ststs:active ;
+    skos:definition "A site such as mine or quarry which is processing but not mining raw material throughout the reporting period."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/retention> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Processing"@en .
 
 ststs:borehole-status a skos:Collection ;
     skos:definition "Project statuses pertaining to the construction, usage, maintenance and abandonment of a well or bore."@en ;
