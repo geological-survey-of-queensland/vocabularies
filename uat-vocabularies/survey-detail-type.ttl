@@ -12,12 +12,14 @@
         skos:ConceptScheme ;
     dcterms:created "2020-03-30"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-01-14"^^xsd:date ;
+    dcterms:modified "2022-02-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     skos:definition "Miscellaneous Survey Details."@en ;
     skos:hasTopConcept svydt:active-period,
         svydt:ag-survey-type,
         svydt:comments,
+        svydt:full-time-employees,
+        svydt:full-time-contractors,
         svydt:funding-program,
         svydt:historic-tenure,
         svydt:historic-title,
@@ -51,6 +53,26 @@ svydt:total-stations a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
     skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Total Stations"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+
+svydt:full-time-employees a skos:Concept ;
+    skos:altLabel "FTE Employees"@en,
+        "Full-time equivalent employees"@en,
+        "Full-Time (FTE) Equivalent Employees"@en ;
+    skos:definition "The full-time equivalent (FTE) number of employees working on a project throughout the reporting period."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "Full-Time Equivalent Employees"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+
+svydt:full-time-contractors a skos:Concept ;
+    skos:altLabel "FTE Contractors"@en,
+        "Full-time equivalent contractors"@en,
+        "Full-Time (FTE) Equivalent Contractors"@en ;
+    skos:definition "The full-time equivalent (FTE) number of contract workers (contractors) working on a project throughout the reporting period."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "Full-Time Equivalent Employees"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
 
 svydt:historic-tenure a skos:Concept ;
