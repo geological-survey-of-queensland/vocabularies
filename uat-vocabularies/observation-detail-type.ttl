@@ -19,6 +19,8 @@
         obsdt:lot-adjacent,
         obsdt:lot-number,
         obsdt:plan-number,
+        obsdt:software,
+        obsdt:processing-date,
         obsdt:reading-interval-hz,
         obsdt:reading-interval-m,
         obsdt:survey-configuration .
@@ -61,6 +63,21 @@ obsdt:reading-interval-m a skos:Concept ;
     skos:definition "Distance between readings or observations in metres"@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
     skos:prefLabel "Reading Interval (m)"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
+
+obsdt:processing-date a skos:Concept ;
+    skos:altLabel "Processing End Date"@en ;
+    skos:definition "The date, or effective date, of any processing performed on the observed data. The date that processing was completed."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
+    skos:prefLabel "Processing Date"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
+
+obsdt:software a skos:Concept ;
+    skos:altLabel "Firmware"@en,
+        "Software Version"@en ;
+    skos:definition "The software or firmware used by the instrument for acquisition, or the software used for data processing."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
+    skos:prefLabel "Software"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
 
 obsdt:survey-configuration a skos:Concept ;
