@@ -304,7 +304,7 @@ smprep:thermal-treatment a skos:Concept ;
 
 smprep:unprocessed a skos:Concept ;
     skos:altLabel "Unprocessed"@en ;
-    skos:definition "An indication that a sample material explicitly was not processed between two states. For example where a raw material requires no processing to be considered a saleable product."@en ;
+    skos:definition "An explicit indication that a sample material was not processed between two states. For example where a raw material requires no processing to be considered a saleable product."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:prefLabel "No Processing"@en ;
@@ -335,9 +335,9 @@ smprep:wash a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
 
 smprep:mine-processing a skos:Collection ;
-    skos:definition "Sample preparation steps and groups that concentrate, refine, or prepare a raw material into a saleable product."@en ;
+    skos:definition "Sample preparation steps and multi-step processes that concentrate, refine, or prepare a raw material into a saleable product."@en ;
     skos:member smprep:unspecified,
-        smprep:unprocesse,
+        smprep:unprocessed,
         smprep:wash,
         smprep:crush ;
     skos:prefLabel "Mine Processing"@en .
