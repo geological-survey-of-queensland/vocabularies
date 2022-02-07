@@ -48,6 +48,13 @@ ststs:monitoring a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Monitoring"@en .
 
+ststs:not-producing a skos:Concept ;
+    skos:altLabel "Processing"@en ;
+    skos:broader ststs:active ;
+    skos:definition "A site that is an active part of a project or operation but is not currently contributing to production. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease that is part of an active mine but is not contributing to mine production due to project staging or by being used as a site for mine processing or infrastructure."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Not Producing"@en .
+
 ststs:on-injection a skos:Concept ;
     skos:broader ststs:active ;
     skos:definition "A well that is injecting fluids such as water or hydrocarbons into a reservoir for disposal or future production."@en ;
@@ -198,7 +205,7 @@ ststs:minocc a skos:Collection ;
     skos:prefLabel "minocc"@en .
 
 ststs:prodstat a skos:Collection ;
-    skos:definition "The coarse status of a mine, quarry, or other resource project as pertains to activity on an annual basis. Such as the status of a mine sub-site, e.g. Pit X is an inactive portion within Mine A, which may still be an active project."@en ;
-    skos:member ststs:active,
-        ststs:inactive ;
+    skos:definition "The coarse status of a mine, quarry, or other resource project as pertains to activity on an annual basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
+    skos:member ststs:on-production,
+        ststs:not-producing ;
     skos:prefLabel "Production Site Status"@en .
