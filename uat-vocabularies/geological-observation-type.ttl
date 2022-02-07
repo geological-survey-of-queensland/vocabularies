@@ -11,7 +11,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-05-24"^^xsd:date ;
+    dcterms:modified "2022-02-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The types of observation in geoscience."@en ;
@@ -55,6 +55,7 @@
         obstp:photographic,
         obstp:physical,
         obstp:positional,
+        obstp:quarry-plan,
         obstp:quartz-textures,
         obstp:radiometric,
         obstp:regolith-observations,
@@ -432,6 +433,14 @@ obstp:quartz-textures a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geological-observation-type> ;
     skos:notation "QTEX" ;
     skos:prefLabel "Quartz Textures"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type> .
+
+obstp:quarry-plan a skos:Concept ;
+    skos:definition "The cadastral information that describes the position of a property or operation, particularly quarries, as administered by the relveant government authority."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-observation-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-observation-type> ;
+    skos:notation "QRRY" ;
+    skos:prefLabel "Quarry Plan"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-observation-type> .
 
 obstp:radiometric a skos:Concept ;

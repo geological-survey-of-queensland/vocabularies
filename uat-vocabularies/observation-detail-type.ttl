@@ -16,6 +16,9 @@
     skos:definition "Miscellaneous details that describe samples that are outside the common core observation profile."@en ;
     skos:prefLabel "Observation Detail Type"@en ;
     skos:hasTopConcept obsdt:blended,
+        obsdt:lot-adjacent,
+        obsdt:lot-number,
+        obsdt:plan-number,
         obsdt:software,
         obsdt:processing-date,
         obsdt:reading-interval-hz,
@@ -30,6 +33,24 @@ obsdt:blended a skos:Concept ;
     skos:definition "A true-false flag indicating whether the observation is of a blended sample. In the case of a resource sale this may refer to the blending of material from different sources (i.e. mines) into a single sale volume."@en ;
     skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
     skos:prefLabel "Blended Sample"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
+
+obsdt:lot-adjacent a skos:Concept ;
+    skos:definition "Is a true-false or y/n flag indicating that the lot-on-plan number used to describe a feature is not within the bounds of that parcel, but instead, adjacent to it."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
+    skos:prefLabel "Lot Adjacent"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
+
+obsdt:lot-number a skos:Concept ;
+    skos:definition "The lot number used to describe a cadastral parcel of land. Used in conjunction with the plan number."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
+    skos:prefLabel "Lot Number"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
+
+obsdt:plan-number a skos:Concept ;
+    skos:definition "The plan number used to describe a cadastral parcel of land. Used in conjunction with the lot number."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/observation-detail-type> ;
+    skos:prefLabel "Plan Number"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/observation-detail-type> .
 
 obsdt:reading-interval-hz a skos:Concept ;

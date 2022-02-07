@@ -48,6 +48,12 @@ ststs:monitoring a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Monitoring"@en .
 
+ststs:not-producing a skos:Concept ;
+    skos:broader ststs:active ;
+    skos:definition "A site that is an active part of a project or operation but is not currently contributing to production. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease that is part of an active mine but is not contributing to mine production due to project staging or by being used as a site for mine processing or infrastructure."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Not Producing"@en .
+
 ststs:on-injection a skos:Concept ;
     skos:broader ststs:active ;
     skos:definition "A well that is injecting fluids such as water or hydrocarbons into a reservoir for disposal or future production."@en ;
@@ -56,7 +62,8 @@ ststs:on-injection a skos:Concept ;
 
 ststs:on-production a skos:Concept ;
     skos:altLabel "Extraction"@en,
-        "Mining"@en ;
+        "Mining"@en,
+        "Producing"@en ;
     skos:broader ststs:active ;
     skos:definition "A well that is producing hydrocarbons or other non-water resources, or a mine or quarry that is actively extracting coal, minerals, or other resources."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
@@ -95,7 +102,7 @@ ststs:suspended a skos:Concept ;
     skos:altLabel "Drilled"@en,
         "Retention"@en ;
     skos:broader ststs:inactive ;
-    skos:definition "A project or activity that is temporarily not active, such as during the interval between construction and commencement of production or extraction."@en ;
+    skos:definition "A site such as a mine or quarry, project or activity that is temporarily not active, such as during the interval between construction and commencement of production or extraction."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/retention> ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Suspended"@en .
@@ -158,6 +165,13 @@ ststs:rehabilitation a skos:Concept ;
     skos:prefLabel "Rehabilitation"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
 
+ststs:processing a skos:Concept ;
+    skos:broader ststs:active ;
+    skos:definition "A site such as a mine or quarry which is processing but not mining raw material throughout the reporting period."@en ;
+    skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/retention> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Processing"@en .
+
 ststs:borehole-status a skos:Collection ;
     skos:definition "Project statuses pertaining to the construction, usage, maintenance and abandonment of a well or bore."@en ;
     skos:member ststs:cased-and-suspended,
@@ -189,7 +203,7 @@ ststs:minocc a skos:Collection ;
     skos:prefLabel "minocc"@en .
 
 ststs:prodstat a skos:Collection ;
-    skos:definition "The coarse status of a mine, quarry, or other resource project as pertains to activity on an annual basis. Such as the status of a mine sub-site, e.g. Pit X is an inactive portion within Mine A, which may still be an active project."@en ;
-    skos:member ststs:active,
-        ststs:inactive ;
+    skos:definition "The coarse status of a mine, quarry, or other resource project as pertains to activity on an annual basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
+    skos:member ststs:on-production,
+        ststs:not-producing ;
     skos:prefLabel "Production Site Status"@en .
