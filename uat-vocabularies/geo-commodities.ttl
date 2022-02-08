@@ -2861,9 +2861,7 @@ cdt:lime a skos:Concept ;
     skos:altLabel "Calcium hydroxide"@en,
         "Slaked lime"@en,
         "Earthy lime"@en,
-        "Chalk"@en,
-        "Agricultural Lime"@en,
-        "Ag Lime"@en;
+        "Chalk"@en;
     skos:broader cdt:chemical-compound-product ;
     skos:definition "Lime is calcium oxide or calcium hydroxide, but the category is commonly applied to calcium-containing inorganic material in which carbonates, oxides and hydroxides predominate."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/lime> ;
@@ -2871,6 +2869,19 @@ cdt:lime a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "LIME" ;
     skos:prefLabel "Lime"@en .
+
+cdt:ag-lime a skos:Concept ;
+    skos:altLabel "Ag Lime"@en,
+        "Aglime"@en,
+        "Agricultural Limestone"@en,
+        "Garden Lime"@en,
+        "Liming"@en ;
+    skos:broader cdt:lime ;
+    skos:definition "Variety of lime made from pulverized limestone or chalk used specifically as a soil additive. The primary active component is calcium carbonate."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "AGLIME" ;
+    skos:prefLabel "Agricultural Lime"@en .
 
 cdt:nitrate a skos:Concept ;
     skos:broader cdt:chemical-compound-product ;
