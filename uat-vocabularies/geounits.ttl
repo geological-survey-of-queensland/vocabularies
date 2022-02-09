@@ -15,7 +15,8 @@
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Derived from the geo-profile of QUDT (http://linked.data.gov.au/def/geou)"@en ;
     skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to the geosciences."@en ;
-    skos:hasTopConcept geou:BBLOE,
+    skos:hasTopConcept geou:aud,
+        geou:BBLOE,
         geou:BBL_US-PER-HR,
         geou:BBL_US-PER-MIN,
         geou:BOE,
@@ -190,6 +191,14 @@
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
+geou:aud a skos:Concept ;
+	rdfs:isDefinedBy <http://linked.data.gov.au/def/iso-4217-currencies> ;
+	skos:inScheme <http://linked.data.gov.au/def/geou> ;
+	skos:topConceptOf <http://linked.data.gov.au/def/geou> ;
+	skos:definition "A currency used in Australia, Christmas Island, Cocos (Keeling) Islands, Heard Island and McDonald Islands, Kiribati, Nauru, Norfolk Island, Tuvalu "@en ;
+	skos:notation "AUD" ;
+	skos:prefLabel "Australian dollar"@en .
 
 <http://qudt.org/vocab/unit/CentiM> a skos:Concept;
     skos:hiddenLabel "CENTIMETRES (cm)"@en ;
