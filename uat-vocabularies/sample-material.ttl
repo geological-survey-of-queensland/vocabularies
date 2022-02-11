@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/sample-material> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-02-08"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-02-10"^^xsd:date ;
+    dcterms:modified "2022-02-11"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Types of materials of which samples can consist of in Geoscience."@en ;
@@ -18,11 +18,7 @@
         spmt:digital,
         spmt:fluid,
         spmt:metallic-material,
-        spmt:mineral,
         spmt:non-metallic-material,
-        spmt:organic-material,
-        spmt:regolith,
-        spmt:rock,
         spmt:unknown ;
     skos:prefLabel "Sample Material"@en .
 
@@ -457,7 +453,7 @@ spmt:mineral a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Mineral"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
+    skos:broader spmt:earth-material .
 
 spmt:mineral-sand a skos:Concept ;
     skos:altLabel "Mineral Sands"@en,
@@ -518,7 +514,7 @@ spmt:organic-material a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Organic Material"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
+    skos:broader spmt:earth-material .
 
 spmt:pitch a skos:Concept ;
     skos:broader spmt:hydrocarbon-material ;
@@ -550,7 +546,7 @@ spmt:regolith a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Regolith"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
+    skos:broader spmt:earth-material .
 
 spmt:refined-oil a skos:Concept ;
     skos:broader spmt:oil ;
@@ -575,7 +571,7 @@ spmt:rock a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Rock"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
+    skos:broader spmt:earth-material .
 
 spmt:sandstone a skos:Concept ;
     skos:definition "A sand-grade clastic-sedimentary-rock."@en ;
