@@ -24,8 +24,10 @@
         geou:BWOC,
         geou:BWOW,
         geou:COUNT,
+        geou:CentiM3-PER-GM,
         geou:CentiM3-PER-TON_M,
         geou:D,
+        geou:DD-PER-MIN,
         geou:DEG-PER-100F,
         geou:DEG-PER-30M,
         geou:DEG-PER-F,
@@ -54,6 +56,7 @@
         geou:KiloLB_M,
         geou:KiloREV-PER-MIN,
         geou:L-PER-50SACK,
+        geou:L-PER-TON_M,
         geou:LB_F-PER-100FT2,
         geou:LB_F-PER-IN,
         geou:LB_M-PER-100FT2,
@@ -75,6 +78,7 @@
         geou:MicroS-PER-M,
         geou:MilliD,
         geou:MilliGM-PER-GM,
+        geou:MilliGM-PER-KiloGM,
         geou:MilliGM-PER-TOC,
         geou:MilliGM-PER-TON_M,
         geou:MilliL,
@@ -85,6 +89,7 @@
         geou:PER-PA,
         geou:PERCENT-PER-VOL,
         geou:PERCENT-PER-WEIGHT,
+        geou:PERCENT-MOL,
         geou:PetaJ,
         geou:PetaJ-PER-MegaL,
         geou:RATIO,
@@ -152,11 +157,14 @@
         <http://qudt.org/vocab/unit/M3-PER-HR>,
         <http://qudt.org/vocab/unit/MIN>,
         <http://qudt.org/vocab/unit/MO>,
+        <http://qudt.org/vocab/unit/MOL>,
         <http://qudt.org/vocab/unit/MegaBYTE>,
         <http://qudt.org/vocab/unit/MegaL>,
         <http://qudt.org/vocab/unit/MegaLB_F>,
         <http://qudt.org/vocab/unit/MegaPA>,
+        <http://qudt.org/vocab/unit/MicroSV>,
         <http://qudt.org/vocab/unit/MilliGM>,
+        <http://qudt.org/vocab/unit/MilliGM-PER-L>,        
         <http://qudt.org/vocab/unit/MilliM>,
         <http://qudt.org/vocab/unit/MilliRAD>,
         <http://qudt.org/vocab/unit/MilliS>,
@@ -175,6 +183,7 @@
         <http://qudt.org/vocab/unit/RAD>,
         <http://qudt.org/vocab/unit/REV-PER-HR>,
         <http://qudt.org/vocab/unit/REV-PER-MIN>,
+        <http://qudt.org/vocab/unit/S>,
         <http://qudt.org/vocab/unit/SEC>,
         <http://qudt.org/vocab/unit/TOE>,
         <http://qudt.org/vocab/unit/TONNE-PER-M3>,
@@ -288,6 +297,15 @@ geou:COUNT a skos:Concept ;
     skos:prefLabel "Count"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+geou:CentiM3-PER-GM a skos:Concept ;
+    skos:altLabel "Cubic Centimetre per Gram"@en ;
+    dcterms:description "A measure of concentration, typically a fluid held within a solid. The cubic centimetres or mL of a substance per gram of host material."@en ;
+    skos:notation "cm3/g" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Cubic Centimetres per Gram"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 geou:CentiM3-PER-TON_M a skos:Concept ;
     skos:altLabel "CUBIC CENTIMETRES PER TONNE"@en ;
     skos:hiddenLabel "CUBIC CENTIMETRES PER TONNE (cm3/t)"@en ;
@@ -307,6 +325,15 @@ geou:D a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Darcy"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
+geou:DD-PER-MIN a skos:Concept ;
+    skos:altLabel "Dial Degrees per Minute"@en ;
+    dcterms:description "Maximum fluidity measure of coal which is determined against temperature."@en ;
+    skos:notation "DD/min" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Dial Divisions per Minute"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:DEG-PER-100F a skos:Concept ;
@@ -603,6 +630,15 @@ geou:L-PER-50SACK a skos:Concept ;
     skos:prefLabel "Litres per 50kg Sack"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+geou:L-PER-TON_M a skos:Concept ;
+    skos:altLabel "Litre per Tonne"@en ;
+    dcterms:description "A measure of concentration ratio. The number of litres of a subject fluid per tone of total material."@en ;
+    skos:notation "l/t" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Litres per Tonne"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 geou:LB_F-PER-100FT2 a skos:Concept ;
     skos:hiddenLabel "POUNDS FORCE PER 100 SQUARE FEET (lbf/100ft2)"@en ;
     rdfs:isDefinedBy geou: ;
@@ -677,6 +713,7 @@ geou:M3-PER-TON_M a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:MYR a skos:Concept ;
+    skos:altLabel "Million Years"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "The number of years divided by one million. Commonly used in disciplines that describe events over long periods, such as astronomy and geology."@en ;
     skos:notation "Ma" ;
@@ -832,6 +869,17 @@ geou:MilliGM-PER-GM a skos:Concept ;
     skos:prefLabel "Milligrams per gram"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+geou:MilliGM-PER-KiloGM a skos:Concept ;
+    skos:altLabel "MILLIGRAMS PER KILOGRAM"@en ;
+    skos:hiddenLabel "MILLIGRAMS PER KILOGRAM (mg/kg)"@en ;
+    rdfs:isDefinedBy geou: ;
+    skos:definition "A measure of concentration. The number of milligrams of material of interest per kilogram of total material in a sample."@en ;
+    skos:notation "mg/kg" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Milligrams per kilogram"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 geou:MilliGM-PER-TOC a skos:Concept ;
     skos:altLabel "MILLIGRAMS PER GRAM TOC"@en,
         "MILLIGRAMS PER GRAM TOTAL ORGANIC CARBON"@en,
@@ -916,6 +964,15 @@ geou:PER-PA a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Inverse Pascal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
+geou:PERCENT-MOL a skos:Concept ;
+    skos:altLabel "Molar Percent"@en ;
+    skos:definition "Percentage of the total moles that is of a particular component."@en ;
+    skos:notation "%mol" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Mole Percent"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 geou:PERCENT-PER-VOL a skos:Concept ;
@@ -1692,6 +1749,16 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
     skos:prefLabel "Month"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
+<http://qudt.org/vocab/unit/MOL> a skos:Concept ;
+    skos:hiddenLabel "MOLES (mol)"@en ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:definition """description "The mole is a unit of measurement used in chemistry to express amounts of a chemical substance. The official definition, adopted as part of the SI system in 1971, is that one mole of a substance contains just as many elementary entities (atoms, molecules, ions, or other kinds of particles) as there are atoms in 12 grams of carbon-12 (carbon-12 is the most common atomic form of carbon, consisting of atoms having 6 protons and 6 neutrons).  This corresponds to a value of \\(6.02214179(30) \\times 1023\\) elementary entities of the substance. It is one of the base units in the International System of Units, and has the unit symbol \\(mol\\). A Mole is the SI base unit of the amount of a substance (as distinct from its mass or weight). Moles measure the actual number of atoms or molecules in an object. An earlier name is gram molecular weight, because one mole of a chemical compound is the same number of grams as the molecular weight of a molecule of that compound measured in atomic mass units."""@en ;
+    skos:notation "mol" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Moles"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
 <http://qudt.org/vocab/unit/MegaBYTE> a skos:Concept ;
     skos:hiddenLabel "MEGABYTE (MB)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
@@ -1728,20 +1795,40 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s."
         "MEGAPASCAL (MPa)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
-    skos:notation "MPA" ;
+    skos:notation "MPa" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "megapascal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
+<http://qudt.org/vocab/unit/MicroSV> a skos:Concept ;
+    skos:hiddenLabel "MICROSIEVERT (µSV)"@en ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:definition "Although the sievert has the same dimensions as the gray (i.e. joules per kilogram), it measures a different quantity. To avoid any risk of confusion between the absorbed dose and the equivalent dose, the corresponding special units, namely the gray instead of the joule per kilogram for absorbed dose and the sievert instead of the joule per kilogram for the dose equivalent, should be used. 0.000001-fold of the SI derived unit sievert."@en ;
+    skos:notation "µSV" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "MicroSievert"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MilliGM> a skos:Concept ;
     skos:hiddenLabel "MILLIGRAMS (mg)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
-    skos:notation "MGM" ;
+    skos:notation "mg" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "milligram"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
+<http://qudt.org/vocab/unit/MilliGM-PER-L> a skos:Concept ;
+    skos:hiddenLabel "MILLIGRAMS PER LITRE (mg/l)"@en ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:definition ""@en ;
+    skos:notation "mg/l" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Milligrams per litre"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/MilliM> a skos:Concept ;
@@ -1939,6 +2026,15 @@ Under the International System of Units (via the International Committee for Wei
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Second"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
+<http://qudt.org/vocab/unit/S> a skos:Concept ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    skos:definition "the SI unit of electric conductance, susceptance, and admittance. The most important property of a conductor is the amount of current it will carry when a voltage is applied. Current flow is opposed by resistance in all circuits, and by also by reactance and impedance in alternating current circuits. Conductance, susceptance, and admittance are the inverses of resistance, reactance, and impedance, respectively. To measure these properties, the siemens is the reciprocal of the ohm. In other words, the conductance, susceptance, or admittance, in siemens, is simply 1 divided by the resistance, reactance or impedance, respectively, in ohms. The unit is named for the German electrical engineer Werner von Siemens (1816-1892)"@en ;
+    skos:notation "S" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
+    skos:inScheme <http://linked.data.gov.au/def/geou> ;
+    skos:prefLabel "Siemens"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
 <http://qudt.org/vocab/unit/TOE> a skos:Concept ;
