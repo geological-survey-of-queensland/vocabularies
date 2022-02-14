@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-02-09"^^xsd:date ;
+    dcterms:modified "2022-02-14"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -1137,6 +1137,7 @@ cdt:marble a skos:Concept ;
     skos:prefLabel "Marble"@en .
 
 cdt:miscellaneous-dimension-stones a skos:Concept ;
+    skos:altLabel "Miscellaneous Dimension Stone"@en ;
     skos:broader cdt:dimension-stone ;
     skos:definition "This category includes commercial dimension stone types that do not easily fall into the aforementioned categories, such as soapstone, steatite, or talc, which contain various amounts of the mineral talc. Additional miscellaneous dimension stones include diatomite, mylonite, pumice, schist, tripoli, tuff, porous or scoriaceous volcanic rocks, or any other rocks used as building stones."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/miscellaneous-dimension-stones> ;
@@ -1297,7 +1298,8 @@ cdt:perlite a skos:Concept ;
     skos:prefLabel "Perlite"@en .
 
 cdt:phosphate-rock a skos:Concept ;
-    skos:altLabel "Phosphorite"@en ;
+    skos:altLabel "Phosphorite"@en ,
+        "Phosphate"@en ;
     skos:broader cdt:industrial-rock ;
     skos:definition "Any rock that contains one or more phosphatic minerals of sufficient purity and quantity to permit its commercial use as a source of phosphatic compounds or elemental phosphorus. About 90% of the world's production is sedimentary phosphate rock, or phosphorite; the remainder is igneous rock rich in apatite."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/phosphate-rock> ;
@@ -4170,3 +4172,664 @@ cdt:qld-extractive-sales a skos:Collection ;
         cdt:decorative-gravel,
         cdt:horticultural-sand ;
     skos:prefLabel "Queensland Extractive Sales"@en .
+
+cdt:material-alluvialwash a skos:Collection ;
+    skos:prefLabel "Material: Alluvial Wash"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type alluvial wash."@en ;
+    skos:member
+        cdt:gold,
+        cdt:tin,
+        cdt:sapphire,
+        cdt:platinum,
+        cdt:palladium,
+        cdt:rhodium,
+        cdt:ruthenium,
+        cdt:osmium,
+        cdt:iridium,
+        cdt:rutile,
+        cdt:zircon,
+        cdt:corundum,
+        cdt:diamond-gemstone,
+        cdt:zircon-gemstone,
+        cdt:topaz,
+        cdt:ruby,
+        cdt:garnet-gemstone .
+
+cdt:material-bulkmaterial a skos:Collection ;
+    skos:prefLabel "Material: Bulk Material"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type bulk material."@en ;
+    skos:member
+        cdt:gypsum,
+        cdt:limestone,
+        cdt:lime,
+        cdt:dolomite,
+        cdt:magnesite,
+        cdt:peat,
+        cdt:perlite,
+        cdt:phosphate-rock,
+        cdt:flux-silica,
+        cdt:wollastonite,
+        cdt:zeolite,
+        cdt:diatomite,
+        cdt:silica-sand .
+
+cdt:material-bulkmetal a skos:Collection ;
+    skos:prefLabel "Material: Bulk Metal"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type bulk metal."@en ;
+    skos:member
+        cdt:copper,
+        cdt:lead,
+        cdt:tin,
+        cdt:aluminium,
+        cdt:antimony,
+        cdt:arsenic,
+        cdt:barium,
+        cdt:beryllium,
+        cdt:bismuth,
+        cdt:boron,
+        cdt:cadmium,
+        cdt:cesium,
+        cdt:calcium,
+        cdt:cerium,
+        cdt:chromium,
+        cdt:cobalt,
+        cdt:dysprosium,
+        cdt:erbium,
+        cdt:europium,
+        cdt:gadolinium,
+        cdt:gallium,
+        cdt:germanium,
+        cdt:gold,
+        cdt:hafnium,
+        cdt:heavy-rare-earth-element,
+        cdt:holmium,
+        cdt:indium,
+        cdt:iridium,
+        cdt:iron,
+        cdt:lanthanum,
+        cdt:light-rare-earth-elements,
+        cdt:lithium,
+        cdt:lutetium,
+        cdt:magnesium,
+        cdt:manganese,
+        cdt:mercury,
+        cdt:molybdenum,
+        cdt:neodymium,
+        cdt:nickel,
+        cdt:niobium,
+        cdt:osmium,
+        cdt:palladium,
+        cdt:platinum,
+        cdt:potassium,
+        cdt:praseodymium,
+        cdt:promethium,
+        cdt:radium,
+        cdt:rare-earth-element,
+        cdt:rhenium,
+        cdt:rhodium,
+        cdt:rubidium,
+        cdt:ruthenium,
+        cdt:samarium,
+        cdt:scandium,
+        cdt:silicon,
+        cdt:silver,
+        cdt:tantalum,
+        cdt:tellurium,
+        cdt:terbium,
+        cdt:thallium,
+        cdt:thorium,
+        cdt:thulium,
+        cdt:titanium,
+        cdt:tungsten,
+        cdt:uranium,
+        cdt:vanadium,
+        cdt:ytterbium,
+        cdt:yttrium,
+        cdt:zinc,
+        cdt:zirconium,
+        cdt:phosphorous,
+        cdt:gypsum,
+        cdt:ag-lime,
+        cdt:lime,
+        cdt:dolomite,
+        cdt:magnesite,
+        cdt:perlite,
+        cdt:phosphate-rock,
+        cdt:wollastonite,
+        cdt:silica,
+        cdt:albite,
+        cdt:aluminosilicate,
+        cdt:alunite,
+        cdt:andalusite,
+        cdt:anhydrite,
+        cdt:anorthite,
+        cdt:anthophyllite,
+        cdt:apatite,
+        cdt:asbestos,
+        cdt:asbestos-amphibole,
+        cdt:asbestos-serpentine,
+        cdt:baryte,
+        cdt:borate,
+        cdt:calcite,
+        cdt:carnallite,
+        cdt:chert,
+        cdt:chlorite,
+        cdt:chromite,
+        cdt:chrysotile,
+        cdt:corundum,
+        cdt:crocidolite,
+        cdt:cryolite,
+        cdt:diamond,
+        cdt:epsomite,
+        cdt:evaporite,
+        cdt:feldspar,
+        cdt:fluorite,
+        cdt:flux-silica,
+        cdt:garnet,
+        cdt:glauconite,
+        cdt:graphite,
+        cdt:hematite,
+        cdt:ilmenite,
+        cdt:jarosite,
+        cdt:kyanite,
+        cdt:mica,
+        cdt:mineral-sand,
+        cdt:mineral-wool,
+        cdt:molybdenite,
+        cdt:monazite,
+        cdt:nitrate,
+        cdt:olivine,
+        cdt:orthoclase,
+        cdt:phosphate-rock,
+        cdt:phosphorous-pentoxide,
+        cdt:potash,
+        cdt:pyrite,
+        cdt:pyrophyllite,
+        cdt:quartz,
+        cdt:refractory-silica,
+        cdt:rutile,
+        cdt:salt,
+        cdt:saponite,
+        cdt:scrap-mica,
+        cdt:sericite,
+        cdt:serpentine,
+        cdt:sheet-mica,
+        cdt:silica-sand,
+        cdt:sillimanite,
+        cdt:soda-ash,
+        cdt:sodium-bicarbonate,
+        cdt:spinel,
+        cdt:staurolite,
+        cdt:strontianite,
+        cdt:sylvite,
+        cdt:talc,
+        cdt:thenardite,
+        cdt:titanomagnetite,
+        cdt:tremolite-actinolite,
+        cdt:vermiculite,
+        cdt:wax,
+        cdt:zeolite,
+        cdt:zircon,
+        cdt:zirconia .
+
+cdt:material-bulkrock a skos:Collection ;
+    skos:prefLabel "Material: Bulk Rock"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type bulk rock."@en ;
+    skos:member
+        cdt:bauxite,
+        cdt:limestone,
+        cdt:peat,
+        cdt:phosphate-rock,
+        cdt:diatomite,
+        cdt:flux-silica .
+
+cdt:material-bullion a skos:Collection ;
+    skos:prefLabel "Material: Bullion"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type bullion."@en ;
+    skos:member
+        cdt:gold,
+        cdt:silver,
+        cdt:iridium,
+        cdt:osmium,
+        cdt:palladium,
+        cdt:platinum,
+        cdt:rhodium,
+        cdt:ruthenium .
+
+cdt:material-clay a skos:Collection ;
+    skos:prefLabel "Material: Clay"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type clay."@en ;
+    skos:member
+        cdt:clay,
+        cdt:bentonite,
+        cdt:brick-clay,
+        cdt:brick-clay,
+        cdt:expanded-clay,
+        cdt:fire-clay,
+        cdt:fullers-earth,
+        cdt:halloysite,
+        cdt:illite,
+        cdt:kaolin,
+        cdt:montmorillonite,
+        cdt:palygorskite,
+        cdt:sepiolite .
+
+cdt:material-dimensionstone a skos:Collection ;
+    skos:prefLabel "Material: Dimension Stone"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type dimension stone."@en ;
+    skos:member
+        cdt:granite,
+        cdt:marble,
+        cdt:sandstone,
+        cdt:slate,
+        cdt:basalt,
+        cdt:gabbro,
+        cdt:greenstone,
+        cdt:limestone,
+        cdt:quartzite,
+        cdt:rhyolite,
+        cdt:siltstone,
+        cdt:miscellaneous-dimension-stones .
+
+cdt:material-directshippingore a skos:Collection ;
+    skos:prefLabel "Material: Direct Shipping Ore"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type direct shipping ore."@en ;
+    skos:member
+        cdt:bauxite,
+        cdt:iron-ore,
+        cdt:hematite-ore,
+        cdt:magnetite-ore,
+        cdt:manganese-ore .
+
+cdt:material-dross a skos:Collection ;
+    skos:prefLabel "Material: Dross"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type dross."@en ;
+    skos:member
+        cdt:lead,
+        cdt:tin,
+        cdt:zinc,
+        cdt:aluminium .
+
+cdt:material-gembearingrock a skos:Collection ;
+    skos:prefLabel "Material: Gem Bearing Rock"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type gem bearing rock."@en ;
+    skos:member
+        cdt:opal,
+        cdt:black-opal,
+        cdt:boulder-opal,
+        cdt:matrix-opal,
+        cdt:white-opal,
+        cdt:amber,
+        cdt:apatite-gemstone,
+        cdt:azurite,
+        cdt:beryl,
+        cdt:aquamarine,
+        cdt:emerald,
+        cdt:heliodor,
+        cdt:morganite,
+        cdt:cassiterite-gemstone,
+        cdt:chrysoberyl,
+        cdt:cordierite,
+        cdt:ruby,
+        cdt:sapphire,
+        cdt:diamond-gemstone,
+        cdt:diopside-enstatite,
+        cdt:dioptase,
+        cdt:dumortierite,
+        cdt:euclase,
+        cdt:amazonite,
+        cdt:moonstone,
+        cdt:spectrolite,
+        cdt:garnet-gemstone,
+        cdt:tsavorite,
+        cdt:hematite-gemstone,
+        cdt:jade,
+        cdt:kornerupine,
+        cdt:kyanite-gemstone,
+        cdt:lazulite,
+        cdt:malachite,
+        cdt:obsidian,
+        cdt:olivine-gemstone,
+        cdt:phenakite,
+        cdt:prehnite,
+        cdt:quartz-gemstone,
+        cdt:amethyst,
+        cdt:citrine,
+        cdt:rose-quartz,
+        cdt:smokey-quartz,
+        cdt:rhodonite,
+        cdt:sapphirine,
+        cdt:scapolite,
+        cdt:chalcedony,
+        cdt:agate,
+        cdt:moss-agate,
+        cdt:onyx,
+        cdt:carnelian,
+        cdt:chrysoprase,
+        cdt:sinhalite,
+        cdt:sodalite,
+        cdt:spinel-gemstone,
+        cdt:tanzanite,
+        cdt:thunder-egg,
+        cdt:topaz,
+        cdt:tourmaline,
+        cdt:turquoise,
+        cdt:variscite,
+        cdt:vesuvianite,
+        cdt:xenotime-gemstone,
+        cdt:zircon-gemstone .
+
+cdt:material-gemstone a skos:Collection ;
+    skos:prefLabel "Material: Gemstone"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type gemstone."@en ;
+    skos:member
+        cdt:opal,
+        cdt:black-opal,
+        cdt:boulder-opal,
+        cdt:matrix-opal,
+        cdt:white-opal,
+        cdt:amber,
+        cdt:apatite-gemstone,
+        cdt:azurite,
+        cdt:beryl,
+        cdt:aquamarine,
+        cdt:emerald,
+        cdt:heliodor,
+        cdt:morganite,
+        cdt:cassiterite-gemstone,
+        cdt:chrysoberyl,
+        cdt:cordierite,
+        cdt:ruby,
+        cdt:sapphire,
+        cdt:diamond-gemstone,
+        cdt:diopside-enstatite,
+        cdt:dioptase,
+        cdt:dumortierite,
+        cdt:euclase,
+        cdt:amazonite,
+        cdt:moonstone,
+        cdt:spectrolite,
+        cdt:garnet-gemstone,
+        cdt:tsavorite,
+        cdt:hematite-gemstone,
+        cdt:jade,
+        cdt:kornerupine,
+        cdt:kyanite-gemstone,
+        cdt:lazulite,
+        cdt:malachite,
+        cdt:obsidian,
+        cdt:olivine-gemstone,
+        cdt:phenakite,
+        cdt:prehnite,
+        cdt:quartz-gemstone,
+        cdt:amethyst,
+        cdt:citrine,
+        cdt:rose-quartz,
+        cdt:smokey-quartz,
+        cdt:rhodonite,
+        cdt:sapphirine,
+        cdt:scapolite,
+        cdt:chalcedony,
+        cdt:agate,
+        cdt:moss-agate,
+        cdt:onyx,
+        cdt:carnelian,
+        cdt:chrysoprase,
+        cdt:sinhalite,
+        cdt:sodalite,
+        cdt:spinel-gemstone,
+        cdt:tanzanite,
+        cdt:thunder-egg,
+        cdt:topaz,
+        cdt:tourmaline,
+        cdt:turquoise,
+        cdt:variscite,
+        cdt:vesuvianite,
+        cdt:xenotime-gemstone,
+        cdt:zircon-gemstone .
+
+cdt:material-heavymineral a skos:Collection ;
+    skos:prefLabel "Material: Heavy Mineral"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type heavy mineral."@en ;
+    skos:member
+        cdt:garnet,
+        cdt:corundum,
+        cdt:rutile,
+        cdt:ilmenite,
+        cdt:leucoxene,
+        cdt:zircon,
+        cdt:monazite .
+
+cdt:material-lateriticore a skos:Collection ;
+    skos:prefLabel "Material: Lateritic Ore"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type lateritic ore."@en ;
+    skos:member
+        cdt:bauxite,
+        cdt:nickel,
+        cdt:cobalt .
+
+cdt:material-metalcathode a skos:Collection ;
+    skos:prefLabel "Material: Metal Cathode"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type metal cathode."@en ;
+    skos:member
+        cdt:copper,
+        cdt:aluminium,
+        cdt:chromium,
+        cdt:gold,
+        cdt:lead,
+        cdt:manganese,
+        cdt:rare-earth-element,
+        cdt:silver,
+        cdt:zinc .
+
+cdt:material-metalconcentrate a skos:Collection ;
+    skos:prefLabel "Material: Metal Concentrate"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type metal concentrate."@en ;
+    skos:member
+        cdt:copper,
+        cdt:gold,
+        cdt:lead,
+        cdt:silver,
+        cdt:tin,
+        cdt:antimony,
+        cdt:bismuth,
+        cdt:chromium,
+        cdt:cobalt,
+        cdt:lithium,
+        cdt:molybdenum,
+        cdt:nickel,
+        cdt:palladium,
+        cdt:platinum,
+        cdt:tungsten,
+        cdt:zinc .
+
+cdt:material-metalhydroxide a skos:Collection ;
+    skos:prefLabel "Material: Metal Hydroxide"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type metal hydroxide."@en ;
+    skos:member
+        cdt:aluminium,
+        cdt:beryllium,
+        cdt:cesium,
+        cdt:cobalt,
+        cdt:gallium,
+        cdt:gold,
+        cdt:iron,
+        cdt:lead,
+        cdt:lithium,
+        cdt:mercury,
+        cdt:nickel,
+        cdt:potassium,
+        cdt:rubidium,
+        cdt:thallium,
+        cdt:tin,
+        cdt:uranium,
+        cdt:zinc,
+        cdt:zirconium .
+
+cdt:material-metalsulphate a skos:Collection ;
+    skos:prefLabel "Material: Metal Sulphate"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type metal sulphate."@en ;
+    skos:member
+        cdt:copper,
+        cdt:lead,
+        cdt:zinc,
+        cdt:silver .
+cdt:material-metallicore a skos:Collection ;
+    skos:prefLabel "Material: Metallic Ore"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type metallic ore."@en ;
+    skos:member
+        cdt:copper,
+        cdt:gold,
+        cdt:lead,
+        cdt:zinc,
+        cdt:silver,
+        cdt:tin,
+        cdt:nickel,
+        cdt:cobalt,
+        cdt:iron,
+        cdt:antimony,
+        cdt:molybdenum,
+        cdt:tungsten,
+        cdt:rhenium,
+        cdt:calcite,
+        cdt:chromite,
+        cdt:dolomite,
+        cdt:hematite-ore,
+        cdt:iron-ore,
+        cdt:laterite,
+        cdt:magnesite,
+        cdt:magnetite-ore,
+        cdt:malachite,
+        cdt:manganese-ore .
+
+cdt:material-mineralsand a skos:Collection ;
+    skos:prefLabel "Material: Mineral Sand"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type mineral sand."@en ;
+    skos:member
+        cdt:garnet,
+        cdt:corundum,
+        cdt:mineral-sand,
+        cdt:rutile,
+        cdt:ilmenite,
+        cdt:leucoxene,
+        cdt:zircon,
+        cdt:monazite .
+
+cdt:material-non-metal a skos:Collection ;
+    skos:prefLabel "Material: Non-Metal"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type non-metal."@en ;
+    skos:member
+        cdt:bromine,
+        cdt:fluorine,
+        cdt:iodine,
+        cdt:phosphorous,
+        cdt:sulphur,
+        cdt:selenium .
+
+cdt:material-silicasand a skos:Collection ;
+    skos:prefLabel "Material: Silica Sand"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type silica sand."@en ;
+    skos:member
+        cdt:silica-sand,
+        cdt:ceramic-sand,
+        cdt:filter-sand,
+        cdt:frac-sand,
+        cdt:glass-sand,
+        cdt:foundry-sand .
+
+cdt:material-stone a skos:Collection ;
+    skos:prefLabel "Material: Stone"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type stone."@en ;
+    skos:member
+        cdt:basalt,
+        cdt:gabbro,
+        cdt:granite,
+        cdt:greenstone,
+        cdt:limestone,
+        cdt:marble,
+        cdt:miscellaneous-dimension-stones,
+        cdt:quartzite,
+        cdt:rhyolite,
+        cdt:sandstone,
+        cdt:siltstone,
+        cdt:slate .
+
+cdt:material-tankhouseslime a skos:Collection ;
+    skos:prefLabel "Material: Tankhouse Slime "@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type tankhouse slime ."@en ;
+    skos:member
+        cdt:undefined,
+        cdt:aluminium,
+        cdt:barium,
+        cdt:cobalt,
+        cdt:copper,
+        cdt:lead,
+        cdt:nickel,
+        cdt:zinc,
+        cdt:beryllium,
+        cdt:bismuth,
+        cdt:cadmium,
+        cdt:calcium,
+        cdt:cesium,
+        cdt:chromium,
+        cdt:iron,
+        cdt:manganese,
+        cdt:titanium,
+        cdt:vanadium,
+        cdt:gallium,
+        cdt:hafnium,
+        cdt:indium,
+        cdt:lithium,
+        cdt:magnesium,
+        cdt:mercury,
+        cdt:molybdenum,
+        cdt:niobium,
+        cdt:potassium,
+        cdt:gold,
+        cdt:iridium,
+        cdt:osmium,
+        cdt:palladium,
+        cdt:platinum,
+        cdt:rhodium,
+        cdt:ruthenium,
+        cdt:silver,
+        cdt:radium,
+        cdt:dysprosium,
+        cdt:erbium,
+        cdt:europium,
+        cdt:gadolinium,
+        cdt:holmium,
+        cdt:lutetium,
+        cdt:terbium,
+        cdt:thulium,
+        cdt:ytterbium,
+        cdt:yttrium,
+        cdt:cerium,
+        cdt:lanthanum,
+        cdt:neodymium,
+        cdt:praseodymium,
+        cdt:promethium,
+        cdt:samarium,
+        cdt:rhenium,
+        cdt:rubidium,
+        cdt:scandium,
+        cdt:strontium,
+        cdt:tantalum,
+        cdt:thallium,
+        cdt:thorium,
+        cdt:tin,
+        cdt:tungsten,
+        cdt:uranium,
+        cdt:zirconium,
+        cdt:antimony,
+        cdt:arsenic,
+        cdt:boron,
+        cdt:germanium,
+        cdt:silicon,
+        cdt:tellurium,
+        cdt:bromine,
+        cdt:fluorine,
+        cdt:iodine,
+        cdt:phosphorous,
+        cdt:selenium,
+        cdt:sulphur .
