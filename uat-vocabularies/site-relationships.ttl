@@ -10,28 +10,35 @@
 <http://linked.data.gov.au/def/site-relationships> a owl:Ontology , skos:ConceptScheme ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2020-01-21"^^xsd:date ;
-    dcterms:modified "2021-05-20"^^xsd:date ;
+    dcterms:modified "2022-02-17"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    skos:definition "The relationships between sites both topological and functional."@en ;
+    skos:definition """The relationships between sites both topological and functional. See https://pro.arcgis.com/en/pro-app/latest/tool-reference/big-data-analytics/spatial-relationships-with-big-data.htm for visual representations of spatial relationships."""@en ;
     skos:hasTopConcept strel:above,
+        strel:after,
+        strel:before,
         strel:below,
         strel:boreholeIntersect,
         strel:contains,
         strel:covers,
+        strel:crosses,
         strel:disjoint,
         strel:equals,
         strel:injectionExtractionPair,
+        strel:hasPart,
         strel:touches,
         strel:observation,
+        strel:overlaps,
         strel:intersects,
         strel:parent,
+        strel:partOf,
         strel:permits,
         strel:hasPermit,
         strel:re-entry,
         strel:redrill,
         strel:supersedes,
         strel:twinned,
+        strel:within,
         strel:wellPad ;
     skos:prefLabel "Site Relationships"@en .
 
@@ -41,14 +48,15 @@
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
 strel:borehole a skos:Collection ;
-    skos:definition "Relationships between associated boreholes and boreholes with other operational sites such as well pads."@en ;
+    skos:definition "Relationships between associated boreholes and boreholes with other operational sites such as well pads, and hasPart relationships with constituent wellbores."@en ;
     skos:member strel:boreholeIntersect,
         strel:injectionExtractionPair,
         strel:observation,
         strel:re-entry,
         strel:redrill,
         strel:twinned,
-        strel:wellPad ;
+        strel:wellPad,
+        strel:hasPart ;
     skos:prefLabel "Borehole"@en .
 
 strel:interval a skos:Collection ;
@@ -56,6 +64,7 @@ strel:interval a skos:Collection ;
     skos:member strel:above,
         strel:below,
         strel:contains,
+        strel:overlaps,
         strel:covers,
         strel:disjoint,
         strel:equals,
@@ -67,11 +76,40 @@ strel:topological a skos:Collection ;
     skos:definition "Topology deals with spatial and structural properties of geometric objects, independent of their extension, type, or geometric form. Among the types of topological properties of objects there are: the number of dimensions an object has or the relationships that exist between objects."@en ;
     skos:member strel:contains,
         strel:covers,
+        strel:crosses,
+        strel:disjoint,
+        strel:equals,
+        strel:overlaps,
+        strel:touches,
+        strel:intersects,
+        strel:within ;
+    skos:prefLabel "Topological"@en .
+
+strel:project a skos:Collection ;
+    skos:definition "Spatial and temporal relationships between spatially bound project locations (sites)."@en ;
+    skos:member strel:contains,
+        strel:covers,
+        strel:crosses,
         strel:disjoint,
         strel:equals,
         strel:touches,
-        strel:intersects ;
+        strel:intersects,
+        strel:overlaps,
+        strel:within,
+        strel:hasPart,
+        strel:partOf,
+        strel:before,
+        strel:after,
+        strel:concurrent ;
     skos:prefLabel "Topological"@en .
+
+strel:temporal a skos:Collection ;
+    skos:definition "Temporal relationships between projects and activities that are spatially bound as sites."@en ;
+    skos:member strel:supersedes,
+        strel:before,
+        strel:after,
+        strel:concurrent ;
+    skos:prefLabel "Temporal"@en .
 
 strel:wellbore a skos:Collection ;
     skos:definition "Defines the parent-child relationship of wellbores that constitute a borehole."@en ;
@@ -85,11 +123,39 @@ strel:above a skos:Concept ;
     skos:prefLabel "Above"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
+strel:after a skos:Concept ;
+    skos:definition "A spatially bound project follows or continues after the related project. Where times overlap used in conjunction with Concurrent relationship."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "After"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:before a skos:Concept ;
+    skos:definition "A spatially bound project precedes or begins prior to the related project. Where times overlap used in conjunction with Concurrent relationship."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Before"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:concurrent a skos:Concept ;
+    skos:definition "A spatially bound project that occurs partially or fully at the same time as the related project."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Concurrent"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
 strel:below a skos:Concept ;
     skos:definition "Object or interval A is below object or interval B."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Below"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:crosses a skos:Concept ;
+    skos:definition "Line A intersects Line B at points only. Or, Line A is partially inside and partially outside Polygon X"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Crosses"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:boreholeIntersect a skos:Concept ;
@@ -119,6 +185,24 @@ strel:parent a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Has parent"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:partOf a skos:Concept ;
+    skos:definition "Entity A (the subject site) is a discrete object that forms part of the larger Entity B (the related site). Subject Site is partOf Related Site."@en ;
+    skos:example "Suburb (subject site) partOf City (Related Site)"@en ;
+    owl:inverseOf strel:hasPart ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Part Of"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:hasPart a skos:Concept ;
+    skos:definition "Entity A (the subject site) is a discrete object that has a consitutent part of Entity B (the related site). Subject Site hasPart Related Site."@en ;
+    owl:inverseOf strel:partOf ;
+    skos:example "City (subject site) hasPart Suburb (Related Site)"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Has Part"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:permits a skos:Concept ;
@@ -166,12 +250,20 @@ strel:wellPad a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:contains a skos:Concept ;
-    skos:altLabel "Within"@en ;
-    skos:definition "Object A contains object B, and the boundaries do not intersect."@en ;
+    skos:definition "Object A contains Object B, and the boundaries do not intersect, i.e. Object A (the subject site), wholly encompasses Object B (the related site), in such a way that the boundary of Object A is outside-and-does-not-touch the boundary of Object B. The inverse of Within."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    owl:inverseOf strel:within ;
     skos:prefLabel "Contains"@en ;
-    skos:scopeNote "Use of strel:contains in a ternary relationship (A related_to B, related_to of type strel:contains) entails A geo:sfContains B" ;
+    skos:scopeNote "Use of strel:contains in a ternary relationship (A related_to B, related_to of type strel:contains) entails A geo:sfContains B"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:within a skos:Concept ;
+    skos:definition "Object A is within object B, and the boundaries do not intersect. The inverse of Contains."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    owl:inverseOf strel:contains ;
+    skos:prefLabel "Within"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:covers a skos:Concept ;
@@ -186,7 +278,7 @@ strel:disjoint a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Disjoint"@en ;
-    skos:scopeNote "Use of strel:disjoint in a ternary relationship (A related_to B, related_to of type strel:disjoint) entails A geo:sfDisjoint B" ;
+    skos:scopeNote "Use of strel:disjoint in a ternary relationship (A related_to B, related_to of type strel:disjoint) entails A geo:sfDisjoint B"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:equals a skos:Concept ;
@@ -194,7 +286,7 @@ strel:equals a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Equals"@en ;
-    skos:scopeNote "Use of strel:equals in a ternary relationship (A related_to B, related_to of type strel:equals) entails A geo:sfEquals B" ;
+    skos:scopeNote "Use of strel:equals in a ternary relationship (A related_to B, related_to of type strel:equals) entails A geo:sfEquals B"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:touches a skos:Concept ;
@@ -203,16 +295,22 @@ strel:touches a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Touches"@en ;
-    skos:scopeNote "Use of strel:touches in a ternary relationship (A related_to B, related_to of type strel:touches) entails A geo:sfTouches B" ;
+    skos:scopeNote "Use of strel:touches in a ternary relationship (A related_to B, related_to of type strel:touches) entails A geo:sfTouches B"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:intersects a skos:Concept ;
-    skos:altLabel "Overlaps"@en ;
     skos:definition "Object A and B intersect spatially."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Intersects"@en ;
-    skos:scopeNote "Use of strel:intersects in a ternary relationship (A related_to B, related_to of type strel:intersects) entails A geo:sfIntersects B" ;
+    skos:scopeNote "Use of strel:intersects in a ternary relationship (A related_to B, related_to of type strel:intersects) entails A geo:sfIntersects B"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:overlaps a skos:Concept ;
+    skos:definition "Object A and B are the same geometry type (point, line, or polygon), the intersection is the same geometry type, and the intersection is distinct from each object."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlaps"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:supersedes a skos:Concept ;
@@ -220,5 +318,5 @@ strel:supersedes a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Supersedes"@en ;
-    skos:scopeNote """In the context of resource regulation, supersedes applies to the transition from an exploration permit to a 'higher tenure', such as a Mining Lease""" ;
+    skos:scopeNote """In the context of resource regulation, supersedes applies to the transition from an exploration permit to a 'higher tenure', such as a Mining Lease"""@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
