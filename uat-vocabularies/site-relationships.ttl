@@ -13,7 +13,7 @@
     dcterms:modified "2022-02-17"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    skos:definition "The relationships between sites both topological and functional."@en ;
+    skos:definition """The relationships between sites both topological and functional. See https://pro.arcgis.com/en/pro-app/latest/tool-reference/big-data-analytics/spatial-relationships-with-big-data.htm for visual representations of spatial relationships."""@en ;
     skos:hasTopConcept strel:above,
         strel:after,
         strel:before,
@@ -188,7 +188,8 @@ strel:parent a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:partOf a skos:Concept ;
-    skos:definition "Entity A is a discrete object that forms part of the larger Entity B."@en ;
+    skos:definition "Entity A (the subject site) is a discrete object that forms part of the larger Entity B (the related site). Subject Site is partOf Related Site."@en ;
+    skos:example "Suburb (subject site) partOf City (Related Site)"@en ;
     owl:inverseOf strel:hasPart ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
@@ -196,8 +197,9 @@ strel:partOf a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:hasPart a skos:Concept ;
-    skos:definition "Entity A is a discrete object that has a consitutent part of Entity B."@en ;
+    skos:definition "Entity A (the subject site) is a discrete object that has a consitutent part of Entity B (the related site). Subject Site hasPart Related Site."@en ;
     owl:inverseOf strel:partOf ;
+    skos:example "City (subject site) hasPart Suburb (Related Site)"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Has Part"@en ;
@@ -248,7 +250,7 @@ strel:wellPad a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:contains a skos:Concept ;
-    skos:definition "Object A contains object B, and the boundaries do not intersect. The inverse of within."@en ;
+    skos:definition "Object A contains Object B, and the boundaries do not intersect, i.e. Object A (the subject site), wholly encompasses Object B (the related site), in such a way that the boundary of Object A is outside-and-does-not-touch the boundary of Object B. The inverse of Within."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     owl:inverseOf strel:within ;
@@ -257,7 +259,7 @@ strel:contains a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
 
 strel:within a skos:Concept ;
-    skos:definition "Object A is within object B, and the boundaries do not intersect. The inverse of contains."@en ;
+    skos:definition "Object A is within object B, and the boundaries do not intersect. The inverse of Contains."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
     skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
     owl:inverseOf strel:contains ;
