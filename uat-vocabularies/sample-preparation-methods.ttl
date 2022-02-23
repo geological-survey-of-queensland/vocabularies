@@ -9,18 +9,20 @@
 <http://linked.data.gov.au/def/sample-preparation-methods> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-01-05"^^xsd:date ;
+    dcterms:modified "2022-02-23"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The methods used to prepare samples for analyses."@en ;
     skos:hasTopConcept smprep:acidify,
         smprep:aggregate,
+        smprep:beneficiate,
         smprep:chelate,
         smprep:compress,
         smprep:concentrate,
         smprep:condense,
         smprep:cool,
         smprep:crush,
+        smprep:crush-sort,
         smprep:cut,
         smprep:deacidify,
         smprep:decompress,
@@ -30,6 +32,7 @@
         smprep:disaggregate,
         smprep:dissolve,
         smprep:distill,
+        smprep:electrolysis,
         smprep:extract,
         smprep:filter,
         smprep:freeze,
@@ -43,9 +46,12 @@
         smprep:precipitate,
         smprep:react,
         smprep:recombine,
+        smprep:refine,
+        smprep:refining-byproduct,
+        smprep:rough-extract,
         smprep:sieve,
+        smprep:sort,
         smprep:sublimate,
-        smprep:thermal-treatment,
         smprep:unprocessed,
         smprep:unspecified,
         smprep:vaporise,
@@ -72,6 +78,16 @@ smprep:aggregate a skos:Concept ;
     skos:prefLabel "Aggregate"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
 
+smprep:beneficiate a skos:Concept ;
+    skos:definition "A composite process that may include any combination of washing, crushing, and concentrating"@en ;
+        owl:hasPart smprep:crush,
+        smprep:concentrate,
+        smprep:wash ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Beneficiate"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
+
 smprep:chelate a skos:Concept ;
     skos:definition "A chemical process to cluster metallic ions."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
@@ -89,7 +105,7 @@ smprep:compress a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
 
 smprep:concentrate a skos:Concept ;
-    skos:definition "Preparation by removing or reducing the diluting agent(s)."@en ;
+    skos:definition "Preparation by removing or reducing the diluting agent(s) or material."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:prefLabel "Concentrate"@en ;
@@ -116,12 +132,35 @@ smprep:crush a skos:Concept ;
     skos:prefLabel "Crush"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
 
+smprep:crush-sort a skos:Concept ;
+    skos:definition "A composite process of deformation or pulverization of material by compressing forcefully (crushing) followed by separation of material components based on a physical property such as size or density (sort)."@en ;
+    owl:hasPart smprep:crush,
+        smprep:sort ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Crush and Sort"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
+
+smprep:cupellation a skos:Concept ;
+    skos:definition "The refining process in metallurgy where ores or alloyed metals are treated under very high temperatures and have controlled operations to separate noble metals, like gold and silver, from base metals, like lead, copper, zinc, arsenic, antimony, or bismuth, present in the ore."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Cupellation"@en ;
+    skos:broader smprep:melt .
+
 smprep:cut a skos:Concept ;
     skos:definition "Prepartion by bifurcating any number of times to produce fresh faces or a smaller overall sample."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:prefLabel "Cut"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
+
+smprep:partial-cut a skos:Concept ;
+    skos:definition "Prepartion by bifurcating any number of times to produce fresh faces or a smaller overall sample, but where un-cut surfaces remain on the sample material."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Partial Cut"@en ;
+    skos:broader smprep:cut .
 
 smprep:deacidify a skos:Concept ;
     skos:altLabel "Sweeten"@en ;
@@ -184,6 +223,13 @@ smprep:distill a skos:Concept ;
     skos:prefLabel "Distill"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
 
+smprep:electrolysis a skos:Concept ;
+    skos:definition "A technique that uses direct electric current to drive an otherwise non-spontaneous chemical reaction. Electrolysis is commercially important as a stage in the separation of elements from naturally occurring sources such as ores using an electrolytic cell."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Electrolysis"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
+
 smprep:extract a skos:Concept ;
     skos:definition "A separation process consisting in the separation of a substance from a matrix. Common examples include liquid-liquid extraction, and solid phase extraction."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
@@ -205,6 +251,16 @@ smprep:freeze a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:prefLabel "Freeze"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
+
+smprep:gravity-concentrate a skos:Concept ;
+    skos:altLabel "Gravity Separation"@en,
+        "Float-and-Sink Separation"@en,
+        "Sink-and-Float Separation"@en ;
+    skos:definition "Preparation by removing or reducing the diluting material through the action of gravity by utilising density difference between the target material and host material."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Gravity Concentrate"@en ;
+    skos:broader smprep:concentrate .
 
 smprep:grind a skos:Concept ;
     skos:definition "Reduce of material to small particles or powder by crushing it."@en ;
@@ -279,11 +335,60 @@ smprep:recombine a skos:Concept ;
     skos:prefLabel "Recombine"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
 
+smprep:refine a skos:Concept ;
+    skos:definition "A group of post-primary process in resource processing such as electrolysis, cupellation, pyrometallurgical reactions."@en ;
+    owl:hasPart smprep:electrolysis,
+        smprep:cupellation,
+        smprep:thermal-treatment,
+        smprep:melt ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Refine"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
+
+smprep:refining-byproduct a skos:Concept ;
+    skos:altLabel "Refining Waste"@en ;
+    skos:definition "The by-product pathway parallel to a refining process that generates waste material or by-products."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Refining by-product"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
+
+smprep:rough-extract a skos:Concept ;
+    skos:definition "To extract gemstones, typically opal, as extracted from-ground or after the agitation process of washing and tumbling, but without processing by apidary equipment."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Rough Extract"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
+
 smprep:sieve a skos:Concept ;
     skos:definition "Material characterised by size fractionation through a screen or series of screens."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:prefLabel "Sieve"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
+
+smprep:smelt a skos:Concept ;
+    skos:definition "The process of applying heat to ore in order to extract a base metal. Smelting uses heat and a chemical reducing agent to decompose the ore by separating other elements as gases or slag from the ore and resulting in a purified metal base."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Smelt"@en ;
+    skos:broader smprep:heat .
+
+smprep:smelt-byproduct a skos:Concept ;
+    skos:altLabel "Smelt Waste"@en,
+        "Smelting Waste"@en ;
+    skos:definition "The by-product pathway parallel to a smelting process that generates waste material or by-products."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Smelt By-product"@en ;
+    skos:broader smprep:heat .
+
+smprep:sort a skos:Concept ;
+    skos:definition "The separation of material components based on a physical property such as size or density (sort)"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
+    skos:prefLabel "Sort"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
 
 smprep:sublimate a skos:Concept ;
@@ -295,15 +400,18 @@ smprep:sublimate a skos:Concept ;
 
 smprep:thermal-treatment a skos:Concept ;
     skos:altLabel "Bake"@en,
+        "Calcination"@en,
         "Baking"@en;
     skos:definition "The process of applying thermal radiation to a material in order to chemically alter or oxidise it."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:prefLabel "Thermal treatment"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-preparation-methods> .
+    skos:broader smprep:heat .
 
 smprep:unprocessed a skos:Concept ;
-    skos:altLabel "Unprocessed"@en ;
+    skos:altLabel "Unprocessed"@en,
+        "Not Applicable"@en,
+        "N/A"@en ;
     skos:definition "An explicit indication that a sample material was not processed between two states. For example where a raw material requires no processing to be considered a saleable product."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-preparation-methods> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-preparation-methods> ;
@@ -336,8 +444,17 @@ smprep:wash a skos:Concept ;
 
 smprep:mine-processing a skos:Collection ;
     skos:definition "Sample preparation steps and multi-step processes that concentrate, refine, or prepare a raw material into a saleable product."@en ;
-    skos:member smprep:unspecified,
-        smprep:unprocessed,
-        smprep:wash,
-        smprep:crush ;
+    skos:member smprep:beneficiate,
+        smprep:concentrate,
+        smprep:crush-sort,
+        smprep:cut,
+        smprep:gravity-concentrate,
+        smprep:partial-cut,
+        smprep:refine,
+        smprep:refining-byproduct,
+        smprep:rough-extract,
+        smprep:smelt,
+        smprep:smelt-byproduct,
+        smprep:unspecified,
+        smprep:unprocessed;
     skos:prefLabel "Mine Processing"@en .
