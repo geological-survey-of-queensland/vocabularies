@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/site-status> a owl:Ontology, skos:ConceptScheme ;
     dcterms:created "2020-02-28"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-02-14"^^xsd:date ;
+    dcterms:modified "2022-02-24"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "The status of an individual site (e.g. mine, well) or single activity (e.g.survey) describing the current state within the lifecycle from proposed through operational through to abandonment. Lifecycle stages are commonly related to regulatory conditions administered by government agencies."@en ;
@@ -119,6 +119,18 @@ ststs:proposed a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Proposed"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
+
+ststs:application a skos:Concept ;
+    skos:definition "A mine, quarry, or well that is intended and has had an application for activity submitted to the governing authority that is pending assessment and outcome."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Application"@en ;
+    skos:broader ststs:proposed .
+
+ststs:approved a skos:Concept ;
+    skos:definition "A mine, quarry, or well that is intended and has had an application for activity approved, but has not yet commenced construction."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Approved"@en ;
+    skos:broader ststs:proposed .
 
 ststs:unknown a skos:Concept ;
     skos:definition "A mine, quarry, or well that has been constructed but whose further status is unknown."@en ;
