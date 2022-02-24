@@ -66,7 +66,6 @@
   rdfs:isDefinedBy <http://sweetontology.net> ;
   dcterms:provenance "Taken from the SWEET Ontology"@en ;
 .
-
 rur:Assemblage
   a skos:Concept ;
   dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
@@ -310,6 +309,18 @@ rur:Laccolith
   skos:related geof:IgneousIntrusiveRockUnit ;
   dcterms:provenance "Gillespie & Leslie, 2021"@en ;
 .
+rur:Lens
+  a skos:Concept ; 
+  skos:altLabel "Lentil"@en ;
+  dcterms:references "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 21.02.2022. <https://stratigraphy.org/guide/>"@en ;
+  dcterms:references "North American Stratigraphic Code, 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>"@en ;
+  rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+  skos:definition "A lens is a lens-shaped body of rock of different lithology than the unit that encloses it (Murphy & Salvador, Online, Accessed 21.02.2022); and similarly, a lens (lentil) has been defined as a geographically restricted member that terminates on all sides within a formation (NASC, 2005)."@en ; 
+  skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+  skos:notation "rrlen" ;
+  skos:prefLabel "lens"@en .
+  skos:related geof:LithostratigraphicUnit ;
+.
 rur:Lopolith
   a skos:Concept ;
   dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
@@ -407,6 +418,17 @@ rur:NeckSwarm
   skos:prefLabel "neck-swarm"@en ;
   skos:related geof:IgneousIntrusiveRockUnit ;
   dcterms:provenance "The rank of intrusive igneous rock units, such as ‘neck-swarm’, below that of ‘intrusion’, the latter here provisionally instituted as the basic unit of rank of intrusive igneous rock units, is not addressed [compare: Gillespie & Leslie (2021) for the contrasting rank and definition applied to ‘intrusion’, and to the rank applied to ‘swarm’ in BRUCS]."@en ;
+.
+rur:NoRank
+  a skos:Concept ; 
+  skos:altLabel "Unranked"@en ;
+  dcterms:references "This vocabulary"@en ;
+  rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+  skos:definition "An unranked and unnamed rock unit or body of rocks."@en ; 
+  skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+  skos:notation "rrnor" ;
+  skos:prefLabel "no rank"@en .
+  #skos:related geof:??????? ; <<<< Develop Rock Unit Collection in geof, to which NoRank applies? #
 .
 rur:Ophiolite
   a skos:Concept ;
@@ -767,6 +789,17 @@ rur:Swarm
   skos:prefLabel "swarm"@en ;
   skos:related geof:IgneousIntrusiveRockUnit ;
   dcterms:provenance "Gillespie & Leslie, 2021"@en ;
+.
+rur:Tongue
+  a skos:Concept ; 
+  dcterms:references "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 21.02.2022. <https://stratigraphy.org/guide/>"@en ;
+  dcterms:references "North American Stratigraphic Code, 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>"@en ;
+  rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+  skos:definition """A tongue is a projecting part of a lithostratigraphic unit extending out beyond its main body (Murphy & Salvador, Online, Accessed 21.02.2022); and similarly: a wedging ‘member’ that extends outward beyond a formation or wedges (‘pinches’) out within another formation (NASC, 2005)."""@en ; 
+  skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+  skos:notation "rrton" ;
+  skos:prefLabel "tongue"@en .
+  skos:related geof:LithostratigraphicUnit ;
 .
 rur:Vein
   a skos:Concept ;
