@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/site-status> a owl:Ontology, skos:ConceptScheme ;
     dcterms:created "2020-02-28"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-02-24"^^xsd:date ;
+    dcterms:modified "2022-03-01"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "The status of an individual site (e.g. mine, well) or single activity (e.g.survey) describing the current state within the lifecycle from proposed through operational through to abandonment. Lifecycle stages are commonly related to regulatory conditions administered by government agencies."@en ;
@@ -91,12 +91,12 @@ ststs:care-and-maintenance a skos:Concept ;
     skos:prefLabel "Care And Maintenance"@en .
 
 ststs:on-hold a skos:Concept ;
-    skos:altLabel "Closed"@en ;
+    skos:altLabel "On Hold"@en ;
     skos:broader ststs:inactive ;
     skos:definition "A mine or project that has been closed but not abandoned and where there are no active and care-and-maintenance works."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/closed> ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
-    skos:prefLabel "On Hold"@en .
+    skos:prefLabel "Closed"@en .
 
 ststs:suspended a skos:Concept ;
     skos:altLabel "Drilled"@en,
@@ -198,7 +198,7 @@ ststs:borehole-status a skos:Collection ;
         ststs:suspended,
         ststs:unknown,
         ststs:water-supply ;
-    skos:prefLabel "borehole-status"@en .
+    skos:prefLabel "Borehole Status"@en .
 
 ststs:minocc a skos:Collection ;
     skos:definition "Project statuses pertaining to the operational lifecycle of a mineral occurence or mine."@en ;
@@ -212,10 +212,19 @@ ststs:minocc a skos:Collection ;
         ststs:proposed,
         ststs:rehabilitation,
         ststs:unknown ;
-    skos:prefLabel "minocc"@en .
+    skos:prefLabel "Minocc"@en .
 
 ststs:prodstat a skos:Collection ;
     skos:definition "The coarse status of a mine, quarry, or other resource project as pertains to activity on an annual basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
     skos:member ststs:on-production,
         ststs:not-producing ;
     skos:prefLabel "Production Site Status"@en .
+
+ststs:quarry-status a skos:Collection ;
+    skos:definition "The valid site statuses as applies to quarries in Queensland."@en ;
+    skos:member ststs:active,
+        ststs:application,
+        ststs:approved,
+        ststs:suspended,
+        ststs:on-hold ;
+    skos:prefLabel "Quarry Status"@en .
