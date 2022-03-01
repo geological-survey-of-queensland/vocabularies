@@ -1,0 +1,11 @@
+SPARQL Query to return the prefLabel, notation, and definition for all concepts currently stored in the VocPrez library
+
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?concepturi ?preflabel ?notation ?definition
+WHERE
+ {
+  ?concepturi a skos:Concept ; skos:prefLabel ?preflabel ; skos:definition ?definition . 
+  OPTIONAL { ?concepturi a skos:Concept ;
+    skos:notation ?notation }
+  }
