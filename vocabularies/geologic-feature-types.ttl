@@ -120,20 +120,29 @@ geof:ChronostratigraphicUnit a skos:Concept ;
         <https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824>,
         <https://doi.org/10.1306/05230505015> ;
     skos:broader geof:StratigraphicUnit ;
-    skos:definition "As the term implies, Chronostratigraphic Units are Time-Rock Units. They are bodies of rocks, layered or unlayered, that were formed during a specified interval of geologic time. [The units of geologic time during which chronostratigraphic units were formed are called geochronologic (geological-time) units.] (ICS, Online, December, 2019). NB: The North American Stratigraphic Code (2005) and Owen (2009) advise that geochronologic units should only be associated with Lithodemic (non-stratigraphic) Units."@en ;
+    skos:definition """As the term implies, Chronostratigraphic Units are Time-Rock Units. They are bodies of rocks, layered or unlayered, that were formed during a specified interval of geologic time. [The units of geologic time during which chronostratigraphic units were formed are called geochronologic (geological-time) units.] (ICS, Online, December, 2019). NB: The North American Stratigraphic Code (2005) and Owen (2009) advise that geochronologic units should only be associated with "lithodemic" (i.e., non-stratigraphic) units."""@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfcht" ;
     skos:prefLabel "chronostratigraphic unit"@en .
 
-geof:Complex a skos:Concept ;
-    dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
-    skos:broader geof:LithodemicFeature ;
-    skos:definition "In the classification of Kumpulainen (2016), a complex is a non-ranked lithodemic unit that corresponds to a suite or supersuite. Its usage applies to the organisation and classification of an assemblage of two or more genetically different rock types (i.e. igneous, metamorphic and/or sedimentary). For example, a tectonic amalgamation of igneous, sedimentary and metamorphic rocks may form a structural complex; and a volcanic complex may comprise extrusive, sedimentary and the related intrusive components."@en ;
+geof:ComplexRockUnit a skos:Concept ; 
+    skos:altLabel "complex unit"@en ;
+    skos:altLabel "composite unit"@en ; 
+    dcterms:references "After and compare: Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021. <https://stratigraphy.org/guide/>"@en ;
+    dcterms:references "After and compare: Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022>"@en ;
+    dcterms:references "After and compare: North American Stratigraphic Code, 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>"@en ;
+    dcterms:references "After and compare: Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
+    dcterms:references "Compare: Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ;
+    dcterms:references "After and compare: Subcommission on Quaternary Stratigraphy — Lithodemic Stratigraphy. Accessed online 04.11.2021. <http://quaternary.stratigraphy.org/stratigraphic-guide/lithodemic-stratigraphy/>"@en ;
+    dcterms:references "See usage of: Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
+    skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
+    skos:definition "A rock unit that embraces a mixture composed of diverse types of any genetic (sedimentary, igneous, metamorphic) class of rocks or a mixture of two or more genetic classes, and characterised by irregularly-mixed lithology or by highly-complicated structural relations (Rephrased from: Salvador, 2013; Murphy & Salvador, Online)."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfcmx" ;
-    skos:prefLabel "complex"@en .
+    skos:notation "gfcru" ;
+    skos:scopeNote "The ISG definition is followed, with minor rewording (and without any change of meaning), although a complex unit is not here classified as a lithostratigraphic unit (as per the ISG). The NASC (2005) and Kumpulainen (2017), together with other Scandinavian guides, preferably adhere to a more specific definition, restricting a complex to a mixture of two or more genetic classes, albeit regarding a complex as a non-ranked lithodemic unit (generally, a defined, nonstratiform/non-stratified body of predominantly intrusive or highly deformed and/or highly metamorphosed rock). However, as the ISG usage better suits the nomenclature applied to some complex rock units in Queensland, it is therefore provisionally followed. A complex, although unranked in the NASC, was considered to be ‘commonly comparable to suite or supersuite’, such that two or more associated complexes could be grouped in a supersuite. This problematical application of lithodemic nomenclature was addressed by the Subcommission on Quaternary Stratigraphy with their introduction of the term ‘supercomplex’ and attendant recommendation for a two-fold hierarchy of rank for lithodemic rock units: lithodeme, suite and supersuite; and complex and supercomplex. Here, complex rock units are separated from lithostratigraphic and other single-class units (e.g., intrusive rock units) and broadly treated as stand-alone, largely nonstratiform, mixed-class units, thus reflecting the approach of Gillespie & Leslie (2021) in their construction of the British Geological Survey’s rock classification system (BRUCS). [Also, following Gillespie & Leslie, the NASC lithodemic terminology is not followed, and ‘suite’ rankings are applied solely to intrusive rock units (not also to metamorphic units)]. However, as indicated, nomenclatural usage in Queensland is not true to the more restricted definition of rock complexes comprising more than one genetic class of rocks (e.g., Jell, 2013)."@en ; 
+    skos:prefLabel "complex rock unit"@en .
 
 geof:ConcurrentRangeZone a skos:Concept ;
     dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
@@ -147,7 +156,7 @@ geof:ConcurrentRangeZone a skos:Concept ;
 geof:Continent a skos:Concept ;
     dcterms:source <http://doi.org/10.22459/SN.08.2012>,
         <http://www.glossaryofgeology.org> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "One of Earth’s major landmasses (or former major landmasses), including continental shelves. (Neuendorf et al., 2011; Blewett, 2012). The Australian Continent, as an example, is divided into fundamental geological elements embracing geological provinces."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -156,7 +165,7 @@ geof:Continent a skos:Concept ;
 
 geof:Craton a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A craton is part of Earth's continental crust that has attained stability and has been little deformed for a prolonged period. Cratons include shield areas, where Precambrian rocks are exposed, and platform areas, where Precambrian rocks are overlain by a thin layer of Phanerozoic strata. (Neuendorf et al., 2011)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -219,7 +228,7 @@ geof:Escarpment a skos:Concept ;
 
 geof:ExtendedCrustProvince a skos:Concept ;
     dcterms:source <https://earthquake.usgs.gov/data/crust/definitions.html> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A province of thinned crust (>50 %) due to extension (e.g., the Basin and Range Province of the Western United States and northwestern Mexico."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -378,16 +387,26 @@ geof:Horst a skos:Concept ;
     skos:prefLabel "horst"@en .
 
 geof:IgneousAssociation a skos:Concept ;
-    skos:broader geof:TectonicEntity ;
-    skos:definition "An association of igneous rocks where their differentiation is uncertain, because the geodynamic environment of their magmatism is not well understood."@en ;
+    dcterms:source "See usage of: Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
+    skos:broader geof:TectonicFeature ;
+    skos:definition "A term employed by Jell (2013: Geology of Queensland), essentially without definition, for an association of igneous rocks where their differentiation remained uncertain and the geodynamic environment of their magmatism remained not well understood. In such instances, the term replaced the previous use of igneous provinces for such ‘igneous associations’, although the latter were subdivided into the previously recognized igneous subprovinces, and not into redefined igneous sub-associations (if this is at all an issue)."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfiga" ;
     skos:prefLabel "igneous association"@en .
 
+geof:IgneousIntrusiveRockUnit a skos:Concept ;
+    dcterms:references "After: Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>@en" ; 
+    skos:broader geof:IntrusiveRockUnit ;
+    skos:definition "A unit formed by the emplacement of magma which solodifies before reaching the Earth's surface (after Gillespie & Leslie, 2021)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfiir" ;
+    skos:prefLabel "igneous intrusive rock unit"@en .
+
 geof:IgneousProvince a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A broad area in which similar igneous rocks are considered to have been formed during the same period of (igneous) activity. (Neuendorf et al., 2011)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -395,8 +414,8 @@ geof:IgneousProvince a skos:Concept ;
     skos:prefLabel "igneous province"@en .
 
 geof:IgneousSubprovince a skos:Concept ;
-    skos:broader geof:TectonicEntity ;
-    skos:definition "To be provided later, as there is a dliemma here with Igneous Associations and daughter subprovinces."@en ;
+    skos:broader geof:TectonicFeature ;
+    skos:definition "To be provided later, as there is an issue here with Igneous Associations and daughter subprovinces."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfisp" ;
@@ -420,6 +439,15 @@ geof:IntervalZone a skos:Concept ;
     skos:notation "gfinz" ;
     skos:prefLabel "interval zone"@en .
 
+geof:IntrusiveRockUnit a skos:Concept ;
+    dcterms:references "This vocabulary"@en ;
+    skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
+    skos:definition "Includes: (1) Igneous intrusive rock-unit types (e.g., ranked under supersuite, suite, subsuite, etc. and, at lower rank levels, plutons, lopoliths, laccoliths, dykes, sills, etc.); and (2) Non-igneous intrusive rock-unit types (viz., salt domes, sediment-filled fractures, etc.)."@en ; 
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfiru" ;
+    skos:prefLabel "intrusive rock unit"@en .
+   
 geof:Klippe a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
     skos:broader geof:DenudationalFeature ;
@@ -431,7 +459,7 @@ geof:Klippe a skos:Concept ;
 
 geof:LargeIgneousProvince a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A region characterized by massive crustal emplacements of predominantly mafic (Mg- and Fe-rich) extrusive and intrusive rocks which originated through processes other than \"normal\" seafloor spreading (Coffin & Eldholm, 1994); includes continental flood basalt provinces (e.g., Deccan Traps), oceanic plateaus (e.g., Ontong & Java Oceanic Plateaus), and North Atlantic volcanic passive margins. Abbrev: LIP. (Neuendorf et al., 2011)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -446,15 +474,6 @@ geof:LineageZone a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gflnz" ;
     skos:prefLabel "lineage zone"@en .
-
-geof:Lithodeme a skos:Concept ;
-    dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
-    skos:broader geof:LithodemicFeature ;
-    skos:definition "A lithodeme is the fundamental formal unit in lithodemic classification and corresponds to formation in lithostratigraphy. A lithodeme may consist of a single rock type, several rock types (if they form a lithologically coherent unit) or several rock types that have become tectonically intermingled to form a lithological unit. A lithodeme may contain informal sub-lithodemes, some of which may be named phase or zone (e.g., mineralized zone, pegmatitic zone). The term complex can be used for a non-ranked lithodemic unit. (Kumpulainen, 2017)"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfltd" ;
-    skos:prefLabel "lithodeme"@en .
 
 geof:MagnetostratigraphicPolaritySubzone a skos:Concept ;
     dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide>,
@@ -498,7 +517,7 @@ geof:Member a skos:Concept ;
 
 geof:MineralProvince a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "An area characterized by a particular assemblage of mineral deposits, or by one or more characteristic types of mineralization. A metallogenic province may have had more than one episode of mineralization.  (Neuendorf et al., 2011)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -527,7 +546,7 @@ geof:MyloniteZone a skos:Concept ;
 geof:Nappe a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org>,
         <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-    skos:broader geof:tectonostratigraphicEntity ;
+    skos:broader geof:TectonostratigraphicRockUnit ;
     skos:definition "A sheetlike, allochthonous rock unit, which has moved on a predominantly horizontal surface as a result of thrust faulting, recumbent folding, or both. Fold limbs and axes are approximately horizontal (After Neuendorf et al., 2011; Allaby, 2013)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -536,16 +555,26 @@ geof:Nappe a skos:Concept ;
 
 geof:NappeComplex a skos:Concept ;
     dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
-    skos:broader geof:tectonostratigraphicEntity ;
+    skos:broader geof:TectonostratigraphicRockUnit ;
     skos:definition "A nappe complex consists of two or more distinct nappes that are stacked upon, and related to, one another in some significant respect, e.g., shared general environment of origin, similar metamorphism and/or deformation. (Kumpulainen, 2017)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfnpx" ;
     skos:prefLabel "nappe complex"@en .
 
+geof:Non-IgneousIntrusiveRockUnit a skos:Concept ;
+    dcterms:references "After: Gillespie et al., 2008: BGS classification of lithodemic units: Proposals for classifying units of intrusive rock. British Geological Survey Research Report RR/08/05. <http://nora.nerc.ac.uk/id/eprint/5226/1/RR08005.pdf>"@en ;
+    skos:broader geof:IntrusiveRockUnit ;
+    skos:definition "A non-igneous intrusive rock unit such as a salt dome or a sediment-filled fracture (after Gillespie & Leslie, 2008)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfnii" ;
+    skos:prefLabel "non-igneous intrusive rock unit"@en ;
+    skos:scopeNote "Note: As per Gillespie & Leslie (2021), the BGS no longer supports the lithodemic nomenclature of the North American Stratigraphic Code (2005), as also is the case here (see references and discussion elsewhere in this ontology)."@en .
+
 geof:Orogen a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "An orogen (orogenic system, orogenic zone, orogenic belt) is a region in Earth’s lithosphere where a mountain belt is created by tectonic processes involving deformation, regional metamorphism, and associated magmatism, usually caused by convergence (± accretion and/or collision) between two tectonic plates or major crustal blocks. (Alt obsolete term: geosyncline). (Modified from Neuendorf et al., 2011; Hoy, pers. comm.)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -555,7 +584,7 @@ geof:Orogen a skos:Concept ;
 geof:OrogenicCollage a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org>,
         <https://doi.org/10.1146/annurev-earth-082517-010146> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A patchwork-map pattern of accreted terranes, embracing a geotectonic assemblage of crustal blocks separated by major faults (Neuendorf et al., 2011). In eastern Australia, such a collage is represented by the Tasmanides, which is part of the larger-scale Terra Australis Orogen that developed along the southern Panthalassan (Paleo-Pacific) margin of Gondwana, and which comprises multiple metamorphic belts, fold-thrust belts, igneous provinces, and sedimentary basins that have been attributed to five Cambrian to Triassic subduction-related orogens: the Delamerian, Thomson, Lachlan, Mossman, and New England Orogens (Rosenbaum, 2018)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -601,13 +630,13 @@ geof:Peneplain a skos:Concept ;
     skos:prefLabel "peneplain"@en .
 
 geof:PresentContinent a skos:Concept ;
-    skos:definition "A large, existing landmass, comprising continental crust and embracing exposed land above sea level (Zealandia being an exception), and, below sea level, based on major differences in the inclination of the bathymetric surface, the attendant continental shelf, continental slope, and, if present, the continental rise. ((Modified and compiled from: Burke & Drake, 1974, Sheriff, 2002; Mortimer et al., 2017; Wikipedia, March 2020)"@en ;
+    skos:definition "A large, existing landmass, comprising continental crust and embracing exposed land above sea level (Zealandia being an exception), and, below sea level, based on major differences in the inclination of the bathymetric surface, the attendant continental shelf, continental slope, and, if present, the continental rise (Modified and compiled from: Burke & Drake, 1974, Sheriff, 2002; Mortimer et al., 2017; Wikipedia, March 2020)."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:prefLabel "present continent"@en .
 
 geof:Province a skos:Concept ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A geologic province is a spatial entity with common geologic attributes, comprising a large area or region, which, considered as a whole, is characterised by similar geologic features or by a geologic history differing significantly from that of adjacent areas. (Modified from: Neuendorf et al. 2011; Geoscience Australia, USGS & Wikipedia, all accessed 13.05.2020)."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -635,7 +664,7 @@ geof:Ridge a skos:Concept ;
 
 geof:SedimentaryBasin a skos:Concept ;
     dcterms:source <https://doi.org/10.1007/978-3-662-03999-1> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A low area in the Earth’s crust, of tectonic origin, in which sediments accumulate. Sedimentary basins range in size from small continental basins to large oceanic basins. The essential element of the concept is tectonic creation of relief, to provide both a source of sediment and a relatively low place for the deposition of that sediment. (After Miall, 2000)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -653,7 +682,7 @@ geof:SeismicProvince a skos:Concept ;
     skos:prefLabel "seismic province"@en .
 
 geof:Subprovince a skos:Concept ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "One of two or more divisions of a province, based on differences in geological character."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -661,7 +690,7 @@ geof:Subprovince a skos:Concept ;
     skos:prefLabel "Subprovince"@en .
 
 geof:Superprovince a skos:Concept ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A grouping of two or more like geologic provinces."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -690,7 +719,7 @@ geof:ShearZone a skos:Concept ;
 
 geof:Shield a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A large area of exposed basement rock in a craton, commonly with a very gently convex surface, surrounded by sediment covered platforms. The rocks of virtually all shield areas are Precambrian. (Neuendorf et al., 2011)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -718,15 +747,6 @@ geof:Subgroup a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:prefLabel "subgroup"@en .
 
-geof:Suite a skos:Concept ;
-    dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
-    skos:broader geof:LithodemicFeature ;
-    skos:definition "A Suite consists of two or more lithodemes that are genetically associated and have a common geological history. The individual lithodemes need not have identical (crystallization or depositional) ages but they should have similar ages and belong, for example, to the same phase of an orogeny. Also, they must be of the same lithological class, either intrusive or metamorphic. Two or more suites may form a Supersuite. (Kumpulainen, 2017)"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfsut" ;
-    skos:prefLabel "suite"@en .
-
 geof:Superbasin a skos:Concept ;
     skos:definition "A superbasin is a hierarchial term applied to  a group of largely interconnected or associated sedimentary basins of the same or similar age. Its component basins may be separated or partially separated by tectonic elements that define 'boundaries'  between them, or they may have been subjected to somewhat different geological influences. In the Australian Mesozoic, the Great Australian Superbasin, composed of the Nambour, Clarence-Moreton, Surat, Eromanga, Carpentaria and other basins, is a prime example, variously covering a geographically-extensive area in parts of Queensland, the Northern Territory, New South Wales and South Australia. (Definition created here)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
@@ -735,7 +755,7 @@ geof:Superbasin a skos:Concept ;
 
 geof:Supercontinent a skos:Concept ;
     dcterms:source <http://doi.org/10.22459/SN.08.2012> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition """A large continent formed by the amalgamation of most or all of Earth’s continental landmasses. (Blewett, 2012)"""@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -744,30 +764,12 @@ geof:Supercontinent a skos:Concept ;
 
 geof:Supercraton a skos:Concept ;
     dcterms:source <http://doi.org/10.22459/SN.08.2012> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A large, ancestral (largely Archean) landmass consisting of two or more cratons. (Blewett, 2012)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfspn" ;
     skos:prefLabel "supercraton"@en .
-
-geof:Supergroup a skos:Concept ;
-    dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    skos:broader geof:LithostratigraphicUnit ;
-    skos:definition "A lithostratigraphic Supergroup may contain several associated groups or associated groups and formations, all with significant lithologic properties in common. (ICS, Online, December 2019)"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfspg" ;
-    skos:prefLabel "supergroup"@en .
-
-geof:Supersuite a skos:Concept ;
-    dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
-    skos:broader geof:LithodemicFeature ;
-    skos:definition "A supersuite is composed of two or more suites that are genetically associated, i.e., belong to the same class, and have at least partly a common geological history, e.g., the same orogenic phase. A supersuite is defined according to its lithodemic members and may be named after a type area, its geographical distribution and/or its lithological properties. (Kumpulainen, 2017)"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfsps" ;
-    skos:prefLabel "supersuite"@en .
 
 geof:Syncline a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
@@ -807,7 +809,7 @@ geof:TaxonRangeZone a skos:Concept ;
 
 geof:TectonicPlate a skos:Concept ;
     dcterms:source <https://pubs.usgs.gov/gip/dynamic/tectonic.html> ;
-    skos:broader geof:TectonicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition """The lithosphere is divided into a number of discrete tectonic plates each of which has motion relative to other plates. 
 
 Tectonic plates vary significantly in size and thickness, with boundaries marked by seismic and volcanic activity. They move slowly relative to one another due to convection currents in the Upper Mantle, and may slide on a boundary with another along transform faults. A tectonic plate comprising oceanic lithosphere (entirely or partly thereof), can sink/subduct in a subduction zone below another, usually a lighter, continental plate. Along mid-ocean ridges and major rifts, tectonic plates separate and new crust is formed by the upwelling of basaltic magma.(Adapted from Sheriff, 2002; USGS, 1999)."""@en ;
@@ -821,10 +823,22 @@ geof:TectonisedMetomorphosedProvince a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:prefLabel "tectonised metomorphosed province"@en .
+    
+geof:TectonometamorphicRockUnit a skos:Concept ; 
+    dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ; 
+    dcterms:references "See and compare: Nystuen, J.P. (Editor), 1989: Rules and recommendations of naming geological units in Norway. Norsk Geologisk Tidskrift 69 (Supplement 2), 1–111. <https://foreninger.uio.no/ngf/ngt/pdfs/NGT_69_supplement1.pdf>"@en ;
+    dcterms:references "See and compare: Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ;
+    skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
+    skos:definition "Tectonometamorphic rock units are defined bodies of rock that cannot reliably be classified as accumulated (stratiform, lithostratigraphic) rock units or as intrusive rock units, as a result of superimposed deformation and/or metamorphism (Gillespie & Leslie, 2021)."@en ; 
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gftme" ; 
+    skos:scopeNote "Separated out from tectonometamorphic rock units are tectonostratigraphic rock units which embrace tectonically-displaced, allochthonous sheets (Nystuen, 1989; Kumpulainen, 2017; also see and compare: Gillespie & Leslie, 2021, pp. 16–17). In GSQ’s associated rock-unit-rank vocabulary, the terminology applied therein to tectonometamorphic rock units, as per Gillespie & Leslie (2021), in the development by these authors of the British Geological Survey’s new Rock Unit Classification System/BRUCS), is currently not well progressed, apart from application of the term ‘ophiolite’. The BRUCS tectonometamorphic nomenclature has merit but requires consideration for its potential in application in Queensland (and Australia) to tectonometamorphic bodies of rock, the nomenclature of which, in terms of rank, is presently assessed (here) as being in need of revision."@en ; 
+    skos:prefLabel "tectonometamorphic rock unit"@en .
 
 geof:Terrane a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
-    skos:broader geof:tectonostratigraphicEntity ;
+    skos:broader geof:TectonicFeature ;
     skos:definition "A fault-bounded body of rock of regional extent, characterised by a geologic history different from that of contiguous terranes or bounding continents. A terrane is generally considered to be a discrete allochthonous fragment of oceanic or continental material added to a craton (or continental plate) at an active margin by accretion. (After  Neuendorf et al., 2011)"@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
@@ -909,7 +923,7 @@ geof:StratigraphicFeature a skos:Concept ;
 geof:TectonicFeature a skos:Concept ;
     dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
-    skos:definition "Tectonic Features include Tectonic Entities and Tectonostratigraphic Entities. The former encompass Geological Provinces (e.g., cratons/shields, orogens, sedimentary basins, igneous/petrographic provinces, etc.), and the latter, tectonostratigraphic units, such as nappes and terranes. (Modified from Kumpulainen, 2017). Collectively, they constitute continents, past and present, and, when previously formed, supercontinents"@en ;
+    skos:definition "Tectonic Features (Tectonic Units, Tectonic Entities) include the lithosphere, including the continental and oceanic crust, tectonic plates (that the lithosphere is subdivided into), mid-ocean ridges, orogens, subduction zones, volcanic arcs, continents, cratons/shields, extended crust provinces, tectonised and or metamorphosed provinces, metallogenic (mineral) provinces, igneous provinces (including large igneous provinces), and sedimentary basins; collectively, they include continents, past and present, and, when previously formed, supercontinents (modified and extended from Kumpulainen, 2017; Wikipedia, March 2022)."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gftcr" ;
@@ -935,23 +949,14 @@ geof:MagnetostratigraphicUnit a skos:Concept ;
     skos:notation "gfmsu" ;
     skos:prefLabel "magnetostratigraphic unit"@en .
 
-geof:tectonostratigraphicEntity a skos:Concept ;
-    dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
-    skos:broader geof:TectonicFeature ;
-    skos:definition "Tectonostratigraphic Entities/Units, separately distinguished from Tectonic Entities/Units (following Kumpulainen, 2017), encompass generally flat-lying, scale-independent, tectonic units that are bounded by zones of high strain (ductile shear zone, deformation zone or belt, fault, fault zone, etc.). They include tectonically-displaced allochthonous sheets that are represented by nappes (thrust sheets) and nappe complexes, as well as accreted terranes"@en ;
+geof:TectonostratigraphicRockUnit a skos:Concept ;
+dcterms:references "Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ;
+    skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
+    skos:definition "Tectonostratigraphic rock units encompass generally flat-lying, scale-independent, tectonic rock units that are bounded by zones of high strain (ductile shear zone, deformation zone or belt, fault, fault zone, etc.). They include tectonically-displaced allochthonous sheets that are represented by nappes (thrust sheets) and nappe complexes (after Kumpulainen, 2017)."@en ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gftse" ;
-    skos:prefLabel "tectonostratigraphic entity"@en .
-
-geof:LithodemicFeature a skos:Concept ;
-    dcterms:source <https://doi.org/10.1306/05230505015> ;
-    skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
-    skos:definition "A Lithodemic Unit is a defined body of predominantly intrusive, highly metamorphosed, or intensely deformed rock that, because it is intrusive or has lost primary structure through metamorphism or tectonism, generally does not conform to the Law of Superposition. Expressions of age of lithodemic units (because they are non-stratigraphic) should be given in terms of the appropriate geochronologic (geological-time) unit, and thus not by chronstratigraphic (time-rock) terms. (North American Stratigraphic Code, 2005)"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfldf" ;
-    skos:prefLabel "lithodemic feature"@en .
+    skos:prefLabel "tectonostratigraphic rock unit"@en .
 
 <https://linked.data.gov.au/org/gsq> a owl:NamedIndividual,
         sdo:Organization ;
@@ -969,19 +974,31 @@ geof:DenudationalFeature a skos:Concept ;
     skos:prefLabel "denudational feature"@en .
 
 geof:StratigraphicUnit a skos:Concept ;
-    dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide>,
-        <https://doi.org/10.1130/9780813774022> ;
+    dcterms:references "North American Stratigraphic Code (NASC), 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>@en" ; 
+    dcterms:references "Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ;
+    dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
+    dcterms:references "Steno, N. 1669. De solido intra solidum naturaliter contento dissertationis prodromus. Florence, Italy, 144 pages. <https://archive.org/details/ita-bnc-mag-00001426-001/page/n50/mode/2up> @en" ;
+    dcterms:references "Compare: Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022> "@en ;
+    dcterms:references "Compare: Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021. < https://stratigraphy.org/guide/defs >"@en ;
     skos:broader geof:StratigraphicFeature ;
-    skos:definition "Stratigraphic Units are units of rock and/or sediment that conform to the Law of Superposition (e.g., lithostratigraphic units, biostratigraphic units, chronostratigraphic units). (Murphy & Salvador, 2000; ICS, Online, December, 2019)"@en ;
+    skos:definition "A stratigraphic unit is a distinct and definable body of layered rock that conforms with the Law of Superposition (Steno, 1669) and is variously described and differentiated, in each case from the same unit type, by: its lithologic properties (lithostratigraphic unit); its fossil content (biostratigraphic unit); its magnetic properties (magnetostratigraphic unit); the time interval during which it was formed (chronostratigraphic unit); by its bounding subaerial unconformities and their correlative conformities (sequence stratigraphic unit); or by one or more pedologic horizons buried in one or more lithic units (pedostratigraphic unit) [modified variously from: NASC, 2005; Kumpulainen, 2017; cf.: Salvador, 2013; cf: Murphy & Salvador, Online]."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfstu" ;
-    skos:prefLabel "stratigraphic unit"@en .
+    skos:prefLabel "stratigraphic unit"@en ;
+    skos:scopeNote "Followed here are the definitions applied to ‘stratigraphy’ and ‘stratigraphic unit’ by the North American Stratigraphic Code (NASC, 2005) and Kumpulainen (2017). This approach thus differs from that proffered by the International Commission on Stratigraphy in the ‘International Stratigraphic Guide’/ISG (e.g., Salvador, 2013; Murphy & Salvador, Online), which regards ‘stratigraphy’ as embracing the description of all classes of rocks (sedimentary, igneous, metamorphic) forming the Earth’s crust and their organisation/classification into distinctive, useful, mappable units based on their inherent properties or attributes, in order to establish their distribution and relationship in space and their succession in time. The NASC (2005) introduced the term ‘lithodemic unit’ to encompass (predominantly intrusive, highly metamorphosed, or intensely deformed) rocks that do not obey Steno’s (1669) Law of Superposition (as opposed to a ‘lithostratigraphic unit’ which encompasses rocks that conform to this Law). The NASC lithodemic classification for non-stratified (nonstratiform) rocks, employing the terms ‘Lithodeme’, ‘Suite’ and ‘Supersuite’, was accepted by Kumpulainen (2017), such that lithodemic (non-stratified/nonstratiform) rocks and lithostratigraphic (stratified/stratiform) rocks were considered to be different, requiring different approaches to their classification. But, lithodemic terminology, per se, has not been embraced here, as it was also used to incorporate a rock ‘complex’(as a non-ranked, lithodemic unit). Rock complexes are here separated from other rock types (and, in an associated rock-unit-rank ontology, accorded rank: supercomplex, complex, etc.), with a comparable approach being adopted by Gillespie & Leslie (2021) in the British Geological Survey’s Rock Unit Classification System (BRUCS). The rank terms ‘Suite’ and ‘Supersuite’ are applied to (nonstratiform) intrusive rock units, as per BRUCS, contrasting with the NASC (2005), which also applied these rankings to metamorphic rock types."@en .
 
 geof:LithostratigraphicUnit a skos:Concept ;
-    dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
+    skos:altLabel "stratiform unit"@en ;
+    skos:altLabel "accumulated unit"@en ;
+    dcterms:references "North American Stratigraphic Code (NASC), 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>@en" ; 
+    dcterms:references "Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ;
+    dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
+    dcterms:references "Steno, N. 1669. De solido intra solidum naturaliter contento dissertationis prodromus. Florence, Italy, 144 pages. <https://archive.org/details/ita-bnc-mag-00001426-001/page/n50/mode/2up> @en" ;
+    dcterms:references "Compare: Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022> "@en ;
+    dcterms:references "Compare: Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021. < https://stratigraphy.org/guide/defs >"@en ;
     skos:broader geof:StratigraphicUnit ;
-    skos:definition "Lithostratigraphic units are bodies of rocks, bedded or unbedded, that are defined and characterized on the basis of their lithologic properties and their stratigraphic relations. Lithostratigraphic units are the basic units of geologic mapping. (ICS, Online, December 2019)"@en ;
+    skos:definition "Lithostratigraphic units are bodies of rocks, bedded or unbedded, that are defined and characterized on the basis of their lithologic properties and their stratigraphic relations, but conforming to the Law of Superposition (Steno, 1669) [NASC, 2005, Kulpmainen, 2017; cf. Salvador, 2013; cf. Murphy & Salvador, Online]."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gflsu" ;
@@ -1002,19 +1019,10 @@ geof:BiostratigraphicUnit a skos:Concept ;
     skos:notation "gfbst" ;
     skos:prefLabel "biostratigraphic unit"@en .
 
-geof:TectonicEntity a skos:Concept ;
-    dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
-    skos:broader geof:TectonicFeature ;
-    skos:definition "Tectonic Entitities include the lithosphere, continental and oceanic crust, tectonic plates (that the lithosphere is subdivided into), mid-ocean ridges, orogens, subduction zones, volcanic arcs, continents, cratons/shields, extended crust provinces, tectonised and or metamorphosed provinces, metallogenic (mineral) provinces, igneous provinces (including large igneous provinces), and sedimentary basins. (Modified from Kumpulainen, 2017)"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gftey" ;
-    skos:prefLabel "tectonic entity"@en .
-
 geof:StructuralFeature a skos:Concept ;
     dcterms:source <http://www.glossaryofgeology.org> ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
-    skos:definition "A feature produced by deformation or displacement of rocks, such as a fold or fault. (Neuendorf et al., 2011)"@en ;
+    skos:definition "A feature produced by deformation or displacement of rocks, such as a fold or fault (Neuendorf et al., 2011)."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfstr" ;
