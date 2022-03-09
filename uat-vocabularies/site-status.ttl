@@ -184,6 +184,12 @@ ststs:processing a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Processing"@en .
 
+ststs:approved a skos:Concept ;
+    skos:broader ststs:active ;
+    skos:definition "A site such as a mine or quarry which is approved for production."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Approved"@en .
+
 ststs:borehole-status a skos:Collection ;
     skos:definition "Project statuses pertaining to the construction, usage, maintenance and abandonment of a well or bore."@en ;
     skos:member ststs:cased-and-suspended,
@@ -203,6 +209,9 @@ ststs:borehole-status a skos:Collection ;
 ststs:minocc a skos:Collection ;
     skos:definition "Project statuses pertaining to the operational lifecycle of a mineral occurence or mine."@en ;
     skos:member ststs:abandoned,
+        ststs:on_production,
+        ststs:suspended,
+        ststs:approved,
         ststs:active,
         ststs:care-and-maintenance,
         ststs:construction,
