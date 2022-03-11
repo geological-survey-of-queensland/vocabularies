@@ -19,13 +19,15 @@
         fst:Informal,
         fst:Invalid,
         fst:NotDefined, 
-        fst:Superseded, 
+        fst:Superseded ; 
     skos:prefLabel "Geologic Feature Status"@en .
-
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+       
+<https://linked.data.gov.au/org/gsq> a owl:NamedIndividual,
+        sdo:Organization ;
+    sdo:email <mailto:geological_info@resources.qld.gov.au> ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq> .
-
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+ 
 fst:Formal a skos:Concept ;
     skos:definition """The status of a geologic feature the name and parameters of which are in current use, and have been intentionally/formally defined and/or delineated by printed and/or digital publication in accordance, and where applicable, with a national, international and/or other code or protocol that applies thereto."""@en ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
