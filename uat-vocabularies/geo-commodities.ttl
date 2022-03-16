@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-03-09"^^xsd:date ;
+    dcterms:modified "2022-03-16"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -1405,19 +1405,25 @@ cdt:coking-coal a skos:Concept ;
     skos:prefLabel "Coking Coal"@en .
 
 cdt:hard-coking-coal a skos:Concept ;
-    skos:altLabel "Hard Coking Coal"@en,
-        "Second-Tier Hard Coking Coal"@en,
-        "Standard Hard Coking Coal"@en,
-        "Standard/Second-tier Hard Coking Coal"@en ;
     skos:broader cdt:coking-coal ;
-    skos:definition "A coal used as input in the production of strong coke. When heated in coke oven (which has an absence of oxygen), hard coking coal will swell to form coke. Source:minerals.org.au"@en ;
+    skos:definition "A coal used as input in the production of strong coke. Source:minerals.org.au"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "HCC" ;
+    skos:prefLabel "Hard Coking Coal"@en .
+
+cdt:standard-hard-coking-coal a skos:Concept ;
+    skos:altLabel "Second-Tier Hard Coking Coal"@en,
+        "Standard Hard Coking Coal"@en,
+        "Standard/Second-tier Hard Coking Coal"@en ;
+    skos:broader cdt:hard-coking-coal ;
+    skos:definition "A coal used as input in the production of strong coke. When heated in coke oven (which has an absence of oxygen), hard coking coal will swell to form coke. Source:minerals.org.au"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:prefLabel "Standard/Second-Tier Hard Coking Coal"@en .
 
 cdt:premium-hard-coking-coal a skos:Concept ;
-    skos:broader cdt:coking-coal ;
+    skos:broader cdt:hard-coking-coal ;
     skos:definition "A coal used as input in the production of strong coke with a high (typically >60%) Coke Strength After Reaction (CSR) index and high (7+) Crucible Swelling Number (CSN). When heated in coke oven (which has an absence of oxygen), hard coking coal will swell to form coke. Source:minerals.org.au"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
@@ -1461,6 +1467,14 @@ cdt:semi-soft-coking-coal a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "SSCC" ;
     skos:prefLabel "Semi-Soft Coking Coal"@en .
+
+cdt:soft-coking-coal a skos:Concept ;
+    skos:broader cdt:coking-coal ;
+    skos:definition "A coal used in coke blends along with hard coking coal that results in a low coke quality with the highest level of impurities in coking coal blends. Soft coking coal can also be sold as thermal coal. Source:minerals.org.au"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "SCC" ;
+    skos:prefLabel "Soft Coking Coal"@en .
 
 cdt:pulverised-coal-injection a skos:Concept ;
     skos:altLabel "PCI"@en,
@@ -4138,14 +4152,10 @@ cdt:qld-coal-sales a skos:Collection ;
     skos:definition "Coal types applicable to Queensland statisical sales reporting."@en ;
     skos:member cdt:anthracite,
         cdt:hard-coking-coal,
-        cdt:lv-premium-hard-coking-coal,
-        cdt:mv-premium-hard-coking-coal,
         cdt:semi-soft-coking-coal,
-        cdt:lv-pulverised-coal-injection,
-        cdt:mt-pulverised-coal-injection,
-        cdt:thermal-coal6000,
-        cdt:thermal-coal5500,
-        cdt:brown-coal ;
+        cdt:soft-coking-coal,
+        cdt:pulverised-coal-injection,
+        cdt:thermal-coal ;
     skos:prefLabel "Queensland Coal Sales"@en .
 
 cdt:qld-extractive-sales a skos:Collection ;
