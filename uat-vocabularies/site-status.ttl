@@ -238,11 +238,19 @@ ststs:minocc a skos:Collection ;
         ststs:unknown ;
     skos:prefLabel "Minocc"@en .
 
+ststs:minprodstat a skos:Collection ;
+    skos:definition "The coarse status of a mineral mine as pertains to activity on a reporting basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
+    skos:member ststs:on-production,
+        ststs:operational-non-prod,
+        ststs:secondary-operation,
+        ststs:not-producing ;
+    skos:prefLabel "Mineral Production Sub-Site Status"@en .
+
 ststs:prodstat a skos:Collection ;
-    skos:definition "The coarse status of a mine, quarry, or other resource project as pertains to activity on an annual basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
+    skos:definition "The coarse status of a coal mine as pertains to activity on a reporting basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
     skos:member ststs:on-production,
         ststs:not-producing ;
-    skos:prefLabel "Production Site Status"@en .
+    skos:prefLabel "Coal Production Sub-Site Status"@en .
 
 ststs:quarry-status a skos:Collection ;
     skos:definition "The valid site statuses as applies to quarries in Queensland."@en ;
