@@ -50,9 +50,24 @@ ststs:monitoring a skos:Concept ;
 
 ststs:not-producing a skos:Concept ;
     skos:broader ststs:active ;
-    skos:definition "A site that is an active part of a project or operation but is not currently contributing to production. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease that is part of an active mine but is not contributing to mine production due to project staging or by being used as a site for mine processing or infrastructure."@en ;
+    skos:definition "A site that is part of a project or operation but is not currently contributing to production and does not have operational activities conducted. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease that is part of an active mine but is temporarily not contributing to mine production."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Not Producing"@en .
+
+ststs:operational-non-prod a skos:Concept ;
+    skos:altLabel "Operating but not producing"@en,
+        "Excavation"@en,
+        "Non-Productive Operation"@en ;
+    skos:broader ststs:active ;
+    skos:definition "A site that is an active part of a project or operation that typically but not currently contributes to production. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease in which excavation is occuring after construction but prior to or between extraction phases."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Preparation"@en .
+
+ ststs:secondary-operation a skos:Concept ;
+    skos:broader ststs:active ;
+    skos:definition "A site that is an active part of a project or operation involved in supporting secondary activities such as resoure processing, staging, or adminstration, or infrastructure. "@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Secondary Operation"@en .
 
 ststs:on-injection a skos:Concept ;
     skos:broader ststs:active ;
