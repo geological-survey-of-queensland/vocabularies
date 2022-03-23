@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/sample-material> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-02-08"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-03-17"^^xsd:date ;
+    dcterms:modified "2022-03-23"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Types of materials of which samples can consist of in Geoscience."@en ;
@@ -222,6 +222,13 @@ spmt:direct-shipping-ore a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Direct Shipping Ore"@en .
+
+spmt:dore a skos:Concept ;
+    skos:broader spmt:metal ;
+    skos:definition "Dore is non-ferrous metal, typically Gold or Silver, that has been refined to a semi-pure state, but not to the high (~99%) purity of bullion. Dore commonly contains 50-75% pure precious metal"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
+    skos:prefLabel "Dore"@en .
 
 spmt:dross a skos:Concept ;
     skos:broader spmt:metal ;
@@ -751,6 +758,7 @@ spmt:min-process-inputs a skos:Collection ;
     skos:member spmt:alluvial-wash,
         spmt:bulk-metal,
         spmt:clay,
+        spmt:dore,
         spmt:dross,
         spmt:earth-material,
         spmt:gem-rock,
@@ -772,6 +780,7 @@ spmt:min-products a skos:Collection ;
         spmt:clay,
         spmt:dimension-stone,
         spmt:direct-shipping-ore,
+        spmt:dore,
         spmt:dross,
         spmt:gemstone,
         spmt:heavy-mineral,
@@ -807,6 +816,7 @@ spmt:qld-georesources-products a skos:Collection ;
         spmt:coal-sales,
         spmt:dimension-stone,
         spmt:direct-shipping-ore,
+        spmt:dore,
         spmt:dross,
         spmt:gemstone,
         spmt:heavy-mineral,
