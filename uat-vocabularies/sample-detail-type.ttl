@@ -19,6 +19,7 @@
     skos:hasTopConcept smpdt:sample-transactor,
         smpdt:pallet-weight,
         smpdt:pallet-condition,
+        smpdt:processor,
         smpdt:core-condition,
         smpdt:core-tray-condition .
 
@@ -50,6 +51,13 @@ smpdt:pallet-condition a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-detail-type> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-detail-type> ;
     skos:prefLabel "Pallet Condition"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-detail-type> .
+
+smpdt:processor a skos:Concept ;
+    skos:definition "An entity that performs any processing on the sample (Sampling Method), that is not the owner or final acquirer of the sample, e.g. a processing plant that generates a product from raw material on behalf of the reporting mine that acquires the sample."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-detail-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-detail-type> ;
+    skos:prefLabel "Processor"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/sample-detail-type> .
 
 smpdt:core-condition a skos:Concept ;
