@@ -86,3 +86,11 @@ trns:exchange a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
     skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
     skos:prefLabel "Exchange"@en .
+
+trns:min-transfer a skos:Collection ;
+    skos:prefLabel "Mineral Material Transfers"@en ;
+    skos:definition "The transfers of materials cthat may occur between mineral mines, typically between mines operated by the same parent company."@en ;
+    skos:member
+        trns:transfer-in,
+        trns:transfer-out,
+        trns:purchase .
