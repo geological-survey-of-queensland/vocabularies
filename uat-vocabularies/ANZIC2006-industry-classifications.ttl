@@ -1,0 +1,2395 @@
+@prefix icat: <http://linked.data.gov.au/def/anzsic-2006/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/anzsic-2006> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2020-02-17"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2022-03-16"^^xsd:date ;
+    dcterms:provenance "Australian and New Zealand Standard Industrial Classification (ANZSIC), 2006 - Codes and Titles" ;
+    skos:definition """An industrial classification organises data about business units. It provides a standard framework under which business units carrying out similar production activities can be grouped together, with each resultant group referred to as an industry.
+    An individual business entity is assigned to an industry based on its predominant economic activity. The term business entity is used in its widest sense to include any organisation undertaking productive activities, including companies, non-profit organisations, government departments and enterprises. ANZSIC has four hierarchic levels: Divisions (the broadest level), Subdivisions, Groups and Classes (the finest level).
+    At the Divisional level, the main purpose is to provide a limited number of categories which provide a broad overall picture of the economy and are suitable for the publication of summary tables in official statistics. The Subdivision, Group and Class levels provide increasingly detailed dissections of these categories for the compilation of more specific and detailed statistics."""@en ;
+    skos:prefLabel "Australian and New Zealand Standard Industrial Classification 2006 - Codes and Titles"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+icat:A0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Agriculture, Forestry and Fishing."@en ;
+    skos:notation "A0000" ;
+    skos:prefLabel "Agriculture, Forestry and Fishing"@en .
+
+icat:A0100 a skos:Concept ;
+    skos:broader icat:A0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Agriculture."@en ;
+    skos:notation "A0100" ;
+    skos:prefLabel "Agriculture"@en .
+
+icat:A0110 a skos:Concept ;
+    skos:broader icat:A0100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Nursery and Floriculture Production."@en ;
+    skos:notation "A0110" ;
+    skos:prefLabel "Nursery and Floriculture Production"@en .
+
+icat:A0120 a skos:Concept ;
+    skos:broader icat:A0100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Mushroom and Vegetable Growing."@en ;
+    skos:notation "A0120" ;
+    skos:prefLabel "Mushroom and Vegetable Growing"@en .
+
+icat:A0130 a skos:Concept ;
+    skos:broader icat:A0100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Fruit and Tree Nut Growing."@en ;
+    skos:notation "A0130" ;
+    skos:prefLabel "Fruit and Tree Nut Growing"@en .
+
+icat:A0140 a skos:Concept ;
+    skos:broader icat:A0100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Sheep, Beef Cattle and Grain Farming."@en ;
+    skos:notation "A0140" ;
+    skos:prefLabel "Sheep, Beef Cattle and Grain Farming"@en .
+
+icat:A0150 a skos:Concept ;
+    skos:broader icat:A0100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Crop Growing."@en ;
+    skos:notation "A0150" ;
+    skos:prefLabel "Other Crop Growing"@en .
+
+icat:A0160 a skos:Concept ;
+    skos:broader icat:A0100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Dairy Cattle Farming."@en ;
+    skos:notation "A0160" ;
+    skos:prefLabel "Dairy Cattle Farming"@en .
+
+icat:A0170 a skos:Concept ;
+    skos:broader icat:A0100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Poultry Farming."@en ;
+    skos:notation "A0170" ;
+    skos:prefLabel "Poultry Farming"@en .
+
+icat:A0180 a skos:Concept ;
+    skos:broader icat:A0100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Deer Farming."@en ;
+    skos:notation "A0180" ;
+    skos:prefLabel "Deer Farming"@en .
+
+icat:A0190 a skos:Concept ;
+    skos:broader icat:A0100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Livestock Farming."@en ;
+    skos:notation "A0190" ;
+    skos:prefLabel "Other Livestock Farming"@en .
+
+icat:A0200 a skos:Concept ;
+    skos:broader icat:A0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Aquaculture."@en ;
+    skos:notation "A0200" ;
+    skos:prefLabel "Aquaculture"@en .
+
+icat:A0300 a skos:Concept ;
+    skos:broader icat:A0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Forestry and Logging."@en ;
+    skos:notation "A0300" ;
+    skos:prefLabel "Forestry and Logging"@en .
+
+icat:A0400 a skos:Concept ;
+    skos:broader icat:A0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Fishing, Hunting and Trapping."@en ;
+    skos:notation "A0400" ;
+    skos:prefLabel "Fishing, Hunting and Trapping"@en .
+
+icat:A0410 a skos:Concept ;
+    skos:broader icat:A0400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Fishing."@en ;
+    skos:notation "A0410" ;
+    skos:prefLabel "Fishing"@en .
+
+icat:A0420 a skos:Concept ;
+    skos:broader icat:A0400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Hunting and Trapping."@en ;
+    skos:notation "A0420" ;
+    skos:prefLabel "Hunting and Trapping"@en .
+
+icat:A0500 a skos:Concept ;
+    skos:broader icat:A0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Agriculture, Forestry and Fishing Support Services."@en ;
+    skos:notation "A0500" ;
+    skos:prefLabel "Agriculture, Forestry and Fishing Support Services"@en .
+
+icat:A0510 a skos:Concept ;
+    skos:broader icat:A0500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Forestry Support Services."@en ;
+    skos:notation "A0510" ;
+    skos:prefLabel "Forestry Support Services"@en .
+
+icat:A0520 a skos:Concept ;
+    skos:broader icat:A0500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Agriculture and Fishing Support Services."@en ;
+    skos:notation "A0520" ;
+    skos:prefLabel "Agriculture and Fishing Support Services"@en .
+
+icat:B0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Mining."@en ;
+    skos:notation "B0000" ;
+    skos:prefLabel "Mining"@en .
+
+icat:B0600 a skos:Concept ;
+    skos:broader icat:B0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Coal Mining."@en ;
+    skos:notation "B0600" ;
+    skos:altLabel "Coal Mine"@en ;
+    skos:prefLabel "Coal Mining"@en .
+
+icat:B0700 a skos:Concept ;
+    skos:broader icat:B0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Oil and Gas Extraction."@en ;
+    skos:notation "B0700" ;
+    skos:prefLabel "Oil and Gas Extraction"@en .
+
+icat:B0800 a skos:Concept ;
+    skos:broader icat:B0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Metal Ore Mining."@en ;
+    skos:notation "B0800" ;
+    skos:prefLabel "Metal Ore Mining"@en .
+
+icat:B0900 a skos:Concept ;
+    skos:broader icat:B0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Non-Metallic Mineral Mining and Quarrying."@en ;
+    skos:notation "B0900" ;
+    skos:prefLabel "Non-Metallic Mineral Mining and Quarrying"@en .
+
+icat:B0910 a skos:Concept ;
+    skos:broader icat:B0900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Construction Material Mining."@en ;
+    skos:notation "B0910" ;
+    skos:prefLabel "Construction Material Mining"@en .
+
+icat:B0990 a skos:Concept ;
+    skos:broader icat:B0900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Non-Metallic Mineral Mining and Quarrying."@en ;
+    skos:notation "B0990" ;
+    skos:prefLabel "Other Non-Metallic Mineral Mining and Quarrying"@en .
+
+icat:B1000 a skos:Concept ;
+    skos:broader icat:B0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Exploration and Other Mining Support Services."@en ;
+    skos:notation "B1000" ;
+    skos:prefLabel "Exploration and Other Mining Support Services"@en .
+
+icat:B1010 a skos:Concept ;
+    skos:broader icat:B1000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Exploration."@en ;
+    skos:notation "B1010" ;
+    skos:prefLabel "Exploration"@en .
+
+icat:B1090 a skos:Concept ;
+    skos:broader icat:B1000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Mining Support Services."@en ;
+    skos:notation "B1090" ;
+    skos:prefLabel "Other Mining Support Services"@en .
+
+icat:C0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Manufacturing."@en ;
+    skos:notation "C0000" ;
+    skos:altLabel "Other Processing"@en ;
+    skos:prefLabel "Manufacturing"@en .
+
+icat:C1100 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Food Product Manufacturing."@en ;
+    skos:notation "C1100" ;
+    skos:prefLabel "Food Product Manufacturing"@en .
+
+icat:C1110 a skos:Concept ;
+    skos:broader icat:C1100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Meat and Meat Product Manufacturing."@en ;
+    skos:notation "C1110" ;
+    skos:prefLabel "Meat and Meat Product Manufacturing"@en .
+
+icat:C1120 a skos:Concept ;
+    skos:broader icat:C1100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Seafood Processing."@en ;
+    skos:notation "C1120" ;
+    skos:prefLabel "Seafood Processing"@en .
+
+icat:C1130 a skos:Concept ;
+    skos:broader icat:C1100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Dairy Product Manufacturing."@en ;
+    skos:notation "C1130" ;
+    skos:prefLabel "Dairy Product Manufacturing"@en .
+
+icat:C1140 a skos:Concept ;
+    skos:broader icat:C1100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Fruit and Vegetable Processing."@en ;
+    skos:notation "C1140" ;
+    skos:prefLabel "Fruit and Vegetable Processing"@en .
+
+icat:C1150 a skos:Concept ;
+    skos:broader icat:C1100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Oil and Fat Manufacturing."@en ;
+    skos:notation "C1150" ;
+    skos:prefLabel "Oil and Fat Manufacturing"@en .
+
+icat:C1160 a skos:Concept ;
+    skos:broader icat:C1100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Grain Mill and Cereal Product Manufacturing."@en ;
+    skos:notation "C1160" ;
+    skos:prefLabel "Grain Mill and Cereal Product Manufacturing"@en .
+
+icat:C1170 a skos:Concept ;
+    skos:broader icat:C1100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Bakery Product Manufacturing."@en ;
+    skos:notation "C1170" ;
+    skos:prefLabel "Bakery Product Manufacturing"@en .
+
+icat:C1180 a skos:Concept ;
+    skos:broader icat:C1100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Sugar and Confectionery Manufacturing."@en ;
+    skos:notation "C1180" ;
+    skos:prefLabel "Sugar and Confectionery Manufacturing"@en .
+
+icat:C1190 a skos:Concept ;
+    skos:broader icat:C1100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Food Product Manufacturing."@en ;
+    skos:notation "C1190" ;
+    skos:prefLabel "Other Food Product Manufacturing"@en .
+
+icat:C1200 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Beverage and Tobacco Product Manufacturing."@en ;
+    skos:notation "C1200" ;
+    skos:prefLabel "Beverage and Tobacco Product Manufacturing"@en .
+
+icat:C1210 a skos:Concept ;
+    skos:broader icat:C1200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Beverage Manufacturing."@en ;
+    skos:notation "C1210" ;
+    skos:prefLabel "Beverage Manufacturing"@en .
+
+icat:C1220 a skos:Concept ;
+    skos:broader icat:C1200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Cigarette and Tobacco Product Manufacturing."@en ;
+    skos:notation "C1220" ;
+    skos:prefLabel "Cigarette and Tobacco Product Manufacturing"@en .
+
+icat:C1300 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Textile, Leather, Clothing and Footwear Manufacturing."@en ;
+    skos:notation "C1300" ;
+    skos:prefLabel "Textile, Leather, Clothing and Footwear Manufacturing"@en .
+
+icat:C1310 a skos:Concept ;
+    skos:broader icat:C1300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Textile Manufacturing."@en ;
+    skos:notation "C1310" ;
+    skos:prefLabel "Textile Manufacturing"@en .
+
+icat:C1320 a skos:Concept ;
+    skos:broader icat:C1300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Leather Tanning, Fur Dressing and Leather Product Manufacturing."@en ;
+    skos:notation "C1320" ;
+    skos:prefLabel "Leather Tanning, Fur Dressing and Leather Product Manufacturing"@en .
+
+icat:C1330 a skos:Concept ;
+    skos:broader icat:C1300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Textile Product Manufacturing."@en ;
+    skos:notation "C1330" ;
+    skos:prefLabel "Textile Product Manufacturing"@en .
+
+icat:C1340 a skos:Concept ;
+    skos:broader icat:C1300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Knitted Product Manufacturing."@en ;
+    skos:notation "C1340" ;
+    skos:prefLabel "Knitted Product Manufacturing"@en .
+
+icat:C1350 a skos:Concept ;
+    skos:broader icat:C1300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Clothing and Footwear Manufacturing."@en ;
+    skos:notation "C1350" ;
+    skos:prefLabel "Clothing and Footwear Manufacturing"@en .
+
+icat:C1400 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Wood Product Manufacturing."@en ;
+    skos:notation "C1400" ;
+    skos:prefLabel "Wood Product Manufacturing"@en .
+
+icat:C1410 a skos:Concept ;
+    skos:broader icat:C1400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Log Sawmilling and Timber Dressing."@en ;
+    skos:notation "C1410" ;
+    skos:prefLabel "Log Sawmilling and Timber Dressing"@en .
+
+icat:C1490 a skos:Concept ;
+    skos:broader icat:C1400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Wood Product Manufacturing."@en ;
+    skos:notation "C1490" ;
+    skos:prefLabel "Other Wood Product Manufacturing"@en .
+
+icat:C1500 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Pulp, Paper and Converted Paper Product Manufacturing."@en ;
+    skos:notation "C1500" ;
+    skos:prefLabel "Pulp, Paper and Converted Paper Product Manufacturing"@en .
+
+icat:C1510 a skos:Concept ;
+    skos:broader icat:C1500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Pulp, Paper and Paperboard Manufacturing."@en ;
+    skos:notation "C1510" ;
+    skos:prefLabel "Pulp, Paper and Paperboard Manufacturing"@en .
+
+icat:C1520 a skos:Concept ;
+    skos:broader icat:C1500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Converted Paper Product Manufacturing."@en ;
+    skos:notation "C1520" ;
+    skos:prefLabel "Converted Paper Product Manufacturing"@en .
+
+icat:C1600 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Printing (including the Reproduction of Recorded Media)."@en ;
+    skos:notation "C1600" ;
+    skos:prefLabel "Printing (including the Reproduction of Recorded Media)"@en .
+
+icat:C1610 a skos:Concept ;
+    skos:broader icat:C1600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Printing and Printing Support Services."@en ;
+    skos:notation "C1610" ;
+    skos:prefLabel "Printing and Printing Support Services"@en .
+
+icat:C1620 a skos:Concept ;
+    skos:broader icat:C1600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Reproduction of Recorded Media."@en ;
+    skos:notation "C1620" ;
+    skos:prefLabel "Reproduction of Recorded Media"@en .
+
+icat:C1700 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Petroleum and Coal Product Manufacturing."@en ;
+    skos:notation "C1700" ;
+    skos:prefLabel "Petroleum and Coal Product Manufacturing"@en .
+
+icat:C1800 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Basic Chemical and Chemical Product Manufacturing."@en ;
+    skos:notation "C1800" ;
+    skos:prefLabel "Basic Chemical and Chemical Product Manufacturing"@en .
+
+icat:C1810 a skos:Concept ;
+    skos:broader icat:C1800 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Basic Chemical Manufacturing."@en ;
+    skos:notation "C1810" ;
+    skos:prefLabel "Basic Chemical Manufacturing"@en .
+
+icat:C1820 a skos:Concept ;
+    skos:broader icat:C1800 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Basic Polymer Manufacturing."@en ;
+    skos:notation "C1820" ;
+    skos:prefLabel "Basic Polymer Manufacturing"@en .
+
+icat:C1830 a skos:Concept ;
+    skos:broader icat:C1800 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Fertiliser and Pesticide Manufacturing."@en ;
+    skos:notation "C1830" ;
+    skos:prefLabel "Fertiliser and Pesticide Manufacturing"@en .
+
+icat:C1840 a skos:Concept ;
+    skos:broader icat:C1800 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Pharmaceutical and Medicinal Product Manufacturing."@en ;
+    skos:notation "C1840" ;
+    skos:prefLabel "Pharmaceutical and Medicinal Product Manufacturing"@en .
+
+icat:C1850 a skos:Concept ;
+    skos:broader icat:C1800 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Cleaning Compound and Toiletry Preparation Manufacturing."@en ;
+    skos:notation "C1850" ;
+    skos:prefLabel "Cleaning Compound and Toiletry Preparation Manufacturing"@en .
+
+icat:C1890 a skos:Concept ;
+    skos:broader icat:C1800 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Basic Chemical Product Manufacturing."@en ;
+    skos:notation "C1890" ;
+    skos:prefLabel "Other Basic Chemical Product Manufacturing"@en .
+
+icat:C1900 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Polymer Product and Rubber Product Manufacturing."@en ;
+    skos:notation "C1900" ;
+    skos:prefLabel "Polymer Product and Rubber Product Manufacturing"@en .
+
+icat:C1910 a skos:Concept ;
+    skos:broader icat:C1900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Polymer Product Manufacturing."@en ;
+    skos:notation "C1910" ;
+    skos:prefLabel "Polymer Product Manufacturing"@en .
+
+icat:C1920 a skos:Concept ;
+    skos:broader icat:C1900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Natural Rubber Product Manufacturing."@en ;
+    skos:notation "C1920" ;
+    skos:prefLabel "Natural Rubber Product Manufacturing"@en .
+
+icat:C2000 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Non-Metallic Mineral Product Manufacturing."@en ;
+    skos:notation "C2000" ;
+    skos:prefLabel "Non-Metallic Mineral Product Manufacturing"@en .
+
+icat:C2010 a skos:Concept ;
+    skos:broader icat:C2000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Glass and Glass Product Manufacturing."@en ;
+    skos:notation "C2010" ;
+    skos:prefLabel "Glass and Glass Product Manufacturing"@en .
+
+icat:C2020 a skos:Concept ;
+    skos:broader icat:C2000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Ceramic Product Manufacturing."@en ;
+    skos:notation "C2020" ;
+    skos:prefLabel "Ceramic Product Manufacturing"@en .
+
+icat:C2030 a skos:Concept ;
+    skos:broader icat:C2000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Cement, Lime, Plaster and Concrete Product Manufacturing."@en ;
+    skos:notation "C2030" ;
+    skos:prefLabel "Cement, Lime, Plaster and Concrete Product Manufacturing"@en .
+
+icat:C2090 a skos:Concept ;
+    skos:broader icat:C2000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Non-Metallic Mineral Product Manufacturing."@en ;
+    skos:notation "C2090" ;
+    skos:prefLabel "Other Non-Metallic Mineral Product Manufacturing"@en .
+
+icat:C2100 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Primary Metal and Metal Product Manufacturing."@en ;
+    skos:notation "C2100" ;
+    skos:altLabel "Metal Processing"@en ;
+    skos:prefLabel "Primary Metal and Metal Product Manufacturing"@en .
+
+icat:C2110 a skos:Concept ;
+    skos:broader icat:C2100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Basic Ferrous Metal Manufacturing."@en ;
+    skos:notation "C2110" ;
+    skos:prefLabel "Basic Ferrous Metal Manufacturing"@en .
+
+icat:C2120 a skos:Concept ;
+    skos:broader icat:C2100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Basic Ferrous Metal Product Manufacturing."@en ;
+    skos:notation "C2120" ;
+    skos:prefLabel "Basic Ferrous Metal Product Manufacturing"@en .
+
+icat:C2130 a skos:Concept ;
+    skos:broader icat:C2100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Basic Non-Ferrous Metal Manufacturing."@en ;
+    skos:notation "C2130" ;
+    skos:prefLabel "Basic Non-Ferrous Metal Manufacturing"@en .
+
+icat:C2140 a skos:Concept ;
+    skos:broader icat:C2100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Basic Non-Ferrous Metal Product Manufacturing."@en ;
+    skos:notation "C2140" ;
+    skos:prefLabel "Basic Non-Ferrous Metal Product Manufacturing"@en .
+
+icat:C2200 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Fabricated Metal Product Manufacturing."@en ;
+    skos:notation "C2200" ;
+    skos:prefLabel "Fabricated Metal Product Manufacturing"@en .
+
+icat:C2210 a skos:Concept ;
+    skos:broader icat:C2200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Iron and Steel Forging."@en ;
+    skos:notation "C2210" ;
+    skos:prefLabel "Iron and Steel Forging"@en .
+
+icat:C2220 a skos:Concept ;
+    skos:broader icat:C2200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Structural Metal Product Manufacturing."@en ;
+    skos:notation "C2220" ;
+    skos:prefLabel "Structural Metal Product Manufacturing"@en .
+
+icat:C2230 a skos:Concept ;
+    skos:broader icat:C2200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Metal Container Manufacturing."@en ;
+    skos:notation "C2230" ;
+    skos:prefLabel "Metal Container Manufacturing"@en .
+
+icat:C2240 a skos:Concept ;
+    skos:broader icat:C2200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Sheet Metal Product Manufacturing (except Metal Structural and Container Products)."@en ;
+    skos:notation "C2240" ;
+    skos:prefLabel "Sheet Metal Product Manufacturing (except Metal Structural and Container Products)"@en .
+
+icat:C2290 a skos:Concept ;
+    skos:broader icat:C2200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Fabricated Metal Product Manufacturing."@en ;
+    skos:notation "C2290" ;
+    skos:prefLabel "Other Fabricated Metal Product Manufacturing"@en .
+
+icat:C2300 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Transport Equipment Manufacturing."@en ;
+    skos:notation "C2300" ;
+    skos:prefLabel "Transport Equipment Manufacturing"@en .
+
+icat:C2310 a skos:Concept ;
+    skos:broader icat:C2300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Motor Vehicle and Motor Vehicle Part Manufacturing."@en ;
+    skos:notation "C2310" ;
+    skos:prefLabel "Motor Vehicle and Motor Vehicle Part Manufacturing"@en .
+
+icat:C2390 a skos:Concept ;
+    skos:broader icat:C2300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Transport Equipment Manufacturing."@en ;
+    skos:notation "C2390" ;
+    skos:prefLabel "Other Transport Equipment Manufacturing"@en .
+
+icat:C2400 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Machinery and Equipment Manufacturing."@en ;
+    skos:notation "C2400" ;
+    skos:prefLabel "Machinery and Equipment Manufacturing"@en .
+
+icat:C2410 a skos:Concept ;
+    skos:broader icat:C2400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Professional and Scientific Equipment Manufacturing."@en ;
+    skos:notation "C2410" ;
+    skos:prefLabel "Professional and Scientific Equipment Manufacturing"@en .
+
+icat:C2420 a skos:Concept ;
+    skos:broader icat:C2400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Computer and Electronic Equipment Manufacturing."@en ;
+    skos:notation "C2420" ;
+    skos:prefLabel "Computer and Electronic Equipment Manufacturing"@en .
+
+icat:C2430 a skos:Concept ;
+    skos:broader icat:C2400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Electrical Equipment Manufacturing."@en ;
+    skos:notation "C2430" ;
+    skos:prefLabel "Electrical Equipment Manufacturing"@en .
+
+icat:C2440 a skos:Concept ;
+    skos:broader icat:C2400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Domestic Appliance Manufacturing."@en ;
+    skos:notation "C2440" ;
+    skos:prefLabel "Domestic Appliance Manufacturing"@en .
+
+icat:C2450 a skos:Concept ;
+    skos:broader icat:C2400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Pump, Compressor, Heating and Ventilation Equipment Manufacturing."@en ;
+    skos:notation "C2450" ;
+    skos:prefLabel "Pump, Compressor, Heating and Ventilation Equipment Manufacturing"@en .
+
+icat:C2460 a skos:Concept ;
+    skos:broader icat:C2400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Specialised Machinery and Equipment Manufacturing."@en ;
+    skos:notation "C2460" ;
+    skos:prefLabel "Specialised Machinery and Equipment Manufacturing"@en .
+
+icat:C2490 a skos:Concept ;
+    skos:broader icat:C2400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Machinery and Equipment Manufacturing."@en ;
+    skos:notation "C2490" ;
+    skos:prefLabel "Other Machinery and Equipment Manufacturing"@en .
+
+icat:C2500 a skos:Concept ;
+    skos:broader icat:C0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Furniture and Other Manufacturing."@en ;
+    skos:notation "C2500" ;
+    skos:prefLabel "Furniture and Other Manufacturing"@en .
+
+icat:C2510 a skos:Concept ;
+    skos:broader icat:C2500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Furniture Manufacturing."@en ;
+    skos:notation "C2510" ;
+    skos:prefLabel "Furniture Manufacturing"@en .
+
+icat:C2590 a skos:Concept ;
+    skos:broader icat:C2500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Manufacturing."@en ;
+    skos:notation "C2590" ;
+    skos:prefLabel "Other Manufacturing"@en .
+
+icat:D0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Electricity, Gas, Water and Waste Services."@en ;
+    skos:notation "D0000" ;
+    skos:prefLabel "Electricity, Gas, Water and Waste Services"@en .
+
+icat:D2600 a skos:Concept ;
+    skos:broader icat:D0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Electricity Supply."@en ;
+    skos:notation "D2600" ;
+    skos:prefLabel "Electricity Supply"@en .
+
+icat:D2610 a skos:Concept ;
+    skos:broader icat:D2600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Electricity Generation."@en ;
+    skos:notation "D2610" ;
+    skos:prefLabel "Electricity Generation"@en .
+
+icat:D2620 a skos:Concept ;
+    skos:broader icat:D2600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Electricity Transmission."@en ;
+    skos:notation "D2620" ;
+    skos:prefLabel "Electricity Transmission"@en .
+
+icat:D2630 a skos:Concept ;
+    skos:broader icat:D2600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Electricity Distribution."@en ;
+    skos:notation "D2630" ;
+    skos:prefLabel "Electricity Distribution"@en .
+
+icat:D2640 a skos:Concept ;
+    skos:broader icat:D2600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is On Selling Electricity and Electricity Market Operation."@en ;
+    skos:notation "D2640" ;
+    skos:prefLabel "On Selling Electricity and Electricity Market Operation"@en .
+
+icat:D2700 a skos:Concept ;
+    skos:broader icat:D0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Gas Supply."@en ;
+    skos:notation "D2700" ;
+    skos:prefLabel "Gas Supply"@en .
+
+icat:D2800 a skos:Concept ;
+    skos:broader icat:D0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Water Supply, Sewerage and Drainage Services."@en ;
+    skos:notation "D2800" ;
+    skos:prefLabel "Water Supply, Sewerage and Drainage Services"@en .
+
+icat:D2900 a skos:Concept ;
+    skos:broader icat:D0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Waste Collection, Treatment and Disposal Services."@en ;
+    skos:notation "D2900" ;
+    skos:prefLabel "Waste Collection, Treatment and Disposal Services"@en .
+
+icat:D2910 a skos:Concept ;
+    skos:broader icat:D2900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Waste Collection Services."@en ;
+    skos:notation "D2910" ;
+    skos:prefLabel "Waste Collection Services"@en .
+
+icat:D2920 a skos:Concept ;
+    skos:broader icat:D2900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Waste Treatment, Disposal and Remediation Services."@en ;
+    skos:notation "D2920" ;
+    skos:prefLabel "Waste Treatment, Disposal and Remediation Services"@en .
+
+icat:E0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Construction."@en ;
+    skos:notation "E0000" ;
+    skos:prefLabel "Construction"@en .
+
+icat:E3000 a skos:Concept ;
+    skos:broader icat:E0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Building Construction."@en ;
+    skos:notation "E3000" ;
+    skos:prefLabel "Building Construction"@en .
+
+icat:E3010 a skos:Concept ;
+    skos:broader icat:E3000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Residential Building Construction."@en ;
+    skos:notation "E3010" ;
+    skos:prefLabel "Residential Building Construction"@en .
+
+icat:E3020 a skos:Concept ;
+    skos:broader icat:E3000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Non-Residential Building Construction."@en ;
+    skos:notation "E3020" ;
+    skos:prefLabel "Non-Residential Building Construction"@en .
+
+icat:E3100 a skos:Concept ;
+    skos:broader icat:E0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Heavy and Civil Engineering Construction."@en ;
+    skos:notation "E3100" ;
+    skos:prefLabel "Heavy and Civil Engineering Construction"@en .
+
+icat:E3200 a skos:Concept ;
+    skos:broader icat:E0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Construction Services."@en ;
+    skos:notation "E3200" ;
+    skos:prefLabel "Construction Services"@en .
+
+icat:E3210 a skos:Concept ;
+    skos:broader icat:E3200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Land Development and Site Preparation Services."@en ;
+    skos:notation "E3210" ;
+    skos:prefLabel "Land Development and Site Preparation Services"@en .
+
+icat:E3220 a skos:Concept ;
+    skos:broader icat:E3200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Building Structure Services."@en ;
+    skos:notation "E3220" ;
+    skos:prefLabel "Building Structure Services"@en .
+
+icat:E3230 a skos:Concept ;
+    skos:broader icat:E3200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Building Installation Services."@en ;
+    skos:notation "E3230" ;
+    skos:prefLabel "Building Installation Services"@en .
+
+icat:E3240 a skos:Concept ;
+    skos:broader icat:E3200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Building Completion Services."@en ;
+    skos:notation "E3240" ;
+    skos:prefLabel "Building Completion Services"@en .
+
+icat:E3290 a skos:Concept ;
+    skos:broader icat:E3200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Construction Services."@en ;
+    skos:notation "E3290" ;
+    skos:prefLabel "Other Construction Services"@en .
+
+icat:F0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Wholesale Trade."@en ;
+    skos:notation "F0000" ;
+    skos:prefLabel "Wholesale Trade"@en .
+
+icat:F3300 a skos:Concept ;
+    skos:broader icat:F0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Basic Material Wholesaling."@en ;
+    skos:notation "F3300" ;
+    skos:prefLabel "Basic Material Wholesaling"@en .
+
+icat:F3310 a skos:Concept ;
+    skos:broader icat:F3300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Agricultural Product Wholesaling."@en ;
+    skos:notation "F3310" ;
+    skos:prefLabel "Agricultural Product Wholesaling"@en .
+
+icat:F3320 a skos:Concept ;
+    skos:broader icat:F3300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Mineral, Metal and Chemical Wholesaling."@en ;
+    skos:notation "F3320" ;
+    skos:prefLabel "Mineral, Metal and Chemical Wholesaling"@en .
+
+icat:F3330 a skos:Concept ;
+    skos:broader icat:F3300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Timber and Hardware Goods Wholesaling."@en ;
+    skos:notation "F3330" ;
+    skos:prefLabel "Timber and Hardware Goods Wholesaling"@en .
+
+icat:F3400 a skos:Concept ;
+    skos:broader icat:F0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Machinery and Equipment Wholesaling."@en ;
+    skos:notation "F3400" ;
+    skos:prefLabel "Machinery and Equipment Wholesaling"@en .
+
+icat:F3410 a skos:Concept ;
+    skos:broader icat:F3400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Specialised Industrial Machinery and Equipment Wholesaling."@en ;
+    skos:notation "F3410" ;
+    skos:prefLabel "Specialised Industrial Machinery and Equipment Wholesaling"@en .
+
+icat:F3490 a skos:Concept ;
+    skos:broader icat:F3400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Machinery and Equipment Wholesaling."@en ;
+    skos:notation "F3490" ;
+    skos:prefLabel "Other Machinery and Equipment Wholesaling"@en .
+
+icat:F3500 a skos:Concept ;
+    skos:broader icat:F0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Motor Vehicle and Motor Vehicle Parts Wholesaling."@en ;
+    skos:notation "F3500" ;
+    skos:prefLabel "Motor Vehicle and Motor Vehicle Parts Wholesaling"@en .
+
+icat:F3600 a skos:Concept ;
+    skos:broader icat:F0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Grocery, Liquor and Tobacco Product Wholesaling."@en ;
+    skos:notation "F3600" ;
+    skos:prefLabel "Grocery, Liquor and Tobacco Product Wholesaling"@en .
+
+icat:F3700 a skos:Concept ;
+    skos:broader icat:F0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Goods Wholesaling."@en ;
+    skos:notation "F3700" ;
+    skos:prefLabel "Other Goods Wholesaling"@en .
+
+icat:F3710 a skos:Concept ;
+    skos:broader icat:F3700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Textile, Clothing and Footwear Wholesaling."@en ;
+    skos:notation "F3710" ;
+    skos:prefLabel "Textile, Clothing and Footwear Wholesaling"@en .
+
+icat:F3720 a skos:Concept ;
+    skos:broader icat:F3700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Pharmaceutical and Toiletry Goods Wholesaling."@en ;
+    skos:notation "F3720" ;
+    skos:prefLabel "Pharmaceutical and Toiletry Goods Wholesaling"@en .
+
+icat:F3730 a skos:Concept ;
+    skos:broader icat:F3700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Furniture, Floor Covering and Other Goods Wholesaling."@en ;
+    skos:notation "F3730" ;
+    skos:prefLabel "Furniture, Floor Covering and Other Goods Wholesaling"@en .
+
+icat:F3800 a skos:Concept ;
+    skos:broader icat:F0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Commission-Based Wholesaling."@en ;
+    skos:notation "F3800" ;
+    skos:prefLabel "Commission-Based Wholesaling"@en .
+
+icat:G0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Retail Trade."@en ;
+    skos:notation "G0000" ;
+    skos:prefLabel "Retail Trade"@en .
+
+icat:G3900 a skos:Concept ;
+    skos:broader icat:G0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Motor Vehicle and Motor Vehicle Parts Retailing."@en ;
+    skos:notation "G3900" ;
+    skos:prefLabel "Motor Vehicle and Motor Vehicle Parts Retailing"@en .
+
+icat:G3910 a skos:Concept ;
+    skos:broader icat:G3900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Motor Vehicle Retailing."@en ;
+    skos:notation "G3910" ;
+    skos:prefLabel "Motor Vehicle Retailing"@en .
+
+icat:G3920 a skos:Concept ;
+    skos:broader icat:G3900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Motor Vehicle Parts and Tyre Retailing."@en ;
+    skos:notation "G3920" ;
+    skos:prefLabel "Motor Vehicle Parts and Tyre Retailing"@en .
+
+icat:G4000 a skos:Concept ;
+    skos:broader icat:G0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Fuel Retailing."@en ;
+    skos:notation "G4000" ;
+    skos:prefLabel "Fuel Retailing"@en .
+
+icat:G4100 a skos:Concept ;
+    skos:broader icat:G0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Food Retailing."@en ;
+    skos:notation "G4100" ;
+    skos:prefLabel "Food Retailing"@en .
+
+icat:G4110 a skos:Concept ;
+    skos:broader icat:G4100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Supermarket and Grocery Stores."@en ;
+    skos:notation "G4110" ;
+    skos:prefLabel "Supermarket and Grocery Stores"@en .
+
+icat:G4120 a skos:Concept ;
+    skos:broader icat:G4100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Specialised Food Retailing."@en ;
+    skos:notation "G4120" ;
+    skos:prefLabel "Specialised Food Retailing"@en .
+
+icat:G4200 a skos:Concept ;
+    skos:broader icat:G0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Store-Based Retailing."@en ;
+    skos:notation "G4200" ;
+    skos:prefLabel "Other Store-Based Retailing"@en .
+
+icat:G4210 a skos:Concept ;
+    skos:broader icat:G4200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Furniture, Floor Coverings, Houseware and Textile Goods Retailing."@en ;
+    skos:notation "G4210" ;
+    skos:prefLabel "Furniture, Floor Coverings, Houseware and Textile Goods Retailing"@en .
+
+icat:G4220 a skos:Concept ;
+    skos:broader icat:G4200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Electrical and Electronic Goods Retailing."@en ;
+    skos:notation "G4220" ;
+    skos:prefLabel "Electrical and Electronic Goods Retailing"@en .
+
+icat:G4230 a skos:Concept ;
+    skos:broader icat:G4200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Hardware, Building and Garden Supplies Retailing."@en ;
+    skos:notation "G4230" ;
+    skos:prefLabel "Hardware, Building and Garden Supplies Retailing"@en .
+
+icat:G4240 a skos:Concept ;
+    skos:broader icat:G4200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Recreational Goods Retailing."@en ;
+    skos:notation "G4240" ;
+    skos:prefLabel "Recreational Goods Retailing"@en .
+
+icat:G4250 a skos:Concept ;
+    skos:broader icat:G4200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Clothing, Footwear and Personal Accessory Retailing."@en ;
+    skos:notation "G4250" ;
+    skos:prefLabel "Clothing, Footwear and Personal Accessory Retailing"@en .
+
+icat:G4260 a skos:Concept ;
+    skos:broader icat:G4200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Department Stores."@en ;
+    skos:notation "G4260" ;
+    skos:prefLabel "Department Stores"@en .
+
+icat:G4270 a skos:Concept ;
+    skos:broader icat:G4200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Pharmaceutical and Other Store-Based Retailing."@en ;
+    skos:notation "G4270" ;
+    skos:prefLabel "Pharmaceutical and Other Store-Based Retailing"@en .
+
+icat:G4300 a skos:Concept ;
+    skos:broader icat:G0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Non-Store Retailing and Retail Commission-Based Buying and/or Selling."@en ;
+    skos:notation "G4300" ;
+    skos:prefLabel "Non-Store Retailing and Retail Commission-Based Buying and/or Selling"@en .
+
+icat:G4310 a skos:Concept ;
+    skos:broader icat:G4300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Non-Store Retailing."@en ;
+    skos:notation "G4310" ;
+    skos:prefLabel "Non-Store Retailing"@en .
+
+icat:G4320 a skos:Concept ;
+    skos:broader icat:G4300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Retail Commission-Based Buying and/or Selling."@en ;
+    skos:notation "G4320" ;
+    skos:prefLabel "Retail Commission-Based Buying and/or Selling"@en .
+
+icat:H0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Accommodation and Food Services."@en ;
+    skos:notation "H0000" ;
+    skos:prefLabel "Accommodation and Food Services"@en .
+
+icat:H4400 a skos:Concept ;
+    skos:broader icat:H0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Accommodation."@en ;
+    skos:notation "H4400" ;
+    skos:prefLabel "Accommodation"@en .
+
+icat:H4500 a skos:Concept ;
+    skos:broader icat:H0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Food and Beverage Services."@en ;
+    skos:notation "H4500" ;
+    skos:prefLabel "Food and Beverage Services"@en .
+
+icat:H4510 a skos:Concept ;
+    skos:broader icat:H4500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Cafes, Restaurants and Takeaway Food Services."@en ;
+    skos:notation "H4510" ;
+    skos:prefLabel "Cafes, Restaurants and Takeaway Food Services"@en .
+
+icat:H4520 a skos:Concept ;
+    skos:broader icat:H4500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Pubs, Taverns and Bars."@en ;
+    skos:notation "H4520" ;
+    skos:prefLabel "Pubs, Taverns and Bars"@en .
+
+icat:H4530 a skos:Concept ;
+    skos:broader icat:H4500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Clubs (Hospitality)."@en ;
+    skos:notation "H4530" ;
+    skos:prefLabel "Clubs (Hospitality)"@en .
+
+icat:I0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Transport, Postal and Warehousing."@en ;
+    skos:notation "I0000" ;
+    skos:prefLabel "Transport, Postal and Warehousing"@en .
+
+icat:I4600 a skos:Concept ;
+    skos:broader icat:I0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Road Transport."@en ;
+    skos:notation "I4600" ;
+    skos:prefLabel "Road Transport"@en .
+
+icat:I4610 a skos:Concept ;
+    skos:broader icat:I4600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Road Freight Transport."@en ;
+    skos:notation "I4610" ;
+    skos:prefLabel "Road Freight Transport"@en .
+
+icat:I4620 a skos:Concept ;
+    skos:broader icat:I4600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Road Passenger Transport."@en ;
+    skos:notation "I4620" ;
+    skos:prefLabel "Road Passenger Transport"@en .
+
+icat:I4700 a skos:Concept ;
+    skos:broader icat:I0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Rail Transport."@en ;
+    skos:notation "I4700" ;
+    skos:prefLabel "Rail Transport"@en .
+
+icat:I4710 a skos:Concept ;
+    skos:broader icat:I4700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Rail Freight Transport."@en ;
+    skos:notation "I4710" ;
+    skos:prefLabel "Rail Freight Transport"@en .
+
+icat:I4720 a skos:Concept ;
+    skos:broader icat:I4700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Rail Passenger Transport."@en ;
+    skos:notation "I4720" ;
+    skos:prefLabel "Rail Passenger Transport"@en .
+
+icat:I4800 a skos:Concept ;
+    skos:broader icat:I0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Water Transport."@en ;
+    skos:notation "I4800" ;
+    skos:prefLabel "Water Transport"@en .
+
+icat:I4810 a skos:Concept ;
+    skos:broader icat:I4800 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Water Freight Transport."@en ;
+    skos:notation "I4810" ;
+    skos:prefLabel "Water Freight Transport"@en .
+
+icat:I4820 a skos:Concept ;
+    skos:broader icat:I4800 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Water Passenger Transport."@en ;
+    skos:notation "I4820" ;
+    skos:prefLabel "Water Passenger Transport"@en .
+
+icat:I4900 a skos:Concept ;
+    skos:broader icat:I0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Air and Space Transport."@en ;
+    skos:notation "I4900" ;
+    skos:prefLabel "Air and Space Transport"@en .
+
+icat:I5000 a skos:Concept ;
+    skos:broader icat:I0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Transport."@en ;
+    skos:notation "I5000" ;
+    skos:prefLabel "Other Transport"@en .
+
+icat:I5010 a skos:Concept ;
+    skos:broader icat:I5000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Scenic and Sightseeing Transport."@en ;
+    skos:notation "I5010" ;
+    skos:prefLabel "Scenic and Sightseeing Transport"@en .
+
+icat:I5020 a skos:Concept ;
+    skos:broader icat:I5000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Pipeline and Other Transport."@en ;
+    skos:notation "I5020" ;
+    skos:prefLabel "Pipeline and Other Transport"@en .
+
+icat:I5100 a skos:Concept ;
+    skos:broader icat:I0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Postal and Courier Pick-up and Delivery Services."@en ;
+    skos:notation "I5100" ;
+    skos:prefLabel "Postal and Courier Pick-up and Delivery Services"@en .
+
+icat:I5200 a skos:Concept ;
+    skos:broader icat:I0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Transport Support Services."@en ;
+    skos:notation "I5200" ;
+    skos:prefLabel "Transport Support Services"@en .
+
+icat:I5210 a skos:Concept ;
+    skos:broader icat:I5200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Water Transport Support Services."@en ;
+    skos:notation "I5210" ;
+    skos:prefLabel "Water Transport Support Services"@en .
+
+icat:I5220 a skos:Concept ;
+    skos:broader icat:I5200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Airport Operations and Other Air Transport Support Services."@en ;
+    skos:notation "I5220" ;
+    skos:prefLabel "Airport Operations and Other Air Transport Support Services"@en .
+
+icat:I5290 a skos:Concept ;
+    skos:broader icat:I5200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Transport Support Services."@en ;
+    skos:notation "I5290" ;
+    skos:prefLabel "Other Transport Support Services"@en .
+
+icat:I5300 a skos:Concept ;
+    skos:broader icat:I0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Warehousing and Storage Services."@en ;
+    skos:notation "I5300" ;
+    skos:prefLabel "Warehousing and Storage Services"@en .
+
+icat:J0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Information Media and Telecommunications."@en ;
+    skos:notation "J0000" ;
+    skos:prefLabel "Information Media and Telecommunications"@en .
+
+icat:J5400 a skos:Concept ;
+    skos:broader icat:J0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Publishing (except Internet and Music Publishing)."@en ;
+    skos:notation "J5400" ;
+    skos:prefLabel "Publishing (except Internet and Music Publishing)"@en .
+
+icat:J5410 a skos:Concept ;
+    skos:broader icat:J5400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Newspaper, Periodical, Book and Directory Publishing."@en ;
+    skos:notation "J5410" ;
+    skos:prefLabel "Newspaper, Periodical, Book and Directory Publishing"@en .
+
+icat:J5420 a skos:Concept ;
+    skos:broader icat:J5400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Software Publishing."@en ;
+    skos:notation "J5420" ;
+    skos:prefLabel "Software Publishing"@en .
+
+icat:J5500 a skos:Concept ;
+    skos:broader icat:J0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Motion Picture and Sound Recording Activities."@en ;
+    skos:notation "J5500" ;
+    skos:prefLabel "Motion Picture and Sound Recording Activities"@en .
+
+icat:J5510 a skos:Concept ;
+    skos:broader icat:J5500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Motion Picture and Video Activities."@en ;
+    skos:notation "J5510" ;
+    skos:prefLabel "Motion Picture and Video Activities"@en .
+
+icat:J5520 a skos:Concept ;
+    skos:broader icat:J5500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Sound Recording and Music Publishing."@en ;
+    skos:notation "J5520" ;
+    skos:prefLabel "Sound Recording and Music Publishing"@en .
+
+icat:J5600 a skos:Concept ;
+    skos:broader icat:J0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Broadcasting (except Internet)."@en ;
+    skos:notation "J5600" ;
+    skos:prefLabel "Broadcasting (except Internet)"@en .
+
+icat:J5610 a skos:Concept ;
+    skos:broader icat:J5600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Radio Broadcasting."@en ;
+    skos:notation "J5610" ;
+    skos:prefLabel "Radio Broadcasting"@en .
+
+icat:J5620 a skos:Concept ;
+    skos:broader icat:J5600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Television Broadcasting."@en ;
+    skos:notation "J5620" ;
+    skos:prefLabel "Television Broadcasting"@en .
+
+icat:J5700 a skos:Concept ;
+    skos:broader icat:J0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Internet Publishing and Broadcasting."@en ;
+    skos:notation "J5700" ;
+    skos:prefLabel "Internet Publishing and Broadcasting"@en .
+
+icat:J5800 a skos:Concept ;
+    skos:broader icat:J0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Telecommunications Services."@en ;
+    skos:notation "J5800" ;
+    skos:prefLabel "Telecommunications Services"@en .
+
+icat:J5900 a skos:Concept ;
+    skos:broader icat:J0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Internet Service Providers, Web Search Portals and Data Processing Services."@en ;
+    skos:notation "J5900" ;
+    skos:prefLabel "Internet Service Providers, Web Search Portals and Data Processing Services"@en .
+
+icat:J5910 a skos:Concept ;
+    skos:broader icat:J5900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Internet Service Providers and Web Search Portals."@en ;
+    skos:notation "J5910" ;
+    skos:prefLabel "Internet Service Providers and Web Search Portals"@en .
+
+icat:J5920 a skos:Concept ;
+    skos:broader icat:J5900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Data Processing, Web Hosting and Electronic Information Storage Services."@en ;
+    skos:notation "J5920" ;
+    skos:prefLabel "Data Processing, Web Hosting and Electronic Information Storage Services"@en .
+
+icat:J6000 a skos:Concept ;
+    skos:broader icat:J0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Library and Other Information Services."@en ;
+    skos:notation "J6000" ;
+    skos:prefLabel "Library and Other Information Services"@en .
+
+icat:J6010 a skos:Concept ;
+    skos:broader icat:J6000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Libraries and Archives."@en ;
+    skos:notation "J6010" ;
+    skos:prefLabel "Libraries and Archives"@en .
+
+icat:J6020 a skos:Concept ;
+    skos:broader icat:J6000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Information Services."@en ;
+    skos:notation "J6020" ;
+    skos:prefLabel "Other Information Services"@en .
+
+icat:K0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Financial and Insurance Services."@en ;
+    skos:notation "K0000" ;
+    skos:prefLabel "Financial and Insurance Services"@en .
+
+icat:K6200 a skos:Concept ;
+    skos:broader icat:K0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Finance."@en ;
+    skos:notation "K6200" ;
+    skos:prefLabel "Finance"@en .
+
+icat:K6210 a skos:Concept ;
+    skos:broader icat:K6200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Central Banking."@en ;
+    skos:notation "K6210" ;
+    skos:prefLabel "Central Banking"@en .
+
+icat:K6220 a skos:Concept ;
+    skos:broader icat:K6200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Depository Financial Intermediation."@en ;
+    skos:notation "K6220" ;
+    skos:prefLabel "Depository Financial Intermediation"@en .
+
+icat:K6230 a skos:Concept ;
+    skos:broader icat:K6200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Non-Depository Financing."@en ;
+    skos:notation "K6230" ;
+    skos:prefLabel "Non-Depository Financing"@en .
+
+icat:K6240 a skos:Concept ;
+    skos:broader icat:K6200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Financial Asset Investing."@en ;
+    skos:notation "K6240" ;
+    skos:prefLabel "Financial Asset Investing"@en .
+
+icat:K6300 a skos:Concept ;
+    skos:broader icat:K0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Insurance and Superannuation Funds."@en ;
+    skos:notation "K6300" ;
+    skos:prefLabel "Insurance and Superannuation Funds"@en .
+
+icat:K6310 a skos:Concept ;
+    skos:broader icat:K6300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Life Insurance."@en ;
+    skos:notation "K6310" ;
+    skos:prefLabel "Life Insurance"@en .
+
+icat:K6320 a skos:Concept ;
+    skos:broader icat:K6300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Health and General Insurance."@en ;
+    skos:notation "K6320" ;
+    skos:prefLabel "Health and General Insurance"@en .
+
+icat:K6330 a skos:Concept ;
+    skos:broader icat:K6300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Superannuation Funds."@en ;
+    skos:notation "K6330" ;
+    skos:prefLabel "Superannuation Funds"@en .
+
+icat:K6400 a skos:Concept ;
+    skos:broader icat:K0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Auxiliary Finance and Insurance Services."@en ;
+    skos:notation "K6400" ;
+    skos:prefLabel "Auxiliary Finance and Insurance Services"@en .
+
+icat:K6410 a skos:Concept ;
+    skos:broader icat:K6400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Auxiliary Finance and Investment Services."@en ;
+    skos:notation "K6410" ;
+    skos:prefLabel "Auxiliary Finance and Investment Services"@en .
+
+icat:K6420 a skos:Concept ;
+    skos:broader icat:K6400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Auxiliary Insurance Services."@en ;
+    skos:notation "K6420" ;
+    skos:prefLabel "Auxiliary Insurance Services"@en .
+
+icat:L0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Rental, Hiring and Real Estate Services."@en ;
+    skos:notation "L0000" ;
+    skos:prefLabel "Rental, Hiring and Real Estate Services"@en .
+
+icat:L6600 a skos:Concept ;
+    skos:broader icat:L0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Rental and Hiring Services (except Real Estate)."@en ;
+    skos:notation "L6600" ;
+    skos:prefLabel "Rental and Hiring Services (except Real Estate)"@en .
+
+icat:L6610 a skos:Concept ;
+    skos:broader icat:L6600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Motor Vehicle and Transport Equipment Rental and Hiring."@en ;
+    skos:notation "L6610" ;
+    skos:prefLabel "Motor Vehicle and Transport Equipment Rental and Hiring"@en .
+
+icat:L6620 a skos:Concept ;
+    skos:broader icat:L6600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Farm Animal and Bloodstock Leasing."@en ;
+    skos:notation "L6620" ;
+    skos:prefLabel "Farm Animal and Bloodstock Leasing"@en .
+
+icat:L6630 a skos:Concept ;
+    skos:broader icat:L6600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Goods and Equipment Rental and Hiring."@en ;
+    skos:notation "L6630" ;
+    skos:prefLabel "Other Goods and Equipment Rental and Hiring"@en .
+
+icat:L6640 a skos:Concept ;
+    skos:broader icat:L6600 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Non-Financial Intangible Assets (Except Copyrights) Leasing."@en ;
+    skos:notation "L6640" ;
+    skos:prefLabel "Non-Financial Intangible Assets (Except Copyrights) Leasing"@en .
+
+icat:L6700 a skos:Concept ;
+    skos:broader icat:L0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Property Operators and Real Estate Services."@en ;
+    skos:notation "L6700" ;
+    skos:prefLabel "Property Operators and Real Estate Services"@en .
+
+icat:L6710 a skos:Concept ;
+    skos:broader icat:L6700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Property Operators."@en ;
+    skos:notation "L6710" ;
+    skos:prefLabel "Property Operators"@en .
+
+icat:L6720 a skos:Concept ;
+    skos:broader icat:L6700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Real Estate Services."@en ;
+    skos:notation "L6720" ;
+    skos:prefLabel "Real Estate Services"@en .
+
+icat:M0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Professional, Scientific and Technical Services."@en ;
+    skos:notation "M0000" ;
+    skos:prefLabel "Professional, Scientific and Technical Services"@en .
+
+icat:M6900 a skos:Concept ;
+    skos:broader icat:M0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Professional, Scientific and Technical Services (Except Computer System Design and Related Services)."@en ;
+    skos:notation "M6900" ;
+    skos:prefLabel "Professional, Scientific and Technical Services (Except Computer System Design and Related Services)"@en .
+
+icat:M6910 a skos:Concept ;
+    skos:broader icat:M6900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Scientific Research Services."@en ;
+    skos:notation "M6910" ;
+    skos:prefLabel "Scientific Research Services"@en .
+
+icat:M6920 a skos:Concept ;
+    skos:broader icat:M6900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Architectural, Engineering and Technical Services."@en ;
+    skos:notation "M6920" ;
+    skos:prefLabel "Architectural, Engineering and Technical Services"@en .
+
+icat:M6930 a skos:Concept ;
+    skos:broader icat:M6900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Legal and Accounting Services."@en ;
+    skos:notation "M6930" ;
+    skos:prefLabel "Legal and Accounting Services"@en .
+
+icat:M6940 a skos:Concept ;
+    skos:broader icat:M6900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Advertising Services."@en ;
+    skos:notation "M6940" ;
+    skos:prefLabel "Advertising Services"@en .
+
+icat:M6950 a skos:Concept ;
+    skos:broader icat:M6900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Market Research and Statistical Services."@en ;
+    skos:notation "M6950" ;
+    skos:prefLabel "Market Research and Statistical Services"@en .
+
+icat:M6960 a skos:Concept ;
+    skos:broader icat:M6900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Management and Related Consulting Services."@en ;
+    skos:notation "M6960" ;
+    skos:prefLabel "Management and Related Consulting Services"@en .
+
+icat:M6970 a skos:Concept ;
+    skos:broader icat:M6900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Veterinary Services."@en ;
+    skos:notation "M6970" ;
+    skos:prefLabel "Veterinary Services"@en .
+
+icat:M6990 a skos:Concept ;
+    skos:broader icat:M6900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Professional, Scientific and Technical Services."@en ;
+    skos:notation "M6990" ;
+    skos:prefLabel "Other Professional, Scientific and Technical Services"@en .
+
+icat:M7000 a skos:Concept ;
+    skos:broader icat:M0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Computer System Design and Related Services."@en ;
+    skos:notation "M7000" ;
+    skos:prefLabel "Computer System Design and Related Services"@en .
+
+icat:N0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Administrative and Support Services."@en ;
+    skos:notation "N0000" ;
+    skos:prefLabel "Administrative and Support Services"@en .
+
+icat:N7200 a skos:Concept ;
+    skos:broader icat:N0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Administrative Services."@en ;
+    skos:notation "N7200" ;
+    skos:prefLabel "Administrative Services"@en .
+
+icat:N7210 a skos:Concept ;
+    skos:broader icat:N7200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Employment Services."@en ;
+    skos:notation "N7210" ;
+    skos:prefLabel "Employment Services"@en .
+
+icat:N7220 a skos:Concept ;
+    skos:broader icat:N7200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Travel Agency and Tour Arrangement Services."@en ;
+    skos:notation "N7220" ;
+    skos:prefLabel "Travel Agency and Tour Arrangement Services"@en .
+
+icat:N7290 a skos:Concept ;
+    skos:broader icat:N7200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Administrative Services."@en ;
+    skos:notation "N7290" ;
+    skos:prefLabel "Other Administrative Services"@en .
+
+icat:N7300 a skos:Concept ;
+    skos:broader icat:N0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Building Cleaning, Pest Control and Other Support Services."@en ;
+    skos:notation "N7300" ;
+    skos:prefLabel "Building Cleaning, Pest Control and Other Support Services"@en .
+
+icat:N7310 a skos:Concept ;
+    skos:broader icat:N7300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Building Cleaning, Pest Control and Gardening Services."@en ;
+    skos:notation "N7310" ;
+    skos:prefLabel "Building Cleaning, Pest Control and Gardening Services"@en .
+
+icat:N7320 a skos:Concept ;
+    skos:broader icat:N7300 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Packaging Services."@en ;
+    skos:notation "N7320" ;
+    skos:prefLabel "Packaging Services"@en .
+
+icat:O0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Public Administration and Safety."@en ;
+    skos:notation "O0000" ;
+    skos:prefLabel "Public Administration and Safety"@en .
+
+icat:O7500 a skos:Concept ;
+    skos:broader icat:O0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Public Administration."@en ;
+    skos:notation "O7500" ;
+    skos:prefLabel "Public Administration"@en .
+
+icat:O7510 a skos:Concept ;
+    skos:broader icat:O7500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Central Government Administration."@en ;
+    skos:notation "O7510" ;
+    skos:prefLabel "Central Government Administration"@en .
+
+icat:O7520 a skos:Concept ;
+    skos:broader icat:O7500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is State Government Administration."@en ;
+    skos:notation "O7520" ;
+    skos:prefLabel "State Government Administration"@en .
+
+icat:O7530 a skos:Concept ;
+    skos:broader icat:O7500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Local Government Administration."@en ;
+    skos:notation "O7530" ;
+    skos:prefLabel "Local Government Administration"@en .
+
+icat:O7540 a skos:Concept ;
+    skos:broader icat:O7500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Justice."@en ;
+    skos:notation "O7540" ;
+    skos:prefLabel "Justice"@en .
+
+icat:O7550 a skos:Concept ;
+    skos:broader icat:O7500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Government Representation."@en ;
+    skos:notation "O7550" ;
+    skos:prefLabel "Government Representation"@en .
+
+icat:O7600 a skos:Concept ;
+    skos:broader icat:O0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Defence."@en ;
+    skos:notation "O7600" ;
+    skos:prefLabel "Defence"@en .
+
+icat:O7700 a skos:Concept ;
+    skos:broader icat:O0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Public Order, Safety and Regulatory Services."@en ;
+    skos:notation "O7700" ;
+    skos:prefLabel "Public Order, Safety and Regulatory Services"@en .
+
+icat:O7710 a skos:Concept ;
+    skos:broader icat:O7700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Public Order and Safety Services."@en ;
+    skos:notation "O7710" ;
+    skos:prefLabel "Public Order and Safety Services"@en .
+
+icat:O7720 a skos:Concept ;
+    skos:broader icat:O7700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Regulatory Services."@en ;
+    skos:notation "O7720" ;
+    skos:prefLabel "Regulatory Services"@en .
+
+icat:P0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Education and Training."@en ;
+    skos:notation "P0000" ;
+    skos:prefLabel "Education and Training"@en .
+
+icat:P8000 a skos:Concept ;
+    skos:broader icat:P0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Preschool and School Education."@en ;
+    skos:notation "P8000" ;
+    skos:prefLabel "Preschool and School Education"@en .
+
+icat:P8010 a skos:Concept ;
+    skos:broader icat:P8000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Preschool Education."@en ;
+    skos:notation "P8010" ;
+    skos:prefLabel "Preschool Education"@en .
+
+icat:P8020 a skos:Concept ;
+    skos:broader icat:P8000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is School Education."@en ;
+    skos:notation "P8020" ;
+    skos:prefLabel "School Education"@en .
+
+icat:P8100 a skos:Concept ;
+    skos:broader icat:P0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Tertiary Education."@en ;
+    skos:notation "P8100" ;
+    skos:prefLabel "Tertiary Education"@en .
+
+icat:P8200 a skos:Concept ;
+    skos:broader icat:P0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Adult, Community and Other Education."@en ;
+    skos:notation "P8200" ;
+    skos:prefLabel "Adult, Community and Other Education"@en .
+
+icat:P8220 a skos:Concept ;
+    skos:broader icat:P8200 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Educational Support Services."@en ;
+    skos:notation "P8220" ;
+    skos:prefLabel "Educational Support Services"@en .
+
+icat:Q0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Health Care and Social Assistance."@en ;
+    skos:notation "Q0000" ;
+    skos:prefLabel "Health Care and Social Assistance"@en .
+
+icat:Q8400 a skos:Concept ;
+    skos:broader icat:Q0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Hospitals."@en ;
+    skos:notation "Q8400" ;
+    skos:prefLabel "Hospitals"@en .
+
+icat:Q8500 a skos:Concept ;
+    skos:broader icat:Q0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Medical and Other Health Care Services."@en ;
+    skos:notation "Q8500" ;
+    skos:prefLabel "Medical and Other Health Care Services"@en .
+
+icat:Q8510 a skos:Concept ;
+    skos:broader icat:Q8500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Medical Services."@en ;
+    skos:notation "Q8510" ;
+    skos:prefLabel "Medical Services"@en .
+
+icat:Q8520 a skos:Concept ;
+    skos:broader icat:Q8500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Pathology and Diagnostic Imaging Services."@en ;
+    skos:notation "Q8520" ;
+    skos:prefLabel "Pathology and Diagnostic Imaging Services"@en .
+
+icat:Q8530 a skos:Concept ;
+    skos:broader icat:Q8500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Allied Health Services."@en ;
+    skos:notation "Q8530" ;
+    skos:prefLabel "Allied Health Services"@en .
+
+icat:Q8590 a skos:Concept ;
+    skos:broader icat:Q8500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Health Care Services."@en ;
+    skos:notation "Q8590" ;
+    skos:prefLabel "Other Health Care Services"@en .
+
+icat:Q8600 a skos:Concept ;
+    skos:broader icat:Q0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Residential Care Services."@en ;
+    skos:notation "Q8600" ;
+    skos:prefLabel "Residential Care Services"@en .
+
+icat:Q8700 a skos:Concept ;
+    skos:broader icat:Q0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Social Assistance Services."@en ;
+    skos:notation "Q8700" ;
+    skos:prefLabel "Social Assistance Services"@en .
+
+icat:Q8710 a skos:Concept ;
+    skos:broader icat:Q8700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Child Care Services."@en ;
+    skos:notation "Q8710" ;
+    skos:prefLabel "Child Care Services"@en .
+
+icat:Q8790 a skos:Concept ;
+    skos:broader icat:Q8700 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Social Assistance Services."@en ;
+    skos:notation "Q8790" ;
+    skos:prefLabel "Other Social Assistance Services"@en .
+
+icat:R0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Arts and Recreation Services."@en ;
+    skos:notation "R0000" ;
+    skos:prefLabel "Arts and Recreation Services"@en .
+
+icat:R8900 a skos:Concept ;
+    skos:broader icat:R0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Heritage Activities."@en ;
+    skos:notation "R8900" ;
+    skos:prefLabel "Heritage Activities"@en .
+
+icat:R8910 a skos:Concept ;
+    skos:broader icat:R8900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Museum Operation."@en ;
+    skos:notation "R8910" ;
+    skos:prefLabel "Museum Operation"@en .
+
+icat:R8920 a skos:Concept ;
+    skos:broader icat:R8900 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Parks and Gardens Operations."@en ;
+    skos:notation "R8920" ;
+    skos:prefLabel "Parks and Gardens Operations"@en .
+
+icat:R9000 a skos:Concept ;
+    skos:broader icat:R0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Creative and Performing Arts Activities."@en ;
+    skos:notation "R9000" ;
+    skos:prefLabel "Creative and Performing Arts Activities"@en .
+
+icat:R9100 a skos:Concept ;
+    skos:broader icat:R0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Sports and Recreation Activities."@en ;
+    skos:notation "R9100" ;
+    skos:prefLabel "Sports and Recreation Activities"@en .
+
+icat:R9110 a skos:Concept ;
+    skos:broader icat:R9100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Sports and Physical Recreation Activities."@en ;
+    skos:notation "R9110" ;
+    skos:prefLabel "Sports and Physical Recreation Activities"@en .
+
+icat:R9120 a skos:Concept ;
+    skos:broader icat:R9100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Horse and Dog Racing Activities."@en ;
+    skos:notation "R9120" ;
+    skos:prefLabel "Horse and Dog Racing Activities"@en .
+
+icat:R9130 a skos:Concept ;
+    skos:broader icat:R9100 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Amusement and Other Recreation Activities."@en ;
+    skos:notation "R9130" ;
+    skos:prefLabel "Amusement and Other Recreation Activities"@en .
+
+icat:R9200 a skos:Concept ;
+    skos:broader icat:R0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Gambling Activities."@en ;
+    skos:notation "R9200" ;
+    skos:prefLabel "Gambling Activities"@en .
+
+icat:S0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Services."@en ;
+    skos:notation "S0000" ;
+    skos:prefLabel "Other Services"@en .
+
+icat:S9400 a skos:Concept ;
+    skos:broader icat:S0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Repair and Maintenance."@en ;
+    skos:notation "S9400" ;
+    skos:prefLabel "Repair and Maintenance"@en .
+
+icat:S9410 a skos:Concept ;
+    skos:broader icat:S9400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Automotive Repair and Maintenance."@en ;
+    skos:notation "S9410" ;
+    skos:prefLabel "Automotive Repair and Maintenance"@en .
+
+icat:S9420 a skos:Concept ;
+    skos:broader icat:S9400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Machinery and Equipment Repair and Maintenance."@en ;
+    skos:notation "S9420" ;
+    skos:prefLabel "Machinery and Equipment Repair and Maintenance"@en .
+
+icat:S9490 a skos:Concept ;
+    skos:broader icat:S9400 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Repair and Maintenance."@en ;
+    skos:notation "S9490" ;
+    skos:prefLabel "Other Repair and Maintenance"@en .
+
+icat:S9500 a skos:Concept ;
+    skos:broader icat:S0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Personal and Other Services."@en ;
+    skos:notation "S9500" ;
+    skos:prefLabel "Personal and Other Services"@en .
+
+icat:S9510 a skos:Concept ;
+    skos:broader icat:S9500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Personal Care Services."@en ;
+    skos:notation "S9510" ;
+    skos:prefLabel "Personal Care Services"@en .
+
+icat:S9520 a skos:Concept ;
+    skos:broader icat:S9500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Funeral, Crematorium and Cemetery Services."@en ;
+    skos:notation "S9520" ;
+    skos:prefLabel "Funeral, Crematorium and Cemetery Services"@en .
+
+icat:S9530 a skos:Concept ;
+    skos:broader icat:S9500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Other Personal Services."@en ;
+    skos:notation "S9530" ;
+    skos:prefLabel "Other Personal Services"@en .
+
+icat:S9540 a skos:Concept ;
+    skos:broader icat:S9500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Religious Services."@en ;
+    skos:notation "S9540" ;
+    skos:prefLabel "Religious Services"@en .
+
+icat:S9550 a skos:Concept ;
+    skos:broader icat:S9500 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Civic, Professional and Other Interest Group Services."@en ;
+    skos:notation "S9550" ;
+    skos:prefLabel "Civic, Professional and Other Interest Group Services"@en .
+
+icat:S9600 a skos:Concept ;
+    skos:broader icat:S0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Private Households Employing Staff and Undifferentiated Goods and Service Producing Activities of Households for Own Use."@en ;
+    skos:notation "S9600" ;
+    skos:prefLabel "Private Households Employing Staff and Undifferentiated Goods and Service Producing Activities of Households for Own Use"@en .
+
+icat:X0000 a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/anzsic-2006> ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is Undefined Industry."@en ;
+    skos:notation "X0000" ;
+    skos:prefLabel "Undefined Industry"@en .
+
+icat:X9800 a skos:Concept ;
+    skos:broader icat:X0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is unspecified or is not available for selection with provided list. This typically applies to a known industrial classification that is not relevant to a high degree of specificity in a specific use case."@en ;
+    skos:notation "X9800" ;
+    skos:altLabel "Other"@en, "Other Industry"@en ;
+    skos:prefLabel "Unspecified Industry"@en .
+
+icat:X9900 a skos:Concept ;
+    skos:broader icat:X0000 ;
+    rdfs:isDefinedBy <https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument> ;
+    skos:inScheme <http://linked.data.gov.au/def/anzsic-2006> ;
+    skos:definition "An individual business entity whose predominant economic activity is unknown."@en ;
+    skos:notation "X9900" ;
+    skos:altLabel "Unknown Industry"@en ;
+    skos:prefLabel "Unknown"@en .
+
+icat:coal-buyer a skos:Collection ;
+    skos:definition "Industry categorisations as applicable to coal sales."@en ;
+    skos:member icat:B0600,
+        icat:C0000,
+        icat:C2100,
+        icat:D2610,
+        icat:X9800,
+        icat:X9900 ;
+    skos:prefLabel "Coal Buyer Industry"@en .
