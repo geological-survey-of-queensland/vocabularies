@@ -32,6 +32,13 @@
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
+als:informal a skos:Concept ;
+    skos:definition "Any identifier used informally outside standardised naming conventions, such as colloquial, local, and company terms."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Informal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+
 als:colloquial a skos:Concept ;
     skos:altLabel "Common"@en,
         "Informal"@en,
@@ -41,6 +48,17 @@ als:colloquial a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
     skos:prefLabel "Colloquial"@en ;
+    skos:broader als:informal .
+
+als:first-nations a skos:Concept ;
+    skos:altLabel "Indigenous Name"@en,
+        "Aboriginal or Torres Strait Island Name"@en,
+        "Aboriginal Name"@en,
+        "Torres Strait Islands Name"@en ; 
+    skos:definition "Any name given to a feature by first nations groups."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "First Nations Name"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
 als:gsq-legacy a skos:Concept ;
@@ -74,6 +92,15 @@ als:geoscience-australia a skos:Concept ;
     skos:prefLabel "Geoscience Australia"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
+als:agso a skos:Concept ;
+    skos:altLabel "AGSO"@en,
+        "AGSO_GEODX_ID"@en ;
+    skos:definition "An historic code used by Geoscience Australia (formerly Australian Geological Survey Organisation), for the identification of rock units in the Australian Stratigraphic Units Database (ASUD)"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Australian Geological Survey Organisation Rock Codes"@en ;
+    skos:broader als:geoscience-australia .
+
 als:mmol a skos:Concept ;
     skos:altLabel "MyMinesOnline"@en ;
     skos:definition "An identifier used by the MyMinesOnline system administered by the Department."@en ;
@@ -104,7 +131,7 @@ als:operator a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
     skos:prefLabel "Operator"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+    skos:broader als:informal .
 
 als:service-provider a skos:Concept ;
     skos:altLabel "Contractor"@en ;
@@ -112,7 +139,7 @@ als:service-provider a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
     skos:prefLabel "Service Provider"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+    skos:broader als:informal .
 
 als:treasury a skos:Concept ;
     skos:altLabel "Queensland Treasury"@en ;
@@ -128,7 +155,7 @@ als:company a skos:Collection ;
         als:service-provider ;
     skos:prefLabel "Company"@en .
 
-als:government- a skos:Collection ;
+als:government a skos:Collection ;
     skos:definition "Aliases used by other groups within the Department, other departments within Queensland Government, or other Government Agencies."@en ;
     skos:member als:des,
         als:geoscience-australia,
