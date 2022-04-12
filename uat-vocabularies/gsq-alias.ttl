@@ -18,13 +18,13 @@
     skos:hasTopConcept als:colloquial,
         als:des,
         als:geoscience-australia,
-        als:gsq-legacy,
+        als:legacy,
         als:igsn,
         als:mmol,
         als:ogia,
         als:rshq,
-        als:operator,
-        als:service-provider,
+        als:informal,
+        als:formal,
         als:treasury ;
     skos:prefLabel "GSQ Alias"@en .
 
@@ -37,6 +37,13 @@ als:informal a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
     skos:prefLabel "Informal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+
+als:formal a skos:Concept ;
+    skos:definition "Any identifying name used officially by a governing body for the subject matter."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Formal"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
 als:colloquial a skos:Concept ;
@@ -61,12 +68,22 @@ als:first-nations a skos:Concept ;
     skos:prefLabel "First Nations Name"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
+als:legacy a skos:Concept ;
+    skos:altLabel "Obsolete"@en,
+        "Historic"@en,
+        "Superseded"@en ;
+    skos:definition "Any superseded identifier, code, or name."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Legacy"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+
 als:gsq-legacy a skos:Concept ;
     skos:definition "Any superseded identifier, code, or name previously used by the Geological Survey of Queensland."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
     skos:prefLabel "GSQ Legacy"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+    skos:broader als:legacy .
 
 als:igsn a skos:Concept ;
     skos:altLabel "International Geo Sample Number"@en ;
@@ -74,6 +91,13 @@ als:igsn a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
     skos:prefLabel "IGSN"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+
+als:invalid a skos:Concept ;
+    skos:definition "Published name that has not been reserved, and is potentially or actually confusing, due to similarity with existing, longer standing terminology."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Invalid"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
 als:des a skos:Concept ;
@@ -159,6 +183,7 @@ als:government a skos:Collection ;
     skos:definition "Aliases used by other groups within the Department, other departments within Queensland Government, or other Government Agencies."@en ;
     skos:member als:des,
         als:geoscience-australia,
+        als:agso,
         als:mmol,
         als:ogia,
         als:treasury ;
