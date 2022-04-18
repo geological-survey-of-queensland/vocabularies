@@ -12,7 +12,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-01-04"^^xsd:date ;
+    dcterms:modified "2022-04-19"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
@@ -26,9 +26,9 @@
         gsqst:pit,
         gsqst:project-site,
         gsqst:quarry,
-        gsqst:rock-unit,
+        gsqst:geofeature,
         gsqst:trench,
-        gsqst:resource-authority,
+        gsqst:administrative-area,
         #gsqst:wellbore,
         gsqst:unknown ;
     skos:prefLabel "Geological Sites"@en .
@@ -297,14 +297,13 @@ gsqst:pit a skos:Concept ;
     skos:prefLabel "Pit"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
 
-gsqst:rock-unit a skos:Concept ;
-    skos:definition "Bodies of rock grouped by their characteristics, not by time. The units include (from major to minor) groups, formations, and members."@en ;
+gsqst:geofeature a skos:Concept ;
+    skos:definition "A site that is coincident with a geological feature, i.e. the spatial overlay that represents a geological feature in its entirety."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
-    skos:notation "ru" ;
-    skos:prefLabel "Rock unit"@en ;
+    skos:notation "gf" ;
+    skos:prefLabel "Geological Feature"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
-
 
 gsqst:project-site a skos:Concept ;
     skos:altLabel "Project"@en,
@@ -326,6 +325,14 @@ gsqst:trench a skos:Concept ;
     skos:prefLabel "Trench"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
 
+gsqst:administrative-area a skos:Concept ;
+    skos:definition "An area of geological significance or definition, such as the location of a set of observations, surveys, or studies that is defined by an administrative boundary rather than a geological boundary."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "aa" ;
+    skos:prefLabel "Administrative Area"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+
 gsqst:resource-authority a skos:Concept ;
     skos:altLabel "Permit"@en,
         "Tenure"@en ;
@@ -334,7 +341,17 @@ gsqst:resource-authority a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
     skos:notation "ra" ;
     skos:prefLabel "Resource authority"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+    skos:broader gsqst:administrative-area .
+
+gsqst:lga a skos:Concept ;
+    skos:definition "Local government area (LGA) is one of the spatial units defined under the non–ABS structures of the Australian Statistical Geography Standard (ASGS). Each area is governed by a local city, regional, town, or shire council."@en ;
+    skos:altLabel "L.G.A."@en,
+        "LGA"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "lga" ;
+    skos:prefLabel "Local Government Area"@en ;
+    skos:broader gsqst:administrative-area .
 
 #gsqst:wellbore a skos:Concept ;
 #    skos:altLabel "Branch"@en,
