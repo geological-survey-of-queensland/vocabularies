@@ -326,12 +326,22 @@ gsqst:trench a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
 
 gsqst:administrative-area a skos:Concept ;
-    skos:definition "An area of geological significance or definition, such as the location of a set of observations, surveys, or studies that is defined by an administrative boundary rather than a geological boundary."@en ;
+    skos:definition "An area of geological significance or definition, such as the location of a set of observations, surveys, or studies that is defined by an administrative or artificial boundary rather than a geological boundary."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
     skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
     skos:notation "aa" ;
     skos:prefLabel "Administrative Area"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+
+gsqst:map-sheet a skos:Concept ;
+    skos:altLabel "Mapsheet"@en,
+        "Map Series"@en ;
+    skos:definition "A map series is a group of topographic or thematic maps or charts usually having the same scale and cartographic specifications, and with each sheet appropriately identified by its publisher as belonging to the same series. Map series occur when an area is to be covered by a map that, due to its scale, must be spread over several sheets. Nevertheless, the individual sheets of a map series can also be used quite independently, as they generally have full map surround details and legends. If a publisher produces several map series at different scales, then these series are called scale series."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "ms" ;
+    skos:prefLabel "Map Sheet"@en ;
+    skos:broader gsqst:administrative-area .
 
 gsqst:resource-authority a skos:Concept ;
     skos:altLabel "Permit"@en,
