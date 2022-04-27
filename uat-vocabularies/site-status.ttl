@@ -50,9 +50,26 @@ ststs:monitoring a skos:Concept ;
 
 ststs:not-producing a skos:Concept ;
     skos:broader ststs:active ;
-    skos:definition "A site that is an active part of a project or operation but is not currently contributing to production. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease that is part of an active mine but is not contributing to mine production due to project staging or by being used as a site for mine processing or infrastructure."@en ;
+    skos:definition "A site that is part of a project or operation that is not currently contributing to production and is not conducting other operational activities. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease that is part of an active mine but is temporarily not contributing to mine production."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Not Producing"@en .
+
+ststs:operational-non-prod a skos:Concept ;
+    skos:altLabel "Operating But Not Producing"@en,
+        "Operating Not Producing"@en,
+        "Excavation"@en,
+        "Preparation"@en ;
+    skos:broader ststs:active ;
+    skos:definition "A site that is an active part of a project or operation that typically contributes to production but is not currently due to other activities. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease in which excavation is occuring after construction but prior to or between extraction phases."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Non-Productive Operation"@en .
+
+ ststs:secondary-operation a skos:Concept ;
+    skos:altLabel "Other Purpose"@en ;
+    skos:broader ststs:active ;
+    skos:definition "A site that is an active part of a project or operation but is not involved in resource extraction. Such as supporting secondary activities including resoure processing, site access, adminstration, or infrastructure. "@en ;
+    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:prefLabel "Secondary Operations"@en .
 
 ststs:on-injection a skos:Concept ;
     skos:broader ststs:active ;
@@ -178,7 +195,7 @@ ststs:rehabilitation a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
 
 ststs:processing a skos:Concept ;
-    skos:broader ststs:active ;
+    skos:broader ststs:secondary-operation ;
     skos:definition "A site such as a mine or quarry which is processing but not mining raw material throughout the reporting period."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/retention> ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
@@ -223,11 +240,19 @@ ststs:minocc a skos:Collection ;
         ststs:unknown ;
     skos:prefLabel "Minocc"@en .
 
+ststs:minprodstat a skos:Collection ;
+    skos:definition "The coarse status of a mineral mine as pertains to activity on a reporting basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
+    skos:member ststs:on-production,
+        ststs:operational-non-prod,
+        ststs:secondary-operation,
+        ststs:not-producing ;
+    skos:prefLabel "Mineral Production Sub-Site Status"@en .
+
 ststs:prodstat a skos:Collection ;
-    skos:definition "The coarse status of a mine, quarry, or other resource project as pertains to activity on an annual basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
+    skos:definition "The coarse status of a coal mine as pertains to activity on a reporting basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
     skos:member ststs:on-production,
         ststs:not-producing ;
-    skos:prefLabel "Production Site Status"@en .
+    skos:prefLabel "Coal Production Sub-Site Status"@en .
 
 ststs:quarry-status a skos:Collection ;
     skos:definition "The valid site statuses as applies to quarries in Queensland."@en ;

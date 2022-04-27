@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/sample-material> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-02-08"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-03-17"^^xsd:date ;
+    dcterms:modified "2022-03-23"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Types of materials of which samples can consist of in Geoscience."@en ;
@@ -80,10 +80,7 @@ spmt:bitumen a skos:Concept ;
     skos:prefLabel "Bitumen"@en .
 
 spmt:bulk-metal a skos:Concept ;
-    skos:altLabel "Ingot"@en,
-        "Metal Scrap"@en,
-        "Scrap Metal"@en,
-        "Scrap"@en ;
+    skos:altLabel "Ingot"@en ;
     skos:broader spmt:metal ;
     skos:definition "Bulk Metal is refined ferrous or non-ferrous metal that is not necessarily to the high elemental purity required for bullion. Typically non-precious metals sold and transacted in larger volumes than bullion.."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
@@ -222,6 +219,13 @@ spmt:direct-shipping-ore a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Direct Shipping Ore"@en .
+
+spmt:dore a skos:Concept ;
+    skos:broader spmt:metal ;
+    skos:definition "Dore is non-ferrous metal, typically Gold or Silver, that has been refined to a semi-pure state, but not to the high (~99%) purity of bullion. Dore commonly contains 50-75% pure precious metal"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
+    skos:prefLabel "Dore"@en .
 
 spmt:dross a skos:Concept ;
     skos:broader spmt:metal ;
@@ -543,6 +547,16 @@ spmt:rain-water a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Rain Water"@en .
 
+spmt:reclaimed-metal a skos:Concept ;
+    skos:altLabel "Metal Scrap"@en,
+        "Scrap Metal"@en,
+        "Scrap"@en ;
+    skos:definition "Metal reclaimed from a prior use e.g. copper wire or tubing, fabricated aluminium, reclaimed lead from batteries."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
+    skos:prefLabel "Reclaimed Metal"@en ;
+    skos:broader spmt:metal .
+
 spmt:regolith a skos:Concept ;
     skos:definition "Typically unconsolidated or fragmental material, either transported or residual origin, which covers bedrock. Includes surficial duricrusts that cap bedrock."@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/regolith> ;
@@ -665,6 +679,15 @@ spmt:surface-water a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Surface Water"@en .
 
+spmt:tailings a skos:Concept ;
+    skos:hiddenLabel "Mine Waste"@en,
+        "Gangue"@en ;
+    skos:definition "The materials left over after the process of separating the valuable fraction from the uneconomic fraction (gangue) of an ore."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
+    skos:prefLabel "Tailings"@en ;
+    skos:broader spmt:earth-material .
+
 spmt:unknown a skos:Concept ;
     skos:definition "Material type is unknown"@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/unknown> ;
@@ -737,6 +760,25 @@ spmt:min-raw-materials a skos:Collection ;
         spmt:stone ;
     skos:prefLabel "Mineral Mining Raw Materials"@en .
 
+spmt:min-process-inputs a skos:Collection ;
+    skos:definition "Types of raw materials, semi-processed materials, and by-products processed by mineral mines to generate saleable products."@en ;
+    skos:member spmt:alluvial-wash,
+        spmt:bulk-metal,
+        spmt:clay,
+        spmt:dore,
+        spmt:dross,
+        spmt:earth-material,
+        spmt:gem-rock,
+        spmt:lateritic-ore,
+        spmt:metal-concentrate,
+        spmt:metallic-ore,  
+        spmt:mineral-sand,
+        spmt:reclaimed-metal,
+        spmt:slag,
+        spmt:slime,
+        spmt:stone,
+        spmt:tailings;
+    skos:prefLabel "Mineral Mining Processing Inputs"@en .
 
 spmt:min-products a skos:Collection ;
     skos:definition "Types of saleable product materials that result from the processing of extracted raw material by mineral miners and operators under Mineral Resources legislation and regulation."@en ;
@@ -747,6 +789,7 @@ spmt:min-products a skos:Collection ;
         spmt:clay,
         spmt:dimension-stone,
         spmt:direct-shipping-ore,
+        spmt:dore,
         spmt:dross,
         spmt:gemstone,
         spmt:heavy-mineral,
@@ -782,6 +825,7 @@ spmt:qld-georesources-products a skos:Collection ;
         spmt:coal-sales,
         spmt:dimension-stone,
         spmt:direct-shipping-ore,
+        spmt:dore,
         spmt:dross,
         spmt:gemstone,
         spmt:heavy-mineral,

@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-03-16"^^xsd:date ;
+    dcterms:modified "2022-03-28"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -2343,6 +2343,7 @@ cdt:mineral-sand a skos:Concept ;
     skos:altLabel "Mineral Sands"@en,
         "Heavy Mineral Sand"@en,
         "Heavy Mineral Sands"@en,
+        "Heavy Minerals Combined"@en,
         "Mineral Sand - Heavy"@en,
         "Mineral Sands - Heavy"@en,
         "Beach Sand"@en,
@@ -2460,6 +2461,14 @@ cdt:silica-sand a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "SIS" ;
     skos:prefLabel "Silica Sand"@en .
+
+cdt:silica-rock a skos:Concept ;
+    skos:broader cdt:silica ;
+    skos:definition "Silica rock is a rock with a very high silica content that can be further processed into a range of silica products."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "SIR" ;
+    skos:prefLabel "Silica Rock"@en .
 
 cdt:ceramic-sand a skos:Concept ;
     skos:broader cdt:silica-sand ;
@@ -4153,7 +4162,6 @@ cdt:qld-coal-sales a skos:Collection ;
     skos:member cdt:anthracite,
         cdt:hard-coking-coal,
         cdt:semi-soft-coking-coal,
-        cdt:soft-coking-coal,
         cdt:pulverised-coal-injection,
         cdt:thermal-coal ;
     skos:prefLabel "Queensland Coal Sales"@en .
@@ -4222,6 +4230,7 @@ cdt:material-bulkmaterial a skos:Collection ;
         cdt:perlite,
         cdt:phosphate-rock,
         cdt:flux-silica,
+        cdt:silica-rock,
         cdt:wollastonite,
         cdt:zeolite,
         cdt:diatomite,
@@ -4307,8 +4316,7 @@ cdt:material-bulkmineral a skos:Collection ;
     skos:notation "MLBMNL" ;
     skos:prefLabel "Material: Bulk Mineral"@en ;
     skos:definition "The commodities relevant, applicable, and selectable as part of the material type bulk mineral."@en ;
-    skos:member
-                cdt:gypsum,
+    skos:member cdt:gypsum,
         cdt:ag-lime,
         cdt:lime,
         cdt:dolomite,
@@ -4402,6 +4410,7 @@ cdt:material-bulkrock a skos:Collection ;
         cdt:peat,
         cdt:phosphate-rock,
         cdt:diatomite,
+        cdt:silica-rock,
         cdt:flux-silica .
 
 cdt:material-bullion a skos:Collection ;
@@ -4465,6 +4474,20 @@ cdt:material-directshippingore a skos:Collection ;
         cdt:hematite-ore,
         cdt:magnetite-ore,
         cdt:manganese-ore .
+
+cdt:material-dore a skos:Collection ;
+    skos:notation "MLDORE" ;
+    skos:prefLabel "Material: Dore"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type dore."@en ;
+    skos:member
+        cdt:gold,
+        cdt:silver,
+        cdt:iridium,
+        cdt:osmium,
+        cdt:palladium,
+        cdt:platinum,
+        cdt:rhodium,
+        cdt:ruthenium .
 
 cdt:material-dross a skos:Collection ;
     skos:notation "MLDRSS" ;
@@ -4765,6 +4788,77 @@ cdt:material-non-metal a skos:Collection ;
         cdt:sulphur,
         cdt:selenium .
 
+cdt:material-reclaimedmetal a skos:Collection ;
+    skos:notation "MLRMTL" ;
+    skos:prefLabel "Material: Reclaimed Metal"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type reclaimed metal."@en ;
+    skos:member
+        cdt:aluminium,
+        cdt:antimony,
+        cdt:barium,
+        cdt:beryllium,
+        cdt:bismuth,
+        cdt:cadmium,
+        cdt:cesium,
+        cdt:calcium,
+        cdt:cerium,
+        cdt:chromium,
+        cdt:cobalt,
+        cdt:copper,
+        cdt:dysprosium,
+        cdt:erbium,
+        cdt:europium,
+        cdt:gadolinium,
+        cdt:gallium,
+        cdt:germanium,
+        cdt:gold,
+        cdt:hafnium,
+        cdt:holmium,
+        cdt:indium,
+        cdt:iridium,
+        cdt:iron,
+        cdt:lanthanum,
+        cdt:lead,
+        cdt:lithium,
+        cdt:lutetium,
+        cdt:magnesium,
+        cdt:manganese,
+        cdt:mercury,
+        cdt:molybdenum,
+        cdt:neodymium,
+        cdt:nickel,
+        cdt:niobium,
+        cdt:osmium,
+        cdt:palladium,
+        cdt:platinum,
+        cdt:potassium,
+        cdt:praseodymium,
+        cdt:promethium,
+        cdt:radium,
+        cdt:rhenium,
+        cdt:rhodium,
+        cdt:rubidium,
+        cdt:ruthenium,
+        cdt:samarium,
+        cdt:scandium,
+        cdt:silicon,
+        cdt:silver,
+        cdt:tantalum,
+        cdt:tellurium,
+        cdt:terbium,
+        cdt:thallium,
+        cdt:thorium,
+        cdt:thulium,
+        cdt:tin,
+        cdt:titanium,
+        cdt:tungsten,
+        cdt:uranium,
+        cdt:vanadium,
+        cdt:ytterbium,
+        cdt:yttrium,
+        cdt:zinc,
+        cdt:zirconium.
+
 cdt:material-silicasand a skos:Collection ;
     skos:notation "MLSISD" ;
     skos:prefLabel "Material: Silica Sand"@en ;
@@ -4776,6 +4870,22 @@ cdt:material-silicasand a skos:Collection ;
         cdt:frac-sand,
         cdt:glass-sand,
         cdt:foundry-sand .
+
+cdt:material-slag a skos:Collection ;
+    skos:notation "MLSLAG" ;
+    skos:prefLabel "Material: Slag"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type slag."@en ;
+    skos:member
+        cdt:aluminium,
+        cdt:calcium,
+        cdt:copper,
+        cdt:iron,
+        cdt:lead,
+        cdt:magnesium,
+        cdt:manganese,
+        cdt:phosphorus,
+        cdt:silicon,
+        cdt:zinc .
 
 cdt:material-stone a skos:Collection ;
     skos:notation "MLSTNE" ;
@@ -4795,10 +4905,91 @@ cdt:material-stone a skos:Collection ;
         cdt:siltstone,
         cdt:slate .
 
+cdt:material-tailings a skos:Collection ;
+    skos:notation "MLTLNG" ;
+    skos:prefLabel "Material: Tailings"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type tailings."@en ;
+    skos:member
+        cdt:undefined,
+        cdt:aluminium,
+        cdt:barium,
+        cdt:cobalt,
+        cdt:copper,
+        cdt:lead,
+        cdt:nickel,
+        cdt:zinc,
+        cdt:beryllium,
+        cdt:bismuth,
+        cdt:cadmium,
+        cdt:calcium,
+        cdt:cesium,
+        cdt:chromium,
+        cdt:iron,
+        cdt:manganese,
+        cdt:titanium,
+        cdt:vanadium,
+        cdt:gallium,
+        cdt:hafnium,
+        cdt:indium,
+        cdt:lithium,
+        cdt:magnesium,
+        cdt:mercury,
+        cdt:molybdenum,
+        cdt:niobium,
+        cdt:potassium,
+        cdt:gold,
+        cdt:iridium,
+        cdt:osmium,
+        cdt:palladium,
+        cdt:platinum,
+        cdt:rhodium,
+        cdt:ruthenium,
+        cdt:silver,
+        cdt:radium,
+        cdt:dysprosium,
+        cdt:erbium,
+        cdt:europium,
+        cdt:gadolinium,
+        cdt:holmium,
+        cdt:lutetium,
+        cdt:terbium,
+        cdt:thulium,
+        cdt:ytterbium,
+        cdt:yttrium,
+        cdt:cerium,
+        cdt:lanthanum,
+        cdt:neodymium,
+        cdt:praseodymium,
+        cdt:promethium,
+        cdt:samarium,
+        cdt:rhenium,
+        cdt:rubidium,
+        cdt:scandium,
+        cdt:strontium,
+        cdt:tantalum,
+        cdt:thallium,
+        cdt:thorium,
+        cdt:tin,
+        cdt:tungsten,
+        cdt:uranium,
+        cdt:zirconium,
+        cdt:antimony,
+        cdt:arsenic,
+        cdt:boron,
+        cdt:germanium,
+        cdt:silicon,
+        cdt:tellurium,
+        cdt:bromine,
+        cdt:fluorine,
+        cdt:iodine,
+        cdt:phosphorous,
+        cdt:selenium,
+        cdt:sulphur .
+
 cdt:material-tankhouseslime a skos:Collection ;
     skos:notation "MLSLME" ;
-    skos:prefLabel "Material: Tankhouse Slime "@en ;
-    skos:definition "The commodities relevant, applicable, and selectable as part of the material type tankhouse slime ."@en ;
+    skos:prefLabel "Material: Tankhouse Slime"@en ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type tankhouse slime."@en ;
     skos:member
         cdt:undefined,
         cdt:aluminium,
