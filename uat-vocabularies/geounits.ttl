@@ -11,7 +11,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-04-15"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-03-18"^^xsd:date ;
+    dcterms:modified "2022-05-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Derived from the geo-profile of QUDT (http://linked.data.gov.au/def/geou)"@en ;
     skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to the geosciences."@en ;
@@ -50,7 +50,6 @@
         geou:KiloBBLOE,
         geou:KiloBTU,
         geou:KiloBTU-PER-MegaL,
-        geou:KiloL,
         geou:KiloL-PER-DAY,
         geou:KiloLB_F,
         geou:KiloLB_M,
@@ -520,7 +519,7 @@ geou:HR-PER-M a skos:Concept ;
     skos:hiddenLabel "HOURS PER METRE (hrs/m)"@en ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A unit for Linear Velocity. Used in borehole drilling to describe the rate of pentration. The number of hours taken to penetrate one metre of material."@en ;
-    skos:notation "hr/ft" ;
+    skos:notation "hr/m" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Hours per Metre"@en ;
@@ -930,7 +929,7 @@ geou:MilliM-PER-SEC a skos:Concept ;
 geou:N-PER-M a skos:Concept ;
     rdfs:isDefinedBy geou: ;
     skos:definition "A measure of the resistance offered by an elastic body to deformation. the length change of a body, in metres relative to the force applied, in Newtons."@en ;
-    skos:notation "N/M" ;
+    skos:notation "N/m" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Newtons per Metre"@en ;
@@ -1478,7 +1477,7 @@ geou:TROYOZ a skos:Concept ;
     skos:hiddenLabel "KILOGRAMS PER LITRE (kg/L)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
-    skos:notation "B35" ;
+    skos:notation "kg/L" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "kilogram per litre"@en ;
@@ -1488,7 +1487,7 @@ geou:TROYOZ a skos:Concept ;
     skos:hiddenLabel "KILOGRAMS PER METRE (kg/m)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Kilogram Per Meter (kg/m) is a unit in the category of Linear mass density. It is also known as kilogram/meter, kilogram/metre, kilograms per meter, kilogram per metre, kilograms per metre. This unit is commonly used in the SI unit system. Kilogram Per Meter (kg/m) has a dimension of ML-1 where M is mass, and L is length. This unit is the standard SI unit in this category. "@en ;
-    skos:notation "KL" ;
+    skos:notation "kg/m" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Kilogram per Meter"@en ;
@@ -1507,7 +1506,7 @@ geou:TROYOZ a skos:Concept ;
         "KILOGRAMS PER METRE CUBED (kg/m3)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition "Kilogram per cubic metre is an SI derived unit of density, defined by mass in kilograms divided by volume in cubic metres. The official SI symbolic abbreviation is \\(kg \\cdot m^{-3}\\), or equivalently either \\(kg/m^3\\)."@en ;
-    skos:notation "KMQ" ;
+    skos:notation "kg/m3" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Kilogram per Cubic Meter"@en ;
@@ -1518,7 +1517,7 @@ geou:TROYOZ a skos:Concept ;
     skos:hiddenLabel "KILOLITRES (kl)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
-    skos:notation "K6" ;
+    skos:notation "kl" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "kilolitre"@en ;
@@ -1538,7 +1537,7 @@ geou:TROYOZ a skos:Concept ;
     skos:hiddenLabel "KILONETWTON (kN)"@en ;
     rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
     skos:definition ""@en ;
-    skos:notation "B47" ;
+    skos:notation "kN" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "kilonewton"@en ;
@@ -2139,3 +2138,39 @@ Under the International System of Units (via the International Committee for Wei
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Year"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
+geou:basic-resource-volumetrics a skos:Collection ;
+    skos:definition "Basic list of measures of mass and volume for the measurement of geological resource materials and products."@en ;
+    skos:member <http://qudt.org/vocab/unit/TON_M>,
+        <http://qudt.org/vocab/unit/M3> ;
+    skos:prefLabel "Basic Resource Volumetrics"@en .
+
+geou:expanded-resource-volumetrics a skos:Collection ;
+    skos:definition "Expanded list of measures of mass and volume for the measurement of geological resource materials and products."@en ;
+    skos:member <http://qudt.org/vocab/unit/TON_M>,
+        <http://qudt.org/vocab/unit/M3>,
+        geou:MegaM3,
+        <http://qudt.org/vocab/unit/KiloGM>,
+        <http://qudt.org/vocab/unit/GM>,
+        <http://qudt.org/vocab/unit/OZ>,
+        geou:TROYOZ,
+        <http://qudt.org/vocab/unit/CARAT>,
+        <http://qudt.org/vocab/unit/L> ;
+    skos:prefLabel "Expanded Resource Volumetrics"@en .
+
+geou:resource-grade-quality a skos:Collection ;
+    skos:definition "List of measures of grade and quality for the quantification of geological resource materials and products."@en ;
+    skos:member geou:FT3-PER-TON,
+        geou:M3-PER-TON_M,
+        geou:GM-PER-KiloGM,
+        geou:GM-PER-TON_M,
+        geou:MilliGM-PER-TOC,
+        geou:MilliGM-PER-TON_M,
+        geou:OZ-PER-TON_LONG,
+        geou:OZ-PER-TON_M,
+        <http://qudt.org/vocab/unit/PPB>,
+        <http://qudt.org/vocab/unit/PPM>,
+        geou:PERCENT-PER-VOL,
+        geou:PERCENT-PER-WEIGHT,
+        <http://qudt.org/vocab/unit/UNITLESS> ;
+    skos:prefLabel "Resource Grade and Quality"@en .
