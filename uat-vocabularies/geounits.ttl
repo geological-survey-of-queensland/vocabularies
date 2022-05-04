@@ -11,7 +11,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-04-15"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-03-18"^^xsd:date ;
+    dcterms:modified "2022-05-04"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Derived from the geo-profile of QUDT (http://linked.data.gov.au/def/geou)"@en ;
     skos:definition "This profile of the Quantities, Units, Dimensions & Types ontology and vocabularies lists those elements deemed by the profile creators to be of relevance to the geosciences."@en ;
@@ -2139,3 +2139,39 @@ Under the International System of Units (via the International Committee for Wei
     skos:inScheme <http://linked.data.gov.au/def/geou> ;
     skos:prefLabel "Year"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
+
+geou:basic-resource-volumetrics a skos:Collection ;
+    skos:definition "Basic list of measures of mass and volume for the measurement of geological resource materials and products."@en ;
+    skos:member <http://qudt.org/vocab/unit/TON_M>,
+        <http://qudt.org/vocab/unit/M3> ;
+    skos:prefLabel "Basic Resource Volumetrics"@en .
+
+geou:expanded-resource-volumetrics a skos:Collection ;
+    skos:definition "Expanded list of measures of mass and volume for the measurement of geological resource materials and products."@en ;
+    skos:member <http://qudt.org/vocab/unit/TON_M>,
+        <http://qudt.org/vocab/unit/M3>,
+        geou:MegaM3,
+        <http://qudt.org/vocab/unit/KiloGM>,
+        <http://qudt.org/vocab/unit/GM>,
+        <http://qudt.org/vocab/unit/OZ>,
+        geou:TROYOZ,
+        <http://qudt.org/vocab/unit/CARAT>,
+        <http://qudt.org/vocab/unit/L> ;
+    skos:prefLabel "Expanded Resource Volumetrics"@en .
+
+geou:resource-grade-quality a skos:Collection ;
+    skos:definition "List of measures of grade and quality for the quantification of geological resource materials and products."@en ;
+    skos:member geou:FT3-PER-TON,
+        geou:M3-PER-TON_M,
+        geou:GM-PER-KiloGM,
+        geou:GM-PER-TON_M,
+        geou:MilliGM-PER-TOC,
+        geou:MilliGM-PER-TON_M,
+        geou:OZ-PER-TON_LONG,
+        geou:OZ-PER-TON_M,
+        <http://qudt.org/vocab/unit/PPB>,
+        <http://qudt.org/vocab/unit/PPM>,
+        geou:PERCENT-PER-VOL,
+        geou:PERCENT-PER-WEIGHT,
+        <http://qudt.org/vocab/unit/UNITLESS> ;
+    skos:prefLabel "Resource Grade and Quality"@en .
