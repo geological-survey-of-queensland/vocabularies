@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/site-status> a owl:Ontology, skos:ConceptScheme ;
     dcterms:created "2020-02-28"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-05-03"^^xsd:date ;
+    dcterms:modified "2022-05-12"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "The status of an individual site (e.g. mine, well) or single activity (e.g.survey) describing the current state within the lifecycle from proposed through operational through to abandonment. Lifecycle stages are commonly related to regulatory conditions administered by government agencies."@en ;
@@ -56,20 +56,21 @@ ststs:not-producing a skos:Concept ;
 
 ststs:operational-non-prod a skos:Concept ;
     skos:altLabel "Operating But Not Producing"@en,
-        "Operating Not Producing"@en,
+        "Non-Productive Operation"@en,
         "Excavation"@en,
         "Preparation"@en ;
     skos:broader ststs:active ;
     skos:definition "A site that is an active part of a project or operation that typically contributes to production but is not currently due to other activities. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease in which excavation is occuring after construction but prior to or between extraction phases."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
-    skos:prefLabel "Non-Productive Operation"@en .
+    skos:prefLabel "Operating Not Producing"@en .
 
  ststs:secondary-operation a skos:Concept ;
-    skos:altLabel "Other Purpose"@en ;
+    skos:altLabel "Other Purpose"@en,
+        "Secondary Operations"@en;
     skos:broader ststs:active ;
     skos:definition "A site that is an active part of a project or operation but is not involved in resource extraction. Such as supporting secondary activities including resoure processing, site access, adminstration, or infrastructure. "@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
-    skos:prefLabel "Secondary Operations"@en .
+    skos:prefLabel "Supporting Operations"@en .
 
 ststs:on-injection a skos:Concept ;
     skos:broader ststs:active ;
