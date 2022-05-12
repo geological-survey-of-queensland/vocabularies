@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rsp: <http://linked.data.gov.au/def/resource-stockpile-purpose/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/resource-stockpile-purpose> a owl:Ontology , skos:ConceptScheme ;
+    dcterms:created "2020-05-12"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2022-05-12"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The purpose or reason for holding a stockpile of a georesource raw material or product."@en ;
+    skos:hasTopConcept rsp:economics,
+        rsp:processing-capacity,
+        rsp:met-characteristics,
+        rsp:other ;
+    skos:prefLabel "Georesource Stockpile Purpose"@en .
+
+<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
+rsp:economics a skos:Concept ;
+    skos:definition "A stockpile kept due to economic considerations such as a commodity price or cost of processing that makes a raw material sub-economic to process and prepare for sale."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:prefLabel "Economics"@en .
+
+rsp:capacity a skos:Concept ;
+    skos:definition "A stockpile kept due to capacity constraints in the lifecycle of a georesource material from raw material to saleable product."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:prefLabel "Capacity"@en .
+
+rsp:processing-capacity a skos:Concept ;
+    skos:broader rsp:capacity ;
+    skos:definition "A stockpile kept due to capacity constraints to process raw material, such as where the raw output from a mine exceeds the throughput capacity of the associated processing plant."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:prefLabel "Processing Capacity"@en .
+
+rsp:transport-capacity a skos:Concept ;
+    skos:broader rsp:capacity ;
+    skos:definition "A stockpile kept due to capacity constraints in the ability to transport material to a processing or sales site."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:prefLabel "Transport Capacity"@en .
+
+rsp:material-characteristics a skos:Concept ;
+    skos:definition "A stockpile kept due to the physical or chemical properties of a raw material not being suitable for the specification of the available or allocated processing plant."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:prefLabel "Metallurgical Characteristics"@en .
+
+rsp:met-characteristics a skos:Concept ;
+    skos:broader rsp:material-characteristics ;
+    skos:definition "A stockpile kept due to the metallurgic charactieristics of a metallic ore not being suitable for the configuration or capability of the processing plant."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:prefLabel "Metallurgical Characteristics"@en .
+
+rsp:other a skos:Concept ;
+    skos:definition "A stockpile kept due to a reason other than those otherwise listed."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:prefLabel "Other"@en .
+
+rsp:min-stockpile a skos:Collection ;
+    skos:definition "The reason for the stockpiling of raw materials in a mineral mining operation."@en ;
+    skos:member rsp:economics,
+        rsp:processing-capacity,
+        rsp:met-characteristics,
+        rsp:other  ;
+    skos:prefLabel "Mineral Mine Raw Material Stockpile"@en .
