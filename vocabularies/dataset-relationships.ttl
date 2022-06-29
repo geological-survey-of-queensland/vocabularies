@@ -1,7 +1,7 @@
  @prefix datrel: <https://linked.data.gov.au/def/dataset-relationships/> .
  @prefix dc: <http://purl.org/dc/elements/1.1/> .
  @prefix dcterms: <http://purl.org/dc/terms/> .
- @prefix prov: <http://www.w3.org/ns/prov#> .
+ @prefix prov: <http://www.w3.org/ns/prov/#> .
  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
  @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
  @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -13,7 +13,7 @@
 a skos:ConceptScheme ;
 dcterms:created "2020-11-10"^^xsd:date ;
 dcterms:creator <https://linked.data.gov.au/org/des> ;
-dcterms:modified "2021-03-05"^^xsd:date ;
+dcterms:modified "2021-06-29"^^xsd:date ;
 dcterms:publisher <https://linked.data.gov.au/org/des> ;
 dcterms:provenance "Derived from Qualified Relations ISO-19115-DCTERMS and PROV-O" ;
 skos:definition "This is a vocabulary collection used by the Queensland Government to determine relationships between catalogued datasets.  It is based on the DCAT qualified relation property https://www.w3.org/TR/vocab-dcat-2/#Property:resource_qualified_relation."@en ;
@@ -31,17 +31,17 @@ skos:hasTopConcept
     <http://purl.org/dc/terms/isReferencedBy> ,
     <http://purl.org/dc/terms/requires> ,
     <http://purl.org/dc/terms/isRequiredBy> , 
-    <http://www.w3.org/ns/prov#wasDerivedFrom> ,
+    <http://www.w3.org/ns/prov/#wasDerivedFrom> ,
+    <http://www.w3.org/ns/prov/#wasInfluencedBy> ,
+    <http://www.w3.org/ns/prov/#influenced> ,
+    <http://www.w3.org/ns/prov/#wasQuotedFrom> ,
+    <http://www.w3.org/ns/prov/#wasRevisionOf> , 
+    <http://www.w3.org/ns/prov/#alternateOf> ,
+    <http://www.w3.org/ns/prov/#specializationOf> ,
+    datrel:generalizationOf ,
     datrel:hadDerivation ,
-    <http://www.w3.org/ns/prov#wasInfluencedBy> ,
-    <http://www.w3.org/ns/prov#influenced> ,
-    datrel:quotedAs ,
-    <http://www.w3.org/ns/prov#wasQuotedFrom> ,
-    <http://www.w3.org/ns/prov#wasRevisionOf> , 
     datrel:hadRevision ,
-    <http://www.w3.org/ns/prov#alternateOf> ,
-    <http://www.w3.org/ns/prov#specializationOf> ,
-     datrel:generalizationOf .
+    datrel:quotedAs .
 
 <https://linked.data.gov.au/org/des>  
     a sdo:Organization ;
@@ -144,7 +144,7 @@ skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
 owl:inverseOf <http://purl.org/dc/terms/requires> ;
 skos:prefLabel "Is Required By"@en  .
 
-<http://www.w3.org/ns/prov#wasDerivedFrom> a skos:Concept ;
+<http://www.w3.org/ns/prov/#wasDerivedFrom> a skos:Concept ;
 skos:definition "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
     rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
@@ -157,7 +157,7 @@ skos:definition "A derivation is a transformation of an entity into another, an 
 skos:topConceptOf <https://linked.data.gov.au/def/dataset-relationships> ;  
     rdfs:isDefinedBy <https://linked.data.gov.au/def/dataset-relationships> ;
 skos:inScheme <https://linked.data.gov.au/def/dataset-relationships> ;
-owl:inverseOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+owl:inverseOf <http://www.w3.org/ns/prov/#wasDerivedFrom> ;
 dcterms:source <https://www.w3.org/ns/prov-o-inverses> ;
 skos:prefLabel "Was Derivation of"@en  .
 
