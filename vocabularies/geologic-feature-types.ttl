@@ -7,6 +7,201 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+geof:RegolithFeature a skos:Concept ;
+    dcterms:references "Eggleton, R.A. (Editor), 2001: The Regolith Glossary: Surficial Geology, Soils and Landscapes. Cooperative Research Centre for Landscape Evolution & Mineral Exploration (CRC LEME), Floreat Park, W.A., 144 pages. <http://crcleme.org.au/Pubs/Monographs/RegolithGlossary.pdf>"@en ;
+    dcterms:references "Hocking, R. M. et al., 2007: A classification system for regolith in Western Australia (March 2007 update). Geological Survey of Western Australia/GSWA, Record 2007/8, 19 pages (This Record is an update of Record 2005/10). <https://dmpbookshop.eruditetechnologies.com.au/product/a-classification-system-for-regolith-in-western-australia-march-2007-update.do>"@en ;
+    dcterms:references "Anand, R.R. & Butt, C. R. M., 2010: A guide for mineral exploration through the regolith in the Yilgarn Craton, Western Australia. Australian Journal of Earth Sciences, 57(8), 1015-1114. <https://doi.org/10.1080/08120099.2010.522823>"@en ;
+    dcterms:references "Gray, J.M. & Murphy, B. W. 1999: Parent Material and Soils: a guide to the influence of parent material on soil distribution in eastern Australia. Technical Report No. 45 (Reprinted 2002), NSW Department of Land and Water Conservation, Sydney, 122 pages. <https://www.researchgate.net/publication/277013099_Parent_Material_and_Soils_a_guide_to_the_influence_of_parent_material_on_soil_distribution_in_eastern_Australia>"@en ; 
+    dcterms:references "Little, D. & Field, B., 2003: The rhyzosphere, biology and the regolith. In: Roach, I.C. (Editor): Advances in Regolith. Cooperative Research Centre for Landscape Evolution & Mineral Exploration (CRC LEME), Bentley, W.A., 271–273. <http://crcleme.org.au/Pubs/Advancesinregolith/Little_Field.pdf>"@en ; 
+    dcterms:references "De Caritat, P. et al., 2017: Recognition of geochemical footprints of mineral systems in the regolith at regional to continental scales. Australian Journal of Earth Sciences, 64(8), 1033-1043. <https://doi.org/10.1080/08120099.2017.1259184>"@en ;
+    skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
+    skos:definition "Anything, of diverse origin, embraced by the layer of mineral and organic material that nearly everywhere forms the surface of the land and rests on more coherent bedrock, having been formed by weathering, erosion, transport and/or deposition of the older material (Eggleton, 2001; Hocking et al., 2007; Anand & Butt, 2010). Its formation, embracing a multidisciplinary science, is driven by a number of factors including climate, geology, topography, biological activity, and time (Gray & Murphy, 1999; Little & Field, 2003)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrft" ;
+    skos:prefLabel "regolith feature"@en ;
+    skos:scopeNote "Understanding the character of Australia’s extensive regolith cover is crucial to the continuing success of mineral exploration (de Caritat et al., 2017)."@en ;
+.
+geof:RegolithLandformUnit a skos:Concept ;
+    skos:altLabel "regolith-landform mapping unit"@en ;
+    dcterms:references "Anand, R.R. et al., 1993: Classification and atlas of regolith-landform mapping units: Exploration perspectives for the Yilgarn Craton, Australia. CSIRO, Division of Exploration and Mining, Restricted Report 440R (published as Anand et al., 1998). "@en ;
+    dcterms:references "Anand, R.R. et al., 1998: Classification and atlas of regolith-landform mapping units: Exploration perspectives for the Yilgarn Craton. CRC LEME Open File Report 2, unpaginated. <http://hdl.handle.net/102.100.100/215547?index=1>"@en ;
+    dcterms:references "Hocking, R. M. et al., 2007: A classification system for regolith in Western Australia (March 2007 update). Geological Survey of Western Australia/GSWA, Record 2007/8, 19 pages (This Record is an update of Record 2005/10). <https://dmpbookshop.eruditetechnologies.com.au/product/a-classification-system-for-regolith-in-western-australia-march-2007-update.do>"@en ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    dcterms:references "Jakica, S. et al., 2020: 1:500 000 State regolith geology of Western Australia — compilation methodologies. Geological Survey of Western Australia/GSWA, Record 2020/10, 22 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/1500-000-state-regolith-geology-of-western-australia-compilation-methodologies.do>"@en ;
+    dcterms:references "De Souza Kovacs, N. & Cudahy, T.J., 2022: Regolith-landform mapping of the west Kimberley Craton: Application of geophysics and spectral remote sensing: Geological Survey of Western Australia/GSWA, Report 231, 87 pages. <Regolith-landform mapping of the west Kimberley Craton: application of geophysics and spectral remote sensing (eruditetechnologies.com.au)>"@en ;
+    skos:broader geof:RegolithFeature ;
+    skos:definition "One of a set of regolith-landform mapping units that that can be used to collectively classify and characterize the regolith (GSWA, 2013). Individual units (coded in the GSWA scheme and employed to embrace areas delineated on a map with similar landform and regolith characteristics), are composed of three parts: a primary landform part/code that specifies the environment (landform position) and/or process responsible for the formation or deposition of the regolith (e.g., alluvial/fluvial, lacustrine or eolian); a secondary part/code for landform qualifers (for landform element or pattern); and a tertiary part/code identifying the parent rock or cement (also see and compare previous version of Hocking et al., 2007)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrlu" ;
+    skos:prefLabel "regolith-landform unit"@en ;
+    skos:scopeNote "The classification of regolith-landform mapping units referred to here was devised by Anand et al. (1993) in a restricted and unpublished report, which was subsequently published as Anand et al. (1998) and then revised several times (e.g., Hocking et al., 2007), leading to the revision of it by the Geological Survey of Western Australia (GSWA, 2013; and cited references); further revision is currently under way (indicated by de Souza Kovacs & Cudahy, 2022). In GSWA (2013), 11 landforms/primary codes were assigned to regolith units, comprising areas of outcrop, residual or relict units, and nine transported units (also see Jakica et al., 2020). Here, in this GSQ vocabulary, which is incompletely documented (after GSWA, and without classification coding), mainly only the primary subdivisions are dealt with, largely not the associated secondary landform elements/patterns (e.g., alluvial plain, stream channel, playa, freshwater lake, estuary, mangrove flat, etc.), although they are referred to in definition/notation under the primary units; these secondary units (landform qualifers) will be added subsequently. Even though this classification scheme was developed for the Yilgarn Craton and its periphery in Western Australia, its research findings have had application in other parts of Australia (Northern Territory and Queensland) and overseas, including western Africa, southern Asia, and South America (Anand et al., 1998)."@en ; 
+.
+geof:ResidualRelictUnit a skos:Concept ;
+    skos:altLabel "residual or relict regolith-landform unit"@en ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ;
+    skos:definition "Residual or relict unit: A primary landform unit/setting comprising remnant material (undivided residual and relict materials) overlying an ancient land surface. Residual material is derived by in situ weathering of the underlying rock, the regolith; therefore, it shows no evidence of having undergone significant transport. Relict material includes deposits of uncertain origin, either transported or residual, or a combination of both. Transported material may represent remnants of previous landforms (GSWA, 2013; and cited references)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrrr" ;
+    skos:prefLabel "residual or relict regolith-landform unit"@en ;
+.
+geof:ResidualUnit a skos:Concept ;
+    skos:altLabel "residual regolith-landform unit"@en ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ;
+    skos:related geof:ResidualRelictUnit ;
+    skos:definition "Residual unit: A primary landform unit/setting comprising material derived by in situ weathering of the underlying rock, the regolith, and therefore, showing no evidence of having undergone significant transport (GSWA, 2013; and cited references). "@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrrs" ;
+    skos:prefLabel "residual regolith-landform unit"@en ;
+.
+geof:RelictUnit a skos:Concept ;
+    skos:altLabel "relict regolith-landform unit"@en ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ;
+    skos:definition "Relict unit: A primary landform unit/setting embracing material that includes deposits of uncertain origin, either transported or residual, or a combination of both. Transported material may represent remnants of previous landforms. "@en ;
+    skos:related geof:ResidualRelictUnit ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrrl" ;
+    skos:prefLabel "relict regolith-landform unit"@en ;
+.
+geof:DuricrustResidualRelict a skos:Concept ;
+    skos:altLabel "residual or relict duricrust"@en ;
+    dcterms:references "Eggleton, R.A. (Editor), 2001: The Regolith Glossary: Surficial Geology, Soils and Landscapes. Cooperative Research Centre for Landscape Evolution & Mineral Exploration (CRC LEME), Floreat Park, W.A., 144 pages. <http://crcleme.org.au/Pubs/Monographs/RegolithGlossary.pdf>"@en ;
+    dcterms:references "Anand, R.R. & Paine, M. 2002: Regolith geology of the Yilgarn Craton, Western Australia: Implications for exploration. Australian Journal of Earth Sciences, 49(1), 3-162. <https://doi.org/10.1046/j.1440-0952.2002.00912.x>"@en ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+  skos:broader geof:ResidualRelictUnit ;
+    skos:definition "Duricrust (residual or relict): A secondary landform unit/element comprising in-situ or transported regolith material indurated by a cement, or the cement only, occurring at or near the surface, or as a layer in the upper part of the regolith. The cement may be, e.g., siliceous (silcrete), ferruginous (ferricrete/lateritic duricrust), aluminous (alcrete), gypseous (gypcrete), manganiferous (manganocrete), calcareous (calcrete), dolomitic (dolocrete), salty (salcrete) or a combination of these (After and modified from: Eggleton, 2001; GSWA, 2013)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrdrr" ;
+    skos:prefLabel "duricrust (residual or relict) landform element"@en ;
+    skos:scopeNote "Duricrust may be ‘residual/in-situ’ where it has formed from underlying bedrock by essentially residual processes or ‘relict/transported’ where it has developed from transported material that has little direct relationship with the underlying bedrock (GSWA, 2013; Anand & Paine, 2002; and cited references)."@en ;
+.
+geof:DuricrustResidual a skos:Concept ;
+    skos:altLabel "residual duricrust"@en ;
+    skos:altLabel "in situ duricrust"@en ;
+    dcterms:references "Anand, R.R. & Paine, M. 2002: Regolith geology of the Yilgarn Craton, Western Australia: Implications for exploration. Australian Journal of Earth Sciences, 49(1), 3-162. <https://doi.org/10.1046/j.1440-0952.2002.00912.x>"@en ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:related geof:DuricrustResidualRelict ;
+    skos:definition "A secondary landform unit/element comprising duricrust formed from underlying bedrock by essentially residual processes (Geological Survey of Western Australia, 2013; Anand & Paine, 2002; and cited references)."@en ; 
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrdrs" ;
+    skos:prefLabel "duricrust (residual/in situ) landform element"@en ;
+.
+geof:DuricrustRelict a skos:Concept ;
+    skos:altLabel "relict duricrust"@en ;
+    skos:altLabel "transported duricrust"@en ;
+    dcterms:references "Anand, R.R. & Paine, M. 2002: Regolith geology of the Yilgarn Craton, Western Australia: Implications for exploration. Australian Journal of Earth Sciences, 49(1), 3-162. <https://doi.org/10.1046/j.1440-0952.2002.00912.x>"@en ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:definition "Duricrust formed from underlying bedrock by essentially residual processes(GSWA, 2013; Anand & Paine, 2002; and cited references)."@en ;
+    skos:related geof:DuricrustResidualRelict ;
+    skos:definition "A secondary landform unit/element comprising duricrust developed from transported material that has little direct relationship with the underlying bedrock (Geological Survey of Western Australia, 2013; Anand & Paine, 2002; and cited references)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrdrl" ; 
+    skos:prefLabel "duricrust (relict/transported) landform element"@en ;
+.
+geof:ExposedUnit a skos:Concept ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ; 
+    skos:definition "A primary regolith-landform unit/setting with regolith elements comprising exposed or and weathered rock. Elements also include subcrop and bouldery lag and embrace badlands, escarpments, hills, rises, erosional plains, etc. (GSWA, 2013; and cited references)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrex" ;
+    skos:prefLabel "exposed regolith-landform unit"@en ;
+.
+geof:ColluvialUnit a skos:Concept ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ; 
+    skos:definition "A primary regolith-landform unit/setting generally embracing proximal mass-wasting deposits grading into sheetwash with a significant to perceptible slope. More comprehensively, regolith elements associated with this primary (colluvial) regolith-landform mapping unit include colluvial fans, cliff-top slopes, pediments, footslopes, rejuvenated pediments, pediplains, scarp-foot slopes, and talus elements (GSWA, 2013) "@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrcv" ; 
+    skos:prefLabel "colluvial regolith-landform unit"@en ;
+.
+geof:SheetwashUnit a skos:Concept ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ; 
+    skos:definition "A primary regolith-landform unit/setting generally embracing distal slope deposits (including sheetflood) where the gradient is minimal, and the drainage is not clearly defined. More specifically, regolith elements/patterns associated with this primary regolith-landform mapping unit include transitional zones between pediment and transported regolith, sheetflood fans, playas/pans, scarp-foot slopes, and sheetwash plains with a tiger-bush pattern (GSWA, 2013)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrsw" ; 
+    skos:prefLabel "sheetwash regolith-landform unit"@en ;
+.
+geof:AlluvialFluvialUnit a skos:Concept ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ; 
+    skos:definition "A primary regolith-landform unit/setting generally embracing alluvium in channels and on floodplains; includes deltaic deposits. More comprehensively, regolith elements associated with this primary (alluvial/fluvial) regolith-landform mapping unit encompass alluvial plains, stream beds, stream channels, drainage depressions/swales, deltas, floodplains, gravel bars, channel benches, floodplains with numerous claypans, stream banks, levees, meander plains, backplains, anastomosed plains, playas/pans, stream bars, sand bars, terraces, superficial channels, fan/flood-out, swamp, oxbows, and ovoid depressions in eolian sandplains (GSWA, 2013)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfraf" ;
+    skos:prefLabel "alluvial/fluvial regolith-landform unit"@en ;
+.
+geof:LacustrineUnit a skos:Concept ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ; 
+    skos:definition """A primary regolith-landform unit/setting generally embracing inland lakes, dune-and-playa terrains, and some coastal lakes; includes saline and freshwater playas and claypans, and minor eolian deposits directly associated with a lake system (e.g., fringing gypsiferous dunes) [GSWA, 2013]."""@en ; 
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ; 
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ; 
+    skos:notation "gfrla" ; 
+    skos:prefLabel "lacustrine regolith-landform unit"@en ;
+    skos:scopeNote "More comprehensively, secondary regolith elements associated with this primary (lacustrine) regolith-landform mapping unit encompass fringing dunes, freshwater-lake deposits, fringing bedded deposits, halophyte-bearing flats, freshwater-lake excluding fringing deposits, dune-and-playa terrains, playas, saline lakes, swamp deposits around lakes, and subcropping bedrock in lakes (GSWA, 2013)."@en ;
+.
+geof:EolianUnit a skos:Concept ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ; 
+    skos:definition "A primary regolith-landform unit/setting generally embracing dunes, interdune areas, and sandplains resulting from wind action. More comprehensively, regolith elements associated with this primary (eolian) regolith- landform mapping unit encompass parabolic dunefields, blow-outs, dunefields, dunes, deflation basins, interdune flats, mobile dunes, longitudinal dunefields, net-like dunefields, sand-and-playa terrains, eolian veneers over colluvium and/or alluvium, lunette or fringing dunes, interdune pavements, swampy swales, and stabilized dunes (GSWA, 2013)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfreo" ; 
+    skos:prefLabel "eolian regolith-landform unit"@en ;
+.
+geof:SandplainUnit a skos:Concept ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ; 
+    skos:definition "A primary regolith-landform unit/setting generally embracing sandplains of residual or sheetwash origin or variously of mixed origin: residual, sheetwash and eolian. More comprehensively, regolith elements associated with this primary (sandplain) regolith-landform mapping unit encompass blow-outs, dunes, gravel deflation pavements, longitudinal dunefields, net-like dunefields, sand-and-playa terrains, and undulating sandplains (GSWA, 2013)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrsp" ; 
+    skos:prefLabel "sandplain regolith-landform unit"@en ;
+.
+geof:CoastalWaveDominatedUnit a skos:Concept ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ; 
+    skos:definition "A primary regolith-landform unit/setting generally embracing beaches, beach ridges, barrier bars and lagoons, back-beach dunes, coastal cliffs, and other erosional features, e.g., blow-outs (GSWA, 2013; see scopeNote herewith/below)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrcw" ;
+    skos:prefLabel "coastal (wave-dominated) regolith-landform unit"@en ;
+    skos:scopeNote "More comprehensively, secondary regolith elements associated with this primary (coastal wave-dominated) regolith-landform mapping unit encompass beaches (foreshore and backshore), cliffs, foredunes, foreshores, backshores, back-barrier lagoons, mobile dunes, boulder beaches, beach-ridge plains, and storm beach gravels (GSWA, 2013)."@en ;
+.
+geof:CoastalTideDominatedUnit a skos:Concept ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ; 
+    skos:definition "A primary regolith-landform unit/setting generally embracing intertidal and supratidal flats and channels, estuaries, and mangrove flats (GSWA, 2013; see scopeNote herewith/below)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrct" ;
+    skos:prefLabel "coastal (tide-dominated) regolith-landform unit"@en ;
+    skos:scopeNote "More comprehensively, secondary regolith elements associated with this primary (coastal, tide-dominated) regolith-landform mapping unit encompass tidal bars (in channel), tidal channels (subtidal base), tidal deltas, estuaries, tidal flats (intertidal and supratidal), chenier plains, intertidal flats, tidal lagoons, mangrove flats, superficial channels (intertidal), and supratidal flats (GSWA, 2013)."@en ;
+.
+geof:MarineUnit a skos:Concept ;
+    dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
+    skos:broader geof:RegolithLandformUnit ; 
+    skos:definition "A primary regolith-landform unit/setting generally embracing offshore marine deposits such as coralgal reefs, shell banks, and sea-grass banks (GSWA, 2013; see scopeNote herewith/below)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfrma" ;
+    skos:prefLabel "Marine regolith-landform unit"@en ;
+    skos:scopeNote "More comprehensively, secondary regolith elements associated with this primary marine regolith-landform mapping unit encompass: coral reefs/bioherms; reef flats, backreefs or rock flats; shell banks; plains, nearshore; plains, offshore; rocky reefs; shorefaces; talus slopes or footslopes; and relict channels (GSWA, 2013)."@en ;
+.
 geof:AbundanceZone a skos:Concept ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
     skos:broader geof:BiostratigraphicUnit ;
