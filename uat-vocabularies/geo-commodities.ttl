@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-06-13"^^xsd:date ;
+    dcterms:modified "2022-07-12"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -1147,6 +1147,14 @@ cdt:miscellaneous-dimension-stones a skos:Concept ;
     skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
     skos:notation "MISC" ;
     skos:prefLabel "Miscellaneous Dimension Stone"@en .
+
+cdt:porphyry a skos:Concept ;
+    skos:broader cdt:dimension-stone ;
+    skos:definition "An an igneous rock defined by its texture consisting of coarse-grained crystals such as feldspar or quartz dispersed in a fine-grained silicate-rich, generally aphanitic matrix or groundmass."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "PYY" ;
+    skos:prefLabel "porphyry"@en .
 
 cdt:quartzite a skos:Concept ;
     skos:broader cdt:dimension-stone ;
@@ -4066,6 +4074,7 @@ cdt:lodgement-form a skos:Collection ;
         cdt:phosphorus,
         cdt:plaster-sand  ,
         cdt:platinum,
+        cdt:porphyry,
         cdt:potash,
         cdt:potassium,
         cdt:pozzolan,
@@ -4497,6 +4506,7 @@ cdt:material-dimensionstone a skos:Collection ;
         cdt:gabbro,
         cdt:greenstone,
         cdt:limestone,
+        cdt:porphyry,
         cdt:quartzite,
         cdt:rhyolite,
         cdt:siltstone,
@@ -4938,6 +4948,7 @@ cdt:material-stone a skos:Collection ;
         cdt:limestone,
         cdt:marble,
         cdt:miscellaneous-dimension-stones,
+        cdt:porphyry,
         cdt:quartzite,
         cdt:rhyolite,
         cdt:sandstone,
