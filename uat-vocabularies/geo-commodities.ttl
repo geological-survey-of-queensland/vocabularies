@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-07-12"^^xsd:date ;
+    dcterms:modified "2022-07-19"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -3787,6 +3787,15 @@ cdt:fluorine a skos:Concept ;
     skos:notation "F" ;
     skos:prefLabel "Fluorine (F)"@en .
 
+cdt:helium a skos:Concept ;
+    skos:altLabel "Helium"@en ;
+    skos:broader cdt:non-metal ;
+    skos:definition "Helium is a chemical element with symbol He and atomic number 2. It is a colorless, odorless, tasteless, non-toxic, inert, monatomic gas and the first in the noble gas group in the periodic table."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:inScheme <http://linked.data.gov.au/def/geo-commodities> ;
+    skos:notation "He" ;
+    skos:prefLabel "Helium (He)"@en .
+
 cdt:iodine a skos:Concept ;
     skos:altLabel "Iodine"@en ;
     skos:broader cdt:non-metal ;
@@ -3985,6 +3994,7 @@ cdt:lodgement-form a skos:Collection ;
         cdt:heavy-rare-earth-element,
         cdt:heavy-rare-earth-oxide,
         cdt:heliodor,
+        cdt:helium,
         cdt:hematite,
         cdt:hematite-gemstone,
         cdt:hematite-ore,
@@ -5116,3 +5126,58 @@ cdt:material-slime a skos:Collection ;
         cdt:phosphorous,
         cdt:selenium,
         cdt:sulphur .
+
+cdt:critical-minerals-aus a skos:Collection ;
+    skos:prefLabel "Critical Minerals - Australia"@en ;
+    skos:definition "The Australian Government considers 26 resource commodities to be critical minerals. Source: Geoscience Australia website - Critical Minerals at Geoscience Australia."@en ;
+    skos:member
+        cdt:alumina,
+        cdt:antimony,
+        cdt:beryllium,
+        cdt:bismuth,
+        cdt:chromium,
+        cdt:cobalt,
+        cdt:gallium,
+        cdt:germanium,
+        cdt:graphite,
+        cdt:hafnium,
+        cdt:helium,
+        cdt:indium,
+        cdt:lithium,
+        cdt:magnesium,
+        cdt:manganese,
+        cdt:niobium,
+        cdt:platinum-group-metal,
+        cdt:iridium,
+        cdt:osmium,
+        cdt:palladium,
+        cdt:platinum,
+        cdt:rhodium,
+        cdt:ruthenium,
+        cdt:rare-earth-element,
+        cdt:heavy-rare-earth-element,
+        cdt:dysprosium,
+        cdt:erbium,
+        cdt:europium,
+        cdt:gadolinium,
+        cdt:holmium,
+        cdt:lutetium,
+        cdt:terbium,
+        cdt:thulium,
+        cdt:ytterbium,
+        cdt:yttrium,
+        cdt:light-rare-earth-elements,
+        cdt:cerium,
+        cdt:lanthanum,
+        cdt:neodymium,
+        cdt:praseodymium,
+        cdt:promethium,
+        cdt:samarium,
+        cdt:rhenium,
+        cdt:scandium,
+        cdt:silicon,
+        cdt:tantalum,
+        cdt:titanium,
+        cdt:tungsten,
+        cdt:vanadium,
+        cdt:zirconium .
