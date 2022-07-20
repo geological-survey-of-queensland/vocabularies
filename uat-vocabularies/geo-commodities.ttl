@@ -14,7 +14,7 @@
     dcterms:created "2020-02-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-07-19"^^xsd:date ;
+    dcterms:modified "2022-07-20"^^xsd:date ;
     dcterms:provenance "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The types of commodities in geoscience. Commodities have economic signifiance and are separate from host rock, accessory non-economic minerals, or other associated materials that are not commoditised. The commodity vocabulary is hierarchical, to represent each commodity as a member of a commodity category (eg, base metal, precious metal, industrial mineral, energy)."@en ;
     skos:hasTopConcept cdt:undefined,
@@ -5129,7 +5129,7 @@ cdt:material-slime a skos:Collection ;
 
 cdt:critical-minerals-aus a skos:Collection ;
     skos:prefLabel "Critical Minerals - Australia"@en ;
-    skos:definition "The Australian Government considers 26 resource commodities to be critical minerals. Source: Geoscience Australia website - Critical Minerals at Geoscience Australia."@en ;
+    skos:definition "The Australian Government considers 26 resource commodities to be critical minerals.This includes the platinum-group metals and rare earth elements as individual commodity groupings, Source: Geoscience Australia website - Critical Minerals at Geoscience Australia."@en ;
     skos:member
         cdt:alumina,
         cdt:antimony,
@@ -5180,4 +5180,64 @@ cdt:critical-minerals-aus a skos:Collection ;
         cdt:titanium,
         cdt:tungsten,
         cdt:vanadium,
+        cdt:zirconium .
+
+cdt:critical-minerals-qld a skos:Collection ;
+    skos:prefLabel "Critical Minerals - Queensland"@en ;
+    skos:altLabel "New Economy Minerals"@en ;
+    skos:definition "The Queensland Government considers 48 individual resource commodities to be critical minerals. This collection includes different forms of the same critical element such as Alumina, Aluminium and bauxite, and commodity groupings such as rare earth elements and platinum group metals"@en ;
+    skos:member
+        cdt:alumina,
+        cdt:aluminium,
+        cdt:bauxite,
+        cdt:cadmium,
+        cdt:cobalt,
+        cdt:copper,
+        cdt:gallium,
+        cdt:germanium,
+        cdt:gold,
+        cdt:graphite,
+        cdt:indium,
+        cdt:lithium,
+        cdt:magnesite,
+        cdt:molybdenum,
+        cdt:nickel,
+        cdt:niobium,
+        cdt:platinum-group-metal,
+            cdt:iridium,
+            cdt:osmium,
+            cdt:palladium,
+            cdt:platinum,
+            cdt:rhodium,
+            cdt:ruthenium,
+        cdt:rare-earth-element,
+            cdt:heavy-rare-earth-element,
+                    cdt:dysprosium,
+                    cdt:erbium,
+                    cdt:europium,
+                    cdt:gadolinium,
+                    cdt:holmium,
+                    cdt:lutetium,
+                    cdt:terbium,
+                    cdt:thulium,
+                    cdt:ytterbium,
+                    cdt:yttrium,
+            cdt:light-rare-earth-elements,
+                    cdt:cerium,
+                    cdt:lanthanum,
+                    cdt:neodymium,
+                    cdt:praseodymium,
+                    cdt:promethium,
+                    cdt:samarium,
+        cdt:rhenium,
+        cdt:scandium,
+        cdt:silica,
+        cdt:silver,
+        cdt:tantalum,
+        cdt:tellurium,
+        cdt:tungsten,
+        cdt:tin,
+        cdt:titanium,
+        cdt:vanadium,
+        cdt:zinc,
         cdt:zirconium .
