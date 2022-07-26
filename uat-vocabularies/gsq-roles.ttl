@@ -14,7 +14,7 @@
 <http://linked.data.gov.au/def/gsq-roles> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2019-10-17"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-05-20"^^xsd:date ;
+    dcterms:modified "2022-07-26"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source <http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml> ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)."@en ;
@@ -74,6 +74,14 @@ gsqr:contractor a skos:Concept ;
     skos:definition "Contractors are agents who receive work contracts to perform activities on behalf of other agents, e.g. owners or operators."@en ;
     skos:scopeNote "Contractors should always act on behalf of (formally: prov:actedObBehalfOf) some other Agent, such as an Owner"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> .
+
+gsqr:consultant a skos:Concept ;
+    skos:prefLabel "Consultant"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:definition "Consultants are contractors who provide value-added services and advice to other agents, e.g. owners or operators. Consultants may aggregate multiple other roles. Consultants are commonly an intermediary a contractor between the primary collector of data and the ultimate client or operator. Consultants may also provide post-hoc services to a client specific to a project but independent of primary collection and investigation. This may include providing a combination of project management, data curation, data processing, analysis, and advisory roles."@en ;
+    skos:scopeNote "Consultants are a type of contractor, and as such should always act on behalf of (formally: prov:actedObBehalfOf) some other Agent, such as an Owner"@en ;
+    skos:broader gsqr:contractor .
 
 gsqr:driller a skos:Concept ;
     skos:prefLabel "Driller"@en ;
