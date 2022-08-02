@@ -15,7 +15,7 @@ For more detailed information, please read [Why Vocabularies?](https://github.co
 **Fig. 1: Vocabulary context diagram**
 
 1. We use tools such as Vocbench or Excel to create the vocabulary using [SKOS Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference) language structure. This structure provides a framework for describing and relating concepts in a common language, ensuring everyone prescisely understands a concept in the same way. See also the [SKOS Primer](https://www.w3.org/TR/skos-primer) for the basics.
-2. The native format for a vocabulary is a TTL (turtle) file. This file contains Resource Description Framework ([RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) triples). These 'triple' are similar to English language 'subject > predicate > object' statements.
+2. The native format for a vocabulary is a TTL (turtle) file. Essentially, a text file with a .ttl extension and written in a specific language style. This file contains Resource Description Framework ([RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) triples). These 'triple' are similar to English language 'subject > predicate > object' statements.
 3. We use Github (where you are now) to store and manage versions of vocabulary TTL files. Github also provides workflow functionality to approve vocabularies. Read the [Github getting started guide](https://guides.github.com/activities/hello-world/)
 4. We import the TTL files into GraphDB to create a triple store. GraphDB lets us query the triples.
 5. [VocPrez](https://vocabs.gsq.digital/) presents our vocabs on the web for people and computers to read. VocPrez pulls the triples from GraphDB to create a cache of the vocabularies.
