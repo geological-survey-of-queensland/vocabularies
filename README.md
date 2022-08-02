@@ -92,16 +92,25 @@ This code repository's content are licensed under the [Creative Commons Attribut
 
 
 ## Contacts
-*Vocabularies owner*:  
-**Mark Gordon**  
-Geological Survey of Quensland  
-Department of Resources  
-Brisbane, QLD, Australia  
+*System owner*:  
+**Mark Gordon**,
+Geological Survey of Queensland,
+Department of Resources,
+Brisbane, QLD, Australia,
 <mark.gordon@resources.qld.gov.au>  
 
-*Technical contact*:  
-**Vance Kelly**  
-Geological Survey of Quensland  
-Department of Resources
-Brisbane, QLD, Australia    
+*Contributors*:  
+**Vance Kelly**,
+Principal Data Manager,
+Geological Survey of Queensland,
+Department of Resources,
+Brisbane, QLD, Australia,  
 <vance.kelly@resources.qld.gov.au>
+
+**Luke Hauck**,
+Geoscientist,
+Geological Survey of Queensland,
+Department of Resources,
+Brisbane, QLD, Australia,
+<luke.hauck@reosurces.qld.gov.au>
+
