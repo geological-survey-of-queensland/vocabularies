@@ -3,23 +3,23 @@
 The Geological Survey of Queensland (GSQ) publishes vocabularies - a way to describe things and the relationship between things.
 
 A vocabulary is a set of agreed terms:
-* In GSQ, a vocabulary defines the terms used to describe and represent things in the domain of science and data management.
+* In GSQ, a vocabulary defines the terms used to describe and represent things in the domain of economic resources, geoscience and data management.
 * Vocabularies align information within a business area or across systems.
 * Vocabularies can be very complex (with thousands of terms) or very simple (describing one or two concepts only).
 
-Read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Why-Vocabularies%3F) and more subjects in the [Vocabularies Wiki](https://github.com/geological-survey-of-queensland/vocabularies/wiki).
+For more detailed information, please read [Why Vocabularies?](https://github.com/geological-survey-of-queensland/vocabularies/wiki/Why-Vocabularies%3F) and more subjects in the [Vocabularies Wiki](https://github.com/geological-survey-of-queensland/vocabularies/wiki).
 
 ## Vocabulary - how it all hangs together
 <img src="images/vocabulary_context_diagram.png" style="width:800px;" alt="Vocabulary context diagram" />  
 
 **Fig. 1: Vocabulary context diagram**
 
-1. We use tools such as Vocbench or Excel to create the vocabulary using [SKOS Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference). See also the [SKOS Primer](https://www.w3.org/TR/skos-primer) for the basics.
-2. The native format for a vocabulary is a TTL (turtle) file. This file contains [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) triples - subject > predicate > object statements.
+1. We use tools such as Vocbench or Excel to create the vocabulary using [SKOS Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference) language structure. This structure provides a framework for describing and relating concepts in a common language, ensuring everyone prescisely understands a concept in the same way. See also the [SKOS Primer](https://www.w3.org/TR/skos-primer) for the basics.
+2. The native format for a vocabulary is a TTL (turtle) file. This file contains Resource Description Framework ([RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) triples). These 'triple' are similar to English language 'subject > predicate > object' statements.
 3. We use Github (where you are now) to store and manage versions of vocabulary TTL files. Github also provides workflow functionality to approve vocabularies. Read the [Github getting started guide](https://guides.github.com/activities/hello-world/)
 4. We import the TTL files into GraphDB to create a triple store. GraphDB lets us query the triples.
-5. VocPrez presents our vocabs on the web for people and computers to read. VocPrez pulls the triples from GraphDB to create a cache of the vocabularies.
-6. CKAN drop-down form fields pull their values from VocPrez. This ensures that the attributes uses to describe a dataset comes from the controlled vocabulary. 
+5. [VocPrez](https://vocabs.gsq.digital/) presents our vocabs on the web for people and computers to read. VocPrez pulls the triples from GraphDB to create a cache of the vocabularies.
+6. Other systems, such as GeoProperties and the the Data Portals, pull their values from VocPrez. This ensures that the attributes uses to describe a dataset comes from the controlled vocabulary. 
 
 
 ## How to create a vocabulary
@@ -105,10 +105,4 @@ Brisbane, QLD, Australia
 Geological Survey of Quensland  
 Department of Resources
 Brisbane, QLD, Australia    
-<vance.kelly@resources.qld.gov.au>  
-
-*Author*:  
-**David Crosswell**  
-Enterprise Architect  
-Cross-Lateral Enterprises   
-<https://crosslateral.com.au>
+<vance.kelly@resources.qld.gov.au>
