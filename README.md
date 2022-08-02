@@ -72,9 +72,8 @@ The steps outlined above are shown in workflow form at the [Vocabulary Review Wo
 * CGI Vocabularies Register http://resource.geosciml.org/def/voc/
 * EarthResourceML Vocabularies http://resource.geosciml.org/def/voc/ (scroll down)
 * Research Vocabularies Australia https://vocabs.ands.org.au/
-* CSIRO Environment Registry http://registry2.it.csiro.au/
 * Linked Open Vocabularies https://lov.linkeddata.es/dataset/lov
-* ISO 19115 https://geo-ide.noaa.gov/wiki/index.php?title=ISO_19115_and_19115-2_CodeList_Dictionaries
+* ISO 19115 https://www.ngdc.noaa.gov/wiki/index.php/ISO_19115_and_19115-2_CodeList_Dictionaries
 * Basel Register https://bartoc.org/
 * British Geological Survey https://www.bgs.ac.uk/data/vocabularies/home.cfm
 * INSPIRE Code Lists http://inspire.ec.europa.eu/codelist
