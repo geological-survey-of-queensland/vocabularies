@@ -2,7 +2,7 @@
 # imports: http://linked.data.qld.gov.au/def/dcat
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dq-nsw: <http://linked.data.gov.au/def/nsw-quality-dimension/> .
+@prefix dq-nsw: <https://linked.data.gov.au/def/nsw-quality-dimension/> .
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,17 +11,17 @@
 @prefix sdo: <http://www.schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://linked.data.gov.au/def/nsw-quality-dimension>
+<https://linked.data.gov.au/def/nsw-quality-dimension>
   a skos:ConceptScheme ;
-  rdfs:comment "Find out more about the quality assurance processes from the NSW Government Standard for Data Quality Reporting. http://data.nsw.gov.au/data-quality-reporting-tool"@en ;
-  skos:definition "Criteria for a Data Quality Statement as per the New South Wales (NSW) Government. Find out more about the quality assurance processes from the NSW Government Standard for Data Quality Reporting. http://data.nsw.gov.au/data-quality-reporting-tool"@en ; 
+  rdfs:comment "Find out more about the quality assurance processes from the NSW Government Standard for Data Quality Reporting. https://data.nsw.gov.au/data-quality-reporting-tool"@en ;
+  skos:definition "Criteria for a Data Quality Statement as per the New South Wales (NSW) Government. Find out more about the quality assurance processes from the NSW Government Standard for Data Quality Reporting. https://data.nsw.gov.au/data-quality-reporting-tool"@en ; 
   skos:prefLabel "NSW Government Data Quality Dimensions"@en ;
-  rdfs:seeAlso <http://data.nsw.gov.au/data-quality-reporting-tool> ;
+  rdfs:seeAlso <https://data.nsw.gov.au/data-quality-reporting-tool> ;
   dcterms:created "2020-11-16"^^xsd:date ;
-  dcterms:creator <http://linked.data.gov.au/def/gsq-alias/des> ;
-  dcterms:modified "2021-04-19"^^xsd:date ;
-  dcterms:publisher <http://linked.data.gov.au/def/gsq-alias/des> ;
-  dcterms:provenance "NSW Government Standard for Data Quality Reporting. http://data.nsw.gov.au/data-quality-reporting-tool" ;
+  dcterms:creator <https://linked.data.gov.au/def/gsq-alias/des> ;
+  dcterms:modified "2022-05-09"^^xsd:date ;
+  dcterms:publisher <https://linked.data.gov.au/def/gsq-alias/des> ;
+  dcterms:provenance "NSW Government Standard for Data Quality Reporting. https://data.nsw.gov.au/data-quality-reporting-tool" ;
   skos:hasTopConcept dq-nsw:accessibility ;
   skos:hasTopConcept dq-nsw:accuracy ;
   skos:hasTopConcept dq-nsw:coherence ;
@@ -29,270 +29,270 @@
   skos:hasTopConcept dq-nsw:interpretability ;
 .
 dq-nsw:accessibility
-  a dqv:Category ; a skos:Concept ;
+  a skos:Concept ; a dqv:Category ; 
   skos:prefLabel "Accessibility"@en ;
   skos:definition "A dimension of quality relating to the ease with which data or information can be retrieved, used and understood."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
 .
 dq-nsw:accuracy
-  a dqv:Category ; a skos:Concept ;
+  a skos:Concept ; a dqv:Category ; 
   skos:prefLabel "Accuracy"@en ;
   skos:definition "A dimension of quality relating to the degree to which the data or information correctly describes that which it was designed to measure."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
 .
 dq-nsw:assurance
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Data assurance"@en ;
   skos:definition "This data has been subject to quality assurance processes. ie Checking for errors at each stage of data collection and processing, or verifying data entry and making corrections if necessary."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:accuracy ;
   skos:broader dq-nsw:accuracy ;
 .
 dq-nsw:authorized
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Authorized data collection"@en ;
   skos:definition "Data collection is mandated or required by a law, regulation or agreement"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:institutional-environment ;
   skos:broader dq-nsw:institutional-environment ;
 .
 dq-nsw:coherence
-  a dqv:Category ; a skos:Concept ;
+  a skos:Concept ; a dqv:Category ; 
   skos:prefLabel "Coherence"@en ;
   skos:definition "A dimension of quality relating to the degree to which data or information can be compared with itself and other information over time."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
 .
 dq-nsw:comparable
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Elements can be compared"@en ;
   skos:definition "Elements within the data can be meaningfully compared."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:coherence ;
   skos:broader dq-nsw:coherence ;
 .
 dq-nsw:complete
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Data complete"@en ;
   skos:definition "There are no known gaps in the data. (For example: non-responses, missing records, data not collected.). Or gaps are identified in caveats attached to the dataset or data source."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:accuracy ;
   skos:broader dq-nsw:accuracy ;
 .
 dq-nsw:concepts
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   rdfs:comment "Find out more about concepts used in this dataset and how to understand or interpret the data from the Custodian."@en ;
   skos:prefLabel "Concept explanations"@en ;
   skos:definition "Information is available to explain concepts, help users correctly interpret the data and understand how it can be used."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:interpretability ;
   skos:broader dq-nsw:interpretability ;
 .
 dq-nsw:consistent
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Consistent with related datasets"@en ;
   skos:definition "This data is generally consistent with similar or related data sources."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:coherence ;
   skos:broader dq-nsw:coherence ;
 .
 dq-nsw:data-dictionary
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   rdfs:comment "Find out more about the data dictionary from the Custodian."@en ;
   skos:prefLabel "Data dictionary provided"@en ;
   skos:definition "A data dictionary is available to explain the meaning of data elements, their origin, format and relationships."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:interpretability ;
   skos:broader dq-nsw:interpretability ;
 .
 dq-nsw:data-quality-framework
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Data quality framework"@en ;
   skos:definition "Data is collected and managed according to a data quality framework."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:institutional-environment ;
   skos:broader dq-nsw:institutional-environment ;
 .
 dq-nsw:custodian
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Custodian"@en ;
   skos:definition "Agency publishing this data is the recognised data custodian."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:institutional-environment ;
   skos:broader dq-nsw:institutional-environment ;
 .
 dq-nsw:evaluation
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Accuracy evaluation"@en ;
   skos:definition "Information is available to help users evaluate the accuracy of the data and any level of error."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:interpretability ;
   skos:broader dq-nsw:interpretability ;
 .
 dq-nsw:governance
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "governance roles"@en ;
   skos:definition "Data governance roles and responsibilities are clearly assigned for this dataset or data source."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:institutional-environment ;
   skos:broader dq-nsw:institutional-environment ;
 .
 dq-nsw:institutional-environment
-  a dqv:Category ; a skos:Concept ;
+  a skos:Concept ; a dqv:Category ; 
   skos:prefLabel "Institutional Environment"@en ;
   skos:definition "A dimension of quality relating to the institutional and organisational factors which may have a significant influence on the effectiveness and credibility of the agency producing the data or information."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
 .
 dq-nsw:interpretability
-  a dqv:Category ; a skos:Concept ;
+  a skos:Concept ; a dqv:Category ; 
   skos:prefLabel "Interpretability"@en ;
   skos:definition "A dimension of quality relating to the degree to which data or information can be understood, explained and used."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
 .
 dq-nsw:license
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Open license"@en ;
   skos:definition "This dataset or data source is available online with an open licence."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:accessibility ;
   skos:broader dq-nsw:accessibility ;
 .
 dq-nsw:linked
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Links to data and context"@en ;
   skos:definition "This dataset or data source is linked to other data, to provide context."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:accessibility ;
   skos:broader dq-nsw:accessibility ;
 .
 dq-nsw:methodology
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Consistent methodology"@en ;
   skos:definition "This dataset is a single collection. It is not impacted by changes in methodology or external events over time. Or this data is part of a time series. There have not been any significant changes in the way data items are defined, classified or counted since the start of the series."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:coherence ;
   skos:broader dq-nsw:coherence ;
 .
 dq-nsw:no-changes
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "No changes or flaws not explained"@en ;
   skos:definition "There have been no adjustments, changes or other factors that could impact the validity of the data. (For example: weighting, rounding, de-identification of data; changes or flaws in data collection or verification methods.). Or adjustments are identified in caveats attached to the dataset or data source"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:accuracy ;
   skos:broader dq-nsw:accuracy ;
 .
 dq-nsw:no-conflict
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "No commercial interest or conflict"@en ;
   skos:definition "Custodian has no commercial interest or conflict of interest in the data – or, has declared any interest in the data."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:institutional-environment ;
   skos:broader dq-nsw:institutional-environment ;
 .
 dq-nsw:non-proprietary
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Non-proprietary format"@en ;
   skos:definition "This dataset or data source is available in a non-proprietary format."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:accessibility ;
   skos:broader dq-nsw:accessibility ;
 .
 dq-nsw:open-standards
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Open standards"@en ;
   skos:definition "This dataset or data source is described using open standards and persistent identifiers."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:accessibility ;
   skos:broader dq-nsw:accessibility ;
 .
 dq-nsw:primary-user
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Data met needs of primary user"@en ;
   skos:definition "The data collection met the objectives of the primary user. The data correctly represents what it was designed to measure, monitor or report."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:accuracy ;
   skos:broader dq-nsw:accuracy ;
 .
 dq-nsw:revised
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Revised when errors detected"@en ;
   skos:definition "Revision policy: If errors are identified, data is revised and the revision is publicised."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:accuracy ;
   skos:broader dq-nsw:accuracy ;
 .
 dq-nsw:sources
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   rdfs:comment "Find out more about the primary data sources and methods of data collection from the Custodian (contact details below)."@en ;
   skos:prefLabel "Data sources and methods"@en ;
   skos:definition "Information is available about the primary data sources and methods of data collection. (For example: instruments, forms, instructions.)"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:interpretability ;
   skos:broader dq-nsw:interpretability ;
 .
 dq-nsw:standards
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Standard definitions and practices"@en ;
   skos:definition "Standard definitions, common concepts, classifications and data recording practices have been used."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:coherence ;
   skos:broader dq-nsw:coherence ;
 .
 dq-nsw:structured
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Structured data"@en ;
   skos:definition "This dataset or data source is available in a machine-processable, structured format."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:accessibility ;
   skos:broader dq-nsw:accessibility ;
 .
 dq-nsw:technical
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   rdfs:comment "Find out more about ambiguous or technical terms used in the data from the Custodian (contact details below)."@en ;
   skos:prefLabel "Technical explanations"@en ;
   skos:definition "Information is available to explain ambiguous or technical terms used in the data."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:interpretability ;
   skos:broader dq-nsw:interpretability ;
 .
 dq-nsw:time
-  a dqv:Dimension ; a skos:Concept ;
+  a skos:Concept ; a dqv:Dimension ; 
   skos:prefLabel "Consistent over time"@en ;
   skos:definition "This data is part of a time series. It is consistent with previous releases. There have been no changes in methodology or external impacts since the last data release."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/nsw-quality-dimension> ;
-  skos:inScheme <http://linked.data.gov.au/def/nsw-quality-dimension> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nsw-quality-dimension> ;
+  skos:inScheme <https://linked.data.gov.au/def/nsw-quality-dimension> ;
   dqv:inCategory dq-nsw:coherence ;
   skos:broader dq-nsw:coherence ;
 .
 
-<http://linked.data.gov.au/def/gsq-alias/des>
+<https://linked.data.gov.au/def/gsq-alias/des>
     a sdo:Organization ;
     sdo:name "Department of Environment and Science"@en .
