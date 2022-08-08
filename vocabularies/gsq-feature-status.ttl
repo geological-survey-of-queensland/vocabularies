@@ -22,34 +22,61 @@
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
-fst:CurrentFormalRockUnit a skos:Concept ;
+fst:FormalRockUnit a skos:Concept ;
     skos:definition "The status of a rock unit the name and parameters of which are in current use, and have been intentionally/formally defined and/or delineated by printed and/or digital publication (including Geoscience Australia's Australian Stratigraphic Units Database/ASUD) in accordance with a national, international and/or other code or protocol that applies thereto."@en ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
     skos:notation "fstfr" ;
     skos:prefLabel "Formal rock unit"@en .
 
-fst:CurrentInformalRockUnit a skos:Concept ;
+fst:InformalRockUnit a skos:Concept ;
     skos:definition "The status of a rock unit the name and parameters of which are in current use, and have been informally defined and/or delineated, including mere mentioning, in printed and/or digital material, either published or unpublished (e.g., theses, company exploration reports, maps, etc.), and not in accordance with a national, international and/or other code or protocol for formal definition."@en ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
     skos:scopeNote "Examples include the Eddystone beds (ASUD Stratigraphic Number 5953), the Chong beds (ASUD Stratigraphic Number 78567), and the Reids Dome beds (ASUD Stratigraphic Number 16012), all of which currently defy formal definition, because of a lack of detail to do so."@en ;
     skos:notation "fstir" ;
     skos:prefLabel "Informal rock unit"@en .
 
-fst:CurrentInvalidRockUnit a skos:Concept ;
-    skos:definition "The status of a rock unit the name and parameters of which have been published, but not in accordance with a national, international and/or other code or protocol that applies thereto, rendering the unit with invalid status as opposed to informal status."@en ;
+fst:FullyDescribedRockUnit a skos:Concept ;
+    skos:broader fst:InformalRockUnit ;
+    skos:definition "Rock Unit has been described in full in a publication, but not as a formal definition that conforms with the International Stratigraphic Guide, e.g., no type specified."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:notation "fstifd" ;
+    skos:prefLabel "Fully described rock unit"@en .
+
+fst:DescribedRockUnit a skos:Concept ;
+    skos:broader fst:InformalRockUnit ;
+    skos:definition "Rock Unit has been described in a publication, but not as a formal definition that conforms with the International Stratigraphic Guide, e.g., no type specified."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:notation "fstide" ;
+    skos:prefLabel "Described rock unit"@en .
+
+fst:BrieflyDescribedRockUnit a skos:Concept ;
+    skos:broader fst:InformalRockUnit ;
+    skos:definition "Rock Unit has been briefly described in a publication (e.g., in a table) or on a standard geological map series legend."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:notation "fstibd" ;
+    skos:prefLabel "Briefly described rock unit"@en .
+
+fst:MentionedRockUnit a skos:Concept ;
+    skos:broader fst:InformalRockUnit ;
+    skos:definition "Rock Unit name that has been mentioned in a publication, but no other details given."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
+    skos:notation "fstime" ;
+    skos:prefLabel "Mentioned rock unit"@en .
+
+fst:InvalidRockUnit a skos:Concept ;
+    skos:definition "The status of a rock unit the name and parameters of which have been published, but not in accordance with a national, international and/or other code or protocol that applies thereto (e.g., the International Stratigraphic Guide), rendering the unit with invalid status as opposed to informal status."@en ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
     skos:notation "fstiv" ;
     skos:scopeNote "For example: The name Balfes Creek beds (ASUD Stratigraphic Number  36156) is invalid because the Balfes Creek Granodiorite has precedence as a reserved and defined rock unit in Queensland. There is also uncertainty as to whether the rocks associated with the Balfes Creek beds are representative of the Boonderoo beds in the northeastern Galilee Basin, occurring in a structurally-preserved remnant of this basin or occurring as equivalents of the Boonderoo beds in a separate basin."@en ;
     skos:prefLabel "Invalid rock unit"@en .
- 
-fst:ProcessingPending a skos:Concept ;
-    skos:definition "The temporary status accorded to a new rock unit or to changes in the status or rank of an existing unit during the procedure whereby the unit, its name (including its rank), and other necessary parameters associated with it are being processed and recognised in the Australian Stratigraphic Units Database/ASUD by Geoscience Australia."@en ;
+
+fst:ObsoleteRockUnit a skos:Concept ;
+    skos:definition "Rock Unit name that has fallen into disuse (not used in the literature for at least 50 years)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
-    skos:notation "fstpp" ;
-    skos:scopeNote """For example: The Bowthorn Member (Stratigraphic Number 80377 in the ASUD) remained accorded ‘Processing Pending’ status as of 18.07.2022. 'Reserved' status in the ASUD is accorded to a new name prior to its publication."""@en ;
-    skos:prefLabel "Processing pending"@en .
+    skos:notation "fstob" ;
+    skos:prefLabel "Obsolete rock unit"@en .
     
-fst:ReservedByGeoscienceAustralia a skos:Concept ;
+fst:ReservedByGeoscienceAustraliaRockUnit a skos:Concept ;
     skos:altLabel "reserved by GA"@en ;
     skos:altLabel "reserved"@en ;
     skos:definition "The status requested of, and accorded by, the Stratigraphic Index Officer of Geoscience Australia for the claim of a name for a rock unit (reserved for up to five years) prior to its hard-copy and/or digital publication."@en ;
@@ -59,8 +86,9 @@ fst:ReservedByGeoscienceAustralia a skos:Concept ;
     skos:prefLabel "Reserved by Geoscience Australia"@en .
 
 fst:UnnamedRockUnit a skos:Concept ;
-    skos:altLabel "not defined"@en ;
+    skos:broader fst:InformalRockUnit ;
     skos:definition "The status of a rock unit that has been recorded in published or unpublished reports, records, maps, etc., but has not been named."@en ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-feature-status> ;
     skos:notation "fstun" ;
+    skos:scopeNote "Geoscience Australia definition supported here, additional to above: A distinctive area of rocks (polygon(s) in a dataset), where the rocks have been assigned a description, but not a name. Often used for subsurface units that are based on geophysical properties alone. Also used for very broad-scale maps where named units are too small to be displayed at the intended scale. ASUD does not have the resources to record all of these unnamed units created by all the State and Territory Surveys in any useful way, but this organisation’s current GIS dataset structure requires a 'stratno' for all geological polygons, so it does currently record any unnamed units used in its datasets."@en ;
     skos:prefLabel "Unnamed rock unit"@en .
