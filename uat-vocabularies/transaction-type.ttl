@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/transaction-type> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2022-01-10"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-01-10"^^xsd:date ;
+    dcterms:modified "2022-08-24"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The types of transactions between parties as pertains to the provision of goods, materials, and services."@en ;
@@ -39,6 +39,14 @@ trns:purchase a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
     skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
     skos:prefLabel "Purchase"@en .
+
+trns:purchase-feed a skos:Concept ;
+    skos:altLabel "Purchase (Raw)"@en ;
+    skos:broader trns:purchase ;
+    skos:definition "A type of purchase in which the goods exchanged will undergo further processing or refining by the buyer prior to onward sale. A purchase of good that will contribute to the feedstock to processing by the purchasing entity."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
+    skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
+    skos:prefLabel "Purchase (Feedstock)"@en .
 
 trns:transfer-in a skos:Concept ;
     skos:altLabel "Inward Transfer"@en,
@@ -93,4 +101,5 @@ trns:min-transfer a skos:Collection ;
     skos:member
         trns:transfer-in,
         trns:transfer-out,
-        trns:purchase .
+        trns:purchase,
+        trns:purchase-feed .
