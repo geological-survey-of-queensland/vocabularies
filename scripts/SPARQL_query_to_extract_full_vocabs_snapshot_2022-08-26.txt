@@ -1,0 +1,11 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+ 
+SELECT *
+WHERE {​​​
+?concepturi a skos:Concept ;
+skos:prefLabel ?preflabel .
+OPTIONAL {​​​​​​​​​​?concepturi skos:notation ?notation}​​​​​​​​​​​​​​​​​​​​​​​​
+OPTIONAL {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​?concepturi skos:definition ?definition}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​.
+FILTER(LANG(?preflabel)="en")
+}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+ORDER BY ?concepturi
