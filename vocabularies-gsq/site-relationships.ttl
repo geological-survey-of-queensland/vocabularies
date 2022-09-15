@@ -47,6 +47,237 @@
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
 
+ strel:geologicalFeature a skos:Collection ;
+    skos:definition "The relationship between two geological features, for example: Stratigraphically (‘vertically’) at a boundary in common between two rock units of the same type/kind (lithostratigraphic, biostratigraphic, etc.); laterally (geographically) between two lithologic rock units with a gradational change in lithology, or laterally between two rock units with an abrupt change in lithologic or biostratigraphic facies; and lithostratigraphically or biostratigraphically (both from a geographic perspective), based respectively on lithostratigraphic or biostratigraphic correlation. Not only included are relationships between any two types of lithologic rock units, such as between two stratiform (lithostratigraphic) units or between two nonstratiform (non-lithostratigraphic) units, but also between a stratiform unit and a nonstratiform unit, such as an intrusive rock unit."@en ;
+    #skos:member strel:hasPart, <<<<<<<<<<<<<<<<<<<<< NB#
+        #strel:partOf,<<<<<<<<<<<<<<<<<< NB#
+        #strel:??????,#
+        #strel:??????,#
+        #strel:??????,#
+        #strel:??????,#
+        #strel:??????,#
+        #strel:??????,#
+        #strel:?????? ;#
+
+strel:intrudedBy a skos:Concept ;
+    skos:definition "Where the lithologic rock unit (which may be an igneous or non-igneous intrusive rock unit) is intruded/cross-cut by an igneous or non-igneous intrusive rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Intruded by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:probablyIntrudedBy a skos:Concept ;
+    skos:definition "Where the lithologic rock unit is probably intruded by an igneous or non-igneous intrusive rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Probably intruded by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:intrudes a skos:Concept ;
+    skos:definition "Where the igneous or non-igneous intrusive rock unit intrudes/cross-cuts another lithologic rock unit, which may also be an (older) intrusive rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Intrudes"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:probablyIntrudes a skos:Concept ;
+    skos:definition "Where an igneous or non-igneous intrusive rock unit probably intrudes/cross-cuts another lithologic rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Probably intrudes"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:underliesRegolith a skos:Concept ;
+    skos:altLabel "Overlain by regolith"@en ;
+    skos:definition "Where the lithologic rock unit directly underlies the regolith (i.e., the rock unit is directly overlain by the regolith), to which it may have contributed through the processes of weathering and erosion."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Underlies regolith"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:overlainBy a skos:Concept ;
+    skos:altLabel "Underlies"@en ;
+    skos:definition "Where the rock unit (e.g., a lithostratigraphic rock unit, biostratigraphic rock unit/zone, etc.) underlies (is overlain by) another lithologic rock unit (of the same kind/type: lithologic, biostratigraphic, etc.) and where the rock units are in stratigraphic order of succession (have not been overturned), and have not been thrusted into their current position; also where there is no detailed assertion of conformity or unconformity between them, with conformity being unknown or uncertain."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlain by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:overlainUnconformablyBy a skos:Concept ;
+    skos:altLabel "Unconformably underlies"@en ;
+    skos:definition "Where the rock unit (e.g., a lithostratigraphic rock unit, biostratigraphic rock unit/zone, etc.) unconformably underlies (is overlain unconformably) by another rock unit (of the same kind/type: lithologic, biostratigraphic, etc.) and where, apart from hiatus, the rock units are in stratigraphic order of succession (have not been overturned), and have not been thrusted into their current position."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlain unconformably by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    
+    strel:overlainConformablyBy a skos:Concept ;
+    skos:altLabel "Conformably underlies"@en ;
+    skos:definition "Where the rock unit (lithostratigraphic rock unit, biostratigraphic rock unit/zone, etc.) conformably underlies (is conformably overlain by) another rock unit (of the same kind/type: lithologic, biostratigraphic, etc.) and where the rock units are in stratigraphic order of succession (have not been overturned), and have not been thrusted into their current position."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlain conformably by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+        
+    strel:overlainGradationallyBy a skos:Concept ;
+    skos:altLabel "Is gradational into overlying"@en,
+    skos:altLabel "Is gradational into conformably overlying"@en ;
+    skos:definition "Where the lithologic rock unit is lithologically gradational into the conformably overlying rock unit, and where the rock units are in stratigraphic order of succession (have not been overturned), and have not been thrusted into their current position."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlain gradationally by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:underlainGradationallyBy a skos:Concept ;
+    skos:altLabel "Is gradational into underlying"@en,
+    skos:altLabel "Is gradational into conformably underlying"@en ;
+    skos:definition "Where the lithologic rock unit is lithologically gradational into the conformably underlying rock unit, and where the rock units are in stratigraphic order of succession (have not been overturned), and have not been thrusted into their current position."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlain gradationally by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+        
+    strel:laterallyGradationalInto a skos:Concept ;
+    skos:definition "Where the rock unit is laterally gradational lithologically into to another rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Laterally gradational into"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:underlainConformablyBy a skos:Concept ;
+    skos:altLabel "Conformably overlies"@en ;
+    skos:definition "Where the rock unit (lithostratigraphic rock unit, biostratigraphic rock unit/zone, etc.) conformably overlies (is conformably underlain by) by another lithologic rock unit (of the same kind/type: lithologic, biostratigraphic, etc.) and where the rock units are in stratigraphic order of succession (have not been overturned), and have not been thrusted into their current position."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Underlain conformably by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    
+    strel:underlainUnconformablyBy a skos:Concept ;
+    skos:altLabel "Unconformably overlies"@en ;
+    skos:definition "Where the rock unit (lithostratigraphic rock unit, biostratigraphic rock unit/zone, etc.) unconformably overlies (is underlain unconformably by) another lithologic rock unit (of the same kind/type: lithologic, biostratigraphic, etc.) and where, apart from hiatus, the rock units are in stratigraphic order of succession (have not been overturned), and have not been thrusted into their current position."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Underlain conformably by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+ 
+    strel:underlainBy a skos:Concept ;
+    skos:altLabel "Overlies"@en ;
+    skos:definition "Where the rock unit (lithostratigraphic rock unit, biostratigraphic rock unit/zone, etc.) overlies (is underlain by) by another rock unit (of the same kind/type: lithologic, biostratigraphic, etc.) and where the rock units are in stratigraphic order of succession (have not been overturned), and have not been thrusted into their current position; also where there is no detailed assertion of conformity or unconformity between them, with conformity being unknown or uncertain."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Underlain by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:containsInterleavedThrustSheetsOf a skos:Concept ;
+    skos:definition "Where the lithologic rock unit (or other geologic feature) contains thrust sheets of another lithologic rock unit that have been inserted tectonically."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Contains interleaved thrust sheets of"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:interleavedThrustSheetsContainedIn a skos:Concept ;
+    skos:definition "Where the interleaved thrust sheets of a lithologic rock unit have been tectonically inserted into another lithologic rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Interleaved thrust sheets of"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:overlainByThrustNappe a skos:Concept ;
+    skos:altLabel "Underlies thrust nappe"@en ;
+    skos:definition "Where the lithologic rock unit underlies (is overlain by) an out-of-sequence thrust nappe."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlain by thrust nappe"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:thrustNappeOverlying a skos:Concept ;
+    skos:definition "Where the out-of-sequence thrust nappe overlies another lithologic rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Thrust nappe overlying"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:equivalentTo a skos:Concept ;
+    skos:definition "Where the lithostratigraphic rock unit is laterally equivalent stratigraphically (lithostratigraphically) to another lithostratigraphic rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Equivalent to"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+    strel:equivalentPartlyTo a skos:Concept ;
+    skos:definition "Where the lithostratigraphic rock unit, in part only, is laterally equivalent stratigraphically (lithostratigraphically) to another lithostratigraphic rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Equivalent partly to"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+ strel:faultedAgainst a skos:Concept ;
+    skos:definition "Where the lithologic rock unit is faulted against another lithologic rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Faulted against"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+ strel:overlapsOlder a skos:Concept ;
+    skos:altLabel "Onlaps"@en ;
+    skos:definition "Where the lithologic rock unit extends progressively across an erosion surface, overlapping/onlapping an older/underlying lithologic rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlaps older"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+ strel:overlappedBy a skos:Concept ;
+    skos:definition "Where the lithologic rock is overlapped by a younger, onlapping lithologic rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlapped by"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+ strel:offsteps a skos:Concept ;
+    skos:definition "Where the lithologic rock unit sits unconformably on progressively older/underlying lithologic rock units."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Offsteps"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+ strel:overliesBasement a skos:Concept ;
+    skos:altLabel "Underlain by basement"@en ;
+    skos:definition "Where the lithologic rock unit rests on a basement rock unit."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlies basement"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+ strel:comagmaticWith a skos:Concept ;
+    skos:definition "Where the igneous rock unit, based on its chemistry and mineralogic features, is considered to have been derived from the same parent magma as another igneous rock unit (After: mindat.org; accessed 13.09.2022)."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Comagmatic with"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    
+strel:relationshipUnknown a skos:Concept ;
+    skos:definition "Where the relationship between two geological features is unknown."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Relationship unknown"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:intercalatedWith a skos:Concept ;
+    skos:definition "Where the lithologic rock unit contains a rock layer or rock layers of a different character, especially where relatively thin strata of one kind of material alternate with thicker strata of some other kind of material, such being the case, for example, with lava flows, beds of shale, and concordant intrusive sills being ‘intercalated’ in a large body of sandstone. Also: The insertion/intercalation by the tectonic thrusting of rock layers into a pre-existing body of stratified rock; or the occurrence of a particular fossil horizon between fossil zones (biostratigraphic rock units) of a different character (After: Gary et al., 1977)."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Intercalated with"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
+strel:intertonguedWith a skos:Concept ;
+    skos:altLabel "Interfingered with"@en,
+    skos:altLabel "Interdigitated with"@en ;
+    skos:definition "Where the contact between laterally adjacent rock bodies breaks down into a series of wedges or tongues that penetrate the adjacent rock body and pinch out individually, essentially embracing the ‘disappearance’ of both rock bodies (After: Gary et al., 1977; Wikipedia [Contact (geology)], accessed 07.09.2022)."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Intertongued with"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+
 strel:borehole a skos:Collection ;
     skos:definition "Relationships between associated boreholes and boreholes with other operational sites such as well pads, and hasPart relationships with constituent wellbores."@en ;
     skos:member strel:boreholeIntersect,
