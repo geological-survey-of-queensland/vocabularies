@@ -12,7 +12,7 @@
         skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-04-19"^^xsd:date ;
+    dcterms:modified "2022-09-19"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "The proximate geological features and locations that may be sampled or observed to determine the geological properties of an ultimate feature of interest."@en ;
@@ -29,7 +29,7 @@
         gsqst:geofeature,
         gsqst:trench,
         gsqst:administrative-area,
-        #gsqst:wellbore,
+        gsqst:wellbore,
         gsqst:unknown ;
     skos:prefLabel "Geological Sites"@en .
 
@@ -363,15 +363,16 @@ gsqst:lga a skos:Concept ;
     skos:prefLabel "Local Government Area"@en ;
     skos:broader gsqst:administrative-area .
 
-#gsqst:wellbore a skos:Concept ;
-#    skos:altLabel "Branch"@en,
-#        "Sidetrack"@en ;
-#    skos:definition "A Wellbore is a path of drilled footage, from the Borehole Origin (top/start) to a terminating point (bottom/end). There are one or more Wellbores in a planned or drilled Borehole, namely the original Wellbore, and a Wellbore for each intended, actual or accidental sidetrack. Each Wellbore has a unique terminating point. A deepening of an existing Wellbore is considered a new Wellbore with the same Borehole Origin. Source: PPDM What Is A  Well."@en ;
-#    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
-#    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
-#    skos:notation "wb" ;
-#    skos:prefLabel "Wellbore"@en ;
-#    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
+gsqst:wellbore a skos:Concept ;
+    skos:altLabel "Branch"@en,
+        "Sidetrack"@en ;
+    skos:definition """A Wellbore is a path of drilled footage, from the Borehole Origin (top/start) to a terminating point (bottom/end). There are one or more Wellbores in a planned or drilled Borehole, namely the original Wellbore, and a Wellbore for each intended, actual or accidental sidetrack. Each Wellbore has a unique terminating point. A deepening of an existing Wellbore is considered a new Wellbore with the same Borehole Origin. Source: PPDM What Is A  Well.
+Wellbores are always part of a borehole. Wellbores are traced back to the borehole origin point, but their unique footage that may trace back to a separate parent wellbore. The deepening of an existing wellbore subsequent to the originally intended drilling of the original borehole is conceptually part of the same original borehole, but may be considered a new reportable borehole entity, depending on local laws and regulation."""@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/geological-sites> ;
+    skos:inScheme <http://linked.data.gov.au/def/geological-sites> ;
+    skos:notation "wb" ;
+    skos:prefLabel "Wellbore"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/geological-sites> .
 
 gsqst:unknown a skos:Concept ;
     skos:altLabel "Null"@en ;
