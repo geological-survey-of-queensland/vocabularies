@@ -113,7 +113,9 @@ strel:temporal a skos:Collection ;
 
 strel:wellbore a skos:Collection ;
     skos:definition "Defines the parent-child relationship of wellbores that constitute a borehole."@en ;
-    skos:member strel:parent ;
+    skos:member strel:parent,
+        strel:boreholeIntersect,
+        strel:injectionExtractionPair ;
     skos:prefLabel "Wellbore"@en .
 
 strel:above a skos:Concept ;
