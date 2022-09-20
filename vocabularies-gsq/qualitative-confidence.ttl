@@ -1,0 +1,378 @@
+@prefix qcon: <http://linked.data.gov.au/def/qualitative-confidence/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/qualitative-confidence> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2022-09-16"^^xsd:date ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2022-09-16"^^xsd:date ;
+    dcterms:provenance """Constructed by the GSQ, from common terminology, JORC Mineral Resource and Ore Reserves Classification, the Petroleum Resource Management System, and the IPCC Uncertainty Guidance Note (IPCC AR5).""" ;
+    skos:definition """Qualitative descriptors to indicate the confidence in a value or interpretation. Some qualitative descriptions may be based on quantitative criteria."""@en ;
+    skos:hasTopConcept
+        qcon:approximate,
+        qcon:contingent,
+        qcon:indicated,
+        qcon:inferred,
+        qcon:measured,
+        qcon:possible,
+        qcon:probable,
+        qcon:prospective,
+        qcon:proved,
+        qcon:uncertain,
+        qcon:high-u,
+        qcon:high-e,
+        qcon:high-v,
+        qcon:high,
+        qcon:moderate,
+        qcon:low,
+        qcon:low-v,
+        qcon:low-e,
+        qcon:low-u ;
+    skos:prefLabel "Qualitative Confidence"@en .
+
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+qcon:approximate a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    prov:wasDerivedFrom <http://linked.data.gov.au/org/gsq> ;
+    skos:definition """An indication that an interpretation is an approximation, typically (but not exclusively) used for numerical values."""@en ;
+    skos:prefLabel "Approximate"@en ;
+    skos:notation """~""" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:contingent a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """Those quantities of petroleum estimated, as of a given date, to be potentially recoverable from known accumulations by application of development projects, but which are not currently considered to be commercially recoverable owing to one or more contingencies.
+    
+    An estimate deemed to be potentially correct but with caveats on related influences and applicability."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Contingent"@en ;
+    skos:notation "C" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:contingent-one a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """The low-range volume estimate of petroleum quantities, as of a given date, to be potentially recoverable from known accumulations by application of development projects, but which are not currently considered to be commercially recoverable owing to one or more contingencies. The low volume corresponding to a higher probability that the full volume is recoverable.
+    
+    A low-range estimate deemed to be potentially correct but with caveats on related influences and applicability."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Contingent - Low Estimate"@en ;
+    skos:notation "1C" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:broader qcon:contingent .
+
+qcon:contingent-two a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """The best volume estimate of petroleum quantities, as of a given date, to be potentially recoverable from known accumulations by application of development projects, but which are not currently considered to be commercially recoverable owing to one or more contingencies. The best estimate corresponding to the most probable fully recoverable volume.
+    
+    The best estimate deemed to be potentially correct but with caveats on related influences and applicability."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Contingent - Best Estimate"@en ;
+    skos:notation "2C" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:broader qcon:contingent .
+
+qcon:contingent-three a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """The high-range volume estimate of petroleum quantities, as of a given date, to be potentially recoverable from known accumulations by application of development projects, but which are not currently considered to be commercially recoverable owing to one or more contingencies. The high volume corresponding to a lower probability that the full volume is recoverable.
+    
+    A high-range estimate deemed to be potentially correct but with caveats on related influences and applicability."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Contingent - High Estimate"@en ;
+    skos:notation "3C" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:broader qcon:contingent .
+
+qcon:high a skos:Concept ;
+    skos:altLabel "Likely"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An indication of 66-100% probability that an interpretation is accurate or outcome will occur."""@en ;
+    prov:wasDerivedFrom <https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf> ;
+    skos:prefLabel "High"@en ;
+    skos:notation "H" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:high-v a skos:Concept ;
+    skos:altLabel "Very Likely"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An indication of 90-100% probability that an interpretation is accurate or outcome will occur."""@en ;
+    prov:wasDerivedFrom <https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf> ;
+    skos:prefLabel "Very High"@en ;
+    skos:notation "VH" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:high-e a skos:Concept ;
+    skos:altLabel "Extremely Likely"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An indication of 95-100% probability that an interpretation is accurate or outcome will occur."""@en ;
+    prov:wasDerivedFrom <https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf> ;
+    skos:prefLabel "Extremely High"@en ;
+    skos:notation "EH" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:high-u a skos:Concept ;
+    skos:altLabel "Virtually Certain"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An indication of 99-100% probability that an interpretation is accurate or outcome will occur."""@en ;
+    prov:wasDerivedFrom <https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf> ;
+    skos:prefLabel "Ultra High"@en ;
+    skos:notation "UH" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:indicated a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """A part of a mineral resource for which quantity, grade, densities, shape, and physical characteristics are estimated with confidence sufficient to allow application of modifying factors to support preliminary mine planning and evaluation of the economic viability of the deposit. - JORC
+    
+    A classification corresponding with a moderately defined confidence of primary attributes for a conclusion or interpretation but prior to consideration of modifying factors."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Indicated"@en ;
+    skos:notation "IND" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:inferred a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """A part of a mineral resource for which quantity, grade, densities, shape, and physical characteristics are estimated based on limited geological evidence and sampling. Evidence is sufficient to imply but not verify grade and continuity. - JORC
+    
+    A classification corresponding with a poorly defined confidence of primary attributes for a conclusion or interpretation prior to consideration of modifying factors."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Inferred"@en ;
+    skos:notation "INF" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:low a skos:Concept ;
+    skos:altLabel "Unlikely"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An indication of 0-33% probability that an interpretation is accurate or outcome will occur."""@en ;
+    prov:wasDerivedFrom <https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf> ;
+    skos:prefLabel "Low"@en ;
+    skos:notation "L" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:low-v a skos:Concept ;
+    skos:altLabel "Very Unlikely"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An indication of 0-10% probability that an interpretation is accurate or outcome will occur."""@en ;
+    prov:wasDerivedFrom <https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf> ;
+    skos:prefLabel "Very Low"@en ;
+    skos:notation "VL" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:low-e a skos:Concept ;
+    skos:altLabel "Extremely Unlikely"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An indication of 95-100% probability that an interpretation is accurate or outcome will occur."""@en ;
+    prov:wasDerivedFrom <https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf> ;
+    skos:prefLabel "Extremely Low"@en ;
+    skos:notation "EL" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:low-u a skos:Concept ;
+    skos:altLabel "Exceptionally Unlikely"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An indication of 0-1% probability that an interpretation is accurate or outcome will occur."""@en ;
+    prov:wasDerivedFrom <https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf> ;
+    skos:prefLabel "Ultra Low"@en ;
+    skos:notation "UL" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:measured a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """A part of a mineral resource for which quantity, grade, densities, shape, and physical characteristics are estimated with confidence sufficient to allow application of modifying factors to support detailed mine planning and final evaluation of the economic viability of the deposit. - JORC
+    
+    A classification corresponding with a well defined confidence of primary attributes for a conclusion or interpretation but prior to consideration of modifying factors."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Measured"@en ;
+    skos:notation "MEA" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:moderate a skos:Concept ;
+    skos:altLabel "About As Likely As Not"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition "An indication of 33-66% probability that an interpretation is accurate or outcome will occur."@en ;
+    prov:wasDerivedFrom <https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf> ;
+    skos:prefLabel "Moderate"@en ;
+    skos:notation "M" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:possible a skos:Concept ;
+    skos:altLabel "3P Reserves"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An incremental category of estimated recoverable quantities associated with a defined degree of uncertainty. Possible Reserves are those additional reserves that analysis of geoscience and engineering data suggest are less likely to be recoverable than Probable Reserves. The total quantities ultimately recovered from the project have a low probability to exceed the sum of Proved plus Probable plus Possible (3P), which is equivalent to the high estimate scenario. When probabilistic methods are used, there should be at least a 10% probability that the actual quantities recovered will equal or exceed the 3P estimate. - PRMS
+        
+    A classification corresponding with a low feasible level of confidence for a conclusion or interpretation."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Possible"@en ;
+    skos:notation "3P" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:probable a skos:Concept ;
+    skos:altLabel "2P Reserves"@en,
+        "More likely than not"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An incremental category of estimated recoverable quantities associated with a defined degree of uncertainty. Probable Reserves are those additional Reserves that are less likely to be recovered than Proved Reserves but more certain to be recovered than Possible Reserves. It is equally likely that actual remaining quantities recovered will be greater than or less than the sum of the estimated Proved plus Probable Reserves (2P). In this context, when probabilistic methods are used, there should be at least a 50% probability that the actual quantities recovered will equal or exceed the 2P estimate. - PRMS
+    
+    A Probable Ore Reserve has a lower level of confidence than a Proved Ore Reserve but is of sufficient quality to serve as the basis for a decision on the development of the deposit. - JORC
+    
+    A classification corresponding with a moderate level of confidence for a conclusion or interpretation, or where the statement is more likely than not to be true (50-100%)."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Probable"@en ;
+    skos:notation "2P" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:prospective a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """Those quantities of petroleum estimated, as of a given date, to be potentially recoverable from undiscovered accumulations by application of future development projects.
+    
+    A speculative estimate with caveats on related influences or applicability, and without an assessment of risk."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Prospective"@en ;
+    skos:notation "U" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:prospective-one a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """The low-range volume estimate of unrisked petroleum quantities estimated, as of a given date, to be potentially recoverable from undiscovered accumulations by application of future development projects. The low volume corresponding to a higher probability that the full volume is present.
+    
+    A speculative low-range estimate with caveats on related influences or applicability, and without an assessment of risk."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Prospective - Low Estimate"@en ;
+    skos:notation "1U" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:broader qcon:prospective .
+
+qcon:prospective-two a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """The best volume estimate of unrisked petroleum quantities estimated, as of a given date, to be potentially recoverable from undiscovered accumulations by application of future development projects. The best estimate corresponding to the most probable volume.
+    
+    A speculative best estimate with caveats on related influences or applicability, and without an assessment of risk."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Prospective - Best Estimate"@en ;
+    skos:notation "2U" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:broader qcon:prospective .
+
+qcon:prospective-three a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """The high-range volume estimate of unriskedpetroleum quantities estimated, as of a given date, to be potentially recoverable from undiscovered accumulations by application of future development projects. The high volume corresponding to a lower probability that the full volume is present.
+    
+    A speculative high-range estimate with caveats on related influences or applicability, and without an assessment of risk."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Prospective - High Estimate"@en ;
+    skos:notation "3U" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:broader qcon:prospective .
+
+qcon:proved a skos:Concept ;
+    skos:altLabel "Proven"@en,
+        "1P Reserves"@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An incremental category of estimated recoverable volumes associated with a defined degree of uncertainty Proved Reserves are those quantities of petroleum which, by analysis of geoscience and engineering data, can be estimated with reasonable certainty to be commercially recoverable, from a given date forward, from known reservoirs and underdefined economic conditions, operating methods, and government regulations. If deterministic methods are used, the term reasonable certainty is intended to express a high degree of confidence that the quantities will be recovered. If probabilistic methods are used, there should be at least a 90% probability that the quantities actually recovered will equal or exceed the estimate. Often referred to as 1P, also as Proven. - PRMS
+    
+    The highest confidence category of ore reserve estimate and implies a high degree of confidence in geological and grade continuity, and the consideration of the modifying factors. The sytle of mineralisation or other factors could mean that Proved Ore Reserves are not achieveable in some deposits. - JORC
+    
+    A classification corresponding with the highest feasible level of confidence for a conclusion or interpretation."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:prefLabel "Proved"@en ;
+    skos:notation "1P" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+qcon:uncertain a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:definition """An indication that an interpretation is the best available based on current evidence but with significant uncertainty."""@en ;
+    prov:wasDerivedFrom <http://linked.data.gov.au/org/gsq> ;
+    skos:prefLabel "Uncertain"@en ;
+    skos:notation """?""" ;
+    skos:inScheme <http://linked.data.gov.au/def/qualitative-confidence> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/qualitative-confidence> .
+
+
+
+qcon:chronage a skos:Collection ;
+    skos:prefLabel "Chronotstratigraphic Age Confidence"@en ;
+    prov:wasDerivedFrom <http://linked.data.gov.au/org/gsq> ;
+    skos:definition """Confidence categories for the determination of assigned ages as per the International Chronostratigraphic Chart."""@en ;
+    skos:member
+        qcon:uncertain,
+        qcon:approximate .
+
+qcon:jorc a skos:Collection ;
+    skos:prefLabel "Joint Ore Reserves Committee Classification"@en ;
+    skos:definition """Confidence categories for Mineral Resources and Ore Reserves as defined by the JORC classification framework."""@en ;
+    prov:wasDerivedFrom <https://www.jorc.org/docs/jorc_code2012.pdf> ;
+    skos:member
+        qcon:proved,
+        qcon:probable,
+        qcon:measured,
+        qcon:indicated,
+        qcon:inferred .
+
+qcon:prms a skos:Collection ;
+    skos:prefLabel "Petroleum Resources Management System Classifications"@en ;
+    skos:definition """Confidence categories for Petroleum Resource and Reserve Management as defined by the PRMS classification framework."""@en ;
+    prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
+    skos:member
+        qcon:proved,
+        qcon:probable,
+        qcon:possible,
+        qcon:contingent-one,
+        qcon:contingent-two,
+        qcon:contingent-three,
+        qcon:prospective-one,
+        qcon:prospective-two,
+        qcon:prospective-three .
+
+qcon:likelihood a skos:Collection ;
+    skos:prefLabel "Likelihood Scale"@en ;
+    skos:definition """Confidence categories based on probability of outcome."""@en ;
+    prov:wasDerivedFrom <https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf> ;
+    skos:member
+        qcon:high-u,
+        qcon:high-e,
+        qcon:high-v,
+        qcon:high,
+        qcon:moderate,
+        qcon:probable,
+        qcon:low,
+        qcon:low-v,
+        qcon:low-e,
+        qcon:low-u .
+
+qcon:georelationships a skos:Collection ;
+    skos:prefLabel "Geological Relationship Confidence"@en ;
+    skos:definition """Confidence associated with the relationship between geological features."""@en ;
+    skos:member
+        qcon:proved,
+        qcon:probable,
+        qcon:possible.
