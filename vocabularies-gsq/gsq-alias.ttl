@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <http://schema.org/> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -12,34 +12,82 @@
     dcterms:created "2020-03-23"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-04-12"^^xsd:date ;
+    dcterms:modified "2022-09-20"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Sources for any alternate names for features, sites, surveys, or samples catalogued by the Geological Survey of Queensland."@en ;
     skos:hasTopConcept als:colloquial,
         als:des,
+        als:firstNations,
+        als:formal,
         als:geoscience-australia,
-        als:legacy,
+        als:gsq-legacy,
         als:igsn,
+        als:informal,
+        als:invalid,
+        als:misspelt,
         als:mmol,
+        als:obsolete,
         als:ogia,
         als:rshq,
-        als:informal,
-        als:formal,
-        als:treasury ;
+        als:operator,
+        als:service-provider,
+        als:treasury,
+        als:unnamed ;
     skos:prefLabel "GSQ Alias"@en .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
-
-als:agso a skos:Concept ;
-    skos:altLabel "AGSO"@en,
-        "AGSO_GEODX_ID"@en ;
-    skos:definition "An historic code used by Geoscience Australia (formerly Australian Geological Survey Organisation), for the identification of rock units in the Australian Stratigraphic Units Database (ASUD)"@en ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+    
+    als:formal a skos:Concept ;
+    skos:altLabel "defined"@en ;
+    skos:definition "The standing that is attributed to a formal name, with non-current usage, that has been formally replaced, if only partially, by another formal name, such as with the change in the ending of the name of a lithologic rock unit (e.g., from ‘Formation’ to Sandstone’ or similar) or a formal name has been replaced, if only partially, by an informal name (e.g., Stanwell Coal Measures to Stanwell 'Formation'/formation). This applies to other types of rock units, such as biostratigraphic units, which are rocks characterized by their fossil content, not their lithologic attributes."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:prefLabel "Australian Geological Survey Organisation Rock Codes"@en ;
-    skos:broader als:geoscience-australia .
+    skos:prefLabel "Formal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+           
+    als:informal a skos:Concept ;
+    skos:definition "The standing that is attributed to a name that has not been formally instituted or recognized, such as under a national or international code or protocol (e.g., the International Stratigraphic Guide), and does not have current usage, as it has been replaced (superseded) by a formal name or another informal name. An example of the latter, in terms of lithologic rock units, embraces the name change from the ‘Taroom beds’ to the ‘Chong beds' (Hettangian/basal Jurassic), as the former name is preoccupied by the Taroom Coal Measures."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Informal"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+
+    als:firstNations a skos:Concept ;
+    skos:definition "The informal standing (in terms of an overriding code or protocol) that is attributed to the current First Nations name of a feature, such a lithologic rock unit, under the dual naming policy for Aboriginal and Torres Strait Islander place names, e.g., the Mount Warning Central Complex being named Wollumbin (fighting chief of the mountains)."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "First Nations"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+
+    als:obsolete a skos:Concept ;
+    skos:definition "The standing that is attributed to a name or term through lack of use and/or persistent change of use and that has been replaced by another name or term, either as a simple equal replacement or in a complicated, unequal (not one-to-one) process."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Obsolete"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+
+    als:invalid a skos:Concept ;
+    skos:definition "The standing attributed to a rock unit the name and parameters of which have been published, but not in accordance with a national, international and/or other code or protocol that applies thereto (e.g., the International Stratigraphic Guide), rendering the unit with invalid status (as opposed to informal status). A yet-to-be corrected (replaced) rock unit example of this (as at 09.08.2022) is represented by the current name ‘Balfes Creek beds’, as the name ‘Balfes Creek Granodiorite’ has precedence (see ASUD Stratigraphic Number 36156). Upon replacement by a new name (with current status), the Balfes Creek beds will then be regarded as an alias (with invalid standing) of the new name of the rock unit that then has currency."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Invalid"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+    
+    als:unnamed a skos:Concept ;
+    skos:definition "The previous standing of a geological feature that was recorded in published or unpublished reports, records, maps, etc., and was not then named but now is named or part of it is named. The previously unnamed feature may have had a composite label, but not a true name, e.g., a complex rock unit that was comprised of multiple other rock units, one or more of which is now named."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Unnamed"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+
+    als:misspelt a skos:Concept ;
+    skos:definition "The standing of a geologic feature, such as a lithologic rock unit, the name of which has been misspelt or seemingly misspelt."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Misspelt"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
 als:colloquial a skos:Concept ;
     skos:altLabel "Common"@en,
@@ -49,47 +97,6 @@ als:colloquial a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
     skos:prefLabel "Colloquial"@en ;
-    skos:broader als:informal .
-
-als:des a skos:Concept ;
-    skos:altLabel "Department of Environment and Science"@en ;
-    skos:definition "An identifier used by the Department of Environment and Science"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:prefLabel "DES"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
-
-als:informal a skos:Concept ;
-    skos:definition "Any identifier used informally outside standardised naming conventions, such as colloquial, local, and company terms."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:prefLabel "Informal"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
-
-als:first-nations a skos:Concept ;
-    skos:altLabel "Indigenous Name"@en,
-        "Aboriginal or Torres Strait Island Name"@en,
-        "Aboriginal Name"@en,
-        "Torres Strait Islands Name"@en ; 
-    skos:definition "Any name given to a feature by first nations groups."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:prefLabel "First Nations Name"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
-
-als:formal a skos:Concept ;
-    skos:definition "Any identifying name used officially by a governing body for the subject matter."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:prefLabel "Formal"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
-
-als:geoscience-australia a skos:Concept ;
-    skos:altLabel "GA"@en ;
-    skos:definition "An identifier used by Geoscience Australia"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:prefLabel "Geoscience Australia"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
 als:gsq-legacy a skos:Concept ;
@@ -97,7 +104,7 @@ als:gsq-legacy a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
     skos:prefLabel "GSQ Legacy"@en ;
-    skos:broader als:legacy .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
 als:igsn a skos:Concept ;
     skos:altLabel "International Geo Sample Number"@en ;
@@ -107,21 +114,20 @@ als:igsn a skos:Concept ;
     skos:prefLabel "IGSN"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
-als:invalid a skos:Concept ;
-    skos:definition "Published name that has not been reserved, and is potentially or actually confusing, due to similarity with existing, longer standing terminology."@en ;
+als:des a skos:Concept ;
+    skos:altLabel "Department of Environment and Science"@en ;
+    skos:definition "An identifier used by the Department of Environment and Science"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:prefLabel "Invalid"@en ;
+    skos:prefLabel "DES"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
-als:legacy a skos:Concept ;
-    skos:altLabel "Obsolete"@en,
-        "Historic"@en,
-        "Superseded"@en ;
-    skos:definition "Any superseded identifier, code, or name."@en ;
+als:geoscience-australia a skos:Concept ;
+    skos:altLabel "GA"@en ;
+    skos:definition "An identifier used by Geoscience Australia"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:prefLabel "Legacy"@en ;
+    skos:prefLabel "Geoscience Australia"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
 als:mmol a skos:Concept ;
@@ -141,13 +147,6 @@ als:ogia a skos:Concept ;
     skos:prefLabel "QWRC"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
-als:operator a skos:Concept ;
-    skos:definition "An identifier used by the company who originally owned or operated an asset or activity."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
-    skos:prefLabel "Operator"@en ;
-    skos:broader als:informal .
-
 als:rshq a skos:Concept ;
     skos:altLabel "Resources Safety and Health Queensland"@en ;
     skos:definition "An identifier used by Resources Safety and Health Queensland."@en ;
@@ -156,13 +155,20 @@ als:rshq a skos:Concept ;
     skos:prefLabel "RSHQ"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
+als:operator a skos:Concept ;
+    skos:definition "An identifier used by the company who originally owned or operated an asset or activity."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
+    skos:prefLabel "Operator"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
+
 als:service-provider a skos:Concept ;
     skos:altLabel "Contractor"@en ;
     skos:definition "An identifier used by the company who originally conducted activity on behalf of the operator."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
     skos:inScheme <http://linked.data.gov.au/def/gsq-alias> ;
     skos:prefLabel "Service Provider"@en ;
-    skos:broader als:informal .
+    skos:topConceptOf <http://linked.data.gov.au/def/gsq-alias> .
 
 als:treasury a skos:Concept ;
     skos:altLabel "Queensland Treasury"@en ;
@@ -182,7 +188,6 @@ als:government a skos:Collection ;
     skos:definition "Aliases used by other groups within the Department, other departments within Queensland Government, or other Government Agencies."@en ;
     skos:member als:des,
         als:geoscience-australia,
-        als:agso,
         als:mmol,
         als:ogia,
         als:treasury ;
