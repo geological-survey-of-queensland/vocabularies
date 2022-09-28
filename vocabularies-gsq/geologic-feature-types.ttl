@@ -7,6 +7,38 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://linked.data.gov.au/def/geofeatures> a owl:NamedIndividual,
+        owl:Ontology,
+        skos:ConceptScheme,
+        prof:Profile ;
+    dcterms:contributor [ a owl:NamedIndividual,
+                sdo:Person ;
+            sdo:affiliation <https://linked.data.gov.au/org/gsq> ;
+            sdo:email <mailto:derek.hoy@dnrme.qld.gov.au> ;
+            sdo:identifier <mailto:derek.hoy@dnrme.qld.gov.au> ;
+            sdo:name "Derek Hoy" ],
+        <https://linked.data.gov.au/org/gsq> ;
+    dcterms:created "2020-01-23"^^xsd:date ;
+    dcterms:creator <https://orcid.org/0000-0001-5489-9590>,
+        <https://orcid.org/0000-0002-8742-7730> ;
+    dcterms:modified "2022-09-28"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    owl:imports <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/2004/02/skos/core> ;
+    owl:versionIRI <https://linked.data.gov.au/def/geofeatures/0.5> ;
+    owl:versionInfo "Most ontology content but not complete diagrammatic coverage." ;
+    skos:definition "This vocabulary lists types of geological features relevant to the duties of the Geological Survey of Queensland. It is automatically derived from GSQ's Geologic Features Ontology (https://linked.data.gov.au/def/geofeatures)"@en ;
+    skos:hasTopConcept <http://sweetontology.net/realmGeol/GeologicFeature> ;
+    skos:prefLabel "Geologic Feature Types"@en ;
+    prof:isProfileOf <http://sweetontology.net/realmGeol> ;
+    sdo:codeRepository <https://github.com/geological-survey-of-queensland/geologic-features-ont> .
+
+<https://linked.data.gov.au/org/gsq> a owl:NamedIndividual,
+        sdo:Organization ;
+    sdo:email <mailto:geological_info@dnrme.qld.gov.au> ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
 geof:RegolithFeature a skos:Concept ;
     dcterms:references "Eggleton, R.A. (Editor), 2001: The Regolith Glossary: Surficial Geology, Soils and Landscapes. Cooperative Research Centre for Landscape Evolution & Mineral Exploration (CRC LEME), Floreat Park, W.A., 144 pages. <http://crcleme.org.au/Pubs/Monographs/RegolithGlossary.pdf>"@en ;
     dcterms:references "Hocking, R. M. et al., 2007: A classification system for regolith in Western Australia (March 2007 update). Geological Survey of Western Australia/GSWA, Record 2007/8, 19 pages (This Record is an update of Record 2005/10). <https://dmpbookshop.eruditetechnologies.com.au/product/a-classification-system-for-regolith-in-western-australia-march-2007-update.do>"@en ;
@@ -339,6 +371,24 @@ geof:ComplexRockUnit a skos:Concept ;
     skos:notation "gfcru" ;
     skos:scopeNote "The ISG definition is followed, with minor rewording (and without any change of meaning), although a complex unit is not here classified as a lithostratigraphic unit (as per the ISG). The NASC (2005) and Kumpulainen (2017), together with other Scandinavian guides, preferably adhere to a more specific definition, restricting a complex to a mixture of two or more genetic classes, albeit regarding a complex as a non-ranked lithodemic unit (generally, a defined, nonstratiform/non-stratified body of predominantly intrusive or highly deformed and/or highly metamorphosed rock). However, as the ISG usage better suits the nomenclature applied to some complex rock units in Queensland, it is therefore provisionally followed. A complex, although unranked in the NASC, was considered to be ‘commonly comparable to suite or supersuite’, such that two or more associated complexes could be grouped in a supersuite. This problematical application of lithodemic nomenclature was addressed by the Subcommission on Quaternary Stratigraphy with their introduction of the term ‘supercomplex’ and attendant recommendation for a two-fold hierarchy of rank for lithodemic rock units: lithodeme, suite and supersuite; and complex and supercomplex. Here, complex rock units are separated from lithostratigraphic and other single-class units (e.g., intrusive rock units) and broadly treated as stand-alone, largely nonstratiform, mixed-class units, thus reflecting the approach of Gillespie & Leslie (2021) in their construction of the British Geological Survey’s rock classification system (BRUCS). [Also, following Gillespie & Leslie, the NASC lithodemic terminology is not followed, and ‘suite’ rankings are applied solely to intrusive rock units (not also to metamorphic units)]. However, as indicated, nomenclatural usage in Queensland is not true to the more restricted definition of rock complexes comprising more than one genetic class of rocks (e.g., Jell, 2013)."@en ; 
     skos:prefLabel "complex rock unit"@en .
+
+geof:ComplexStratifiedRockUnit a skos:Concept ;
+    dcterms:references "See usage of: Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
+    skos:broader geof:ComplexRockUnit ;
+    skos:definition "A complex rock unit wherein the dominant rock type or types are stratified. See definition for Complex Rock Unit for further detail."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfcrs" ;
+    skos:prefLabel "complex stratified rock unit"@en .
+
+geof:ComplexIgneousRockUnit a skos:Concept ;
+    dcterms:references "See usage of: Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
+    skos:broader geof:ComplexRockUnit ;
+    skos:definition "A complex rock unit wherein the dominant rock type or types are igneous. See definition for Complex Rock Unit for further detail."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfcri" ;
+    skos:prefLabel "complex igneous rock unit"@en .
 
 geof:ConcurrentRangeZone a skos:Concept ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
@@ -1153,12 +1203,6 @@ dcterms:references "Kumpulainen (Editor), 2017: Guide for Geological Nomenclatur
     skos:notation "gftsu" ;
     skos:prefLabel "tectonostratigraphic rock unit"@en .
 
-<https://linked.data.gov.au/org/gsq> a owl:NamedIndividual,
-        sdo:Organization ;
-    sdo:email <mailto:geological_info@dnrme.qld.gov.au> ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
-
 geof:DenudationalFeature a skos:Concept ;
     dcterms:references <https://doi.org/10.1080/11035897.2016.1178666> ;
     skos:broader geof:StructuralFeature ;
@@ -1223,28 +1267,11 @@ geof:StructuralFeature a skos:Concept ;
     skos:notation "gfstr" ;
     skos:prefLabel "structural feature"@en .
 
-<https://linked.data.gov.au/def/geofeatures> a owl:NamedIndividual,
-        owl:Ontology,
-        skos:ConceptScheme,
-        prof:Profile ;
-    dcterms:contributor [ a owl:NamedIndividual,
-                sdo:Person ;
-            sdo:affiliation <https://linked.data.gov.au/org/gsq> ;
-            sdo:email <mailto:derek.hoy@dnrme.qld.gov.au> ;
-            sdo:identifier <mailto:derek.hoy@dnrme.qld.gov.au> ;
-            sdo:name "Derek Hoy" ],
-        <https://linked.data.gov.au/org/gsq> ;
-    dcterms:created "2020-01-23"^^xsd:date ;
-    dcterms:creator <https://orcid.org/0000-0001-5489-9590>,
-        <https://orcid.org/0000-0002-8742-7730> ;
-    dcterms:modified "2022-08-05"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
-    owl:imports <http://www.opengis.net/ont/geosparql>,
-        <http://www.w3.org/2004/02/skos/core> ;
-    owl:versionIRI <https://linked.data.gov.au/def/geofeatures/0.5> ;
-    owl:versionInfo "Most ontology content but not complete diagrammatic coverage." ;
-    skos:definition "This vocabulary lists types of geological features relevant to the duties of the Geological Survey of Queensland. It is automatically derived from GSQ's Geologic Features Ontology (https://linked.data.gov.au/def/geofeatures)"@en ;
-    skos:hasTopConcept <http://sweetontology.net/realmGeol/GeologicFeature> ;
-    skos:prefLabel "Geologic Feature Types"@en ;
-    prof:isProfileOf <http://sweetontology.net/realmGeol> ;
-    sdo:codeRepository <https://github.com/geological-survey-of-queensland/geologic-features-ont> .
+geof:WaterBody a skos:Concept ;
+    dcterms:references <https://www.usgs.gov/special-topics/water-science-school/science/freshwater-lakes-and-rivers-and-water-cycle> ;
+    skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
+    skos:definition "A feature produced by the accumulation of water at surface. These features may be liquid water in the form of lakes, rivers, and streams, or as ice in the form of ice sheets and glaciers. Considered part of the set of geologic features due to their role in geological processes and due to their intersection and coverage of other geologic features and important topographical relationships."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:notation "gfwtr" ;
+    skos:prefLabel "water body"@en .
