@@ -23,12 +23,22 @@
         esdc:biological-sciences ,
         esdc:engineering ,
         esdc:built-environment-and-design ,
-        esdc:demography ;
+        esdc:demography , 
+	esdc:information-and-computing-sciences ;
 .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
+esdc:information-and-computing-sciences a skos:Concept ;
+    skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:definition "Information and Computing sciences includes all narrower fields in information and computer science."@en ;
+    skos:exactMatch <http://linked.data.gov.au/def/anzsrc-for/2020/46> ; 
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:inScheme <http://linked.data.gov.au/def/earth-science-data-category> ;
+    skos:notation "46" ;
+    skos:prefLabel "Information and Computing Sciences"@en .
 
 esdc:earth-sciences a skos:Concept ;
     skos:topConceptOf <http://linked.data.gov.au/def/earth-science-data-category> ;
