@@ -11,7 +11,7 @@
 <https://linked.data.gov.au/def/qld-obsprop>
     a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2021-06-06"^^xsd:date ;
-    dcterms:modified "2022-05-11"^^xsd:date ;
+    dcterms:modified "2022-10-06"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/des> ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     skos:prefLabel "Queensland Environmental Science Data Observed Properties"@en ;
@@ -486,6 +486,7 @@
    a skos:Concept ;
     skos:topConceptOf <https://linked.data.gov.au/def/qld-obsprop> ;
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ;
     skos:narrower 
         <https://linked.data.gov.au/def/qld-obsprop/50fe54ff-7559-5f90-9769-bd40511582f6> ,
         <https://linked.data.gov.au/def/qld-obsprop/93ea25c2-3eca-5881-8bda-39e93b75a3c1> ,
@@ -501,6 +502,21 @@
     skos:definition "A clear, odorless, tasteless liquid that is essential for most animal and plant life, and is an excellent solvent for many substances."@en ; 
 . 
 
+<https://linked.data.gov.au/def/qld-obsprop/2ac0e547-d4ca-5167-a250-79bc59b4f452>
+   a skos:Concept ;
+    skos:topConceptOf <https://linked.data.gov.au/def/qld-obsprop> ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ;
+    skos:narrower 
+         <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ,
+         <http://pid.geoscience.gov.au/def/voc/ga/netcdfldtos/sea_surface_temperature> ;
+    skos:prefLabel "oceanographic parameter"@en ; 
+    skos:definition "The elements and conditions which are found in, influence and affect oceans and coasts; oceanography is the study of the oceans."@en ; 
+    skos:created "2022-07-27"^^xsd:date ;
+    skos:modified "2022-07-27"^^xsd:date ;
+. 
+
+
 #  QESD Parameters belong in this section
 
 <https://linked.data.gov.au/def/qld-obsprop/50fe54ff-7559-5f90-9769-bd40511582f6>
@@ -510,7 +526,7 @@
     skos:definition "A grouping of properties for Cations, Anions, Alkalinity & Hardness."@en ;	
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;	
+    dcterms:modified "2021-11-15"^^xsd:date ;	
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/bb5c1354-8d70-47b2-b333-87e3bf1157d6> ;
     skos:narrower
@@ -897,11 +913,10 @@
 <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610>	
     a skos:Concept ;
     skos:prefLabel "PFAS"@en ;	
-    skos:altLabel "PFAS-WQI Grouping"@en ;	
-    skos:definition "A grouping of properties for PFAS."@en ;	
+    skos:definition "Per- and polyfluoroalkyl substances (PFAS) are a diverse group of human-made chemicals used in a wide range of consumer and industrial products. Some PFAS have been more widely used and studied than others. Many PFAS are resistant to grease, oil, water, and heat. As such are environmental contaminants"@en ;	
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;	
+    dcterms:modified "2021-11-15"^^xsd:date ;	
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/bb5c1354-8d70-47b2-b333-87e3bf1157d6> ;
     skos:narrower
@@ -944,7 +959,6 @@
 <https://linked.data.gov.au/def/qld-obsprop/414e519e-56a9-59d3-8675-862a51348026>	
     a skos:Concept ;
     skos:prefLabel "Physical Properties"@en ;	
-    skos:altLabel "Physical Properties-WQI Grouping"@en ;	
     skos:definition "A grouping of properties for Physical Properties."@en ;	
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
@@ -967,7 +981,7 @@
 <https://linked.data.gov.au/def/qld-obsprop/a9335d70-3fc6-5181-b8fb-d6f8c938aa3d>	
     a skos:Concept ;
     skos:prefLabel "TSS & Nutrients"@en ;	
-    skos:altLabel "TSS & Nutrients-WQI Grouping"@en ;	
+    skos:altLabel "TSS & Nutrients-WQI Grouping"@en ;	#Suggest we remove WQI from the label
     skos:definition "A grouping of properties for TSS & Nutrients."@en ;	
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
@@ -1265,7 +1279,7 @@
     skos:prefLabel "Particle Size <0.24 µm (Extremely fine clay)"@en ; 
     skos:definition "Particle Size <0.24 µm (Extremely fine clay)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1277,7 +1291,7 @@
     skos:prefLabel "Particle Size <62.5 µm (Silt and Clay)"@en ; 
     skos:definition "Particle Size <62.5 µm (Silt and Clay)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1289,7 +1303,7 @@
     skos:prefLabel "Particle Size 0.5 µm - 0.24 µm (Very fine clay)"@en ; 
     skos:definition "Particle Size 0.5 µm - 0.24 µm (Very fine clay)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1301,7 +1315,7 @@
     skos:prefLabel "Particle Size 1 µm - 0.5 µm (Fine clay)"@en ; 
     skos:definition "Particle Size 1 µm - 0.5 µm (Fine clay)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1313,7 +1327,7 @@
     skos:prefLabel "Particle Size 1000 µm - 500 µm (Coarse sand)"@en ; 
     skos:definition "Particle Size 1000 µm - 500 µm (Coarse sand)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1325,7 +1339,7 @@
     skos:prefLabel "Particle Size 125 µm - 62 µm (Very fine sand)"@en ; 
     skos:definition "Particle Size 125 µm - 62 µm (Very fine sand)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1337,7 +1351,7 @@
     skos:prefLabel "Particle Size 16 µm - 8 µm (Fine silt)"@en ; 
     skos:definition "Particle Size 16 µm - 8 µm (Fine silt)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1349,7 +1363,7 @@
     skos:prefLabel "Particle Size 2 µm - 1 µm (Medium clay)"@en ; 
     skos:definition "Particle Size 2 µm - 1 µm (Medium clay)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1361,7 +1375,7 @@
     skos:prefLabel "Particle Size 2000 µm - 1000 µm (Very coarse sand)"@en ; 
     skos:definition "Particle Size 2000 µm - 1000 µm (Very coarse sand)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1373,7 +1387,7 @@
     skos:prefLabel "Particle Size 250 µm - 125 µm (Fine sand)"@en ; 
     skos:definition "Particle Size 250 µm - 125 µm (Fine sand)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1385,7 +1399,7 @@
     skos:prefLabel "Particle Size 31 µm - 16 µm (Medium silt)"@en ; 
     skos:definition "Particle Size 31 µm - 16 µm (Medium silt)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1397,7 +1411,7 @@
     skos:prefLabel "Particle Size 4 µm - 2 µm (Coarse clay)"@en ; 
     skos:definition "Particle Size 4 µm - 2 µm (Coarse clay)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1409,7 +1423,7 @@
     skos:prefLabel "Particle Size 500 µm - 250 µm (Medium sand)"@en ; 
     skos:definition "Particle Size 500 µm - 250 µm (Medium sand)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1421,7 +1435,7 @@
     skos:prefLabel "Particle Size 62 µm - 31 µm (Coarse silt)"@en ; 
     skos:definition "Particle Size 62 µm - 31 µm (Coarse silt)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -1433,7 +1447,7 @@
     skos:prefLabel "Particle Size 8 µm - 4 µm (Very fine silt)"@en ; 
     skos:definition "Particle Size 8 µm - 4 µm (Very fine silt)"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/f4f1faad-4cdf-5f19-b678-f353b5df6417> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
+    qudt:hasQuantityKind quantitykind:Dimensionless ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
     dcterms:modified "2021-06-07"^^xsd:date ;
@@ -4417,385 +4431,396 @@
 <https://linked.data.gov.au/def/qld-obsprop/cb7f7035-04fc-576c-8279-25e7cdcf1d29> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "10:2 FTS by LCMS"@en ; 
-    skos:definition "10:2 FTS by LCMS"@en ; 
+    skos:prefLabel "10:2 FTS"@en ; 
+    skos:definition "10:2 Fluorotelomer sulfonic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/e373ce19-d111-5639-9ab7-b576142e58b6> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "4:2 FTS by LCMS"@en ; 
-    skos:definition "4:2 FTS by LCMS"@en ; 
+    skos:prefLabel "4:2 FTS"@en ; 
+    skos:definition "4:2 Fluorotelomer sulfonic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/54db219b-c983-5107-90b0-9f693ac46fda> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "6:2 FTS by LCMS"@en ; 
-    skos:definition "6:2 FTS by LCMS"@en ; 
+    skos:prefLabel "6:2 FTS"@en ; 
+    skos:definition "6:2 Fluorotelomer sulfonic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/04ca3c8a-8700-578e-9527-7281a3a379d9> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "8:2 FTS by LCMS"@en ; 
-    skos:definition "8:2 FTS by LCMS"@en ; 
+    skos:prefLabel "8:2 FTS"@en ; 
+    skos:definition "8:2 Fluorotelomer sulfonic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/8429cd0d-871a-52d3-8d21-d09f3385696e> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "FOSA by LCMS"@en ; 
-    skos:definition "FOSA by LCMS"@en ; 
+    skos:prefLabel "FOSA"@en ; 
+    skos:definition "Perfluoro octane sulfonamide"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+    skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:138089> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/8deecab2-7a72-5238-96a6-c0728a459874> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "N-EtFOSA by LCMS"@en ; 
-    skos:definition "N-EtFOSA by LCMS"@en ; 
+    skos:prefLabel "N-EtFOSA"@en ; 
+    skos:definition "N-Ethyl perfluoroctan sulfonamid "@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/fe0102a5-ef7c-5ed1-8764-89f9ac8780df> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "N-EtFOSAA by LCMS"@en ; 
-    skos:definition "N-EtFOSAA by LCMS"@en ; 
+    skos:prefLabel "N-EtFOSAA"@en ; 
+    skos:definition "N-Ethylperfluorooctane sulfonamidoacetic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+    skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:83507> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/7c00ed1e-541b-55f3-8cf4-df941b83af61> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "N-EtFOSE by LCMS"@en ; 
-    skos:definition "N-EtFOSE by LCMS"@en ; 
+    skos:prefLabel "N-EtFOSE"@en ; 
+    skos:definition "N-Ethyl perfluorooctane sulfonamido ethanol"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/5a92a905-8846-5947-9c86-e866971012ff> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "N-MeFOSA by LCMS"@en ; 
-    skos:definition "N-MeFOSA by LCMS"@en ; 
+    skos:prefLabel "N-MeFOSA"@en ; 
+    skos:definition "N-Methyl-perfluoro octane sulfonamide "@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/bb8ef87e-dac6-5eec-8b39-544da2d8a879> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "N-MeFOSAA by LCMS"@en ; 
-    skos:definition "N-MeFOSAA by LCMS"@en ; 
+    skos:prefLabel "N-MeFOSAA"@en ; 
+    skos:definition "N-Methyl perfluorooctane sulfonamido acetic acid "@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/f34f647f-1f0a-597e-92e8-52ef03f4e327> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "N-MeFOSE by LCMS"@en ; 
-    skos:definition "N-MeFOSE by LCMS"@en ; 
+    skos:prefLabel "N-MeFOSE"@en ; 
+    skos:definition "N-Methyl perfluoroctyl sulfonamido ethanol"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/fd7d6dd5-4945-5611-9600-95368ada6403> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFBA by LCMS"@en ; 
-    skos:definition "PFBA by LCMS"@en ; 
+    skos:prefLabel "PFBA"@en ; 
+    skos:definition "Perfluorobutyric acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+    skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:39426> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/ac4e8c90-b1e3-5abd-80ea-66bc51721df2> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFBS by LCMS"@en ; 
-    skos:definition "PFBS by LCMS"@en ; 
+    skos:prefLabel "PFBS"@en ; 
+    skos:definition "Perfluorobutane Sulfonate"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/bfee4260-0fef-51ff-9d49-b8a2cb76b298> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFDA by LCMS"@en ; 
-    skos:definition "PFDA by LCMS"@en ; 
+    skos:prefLabel "PFDA"@en ; 
+    skos:definition "Perfluorodecanoic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+    skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35546> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/04a50109-c092-5b09-95ad-3a964de0af5c> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFDoA by LCMS"@en ; 
-    skos:definition "PFDoA by LCMS"@en ; 
+    skos:prefLabel "PFDoA"@en ; 
+    skos:definition "Perfluorododecanoic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+    skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:90633> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/4e8bd355-6531-56e2-84ef-c0a7670ff1b9> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFDoS by LCMS"@en ; 
-    skos:definition "PFDoS by LCMS"@en ; 
+    skos:prefLabel "PFDoS"@en ; 
+    skos:definition "Perfluorododecanesulfonic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/c72eb823-4d95-5eda-9f7b-6903bc809cdd> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFDS by LCMS"@en ; 
-    skos:definition "PFDS by LCMS"@en ; 
+    skos:prefLabel "PFDS"@en ; 
+    skos:definition "Perfluorodecane sulfonic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/185411c8-067e-5d79-8e76-065e4dafd2a8> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFHpA by LCMS"@en ; 
-    skos:definition "PFHpA by LCMS"@en ; 
+    skos:prefLabel "PFHpA"@en ; 
+    skos:definition "Perfluoroheptanoic acid "@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+    skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35547> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/7539a155-e9cf-5216-847a-7986f15eff08> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFHpS by LCMS"@en ; 
-    skos:definition "PFHpS by LCMS"@en ; 
+    skos:prefLabel "PFHpS"@en ; 
+    skos:definition "Perfluoro heptane sulfonate"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/3e6625d4-81dc-51f3-9a51-88317a667423> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFHxA by LCMS"@en ; 
-    skos:definition "PFHxA by LCMS"@en ; 
-    skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+    skos:prefLabel "PFHxA"@en ; 
+    skos:definition "Perfluorohexanoic acid"@en ; 
+    skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ;
+    skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:83492> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/d038eb15-832f-5cd8-819b-9a7e8bc08852> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFHxDA by LCMS"@en ; 
-    skos:definition "PFHxDA by LCMS"@en ; 
+    skos:prefLabel "PFHxDA"@en ; 
+    skos:definition "Perfluorohexadecanoic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/cfd7fe19-df05-51a4-8f1e-d0858ac62cb0> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFHxS by LCMS"@en ; 
-    skos:definition "PFHxS by LCMS"@en ; 
+    skos:prefLabel "PFHxS"@en ; 
+    skos:definition "Perfluorohexanesulfonic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+    skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:132448> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/7c47431e-9013-5367-86c0-de90488b6485> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFNA by LCMS"@en ; 
-    skos:definition "PFNA by LCMS"@en ; 
+    skos:prefLabel "PFNA"@en ; 
+    skos:definition "Perfluorononanoic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+    skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:38397> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/31ff48e7-fdc3-591e-90aa-124c3ccea1d1> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFNS by LCMS"@en ; 
-    skos:definition "PFNS by LCMS"@en ; 
+    skos:prefLabel "PFNS"@en ; 
+    skos:definition "Perfluorononanesulfonic acid "@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/fc12ca13-f664-52e2-85dc-a2e9d4df6815> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFOA by LCMS"@en ; 
-    skos:definition "PFOA by LCMS"@en ; 
+    skos:prefLabel "PFOA"@en ; 
+    skos:definition "Perfluorooctanoic acid "@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+    skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35549> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/9b74354b-e49f-56c9-8b65-fa94d6807406> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFOS by LCMS"@en ; 
-    skos:definition "PFOS by LCMS"@en ; 
+    skos:prefLabel "PFOS"@en ; 
+    skos:definition "Perfluorooctane sulfonate"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/23b25096-01ff-5457-89a0-9b227b8bab7a> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFPeA by LCMS"@en ; 
-    skos:definition "PFPeA by LCMS"@en ; 
+    skos:prefLabel "PFPeA"@en ; 
+    skos:definition "Perfluoro-n-pentanoic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/323ba4ea-2ea4-54bb-96dc-2b63290d2b65> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFPeS by LCMS"@en ; 
-    skos:definition "PFPeS by LCMS"@en ; 
+    skos:prefLabel "PFPeS"@en ; 
+    skos:definition "Perfluoropentane sulfonate"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/b1199b2f-c409-507c-8822-caf08230770c> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFTeDA by LCMS"@en ; 
-    skos:definition "PFTeDA by LCMS"@en ; 
+    skos:prefLabel "PFTeDA"@en ; 
+    skos:definition "Perfluorotetradecanoic acid "@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/de032c5a-d88d-50b9-8ffe-777889acd872> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFTrDA by LCMS"@en ; 
-    skos:definition "PFTrDA by LCMS"@en ; 
+    skos:prefLabel "PFTrDA"@en ; 
+    skos:definition "Perfluorotridecanoic acid"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/3592405a-c6d6-5bf4-96d3-7415e87f0407> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "PFUDA by LCMS"@en ; 
-    skos:definition "PFUDA by LCMS"@en ; 
+    skos:prefLabel "PFUDA"@en ; 
+    skos:definition "Perfluoroundecanoic acid "@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
+     skos:relatedMatch <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:83493> ;
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-15"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/090383db-8654-52ad-96a8-58c622f65dd0> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Sum of PFHxS and PFOS by LCMS"@en ; 
-    skos:definition "Sum of PFHxS and PFOS by LCMS"@en ; 
+    skos:prefLabel "Sum of PFHxS and PFOS"@en ; 
+    skos:definition "Sum of PFHxS and PFOS"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/c9803b8c-93f4-5d7c-8f62-6212703a8610> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-23"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/cc6ba2f6-f812-50d7-8d2a-c95e851b1284> 
@@ -4843,19 +4868,20 @@
     qudt:hasQuantityKind quantitykind:Conductivity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-23"^^xsd:date ;
+    owl:deprecated "true"^^xsd:boolean;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/dc60a5a5-9f38-5005-9af7-3d282446be6e> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Dissolved Oxygen (FLD)"@en ; 
-    skos:definition "Dissolved Oxygen (FLD)"@en ; 
+    skos:prefLabel "Dissolved Oxygen"@en ; 
+    skos:definition "Dissolved Oxygen"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/414e519e-56a9-59d3-8675-862a51348026> ; 
     qudt:hasQuantityKind quantitykind:MassDensity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-23"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/ac2d0160-494e-57e1-9841-6ec9c030ab8f> 
@@ -4926,19 +4952,20 @@
     qudt:hasQuantityKind quantitykind:Turbidity ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-23"^^xsd:date ;
+    owl:deprecated "true"^^xsd:boolean;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/f3cbabdf-06a6-5548-984d-b2fa0c0a89f8> 
     a skos:Concept ; 
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
-    skos:prefLabel "Water Temperature (FLD)"@en ; 
-    skos:definition "Water Temperature (FLD)"@en ; 
+    skos:prefLabel "Water Temperature"@en ; 
+    skos:definition "Water Temperature"@en ; 
     skos:broader <https://linked.data.gov.au/def/qld-obsprop/414e519e-56a9-59d3-8675-862a51348026> ; 
     qudt:hasQuantityKind quantitykind:Temperature ; 
     dcterms:created "2021-06-07"^^xsd:date ; 
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
-    dcterms:modified "2021-06-07"^^xsd:date ;
+    dcterms:modified "2021-11-23"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/qld-obsprop/cc75db85-b794-5052-97dc-7de53bdaa971> 
@@ -5649,6 +5676,22 @@
     dcterms:modified "2021-06-07"^^xsd:date ;
 .
 
+<https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> 
+    a skos:Concept ; 
+    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qld-obsprop> ; 
+    skos:broader <https://linked.data.gov.au/def/qld-obsprop/2ac0e547-d4ca-5167-a250-79bc59b4f452> ;
+    skos:prefLabel "Waves"@en ; 
+    skos:definition "Parameters that relate to the definition, measurement and affect of waves."@en ;
+    skos:narrower <http://vocab.aodn.org.au/def/discovery_parameter/entity/2> ,
+        <http://vocab.aodn.org.au/def/discovery_parameter/entity/35> ,
+        <http://vocab.aodn.org.au/def/discovery_parameter/entity/3> ,
+        <http://vocab.aodn.org.au/def/discovery_parameter/entity/417> ,
+        <http://vocab.aodn.org.au/def/discovery_parameter/entity/4> ;
+    dcterms:created "2022-07-27"^^xsd:date ; 
+    dcterms:modified "2022-07-27"^^xsd:date ;
+.
+
 # TERN parameters are in this section
 
 <http://linked.data.gov.au/def/tern-cv/3a03227d-1b66-4c63-b7aa-f9ccbb70d1cf> a skos:Concept ;
@@ -5669,12 +5712,11 @@
 
 <http://linked.data.gov.au/def/tern-cv/7dc7ae5c-f074-4536-9032-f59eba3f9270> a skos:Concept ;
     dcterms:created "2020-11-04T05:25:31"^^xsd:datetime ;
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-12-19T07:34:22"^^xsd:datetime ;
     skos:broader <http://linked.data.gov.au/def/tern-cv/d62a4664-89a1-49a1-9ef0-f30ee2c6d22b> ;
     skos:definition "Amount of ground covered by some material or bare; usually estimated as a percentage."@en ;
     skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/tern-cv/5699eca7-9ef0-47a6-bcfb-9306e0e2b85e> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
     skos:narrower <http://linked.data.gov.au/def/tern-cv/4392769d-ab14-4575-af5a-103e133eee3f>,
         <http://linked.data.gov.au/def/tern-cv/8b26b66b-9e39-47eb-807f-621f1119377d>,
         <http://linked.data.gov.au/def/tern-cv/998a886b-d40d-43cd-ac1a-0a682018b4e5>,
@@ -5909,8 +5951,7 @@
     skos:prefLabel "ground cover - rock"@en ; 
     skos:definition "Amount of rock (i.e. individual rock fragments > 6 cm wide) that covers the ground; expressed as a percentage."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/7dc7ae5c-f074-4536-9032-f59eba3f9270> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-12-24T01:17:57"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/cbff6d0c-c239-4858-8139-9fbd8c8646df> 
@@ -5920,8 +5961,7 @@
     skos:prefLabel "ground cover - litter"@en ; 
     skos:definition "Amount of litter and fine woody debris (i.e. dead wood pieces < 10 cm in diameter) that covers the ground; expressed as a percentage."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/7dc7ae5c-f074-4536-9032-f59eba3f9270> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-12-24T01:21:17"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/e06a20d2-ad09-4cf8-bb4b-9ebd66ed10b7> 
@@ -5931,8 +5971,7 @@
     skos:prefLabel "ground cover - cryptogam"@en ; 
     skos:definition "Amount of cryptogams (i.e. lichens, bryophytes and an assortment of microscopic organisms) that covers the ground; expressed as a percentage."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/7dc7ae5c-f074-4536-9032-f59eba3f9270> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ;  
+    dcterms:modified "2020-12-19T08:04:27"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/05304603-1f89-4734-b929-57d7c64a56db> 
@@ -5942,8 +5981,7 @@
     skos:prefLabel "fine earth volume"@en ; 
     skos:definition "Volume of fine earth (i.e. particles < 2 mm)."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/99bd0128-54d4-4a2b-8a2c-48010eb07d26> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-07-09T03:28:44.827000+00:00"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/0531b8b6-7610-4fbd-9a66-8cd80d357a70> 
@@ -6155,8 +6193,7 @@
     skos:prefLabel "crown density"@en ; 
     skos:definition "Number of crowns per unit area. Crown density as a percentage for each species enables the conversion of crown cover to foliage cover (see Walker and Hopkins 1990, Figure 6)."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/2ffe4363-dea1-4188-9f8f-835983d47fe2> ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-12-18T23:59:11"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/2b5ac7b3-b4bf-4a06-97d6-8dee8b32d72d> 
@@ -6719,8 +6756,7 @@
     skos:definition "Crown cover (C) (Walker and Hopkins 1990) is the percentage of the sample site within the vertical projection of the periphery of the crowns with the crowns considered to be opaque. This is also the generic definition of canopy cover or plant cover."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/83ac0278-51cd-4d1a-8e05-7c1fc68cf020> ; 
     dcterms:created "2020-06-02T00:12:46.606000+00:00"^^xsd:datetime ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-11-19T04:57:49"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/13dabcca-eaf5-46ee-96bf-7364031c3b73> 
@@ -6731,8 +6767,7 @@
     skos:definition "Crown cover (C) (Walker and Hopkins 1990) is the percentage of the sample site within the vertical projection of the periphery of the crowns with the crowns considered to be opaque. This is also the generic definition of canopy cover or plant cover."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/83ac0278-51cd-4d1a-8e05-7c1fc68cf020> ; 
     dcterms:created "2020-06-02T00:14:08.982000+00:00"^^xsd:datetime ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-11-19T05:07:05"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/2b192e25-ee32-463b-941a-6a80b4cf5efd> 
@@ -6743,8 +6778,7 @@
     skos:definition "Average projective foliage cover recorded at the site. Projective foliage cover (PFC) (Specht et al. 1974) is the percentage of the sample site occupied by the vertical projection of foliage only. PFC and foliage cover for plants are sensitive to season and drought because foliage may change greatly depending on the water available. This variation is not usually considered in vegetation classification."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/2ffe4363-dea1-4188-9f8f-835983d47fe2> ; 
     dcterms:created "2020-06-02T04:38:54.283000+00:00"^^xsd:datetime ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-06-15T04:36:57.540000+00:00"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/1c2a4e34-eafc-4180-b7d3-e284e3d239ec> 
@@ -6755,8 +6789,7 @@
     skos:definition "Minimum projective foliage cover recorded at the site. Projective foliage cover (PFC) (Specht et al. 1974) is the percentage of the sample site occupied by the vertical projection of foliage only. PFC and foliage cover for plants are sensitive to season and drought because foliage may change greatly depending on the water available. This variation is not usually considered in vegetation classification."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/2ffe4363-dea1-4188-9f8f-835983d47fe2> ; 
     dcterms:created "2020-06-02T04:42:02.869000+00:00"^^xsd:datetime ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-10-07T01:36:19"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/04674274-a548-4301-aba6-9813645226ed> 
@@ -6767,8 +6800,7 @@
     skos:definition "Maximum projective foliage cover recorded at the site. Projective foliage cover (PFC) (Specht et al. 1974) is the percentage of the sample site occupied by the vertical projection of foliage only. PFC and foliage cover for plants are sensitive to season and drought because foliage may change greatly depending on the water available. This variation is not usually considered in vegetation classification."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/2ffe4363-dea1-4188-9f8f-835983d47fe2> ; 
     dcterms:created "2020-06-02T04:42:32.047000+00:00"^^xsd:datetime ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ;  
+    dcterms:modified "2020-10-07T01:36:02"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/2f86eccf-9cab-4c45-905b-b8f769d65950> 
@@ -7054,8 +7086,7 @@
     skos:definition "Amount of gravel (i.e. particles > 2mm) that covers the ground expressed as a percentage."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/7dc7ae5c-f074-4536-9032-f59eba3f9270> ; 
     dcterms:created "2020-10-28T05:33:01"^^xsd:datetime ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ;  
+    dcterms:modified "2020-12-19T07:19:06"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/998a886b-d40d-43cd-ac1a-0a682018b4e5> 
@@ -7066,8 +7097,7 @@
     skos:definition "Amount of cover type that was not collected; expressed as a percentage."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/7dc7ae5c-f074-4536-9032-f59eba3f9270> ; 
     dcterms:created "2020-10-28T05:33:30"^^xsd:datetime ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-12-19T07:39:55"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/03c6e286-27b4-4671-bb9b-ae0819a28eaf> 
@@ -7111,8 +7141,7 @@
     skos:definition "Amount of ground covered by some material or bare; usually estimated as a percentage."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/d62a4664-89a1-49a1-9ef0-f30ee2c6d22b> ; 
     dcterms:created "2020-11-04T05:25:31"^^xsd:datetime ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-12-19T07:34:22"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/e27ee9af-4fde-46aa-a068-f847834269a6> 
@@ -7145,8 +7174,7 @@
     skos:definition "Amount of ground covered by vegetation; expressed as a percentage."@en ; 
     skos:broader <http://linked.data.gov.au/def/tern-cv/7dc7ae5c-f074-4536-9032-f59eba3f9270> ; 
     dcterms:created "2020-12-09T06:52:28"^^xsd:datetime ; 
-    qudt:hasQuantityKind quantitykind:DimensionlessRatio ; 
-    dcterms:modified "2022-05-11T09:00:00"^^xsd:datetime ; 
+    dcterms:modified "2020-12-19T07:34:08"^^xsd:datetime ; 
 . 
 
 <http://linked.data.gov.au/def/tern-cv/74c71500-0bae-43c9-8db0-bd6940899af1> 
@@ -8951,3 +8979,83 @@
     dcterms:created "2021-05-24T01:04:02"^^xsd:datetime ; 
     dcterms:modified "2021-05-24T01:14:28"^^xsd:datetime ;
 .
+
+
+# AODN Parameters belong in this section
+<http://vocab.aodn.org.au/def/discovery_parameter/entity/2> 
+    a skos:Concept ;
+	skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ; 
+    rdfs:isDefinedBy <http://vocab.aodn.org.au/def/discovery_parameter/1> ;
+    skos:definition "Significant wave height approximated as four times the square root of the first moment of the wave power spectrum."@en ;
+	skos:prefLabel "Significant wave height, Hmo"@en ;
+    skos:altLabel "Hmo" ;
+    qudt:hasQuantityKind quantitykind:Length ;
+	skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2015-08-06T06:43:53Z"^^xsd:dateTime ;
+	dcterms:modified "2018-02-23T00:23:33Z"^^xsd:dateTime ;
+    dcterms:modified "2022-08-05T11:24:28"^^xsd:datetime ;
+.
+
+<http://vocab.aodn.org.au/def/discovery_parameter/entity/35>
+    a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ;
+    rdfs:isDefinedBy <http://vocab.aodn.org.au/def/discovery_parameter/1> ;
+    skos:definition "Average height of the highest 1/3rd of waves on the water body"@en ;
+    skos:prefLabel "Significant wave height, Hs, H1/3"@en ;
+    skos:altLabel "Hs" ;
+    qudt:hasQuantityKind quantitykind:Length ;
+    skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2018-02-22T05:45:57Z"^^xsd:dateTime ;
+    dcterms:modified "2022-08-05T11:24:28"^^xsd:datetime ;
+.
+
+<http://vocab.aodn.org.au/def/discovery_parameter/entity/3>
+    a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ;
+    rdfs:isDefinedBy <http://vocab.aodn.org.au/def/discovery_parameter/1> ;
+    skos:definition "The wave period with the maximum wave energy, determined from the wave spectrum."@en ;
+    skos:prefLabel "Peak wave period, Tp"@en ;
+    skos:altLabel "Tp" ;
+    qudt:hasQuantityKind quantitykind:Period ;
+    skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2015-08-06T06:45:48Z"^^xsd:dateTime ;
+    dcterms:modified "2022-08-05T11:24:28"^^xsd:datetime ;
+.
+
+<http://vocab.aodn.org.au/def/discovery_parameter/entity/417>
+    a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ;
+    rdfs:isDefinedBy <http://vocab.aodn.org.au/def/discovery_parameter/1> ;
+    skos:definition "The average time interval between similar direction crossings of mean water level for a wave record."@en ;
+    skos:prefLabel "Zero crossing wave period, Tz"@en ;
+    skos:altLabel "Tz" ;
+    qudt:hasQuantityKind quantitykind:Period ;
+    skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2015-08-06T06:45:48Z"^^xsd:dateTime ;
+    dcterms:modified "2022-08-05T11:24:28"^^xsd:datetime ;
+.
+
+<http://vocab.aodn.org.au/def/discovery_parameter/entity/4>
+    a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ;
+    rdfs:isDefinedBy <http://vocab.aodn.org.au/def/discovery_parameter/1> ;
+    skos:definition "Wave direction at the peak frequency"@en ;
+    skos:prefLabel "Peak wave direction, Dirp"@en ;
+    skos:altLabel "Dirp" ;
+    qudt:hasQuantityKind quantitykind:Temperature ;
+    skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2015-08-06T06:45:48Z"^^xsd:dateTime ;
+    dcterms:modified "2022-08-05T11:24:28"^^xsd:datetime ;
+.
+
+<http://pid.geoscience.gov.au/def/voc/ga/netcdfldtos/sea_surface_temperature> 
+    a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qld-obsprop> ;
+    rdfs:isDefinedBy <http://pid.geoscience.gov.au/def/voc/ga/netcdfldtos> ;
+    skos:prefLabel "Sea surface temperature, SST"@en ;
+    skos:altLabel "SST" ;
+	skos:definition "The temperature of sea water near the surface"@en ;
+    qudt:hasQuantityKind quantitykind:Temperature ;
+    skos:broader <https://linked.data.gov.au/def/qld-obsprop/2ac0e547-d4ca-5167-a250-79bc59b4f452> ;
+    dcterms:modified "2022-08-05T11:24:28"^^xsd:datetime ;
+ .
