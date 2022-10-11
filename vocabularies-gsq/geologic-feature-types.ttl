@@ -701,6 +701,21 @@ geof:Klippe a skos:Concept ;
     skos:notation "gfklp" ;
     skos:prefLabel "klippe"@en .
 
+geof:LandformFeature a skos:Concept ;
+        dcterms:references "After and modified from: <https://en.wikipedia.org/wiki/Landform> (accessed 05.10.22)." ;
+        dcterms:references "After and modified from: <https://en.wikipedia.org/wiki/Geomorphology> (accessed 05.10.22)." ;
+        dcterms:references "After and modified from: <https://sciencing.com/common-landforms-8727172.html>  (accessed 05.10.22)." ;
+        dcterms:references "After and modified from: <https://examples.yourdictionary.com/examples-of-landforms.html> (accessed 05.10.22)." ;
+        dcterms:references "After and modified from: <https://oceanservice.noaa.gov/facts/bathymetry.html> (accessed 05.10.22)." ;
+        skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
+        skos:related geof:RegolithLandformUnit ;
+        skos:definition "Overall, any physical feature on the Earth’s surface (here excluding consideration of anthropogenic-landform features and natural-landform features on other planets) that is part of the terrain represents a landform, including: alluvial fans, braided channels, abyssal plains, atolls, beaches, cliffs, hills, mid-ocean ridges, volcanic arcs, wave-cut platforms, canyons, gullies, valleys, hoodoos, badlands, salt pans, etc., as well as all other surface bodies of water, such as rivers, lakes, marshes, glaciers and ice sheets."@en ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+        skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+        skos:notation "gflfe" ;
+        skos:prefLabel "landform feature"@en ;
+        skos:scopeNote "Landforms are classified by physical attributes such as their form, location/shape, elevation, slope in the landscape (topography, bathymetry/submarine topography, respectively on land and under water), and by the processes that created them, embracing the science of geomorphology."@en .
+
 geof:LargeIgneousProvince a skos:Concept ;
     skos:altLabel "LIP"@en ;
     dcterms:references <http://www.glossaryofgeology.org> ;
@@ -1269,9 +1284,9 @@ geof:StructuralFeature a skos:Concept ;
 
 geof:WaterBody a skos:Concept ;
     dcterms:references <https://www.usgs.gov/special-topics/water-science-school/science/freshwater-lakes-and-rivers-and-water-cycle> ;
-    skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
+    skos:broader geof:LandformFeature ;
     skos:definition "A feature produced by the accumulation of water at surface. These features may be liquid water in the form of lakes, rivers, and streams, or as ice in the form of ice sheets and glaciers. Considered part of the set of geologic features due to their role in geological processes and due to their intersection and coverage of other geologic features and important topographical relationships."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfwtr" ;
+    skos:notation "gflwb" ;
     skos:prefLabel "water body"@en .
