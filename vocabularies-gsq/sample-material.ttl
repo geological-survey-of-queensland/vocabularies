@@ -9,7 +9,7 @@
 <http://linked.data.gov.au/def/sample-material> a owl:Ontology , skos:ConceptScheme ;
     dcterms:created "2020-02-08"^^xsd:date ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-03-23"^^xsd:date ;
+    dcterms:modified "2022-10-18"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Types of materials of which samples can consist of in Geoscience."@en ;
@@ -380,6 +380,14 @@ spmt:leachate a skos:Concept ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
     skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
     skos:prefLabel "Leachate"@en .
+
+spmt:lpg a skos:Concept ;
+    skos:altLabel "Liquid Petroleum Gas"@en ;
+    skos:broader spmt:fluid-hydrocarbon ;
+    skos:definition "A flammable mixture of hydrocarbon gases used as fuel in heating appliances, cooking equipment, and vehicles.Typically propane (C3H8) and butane (C4H10), produced during the refining of natural gas."@en ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
+    skos:prefLabel "LPG"@en .
 
 spmt:metal a skos:Concept ;
     skos:definition "A material that is a pure or close-to-pure form of a metallic element such as Gold, Copper, and Lead."@en ;
