@@ -139,7 +139,7 @@ als:asud a skos:Concept ;
     skos:prefLabel "Australian Stratigraphic Units Database"@en ;
     skos:broader als:geoscience-australia .
 
-als:asud-indrect a skos:Concept ;
+als:asud-indirect a skos:Concept ;
     skos:altLabel "ASUD Indirect"@en ;
     skos:definition "The Stratigraphic Number used in Geoscience Australia's Australian Stratigraphic Units Database where the match is to a unit listed in the ASUD as non-current, a variation, or an otherwise informal or obsolete unit."@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-alias> ;
@@ -218,9 +218,8 @@ als:government a skos:Collection ;
         als:treasury ;
     skos:prefLabel "Government"@en .
 
-
 als:feature a skos:Collection ;
-    skos:definition "Aliases and their sources used when describing geologic features."@en ;
+    skos:definition """Aliases and their sources used when describing geologic features."""@en ;
     skos:member 
         als:asud,
         als:asud-indirect,
@@ -229,4 +228,4 @@ als:feature a skos:Collection ;
         als:misspelt,
         als:obsolete,     
         als:variation ;
-    skos:prefLabel "Feature Alias"@en .
+    skos:prefLabel """Feature Alias"""@en .
