@@ -1,0 +1,179 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+
+
+<https://linked.data.gov.au/def/qesd-qual>
+    a owl:Ontology , skos:ConceptScheme ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+    dcterms:modified "2022-11-06"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/des> ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    skos:prefLabel "Queensland Environmental Science Data Quality Properties"@en ;
+    #dcterms:provenance "Includes terms from TERN Core Vocabulary (https://linkeddata.tern.org.au/viewer/tern)"@en ; 
+    skos:definition "A set of quality parameters that are of relevance to Queensland Environmental Science Data (QESD)."@en ;
+    skos:hasTopConcept 
+        #<http://linked.data.gov.au/def/tern-cv/123f2efe-3891-4764-9047-609c8b30e925>,
+        #<http://linked.data.gov.au/def/tern-cv/29bd4356-5638-49c0-8d3e-57598ac2ea6c>,
+        #<http://linked.data.gov.au/def/tern-cv/2ffe4363-dea1-4188-9f8f-835983d47fe2>,
+        #<http://linked.data.gov.au/def/tern-cv/41a27c10-6dff-4ddc-9f8b-14e87fafc786>,
+        #<http://linked.data.gov.au/def/tern-cv/45ae73d8-92bd-4261-a05f-7bfac228e1f7>,
+        #<http://linked.data.gov.au/def/tern-cv/50b9def1-660b-4274-b10e-6dbe57243305>,
+        #<http://linked.data.gov.au/def/tern-cv/68add852-0a47-4412-8f8c-52bd8d0151b1>,
+        #<http://linked.data.gov.au/def/tern-cv/6e2ede4b-1e6f-4ea0-93d9-6597c5666d62>,
+        #<http://linked.data.gov.au/def/tern-cv/6f726a59-c330-44eb-898e-7d42d5fbdada>,
+        #<http://linked.data.gov.au/def/tern-cv/777773d0-cfb4-44ff-85e2-08b48e10ac52>,
+        #<http://linked.data.gov.au/def/tern-cv/8e7a785a-8c57-4415-855f-cb6d35ad58bb>,
+        #<http://linked.data.gov.au/def/tern-cv/8fa1c4bd-73b3-432a-ab49-9ee89928e6d9>,
+        #<http://linked.data.gov.au/def/tern-cv/99bd0128-54d4-4a2b-8a2c-48010eb07d26>,
+        #<http://linked.data.gov.au/def/tern-cv/9e03a73d-8e89-4187-9f96-0306aad93458>,
+        #<http://linked.data.gov.au/def/tern-cv/bb5c1354-8d70-47b2-b333-87e3bf1157d6>,
+        #<http://linked.data.gov.au/def/tern-cv/c_012ebf32>,
+        #<http://linked.data.gov.au/def/tern-cv/d62a4664-89a1-49a1-9ef0-f30ee2c6d22b> ,
+        #<http://linked.data.gov.au/def/tern-cv/0986ce8c-4a8c-4132-91f9-b7380d45ce73> ,
+        #<http://linked.data.gov.au/def/tern-cv/87ed6ce4-3354-4a3f-ba15-2b7cb0caf3da> ;
+
+# Top Level Parameters for the Concept Scheme are in this section 
+
+# Below adapted from Obs-prop
+
+#<https://linked.data.gov.au/def/qld-obsprop/2ac0e547-d4ca-5167-a250-79bc59b4f452>
+   a skos:Concept ;
+    skos:topConceptOf <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ; 
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:narrower 
+         #<https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ,
+    skos:prefLabel "oceanographic parameter"@en ; 
+    skos:definition "The elements and conditions which are found in, influence and affect oceans and coasts; oceanography is the study of the oceans."@en ; 
+    skos:created "2022-11-06"^^xsd:date ;
+    skos:modified "2022-11-06"^^xsd:date ;
+
+# Wave acurracy measures below 	
+.
+ dq-iso-25012:accuracy
+  a dqv:Dimension ; a skos:Concept ;
+  dcterms:source <https://www.w3.org/TR/vocab-dqv/#DimentsionsMetricsHints> ;
+  skos:definition "The degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use."@en ;
+  skos:inScheme <https://linked.data.gov.au/def/iso-iec-25012-data-quality-dimension> ;
+  rdfs:isDefinedBy <https://iso25000.com/index.php/en/iso-25000-standards/iso-25012> ;
+  skos:prefLabel "Accuracy (ISO25012)"@en ;
+  skos:closeMatch dq-iso-19157:PositionalAccuracy ;
+  skos:closeMatch dq-iso-19157:ThematicAccuracy ;
+  dqv:inCategory dq-iso-25012:inherentDataQuality ;
+  skos:broader dq-iso-25012:inherentDataQuality ;
+  
+ # Wave height checks
+.
+ a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:definition "The ratio of Hs/Hmax of a wave record, check: hmax/hs > 1.4 < 2.5"@en ;
+    skos:prefLabel "Hs/Hmax"@en ;
+    #qudt:hasQuantityKind quantitykind:Length ;
+    #skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+.
+a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:definition "The ratio of Hmo/Hs of a wave record, check: Hm0/Hs > 1.0 < 1.3 "@en ;
+    skos:prefLabel "Hmo/Hs"@en ;
+    #qudt:hasQuantityKind quantitykind:Length ;
+    #skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+
+.
+a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:definition "The ratio of Hm/Hs of a wave record, check: Hm/Hs > 0.67 > 0.95 "@en ;
+    skos:prefLabel "Hm/Hs"@en ;
+    #qudt:hasQuantityKind quantitykind:Length ;
+    #skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+
+.
+ # Wave period checks
+
+a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:definition "Tzmax out of expected range, check: Tzmax < 20s"@en ;
+    skos:prefLabel "Tzmax > 20s"@en ;
+    #qudt:hasQuantityKind quantitykind:Length ;
+    #skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+
+.
+a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:definition "Tp out of expected range, check: Tp > 1s < 16s"@en ;
+    skos:prefLabel "Tp > 1s < 16s"@en ;
+    #qudt:hasQuantityKind quantitykind:Length ;
+    #skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+
+.
+a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:definition "Tz or T02 out of expected range, check: Tz/T02 > 0.8 < 1.3"@en ;
+    skos:prefLabel "Tz/T02"@en ;
+    #qudt:hasQuantityKind quantitykind:Length ;
+    #skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+
+.
+a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:definition "Ts, Tc, Tz out of expected range, check: Ts, Tc, Tz > 14s"@en ;
+    skos:prefLabel "Ts, Tc, Tz > 14s"@en ;
+    #qudt:hasQuantityKind quantitykind:Length ;
+    #skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+
+.
+
+# Stormtide and tide accuracy measures below:
+ 
+ a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:definition "Water level out of expected range, check: water level > 6m"@en ;
+    skos:prefLabel "Water Level out of range"@en ;
+    #qudt:hasQuantityKind quantitykind:Length ;
+    #skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+
+.
+
+a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:definition "Water level out of expected range, check: residual water level > 1m"@en ;
+    skos:prefLabel "Water Level residual out of range"@en ;
+    #qudt:hasQuantityKind quantitykind:Length ;
+    #skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+
+.
+
+a skos:Concept ;
+    skos:inScheme <https://linked.data.gov.au/def/qesd-qual> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qesd-qual> ;
+    skos:definition "Water level out of expected range, check outliers > 2x sd"@en ;
+    skos:prefLabel "Out of range, water Level outliers"@en ;
+    #qudt:hasQuantityKind quantitykind:Length ;
+    #skos:broader <https://linked.data.gov.au/def/qld-obsprop/5fb80b7c-b505-5960-853a-23c85c7cf472> ;
+    dcterms:created "2022-11-06"^^xsd:date ;
+
+.
