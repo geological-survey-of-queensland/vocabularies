@@ -96,6 +96,7 @@
         geou:SHOTS-PER-M,
         geou:TOC,
         geou:TROYOZ,
+	geou:CARAT-PER-M3,
         <http://qudt.org/vocab/unit/ARCMIN>,
         <http://qudt.org/vocab/unit/ARCSEC>,
         <http://qudt.org/vocab/unit/ATM>,
@@ -105,7 +106,6 @@
         <http://qudt.org/vocab/unit/BTU_IT>,
         <http://qudt.org/vocab/unit/BYTE>,
         <http://qudt.org/vocab/unit/CARAT>,
-	<http://qudt.org/vocab/unit/CARAT-PER-M3>,
         <http://qudt.org/vocab/unit/CentiM3>,
         <http://qudt.org/vocab/unit/CentiP>,
         <http://qudt.org/vocab/unit/DAY>,
@@ -1175,7 +1175,7 @@ geou:TROYOZ a skos:Concept ;
     skos:prefLabel "Carat"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/geou> .
 
-<http://qudt.org/vocab/unit/CARAT-PER-M3> a skos:Concept ;
+geou:CARAT-PER-M3 a skos:Concept ;
     skos:altLabel "Carat per metre cubed"@en,
         "Carat per cubic metre"@en,
         "CARAT PER CUBIC METRE"@en,
@@ -1186,7 +1186,7 @@ geou:TROYOZ a skos:Concept ;
         "CARATS PER METRE CUBED"@en ;
     skos:hiddenLabel "CARATS PER CUBIC METRE (ct/m3)"@en,
         "CARATS PER METRE CUBED (ct/m3)"@en ;
-    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+    rdfs:isDefinedBy geou: ;
     skos:definition "Carat per cubic metre is a derived unit of density, defined by mass in carats divided by volume in cubic metres. The symbolic abbreviation is \\(ct \\cdot m^{-3}\\), or equivalently either \\(ct/m^3\\)."@en ;
     skos:notation "ct/m3" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/geou> ;
