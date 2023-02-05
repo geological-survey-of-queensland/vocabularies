@@ -6,38 +6,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://linked.data.gov.au/def/geofeatures> a owl:NamedIndividual,
-        owl:Ontology,
-        skos:ConceptScheme,
-        prof:Profile ;
-    dcterms:contributor [ a owl:NamedIndividual,
-                sdo:Person ;
-            sdo:affiliation <https://linked.data.gov.au/org/gsq> ;
-            sdo:email <mailto:derek.hoy@dnrme.qld.gov.au> ;
-            sdo:identifier <mailto:derek.hoy@dnrme.qld.gov.au> ;
-            sdo:name "Derek Hoy" ],
-        <https://linked.data.gov.au/org/gsq> ;
-    dcterms:created "2020-01-23"^^xsd:date ;
-    dcterms:creator <https://orcid.org/0000-0001-5489-9590>,
-        <https://orcid.org/0000-0002-8742-7730> ;
-    dcterms:modified "2022-09-28"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
-    owl:imports <http://www.opengis.net/ont/geosparql>,
-        <http://www.w3.org/2004/02/skos/core> ;
-    owl:versionIRI <https://linked.data.gov.au/def/geofeatures/0.5> ;
-    owl:versionInfo "Most ontology content but not complete diagrammatic coverage." ;
-    skos:definition "This vocabulary lists types of geological features relevant to the duties of the Geological Survey of Queensland. It is automatically derived from GSQ's Geologic Features Ontology (https://linked.data.gov.au/def/geofeatures)"@en ;
-    skos:hasTopConcept <http://sweetontology.net/realmGeol/GeologicFeature> ;
-    skos:prefLabel "Geologic Feature Types"@en ;
-    prof:isProfileOf <http://sweetontology.net/realmGeol> ;
-    sdo:codeRepository <https://github.com/geological-survey-of-queensland/geologic-features-ont> .
-
-<https://linked.data.gov.au/org/gsq> a owl:NamedIndividual,
-        sdo:Organization ;
-    sdo:email <mailto:geological_info@dnrme.qld.gov.au> ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+@prefix data: <https://linked.data.gov.au/dataset/qldgeofeatures/> .
+# Nick, please check/correct the above @prefix data: .... and the reference to it below, re its validity and workability#
 
 geof:RegolithFeature a skos:Concept ;
     dcterms:references "Eggleton, R.A. (Editor), 2001: The Regolith Glossary: Surficial Geology, Soils and Landscapes. Cooperative Research Centre for Landscape Evolution & Mineral Exploration (CRC LEME), Floreat Park, W.A., 144 pages. <http://crcleme.org.au/Pubs/Monographs/RegolithGlossary.pdf>"@en ;
@@ -231,7 +201,7 @@ geof:MarineUnit a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfrma" ;
-    skos:prefLabel "marine regolith-landform unit"@en ;
+    skos:prefLabel "Marine regolith-landform unit"@en ;
     skos:scopeNote "More comprehensively, secondary regolith elements associated with this primary marine regolith-landform mapping unit encompass: coral reefs/bioherms; reef flats, backreefs or rock flats; shell banks; plains, nearshore; plains, offshore; rocky reefs; shorefaces; talus slopes or footslopes; and relict channels (GSWA, 2013)."@en ;
 .
 geof:AbundanceZone a skos:Concept ;
@@ -372,24 +342,6 @@ geof:ComplexRockUnit a skos:Concept ;
     skos:scopeNote "The ISG definition is followed, with minor rewording (and without any change of meaning), although a complex unit is not here classified as a lithostratigraphic unit (as per the ISG). The NASC (2005) and Kumpulainen (2017), together with other Scandinavian guides, preferably adhere to a more specific definition, restricting a complex to a mixture of two or more genetic classes, albeit regarding a complex as a non-ranked lithodemic unit (generally, a defined, nonstratiform/non-stratified body of predominantly intrusive or highly deformed and/or highly metamorphosed rock). However, as the ISG usage better suits the nomenclature applied to some complex rock units in Queensland, it is therefore provisionally followed. A complex, although unranked in the NASC, was considered to be ‘commonly comparable to suite or supersuite’, such that two or more associated complexes could be grouped in a supersuite. This problematical application of lithodemic nomenclature was addressed by the Subcommission on Quaternary Stratigraphy with their introduction of the term ‘supercomplex’ and attendant recommendation for a two-fold hierarchy of rank for lithodemic rock units: lithodeme, suite and supersuite; and complex and supercomplex. Here, complex rock units are separated from lithostratigraphic and other single-class units (e.g., intrusive rock units) and broadly treated as stand-alone, largely nonstratiform, mixed-class units, thus reflecting the approach of Gillespie & Leslie (2021) in their construction of the British Geological Survey’s rock classification system (BRUCS). [Also, following Gillespie & Leslie, the NASC lithodemic terminology is not followed, and ‘suite’ rankings are applied solely to intrusive rock units (not also to metamorphic units)]. However, as indicated, nomenclatural usage in Queensland is not true to the more restricted definition of rock complexes comprising more than one genetic class of rocks (e.g., Jell, 2013)."@en ; 
     skos:prefLabel "complex rock unit"@en .
 
-geof:DominantlyStratifiedComplexRockUnit a skos:Concept ;
-    dcterms:references "See usage of: Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
-    skos:broader geof:ComplexRockUnit ;
-    skos:definition "A complex rock unit wherein the dominant rock type or types are stratified. See definition for Complex Rock Unit for further detail."@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfcxs" ;
-    skos:prefLabel "dominantly stratified complex rock unit"@en .
-
-geof:DominantlyIgneousComplexRockUnit a skos:Concept ;
-    dcterms:references "See usage of: Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
-    skos:broader geof:ComplexRockUnit ;
-    skos:definition "A complex rock unit wherein the dominant rock type or types are igneous. See definition for Complex Rock Unit for further detail."@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gfcxi" ;
-    skos:prefLabel "dominantly igneous complex rock unit"@en .
-
 geof:ConcurrentRangeZone a skos:Concept ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
     skos:broader geof:BiostratigraphicUnit ;
@@ -435,7 +387,7 @@ geof:Depression a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfdpn" ;
     skos:prefLabel "depression"@en .
- 
+
 geof:Dome a skos:Concept ;
     dcterms:references <http://www.glossaryofgeology.org> ;
     skos:broader geof:StructuralFeature ;
@@ -448,7 +400,7 @@ geof:Dome a skos:Concept ;
 geof:Duplex a skos:Concept ;
     dcterms:references <http://www.glossaryofgeology.org> ;
     skos:broader geof:StructuralFeature ;
-    skos:definition "A structural complex consisting of a roof thrust at the top and a floor thrust at the base, within which a suite of more steeply dipping imbricate thrust faults thicken and shorten the intervening panel of rock (Neuendorf et al. (2011), citing Dahlstrom (1970), Boyer (1976))."@en ;
+    skos:definition "A structural complex consisting of a roof thrust at the top and a floor thrust at the base, within which a suite of more steeply dipping imbricate thrust faults thicken and shorten the intervening panel of rock (Neuendorf et al. (2011), citing Dahlstrom (1970), Boyer (1976))."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfdpx" ;
@@ -568,6 +520,124 @@ geof:GeoResourceAccumulation a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:prefLabel "georesource accumulation"@en .
 
+geof:MineralsAndCoalResource a skos:Concept ;
+    skos:broader geof:GeoResourceAccumulation ;
+    skos:definition "Embracing naturally occurring masses, volumes or concentrations of minerals and coal that have existing or potential economic value."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "minerals and coal resource"@en .
+
+geof:MineralsResource a skos:Concept ;
+    skos:broader geof:MineralsAndCoalResource ;
+    skos:definition "Embracing naturally occurring masses, volumes or concentrations of minerals that have existing or potential economic value."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "minerals resource"@en .
+
+geof:CoalResource a skos:Concept ;
+    skos:broader geof:MineralsAndCoalResource ;
+    skos:definition "Embracing naturally occurring masses, volumes or concentrations of coal that have existing or potential economic value."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "coal resource"@en .      
+
+geof:PetroleumResource a skos:Concept ;
+    skos:broader geof:GeoResourceAccumulation ;
+    skos:definition """Petroleum resource accumulations encompass both ‘conventional’ and ‘unconventional’ resources that have existing or potential economic value (see attendant definitions under these sub-concepts)."""@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "petroleum resource"@en .
+
+geof:ConventionalPetroleumResource a skos:Concept ;
+    dcterms:references "Geoscience Australia: Oil (accessed 10.11.2022). <https://www.ga.gov.au/digital-publication/aecr2021/oil>"@en ;
+    dcterms:references "AAPG Wiki: An encyclopedia of subsurface science (accessed 10.11.2022). <https://wiki.aapg.org/Main_Page>"@en ;
+    skos:broader geof:PetroleumResource ;
+    skos:definition "Conventional petroleum resource accumulations embrace a mixture of organic compounds composed mainly of hydrogen and carbon (hydrocarbons) that occur in economic quantities in the gaseous and liquid state in subsurface-lithostratigraphic units. These compounds include hydrocarbon gases, crude oil, and condensate. A petroleum accumulation is contingent upon the occurrence/presence of the following critical factors: the existence of suitable reservoir, source and seal rocks, the geological history (including the thermal and tectonic/structural history) of the hosting sedimentary basin (and that of any underlying basin), and hydrocarbon migration and trapping in the necessary structural and/or stratigraphic trap (After: AAPG Wiki: An encyclopedia of subsurface science; Geoscience Australia: Oil; accessed 10.11.2022)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "conventional petroleum resource"@en .
+
+geof:UnconventionalPetroleumResource a skos:Concept ;
+    dcterms:references "Geoscience Australia: Unconventional Petroleum Resources (accessed 11.11.2022). <https://www.ga.gov.au/scientific-topics/energy/resources/petroleum-resources/unconventional-resources>"@en ;
+    skos:broader geof:PetroleumResource ;
+    skos:definition "Unconventional petroleum resources, requiring greater-than-industry-standard/conventional levels of technology or investment to exploit include oil shales, oil/tar sands (e.g., the vast Canadian and US deposits), extra-heavy oil, coal seam gas, shale gas, and tight gas, not to mention gas hydrates (After: Geoscience Australia: Unconventional Petroleum Resources; accessed 11.11.2022)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "unconventional petroleum resource"@en ;
+    skos:scopeNote "Oil shale resources represent thermally immature source rocks have not generated and expelled hydrocarbons. Oil/tar sands occur where conventional crude oil has failed to be trapped at depth and has migrated near to the surface and has become degraded, to produce a viscous, heavy-oil residue. Coal seam gas is extracted from coal seams (the most-developed unconventional-petroleum resource in Australia), shale gas from shales, in both cases where the natural gas remains within the source rocks, and tight gas is extracted from low-permeability reservoirs. The latter may be regionally distributed (for example, basin-centred gas), rather than accumulated in a readily-producible reservoir in a discrete structural closure, as in a conventional gas field (After: Geoscience Australia: Unconventional Petroleum Resources; accessed 11.11.2022)."@en .
+
+geof:PetroleumReservoir a skos:Concept ;
+    dcterms:references "Selley, R.C. & Sonnenberg, S.A., 2014: Elements of Petroleum Geology. Third edition, Academic Press. <https://www.elsevier.com/books/elements-of-petroleum-geology/selley/978-0-12-386031-6>"@en ;
+    dcterms:references "Petroleum reservoir. Wikipedia (accessed 17.11.2022). <https://en.wikipedia.org/wiki/Petroleum_reservoir>"@en ;
+    dcterms:references "Reservoir. AAPG WIKI (accessed 17.11.2022). <https://wiki.aapg.org/Reservoir>"@en ;
+    skos:broader geof:PetroleumResource ;
+    skos:related geof:ConventionalPetroleumResource ;
+    skos:related geof:UnconventionalPetroleumResource ;
+    skos:definition "A petroleum reservoir is a subsurface accumulation of hydrocarbons contained in porous and permeable or fractured rock units. Petroleum reservoirs are broadly classified as conventional and unconventional reservoirs. In conventional reservoirs, the naturally occurring hydrocarbons, such as crude oil and/or natural gas, are trapped by overlying rock formations with lower permeability (acting as a seal/cap rock that prevents their upward migration from buoyancy that cannot overcome the capillary forces of the seal/cap). Contrastingly, in unconventional reservoirs, the attendant rocks, although possessing high porosity, have low permeability. The latter feature/element retains the hydrocarbons in situ, precluding the necessity for a seal/cap rock for entrapment. Unconventional reservoirs differ from conventional petroleum reservoirs, in that, with the former, the (organic-rich) source rocks are also the reservoir rocks (After Wikipedia, accessed 17.11.2022)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "petroleum reservoir"@en ;
+    skos:scopeNote "All types of rock (igneous, sedimentary, metamorphic) can act as reservoir rocks if they can accommodate and drain hydrocarbons. Reservoir rocks mainly comprise sedimentary rocks (mostly sandstones and carbonates) because they generally have good primary porosity, although secondary (post-depositional) porosity can be effected, for example, by solution/leaching. Igneous and metamorphic rocks are also known to form a petroleum reservoir if they have secondary porosity from natural fracturing (After: AAPG Wiki, accessed 17.11.2022; also see: Selley & Sonnenberg, 2015)."@en .
+
+geof:ConventionalPetroleumReservoir a skos:Concept ;
+    skos:broader geof:PetroleumReservoir ;
+    skos:related geof:ConventionalPetroleumResource ;
+    skos:definition "Refer to definitions under Petroleum Reservoir."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "conventional petroleum reservoir"@en .
+
+geof:UnconventionalPetroleumReservoir a skos:Concept ;
+    skos:broader geof:PetroleumReservoir ;
+    skos:related geof:UnconventionalPetroleumResource ;
+    skos:definition "Refer to definitions under Petroleum Reservoir."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "unconventional petroleum reservoir"@en .
+
+geof:GeothermalEnergyResource a skos:Concept ; 
+    dcterms:references "Talebi, B., et al., 2014: An assessment of the geothermal energy potential of northern and eastern Queensland, Coastal Geothermal Energy Initiative. Queensland Geology 14. <https://gsq-horizon.s3-ap-southeast-2.amazonaws.com/QDEX/88826/cr_88826_1.pdf>"@en ;
+    skos:broader geof:GeoResourceAccumulation ;
+    skos:definition "Geothermal energy is heat contained within in the Earth that, globally, is generally sourced from volcanically-active regions, as is the case in New Zealand. In Australia, which lacks active volcanism, geothermal exploration has targeted areas with higher temperature at depth, namely radiogenic intrusives that generate anomalously high heat flow from the decay of elevated concentrations of radioactive uranium (U), thorium (Th) and potassium (K) isotopes. Geothermal energy can also be sourced from Hot Sedimentary Aquifer systems in sedimentary basins containing highly-permeable aquifers with temperatures in the range of ca. 120°C to 160°C. A prime and prevailing example is represented at Birdsville (southwest Queensland) by Australia’s first geothermal power plant, which has a gross generation capacity of 120 kilowatt electrical (kWe), drawing heat from aquifers in the Great Artesian Basin (Talebi et al., 2014)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "geothermal energy resource"@en .
+
+geof:QuarriesAndExtractiveResource a skos:Concept ;
+    skos:broader geof:GeoResourceAccumulation ;
+    skos:definition "Quarry materials, or extractive resources, embracing high-volume, low-value products, include sand, gravel, quarry rock, clay and soil, the economics of which depend on their proximity to markets and future markets, the latter involving the identification and protection from development of Key Resource Areas (KRAs), because of their importance to the continuing development of the State for the supply of vital construction materials when they are needed."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "quarries and extractive resource"@en .
+
+geof:GroundwaterResource a skos:Concept ;
+    dcterms:references "Geoscience Australia: What is Groundwater? <https://www.ga.gov.au/scientific-topics/water/groundwater/basics/what-is-groundwater>"@en ;
+    dcterms:references "USGS: Aquifers and Groundwater. <https://www.usgs.gov/special-topics/water-science-school/science/aquifers-and-groundwater>"@en ;
+    dcterms:references "USGS: Groundwater Flow and the Water Cycle. <https://www.usgs.gov/special-topics/water-science-school/science/groundwater-flow-and-water-cycle#overview>"@en ;
+    skos:broader geof:GeoResourceAccumulation ;
+    skos:definition "Economic or varyingly economic accumulations of water that have been derived from some of the precipitation that falls onto the Earth's surface and penetrates/recharges the ground where it both ‘accumulates’ and flows under gravity via pores and fractures in shallow, ‘unconfined’ variously porous and permeable sediments (although bounded by an underlying impermeable rock/sedimentary layer) or in deeper, variously porous and permeable rock units (where it is ‘confined’ above and below by impermeable rock layers/units). The hosting sediments/rocks are referred to as ‘aquifers’ when they permit the flow of groundwater from its recharge zone to its eventual discharge at springs, wetlands, lakes, rivers, etc. or its capture as a hydrogeologic resource from water bores/wells when it retains its freshwater character and lacks salinity (After the cited references, accessed 09.11.2022)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "groundwater georesource"@en .
+
+geof:Aquifer a skos:Concept ;
+    dcterms:references "Geoscience Australia: What is Groundwater? <https://www.ga.gov.au/scientific-topics/water/groundwater/basics/what-is-groundwater>"@en ;
+    dcterms:references "USGS: Aquifers and Groundwater. <https://www.usgs.gov/special-topics/water-science-school/science/aquifers-and-groundwater>"@en ;
+    dcterms:references "USGS: Groundwater Flow and the Water Cycle. <https://www.usgs.gov/special-topics/water-science-school/science/groundwater-flow-and-water-cycle#overview>"@en ;
+    skos:broader geof:GroundwaterResource ;
+    skos:definition "Aquifers host the subsurface groundwater that is derived from some of the precipitation that falls onto the Earth's surface, where it penetrates/recharges the ground, ‘accumulating’ and flowing under gravity via pores and fractures in hosting, shallow, ‘unconfined’ variously porous and permeable sediments (although bounded by an underlying impermeable rock/sedimentary layer) or in hosting, deeper, variously porous and permeable rock units (where it is ‘confined’ above and below by impermeable rock layers/units). Groundwater flows in the hosting aquifers at various rates from the recharge zones to the discharge zones at springs, wetlands, lakes, rivers, etc. or is captured as a hydrogeologic resource from water bores/wells (After the cited references, accessed 09.11.2022)."@en ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "aquifer"@en .
+   
+geof:GeoResourceAssociatedGeoFeature a skos:Concept ;
+    skos:related data:qldgeofeatures ;
+    # Nick, the above (skos:related data:qldgeofeatures ;) OK for basins, not individual rock units, etc.#
+    skos:definition "The geological feature, be it one or more, that is associated with a georesource accumulation. Geofeatures attendant to a georesource are exemplified by: (1) an aquifer in a lithostratigraphic unit; (2) a formation and a structural feature that have permitted the entrapment of petroleum; (3) an igneous rock unit or other type of rock unit that is an existing or future source for extractive/quarrying materials; (4) a rock unit embracing an ore deposit that is associated with stockworks/vein-swarm that together with the hosting country rock form a vein complex; (5) etc."@en ; #
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:prefLabel "georesource associated geofeature"@en .
+
 geof:GeologicalHeritageSite a skos:Concept ;
     skos:broader geof:GeologicallySignificantSite ;
     skos:definition "Geological Heritage Sites (formerly known as Geological Monuments) display geological features that are so outstanding or so rare that they form part of our natural heritage, requiring recognition, description and protection, for education, research and their geotourism potential. They show evidence of the geological processes that have occurred on Earth, and of the plants and animals that have lived on it. These sites include landforms, rock outcrops, river banks, sea cliffs and shore platforms, and are, in part, represented in road cuttings, mines, quarries and other excavations (Geological Society of Australia)."@en ;
@@ -596,7 +666,7 @@ geof:Geotrail a skos:Concept ;
 geof:Graben a skos:Concept ;
     dcterms:references <http://www.glossaryofgeology.org> ;
     skos:broader geof:StructuralFeature ;
-    skos:definition "An elongate trough or basin, bounded on both sides by high-angle normal faults that dip toward one another. It is a structural form that may or may not be geomorphologically expressed as a rift valley (Neuendorf et al., 2011)."@en ;
+    skos:definition "An elongate trough or basin, bounded on both sides by high-angle normal faults that dip toward one another. It is a structural form that may or may not be geomorphologically expressed as a rift valley (Neuendorf et al., 2011)."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfgbn" ;
@@ -701,21 +771,6 @@ geof:Klippe a skos:Concept ;
     skos:notation "gfklp" ;
     skos:prefLabel "klippe"@en .
 
-geof:LandformFeature a skos:Concept ;
-        dcterms:references "After and modified from: <https://en.wikipedia.org/wiki/Landform> (accessed 05.10.22)." ;
-        dcterms:references "After and modified from: <https://en.wikipedia.org/wiki/Geomorphology> (accessed 05.10.22)." ;
-        dcterms:references "After and modified from: <https://sciencing.com/common-landforms-8727172.html>  (accessed 05.10.22)." ;
-        dcterms:references "After and modified from: <https://examples.yourdictionary.com/examples-of-landforms.html> (accessed 05.10.22)." ;
-        dcterms:references "After and modified from: <https://oceanservice.noaa.gov/facts/bathymetry.html> (accessed 05.10.22)." ;
-        skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
-        skos:related geof:RegolithLandformUnit ;
-        skos:definition "Overall, any physical feature on the Earth’s surface (here excluding consideration of anthropogenic-landform features and natural-landform features on other planets) that is part of the terrain represents a landform, including: alluvial fans, braided channels, abyssal plains, atolls, beaches, cliffs, hills, mid-ocean ridges, volcanic arcs, wave-cut platforms, canyons, gullies, valleys, hoodoos, badlands, salt pans, etc., as well as all other surface bodies of water, such as rivers, lakes, marshes, glaciers and ice sheets."@en ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
-        skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-        skos:notation "gflfe" ;
-        skos:prefLabel "landform feature"@en ;
-        skos:scopeNote "Landforms are classified by physical attributes such as their form, location/shape, elevation, slope in the landscape (topography, bathymetry/submarine topography, respectively on land and under water), and by the processes that created them, embracing the science of geomorphology."@en .
-
 geof:LargeIgneousProvince a skos:Concept ;
     skos:altLabel "LIP"@en ;
     dcterms:references <http://www.glossaryofgeology.org> ;
@@ -788,7 +843,7 @@ geof:MineralProvince a skos:Concept ;
 geof:Monocline a skos:Concept ;
     dcterms:references <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
     skos:broader geof:StructuralFeature ;
-    skos:definition "A one-limbed flexure on either side of which the strata are horizontal or dip uniformly at low angles (Allaby, 2013)."@en ;
+    skos:definition "A one-limbed flexure on either side of which the strata are horizontal or dip uniformly at low angles (Allaby, 2013)."@en ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
     skos:notation "gfmnc" ;
@@ -1218,6 +1273,12 @@ dcterms:references "Kumpulainen (Editor), 2017: Guide for Geological Nomenclatur
     skos:notation "gftsu" ;
     skos:prefLabel "tectonostratigraphic rock unit"@en .
 
+<https://linked.data.gov.au/org/gsq> a owl:NamedIndividual,
+        sdo:Organization ;
+    sdo:email <mailto:geological_info@dnrme.qld.gov.au> ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+
 geof:DenudationalFeature a skos:Concept ;
     dcterms:references <https://doi.org/10.1080/11035897.2016.1178666> ;
     skos:broader geof:StructuralFeature ;
@@ -1282,11 +1343,28 @@ geof:StructuralFeature a skos:Concept ;
     skos:notation "gfstr" ;
     skos:prefLabel "structural feature"@en .
 
-geof:WaterBody a skos:Concept ;
-    dcterms:references <https://www.usgs.gov/special-topics/water-science-school/science/freshwater-lakes-and-rivers-and-water-cycle> ;
-    skos:broader geof:LandformFeature ;
-    skos:definition "A feature produced by the accumulation of water at surface. These features may be liquid water in the form of lakes, rivers, and streams, or as ice in the form of ice sheets and glaciers. Considered part of the set of geologic features due to their role in geological processes and due to their intersection and coverage of other geologic features and important topographical relationships."@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
-    skos:notation "gflwb" ;
-    skos:prefLabel "water body"@en .
+<https://linked.data.gov.au/def/geofeatures> a owl:NamedIndividual,
+        owl:Ontology,
+        skos:ConceptScheme,
+        prof:Profile ;
+    dcterms:contributor [ a owl:NamedIndividual,
+                sdo:Person ;
+            sdo:affiliation <https://linked.data.gov.au/org/gsq> ;
+            sdo:email <mailto:derek.hoy@dnrme.qld.gov.au> ;
+            sdo:identifier <mailto:derek.hoy@dnrme.qld.gov.au> ;
+            sdo:name "Derek Hoy" ],
+        <https://linked.data.gov.au/org/gsq> ;
+    dcterms:created "2020-01-23"^^xsd:date ;
+    dcterms:creator <https://orcid.org/0000-0001-5489-9590>,
+        <https://orcid.org/0000-0002-8742-7730> ;
+    dcterms:modified "2020-03-10"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    owl:imports <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/2004/02/skos/core> ;
+    owl:versionIRI <https://linked.data.gov.au/def/geofeatures/0.5> ;
+    owl:versionInfo "Most ontology content but not complete diagrammatic coverage." ;
+    skos:definition "This vocabulary lists types of geological features relevant to the duties of the Geological Survey of Queensland. It is automatically derived from GSQ's Geologic Features Ontology (https://linked.data.gov.au/def/geofeatures)"@en ;
+    skos:hasTopConcept <http://sweetontology.net/realmGeol/GeologicFeature> ;
+    skos:prefLabel "Geologic Feature Types"@en ;
+    prof:isProfileOf <http://sweetontology.net/realmGeol> ;
+    sdo:codeRepository <https://github.com/geological-survey-of-queensland/geologic-features-ont> .
