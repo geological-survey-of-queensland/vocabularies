@@ -12,7 +12,7 @@
     dcterms:modified "2022-05-12"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
-    skos:definition "The status of an individual site (e.g. mine, well) or single activity (e.g.survey) describing the current state within the lifecycle from proposed through operational through to abandonment. Lifecycle stages are commonly related to regulatory conditions administered by government agencies."@en ;
+    skos:definition "The status of an individual site (e.g., mine, well) or single activity (e.g., survey) describing the current state within the lifecycle from proposed through operational through to abandonment. Lifecycle stages are commonly related to regulatory conditions administered by government agencies."@en ;
     skos:scopeNote "Site status describes the lifecycle of a single discrete activity, Whereas the resource project lifecycle describes the collective lifecycle status of a body of work that typically consists of multiple activities and sites"@en ;
 
     skos:hasTopConcept ststs:abandoned,
@@ -32,19 +32,19 @@
 
 ststs:cased-and-suspended a skos:Concept ;
     skos:broader ststs:inactive ;
-    skos:definition "A well in which casing has been installed but is suspended and inactive pending installation of completion, monitoring, or other equipment."@en ;
+    skos:definition "A well in which casing has been installed, but is suspended and inactive pending installation of completion, monitoring or other equipment."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Cased And Suspended"@en .
 
 ststs:completed a skos:Concept ;
     skos:broader ststs:inactive ;
-    skos:definition "A well that has had all relevant casing, tubing, and completion equipment such as pumps installed, but is not in an active state of producing, injecting, or monitoring."@en ;
+    skos:definition "A well that has had all relevant casing, tubing and completion equipment such as pumps installed, but is not in an active state of producing, injecting or monitoring."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Completed"@en .
 
 ststs:monitoring a skos:Concept ;
     skos:broader ststs:active ;
-    skos:definition "A well that is actively monitoring reservoir, aquifer, or other geological parameters."@en ;
+    skos:definition "A well that is actively monitoring reservoir, aquifer or other geological parameters."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Monitoring"@en .
 
@@ -60,7 +60,7 @@ ststs:operational-non-prod a skos:Concept ;
         "Excavation"@en,
         "Preparation"@en ;
     skos:broader ststs:active ;
-    skos:definition "A site that is an active part of a project or operation that typically contributes to production but is not currently due to other activities. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease in which excavation is occuring after construction but prior to or between extraction phases."@en ;
+    skos:definition "A site that is an active part of a project or operation that typically contributes to production but is not currently due to other activities, such as a well undergoing routine maintenance that is not suspended, or a Mining Lease in which excavation is occuring after construction, but prior to, or between, extraction phases."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Operating Not Producing"@en .
 
@@ -68,13 +68,13 @@ ststs:operational-non-prod a skos:Concept ;
     skos:altLabel "Other Purpose"@en,
         "Secondary Operations"@en;
     skos:broader ststs:active ;
-    skos:definition "A site that is an active part of a project or operation but is not involved in resource extraction. Such as supporting secondary activities including resoure processing, site access, adminstration, or infrastructure. "@en ;
+    skos:definition "A site that is an active part of a project or operation, but is not involved in resource extraction, such as supporting secondary activities, including resoure processing, site access, adminstration or infrastructure. "@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Supporting Operations"@en .
 
 ststs:on-injection a skos:Concept ;
     skos:broader ststs:active ;
-    skos:definition "A well that is injecting fluids such as water or hydrocarbons into a reservoir for disposal or future production."@en ;
+    skos:definition "A well that is injecting fluids, such as water or hydrocarbons into a reservoir for disposal or future production."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "On Injection"@en .
 
@@ -83,13 +83,13 @@ ststs:on-production a skos:Concept ;
         "Mining"@en,
         "On Production"@en ;
     skos:broader ststs:active ;
-    skos:definition "A well that is producing hydrocarbons or other non-water resources, or a mine or quarry that is actively extracting coal, minerals, or other resources."@en ;
+    skos:definition "A well that is producing hydrocarbons or other non-water resources, or a mine or quarry that is actively extracting coal, minerals or other resources."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Producing"@en .
 
 ststs:plugged-and-abandoned a skos:Concept ;
     skos:broader ststs:abandoned ;
-    skos:definition "A borehole that has been abandoned without the intention and/or requirement to undertake further work. Petroleum wells must be abandoned as per the relevant Code of Practice. Petroleum wells are abandoned in two stages: sub-surface abandonmnet where the well is plugged with cement or another accepted plugging method, and surface abandonment where casing is cut and a vented plate or cap is installed at surface. Legislatively, a petroleum well is not abandoned until all aspects are completed including surface abandonment (cut and cap)."@en ;
+    skos:definition "A borehole that has been abandoned without the intention and/or requirement to undertake further work. Petroleum wells must be abandoned as per the relevant Code of Practice. Petroleum wells are abandoned in two stages: sub-surface abandonment where the well is plugged with cement or another accepted plugging method, and surface abandonment where casing is cut and a vented plate or cap is installed at surface. Legislatively, a petroleum well is not abandoned until all aspects are completed including surface abandonment (cut and cap)."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:altLabel "Capped and Abandoned"@en,
         "P&A"@en ;
@@ -127,13 +127,13 @@ ststs:suspended a skos:Concept ;
 
 ststs:never-used a skos:Concept ;
     skos:altLabel "Never Drilled"@en ;
-    skos:definition "A project that was once proposed but was never constructed and is no longer intended to be constructed."@en ;
+    skos:definition "A project that was once proposed, but was never constructed and is no longer intended to be constructed."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Never Used"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
 
 ststs:proposed a skos:Concept ;
-    skos:definition "A mine, quarry, or well that is intended but has not yet been constructed."@en ;
+    skos:definition "A mine, quarry or well that is intended, but has not yet been constructed."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Proposed"@en ;
     skos:topConceptOf <http://linked.data.gov.au/def/site-status> .
@@ -145,7 +145,7 @@ ststs:application a skos:Concept ;
     skos:broader ststs:proposed .
 
 ststs:approved a skos:Concept ;
-    skos:definition "A mine, quarry, or well that is intended and has had an application for activity approved, but has not yet commenced construction."@en ;
+    skos:definition "A mine, quarry or well that is intended and has had an application for activity approved, but has not yet commenced construction."@en ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Approved"@en ;
     skos:broader ststs:proposed .
@@ -158,7 +158,7 @@ ststs:unknown a skos:Concept ;
 
 ststs:construction a skos:Concept ;
     skos:altLabel "Drilling"@en ;
-    skos:definition "A mine, quarry, or well that is being constructed or drilled e.g. a well between spud date and rig release."@en ;
+    skos:definition "A mine, quarry or well that is being constructed or drilled, e.g. a well between spud date and rig release."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/construction> ;
     skos:inScheme <http://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Construction"@en ;
