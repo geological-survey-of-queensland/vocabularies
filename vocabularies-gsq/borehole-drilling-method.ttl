@@ -1,249 +1,346 @@
-@prefix bdm: <http://linked.data.gov.au/def/borehole-drilling-method/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX bdm: <http://linked.data.gov.au/def/borehole-drilling-method/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://linked.data.gov.au/def/borehole-drilling-method> a owl:Ontology , skos:ConceptScheme ;
-    dcterms:created "2020-02-04T12:45:20"^^xsd:dateTime ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-02-04T12:45:20"^^xsd:dateTime ;
+bdm:cable-tool-drilling
+    a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    skos:definition "The description of methods used to drill a borehole."@en ;
-    skos:hasTopConcept bdm:air-core,
-        bdm:auger,
-        bdm:box-core,
-        bdm:core-drilling,
-        bdm:hydraulic-rotary-drilling,
-        bdm:percussion-drilling,
-        bdm:probe,
-        bdm:sidewall-core,
-        bdm:sonic ;
-    skos:prefLabel "Borehole Drilling Method"@en .
-
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
-
-bdm:cable-tool-drilling a skos:Concept ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:percussion-drilling ;
     skos:definition "A percussion drilling method that uses a heavy drilling tool that is raised and lowered with enough force to pulverise the rock, with the debris removed by a bailer. Although this drilling method has largely been supplanted in recent years by other, faster drilling techniques, it is still the most practicable drilling method for large diameter, deep bedrock wells, and in widespread use for small rural water supply wells. The impact of the drill bit fractures the rock and in many shale rock situations increases the water flow into a well over rotary. Many large diameter water supply wells, especially deep wells completed in bedrock aquifers, were completed using this drilling method."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Cable Tool Drilling"@en .
+    skos:prefLabel "Cable Tool Drilling"@en ;
+.
 
-bdm:cone-penetrometer-test-probe a skos:Concept ;
+bdm:cone-penetrometer-test-probe
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:probe ;
     skos:definition "A metal rod with an instrumented cone tip pushed by hammering or hydraulically into weakly consolidated ground at a controlled rate. Tip resistance, sleeve friction and water pressure are commonly measured parameters. Includes static and dynamic cone penetration tests."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Cone Penetrometer Test Probe"@en .
+    skos:prefLabel "Cone Penetrometer Test Probe"@en ;
+.
 
-bdm:conventional-core a skos:Concept ;
+bdm:conventional-core
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:diamond-core ;
     skos:definition "Core drilling using a diamond or tungsten carbide bit and a core barrel with fibreglass inner sleeves. To retrieve the core samples, the complete rod string and core barrel assembly has to be removed from the hole. Conventional coring is much more time consuming than wireline coring, as each rod has to be removed from the hole individually, then lowered back into the hole to continue to advance the boring and collect the next core sample. Used in the oil industry."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Conventional Core"@en .
+    skos:prefLabel "Conventional Core"@en ;
+.
 
-bdm:delft-sampler a skos:Concept ;
+bdm:delft-sampler
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:direct-push ;
     skos:definition "The Delft continuous sampler, developed by GeoDelft, is used for obtaining high quality samples within very soft cohesive soils. The sampling system is available in two sizes to take continuous samples, 29 or 66mm in diameter, normally with a maximum penetration of about 18m. A steel outer tube is pushed into the ground using standard CPT (cone penetrometer test) equipment and the soil sample core is fed into a thin-walled plastic inner tube as the sampler advances. After extraction, the samples are cut into 1 m lengths and placed in purpose-made cases, being retained in the plastic tubes."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Delft Sampler"@en .
+    skos:prefLabel "Delft Sampler"@en ;
+.
 
-bdm:geoprobe-core a skos:Concept ;
+bdm:geoprobe-core
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:direct-push ;
     skos:definition "A proprietary type of direct push drilling. High quality core is extracted by hydraulic power. Used in rough terrain, soft sand, mud, shallow water, or tight, congested areas. Long high quality cores."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Geoprobe Core"@en .
+    skos:prefLabel "Geoprobe Core"@en ;
+.
 
-bdm:gravity-core a skos:Concept ;
+bdm:gravity-core
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:direct-push ;
     skos:definition "Used only where short cores are required. Core barrel is gravity forced into poorly consolidated material, producing near surface high quality core."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Gravity Core"@en .
+    skos:prefLabel "Gravity Core"@en ;
+.
 
-bdm:hand-auger a skos:Concept ;
+bdm:hand-auger
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:auger ;
     skos:definition "A hand auger consists of extendable steel rods, rotated by hand. Various steel augers can be attached at the bottom end of the drill rods. The augers are rotated into the ground until they are filled, and then lifted out of the borehole to be emptied."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Hand Auger"@en .
+    skos:prefLabel "Hand Auger"@en ;
+.
 
-bdm:kastern-core a skos:Concept ;
+bdm:kastern-core
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:direct-push ;
     skos:definition "Large volume, relatively undisturbed sediment core (~3m long) from a Kasten Corer. The corer is constructed of stainless steel and is square in cross-section. A weight of several hundred kilograms on top of the corer pushes it 2-3 metres into the seabed."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Kastern Core"@en .
+    skos:prefLabel "Kastern Core"@en ;
+.
 
-bdm:mackereth-core a skos:Concept ;
+bdm:mackereth-core
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:direct-push ;
     skos:definition "The Mackereth corer (Mackereth, 1958; Smith, 1959) is a pneumatic device that consists of a cylindrical aluminum chamber ~1.2m long and 0.5m in diameter. The apparatus is lowered to the lake floor on a rope, and air hoses connect the chamber to the vessel at the water surface. Compressed air is used to pump the water out of the chamber and then to force the inner core barrel downward through the chamber and into the sediment. The method can recover single-drive moderate (up to 12 m) cores from lakes of diverse depths. Mackereth cores can be deployed on virtually any small craft and can be used in water depths up to 100 metres."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Mackereth Core"@en .
+    skos:prefLabel "Mackereth Core"@en ;
+.
 
-bdm:mackintosh-probe a skos:Concept ;
+bdm:mackintosh-probe
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:probe ;
     skos:definition "The Mackintosh tool consists of rods which can be threaded together with barrel connectors and which are normally fitted with a driving point at their base, and a light hand-operated driving hammer at their top. The tool provides a very economical method of determining the thickness of soft deposits such as peat. The driving point is streamlined in longitudinal section with a maximum diameter of 27mm. The drive hammer has a total weight of about 4kg. The rods are 1.2m long and 12mm diameter. The device is often used to provide a depth profile by driving the point and rods into the ground with equal blows of the full drop height available from the hammer: the number of blows for each 150mm of penetration is recorded."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Mackintosh Probe"@en .
+    skos:prefLabel "Mackintosh Probe"@en ;
+.
 
-bdm:piston-core a skos:Concept ;
+bdm:piston-core
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:direct-push ;
     skos:definition "A drilling method that uses a piston to drive the core barrel. Produces high quality long cores."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Piston Core"@en .
+    skos:prefLabel "Piston Core"@en ;
+.
 
-bdm:power-auger a skos:Concept ;
+bdm:power-auger
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:auger ;
     skos:definition "Mechanically-driven auger drilling, typically used in hard ground or for holes that are too wide or deep for hand auger drilling. Auger drilling is done with a helical screw which is driven into the ground with rotation; the earth is lifted up the borehole by the blade of the screw. Small power augers can be portable or mounted on the back of a utility truck, with larger auger rigs used for construction, like sinking piles for bridge foundations or mine shafts."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Power Auger"@en .
+    skos:prefLabel "Power Auger"@en ;
+.
 
-bdm:rab-drilling a skos:Concept ;
+bdm:rab-drilling
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:percussion-drilling ;
     skos:definition "Percussion rotary air blast drilling (RAB) drilling is an 'open hole' rotary percussion drilling method where rock or sediment chips are derived by using a drag bit or pneumatic reciprocating piston-driven hammer, and the cuttings are blown up the outside of the drill rods by air, or a combination of air and foam, and collected at the surface. It is used most frequently in the mineral exploration industry."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Rab Drilling"@en .
+    skos:prefLabel "Rab Drilling"@en ;
+.
 
-bdm:reverse-circulation-drilling a skos:Concept ;
+bdm:reverse-circulation-drilling
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:percussion-drilling ;
     skos:definition "The drilling mechanism for reverse circulation (RC) drilling is a pneumatic reciprocating piston known as a 'hammer' driving a tungsten-steel drill bit. Compressed air passes down to the drill bit along the annular space between an outer and inner drill rod to return to the surface carrying drill cuttings. This is the reverse of the air path employed in normal open hole rotary percussion drilling (including RAB drilling). At the top of the hole, the air and drill cuttings are passed through a cyclone to collect the cuttings for sampling. The RC drilling technique prevents the upcoming sample from being contaminated with material from the wall of the hole above the sampling depth. RC drilling utilises much larger rigs and machinery and depths of up to 500 metres are routinely achieved."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Reverse Circulation Drilling"@en .
+    skos:prefLabel "Reverse Circulation Drilling"@en ;
+.
 
-bdm:rotary-hammer-drilling a skos:Concept ;
+bdm:rotary-hammer-drilling
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:percussion-drilling ;
     skos:definition "A percussion drilling method using a cutting tool powered by compressed air that creates a rapid percussion effect coupled with rotary action to drill hard rocks."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Rotary Hammer Drilling"@en .
+    skos:prefLabel "Rotary Hammer Drilling"@en ;
+.
 
-bdm:sidewall-core-bullet a skos:Concept ;
+bdm:sidewall-core-bullet
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:sidewall-core ;
     skos:definition "Percussion cores are taken by firing hollow bullets into the formation. The bullets are attached to the tool by fasteners, and are retrieved, along with the core inside, by pulling up the tool and the fasteners. Percussion coring tools typically hold 20 to 30 bullets, but two or three tools can be combined on one run in the hole."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Sidewall Core Bullet"@en .
+    skos:prefLabel "Sidewall Core Bullet"@en ;
+.
 
-bdm:sidewall-core-mechanical a skos:Concept ;
+bdm:sidewall-core-mechanical
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:sidewall-core ;
     skos:definition "Mechanical tools use hollow rotary drills to cut and then pull out core plugs. Up to 75 plugs can be recovered on one run. With full recovery, cores from typical percussion tools are 2.5 cm in diameter by 4.4 cm long, while those from mechanical tools are 2.3 cm in diameter by 5 cm long. The latter are also known as rotary sidewall cores."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Sidewall Core Mechanical"@en .
+    skos:prefLabel "Sidewall Core Mechanical"@en ;
+.
 
-bdm:vibrocore a skos:Concept ;
+bdm:vibrocore
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:core-drilling ;
     skos:definition "A core tube is attached to a source of mechanical vibration (the power head) and lowered into sediment. The vibrations provide energy for rearranging the particles within the sediment in such a way that the core tube penetrates under the static weight of the vibracoring apparatus. Samples include stiff and stony clays, soft rock and sands, and saturated sediments which can not be sampled using gravity or piston corers. Also know as VIBRA."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Vibrocore"@en .
+    skos:prefLabel "Vibrocore"@en ;
+.
 
-bdm:window-sampler a skos:Concept ;
+bdm:window-sampler
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:direct-push ;
     skos:definition "Window or windowless sampling uses either drop weight or hydraulic hammer to drive 1m or 2m long sample tubes into the ground. The sample tubes have open slots or windows along their length to allow for logging and sampling. In windowless sampling, the sample tube contains a liner which retains the sample and reduces potential for cross contamination of soils during the drilling process. Window or windowless sampling is used to bore through shallow soft soils to investigate the substrata in order to gain a profile of the ground conditions and to facilitate soil sampling for chemical and geotechnical analysis."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Window Sampler"@en .
+    skos:prefLabel "Window Sampler"@en ;
+.
 
-bdm:diamond-core a skos:Concept ;
-    skos:broader bdm:core-drilling ;
-    skos:definition "Diamond core drilling (or diamond drilling) utilizes an annular diamond- or tungsten-carbide-impregnated drill bit attached to the end of hollow drill rods to cut a cylindrical core of solid rock. The diamonds used are fine to microfine industrial grade diamonds. They are set within a matrix of varying hardness, from brass to high-grade steel. Matrix hardness, diamond size and dosing can be varied according to the rock which must be cut. Holes within the bit allow water to be delivered to the cutting face. This provides three essential functions: lubrication, cooling, and removal of drill cuttings from the hole. Core samples are retrieved via the use of a core tube, a hollow tube placed inside the rod string and pumped with water until it locks into the core barrel. As the core is drilled, the core barrel slides over the core as it is cut. An 'overshot' attached to the end of the winch cable is lowered inside the rod string and locks on to the backend (aka head assembly), located on the top end of the core barrel. The winch is retracted, pulling the core tube to the surface. The core does not drop out of the inside of the core tube when lifted because either a split ring core lifter or basket retainer allow the core to move into, but not back out of the tube."@en ;
+bdm:air-core
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Diamond Core"@en .
-
-bdm:air-core a skos:Concept ;
     skos:definition "Air core drilling and related methods use hardened steel or tungsten blades to bore a hole into unconsolidated ground. The drill bit has three blades arranged around the bit head, which cut the unconsolidated ground. The rods are hollow and contain an inner tube which sits inside the hollow outer rod barrel. The drill cuttings are removed by injection of compressed air into the hole via the annular area between the innertube and the drill rod. The cuttings are then blown back to surface up the inner tube where they pass through the sample separating system and are collected if needed. Drilling continues with the addition of rods to the top of the drill string. Air core drilling can occasionally produce small chunks of cored rock."@en ;
     skos:exactMatch <http://vocabs.ands.org.au/repository/api/lda/ga/borehole-drilling-method/v0-1/resource?uri=http://resource.geosciml.org/classifier/cgi/boreholedrillingmethod/air_core> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:prefLabel "Air Core"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> ;
+.
 
-bdm:box-core a skos:Concept ;
+bdm:box-core
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:definition "A sampling method that obtains a large volume or large surface area core with shallow penetration and minimum disturbance. Commonly uses a double spade system."@en ;
     skos:exactMatch <http://vocabs.ands.org.au/repository/api/lda/ga/borehole-drilling-method/v0-1/resource?uri=http://resource.geosciml.org/classifier/cgi/boreholedrillingmethod/box_core> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:prefLabel "Box Core"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> ;
+.
 
-bdm:hydraulic-rotary-drilling a skos:Concept ;
+bdm:diamond-core
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
+    skos:broader bdm:core-drilling ;
+    skos:definition "Diamond core drilling (or diamond drilling) utilizes an annular diamond- or tungsten-carbide-impregnated drill bit attached to the end of hollow drill rods to cut a cylindrical core of solid rock. The diamonds used are fine to microfine industrial grade diamonds. They are set within a matrix of varying hardness, from brass to high-grade steel. Matrix hardness, diamond size and dosing can be varied according to the rock which must be cut. Holes within the bit allow water to be delivered to the cutting face. This provides three essential functions: lubrication, cooling, and removal of drill cuttings from the hole. Core samples are retrieved via the use of a core tube, a hollow tube placed inside the rod string and pumped with water until it locks into the core barrel. As the core is drilled, the core barrel slides over the core as it is cut. An 'overshot' attached to the end of the winch cable is lowered inside the rod string and locks on to the backend (aka head assembly), located on the top end of the core barrel. The winch is retracted, pulling the core tube to the surface. The core does not drop out of the inside of the core tube when lifted because either a split ring core lifter or basket retainer allow the core to move into, but not back out of the tube."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
+    skos:prefLabel "Diamond Core"@en ;
+.
+
+bdm:hydraulic-rotary-drilling
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:definition "A drilling method using a drill stem equipped with a bit that is rotated to cut and grind the rock with a fluid pumped down the stem to force cuttings up through the annular space between the stem and the wall of the hole. Oil well drilling of this type utilises tri-cone roller, carbide embedded, fixed-cutter diamond, or diamond-impregnated drill bits. This is preferred because there is no need to return intact samples to surface for assay as the objective is to reach a formation containing oil or natural gas. Sizable machinery is used, enabling depths of several kilometres to be penetrated. Rotating hollow drill pipes carry down bentonite and barite infused drilling muds to lubricate, cool, and clean the drilling bit, control downhole pressures, stabilize the wall of the borehole and remove drill cuttings."@en ;
     skos:exactMatch <http://vocabs.ands.org.au/repository/api/lda/ga/borehole-drilling-method/v0-1/resource?uri=http://resource.geosciml.org/classifier/cgi/boreholedrillingmethod/hydraulic_rotary_drilling> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:prefLabel "Hydraulic Rotary Drilling"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> ;
+.
 
-bdm:sonic a skos:Concept ;
+bdm:sonic
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:definition "A sonic or vibratory drill head works by sending high frequency resonant vibrations down the drill string to the drill bit, while the operator controls these frequencies to suit the specific conditions of the soil/rock geology. Vibrations may also be generated within the drill head. The frequency is generally between 50 and 180 hertz (cycles per second) and can be varied by the operator. Resonance magnifies the amplitude of the drill bit, which fluidizes the soil particles at the bit face, allowing for fast and easy penetration through most geological formations. An internal spring system isolates these vibrational forces from the rest of the drill rig."@en ;
     skos:exactMatch <http://vocabs.ands.org.au/repository/api/lda/ga/borehole-drilling-method/v0-1/resource?uri=http://resource.geosciml.org/classifier/cgi/boreholedrillingmethod/sonic> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:prefLabel "Sonic"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> ;
+.
 
-bdm:auger a skos:Concept ;
+<http://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+bdm:auger
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:definition "Auger drilling is done with a helical screw which is driven into the ground with rotation; the earth is lifted up the borehole by the blade of the screw. Auger drills may be either rotated by hand or mechanically driven. Hollow stem auger drilling is used for softer ground such as swamps where the hole will not stay open by itself for environmental drilling, geotechnical drilling, soil engineering and geochemistry reconnaissance work in exploration for mineral deposits. Solid flight augers/bucket augers are used in harder ground construction drilling. In some cases, mine shafts are dug with auger drills. Small augers can be mounted on the back of a utility truck, with large augers used for sinking piles for bridge foundations."@en ;
     skos:exactMatch <http://vocabs.ands.org.au/repository/api/lda/ga/borehole-drilling-method/v0-1/resource?uri=http://resource.geosciml.org/classifier/cgi/boreholedrillingmethod/auger> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:prefLabel "Auger"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> ;
+.
 
-bdm:probe a skos:Concept ;
+bdm:probe
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:definition "An object (eg, penetrometer) inserted into the substrate that records material properties without taking physical samples."@en ;
     skos:exactMatch <http://vocabs.ands.org.au/repository/api/lda/ga/borehole-drilling-method/v0-1/resource?uri=http://resource.geosciml.org/classifier/cgi/boreholedrillingmethod/probe> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:prefLabel "Probe"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> ;
+.
 
-bdm:sidewall-core a skos:Concept ;
+bdm:sidewall-core
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:definition "A method to extract a core or plug from the sidewall of a borehole."@en ;
     skos:exactMatch <http://vocabs.ands.org.au/repository/api/lda/ga/borehole-drilling-method/v0-1/resource?uri=http://resource.geosciml.org/classifier/cgi/boreholedrillingmethod/sidewall_core> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:prefLabel "Sidewall Core"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> ;
+.
 
-bdm:core-drilling a skos:Concept ;
+bdm:core-drilling
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:definition "A core of sediment, soil, or rock is derived by an unspecified core drilling method."@en ;
     skos:exactMatch <http://vocabs.ands.org.au/repository/api/lda/ga/borehole-drilling-method/v0-1/resource?uri=http://resource.geosciml.org/classifier/cgi/boreholedrillingmethod/core_drilling> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:prefLabel "Core Drilling"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> ;
+.
 
-bdm:percussion-drilling a skos:Concept ;
+bdm:percussion-drilling
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:definition "A drilling method whereby rock or sediment chips or fragments (cuttings) are derived by use of a percussion (hammer) method, with or without rotary action."@en ;
     skos:exactMatch <http://vocabs.ands.org.au/repository/api/lda/ga/borehole-drilling-method/v0-1/resource?uri=http://resource.geosciml.org/classifier/cgi/boreholedrillingmethod/percussion_drilling> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:prefLabel "Percussion Drilling"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> .
+    skos:topConceptOf <http://linked.data.gov.au/def/borehole-drilling-method> ;
+.
 
-bdm:direct-push a skos:Concept ;
+bdm:direct-push
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:broader bdm:core-drilling ;
     skos:definition "Direct push technology includes several types of drilling rigs and drilling equipment which advances a drill string by pushing or hammering without rotating the drill string. Direct push rigs include both cone penetration testing rigs and direct push sampling rigs such as a PowerProbe or Geoprobe. Direct push rigs typically are limited to drilling in unconsolidated soil materials and very soft rock. Direct push drilling rigs use hydraulic cylinders and a hydraulic hammer in advancing a hollow core sampler, typically no longer than 2 metres, to gather soil and groundwater samples. The core pipe has a valve on top that is used to create a vacuum at the top of the core when pulling the core out of the sediment. The method can be used in up to 5m of water."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/borehole-drilling-method> ;
     skos:inScheme <http://linked.data.gov.au/def/borehole-drilling-method> ;
-    skos:prefLabel "Direct Push"@en .
+    skos:prefLabel "Direct Push"@en ;
+.
+
+<http://linked.data.gov.au/def/borehole-drilling-method>
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2020-02-04T12:45:20"^^xsd:dateTime ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2020-02-04T12:45:20"^^xsd:dateTime ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    skos:definition "The description of methods used to drill a borehole."@en ;
+    skos:hasTopConcept
+        bdm:air-core ,
+        bdm:auger ,
+        bdm:box-core ,
+        bdm:core-drilling ,
+        bdm:hydraulic-rotary-drilling ,
+        bdm:percussion-drilling ,
+        bdm:probe ,
+        bdm:sidewall-core ,
+        bdm:sonic ;
+    skos:prefLabel "Borehole Drilling Method"@en ;
+.
+
