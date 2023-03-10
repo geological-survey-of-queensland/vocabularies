@@ -1,123 +1,144 @@
-@prefix qgorg: <https://linked.data.gov.au/def/qg-agent/> .
-@prefix qgsite: <https://linked.data.gov.au/def/qg-sites/> .
-@prefix org: <http://www.w3.org/ns/org#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <https://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
- 
-@base <https://linked.data.gov.au/def/qg-agent> .
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX qgorg: <https://linked.data.gov.au/def/qg-agent/>
+PREFIX qgsite: <https://linked.data.gov.au/def/qg-sites/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-
-<https://linked.data.gov.au/def/qg-agent> a owl:Ontology , skos:ConceptScheme ;
-      owl:imports <http://www.w3.org/2006/vcard/ns> ,
-         org: ,
-         <http://www.w3.org/ns/prov-o#> ;
-      dcterms:creator <https://linked.data.gov.au/org/des> ;
-      dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
-      dcterms:created "2020-05-21"^^xsd:date ;
-      dcterms:modified "2021-06-30"^^xsd:date ;
-      dcterms:title "Queensland Government organisations and agencies"@en ;
-      skos:prefLabel "Queensland Government Organisations"@en ;
-      skos:definition "A list of Queensland Government organisations which may include some departmental divisions (sub-organisations)"@en ;
-      rdfs:comment "RDF graph of Queensland Government organisations (departments) which may include some of the departmental divisions, used as an initial starting point for the DES Data Catalogue. Not a full organisational hierarchy but limited to higher levels which are useful to identify."@en ;
-      dcterms:source <https://www.qld.gov.au/about/how-government-works/government-responsibilities> ;
-      skos:hasTopConcept 
-          <https://linked.data.gov.au/def/qg-agent/DES> ,
-          <https://linked.data.gov.au/def/qg-agent/DNRME> ,
-          <https://linked.data.gov.au/def/qg-agent/DOR> ;
+qgorg:11338
+    a
+        owl:NamedIndividual ,
+        skos:Concept ,
+        org:OrganizationalUnit ;
+    dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
+    skos:altLabel "Science Delivery and Knowledge"@en ;
+    skos:broader qgorg:10157 ;
+    skos:definition "Science Delivery and Knowledge"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
+    skos:prefLabel "Science Delivery & Knowledge"@en ;
+    org:hasPrimarySite qgsite:Ecosciences ;
+    org:hasSite qgsite:Ecosciences ;
+    org:unitOf qgorg:10157 ;
 .
 
-<https://linked.data.gov.au/org/des>  
-    a sdo:Organization ;
-    sdo:name "Department of Environment and Science"@en ;
-    sdo:url <https://www.des.qld.gov.au/> .
-
-<https://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland"@en ;
-    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
-    
-<https://linked.data.gov.au/def/qg-agent/DES> a owl:NamedIndividual ,
-              org:FormalOrganization ,
-              prov:Organization ,
-              skos:Concept ;
-     org:hasPrimarySite qgsite:400GeorgeSt ;
-     org:hasSite qgsite:Ecosciences ;
-     skos:prefLabel "Department of Environment and Science"@en ;
-     skos:definition "Department of Environment and Science"@en ;
-     skos:altLabel "DES"@en ;
-     skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+qgorg:11339
+    a
+        owl:NamedIndividual ,
+        skos:Concept ,
+        org:OrganizationalUnit ;
+    dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
-     skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
-     skos:exactMatch <https://linked.data.gov.au/org/des> .
-
-
-<https://linked.data.gov.au/def/qg-agent/10157> a owl:NamedIndividual ,
-                    org:OrganizationalUnit ,
-                    skos:Concept ;
-           org:hasSite qgsite:Ecosciences ;
-           org:unitOf qgorg:DES ;
-           skos:broader qgorg:DES ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
-           skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
-           skos:altLabel "Science and Technology Division"@en ;
-           skos:prefLabel "Science and Technology"@en ;
-           skos:definition "Science and Technology"@en .
-
-
-
-<https://linked.data.gov.au/def/qg-agent/11338> a owl:NamedIndividual ,
-                    org:OrganizationalUnit ,
-                    skos:Concept ;
-           org:hasPrimarySite qgsite:Ecosciences ;
-           org:hasSite qgsite:Ecosciences ;
-           org:unitOf qgorg:10157 ;
-           skos:broader qgorg:10157 ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
-           skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
-           skos:definition "Science Delivery and Knowledge"@en ;
-           skos:altLabel "Science Delivery and Knowledge"@en ;
-           skos:prefLabel "Science Delivery & Knowledge"@en .
-
-<https://linked.data.gov.au/def/qg-agent/11339> a owl:NamedIndividual ,
-                    org:OrganizationalUnit  ,
-                    skos:Concept ;
-           org:hasSite qgsite:Ecosciences ;
-           org:unitOf qgorg:10157 ;
-           skos:broader qgorg:10157 ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
-           skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
-           skos:definition "Science Strategy and Partnerships"@en ;
-           skos:altLabel "Science Strategy and Partnerships"@en ;
-           skos:prefLabel "Science Strategy & Partnerships"@en .
-
-<https://linked.data.gov.au/def/qg-agent/DNRME> a owl:NamedIndividual ,
-                org:FormalOrganization ,
-                prov:Organization ,
-                skos:Concept ;
-    skos:prefLabel "Department of Natural Resources, Mines and Energy"@en ;
-    skos:definition "Department of Natural Resources, Mines and Energy"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
+    skos:altLabel "Science Strategy and Partnerships"@en ;
+    skos:broader qgorg:10157 ;
+    skos:definition "Science Strategy and Partnerships"@en ;
     skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
-    skos:altLabel "DNRME"@en .
+    skos:prefLabel "Science Strategy & Partnerships"@en ;
+    org:hasSite qgsite:Ecosciences ;
+    org:unitOf qgorg:10157 ;
+.
 
-<https://linked.data.gov.au/def/qg-agent/DOR> a owl:NamedIndividual ,
-                org:FormalOrganization ,
-                prov:Organization  ,
-                skos:Concept ;
-    skos:prefLabel "Department of Resources"@en ;
-    skos:definition "Department of Resources"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+qgorg:DOR
+    a
+        owl:NamedIndividual ,
+        skos:Concept ,
+        org:FormalOrganization ,
+        prov:Organization ;
+    dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
-    skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
     skos:altLabel "Resources"@en ;
-    org:resultedFrom qgorg:DNRME .
+    skos:definition "Department of Resources"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
+    skos:prefLabel "Department of Resources"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+    org:resultedFrom qgorg:DNRME ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+qgorg:DNRME
+    a
+        owl:NamedIndividual ,
+        skos:Concept ,
+        org:FormalOrganization ,
+        prov:Organization ;
+    dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
+    skos:altLabel "DNRME"@en ;
+    skos:definition "Department of Natural Resources, Mines and Energy"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
+    skos:prefLabel "Department of Natural Resources, Mines and Energy"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+.
+
+<https://linked.data.gov.au/org/des>
+    a sdo:Organization ;
+    sdo:name "Department of Environment and Science" ;
+    sdo:url "https://www.des.qld.gov.au/"^^xsd:anyURI ;
+.
+
+qgorg:DES
+    a
+        owl:NamedIndividual ,
+        skos:Concept ,
+        org:FormalOrganization ,
+        prov:Organization ;
+    dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
+    skos:altLabel "DES"@en ;
+    skos:definition "Department of Environment and Science"@en ;
+    skos:exactMatch <https://linked.data.gov.au/org/des> ;
+    skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
+    skos:prefLabel "Department of Environment and Science"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+    org:hasPrimarySite qgsite:400GeorgeSt ;
+    org:hasSite qgsite:Ecosciences ;
+.
+
+qgorg:10157
+    a
+        owl:NamedIndividual ,
+        skos:Concept ,
+        org:OrganizationalUnit ;
+    dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
+    skos:altLabel "Science and Technology Division"@en ;
+    skos:broader qgorg:DES ;
+    skos:definition "Science and Technology"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
+    skos:prefLabel "Science and Technology"@en ;
+    org:hasSite qgsite:Ecosciences ;
+    org:unitOf qgorg:DES ;
+.
+
+<https://linked.data.gov.au/def/qg-agent>
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2020-05-21"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/des> ;
+    dcterms:modified "2023-03-10"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
+    dcterms:title "Queensland Government organisations and agencies"@en ;
+    rdfs:comment "RDF graph of Queensland Government organisations (departments) which may include some of the departmental divisions, used as an initial starting point for the DES Data Catalogue. Not a full organisational hierarchy but limited to higher levels which are useful to identify."@en ;
+    owl:imports
+        <http://www.w3.org/2006/vcard/ns> ,
+        org: ,
+        <http://www.w3.org/ns/prov-o#> ;
+    skos:definition "A list of Queensland Government organisations which may include some departmental divisions (sub-organisations)"@en ;
+    skos:hasTopConcept
+        qgorg:DES ,
+        qgorg:DNRME ,
+        qgorg:DOR ;
+    skos:prefLabel "Queensland Government Organisations"@en ;
+.
+
