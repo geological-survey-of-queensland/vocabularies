@@ -1,332 +1,405 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix greg: <http://www.w3.org/ns/time/gregorian/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX greg: <http://www.w3.org/ns/time/gregorian/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://www.w3.org/ns/time/gregorian>
-  a skos:ConceptScheme , owl:Ontology ;
-  dcterms:created "2017-01-20"^^xsd:date ;
-  dcterms:creator <http://orcid.org/0000-0002-3884-3420> ;
-  dcterms:modified "2022-02-03"^^xsd:date ; 
-  dcterms:publisher <http://linked.data.gov.au/org/w3c> ;
-  skos:definition "The set of months-of-the-year from the Gregorian calendar."@en ;
-  skos:prefLabel "Gregorian Months"@en ;
-  owl:imports <http://www.w3.org/2006/time> , <http://www.w3.org/2004/02/skos/core> ;
-  skos:hasTopConcept
-    greg:January ,
-    greg:February ,
-    greg:March ,
-    greg:April ,
-    greg:May ,
-    greg:June ,
-    greg:July ,
-    greg:August ,
-    greg:September ,
-    greg:October ,
-    greg:November ,
-    greg:December ;
+<http://www.w3.org>
+    a sdo:Organization ;
+    sdo:name "World Wide Web Consortium" ;
+    sdo:url "http://www.w3.org"^^xsd:anyURI ;
 .
-<http://linked.data.gov.au/org/w3c> a sdo:Organization ;
+
+<http://linked.data.gov.au/org/csiro>
+    a sdo:Organization ;
+    sdo:name "CSIRO" ;
+    sdo:url "http://www.csiro.au"^^xsd:anyURI ;
+.
+
+<http://linked.data.gov.au/org/w3c>
     a sdo:Organization ;
     sdo:name "World Wide Web Consortium" ;
     sdo:url "http://www.iso.org"^^xsd:anyURI ;
 .
+
 <http://orcid.org/0000-0002-8742-7730>
-  a sdo:Person ;
-  sdo:name "Nicholas J. Car" ;
-  sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
-  sdo:affiliation <http://surroundaustralia.com> ;
-  sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+    a sdo:Person ;
+    sdo:affiliation <http://surroundaustralia.com> ;
+    sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
+    sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+    sdo:name "Nicholas J. Car" ;
 .
+
 <http://surroundaustralia.com>
-  a sdo:Organization ;
-  sdo:name "SURROUND Australia Pty Ltd" ;
-  sdo:url "http://surroundaustralia.com"^^xsd:anyURI ;
+    a sdo:Organization ;
+    sdo:name "SURROUND Australia Pty Ltd" ;
+    sdo:url "http://surroundaustralia.com"^^xsd:anyURI ;
 .
-<http://orcid.org/0000-0002-3884-3420>
-  a sdo:Person ;
-  sdo:name "Simon J.D. Cox" ;
-  sdo:email <mailto:simon.cox@csiro.au> ;
-  sdo:affiliation <http://linked.data.gov.au/org/csiro> ;
-  sdo:identifier <http://orcid.org/0000-0002-3884-3420> ;
-.
-<http://linked.data.gov.au/org/csiro>
-  a sdo:Organization ;
-  sdo:name "CSIRO" ;
-  sdo:url "http://www.csiro.au"^^xsd:anyURI ;
-.
-<http://www.w3.org>
-  a sdo:Organization ;
-  sdo:name "World Wide Web Consortium" ;
-  sdo:url "http://www.w3.org"^^xsd:anyURI ;
-.
+
 greg:April
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "4月"@ja ;
-  skos:prefLabel "4月"@zh ;
-  skos:prefLabel "Abril"@es ;
-  skos:prefLabel "Abril"@pt ;
-  skos:prefLabel "April"@de ;
-  skos:prefLabel "April"@en ;
-  skos:prefLabel "April"@nl ;
-  skos:prefLabel "Aprile"@it ;
-  skos:prefLabel "Avril"@fr ;
-  skos:prefLabel "Kwiecień"@pl ;
-  skos:prefLabel "Апрель"@ru ;
-  skos:prefLabel "أبريل"@ar ;
-  skos:altLabel "APRIL"@en ;
-  time:month "--04"^^xsd:gMonth ;
-  time:unitType time:unitMonth ;
-  skos:definition "April is the fourth month of the year in the Gregorian calendar, the fifth in the early Julian, the first of four months to have a length of 30 days, and the second of five months to have a length of less than 31 days."@en ;  
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "APR" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/April> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/April> ;
+    skos:altLabel "APRIL"@en ;
+    skos:definition "April is the fourth month of the year in the Gregorian calendar, the fifth in the early Julian, the first of four months to have a length of 30 days, and the second of five months to have a length of less than 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "APR" ;
+    skos:prefLabel
+        "أبريل"@ar ,
+        "April"@de ,
+        "April"@en ,
+        "Abril"@es ,
+        "Avril"@fr ,
+        "Aprile"@it ,
+        "4月"@ja ,
+        "April"@nl ,
+        "Kwiecień"@pl ,
+        "Abril"@pt ,
+        "Апрель"@ru ,
+        "4月"@zh ;
+    time:month "--04"^^xsd:gMonth ;
+    time:unitType time:unitMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:August
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "8月"@ja ;
-  skos:prefLabel "8月"@zh ;
-  skos:prefLabel "Agosto"@es ;
-  skos:prefLabel "Agosto"@it ;
-  skos:prefLabel "Agosto"@pt ;
-  skos:prefLabel "Août"@fr ;
-  skos:prefLabel "August"@de ;
-  skos:prefLabel "August"@en ;
-  skos:prefLabel "Augustus (maand)"@nl ;
-  skos:prefLabel "Sierpień"@pl ;
-  skos:prefLabel "Август"@ru ;
-  skos:prefLabel "أغسطس"@ar ;
-  skos:altLabel "AUGUST"@en ;
-  time:month "--08"^^xsd:gMonth ;
-  time:unitType time:unitMonth ;
-  skos:definition "August is the eighth month of the year in the Julian and Gregorian calendars, and the fifth of seven months to have a length of 31 days."@en ; 
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "AUG" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/August> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/August> ;
+    skos:altLabel "AUGUST"@en ;
+    skos:definition "August is the eighth month of the year in the Julian and Gregorian calendars, and the fifth of seven months to have a length of 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "AUG" ;
+    skos:prefLabel
+        "أغسطس"@ar ,
+        "August"@de ,
+        "August"@en ,
+        "Agosto"@es ,
+        "Août"@fr ,
+        "Agosto"@it ,
+        "8月"@ja ,
+        "Augustus (maand)"@nl ,
+        "Sierpień"@pl ,
+        "Agosto"@pt ,
+        "Август"@ru ,
+        "8月"@zh ;
+    time:month "--08"^^xsd:gMonth ;
+    time:unitType time:unitMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:December
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "12月"@ja ;
-  skos:prefLabel "12月"@zh ;
-  skos:prefLabel "December"@en ;
-  skos:prefLabel "December"@nl ;
-  skos:prefLabel "Dezember"@de ;
-  skos:prefLabel "Dezembro"@pt ;
-  skos:prefLabel "Dicembre"@it ;
-  skos:prefLabel "Diciembre"@es ;
-  skos:prefLabel "Décembre"@fr ;
-  skos:prefLabel "Grudzień"@pl ;
-  skos:prefLabel "Декабрь"@ru ;
-  skos:prefLabel "ديسمبر"@ar ;
-  skos:altLabel "DECEMBER"@en ;
-  time:month "--12"^^xsd:gMonth ;
-  skos:definition "December is the twelfth and final month of the year in the Julian and Gregorian Calendars. It is also the last of seven months to have a length of 31 days."@en ; 
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "DEC" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/December> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/December> ;
+    skos:altLabel "DECEMBER"@en ;
+    skos:definition "December is the twelfth and final month of the year in the Julian and Gregorian Calendars. It is also the last of seven months to have a length of 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "DEC" ;
+    skos:prefLabel
+        "ديسمبر"@ar ,
+        "Dezember"@de ,
+        "December"@en ,
+        "Diciembre"@es ,
+        "Décembre"@fr ,
+        "Dicembre"@it ,
+        "12月"@ja ,
+        "December"@nl ,
+        "Grudzień"@pl ,
+        "Dezembro"@pt ,
+        "Декабрь"@ru ,
+        "12月"@zh ;
+    time:month "--12"^^xsd:gMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:February
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "2月"@ja ;
-  skos:prefLabel "2月"@zh ;
-  skos:prefLabel "Febbraio"@it ;
-  skos:prefLabel "Febrero"@es ;
-  skos:prefLabel "Februar"@de ;
-  skos:prefLabel "Februari"@nl ;
-  skos:prefLabel "February"@en ;
-  skos:prefLabel "Fevereiro"@pt ;
-  skos:prefLabel "Février"@fr ;
-  skos:prefLabel "Luty"@pl ;
-  skos:prefLabel "Февраль"@ru ;
-  skos:prefLabel "فبراير"@ar ;
-  skos:altLabel "FEBRUARY"@en ;
-  time:month "--02"^^xsd:gMonth ;
-  skos:definition "February is the second month of the year in the Julian and Gregorian calendars, with 28 days in common years and 29 days in leap years, with the quadrennial 29th day being called the leap day."@en ; 
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "FEB" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/February> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/February> ;
+    skos:altLabel "FEBRUARY"@en ;
+    skos:definition "February is the second month of the year in the Julian and Gregorian calendars, with 28 days in common years and 29 days in leap years, with the quadrennial 29th day being called the leap day."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "FEB" ;
+    skos:prefLabel
+        "فبراير"@ar ,
+        "Februar"@de ,
+        "February"@en ,
+        "Febrero"@es ,
+        "Février"@fr ,
+        "Febbraio"@it ,
+        "2月"@ja ,
+        "Februari"@nl ,
+        "Luty"@pl ,
+        "Fevereiro"@pt ,
+        "Февраль"@ru ,
+        "2月"@zh ;
+    time:month "--02"^^xsd:gMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:January
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "/=20@L"@ru ;
-  skos:prefLabel "1"@ja ;
-  skos:prefLabel "1"@zh ;
-  skos:prefLabel "Enero"@es ;
-  skos:prefLabel "Gennaio"@it ;
-  skos:prefLabel "JF'J1 (4G1)"@ar ;
-  skos:prefLabel "Janeiro"@pt ;
-  skos:prefLabel "Januar"@de ;
-  skos:prefLabel "Januari"@nl ;
-  skos:prefLabel "January"@en ;
-  skos:prefLabel "Janvier"@fr ;
-  skos:prefLabel "StyczeD"@pl ;
-  skos:altLabel "JANUARY"@en ;
-  time:month "--01"^^xsd:gMonth ;
-  skos:definition "January is the first month of the year in the Julian and Gregorian calendars and the first of seven months to have a length of 31 days."@en ;
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "JAN" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/January> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/January> ;
+    skos:altLabel "JANUARY"@en ;
+    skos:definition "January is the first month of the year in the Julian and Gregorian calendars and the first of seven months to have a length of 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "JAN" ;
+    skos:prefLabel
+        "JF'J1 (4G1)"@ar ,
+        "Januar"@de ,
+        "January"@en ,
+        "Enero"@es ,
+        "Janvier"@fr ,
+        "Gennaio"@it ,
+        "1"@ja ,
+        "Januari"@nl ,
+        "StyczeD"@pl ,
+        "Janeiro"@pt ,
+        "/=20@L"@ru ,
+        "1"@zh ;
+    time:month "--01"^^xsd:gMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:July
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "N;L"@ru ;
-  skos:prefLabel "7"@ja ;
-  skos:prefLabel "7"@zh ;
-  skos:prefLabel "JHDJH"@ar ;
-  skos:prefLabel "Juillet"@fr ;
-  skos:prefLabel "Julho"@pt ;
-  skos:prefLabel "Juli"@de ;
-  skos:prefLabel "Juli"@nl ;
-  skos:prefLabel "Julio"@es ;
-  skos:prefLabel "July"@en ;
-  skos:prefLabel "Lipiec"@pl ;
-  skos:prefLabel "Luglio"@it ;
-  skos:altLabel "JULY"@en ;
-  time:month "--07"^^xsd:gMonth ;
-  skos:definition "July is the seventh month of the year (between June and August) in the Julian and Gregorian Calendars and the fourth of seven months to have a length of 31 days."@en ; 
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "JUL" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/July> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/July> ;
+    skos:altLabel "JULY"@en ;
+    skos:definition "July is the seventh month of the year (between June and August) in the Julian and Gregorian Calendars and the fourth of seven months to have a length of 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "JUL" ;
+    skos:prefLabel
+        "JHDJH"@ar ,
+        "Juli"@de ,
+        "July"@en ,
+        "Julio"@es ,
+        "Juillet"@fr ,
+        "Luglio"@it ,
+        "7"@ja ,
+        "Juli"@nl ,
+        "Lipiec"@pl ,
+        "Julho"@pt ,
+        "N;L"@ru ,
+        "7"@zh ;
+    time:month "--07"^^xsd:gMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:June
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "N=L"@ru ;
-  skos:prefLabel "6"@ja ;
-  skos:prefLabel "6"@zh ;
-  skos:prefLabel "Czerwiec"@pl ;
-  skos:prefLabel "Giugno"@it ;
-  skos:prefLabel "JHFJH"@ar ;
-  skos:prefLabel "Juin"@fr ;
-  skos:prefLabel "June"@en ;
-  skos:prefLabel "Junho"@pt ;
-  skos:prefLabel "Juni"@de ;
-  skos:prefLabel "Juni"@nl ;
-  skos:prefLabel "Junio"@es ;
-  skos:altLabel "JUNE"@en ;
-  time:month "--06"^^xsd:gMonth ;
-  skos:definition "June is the sixth month of the year in the Julian and Gregorian calendars, the second of four months to have a length of 30 days, and the third of five months to have a length of less than 31 days."@en ; 
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "JUN" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/June> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/June> ;
+    skos:altLabel "JUNE"@en ;
+    skos:definition "June is the sixth month of the year in the Julian and Gregorian calendars, the second of four months to have a length of 30 days, and the third of five months to have a length of less than 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "JUN" ;
+    skos:prefLabel
+        "JHFJH"@ar ,
+        "Juni"@de ,
+        "June"@en ,
+        "Junio"@es ,
+        "Juin"@fr ,
+        "Giugno"@it ,
+        "6"@ja ,
+        "Juni"@nl ,
+        "Czerwiec"@pl ,
+        "Junho"@pt ,
+        "N=L"@ru ,
+        "6"@zh ;
+    time:month "--06"^^xsd:gMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:March
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "3月"@ja ;
-  skos:prefLabel "3月"@zh ;
-  skos:prefLabel "Maart"@nl ;
-  skos:prefLabel "March"@en ;
-  skos:prefLabel "Mars (mois)"@fr ;
-  skos:prefLabel "Marzec"@pl ;
-  skos:prefLabel "Marzo"@es ;
-  skos:prefLabel "Marzo"@it ;
-  skos:prefLabel "Março"@pt ;
-  skos:prefLabel "März"@de ;
-  skos:prefLabel "Март"@ru ;
-  skos:prefLabel "مارس"@ar ;
-  skos:altLabel "MARCH"@en ;
-  time:month "--03"^^xsd:gMonth ;
-  skos:definition "March is the third month of the year and named after Mars in both the Julian and Gregorian calendars. It is the second of seven months to have a length of 31 days."@en ; 
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "MAR" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/March> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/March> ;
+    skos:altLabel "MARCH"@en ;
+    skos:definition "March is the third month of the year and named after Mars in both the Julian and Gregorian calendars. It is the second of seven months to have a length of 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "MAR" ;
+    skos:prefLabel
+        "مارس"@ar ,
+        "März"@de ,
+        "March"@en ,
+        "Marzo"@es ,
+        "Mars (mois)"@fr ,
+        "Marzo"@it ,
+        "3月"@ja ,
+        "Maart"@nl ,
+        "Marzec"@pl ,
+        "Março"@pt ,
+        "Март"@ru ,
+        "3月"@zh ;
+    time:month "--03"^^xsd:gMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:May
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "5月"@ja ;
-  skos:prefLabel "5月"@zh ;
-  skos:prefLabel "Maggio"@it ;
-  skos:prefLabel "Mai"@de ;
-  skos:prefLabel "Mai"@fr ;
-  skos:prefLabel "Maio"@pt ;
-  skos:prefLabel "Maj"@pl ;
-  skos:prefLabel "May"@en ;
-  skos:prefLabel "Mayo"@es ;
-  skos:prefLabel "Mei"@nl ;
-  skos:prefLabel "Май"@ru ;
-  skos:prefLabel "مايو"@ar ;
-  skos:altLabel "MAY"@en ;
-  time:month "--05"^^xsd:gMonth ;
-  skos:definition "May is the fifth month of the year in the Julian and Gregorian calendars and the third of seven months to have a length of 31 days."@en ; 
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "MAY" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/May> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/May> ;
+    skos:altLabel "MAY"@en ;
+    skos:definition "May is the fifth month of the year in the Julian and Gregorian calendars and the third of seven months to have a length of 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "MAY" ;
+    skos:prefLabel
+        "مايو"@ar ,
+        "Mai"@de ,
+        "May"@en ,
+        "Mayo"@es ,
+        "Mai"@fr ,
+        "Maggio"@it ,
+        "5月"@ja ,
+        "Mei"@nl ,
+        "Maj"@pl ,
+        "Maio"@pt ,
+        "Май"@ru ,
+        "5月"@zh ;
+    time:month "--05"^^xsd:gMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:November
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "11月"@ja ;
-  skos:prefLabel "11月"@zh ;
-  skos:prefLabel "Listopad"@pl ;
-  skos:prefLabel "November"@de ;
-  skos:prefLabel "November"@en ;
-  skos:prefLabel "November"@nl ;
-  skos:prefLabel "Novembre"@fr ;
-  skos:prefLabel "Novembre"@it ;
-  skos:prefLabel "Novembro"@pt ;
-  skos:prefLabel "Noviembre"@es ;
-  skos:prefLabel "Ноябрь"@ru ;
-  skos:prefLabel "نوفمبر"@ar ;
-  skos:altLabel "NOVEMBER"@en ;
-  time:month "--11"^^xsd:gMonth ;
-  skos:definition "November is the eleventh month of the year in the Julian and Gregorian Calendars, the fourth and last of four months to have a length of 30 days and the fifth and last of five months to have a length of fewer than 31 days."@en ; 
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "NOV" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/November> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/November> ;
+    skos:altLabel "NOVEMBER"@en ;
+    skos:definition "November is the eleventh month of the year in the Julian and Gregorian Calendars, the fourth and last of four months to have a length of 30 days and the fifth and last of five months to have a length of fewer than 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "NOV" ;
+    skos:prefLabel
+        "نوفمبر"@ar ,
+        "November"@de ,
+        "November"@en ,
+        "Noviembre"@es ,
+        "Novembre"@fr ,
+        "Novembre"@it ,
+        "11月"@ja ,
+        "November"@nl ,
+        "Listopad"@pl ,
+        "Novembro"@pt ,
+        "Ноябрь"@ru ,
+        "11月"@zh ;
+    time:month "--11"^^xsd:gMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:October
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "10月"@ja ;
-  skos:prefLabel "10月"@zh ;
-  skos:prefLabel "October"@en ;
-  skos:prefLabel "Octobre"@fr ;
-  skos:prefLabel "Octubre"@es ;
-  skos:prefLabel "Oktober"@de ;
-  skos:prefLabel "Oktober"@nl ;
-  skos:prefLabel "Ottobre"@it ;
-  skos:prefLabel "Outubro"@pt ;
-  skos:prefLabel "Październik"@pl ;
-  skos:prefLabel "Октябрь"@ru ;
-  skos:prefLabel "أكتوبر"@ar ;
-  skos:altLabel "OCTOBER"@en ;
-  time:month "--10"^^xsd:gMonth ;
-  skos:definition "October is the tenth month of the year in the Julian and Gregorian Calendars and the sixth of seven months to have a length of 31 days."@en ; 
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "OCT" ;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/October> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/October> ;
+    skos:altLabel "OCTOBER"@en ;
+    skos:definition "October is the tenth month of the year in the Julian and Gregorian Calendars and the sixth of seven months to have a length of 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "OCT" ;
+    skos:prefLabel
+        "أكتوبر"@ar ,
+        "Oktober"@de ,
+        "October"@en ,
+        "Octubre"@es ,
+        "Octobre"@fr ,
+        "Ottobre"@it ,
+        "10月"@ja ,
+        "Oktober"@nl ,
+        "Październik"@pl ,
+        "Outubro"@pt ,
+        "Октябрь"@ru ,
+        "10月"@zh ;
+    time:month "--10"^^xsd:gMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
 greg:September
-  a skos:Concept , time:MonthOfYear ;
-  skos:prefLabel "9月"@ja ;
-  skos:prefLabel "9月"@zh ;
-  skos:prefLabel "September"@de ;
-  skos:prefLabel "September"@en ;
-  skos:prefLabel "September"@nl ;
-  skos:prefLabel "Septembre"@fr ;
-  skos:prefLabel "Septiembre"@es ;
-  skos:prefLabel "Setembro"@pt ;
-  skos:prefLabel "Settembre"@it ;
-  skos:prefLabel "Wrzesień"@pl ;
-  skos:prefLabel "Сентябрь"@ru ;
-  skos:prefLabel "سبتمبر"@ar ;
-  skos:altLabel "SEPTEMBER"@en ;
-  time:month "--09"^^xsd:gMonth ;
-  skos:definition "September is the ninth month of the year in the Julian and Gregorian calendars, the third of four months to have a length of 30 days, and the fourth of five months to have a length of less than 31 days."@en ; 
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/September> ;
+    a
+        skos:Concept ,
+        time:MonthOfYear ;
     rdfs:isDefinedBy <http://www.w3.org/ns/time/gregorian> ;
-  skos:notation "SEP" ;
-  skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/September> ;
+    skos:altLabel "SEPTEMBER"@en ;
+    skos:definition "September is the ninth month of the year in the Julian and Gregorian calendars, the third of four months to have a length of 30 days, and the fourth of five months to have a length of less than 31 days."@en ;
+    skos:inScheme <http://www.w3.org/ns/time/gregorian> ;
+    skos:notation "SEP" ;
+    skos:prefLabel
+        "سبتمبر"@ar ,
+        "September"@de ,
+        "September"@en ,
+        "Septiembre"@es ,
+        "Septembre"@fr ,
+        "Settembre"@it ,
+        "9月"@ja ,
+        "September"@nl ,
+        "Wrzesień"@pl ,
+        "Setembro"@pt ,
+        "Сентябрь"@ru ,
+        "9月"@zh ;
+    time:month "--09"^^xsd:gMonth ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
 .
+
+<http://orcid.org/0000-0002-3884-3420>
+    a sdo:Person ;
+    sdo:affiliation <http://linked.data.gov.au/org/csiro> ;
+    sdo:email <mailto:simon.cox@csiro.au> ;
+    sdo:identifier <http://orcid.org/0000-0002-3884-3420> ;
+    sdo:name "Simon J.D. Cox" ;
+.
+
+<http://www.w3.org/ns/time/gregorian>
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2017-01-20"^^xsd:date ;
+    dcterms:creator <http://orcid.org/0000-0002-3884-3420> ;
+    dcterms:modified "2022-02-03"^^xsd:date ;
+    dcterms:publisher <http://linked.data.gov.au/org/w3c> ;
+    owl:imports
+        <http://www.w3.org/2004/02/skos/core> ,
+        <http://www.w3.org/2006/time> ;
+    skos:definition "The set of months-of-the-year from the Gregorian calendar."@en ;
+    skos:hasTopConcept
+        greg:April ,
+        greg:August ,
+        greg:December ,
+        greg:February ,
+        greg:January ,
+        greg:July ,
+        greg:June ,
+        greg:March ,
+        greg:May ,
+        greg:November ,
+        greg:October ,
+        greg:September ;
+    skos:prefLabel "Gregorian Months"@en ;
+    prov:wasDerivedFrom <http://www.w3.org/ns/time/gregorian> ;
+.
+
