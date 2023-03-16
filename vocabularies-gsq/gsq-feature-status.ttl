@@ -5,15 +5,6 @@ PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/org/gsq>
-    a
-        owl:NamedIndividual ,
-        sdo:Organization ;
-    sdo:email <mailto:geological_info@resources.qld.gov.au> ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
-.
-
 fst:BrieflyDescribed
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
@@ -116,6 +107,15 @@ fst:Unnamed
     skos:scopeNote "Geoscience Australia definition supported here, additional to above: A distinctive area of rocks (polygon(s) in a dataset), where the rocks have been assigned a description, but not a name. Often used for subsurface units that are based on geophysical properties alone. Also used for very broad-scale maps where named units are too small to be displayed at the intended scale. ASUD does not have the resources to record all of these unnamed units created by all the State and Territory Surveys in any useful way, but this organisation’s current GIS dataset structure requires a 'stratno' for all geological polygons, so it does currently record any unnamed units used in its datasets."@en ;
 .
 
+<https://linked.data.gov.au/org/gsq>
+    a
+        owl:NamedIndividual ,
+        sdo:Organization ;
+    sdo:email <mailto:geological_info@resources.qld.gov.au> ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
 fst:Informal
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
@@ -132,7 +132,7 @@ fst:Informal
         skos:ConceptScheme ;
     dcterms:created "2022-08-08"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-08-08"^^xsd:date ;
+    dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     skos:definition "The status of a geologic feature, which in name (and definition) may embrace formal, informal, invalid, and other terms, is generally regulated variously (depending on the feature type) by a national, international and/or other code or protocol that applies thereto, and, where applicable, may be administered and/or reviewed by a relevant authority, such as the Geological Survey of Queensland or (for Australian rock units) by Geoscience Australia in collaboration with the Australian Stratigraphy Commission of the Geological Society of Australia."@en ;

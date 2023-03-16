@@ -7,17 +7,6 @@ PREFIX smrl: <https://linked.data.gov.au/def/sample-relationship/>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-smrl:isAggregateOf
-    a skos:Concept ;
-    dcterms:provenance "Source information from http://www.w3.org/TR/vocab-ssn/#Sample_Relations and the SOSA Extensions ontology, modified by the Geological Survey of Queensland." ;
-    sdo:domainIncludes sosa:Sample ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-relationship> ;
-    skos:definition "Relation from a Sample to an entity that it was dervied from, where multiple sources have been aggregated into a composite sample."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/sample-relationship> ;
-    skos:prefLabel "is aggregate of"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-relationship> ;
-.
-
 sosa:hasOriginalSample
     a
         owl:ObjectProperty ,
@@ -49,6 +38,17 @@ sosa:isSampleOf
     skos:topConceptOf <https://linked.data.gov.au/def/sample-relationship> ;
 .
 
+smrl:isAggregateOf
+    a skos:Concept ;
+    dcterms:provenance "Source information from http://www.w3.org/TR/vocab-ssn/#Sample_Relations and the SOSA Extensions ontology, modified by the Geological Survey of Queensland." ;
+    sdo:domainIncludes sosa:Sample ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-relationship> ;
+    skos:definition "Relation from a Sample to an entity that it was dervied from, where multiple sources have been aggregated into a composite sample."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/sample-relationship> ;
+    skos:prefLabel "is aggregate of"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/sample-relationship> ;
+.
+
 <https://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
@@ -61,14 +61,14 @@ sosa:isSampleOf
         skos:ConceptScheme ;
     dcterms:created "2020-03-24"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-01-04"^^xsd:date ;
+    dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Source information from http://www.w3.org/TR/vocab-ssn/#Sample_Relations and the SOSA Extensions ontology, modified by the Geological Survey of Queensland." ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     skos:definition "Relationships between Samples. This vocabulary is derived from the SOSA Ontology and the SOSA Extensions Ontology where the Samples are defined by the class sosa:Sample and the relationships are OWL objectProperties. It reuses the original ontology URIs directly and retains the relationship's non-SKSO properties too so it is a SKOS+ ontology (SKOS + other things)."@en ;
     skos:hasTopConcept
-        smrl:isAggregateOf ,
         sosa:hasOriginalSample ,
-        sosa:isSampleOf ;
+        sosa:isSampleOf ,
+        smrl:isAggregateOf ;
     skos:prefLabel "Sample Relationship"@en ;
 .
 
