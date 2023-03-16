@@ -1,9 +1,9 @@
-PREFIX datac: <http://linked.data.gov.au/def/dataciteroles/>
+PREFIX datac: <https://linked.data.gov.au/def/dataciteroles/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX gsqr: <http://linked.data.gov.au/def/gsq-roles/>
-PREFIX iso11179: <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities/>
-PREFIX isorole: <http://linked.data.gov.au/def/iso19115-1/RoleCode/>
+PREFIX gsqr: <https://linked.data.gov.au/def/gsq-roles/>
+PREFIX iso11179: <https://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities/>
+PREFIX isorole: <https://linked.data.gov.au/def/iso19115-1/RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs1: <file:///Users/edmondchuc/projects/gsq-vocabularies/vocabularies-gsq/www.w3.org/2000/01/rdf-schema#>
 PREFIX sdo: <http://schema.org/>
@@ -27,11 +27,11 @@ gsqr:QdexReportsRoles
 
 gsqr:consultant
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:broader gsqr:contractor ;
     skos:definition "Consultants are contractors who provide value-added services and advice to other agents, e.g. owners or operators. Consultants may aggregate multiple other roles including project management, data curation, data processing, analysis, and advisory roles. Consultants are commonly an intermediary between agents."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Consultant"@en ;
     skos:scopeNote "Consultants are a type of contractor, and as such should always act on behalf of (formally: prov:actedObBehalfOf) some other Agent, such as an Owner"@en ;
 .
@@ -62,17 +62,17 @@ gsqr:surveyor
     a
         skos:Concept ,
         dcat:Role ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:broader isorole:principalInvestigator ;
     skos:definition "The principal investigator for a land surveying activity creating geomatic survey plans, maps, and project working plans."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Surveyor"@en ;
 .
 
 datac:DataCollector
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:altLabel
         "Interviewer"@en ,
@@ -80,10 +80,10 @@ datac:DataCollector
         "Observer"@en ,
         "Survey Conductor"@en ;
     skos:definition "Person/institution responsible for finding, gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Data Collector"@en ;
     skos:scopeNote "May also use when crediting survey conductors, interviewers, event or condition observers, person responsible for monitoring key instrument data."@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:editor
@@ -92,135 +92,135 @@ isorole:editor
     skos:altLabel "Reviewer"@en ;
     skos:definition "Party who reviewed or modified the resource to improve the content"@en ;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Editor"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:originator
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:altLabel "Sampler"@en ;
     skos:definition "Party who created the resource"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Originator"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:processor
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Party who has processed the data in a manner such that the resource has been modified"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Processor"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 datac:ProjectLeader
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/dataciteroles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Person officially designated as head of project team or sub-project team instrumental in the work necessary to development of the resource."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Project Leader"@en ;
     skos:scopeNote "The Project Leader is not 'removed' from the work that resulted in the resource; he or she remains intimately involved throughout the life of the particular project team."@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 datac:ProjectManager
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/dataciteroles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Project Manager"@en ;
     skos:scopeNote "The manager of a project normally has more administrative responsibility than actual work involvement."@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 datac:ProjectMember
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/dataciteroles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Person on the membership list of a designated project/project team."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Project Member"@en ;
     skos:scopeNote "This vocabulary may or may not indicate the quality, quantity, or substance of the person's involvement."@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 gsqr:administrator
     a
         skos:Concept ,
         dcat:Role ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Design, implementation and maintenance of the technology environment that supports/enables the information management lifecycle."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Data Administrator"@en ;
     skos:related gsqr:manager ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 gsqr:data-creator
     a
         skos:Concept ,
         dcat:Role ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Responsible for creating and updating data, products and metadata and storing in an appropriate system."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Data Creator"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 gsqr:data-librarian
     a
         skos:Concept ,
         dcat:Role ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Responsible for investigating and assisting with implementation of support services relating to description, storage and sharing of research metadata and datasets. Including standards, review processes and training."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Data Librarian"@en ;
     skos:related gsqr:manager ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 gsqr:data-steward
     a
         skos:Concept ,
         dcat:Role ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     rdfs1:label "Data Steward"@en ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Responsible for approving the quality, integrity and use of data and applying data policies, procedures and rules to safeguard data. Provides guidance and training to ensure timely and correct input of quality data."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Data Steward"@en ;
     skos:related gsqr:manager ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 gsqr:driller
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "The agent who drills or bores the borehole."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Driller"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 gsqr:operator
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "The corporation or other entity that is the decision-maker and has responsibility for the overall management for the project."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Operator"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 iso11179:Submitter
@@ -229,9 +229,9 @@ iso11179:Submitter
     skos:altLabel "Lodger"@en ;
     skos:definition "A Submitter should be an organizational unit approved by a process defined by the Registration Authority. A Submitter is authorized to identify and report Administered Items suitable for registration. The Submitter can be viewed as a contact for the Submitting Organization."@en ;
     skos:historyNote "In QDEX Reports, this role has been known as 'Lodger' but 'Submitter' is now the preferred term for it."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Submitter"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:author
@@ -239,49 +239,49 @@ isorole:author
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Agent who authored the resource"@en ;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Author"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:collaborator
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Party who assists with the generation of the resource other than the principal investigator"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Collaborator"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:contributor
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Party contributing to the resource"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Contributor"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:custodian
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Custodian"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:principalInvestigator
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Key party responsible for gathering information and conducting research"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Principal Investigator"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:user
@@ -289,9 +289,9 @@ isorole:user
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Party who uses the resource"@en ;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "User"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -302,14 +302,14 @@ isorole:user
 
 gsqr:contractor
     a skos:Concept ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:altLabel "Service Provider"@en ;
     skos:definition "Contractors are agents who receive work contracts to perform activities on behalf of other agents, e.g. owners or operators."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Contractor"@en ;
     skos:scopeNote "Contractors should always act on behalf of (formally: prov:actedObBehalfOf) some other Agent, such as an Owner"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:owner
@@ -321,9 +321,9 @@ isorole:owner
         "tenure holder"@en ;
     skos:definition "Agent that owns the resource"@en ;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115. The altLabels are drawn from P&G (general provisions) regulation 2017, section 37(4)"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Owner"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 isorole:publisher
@@ -331,25 +331,25 @@ isorole:publisher
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Agent who published the resource"@en ;
     skos:historyNote "Agent is known as Party in the original definition from ISO19115"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Publisher"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
 gsqr:manager
     a
         skos:Concept ,
         dcat:Role ;
-    rdfs1:isDefinedBy <http://linked.data.gov.au/def/gsq-roles> ;
+    rdfs1:isDefinedBy <https://linked.data.gov.au/def/gsq-roles> ;
     rdfs1:label "Data Manager"@en ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "The Data Manager is assigned to perform activities associated with the day-to-day interpretation, management, operation and support of data."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/gsq-roles> ;
     skos:prefLabel "Data Manager"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-roles> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gsq-roles> ;
 .
 
-<http://linked.data.gov.au/def/gsq-roles>
+<https://linked.data.gov.au/def/gsq-roles>
     a
         owl:Ontology ,
         skos:ConceptScheme ;
