@@ -3,7 +3,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sdo: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX ststs: <http://linked.data.gov.au/def/site-status/>
+PREFIX ststs: <https://linked.data.gov.au/def/site-status/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ststs:borehole-status
@@ -69,7 +69,7 @@ ststs:processing
     skos:broader ststs:secondary-operation ;
     skos:definition "A site such as a mine or quarry which is processing but not mining raw material throughout the reporting period."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/retention> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Processing"@en ;
 .
 
@@ -102,7 +102,7 @@ ststs:care-and-maintenance
     skos:broader ststs:inactive ;
     skos:definition "A non-operational mine site where production is stopped but the site is managed to ensure it remains in a safe and stable condition. Typically where there is potential to recommence works at a later date such as improved economic conditions."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/care-and-maintenance> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Care And Maintenance"@en ;
 .
 
@@ -111,7 +111,7 @@ ststs:cased-and-suspended
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:inactive ;
     skos:definition "A well in which casing has been installed but is suspended and inactive pending installation of completion, monitoring, or other equipment."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Cased And Suspended"@en ;
 .
 
@@ -120,7 +120,7 @@ ststs:completed
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:inactive ;
     skos:definition "A well that has had all relevant casing, tubing, and completion equipment such as pumps installed, but is not in an active state of producing, injecting, or monitoring."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Completed"@en ;
 .
 
@@ -129,7 +129,7 @@ ststs:monitoring
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:active ;
     skos:definition "A well that is actively monitoring reservoir, aquifer, or other geological parameters."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Monitoring"@en ;
 .
 
@@ -138,7 +138,7 @@ ststs:on-injection
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:active ;
     skos:definition "A well that is injecting fluids such as water or hydrocarbons into a reservoir for disposal or future production."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "On Injection"@en ;
 .
 
@@ -150,7 +150,7 @@ ststs:plugged-and-abandoned
         "P&A"@en ;
     skos:broader ststs:abandoned ;
     skos:definition "A borehole that has been abandoned without the intention and/or requirement to undertake further work. Petroleum wells must be abandoned as per the relevant Code of Practice. Petroleum wells are abandoned in two stages: sub-surface abandonmnet where the well is plugged with cement or another accepted plugging method, and surface abandonment where casing is cut and a vented plate or cap is installed at surface. Legislatively, a petroleum well is not abandoned until all aspects are completed including surface abandonment (cut and cap)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Plugged And Abandoned"@en ;
 .
 
@@ -159,7 +159,7 @@ ststs:water-supply
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:active ;
     skos:definition "A well that is primarily producing water"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Water Supply"@en ;
 .
 
@@ -168,7 +168,7 @@ ststs:application
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:proposed ;
     skos:definition "A mine, quarry, or well that is intended and has had an application for activity submitted to the governing authority that is pending assessment and outcome."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Application"@en ;
 .
 
@@ -179,7 +179,7 @@ ststs:approved
         ststs:active ,
         ststs:proposed ;
     skos:definition "A mine, quarry, or well that is intended and has had an application for activity approved, but has not yet commenced construction."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:note "A site such as a mine or quarry which is approved for production."@en ;
     skos:prefLabel "Approved"@en ;
 .
@@ -191,7 +191,7 @@ ststs:on-hold
     skos:broader ststs:inactive ;
     skos:definition "A mine or project that has been closed but not abandoned and where there are no active and care-and-maintenance works."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/closed> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Closed"@en ;
 .
 
@@ -205,18 +205,18 @@ ststs:operational-non-prod
         "Preparation"@en ;
     skos:broader ststs:active ;
     skos:definition "A site that is an active part of a project or operation that typically contributes to production but is not currently due to other activities. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease in which excavation is occuring after construction but prior to or between extraction phases."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Operating Not Producing"@en ;
 .
 
 ststs:rehabilitation
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-status> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-status> ;
     skos:definition "The stage in the life-cycle of a project or mine where the resources have been extracted and the site is being rehabilitated back to its original condition or an acceptable environmental standard."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Rehabilitation"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-status> ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -231,9 +231,9 @@ ststs:abandoned
     skos:altLabel "Concluded"@en ;
     skos:definition "A project or activity that has been abandoned without the intention and/or requirement to undertake further work."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/abandoned> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Abandoned"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-status> ;
 .
 
 ststs:construction
@@ -242,9 +242,9 @@ ststs:construction
     skos:altLabel "Drilling"@en ;
     skos:definition "A mine, quarry, or well that is being constructed or drilled e.g. a well between spud date and rig release."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/construction> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Construction"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-status> ;
 .
 
 ststs:never-used
@@ -252,9 +252,9 @@ ststs:never-used
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel "Never Drilled"@en ;
     skos:definition "A project that was once proposed but was never constructed and is no longer intended to be constructed."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Never Used"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-status> ;
 .
 
 ststs:not-producing
@@ -262,7 +262,7 @@ ststs:not-producing
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:active ;
     skos:definition "A site that is part of a project or operation that is not currently contributing to production and is not conducting other operational activities. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease that is part of an active mine but is temporarily not contributing to mine production."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Not Producing"@en ;
 .
 
@@ -274,7 +274,7 @@ ststs:secondary-operation
         "Secondary Operations"@en ;
     skos:broader ststs:active ;
     skos:definition "A site that is an active part of a project or operation but is not involved in resource extraction. Such as supporting secondary activities including resoure processing, site access, adminstration, or infrastructure. "@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Supporting Operations"@en ;
 .
 
@@ -287,7 +287,7 @@ ststs:suspended
     skos:broader ststs:inactive ;
     skos:definition "A site such as a mine or quarry, project or activity that is temporarily not active, such as during the interval between construction and commencement of production or extraction."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/retention> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Suspended"@en ;
 .
 
@@ -295,9 +295,9 @@ ststs:unknown
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "A mine, quarry, or well that has been constructed but whose further status is unknown."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Unknown"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-status> ;
 .
 
 ststs:on-production
@@ -309,7 +309,7 @@ ststs:on-production
         "On Production"@en ;
     skos:broader ststs:active ;
     skos:definition "A well that is producing hydrocarbons or other non-water resources, or a mine or quarry that is actively extracting coal, minerals, or other resources."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Producing"@en ;
 .
 
@@ -317,9 +317,9 @@ ststs:proposed
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "A mine, quarry, or well that is intended but has not yet been constructed."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Proposed"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-status> ;
 .
 
 ststs:inactive
@@ -328,9 +328,9 @@ ststs:inactive
     skos:altLabel "Not Operating"@en ;
     skos:definition "A project that has been constructed and not yet abandoned but is not in an active state."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/not-operating> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Inactive"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-status> ;
 .
 
 ststs:active
@@ -339,12 +339,12 @@ ststs:active
     skos:altLabel "Active"@en ;
     skos:definition "A mine, quarry, or well that is in the active phase of resource exploitation as a direct extraction or associated activity i.e. producing, monitoring, injecting, mining, or processing."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/operating> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-status> ;
     skos:prefLabel "Operating"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-status> ;
 .
 
-<http://linked.data.gov.au/def/site-status>
+<https://linked.data.gov.au/def/site-status>
     a
         owl:Ontology ,
         skos:ConceptScheme ;
