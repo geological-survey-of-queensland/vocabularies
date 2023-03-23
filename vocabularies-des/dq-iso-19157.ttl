@@ -1,238 +1,334 @@
-# baseURI: http://linked.data.qld.gov.au/vocab
-# imports: http://linked.data.qld.gov.au/def/dcat
-
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dq-iso-25012: <https://linked.data.gov.au/def/iso-iec-25012-data-quality-dimension/> .
-@prefix dq-iso-19157: <https://linked.data.gov.au/def/iso-19157-data-quality-dimension/> .
-@prefix dqv: <http://www.w3.org/ns/dqv#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix sdo: <http://www.schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://linked.data.gov.au/def/iso-19157-data-quality-dimension>
-  a skos:ConceptScheme ;
-  dcterms:provenance "ISO 19157" ;
-  skos:prefLabel "ISO19157 Data Quality Dimensions"@en ;
-  dcterms:created "2020-11-16"^^xsd:date ;
-  dcterms:creator <https://linked.data.gov.au/org/des> ;
-  dcterms:modified "2022-05-09"^^xsd:date ;
-  dcterms:publisher <https://linked.data.gov.au/org/des> ;
-  skos:definition "Data quality criteria as defined in ISO19157."@en ;
-  
-  skos:hasTopConcept dq-iso-19157:Completeness ,
-      dq-iso-19157:LogicalConsistency ,
-      dq-iso-19157:Metaquality ,
-      dq-iso-19157:PositionalAccuracy ,
-      dq-iso-19157:TemporalQuality ,
-      dq-iso-19157:ThematicAccuracy ,
-      dq-iso-19157:UsabilityElement .
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dq-iso-19157: <https://linked.data.gov.au/def/iso-19157-data-quality-dimension/>
+PREFIX dq-iso-25012: <https://linked.data.gov.au/def/iso-iec-25012-data-quality-dimension/>
+PREFIX dqv: <http://www.w3.org/ns/dqv#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 dq-iso-19157:AbsoluteExternalPositionalAccuracy
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:PositionalAccuracy ;
-  skos:definition "Closeness of reported coordinate values to values accepted as or being true"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Absolute External Positional Accuracy"@en .
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:PositionalAccuracy ;
+    skos:definition "Closeness of reported coordinate values to values accepted as or being true"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Absolute External Positional Accuracy"@en ;
+.
 
 dq-iso-19157:AccuracyOfATimeMeasurement
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:TemporalQuality ;
-  skos:definition "Correctness of the temporal references of an item (reporting of error in time measurement)"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Accuracy of a Time Measurement"@en .
-
-dq-iso-19157:Completeness
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:definition "Presence and absence of features, their attributes and their relationships"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:closeMatch dq-iso-25012:completeness ;
-  skos:prefLabel "Completeness (ISO19157)"@en .
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:TemporalQuality ;
+    skos:definition "Correctness of the temporal references of an item (reporting of error in time measurement)"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Accuracy of a Time Measurement"@en ;
+.
 
 dq-iso-19157:CompletenessCommission
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:Completeness ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:definition "Excess data present in the data set, as described by the scope"@en ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Completeness Commission"@en .
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:Completeness ;
+    skos:definition "Excess data present in the data set, as described by the scope"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Completeness Commission"@en ;
+.
 
 dq-iso-19157:CompletenessOmission
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:Completeness ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:definition "Data absent from the data set, as described by the scope"@en ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:exactMatch dq-iso-25012:completeness ;
-  skos:prefLabel "Completeness Omission"@en .
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:Completeness ;
+    skos:definition "Data absent from the data set, as described by the scope"@en ;
+    skos:exactMatch dq-iso-25012:completeness ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Completeness Omission"@en ;
+.
 
 dq-iso-19157:ConceptualConsistency
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:LogicalConsistency ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:definition "Adherence to rules of the conceptual schema"@en ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Conceptual Consistency"@en .
-  
-dq-iso-19157:DomainConsistency
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:LogicalConsistency ;
-  skos:definition "Adherence of values to the value domains"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Domain Consistency"@en .
-
-dq-iso-19157:FormatConsistency
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:LogicalConsistency ;
-  skos:definition "Degree to which data are stored in accordance with the physical structure of the data set, as described by the scope"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Format Consistency"@en .
-
-dq-iso-19157:GriddedDataPositionalAccuracy
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:PositionalAccuracy ;
-  skos:definition "Closeness of gridded data position values to values accepted as or being true"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ; 
-  skos:prefLabel "Gridded Data Positional Accuracy"@en .
-
-dq-iso-19157:LogicalConsistency
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:definition "Degree of adherence to logical rules of data structure, attribution and relationships (data structure can be conceptual, logical or physical)"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:closeMatch dq-iso-25012:consistency ;
-  skos:prefLabel "Logical Consistency"@en .
-  
-dq-iso-19157:Metaquality
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:definition "Information about the reliability of data quality results Use obligation from referencing object"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Metaquality"@en .
-
-dq-iso-19157:NonQuantitativeAttributeCorrectness
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:ThematicAccuracy ;
-  skos:definition "Correctness of non-quantitative attributes"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "NonQuantitative Attribute Correctness"@en .
-
-dq-iso-19157:PositionalAccuracy
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:definition "Accuracy of the position of features"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:closeMatch dq-iso-25012:accuracy ;
-  skos:prefLabel "Positional Accuracy"@en .
-
-dq-iso-19157:QuantitativeAttributeAccuracy
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:ThematicAccuracy ;
-  skos:definition "Accuracy of quantitative attributes"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Quantitative Attribute Accuracy"@en ;
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:LogicalConsistency ;
+    skos:definition "Adherence to rules of the conceptual schema"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Conceptual Consistency"@en ;
 .
-dq-iso-19157:RelativeInternalPositionalAccuracy
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:PositionalAccuracy ;
-  skos:definition "Closeness of the relative positions of features in the scope to their respective relative positions accepted as or being true"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Relative Internal Positional Accuracy"@en .
-
-dq-iso-19157:TemporalConsistency
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:TemporalQuality ;
-  skos:definition "Correctness of ordered events or sequences, if reported"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Temporal Consistency"@en .
-
-dq-iso-19157:TemporalQuality
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:definition "Accuracy of the temporal attributes and temporal relationships of features"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Temporal Quality"@en .
-
-dq-iso-19157:TemporalValidity
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:TemporalQuality ;
-  skos:definition "Validity of data specified by the scope with respect to time"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Temporal Validity"@en .
-
-dq-iso-19157:ThematicAccuracy
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:definition "Accuracy of quantitative attributes and the correctness of non-quantitative attributes and of the classifications of features and their relationships"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:closeMatch dq-iso-25012:accuracy ;
-  skos:relatedMatch dq-iso-25012:precision ;
-  skos:prefLabel "Thematic Accuracy"@en .
-
-dq-iso-19157:ThematicClassificationCorrectness
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:ThematicAccuracy ;
-  skos:definition "Comparison of the classes assigned to features or their attributes to a universe of discourse"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Thematic Classification Correctness"@en .
-
-dq-iso-19157:TopologicalConsistency
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:LogicalConsistency ;
-  skos:definition "Correctness of the explicitly encoded topological characteristics of the data set as described by the scope"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Topological Consistency"@en .
-
-dq-iso-19157:UsabilityElement
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:definition "Degree of adherence of a data set to a specific set of requirements"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:closeMatch dq-iso-25012:compliance ;
-  skos:prefLabel "Usability Element"@en .
 
 dq-iso-19157:Confidence
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:Metaquality ;
-  skos:definition "Trustworthiness of a data quality result "@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Confidence"@en .
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:Metaquality ;
+    skos:definition "Trustworthiness of a data quality result "@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Confidence"@en ;
+.
+
+dq-iso-19157:DomainConsistency
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:LogicalConsistency ;
+    skos:definition "Adherence of values to the value domains"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Domain Consistency"@en ;
+.
+
+dq-iso-19157:FormatConsistency
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:LogicalConsistency ;
+    skos:definition "Degree to which data are stored in accordance with the physical structure of the data set, as described by the scope"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Format Consistency"@en ;
+.
+
+dq-iso-19157:GriddedDataPositionalAccuracy
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:PositionalAccuracy ;
+    skos:definition "Closeness of gridded data position values to values accepted as or being true"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Gridded Data Positional Accuracy"@en ;
+.
 
 dq-iso-19157:Homogeneity
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:Metaquality ;
-  skos:definition "Expected or tested uniformity of the results obtained for a data quality evaluation"@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Homogeneity"@en .
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:Metaquality ;
+    skos:definition "Expected or tested uniformity of the results obtained for a data quality evaluation"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Homogeneity"@en ;
+.
 
-dq-iso-19157:Representativity 
-  a skos:Concept ; a dqv:Dimension ; 
-  skos:broader dq-iso-19157:Metaquality ;
-  skos:definition "Degree to which the sample used has produced a result which is representative of the data within the data quality scope "@en ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
-  skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
-  skos:prefLabel "Representativity "@en .
+dq-iso-19157:NonQuantitativeAttributeCorrectness
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:ThematicAccuracy ;
+    skos:definition "Correctness of non-quantitative attributes"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "NonQuantitative Attribute Correctness"@en ;
+.
+
+dq-iso-19157:QuantitativeAttributeAccuracy
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:ThematicAccuracy ;
+    skos:definition "Accuracy of quantitative attributes"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Quantitative Attribute Accuracy"@en ;
+.
+
+dq-iso-19157:RelativeInternalPositionalAccuracy
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:PositionalAccuracy ;
+    skos:definition "Closeness of the relative positions of features in the scope to their respective relative positions accepted as or being true"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Relative Internal Positional Accuracy"@en ;
+.
+
+dq-iso-19157:Representativity
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:Metaquality ;
+    skos:definition "Degree to which the sample used has produced a result which is representative of the data within the data quality scope "@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Representativity "@en ;
+.
+
+dq-iso-19157:TemporalConsistency
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:TemporalQuality ;
+    skos:definition "Correctness of ordered events or sequences, if reported"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Temporal Consistency"@en ;
+.
+
+dq-iso-19157:TemporalValidity
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:TemporalQuality ;
+    skos:definition "Validity of data specified by the scope with respect to time"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Temporal Validity"@en ;
+.
+
+dq-iso-19157:ThematicClassificationCorrectness
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:ThematicAccuracy ;
+    skos:definition "Comparison of the classes assigned to features or their attributes to a universe of discourse"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Thematic Classification Correctness"@en ;
+.
+
+dq-iso-19157:TopologicalConsistency
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:broader dq-iso-19157:LogicalConsistency ;
+    skos:definition "Correctness of the explicitly encoded topological characteristics of the data set as described by the scope"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Topological Consistency"@en ;
+.
+
+dq-iso-19157:UsabilityElement
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:closeMatch dq-iso-25012:compliance ;
+    skos:definition "Degree of adherence of a data set to a specific set of requirements"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Usability Element"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+.
+
+dq-iso-19157:Completeness
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:closeMatch dq-iso-25012:completeness ;
+    skos:definition "Presence and absence of features, their attributes and their relationships"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Completeness (ISO19157)"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+.
+
+dq-iso-19157:Metaquality
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:definition "Information about the reliability of data quality results Use obligation from referencing object"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Metaquality"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+.
+
+dq-iso-19157:PositionalAccuracy
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:closeMatch dq-iso-25012:accuracy ;
+    skos:definition "Accuracy of the position of features"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Positional Accuracy"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+.
+
+dq-iso-19157:TemporalQuality
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:definition "Accuracy of the temporal attributes and temporal relationships of features"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Temporal Quality"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+.
+
+dq-iso-19157:ThematicAccuracy
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:closeMatch dq-iso-25012:accuracy ;
+    skos:definition "Accuracy of quantitative attributes and the correctness of non-quantitative attributes and of the classifications of features and their relationships"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Thematic Accuracy"@en ;
+    skos:relatedMatch dq-iso-25012:precision ;
+    skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+.
+
+dq-iso-19157:LogicalConsistency
+    a
+        skos:Concept ,
+        dqv:Dimension ;
+    dcterms:provenance "ISO 19157" ;
+    rdfs:isDefinedBy <https://www.iso.org/standard/32575.html> ;
+    skos:closeMatch dq-iso-25012:consistency ;
+    skos:definition "Degree of adherence to logical rules of data structure, attribution and relationships (data structure can be conceptual, logical or physical)"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+    skos:prefLabel "Logical Consistency"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/iso-19157-data-quality-dimension> ;
+.
+
+<https://linked.data.gov.au/def/iso-19157-data-quality-dimension>
+    a skos:ConceptScheme ;
+    dcterms:created "2020-11-16"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/des> ;
+    dcterms:modified "2023-03-10"^^xsd:date ;
+    dcterms:provenance "ISO 19157" ;
+    dcterms:publisher <https://linked.data.gov.au/org/des> ;
+    skos:definition "Data quality criteria as defined in ISO19157."@en ;
+    skos:hasTopConcept
+        dq-iso-19157:Completeness ,
+        dq-iso-19157:LogicalConsistency ,
+        dq-iso-19157:Metaquality ,
+        dq-iso-19157:PositionalAccuracy ,
+        dq-iso-19157:TemporalQuality ,
+        dq-iso-19157:ThematicAccuracy ,
+        dq-iso-19157:UsabilityElement ;
+    skos:prefLabel "ISO19157 Data Quality Dimensions"@en ;
+.
+
