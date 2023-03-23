@@ -88,3 +88,6 @@ elif sys.argv[1] == "onebyone":
             exit()
 
 print(f"Total errors:", total_error_count)
+
+if total_error_count > 0:
+    exit(1)
