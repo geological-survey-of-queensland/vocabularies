@@ -1,470 +1,631 @@
-@prefix strel: <http://linked.data.gov.au/def/site-relationships/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX strel: <https://linked.data.gov.au/def/site-relationships/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://linked.data.gov.au/def/site-relationships> a owl:Ontology , skos:ConceptScheme ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:created "2020-01-21"^^xsd:date ;
-    dcterms:modified "2022-09-20"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+strel:borehole
+    a skos:Collection ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    skos:definition """The relationships between sites both topological and functional. See https://pro.arcgis.com/en/pro-app/latest/tool-reference/big-data-analytics/spatial-relationships-with-big-data.htm for visual representations of spatial relationships."""@en ;
-    skos:hasTopConcept strel:above,
-        strel:after,
-        strel:before,
-        strel:below,
-        strel:boreholeIntersect,
-        strel:comagmaticWith,
-        strel:conformableWith,
-        strel:contains,
-        strel:covers,
-        strel:crosses,
-        strel:disjoint,
-        strel:equals,
-        strel:equivalentTo,
-        strel:faultedAgainst,
-        strel:gradationalInto,
-        strel:injectionExtractionPair,
-        strel:intrudedBy,
-        strel:intrudes,
-        strel:hasPart,
-        strel:touches,
-        strel:observation,
-        strel:offsteps,
-        strel:overlaps,
-        strel:overlappedStratigraphicallyBy,
-        strel:overlapsStratigraphically,
-        strel:intersects,
-        strel:intertonguesWith,
-        strel:overlies,
-        strel:parent,
-        strel:partOf,
-        strel:permits,
-        strel:hasPermit,
-        strel:re-entry,
-        strel:redrill,
-        strel:supersedes,
-        strel:twinned,
-        strel:underlies,
-        strel:unknown,
-        strel:wellPad,
-        strel:within,     
-        strel:withIntercalationsOf ;
-    skos:prefLabel "Site Relationships"@en .
-
-<http://linked.data.gov.au/org/gsq>
-    a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
-
- strel:geologicalFeature a skos:Collection ;
-    skos:definition "The relationship between two geological features, for example: Stratigraphically (‘vertically’) at a boundary in common between two rock units of the same type/kind (lithostratigraphic, biostratigraphic, etc.); laterally (geographically) between two lithologic rock units with a gradational change in lithology, or laterally between two rock units with an abrupt change in lithologic or biostratigraphic facies; and lithostratigraphically or biostratigraphically (both from a geographic perspective), based respectively on lithostratigraphic or biostratigraphic correlation. Not only included are relationships between any two types of lithologic rock units, such as between two stratiform (lithostratigraphic) units or between two nonstratiform (non-lithostratigraphic) units, but also between a stratiform unit and a nonstratiform unit, such as an intrusive rock unit."@en ;
-    skos:member strel:comagmaticWith,
-        strel:conformableWith,
-        strel:equivalentTo,
-        strel:faultedAgainst,
-        strel:gradationalInto,
-        strel:intertonguesWith,
-        strel:intrudedBy,
-        strel:intrudes,
-        strel:hasPart,
-        strel:offsteps,
-        strel:overlappedStratigraphicallyBy,
-        strel:overlapsStratigraphically,
-        strel:overlies,
-        strel:partOf,
-        strel:underlies,
-        strel:unknown,
-        strel:withIntercalationsOf ;
-    skos:prefLabel "Geological feature"@en .
-    
- strel:comagmaticWith a skos:Concept ;
-    skos:definition "Where the igneous rock unit, based on its chemistry and mineralogic features, is considered to have been derived from the same parent magma as another igneous rock unit (After: mindat.org; accessed 13.09.2022)."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Comagmatic with"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-    
-    strel:conformableWith a skos:Concept ;
-    skos:definition "The rock unit, including both lithologic rock units and non-lithologic rock units (such as biostratigraphic units/zones, magnetostratigraphic units, etc.) is conformable with the underlying rock unit, the overlying rock unit, or both, there being continuity of deposition between them, such that their contacts (boundaries, surfaces) are common to both and do not embrace hiatus."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Conformable with"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-    
-    strel:equivalentTo a skos:Concept ;
-    skos:definition "Where the lithostratigraphic rock unit is laterally equivalent stratigraphically (lithostratigraphically) to another lithostratigraphic rock unit; or a biostratigraphic rock unit/zone is equivalent laterally to another such unit; or a biostratigraphic unit in one scheme/zonation is equivalent to another such unit in a different scheme/zonation that has either current or past application."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Equivalent to"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-        
- strel:faultedAgainst a skos:Concept ;
-    skos:definition "Where the lithologic rock unit is faulted against another lithologic rock unit."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Faulted against"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-     
-    strel:gradationalInto a skos:Concept ;
-    skos:definition "Where the lithologic rock unit is gradational (lithologically) into a stratigraphically underlying or overlying rock unit, or gradational into a laterally adjacent (equivalent) rock unit."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Gradational into"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:intrudedBy a skos:Concept ;
-    skos:definition "Where the lithologic rock unit (which may be an igneous or non-igneous intrusive rock unit) is intruded/cross-cut by an igneous or non-igneous intrusive rock unit."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Intruded by"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:intrudes a skos:Concept ;
-    skos:definition "Where the igneous or non-igneous intrusive rock unit intrudes/cross-cuts another lithologic rock unit, which may also be an (older) intrusive rock unit."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Intrudes"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:intertonguesWith a skos:Concept ;
-    skos:altLabel "Interfingered with"@en ;
-    skos:altLabel "Interdigitated with"@en ;
-    skos:definition "Where the contact between laterally adjacent rock bodies breaks down into a series of wedges or tongues that penetrate the adjacent rock body and pinch out individually, essentially embracing the ‘disappearance’ of both rock bodies (After: Gary et al., 1977; Wikipedia [Contact (geology)], accessed 07.09.2022)."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Intertongues with"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-    
- strel:offsteps a skos:Concept ;
-    skos:definition "Where the lithologic rock unit sits unconformably on progressively older/underlying lithologic rock units."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Offsteps"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-    
- strel:overlappedStratigraphicallyBy a skos:Concept ;
-    skos:definition "Where the lithologic rock is overlapped stratigraphically by a younger, onlapping lithologic rock unit."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Overlapped stratigraphically by"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-    
- strel:overlapsStratigraphically a skos:Concept ;
-    skos:altLabel "Onlaps"@en ;
-    skos:definition "Where the lithologic rock unit extends progressively across an erosion surface, stratigraphically overlapping/onlapping an older/underlying lithologic rock unit."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Overlaps stratigraphically"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-    
-    strel:overlies a skos:Concept ;
-    skos:altLabel "Underlain by"@en ;
-    skos:definition "Where the rock unit (e.g., a lithostratigraphic rock unit, biostratigraphic rock unit/zone, etc.) overlies (is underlain by) another lithologic rock unit (of the same kind/type: lithologic, biostratigraphic, etc.)."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Overlies"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .       
-    
-    strel:underlies a skos:Concept ;
-    skos:altLabel "Overlain by"@en ;
-    skos:definition "Where the rock unit (e.g., a lithostratigraphic rock unit, biostratigraphic rock unit/zone, etc.) underlies (is overlain by) another lithologic rock unit (of the same kind/type: lithologic, biostratigraphic, etc.)."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Underlies"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-    
-strel:unknown a skos:Concept ;
-    skos:definition "Where the relationship between two geological features is unknown."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Unknown"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-        
-strel:withIntercalationOf a skos:Concept ;
-    skos:definition "Where the lithologic rock unit at hand contains a rock layer or rock layers of a different character, especially where relatively thin strata of one kind of material alternate with thicker strata of some other kind of material, such being the case, for example, with lava flows, beds of shale, and concordant intrusive sills being ‘intercalated’ in a large body of sandstone (thus with sedimentary/stratigraphic and intrusive intercalations). Also: The tectonic/structural insertion/intercalation of rock layers into a pre-existing body of rock (e.g., by thrusting); or the occurrence of a particular fossil horizon between fossil zones (biostratigraphic rock units) of a different character (the latter also representing a stratigraphic intercalation) [Modified from: Gary et al., 1977]."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "With intercalation of"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:borehole a skos:Collection ;
     skos:definition "Relationships between associated boreholes and boreholes with other operational sites such as well pads, and hasPart relationships with constituent wellbores."@en ;
-    skos:member strel:boreholeIntersect,
-        strel:injectionExtractionPair,
-        strel:observation,
-        strel:re-entry,
-        strel:redrill,
-        strel:twinned,
-        strel:wellPad,
-        strel:hasPart ;
-    skos:prefLabel "Borehole"@en .
+    skos:member
+        strel:boreholeIntersect ,
+        strel:hasPart ,
+        strel:injectionExtractionPair ,
+        strel:observation ,
+        strel:re-entry ,
+        strel:redrill ,
+        strel:twinned ,
+        strel:wellPad ;
+    skos:prefLabel "Borehole"@en ;
+.
 
-strel:interval a skos:Collection ;
+strel:geologicalFeature
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "The relationship between two geological features, for example: Stratigraphically (‘vertically’) at a boundary in common between two rock units of the same type/kind (lithostratigraphic, biostratigraphic, etc.); laterally (geographically) between two lithologic rock units with a gradational change in lithology, or laterally between two rock units with an abrupt change in lithologic or biostratigraphic facies; and lithostratigraphically or biostratigraphically (both from a geographic perspective), based respectively on lithostratigraphic or biostratigraphic correlation. Not only included are relationships between any two types of lithologic rock units, such as between two stratiform (lithostratigraphic) units or between two nonstratiform (non-lithostratigraphic) units, but also between a stratiform unit and a nonstratiform unit, such as an intrusive rock unit."@en ;
+    skos:member
+        strel:comagmaticWith ,
+        strel:conformableWith ,
+        strel:equivalentTo ,
+        strel:faultedAgainst ,
+        strel:gradationalInto ,
+        strel:hasPart ,
+        strel:intertonguesWith ,
+        strel:intrudedBy ,
+        strel:intrudes ,
+        strel:offsteps ,
+        strel:overlappedStratigraphicallyBy ,
+        strel:overlapsStratigraphically ,
+        strel:overlies ,
+        strel:partOf ,
+        strel:underlies ,
+        strel:unknown ,
+        strel:withIntercalationsOf ;
+    skos:prefLabel "Geological feature"@en ;
+.
+
+strel:interval
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Relationships between intervals where vertical offset is the defining factor. Typically used for within a well or bore."@en ;
-    skos:member strel:above,
-        strel:below,
-        strel:contains,
-        strel:overlaps,
-        strel:covers,
-        strel:disjoint,
-        strel:equals,
-        strel:touches,
-        strel:intersects ;
-    skos:prefLabel "Interval"@en .
+    skos:member
+        strel:above ,
+        strel:below ,
+        strel:contains ,
+        strel:covers ,
+        strel:disjoint ,
+        strel:equals ,
+        strel:intersects ,
+        strel:overlaps ,
+        strel:touches ;
+    skos:prefLabel "Interval"@en ;
+.
 
-strel:topological a skos:Collection ;
-    skos:definition "Topology deals with spatial and structural properties of geometric objects, independent of their extension, type, or geometric form. Among the types of topological properties of objects there are: the number of dimensions an object has or the relationships that exist between objects."@en ;
-    skos:member strel:contains,
-        strel:covers,
-        strel:crosses,
-        strel:disjoint,
-        strel:equals,
-        strel:overlaps,
-        strel:touches,
-        strel:intersects,
-        strel:within ;
-    skos:prefLabel "Topological"@en .
-
-strel:project a skos:Collection ;
+strel:project
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Spatial and temporal relationships between spatially bound project locations (sites)."@en ;
-    skos:member strel:contains,
-        strel:covers,
-        strel:crosses,
-        strel:disjoint,
-        strel:equals,
-        strel:touches,
-        strel:intersects,
-        strel:overlaps,
-        strel:within,
-        strel:hasPart,
-        strel:partOf,
-        strel:before,
-        strel:after,
-        strel:concurrent ;
-    skos:prefLabel "Project"@en .
+    skos:member
+        strel:after ,
+        strel:before ,
+        strel:concurrent ,
+        strel:contains ,
+        strel:covers ,
+        strel:crosses ,
+        strel:disjoint ,
+        strel:equals ,
+        strel:hasPart ,
+        strel:intersects ,
+        strel:overlaps ,
+        strel:partOf ,
+        strel:touches ,
+        strel:within ;
+    skos:prefLabel "Project"@en ;
+.
 
-strel:temporal a skos:Collection ;
+strel:temporal
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Temporal relationships between projects and activities that are spatially bound as sites."@en ;
-    skos:member strel:supersedes,
-        strel:before,
-        strel:after,
-        strel:concurrent ;
-    skos:prefLabel "Temporal"@en .
+    skos:member
+        strel:after ,
+        strel:before ,
+        strel:concurrent ,
+        strel:supersedes ;
+    skos:prefLabel "Temporal"@en ;
+.
 
-strel:wellbore a skos:Collection ;
+strel:topological
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Topology deals with spatial and structural properties of geometric objects, independent of their extension, type, or geometric form. Among the types of topological properties of objects there are: the number of dimensions an object has or the relationships that exist between objects."@en ;
+    skos:member
+        strel:contains ,
+        strel:covers ,
+        strel:crosses ,
+        strel:disjoint ,
+        strel:equals ,
+        strel:intersects ,
+        strel:overlaps ,
+        strel:touches ,
+        strel:within ;
+    skos:prefLabel "Topological"@en ;
+.
+
+strel:wellbore
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     skos:definition "Defines the parent-child relationship of wellbores that constitute a borehole."@en ;
-    skos:member strel:parent,
-        strel:boreholeIntersect,
-        strel:injectionExtractionPair ;
-    skos:prefLabel "Wellbore"@en .
+    skos:member
+        strel:boreholeIntersect ,
+        strel:injectionExtractionPair ,
+        strel:parent ;
+    skos:prefLabel "Wellbore"@en ;
+.
 
-strel:above a skos:Concept ;
+strel:withIntercalationOf
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Where the lithologic rock unit at hand contains a rock layer or rock layers of a different character, especially where relatively thin strata of one kind of material alternate with thicker strata of some other kind of material, such being the case, for example, with lava flows, beds of shale, and concordant intrusive sills being ‘intercalated’ in a large body of sandstone (thus with sedimentary/stratigraphic and intrusive intercalations). Also: The tectonic/structural insertion/intercalation of rock layers into a pre-existing body of rock (e.g., by thrusting); or the occurrence of a particular fossil horizon between fossil zones (biostratigraphic rock units) of a different character (the latter also representing a stratigraphic intercalation) [Modified from: Gary et al., 1977]."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "With intercalation of"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:hasPermit
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Activities conducted at a site may be governed by a permit, license or authority issued under legislation or regulation. This concept is the inverse of Permits."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Has permit"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:permits
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "The sites permitted to conduct activities under the license or authority issued under a legislation or regulation."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Permits"@en ;
+    skos:scopeNote "This concept uses the verb 'permits'. The noun 'permit' is a GeoAdmin Feature concept defined at http://linked.data.gov.au/def/geoadminfeatures/permit"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:above
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "Object or interval A is above object or interval B."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Above"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:after a skos:Concept ;
-    skos:definition "A spatially bound project follows or continues after the related project. Where times overlap used in conjunction with Concurrent relationship."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "After"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:before a skos:Concept ;
-    skos:definition "A spatially bound project precedes or begins prior to the related project. Where times overlap used in conjunction with Concurrent relationship."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Before"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:concurrent a skos:Concept ;
-    skos:definition "A spatially bound project that occurs partially or fully at the same time as the related project."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Concurrent"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:below a skos:Concept ;
+strel:below
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "Object or interval A is below object or interval B."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Below"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:crosses a skos:Concept ;
-    skos:definition "Line A intersects Line B at points only. Or, Line A is partially inside and partially outside Polygon X"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Crosses"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+strel:comagmaticWith
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Where the igneous rock unit, based on its chemistry and mineralogic features, is considered to have been derived from the same parent magma as another igneous rock unit (After: mindat.org; accessed 13.09.2022)."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Comagmatic with"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:boreholeIntersect a skos:Concept ;
-    skos:definition "A well that intersects the subject well."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Borehole Intersect"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+strel:concurrent
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "A spatially bound project that occurs partially or fully at the same time as the related project."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Concurrent"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:injectionExtractionPair a skos:Concept ;
-    skos:definition "Wells that exist in a pair, or system, in which a well or wells inject fluids and one or more offset wells extract fluids. Such as stimulated production, enhanced geothermale etc."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Injection-Extraction Pair"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+strel:conformableWith
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "The rock unit, including both lithologic rock units and non-lithologic rock units (such as biostratigraphic units/zones, magnetostratigraphic units, etc.) is conformable with the underlying rock unit, the overlying rock unit, or both, there being continuity of deposition between them, such that their contacts (boundaries, surfaces) are common to both and do not embrace hiatus."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Conformable with"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:observation a skos:Concept ;
+strel:equivalentTo
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Where the lithostratigraphic rock unit is laterally equivalent stratigraphically (lithostratigraphically) to another lithostratigraphic rock unit; or a biostratigraphic rock unit/zone is equivalent laterally to another such unit; or a biostratigraphic unit in one scheme/zonation is equivalent to another such unit in a different scheme/zonation that has either current or past application."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Equivalent to"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:faultedAgainst
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Where the lithologic rock unit is faulted against another lithologic rock unit."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Faulted against"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:gradationalInto
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Where the lithologic rock unit is gradational (lithologically) into a stratigraphically underlying or overlying rock unit, or gradational into a laterally adjacent (equivalent) rock unit."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Gradational into"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:intertonguesWith
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:altLabel
+        "Interdigitated with"@en ,
+        "Interfingered with"@en ;
+    skos:definition "Where the contact between laterally adjacent rock bodies breaks down into a series of wedges or tongues that penetrate the adjacent rock body and pinch out individually, essentially embracing the ‘disappearance’ of both rock bodies (After: Gary et al., 1977; Wikipedia [Contact (geology)], accessed 07.09.2022)."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Intertongues with"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:intrudedBy
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Where the lithologic rock unit (which may be an igneous or non-igneous intrusive rock unit) is intruded/cross-cut by an igneous or non-igneous intrusive rock unit."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Intruded by"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:intrudes
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Where the igneous or non-igneous intrusive rock unit intrudes/cross-cuts another lithologic rock unit, which may also be an (older) intrusive rock unit."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Intrudes"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:observation
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:altLabel "Monitoring"@en ;
     skos:definition "A borehole drilled for the observation or monitoring of the subject well or bore"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Observation"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:parent a skos:Concept ;
+strel:offsteps
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Where the lithologic rock unit sits unconformably on progressively older/underlying lithologic rock units."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Offsteps"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:overlappedStratigraphicallyBy
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Where the lithologic rock is overlapped stratigraphically by a younger, onlapping lithologic rock unit."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlapped stratigraphically by"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:overlapsStratigraphically
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:altLabel "Onlaps"@en ;
+    skos:definition "Where the lithologic rock unit extends progressively across an erosion surface, stratigraphically overlapping/onlapping an older/underlying lithologic rock unit."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlaps stratigraphically"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:overlies
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:altLabel "Underlain by"@en ;
+    skos:definition "Where the rock unit (e.g., a lithostratigraphic rock unit, biostratigraphic rock unit/zone, etc.) overlies (is underlain by) another lithologic rock unit (of the same kind/type: lithologic, biostratigraphic, etc.)."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Overlies"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:parent
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "The parent wellbore that the subject wellbore originated from."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Has parent"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:partOf a skos:Concept ;
-    skos:definition "Entity A (the subject site) is a discrete object that forms part of the larger Entity B (the related site). Subject Site is partOf Related Site."@en ;
-    skos:example "Suburb (subject site) partOf City (Related Site)"@en ;
-    owl:inverseOf strel:hasPart ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Part Of"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:hasPart a skos:Concept ;
-    skos:definition "Entity A (the subject site) is a discrete object that has a consitutent part of Entity B (the related site). Subject Site hasPart Related Site."@en ;
-    owl:inverseOf strel:partOf ;
-    skos:example "City (subject site) hasPart Suburb (Related Site)"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Has Part"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:permits a skos:Concept ;
-    skos:definition "The sites permitted to conduct activities under the license or authority issued under a legislation or regulation."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:scopeNote """This concept uses the verb 'permits'. The noun 'permit' is a GeoAdmin Feature concept defined at http://linked.data.gov.au/def/geoadminfeatures/permit"""@en ;
-    skos:prefLabel "Permits"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:hasPermit a skos:Concept ;
-    skos:definition "Activities conducted at a site may be governed by a permit, license or authority issued under legislation or regulation. This concept is the inverse of Permits."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Has permit"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:re-entry a skos:Concept ;
+strel:re-entry
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "A previously abandoned well that the subject well drilled from within. A re-entry drills out or removes any abandonment plugs or equipment from the previously abandoned well."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Re-Entry"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:redrill a skos:Concept ;
+strel:redrill
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:altLabel "Offset"@en ;
     skos:definition "A well in which drilling was abandoned that the subject well is drilled at an offset position to as a direct replacement. A redrill is drilled with the same intended target(s) and commonly the same general design."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Redrill"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:twinned a skos:Concept ;
+strel:supersedes
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Object A supersedes object B. A temporal relationship whereby Object A follows, and is a direct result of the cessation of, Object B."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Supersedes"@en ;
+    skos:scopeNote "In the context of resource regulation, supersedes applies to the transition from an exploration permit to a 'higher tenure', such as a Mining Lease"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:twinned
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "A twin of the subject well. A hole drilled separate to but in support of the subject wells purpose and intent."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Twinned"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:wellPad a skos:Concept ;
+strel:underlies
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:altLabel "Overlain by"@en ;
+    skos:definition "Where the rock unit (e.g., a lithostratigraphic rock unit, biostratigraphic rock unit/zone, etc.) underlies (is overlain by) another lithologic rock unit (of the same kind/type: lithologic, biostratigraphic, etc.)."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Underlies"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:unknown
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Where the relationship between two geological features is unknown."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Unknown"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:wellPad
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "The well pad site from which a batch of wells or bores share a single operational area at surface but drill to different sub-surface targets."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Well Pad"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:contains a skos:Concept ;
-    skos:definition "Object A contains Object B, and the boundaries do not intersect, i.e. Object A (the subject site), wholly encompasses Object B (the related site), in such a way that the boundary of Object A is outside-and-does-not-touch the boundary of Object B. The inverse of Within."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    owl:inverseOf strel:within ;
-    skos:prefLabel "Contains"@en ;
-    skos:scopeNote "Use of strel:contains in a ternary relationship (A related_to B, related_to of type strel:contains) entails A geo:sfContains B"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
 
-strel:within a skos:Concept ;
-    skos:definition "Object A is within object B, and the boundaries do not intersect. The inverse of Contains."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    owl:inverseOf strel:contains ;
-    skos:prefLabel "Within"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+strel:after
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "A spatially bound project follows or continues after the related project. Where times overlap used in conjunction with Concurrent relationship."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "After"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:covers a skos:Concept ;
+strel:before
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "A spatially bound project precedes or begins prior to the related project. Where times overlap used in conjunction with Concurrent relationship."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Before"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:boreholeIntersect
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "A well that intersects the subject well."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Borehole Intersect"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:crosses
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Line A intersects Line B at points only. Or, Line A is partially inside and partially outside Polygon X"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Crosses"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:injectionExtractionPair
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:definition "Wells that exist in a pair, or system, in which a well or wells inject fluids and one or more offset wells extract fluids. Such as stimulated production, enhanced geothermale etc."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Injection-Extraction Pair"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:covers
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "Object A covers object B, and the boundaries intersect."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Covers"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:disjoint a skos:Concept ;
+strel:disjoint
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "There is no intersection area between object A and object B."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Disjoint"@en ;
     skos:scopeNote "Use of strel:disjoint in a ternary relationship (A related_to B, related_to of type strel:disjoint) entails A geo:sfDisjoint B"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:equals a skos:Concept ;
+strel:equals
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "Object B and object A match."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Equals"@en ;
     skos:scopeNote "Use of strel:equals in a ternary relationship (A related_to B, related_to of type strel:equals) entails A geo:sfEquals B"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:touches a skos:Concept ;
-    skos:altLabel "Meets"@en ;
-    skos:definition "Object A and object B touch at the boundary."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Touches"@en ;
-    skos:scopeNote "Use of strel:touches in a ternary relationship (A related_to B, related_to of type strel:touches) entails A geo:sfTouches B"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
-
-strel:intersects a skos:Concept ;
+strel:intersects
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "Object A and B intersect spatially."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Intersects"@en ;
     skos:scopeNote "Use of strel:intersects in a ternary relationship (A related_to B, related_to of type strel:intersects) entails A geo:sfIntersects B"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:overlaps a skos:Concept ;
+strel:overlaps
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
     skos:definition "Object A and B are the same geometry type (point, line, or polygon), the intersection is the same geometry type, and the intersection is distinct from each object."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
     skos:prefLabel "Overlaps"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
 
-strel:supersedes a skos:Concept ;
-    skos:definition "Object A supersedes object B. A temporal relationship whereby Object A follows, and is a direct result of the cessation of, Object B."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-relationships> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-relationships> ;
-    skos:prefLabel "Supersedes"@en ;
-    skos:scopeNote """In the context of resource regulation, supersedes applies to the transition from an exploration permit to a 'higher tenure', such as a Mining Lease"""@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-relationships> .
+strel:partOf
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    owl:inverseOf strel:hasPart ;
+    skos:definition "Entity A (the subject site) is a discrete object that forms part of the larger Entity B (the related site). Subject Site is partOf Related Site."@en ;
+    skos:example "Suburb (subject site) partOf City (Related Site)"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Part Of"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:touches
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    skos:altLabel "Meets"@en ;
+    skos:definition "Object A and object B touch at the boundary."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Touches"@en ;
+    skos:scopeNote "Use of strel:touches in a ternary relationship (A related_to B, related_to of type strel:touches) entails A geo:sfTouches B"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:within
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    owl:inverseOf strel:contains ;
+    skos:definition "Object A is within object B, and the boundaries do not intersect. The inverse of Contains."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Within"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:contains
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    owl:inverseOf strel:within ;
+    skos:definition "Object A contains Object B, and the boundaries do not intersect, i.e. Object A (the subject site), wholly encompasses Object B (the related site), in such a way that the boundary of Object A is outside-and-does-not-touch the boundary of Object B. The inverse of Within."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Contains"@en ;
+    skos:scopeNote "Use of strel:contains in a ternary relationship (A related_to B, related_to of type strel:contains) entails A geo:sfContains B"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+strel:hasPart
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/site-relationships> ;
+    owl:inverseOf strel:partOf ;
+    skos:definition "Entity A (the subject site) is a discrete object that has a consitutent part of Entity B (the related site). Subject Site hasPart Related Site."@en ;
+    skos:example "City (subject site) hasPart Suburb (Related Site)"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/site-relationships> ;
+    skos:prefLabel "Has Part"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/site-relationships> ;
+.
+
+<https://linked.data.gov.au/def/site-relationships>
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2020-01-21"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-03-16"^^xsd:date ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    skos:definition "The relationships between sites both topological and functional. See https://pro.arcgis.com/en/pro-app/latest/tool-reference/big-data-analytics/spatial-relationships-with-big-data.htm for visual representations of spatial relationships."@en ;
+    skos:hasTopConcept
+        strel:above ,
+        strel:after ,
+        strel:before ,
+        strel:below ,
+        strel:boreholeIntersect ,
+        strel:comagmaticWith ,
+        strel:conformableWith ,
+        strel:contains ,
+        strel:covers ,
+        strel:crosses ,
+        strel:disjoint ,
+        strel:equals ,
+        strel:equivalentTo ,
+        strel:faultedAgainst ,
+        strel:gradationalInto ,
+        strel:hasPart ,
+        strel:hasPermit ,
+        strel:injectionExtractionPair ,
+        strel:intersects ,
+        strel:intertonguesWith ,
+        strel:intrudedBy ,
+        strel:intrudes ,
+        strel:observation ,
+        strel:offsteps ,
+        strel:overlappedStratigraphicallyBy ,
+        strel:overlaps ,
+        strel:overlapsStratigraphically ,
+        strel:overlies ,
+        strel:parent ,
+        strel:partOf ,
+        strel:permits ,
+        strel:re-entry ,
+        strel:redrill ,
+        strel:supersedes ,
+        strel:touches ,
+        strel:twinned ,
+        strel:underlies ,
+        strel:unknown ,
+        strel:wellPad ,
+        strel:withIntercalationsOf ,
+        strel:within ;
+    skos:prefLabel "Site Relationships"@en ;
+.
+

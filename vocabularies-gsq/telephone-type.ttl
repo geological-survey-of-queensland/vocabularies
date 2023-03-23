@@ -1,45 +1,60 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix tsl: <http://linked.data.gov.au/def/telephone-type/> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-
-<http://linked.data.gov.au/def/telephone-type> a owl:Ontology,
-        skos:ConceptScheme ;
-    dcterms:created "2020-03-25"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-05-13"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+vcard:Cell
+    a
+        skos:Concept ,
+        vcard:TelephoneType ;
     dcterms:provenance "Derived from Australian Standard AS 4590.1:2017" ;
-    skos:definition "The code and description that differentiates the type of telecommunications device based on the transmission service connected to the telephone network."@en ;
-    skos:prefLabel "Telephone Type"@en ;
-    skos:hasTopConcept 
-        vcard:Cell ,
-        vcard:Voice .
-
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
-
-vcard:Cell a skos:Concept , vcard:TelephoneType ;
-    skos:altLabel "Cell"@en,
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/telephone-type> ;
+    skos:altLabel
+        "Cell"@en ,
         "Cellular"@en ;
     skos:definition "A portable telephone that can make and receive calls over a radio frequency link while the user is moving within a telephone service area."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/telephone-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/telephone-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/telephone-type> ;
     skos:notation "01" ;
     skos:prefLabel "Mobile"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/telephone-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/telephone-type> ;
+.
 
-vcard:Voice a skos:Concept ;
-    skos:altLabel "Landline"@en , "voice"@en ;
+vcard:Voice
+    a skos:Concept ;
+    dcterms:provenance "Derived from Australian Standard AS 4590.1:2017" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/telephone-type> ;
+    skos:altLabel
+        "Landline"@en ,
+        "voice"@en ;
     skos:definition "A telephone that can make and receive calls by transmission of communications signals via a cable to a fixed location."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/telephone-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/telephone-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/telephone-type> ;
     skos:notation "02" ;
     skos:prefLabel "Fixed Line"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/telephone-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/telephone-type> ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/telephone-type>
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2020-03-25"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-03-16"^^xsd:date ;
+    dcterms:provenance "Derived from Australian Standard AS 4590.1:2017" ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    skos:definition "The code and description that differentiates the type of telecommunications device based on the transmission service connected to the telephone network."@en ;
+    skos:hasTopConcept
+        vcard:Cell ,
+        vcard:Voice ;
+    skos:prefLabel "Telephone Type"@en ;
+.
+

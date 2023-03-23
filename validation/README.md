@@ -42,6 +42,5 @@ Any validation errors will be printed to screen.
 All vocabs can be validated at once using the bulk validator Python script `validate_all.py` which uses pySHACL. Run it like this:
 
 ```
-
+python validate_all.py report
 ```
-

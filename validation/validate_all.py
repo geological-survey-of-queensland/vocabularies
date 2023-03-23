@@ -32,21 +32,23 @@ commands = [
 validators = [
     "vocpub",
     "gsq",
-    "combined"
+    "combined",
+    "skosShapes.shapes",
 ]
 
 if sys.argv[1] not in commands:
-    print(f"You must supply a command to this script that is one of {', '.join(commands)}")
-    exit()
+    print(f"You must supply a command to this script that is one of [{', '.join(commands)}]")
+    exit(1)
 
 if len(sys.argv) > 2:
     validator = sys.argv[2]
     if validator not in validators:
-        print(f"If you indicate a validator, it must be one of  {', '.join(validators)}. If you don't VocPub will be used")
-        exit()
+        print(f"If you indicate a validator, it must be one of [{', '.join(validators)}]. If you don't VocPub will be used")
+        exit(1)
 else:
     validator = "vocpub"
 
+total_error_count = 0
 if sys.argv[1] == "report":
     for f in sorted(p):
         print(f)
@@ -55,8 +57,13 @@ if sys.argv[1] == "report":
             error_count = 0
             for s, o in v[1].subject_objects(predicate=URIRef("http://www.w3.org/ns/shacl#resultMessage")):
                 error_count += 1
-        except:
-            print("ERROR")
+        except Exception as err:
+            print(f"ERROR in {f}:", err)
+            v = False,
+            error_count = None
+            
+        if error_count > 0 or error_count is None:
+            total_error_count += 1
 
         validity_state[f.name] = {
             "valid": v[0],
@@ -79,3 +86,5 @@ elif sys.argv[1] == "onebyone":
                 print("Valid")
         except:
             exit()
+
+print(f"Total errors:", total_error_count)

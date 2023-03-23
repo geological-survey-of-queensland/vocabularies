@@ -1,254 +1,345 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix svydt: <http://linked.data.gov.au/def/survey-detail-type/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX svydt: <https://linked.data.gov.au/def/survey-detail-type/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://linked.data.gov.au/def/survey-detail-type> a owl:Ontology,
-        skos:ConceptScheme ;
-    dcterms:created "2020-03-30"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-02-04"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    skos:definition "Miscellaneous Survey Details."@en ;
-    skos:hasTopConcept svydt:active-period,
-        svydt:ag-survey-type,
-        svydt:comments,
-        svydt:full-time-employees,
-        svydt:full-time-contractors,
-        svydt:funding-program,
-        svydt:historic-tenure,
-        svydt:historic-title,
-        svydt:interval-m,
-        svydt:job-number,
-        svydt:line-direction-degrees,
-        svydt:locality,
-        svydt:report-period-freight-cost,
-        svydt:survey-height-m,
-        svydt:survey-line,
-        svydt:tie-interval-m,
-        svydt:tie-line-direction-degrees,
-        svydt:total-line-kilometres,
-        svydt:total-stations,
+svydt:airborne-geophysics
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Additional details that describe Airborne Geophysics surveys."@en ;
+    skos:member
+        svydt:ag-survey-type ,
+        svydt:comments ,
+        svydt:funding-program ,
+        svydt:interval-m ,
+        svydt:job-number ,
+        svydt:line-direction-degrees ,
+        svydt:survey-height-m ,
+        svydt:tie-interval-m ,
+        svydt:tie-line-direction-degrees ,
+        svydt:total-line-kilometres ,
         svydt:vessel-name ;
-    skos:prefLabel "Survey Detail Type"@en .
+    skos:prefLabel "Airborne Geophysics"@en ;
+.
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+svydt:airborne-spectral
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Additional details that describe Airborne Spectral surveys."@en ;
+    skos:member
+        svydt:comments ,
+        svydt:funding-program ,
+        svydt:interval-m ,
+        svydt:job-number ,
+        svydt:line-direction-degrees ,
+        svydt:survey-height-m ,
+        svydt:tie-interval-m ,
+        svydt:tie-line-direction-degrees ,
+        svydt:total-line-kilometres ,
+        svydt:vessel-name ;
+    skos:prefLabel "Airborne Spectral"@en ;
+.
 
-svydt:ag-survey-type a skos:Concept ;
-    skos:definition "Airborne geophysical survey type (exploration, government, open range, multi-client or experimental)"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:prefLabel "AG Survey Type"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+svydt:ground-geophysics
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Additional details that describe Ground Geophysics surveys."@en ;
+    skos:member
+        svydt:comments ,
+        svydt:funding-program ,
+        svydt:interval-m ,
+        svydt:job-number ,
+        svydt:survey-line ,
+        svydt:total-stations ;
+    skos:prefLabel "Ground Geophysics"@en ;
+.
 
-svydt:total-stations a skos:Concept ;
-    skos:definition "Number of stations included in survey"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:prefLabel "Total Stations"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+svydt:seismic-surveys
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Additional details that describe Seismic Surveys surveys."@en ;
+    skos:member
+        svydt:comments ,
+        svydt:funding-program ,
+        svydt:job-number ,
+        svydt:survey-line ,
+        svydt:total-line-kilometres ;
+    skos:prefLabel "Seismic Surveys"@en ;
+.
 
-svydt:full-time-employees a skos:Concept ;
-    skos:altLabel "FTE Employees"@en,
-        "Full-time equivalent employees"@en,
-        "Full-Time (FTE) Equivalent Employees"@en ;
-    skos:definition "The full-time equivalent (FTE) number of employees working on a project throughout the reporting period."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:prefLabel "Full-Time Equivalent Employees"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+svydt:survey-plans
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Additional details that describe Survey Plans."@en ;
+    skos:member
+        svydt:comments ,
+        svydt:historic-tenure ,
+        svydt:historic-title ,
+        svydt:locality ;
+    skos:prefLabel "Survey Plans"@en ;
+.
 
-svydt:full-time-contractors a skos:Concept ;
-    skos:altLabel "FTE Contractors"@en,
-        "Full-time equivalent contractors"@en,
-        "Full-Time (FTE) Equivalent Contractors"@en ;
+svydt:active-period
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:definition "The number of days during the reporting period (month) on which production occurred."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "Active Period"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
+
+svydt:full-time-contractors
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:altLabel
+        "FTE Contractors"@en ,
+        "Full-Time (FTE) Equivalent Contractors"@en ,
+        "Full-time equivalent contractors"@en ;
     skos:definition "The full-time equivalent (FTE) number of contract workers (contractors) working on a project throughout the reporting period."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Full-Time Equivalent Contractors"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:historic-tenure a skos:Concept ;
-    skos:altLabel "Historic Permit"@en,
+svydt:full-time-employees
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:altLabel
+        "FTE Employees"@en ,
+        "Full-Time (FTE) Equivalent Employees"@en ,
+        "Full-time equivalent employees"@en ;
+    skos:definition "The full-time equivalent (FTE) number of employees working on a project throughout the reporting period."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "Full-Time Equivalent Employees"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
+
+svydt:report-period-freight-cost
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:definition "The total freight charged to the reporting mine during the reporting period (AUD)"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "Report Period Freight Cost"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
+
+svydt:ag-survey-type
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:definition "Airborne geophysical survey type (exploration, government, open range, multi-client or experimental)"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "AG Survey Type"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
+
+svydt:historic-tenure
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:altLabel
+        "Historic Permit"@en ,
         "Legacy Permit"@en ,
-        "Legacy Tenure"@en,
+        "Legacy Tenure"@en ,
         "Previous System Tenure"@en ;
     skos:definition "A legacy tenure or permit identifier that is not in current usage."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Historic Tenure"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:historic-title a skos:Concept ;
-    skos:altLabel "Legacy Title"@en,
-        "Former Plan Number"@en ;
+svydt:historic-title
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:altLabel
+        "Former Plan Number"@en ,
+        "Legacy Title"@en ;
     skos:definition "A previous title or reference to the survey or document that has been edited, amended, or replaced."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Historic Title"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:locality a skos:Concept ;
+svydt:locality
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:definition "A geographic subdivision or district used in rural and regional Australia. Localities are commonly based on a local feature or township, but some occurrences may be subjectively named."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Locality"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:line-direction-degrees a skos:Concept ;
+svydt:total-stations
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:definition "Number of stations included in survey"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "Total Stations"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+svydt:line-direction-degrees
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:definition "Mean survey line direction (bearing) from true north.  Values between 000-359 degrees"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Line Direction (degrees)"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:survey-height-m a skos:Concept ;
+svydt:survey-height-m
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:altLabel "terrain clearance"@en ;
     skos:definition "Mean survey height above ground surface (values in metres relative to AHD)"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Survey Height (m)"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:survey-line a skos:Concept ;
+svydt:survey-line
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:definition "List of survey lines (comma deliminated) included in the survey"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Survey Line"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:tie-interval-m a skos:Concept ;
+svydt:tie-interval-m
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:altLabel "tie line spacing"@en ;
     skos:definition "Mean distance in metres between survey tie lines (if used) in regularly spaced survey"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Tie Interval (m)"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:tie-line-direction-degrees a skos:Concept ;
+svydt:tie-line-direction-degrees
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:definition "Mean survey tie line direction (bearing) from true north (often perpendicular to line direction).  Values between 000-359"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Tie Line Direction (degrees)"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:vessel-name a skos:Concept ;
+svydt:vessel-name
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:definition "Name, or call sign, of survey vessel (plane, helicopter, boat).  Further information on vessel may also be added"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Vessel Name"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:interval-m a skos:Concept ;
-    skos:altLabel "line spacing"@en,
+svydt:interval-m
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:altLabel
+        "line spacing"@en ,
         "station spacing"@en ;
     skos:definition "Mean distance in metres between survey lines or stations for a regularly spaced survey"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Interval (m)"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:total-line-kilometres a skos:Concept ;
+svydt:total-line-kilometres
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:definition "Sum of the length of lines contained in the survey in kilometres."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Total Line Kilometres"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:comments a skos:Concept ;
-    skos:definition "Free text comments or notes regarding survey"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:prefLabel "Comments"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
-
-svydt:funding-program a skos:Concept ;
+svydt:funding-program
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:definition "Government funding program that survey was conducted under"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Funding program"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:job-number a skos:Concept ;
+svydt:job-number
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:definition "Survey contractors job number / job identification"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
     skos:prefLabel "Job Number"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:report-period-freight-cost a skos:Concept ;
-    skos:definition "The total freight charged to the reporting mine during the reporting period (AUD)"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:prefLabel "Report Period Freight Cost"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
+svydt:comments
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:definition "Free text comments or notes regarding survey"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/survey-detail-type> ;
+    skos:prefLabel "Comments"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/survey-detail-type> ;
+.
 
-svydt:active-period a skos:Concept ;
-    skos:definition "The number of days during the reporting period (month) on which production occurred."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/survey-detail-type> ;
-    skos:prefLabel "Active Period"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/survey-detail-type> .
-
-svydt:airborne-geophysics a skos:Collection ;
-    skos:definition "Additional details that describe Airborne Geophysics surveys."@en ;
-    skos:member svydt:ag-survey-type,
-        svydt:comments,
-        svydt:funding-program,
-        svydt:interval-m,
-        svydt:job-number,
-        svydt:line-direction-degrees,
-        svydt:survey-height-m,
-        svydt:tie-interval-m,
-        svydt:tie-line-direction-degrees,
-        svydt:total-line-kilometres,
+<https://linked.data.gov.au/def/survey-detail-type>
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2020-03-30"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-03-16"^^xsd:date ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    skos:definition "Miscellaneous Survey Details."@en ;
+    skos:hasTopConcept
+        svydt:active-period ,
+        svydt:ag-survey-type ,
+        svydt:comments ,
+        svydt:full-time-contractors ,
+        svydt:full-time-employees ,
+        svydt:funding-program ,
+        svydt:historic-tenure ,
+        svydt:historic-title ,
+        svydt:interval-m ,
+        svydt:job-number ,
+        svydt:line-direction-degrees ,
+        svydt:locality ,
+        svydt:report-period-freight-cost ,
+        svydt:survey-height-m ,
+        svydt:survey-line ,
+        svydt:tie-interval-m ,
+        svydt:tie-line-direction-degrees ,
+        svydt:total-line-kilometres ,
+        svydt:total-stations ,
         svydt:vessel-name ;
-    skos:prefLabel "Airborne Geophysics"@en .
+    skos:prefLabel "Survey Detail Type"@en ;
+.
 
-svydt:airborne-spectral a skos:Collection ;
-    skos:definition "Additional details that describe Airborne Spectral surveys."@en ;
-    skos:member svydt:comments,
-        svydt:funding-program,
-        svydt:interval-m,
-        svydt:job-number,
-        svydt:line-direction-degrees,
-        svydt:survey-height-m,
-        svydt:tie-interval-m,
-        svydt:tie-line-direction-degrees,
-        svydt:total-line-kilometres,
-        svydt:vessel-name ;
-    skos:prefLabel "Airborne Spectral"@en .
-
-svydt:ground-geophysics a skos:Collection ;
-    skos:definition "Additional details that describe Ground Geophysics surveys."@en ;
-    skos:member svydt:comments,
-        svydt:funding-program,
-        svydt:interval-m,
-        svydt:job-number,
-        svydt:survey-line,
-        svydt:total-stations ;
-    skos:prefLabel "Ground Geophysics"@en .
-
-svydt:seismic-surveys a skos:Collection ;
-    skos:definition "Additional details that describe Seismic Surveys surveys."@en ;
-    skos:member svydt:comments,
-        svydt:funding-program,
-        svydt:job-number,
-        svydt:survey-line,
-        svydt:total-line-kilometres ;
-    skos:prefLabel "Seismic Surveys"@en .
-
-svydt:survey-plans a skos:Collection ;
-    skos:definition "Additional details that describe Survey Plans."@en ;
-    skos:member svydt:comments,
-        svydt:historic-tenure,
-        svydt:historic-title,
-        svydt:locality ;
-    skos:prefLabel "Survey Plans"@en .
