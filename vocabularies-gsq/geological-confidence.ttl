@@ -1,0 +1,105 @@
+PREFIX gopt: <https://linked.data.gov.au/def/geological-confidence/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+gopt:very-high
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:definition "The highest confidence that this property is accurate, based on a variety of factors. Greater than 80% confidence."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:prefLabel "Very high"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-confidence> ;
+.
+
+gopt:high
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:definition "The second highest confidence that this property is accurate, based on a variety of factors. Greater than 50% confidence."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:prefLabel "High"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-confidence> ;
+.
+
+gopt:moderate
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:definition "Better than or equal to 50% confidence that this property is accurate, based on a variety of factors."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:prefLabel "Moderate"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-confidence> ;
+.
+
+gopt:low
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:definition "The second lowest confidence that this property is accurate, based on a variety of factors. Less than 50% confidence."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:prefLabel "Low"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-confidence> ;
+.
+
+gopt:very-low
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:definition "The lowest confidence that this property is accurate, based on a variety of factors. Less than 20% confidence."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:prefLabel "Very low"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-confidence> ;
+.
+
+gopt:uncertain
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:definition "Insufficient factors are present to provide a reasonable estimate of confidence."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:prefLabel "~"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-confidence> ;
+.
+
+gopt:questionable
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:definition "Insufficient factors are present to provide a reasonable estimate of confidence, but it is expected to be below 50% confidence."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-confidence> ;
+    skos:prefLabel "?"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-confidence> ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/geological-confidence>
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2021-03-31"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-03-31"^^xsd:date ;
+    dcterms:provenance "Self defined by GSQ" ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    skos:definition "How confident we are in a geological property."@en ;
+    skos:hasTopConcept
+        gopt:very-high ,
+        gopt:high ,
+        gopt:moderate ,
+        gopt:low ,
+        gopt:very-low ,
+        gopt:uncertain ,
+        gopt:questionable ;
+    skos:prefLabel "Geological confidence"@en ;
+.
+
