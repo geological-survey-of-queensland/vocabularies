@@ -1,0 +1,73 @@
+PREFIX gopt: <https://linked.data.gov.au/def/geological-property-type/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+gopt:lower-age
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-property-type> ;
+    skos:definition "The oldest in a range of possible ages."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-property-type> ;
+    skos:prefLabel "Lower age"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-property-type> ;
+.
+
+gopt:upper-age
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-property-type> ;
+    skos:definition "The youngest in a range of possible ages."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-property-type> ;
+    skos:prefLabel "Upper age"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-property-type> ;
+.
+
+gopt:Dominant-rock
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-property-type> ;
+    skos:definition "The majority rock in an item (ie. rock unit, hand sample or thin section)."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-property-type> ;
+    skos:prefLabel "Dominant rock"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-property-type> ;
+.
+
+gopt:Lithological-summary
+    a skos:Concept ;
+    dcterms:provenance "Self defined by GSQ" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/geological-property-type> ;
+    skos:definition "A shortened description of the lithological properties of an item (ie. rock unit, hand sample or thin section)."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/geological-property-type> ;
+    skos:prefLabel "Lithological summary"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/geological-property-type> ;
+.
+
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/geological-property-type>
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2021-03-31"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-03-31"^^xsd:date ;
+    dcterms:provenance "Self defined by GSQ" ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    skos:definition "Describes the type of a geological property."@en ;
+    skos:hasTopConcept
+        gopt:lower-age ,
+        gopt:upper-age ,
+        gopt:Dominant-rock ,
+        gopt:Lithological-summary  ;
+    skos:prefLabel "Geological Property Type"@en ;
+.
+
