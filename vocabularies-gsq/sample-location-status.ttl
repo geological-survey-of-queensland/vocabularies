@@ -3,71 +3,71 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sdo: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX smlcst: <https://linked.data.gov.au/def/sample-location-status/>
+PREFIX smlcst: <http://linked.data.gov.au/def/sample-location-status/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 smlcst:collected
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-status> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-location-status> ;
     skos:definition "Sample has been collected from a sampling location and is in temporary storage prior to transfer to permanent or semi-permanent storage"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "Collected"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> ;
 .
 
 smlcst:in-storage
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-status> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-location-status> ;
     skos:altLabel "Static"@en ;
     skos:definition "Held at a storage location in an archived state."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "In Storage"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> ;
 .
 
 smlcst:in-transit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-status> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-location-status> ;
     skos:definition "In transit between locations."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "In transit"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> ;
 .
 
 smlcst:lost
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-status> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-location-status> ;
     skos:definition "Location of sample is not known"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "Lost"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> ;
 .
 
 smlcst:on-display
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-status> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-location-status> ;
     skos:definition "Held in a storage facility, museum, or other location for display and/or analysis."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "On Display"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> ;
 .
 
 smlcst:processing
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-location-status> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-location-status> ;
     skos:altLabel
         "Analysis"@en ,
         "Laboratory"@en ;
     skos:definition "The sample is at a laboratory, university, or other facility external to its registered storage facility undergoing processing or analysis."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-location-status> ;
     skos:prefLabel "Processing"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-location-status> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-location-status> ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -76,7 +76,7 @@ smlcst:processing
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/sample-location-status>
+<http://linked.data.gov.au/def/sample-location-status>
     a
         owl:Ontology ,
         skos:ConceptScheme ;
