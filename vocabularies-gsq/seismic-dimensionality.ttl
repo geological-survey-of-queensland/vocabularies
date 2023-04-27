@@ -1,7 +1,7 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX sdim: <https://linked.data.gov.au/def/seismic-dimensionality/>
+PREFIX sdim: <http://linked.data.gov.au/def/seismic-dimensionality/>
 PREFIX sdo: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -9,35 +9,35 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 sdim:2d-seismic
     a skos:Concept ;
     dcterms:provenance "Defined by GSQ" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/seismic-dimensionality> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/seismic-dimensionality> ;
     skos:altLabel
         "2D"@en ,
         "2D Seismic Survey"@en ,
         "2D Survey"@en ;
     skos:definition "The Fundamental Dataset of a 2D seismic survey is the 'Line'; the Line dataset is a 2D cross-section of the subsurface measured by a chain of geophones. It is described by a function of two parameters : 1) Trace Number and 2) Two-Way Time. A 2D seismic survey may be composed of one or many lines that may or may not intersect with each other."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/seismic-dimensionality> ;
+    skos:inScheme <http://linked.data.gov.au/def/seismic-dimensionality> ;
     skos:prefLabel "2D Seismic"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/seismic-dimensionality> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/seismic-dimensionality> ;
 .
 
 sdim:3d-seismic
     a skos:Concept ;
     dcterms:provenance "Defined by GSQ" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/seismic-dimensionality> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/seismic-dimensionality> ;
     skos:altLabel
         "3D"@en ,
         "3D Seismic Survey"@en ,
         "3D Survey"@en ;
     skos:definition "The Fundamental Dataset of a 3D seismic survey is the 'Volume'; the Volume dataset is a 3D model of the subsurface measured by a grid/array of geophones. It is described by a function of three parameters : 1) In-Line, 2) Cross-Line and 3) Two-Way Time. A 3D seismic survey contains many In-Lines and Cross-Lines that intersect with each other."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/seismic-dimensionality> ;
+    skos:inScheme <http://linked.data.gov.au/def/seismic-dimensionality> ;
     skos:prefLabel "3D Seismic"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/seismic-dimensionality> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/seismic-dimensionality> ;
 .
 
 sdim:4d-seismic
     a skos:Concept ;
     dcterms:provenance "Defined by GSQ" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/seismic-dimensionality> ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/seismic-dimensionality> ;
     skos:altLabel
         "3D Time Lapse Survey"@en ,
         "3D Time-Lapse Survey"@en ,
@@ -49,9 +49,9 @@ sdim:4d-seismic
         "Time-Lapse"@en ,
         "Time-Lapse Survey"@en ;
     skos:definition "The Fundamental Dataset of a 4D seismic survey is the 'Temporal Volume'; The Temporal Volume is a collection of multiple discrete recordings of a volume of the subsurface measured at successive time intervals. It is described by a function of four parameters: 1) In-Line, 2) Cross-Line, 3) Two-Way Time and 4) Repeat Index. The In-Lines and Cross-Lines intersect with each other."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/seismic-dimensionality> ;
+    skos:inScheme <http://linked.data.gov.au/def/seismic-dimensionality> ;
     skos:prefLabel "4D Seismic"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/seismic-dimensionality> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/seismic-dimensionality> ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -60,7 +60,7 @@ sdim:4d-seismic
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/seismic-dimensionality>
+<http://linked.data.gov.au/def/seismic-dimensionality>
     a
         owl:Ontology ,
         skos:ConceptScheme ;
