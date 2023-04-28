@@ -1,8 +1,10 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX iso11179: <https://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -129,6 +131,7 @@ cs:
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "ISO/IEC 11179-6 Information technology - Metadata registries (MDR) - Part 6: Registration, Annex C" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "A SKOS version of the ISO 11179 Annex C Roles and Responsibilities. Organizational roles associated with Administered Item registration processes. The organizational roles specified are Registration Authority, Registrar, Stewards, Submitters, and Read-only users."@en ;
     skos:hasTopConcept
         iso11179:AllOthers ,

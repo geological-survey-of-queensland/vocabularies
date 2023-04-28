@@ -1,8 +1,10 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX als: <https://linked.data.gov.au/def/gsq-alias/>
 PREFIX cs: <https://linked.data.gov.au/def/gsq-alias>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -289,6 +291,7 @@ cs:
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "Sources for any alternate names for features, sites, surveys, or samples catalogued by the Geological Survey of Queensland."@en ;
     skos:hasTopConcept
         als:colloquial ,

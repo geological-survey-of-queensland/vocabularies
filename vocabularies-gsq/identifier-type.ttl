@@ -1,8 +1,10 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/party-identifier-type>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX id: <https://linked.data.gov.au/def/party-identifier-type/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -351,6 +353,7 @@ cs:
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland. From (QGOV)<http://account.qld.gov.au/help/faq.html#howDoIProvide100PointsOfIdentification> and (MyMinesOnline) <http://www.business.qld.gov.au/industries/mining-energy-water/resources/minerals-coal/online-services/myminesonline/register>" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "Types of Identification documents and numbers used in Queensland as acceptable proof of identity for individuals, businesses, and companies. Required and accepted documents by the QGOV and MyMinesOnline systems."@en ;
     skos:hasTopConcept
         id:abn ,

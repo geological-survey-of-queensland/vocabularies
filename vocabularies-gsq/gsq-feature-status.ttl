@@ -1,7 +1,9 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/gsq-feature-status>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX fst: <https://linked.data.gov.au/def/gsq-feature-status/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -136,6 +138,7 @@ cs:
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "The status of a geologic feature, which in name (and definition) may embrace formal, informal, invalid, and other terms, is generally regulated variously (depending on the feature type) by a national, international and/or other code or protocol that applies thereto, and, where applicable, may be administered and/or reviewed by a relevant authority, such as the Geological Survey of Queensland or (for Australian rock units) by Geoscience Australia in collaboration with the Australian Stratigraphy Commission of the Geological Society of Australia."@en ;
     skos:hasTopConcept
         fst:BrieflyDescribed ,

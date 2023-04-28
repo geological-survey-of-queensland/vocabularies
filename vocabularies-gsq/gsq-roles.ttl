@@ -1,3 +1,4 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/gsq-roles>
 PREFIX datac: <https://linked.data.gov.au/def/dataciteroles/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
@@ -7,6 +8,7 @@ PREFIX iso11179: <https://linked.data.gov.au/def/iso11179-6/RolesAndResponsibili
 PREFIX isorole: <https://linked.data.gov.au/def/iso19115-1/RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs1: <file:///Users/edmondchuc/projects/gsq-vocabularies/vocabularies-gsq/www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -359,6 +361,7 @@ cs:
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
+    reg:status agldwgstatus:stable ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)."@en ;
     skos:hasTopConcept
         datac:DataCollector ,

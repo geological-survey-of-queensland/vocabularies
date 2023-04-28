@@ -1,8 +1,10 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <http://resource.geosciml.org/vocabulary/timescale/skos-demo>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isc: <http://resource.geosciml.org/classifier/ics/ischart/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX ts: <http://resource.geosciml.org/vocabulary/timescale/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -6704,6 +6706,7 @@ cs:
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:rights "Original version Copyright © 2020 International Commission on Stratigraphy"@en ;
     dcterms:source "https://stratigraphy.org/chart"^^xsd:anyURI ;
+    reg:status agldwgstatus:stable ;
     skos:definition "SKOS representation of the Geologic Time Scale, as defined in the International Chronostratigraphic Chart (ICC) from the International Commission on Stratigraphy (ICS). The ICC embraces both chronostratigraphic (time-rock) units and their equivalent geochronologic (geologic-time) units, the former being related to the ‘Stratigraphic points’ referred to below, and the latter (geochronologic units) being employed in this SKOS representation."@en ;
     skos:hasTopConcept
         isc:Phanerozoic ,

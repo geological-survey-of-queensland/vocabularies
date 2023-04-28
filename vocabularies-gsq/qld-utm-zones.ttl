@@ -1,8 +1,10 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/qld-utm-zones>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX qldutm: <https://linked.data.gov.au/def/qld-utm-zones/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -52,6 +54,7 @@ cs:
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Concepts extracted from OGC sources" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "The universal transverse mercator (UTM) zones used and referred to within Queensland. The UTM system divides the Earth into 60 zones, each 6 degrees of longitude in width. Zone 1 covers longitude 180 to 174 W; zone numbering increases eastward to zone 60, which covers longitude 174 to 180E. The polar regions south of 80S and north of 84N are excluded."@en ;
     skos:hasTopConcept
         qldutm:z54 ,

@@ -1,9 +1,11 @@
 PREFIX : <https://linked.data.gov.au/def/countries/>
-PREFIX cs: <https://linked.data.gov.au/def/countries>
 PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/countries>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -10038,6 +10040,7 @@ cs:
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "http://dd.eionet.europa.eu/vocabulary/common/countries/view"^^xsd:anyURI ;
+    reg:status agldwgstatus:stable ;
     skos:definition "Country codes and names from ISO-3166."@en ;
     skos:hasTopConcept
         :AD ,
