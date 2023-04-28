@@ -1,4 +1,6 @@
 PREFIX : <https://linked.data.gov.au/def/borehole-status/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/borehole-status>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -13,8 +15,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Modified from: Geoscience Australia, modified from PPDM Wellbore Status vocabulary, 2014; CoalLog. Similar to PPDM's 'location' classification" ;
     skos:usageNote "Used by GA, QLD, BOM" ;
     skos:altLabel "new well"^^:NT ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :not-operational ;
 .
 
@@ -25,8 +27,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "From GSQ" ;
     skos:usageNote "Only used in QLD" ;
     skos:altLabel "planned"^^:NOPSEMA ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :proposed ;
 .
 
@@ -37,8 +39,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Derived from QLD's term" ;
     skos:usageNote "Only used in QLD" ;
     skos:altLabel "" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :proposed ;
 .
 
@@ -49,8 +51,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "" ;
     skos:usageNote "" ;
     skos:altLabel "" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :proposed ;
 .
 
@@ -61,8 +63,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Created for the Borehole Status vocabulary harmonisation initiative in 2023" ;
     skos:usageNote "" ;
     skos:altLabel "" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :proposed ;
 .
 
@@ -73,8 +75,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "From GA. Similar to PPDM's 'drilling'" ;
     skos:usageNote "Used by GA, NOPSEMA" ;
     skos:altLabel "" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :not-operational ;
 .
 
@@ -85,8 +87,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Created for the Borehole Status vocabulary harmonisation initiative in 2023" ;
     skos:usageNote "" ;
     skos:altLabel "" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :in-progress ;
 .
 
@@ -97,8 +99,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Modified from GA, for: completed" ;
     skos:usageNote "" ;
     skos:altLabel "drilling"^^:WA ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :not-operational ;
 .
 
@@ -109,9 +111,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Modified from NOPSEMA, to include monitoring" ;
     skos:usageNote "" ;
     skos:altLabel "" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
 .
 
 :producing
@@ -120,8 +122,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "The status of a borehole during which liquids or gas are being extracted from the borehole"@en ;
     dcterms:provenance "Sourced from GA" ;
     skos:usageNote "Used by GA, QLD, NZ, WA" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:altLabel "On Production"^^:QLD , "Producer"^^:VIC ;
     skos:broader :operational ;
 .
@@ -132,8 +134,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "A site that is an active part of a project or operation that typically contributes to production, but is not currently due to other activities, such as a well undergoing routine maintenance that is not suspended, or a Mining Lease in which excavation is occuring after construction, but prior to, or between, extraction phases"@en ;
     dcterms:provenance "From QLD" ;
     skos:usageNote "" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :operational ;
 .
 
@@ -144,8 +146,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Used in NSW" ;
     skos:usageNote "" ;
     skos:altLabel "" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :producing ;
 .
 
@@ -156,8 +158,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "From GA" ;
     skos:usageNote "Used by GA, NZ" ;
     skos:altLabel "injector"^^:NT , "injection"^^:WA , "inj"^^:VIC  ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :operational ;
 .
 
@@ -166,8 +168,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel ""@en ;
     skos:definition "None given"@en ;
     dcterms:provenance "From NT" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :operational ;
 .
 
@@ -176,8 +178,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Producing and Injecting"@en ;
     skos:definition "The status of a borehole that alternately produces and injects liquid or gas into a borehole."@en ;
     dcterms:provenance "From GA" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :producing , :injecting ;
 .
 
@@ -188,8 +190,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "From QLD" ;
     skos:usageNote "Used by GA, QLD, NT & SA" ;
     skos:altLabel "observation"^^:NT , "UCG"^^:SA , "investigation"^^:SA , "UCG"^^:SA  , "observation"^^:VIC ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :operational ;
 .
 
@@ -199,8 +201,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "A borehole/well that is primarily producing water"@en ;
     dcterms:provenance "From QLD" ;
     skos:altLabel "water well"^^:SA ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :producing ;
 .
 
@@ -209,8 +211,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Reconditioned"@en ;
     skos:definition "Borehole (e.g., groundwater feature) has been reconditioned so that functionality has improved"@en ;
     dcterms:provenance "Modified from BOM" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :operational ;
 .
 
@@ -221,9 +223,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "From NOPSEMA. NOPSEMA prefers to avoid using the term 'suspended' as it has a variety of definitions, but the term is intended to reflect the wording in the regulations. For well integrity monitoring purposes, the distinction between shut in and suspended is critical." ;
     skos:usageNote "Not operational shut in, Not operational plugged, Not operational suspended (latter two are equivalent, suggested by NOPSEMA notes for 'Not operational suspended'). Equivalent to 'plugged' defined in Section 10.11.2 of OGUK Well Lifecycle Integrity Guidelines Issue 4." ;
     skos:altLabel "inactive"^^:QLD ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
 .
 
 :suspended
@@ -231,8 +233,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Suspended"@en ;
     skos:definition "Borehole operations have been halted for a significant period of time or in a manner that requires significant effort for the resumption of activities. The borehole can be plugged downhole and fluids injected on top of the plug in order to create a temporary seal to prevent hydrocarbon leakage. The surface equipment remains in place. Suspended is never the final status of a borehole."@en ;
     dcterms:provenance "From GA" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :not-operational ;
 .
 
@@ -242,8 +244,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "A borehole/well with one or more valves temporarily closed in the direction of flow"@en ;
     dcterms:provenance "Mofified from NOPSEMA" ;
     skos:usageNote "Used by NZ, VIC," ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :not-operational ;
 .
 
@@ -252,8 +254,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Cased and Suspended"@en ;
     skos:definition "A well in which casing has been installed, but is suspended and inactive pending installation of completion, monitoring or other equipment"@en ;
     dcterms:provenance "From QLD" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :not-operational ;
 .
 
@@ -264,8 +266,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "From GA" ;
     skos:altLabel "decommissioned"^^:BOM , "concluded"^^:QLD , "completed" ;
     skos:usageNote "Used by GA & WA. Similar to CoalLog status 'completed'" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :not-operational ;
 .
 
@@ -274,8 +276,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Plugged"@en ;
     skos:definition "The borehole has been filled or sealed. The extent of seal may vary from just plugged near the surface (eg, many coal boreholes) to plugged in order to prevent the migration of oil, gas, water, or other substance from one stratum to another (ie, PPDM definition)"@en ;
     dcterms:provenance "Geoscience Australia, modified from PPDM Wellbore Status vocabulary, 2014" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :abandoned ;
 .
 
@@ -284,8 +286,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Backfilled"@en ;
     skos:definition "Borehole has been backfilled from the surface."@en ;
     dcterms:provenance "From BOM, CoalLog" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :abandoned ;
 .
 
@@ -295,8 +297,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "A borehole/well in which all penetrated zones with flow potential have been permanently isolated from surface and from lower pressured zones. Wellhead/conductor have been removed unless approved to leave in situ. Well has not yet been accepted by the regulatory authority (e.g., NOPSEMA) as abandoned"@en ;
     dcterms:provenance "After NOPSEMA" ;
     skos:altLabel "decommissioning" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :abandoned ;
 .
 
@@ -307,8 +309,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Modified from: Geoscience Australia, modified from PPDM Wellbore Status vocabulary, 2014" ;
     skos:usageNote "GA definition also used by WA" ;
     skos:altLabel "permanently abandoned" , "permanently sealed" , "plugged and permanently abandoned" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :abandoned , :plugged ;
 .
 
@@ -319,13 +321,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "NZ, after: PPDM Well Status and Classification, 2016" ;
     skos:usageNote "WA uses same; GA & QLD use similar" ;
     skos:altLabel "not recorded"^^:NT ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/borehole-status> ;
-    skos:inScheme <https://linked.data.gov.au/def/borehole-status> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/borehole-status> ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
 .
 
 
-<https://linked.data.gov.au/def/borehole-status>
+cs:
     a
         skos:ConceptScheme ;
     dcterms:created "2023-04-26"^^xsd:date ;
@@ -333,15 +335,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:modified "2023-04-27"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland for the Government Geoscience Information Committee (GGIC) in a Borehole information harmonisation initiative in 2023" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    prov:qualifiedDerivation [
+        prov:entity <https://linked.data.gov.au/def/site-status> ;
+        dcat:hadRole <https://linked.data.gov.au/def/vocab-derivation-modes/subsetting-and-extension> ;
+    ] ;
+    reg:status agldwgstatus:experimental ;
     skos:definition "The operational situation of a Borehole, also known as a Drillhole or a Wellbore. These statuses also apply to Bores or Wells that may be made of multiple Boreholes or Wellbores."@en ;
     skos:hasTopConcept
         :operational ,
         :not-operational ,
         :unknown ;
-    prov:qualifiedDerivation [
-        prov:entity <https://linked.data.gov.au/def/site-status> ;
-        dcat:hadRole <https://linked.data.gov.au/def/vocab-derivation-modes/subsetting-and-extension> ;
-    ] ;
     skos:prefLabel "Borehole Status"@en ;
 .
 
