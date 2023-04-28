@@ -3,7 +3,9 @@ PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/borehole-status>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -337,7 +339,7 @@ cs:
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     prov:qualifiedDerivation [
         prov:entity <https://linked.data.gov.au/def/site-status> ;
-        dcat:hadRole <https://linked.data.gov.au/def/vocab-derivation-modes/subsetting-and-extension> ;
+        prov:hadRole <https://linked.data.gov.au/def/vocab-derivation-modes/subsetting-and-extension> ;
     ] ;
     reg:status agldwgstatus:experimental ;
     skos:definition "The operational situation of a Borehole, also known as a Drillhole or a Wellbore. These statuses also apply to Bores or Wells that may be made of multiple Boreholes or Wellbores."@en ;
