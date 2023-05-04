@@ -273,12 +273,12 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 	a sh:NodeShape ;
 	sh:targetObjectsOf prov:qualifiedDerivation ;
     sh:property [
-        sh:path dcat:hadRole ;
+        sh:path prov:hadRole ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
-    sh:message "Requirement 2.1.10c IF a skos:ConceptScheme indicates that it is derived from another object via use of the prov:qualifiedDerivation predicate, it must then indicate a role for the derivation by use of the predicate dcat:hadRole" ;
+    sh:message "Requirement 2.1.10c IF a skos:ConceptScheme indicates that it is derived from another object via use of the prov:qualifiedDerivation predicate, it must then indicate a role for the derivation by use of the predicate prov:hadRole" ;
 .
 
 <Requirement-2.1.11>
