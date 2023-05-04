@@ -3,9 +3,20 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX smrl: <https://linked.data.gov.au/def/sample-relationship/>
+PREFIX smrl: <http://linked.data.gov.au/def/sample-relationship/>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+smrl:isAggregateOf
+    a skos:Concept ;
+    dcterms:provenance "Source information from http://www.w3.org/TR/vocab-ssn/#Sample_Relations and the SOSA Extensions ontology, modified by the Geological Survey of Queensland." ;
+    sdo:domainIncludes sosa:Sample ;
+    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-relationship> ;
+    skos:definition "Relation from a Sample to an entity that it was dervied from, where multiple sources have been aggregated into a composite sample."@en ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-relationship> ;
+    skos:prefLabel "is aggregate of"@en ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> ;
+.
 
 sosa:hasOriginalSample
     a
@@ -18,9 +29,9 @@ sosa:hasOriginalSample
     rdfs:isDefinedBy sosa: ;
     rdfs:range sosa:Sample ;
     skos:definition "A link from the subject sample to the original sample of interest through a chain of isSampleOf relations."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/sample-relationship> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-relationship> ;
     skos:prefLabel "has original sample"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-relationship> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> ;
 .
 
 sosa:isSampleOf
@@ -33,20 +44,9 @@ sosa:isSampleOf
     rdfs:isDefinedBy sosa: ;
     owl:inverseOf sosa:hasSample ;
     skos:definition "Relation from a Sample to the entity that it was dervied from."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/sample-relationship> ;
+    skos:inScheme <http://linked.data.gov.au/def/sample-relationship> ;
     skos:prefLabel "is sample of"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-relationship> ;
-.
-
-smrl:isAggregateOf
-    a skos:Concept ;
-    dcterms:provenance "Source information from http://www.w3.org/TR/vocab-ssn/#Sample_Relations and the SOSA Extensions ontology, modified by the Geological Survey of Queensland." ;
-    sdo:domainIncludes sosa:Sample ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/sample-relationship> ;
-    skos:definition "Relation from a Sample to an entity that it was dervied from, where multiple sources have been aggregated into a composite sample."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/sample-relationship> ;
-    skos:prefLabel "is aggregate of"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/sample-relationship> ;
+    skos:topConceptOf <http://linked.data.gov.au/def/sample-relationship> ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -55,7 +55,7 @@ smrl:isAggregateOf
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/sample-relationship>
+<http://linked.data.gov.au/def/sample-relationship>
     a
         owl:Ontology ,
         skos:ConceptScheme ;
@@ -66,9 +66,9 @@ smrl:isAggregateOf
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     skos:definition "Relationships between Samples. This vocabulary is derived from the SOSA Ontology and the SOSA Extensions Ontology where the Samples are defined by the class sosa:Sample and the relationships are OWL objectProperties. It reuses the original ontology URIs directly and retains the relationship's non-SKSO properties too so it is a SKOS+ ontology (SKOS + other things)."@en ;
     skos:hasTopConcept
+        smrl:isAggregateOf ,
         sosa:hasOriginalSample ,
-        sosa:isSampleOf ,
-        smrl:isAggregateOf ;
+        sosa:isSampleOf ;
     skos:prefLabel "Sample Relationship"@en ;
 .
 
