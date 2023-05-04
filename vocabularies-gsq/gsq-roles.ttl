@@ -1,11 +1,11 @@
-PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
-PREFIX cs: <https://linked.data.gov.au/def/gsq-roles>
-PREFIX datac: <https://linked.data.gov.au/def/dataciteroles/>
+PREFIX agldwgstatus: <http://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/gsq-roles>
+PREFIX datac: <http://linked.data.gov.au/def/dataciteroles/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX gsqr: <https://linked.data.gov.au/def/gsq-roles/>
-PREFIX iso11179: <https://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities/>
-PREFIX isorole: <https://linked.data.gov.au/def/iso19115-1/RoleCode/>
+PREFIX gsqr: <http://linked.data.gov.au/def/gsq-roles/>
+PREFIX iso11179: <http://linked.data.gov.au/def/iso11179-6/RolesAndResponsibilities/>
+PREFIX isorole: <http://linked.data.gov.au/def/iso19115-1/RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs1: <file:///Users/edmondchuc/projects/gsq-vocabularies/vocabularies-gsq/www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
@@ -123,7 +123,7 @@ isorole:processor
 
 datac:ProjectLeader
     a skos:Concept ;
-    rdfs1:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
+    rdfs1:isDefinedBy <http://linked.data.gov.au/def/dataciteroles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Person officially designated as head of project team or sub-project team instrumental in the work necessary to development of the resource."@en ;
     skos:inScheme cs: ;
@@ -134,7 +134,7 @@ datac:ProjectLeader
 
 datac:ProjectManager
     a skos:Concept ;
-    rdfs1:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
+    rdfs1:isDefinedBy <http://linked.data.gov.au/def/dataciteroles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams."@en ;
     skos:inScheme cs: ;
@@ -145,7 +145,7 @@ datac:ProjectManager
 
 datac:ProjectMember
     a skos:Concept ;
-    rdfs1:isDefinedBy <https://linked.data.gov.au/def/dataciteroles> ;
+    rdfs1:isDefinedBy <http://linked.data.gov.au/def/dataciteroles> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Person on the membership list of a designated project/project team."@en ;
     skos:inScheme cs: ;
@@ -259,7 +259,7 @@ isorole:collaborator
 
 isorole:contributor
     a skos:Concept ;
-    rdfs1:isDefinedBy <https://linked.data.gov.au/def/iso19115-1/RoleCode> ;
+    rdfs1:isDefinedBy <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Party contributing to the resource"@en ;
     skos:inScheme cs: ;
@@ -269,7 +269,7 @@ isorole:contributor
 
 isorole:custodian
     a skos:Concept ;
-    rdfs1:isDefinedBy <https://linked.data.gov.au/def/iso19115-1/RoleCode> ;
+    rdfs1:isDefinedBy <http://linked.data.gov.au/def/iso19115-1/RoleCode> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     skos:definition "Party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource"@en ;
     skos:inScheme cs: ;
@@ -297,7 +297,7 @@ isorole:user
     skos:topConceptOf cs: ;
 .
 
-<https://linked.data.gov.au/org/gsq>
+<http://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
@@ -357,9 +357,9 @@ cs:
         owl:Ontology ,
         skos:ConceptScheme ;
     dcterms:created "2019-10-17"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2023-03-16"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     dcterms:source "http://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"^^xsd:anyURI ;
     reg:status agldwgstatus:stable ;
     skos:definition "The roles of Agents (People and Organisations) in relation to Entities (Datasets, Samples etc.)."@en ;

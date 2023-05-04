@@ -1,9 +1,9 @@
-PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
-PREFIX cs: <https://linked.data.gov.au/def/qualitative-confidence>
+PREFIX agldwgstatus: <http://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/qualitative-confidence>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX qcon: <https://linked.data.gov.au/def/qualitative-confidence/>
+PREFIX qcon: <http://linked.data.gov.au/def/qualitative-confidence/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <http://schema.org/>
@@ -18,7 +18,7 @@ qcon:chronage
         qcon:approximate ,
         qcon:uncertain ;
     skos:prefLabel "Chronotstratigraphic Age Confidence"@en ;
-    prov:wasDerivedFrom <https://linked.data.gov.au/org/gsq> ;
+    prov:wasAttributedTo <https://linked.data.gov.au/org/gsq> ;
 .
 
 qcon:georelationships
@@ -176,7 +176,7 @@ qcon:approximate
     skos:notation "~" ;
     skos:prefLabel "Approximate"@en ;
     skos:topConceptOf cs: ;
-    prov:wasDerivedFrom <https://linked.data.gov.au/org/gsq> ;
+    prov:wasAttributedTo <https://linked.data.gov.au/org/gsq> ;
 .
 
 qcon:high
@@ -347,7 +347,7 @@ qcon:uncertain
     skos:notation "?" ;
     skos:prefLabel "Uncertain"@en ;
     skos:topConceptOf cs: ;
-    prov:wasDerivedFrom <https://linked.data.gov.au/org/gsq> ;
+    prov:wasAttributedTo <https://linked.data.gov.au/org/gsq> ;
 .
 
 qcon:possible
@@ -431,7 +431,7 @@ qcon:probable
     prov:wasDerivedFrom <https://www.spe.org/en/industry/petroleum-resources-management-system-2018/> ;
 .
 
-<https://linked.data.gov.au/org/gsq>
+<http://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
@@ -442,10 +442,10 @@ cs:
         owl:Ontology ,
         skos:ConceptScheme ;
     dcterms:created "2022-09-16"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Constructed by the GSQ, from common terminology, JORC Mineral Resource and Ore Reserves Classification, the Petroleum Resource Management System, and the IPCC Uncertainty Guidance Note (IPCC AR5)." ;
-    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
     reg:status agldwgstatus:stable ;
     skos:definition "Qualitative descriptors to indicate the confidence in a value or interpretation. Some qualitative descriptions may be based on quantitative criteria."@en ;
     skos:hasTopConcept

@@ -2,7 +2,7 @@
 ## Introduction
 The Geological Survey of Queensland (GSQ) publishes vocabularies - a way to describe things and the relationship between things.
 
-A vocabulary is a set of agreed terms:
+A vocabulary is a set of agreed terms:
 * In GSQ, a vocabulary defines the terms used to describe and represent things in the domain of economic resources, geoscience and data management.
 * Vocabularies align information within a business area or across systems.
 * Vocabularies can be very complex (with thousands of terms) or very simple (describing one or two concepts only).
