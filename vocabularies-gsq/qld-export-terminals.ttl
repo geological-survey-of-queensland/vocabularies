@@ -1,7 +1,10 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/qld-export-terminals>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX expt: <http://linked.data.gov.au/def/qld-export-terminals/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -25,76 +28,76 @@ expt:coal-terminals
 expt:abbot-point
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-export-terminals> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "The Abbot Point Port situated approximately 25 kilometres (16 mi) north-west of the township of Bowen (Queensland) including the North Queensland Export Terminal."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-export-terminals> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Abbot Point"@en ;
 .
 
 expt:belt
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-export-terminals> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "BELT"@en ;
     skos:definition "Domestic land-based transport that primarily uses short-distance conveyor belts."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-export-terminals> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Belt"@en ;
 .
 
 expt:dalrymple-bay
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-export-terminals> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "The Dalrymple Bay Coal Terminal situated in the Mackay Region (Queensland)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-export-terminals> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Dalrymple Bay"@en ;
 .
 
 expt:gladstone-port
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-export-terminals> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Port of Gladstone"@en ;
     skos:definition "The Port of Gladstone multi-commodity port located in the Gladstone Region (Queensland)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-export-terminals> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Gladstone Port"@en ;
 .
 
 expt:hay-point
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-export-terminals> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "The Hay Point Services Coal Terminal situated in the Mackay Region (Queensland)."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-export-terminals> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Hay Point"@en ;
 .
 
 expt:port-of-brisbane
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-export-terminals> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "The Port of Brisbane located on the east coast of Australia, within the City of Brisbane and at the mouth of the Brisbane River, adjacent to Moreton Bay."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-export-terminals> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Port of Brisbane"@en ;
 .
 
 expt:rail
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-export-terminals> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "RAIL"@en ;
     skos:definition "Domestic land-based transport that primarily uses the Queensland rail network."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-export-terminals> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Rail"@en ;
 .
 
 expt:road
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-export-terminals> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "ROAD"@en ;
     skos:definition "Domestic land-based transport that primarily uses the Queensland road network."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-export-terminals> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Road"@en ;
 .
 
@@ -104,7 +107,7 @@ expt:road
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
 .
 
-<http://linked.data.gov.au/def/qld-export-terminals>
+cs:
     a
         owl:Ontology ,
         skos:ConceptScheme ;
@@ -113,6 +116,7 @@ expt:road
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "Export terminals for the shipment of resources originating in the state of queensland and the types of land based transport."@en ;
     skos:hasTopConcept
         expt:abbot-point ,

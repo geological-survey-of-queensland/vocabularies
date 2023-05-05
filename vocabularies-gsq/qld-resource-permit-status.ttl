@@ -1,7 +1,10 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/qld-resource-permit-status>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX qrps: <http://linked.data.gov.au/def/qld-resource-permit-status/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -9,57 +12,57 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 qrps:abandoned
     a skos:Concept ;
     dcterms:source "http://myminesonline.business.qld.gov.au"^^xsd:anyURI ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Discarded"@en ;
     skos:definition "An application for a permit that has been abandoned or discarded by the applicant."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Abandoned"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:topConceptOf cs: ;
 .
 
 qrps:application
     a skos:Concept ;
     dcterms:source "http://myminesonline.business.qld.gov.au"^^xsd:anyURI ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Submitted"@en ;
     skos:definition "An application has been made for a permit."@en ;
     skos:hiddenLabel
         "Not Accepted"@en ,
         "Pre-Lodgement"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Application"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:topConceptOf cs: ;
 .
 
 qrps:granted
     a skos:Concept ;
     dcterms:source "http://myminesonline.business.qld.gov.au"^^xsd:anyURI ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Current"@en ;
     skos:definition "A permit that has been granted under legislation."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Granted"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:topConceptOf cs: ;
 .
 
 qrps:non-current
     a skos:Concept ;
     dcterms:source "http://myminesonline.business.qld.gov.au"^^xsd:anyURI ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A permit that was once granted but is now no longer active."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Non-Current"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:topConceptOf cs: ;
 .
 
 qrps:unsuccessful
     a skos:Concept ;
     dcterms:source "http://myminesonline.business.qld.gov.au"^^xsd:anyURI ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "An application for a permit that was deemed unsuccessful by the Department."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Unsuccessful"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/qld-resource-permit-status> ;
+    skos:topConceptOf cs: ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -68,7 +71,7 @@ qrps:unsuccessful
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
 .
 
-<http://linked.data.gov.au/def/qld-resource-permit-status>
+cs:
     a
         owl:Ontology ,
         skos:ConceptScheme ;
@@ -77,6 +80,7 @@ qrps:unsuccessful
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "http://myminesonline.business.qld.gov.au"^^xsd:anyURI ;
+    reg:status agldwgstatus:stable ;
     skos:definition "The stage in the life cycle of a Queensland Resource Permit."@en ;
     skos:hasTopConcept
         qrps:abandoned ,

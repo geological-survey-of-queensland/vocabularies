@@ -1,8 +1,11 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/geofeatures>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geof: <https://linked.data.gov.au/def/geofeatures/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -11,10 +14,10 @@ geof:AbundanceZone
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:BiostratigraphicUnit ;
     skos:definition "The body of strata in which the abundance of a particular taxon or specified group of taxa is significantly greater than is usual in the adjacent parts of the section (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfabz" ;
     skos:prefLabel "abundance zone"@en ;
 .
@@ -23,10 +26,10 @@ geof:AlluvialFluvialUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "A primary regolith-landform unit/setting generally embracing alluvium in channels and on floodplains; includes deltaic deposits. More comprehensively, regolith elements associated with this primary (alluvial/fluvial) regolith-landform mapping unit encompass alluvial plains, stream beds, stream channels, drainage depressions/swales, deltas, floodplains, gravel bars, channel benches, floodplains with numerous claypans, stream banks, levees, meander plains, backplains, anastomosed plains, playas/pans, stream bars, sand bars, terraces, superficial channels, fan/flood-out, swamp, oxbows, and ovoid depressions in eolian sandplains (GSWA, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfraf" ;
     skos:prefLabel "alluvial/fluvial regolith-landform unit"@en ;
 .
@@ -38,7 +41,7 @@ geof:AncientContinent
     rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A continent that has been recognised as being a distinct entity in the past and not as a supercontinent, and, is not recognised as a present-day continent, although it may form part of one or more present-day continents (Definition created here)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:prefLabel "ancient continent"@en ;
 .
 
@@ -46,10 +49,10 @@ geof:Anticline
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A fold, generally convex upward, whose core contains the stratigraphically older rocks (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfann" ;
     skos:prefLabel "anticline"@en ;
 .
@@ -58,10 +61,10 @@ geof:Anticlinorium
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A composite anticlinal structure of regional extent composed of lesser folds. (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfanm" ;
     skos:prefLabel "anticlinorium"@en ;
 .
@@ -70,10 +73,10 @@ geof:Antiform
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "Any convex-upward, concave downward fold. The term is usually used when the folded layers do not possess a stratigraphic order, when the stratigraphic order of the folded layers is not known, or when the fold core also contains the stratigraphically younger rock (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfant" ;
     skos:prefLabel "antiform"@en ;
 .
@@ -82,10 +85,10 @@ geof:AntiformalStack
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A duplex in which the trailing branch lines coincide and the leading branch lines either nearly coincide or lie vertically above each other. This results in a stack of horses and leads to a local culmination in thrust sheet (Neuendorf et al. (2011), citing Boyer & Elliott (1982))."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfank" ;
     skos:prefLabel "antiformal stack"@en ;
 .
@@ -94,10 +97,10 @@ geof:Arch
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A broad, open anticlinal fold on a regional scale; it is usually a basement doming (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfarh" ;
     skos:prefLabel "arch"@en ;
 .
@@ -106,10 +109,10 @@ geof:AssemblageZone
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:BiostratigraphicUnit ;
     skos:definition "The body of strata characterized by an assemblage of three or more fossil taxa that, taken together, distinguishes it in biostratigraphic character from adjacent strata (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfasz" ;
     skos:prefLabel "assemblage zone"@en ;
 .
@@ -120,10 +123,10 @@ geof:AssociationZone
     dcterms:references
         <https://doi.org/10.1016/j.revpalbo.2014.04.002> ,
         <https://doi.org/10.1080/01916122.2012.718609> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:BiostratigraphicUnit ;
     skos:definition "The body of strata between two designated biostratigraphical horizons, which represent the boundaries of the unit and separate it from any preceding or succeeding biozone. These bounding horizons may be delimited individually by: the level of the first stratigraphical appearance (lowermost or oldest occurrence) of a specified taxon (species, genus) in any one stratigraphical section; or another specified biostratigraphical feature considered to approximate a time horizon. The zone is further delimited by specified taxa (preferably, at least three), which have first appearances within the zone (de Jersey & McKellar, 2013; Bomfleur et al., 2014)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfasn" ;
     skos:prefLabel "association zone"@en ;
 .
@@ -135,10 +138,10 @@ geof:Bed
         <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ,
         <https://doi.org/10.1080/08120098508729316> ,
         <https://doi.org/10.1130/9780813774022> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:LithostratigraphicUnit ;
     skos:definition "Bed (Beds) is the smallest formal unit in the hierarchy of sedimentary lithostratigraphic units, e.g. a single stratum lithologically distinguishable from other layers above and below (Salvador, 2013; ICS Online, January 2020). Customarily, only distinctive beds (commonly known as marker beds), which are particularly useful for stratigraphic purposes, like correlation or reference, are given proper names and considered formal lithostratigraphic units (Staines, 1985)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfbed" ;
     skos:prefLabel "bed"@en ;
 .
@@ -147,10 +150,10 @@ geof:Beds
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://doi.org/10.1080/08120098508729316> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:LithostratigraphicUnit ;
     skos:definition "beds (uncapitalised): an informal unit applied to a sequence of poorly known strata until further work is carried out, as advised in the Field Geologist’s Guide to Lithostratigraphic Nomenclature in Australia (Staines, 1985), and endorsed by the Stratigraphic Nomenclature Committee, Geological Society of Australia."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfbds" ;
     skos:prefLabel "beds"@en ;
 .
@@ -159,10 +162,10 @@ geof:Block
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A block of the crust that has been displaced by movement on a fault (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfblk" ;
     skos:prefLabel "block"@en ;
 .
@@ -174,10 +177,10 @@ geof:ChronostratigraphicUnit
         <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ,
         <https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824> ,
         <https://doi.org/10.1306/05230505015> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StratigraphicUnit ;
     skos:definition "As the term implies, Chronostratigraphic Units are Time-Rock Units. They are bodies of rocks, layered or unlayered, that were formed during a specified interval of geologic time. [The units of geologic time during which chronostratigraphic units were formed are called geochronologic (geological-time) units.] (ICS, Online, December, 2019). NB: The North American Stratigraphic Code (2005) and Owen (2009) advise that geochronologic units should only be associated with \"lithodemic\" (i.e., non-stratigraphic) units."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfcht" ;
     skos:prefLabel "chronostratigraphic unit"@en ;
 .
@@ -186,10 +189,10 @@ geof:CoastalTideDominatedUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "A primary regolith-landform unit/setting generally embracing intertidal and supratidal flats and channels, estuaries, and mangrove flats (GSWA, 2013; see scopeNote herewith/below)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrct" ;
     skos:prefLabel "coastal (tide-dominated) regolith-landform unit"@en ;
     skos:scopeNote "More comprehensively, secondary regolith elements associated with this primary (coastal, tide-dominated) regolith-landform mapping unit encompass tidal bars (in channel), tidal channels (subtidal base), tidal deltas, estuaries, tidal flats (intertidal and supratidal), chenier plains, intertidal flats, tidal lagoons, mangrove flats, superficial channels (intertidal), and supratidal flats (GSWA, 2013)."@en ;
@@ -199,10 +202,10 @@ geof:CoastalWaveDominatedUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "A primary regolith-landform unit/setting generally embracing beaches, beach ridges, barrier bars and lagoons, back-beach dunes, coastal cliffs, and other erosional features, e.g., blow-outs (GSWA, 2013; see scopeNote herewith/below)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrcw" ;
     skos:prefLabel "coastal (wave-dominated) regolith-landform unit"@en ;
     skos:scopeNote "More comprehensively, secondary regolith elements associated with this primary (coastal wave-dominated) regolith-landform mapping unit encompass beaches (foreshore and backshore), cliffs, foredunes, foreshores, backshores, back-barrier lagoons, mobile dunes, boulder beaches, beach-ridge plains, and storm beach gravels (GSWA, 2013)."@en ;
@@ -212,10 +215,10 @@ geof:ColluvialUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "A primary regolith-landform unit/setting generally embracing proximal mass-wasting deposits grading into sheetwash with a significant to perceptible slope. More comprehensively, regolith elements associated with this primary (colluvial) regolith-landform mapping unit include colluvial fans, cliff-top slopes, pediments, footslopes, rejuvenated pediments, pediplains, scarp-foot slopes, and talus elements (GSWA, 2013) "@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrcv" ;
     skos:prefLabel "colluvial regolith-landform unit"@en ;
 .
@@ -224,10 +227,10 @@ geof:ConcurrentRangeZone
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:BiostratigraphicUnit ;
     skos:definition "The body of strata including the overlapping parts of the range zones of two specified taxa (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfcrz" ;
     skos:prefLabel "concurrent range zone"@en ;
 .
@@ -238,10 +241,10 @@ geof:Continent
     dcterms:references
         <http://doi.org/10.22459/SN.08.2012> ,
         <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "One of Earth’s major landmasses (or former major landmasses), including continental shelves (Neuendorf et al., 2011; Blewett, 2012). The Australian Continent, as an example, is divided into fundamental geological elements embracing geological provinces."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfcnt" ;
     skos:prefLabel "continent"@en ;
 .
@@ -250,10 +253,10 @@ geof:Craton
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A craton is part of Earth's continental crust that has attained stability and has been little deformed for a prolonged period. Cratons include shield areas, where Precambrian rocks are exposed, and platform areas, where Precambrian rocks are overlain by a thin layer of Phanerozoic strata (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfcrn" ;
     skos:prefLabel "craton"@en ;
 .
@@ -262,10 +265,10 @@ geof:CrustalElement
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://pid.geoscience.gov.au/dataset/ga/14909> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:GeophysicalDomain ;
     skos:definition "Crustal Elements are geophysical domains that represent upper-crustal segments showing some overall commonality of geophysical properties, primarily magnetic and gravity data sets. Crustal elements are not geologically defined features, such as basement provinces. The latter are defined on the basis of geological criteria and are three-dimensional bodies that have a definite thickness and represent time-rock units whose maximum and minimum ages are generally, but not always, well established. Some crustal elements could represent a set of overlying or overlapping basement provinces (Shaw et al., 1996)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfcrt" ;
     skos:prefLabel "crustal element"@en ;
 .
@@ -274,10 +277,10 @@ geof:Depression
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A structurally low area formed in the crust, with various mechanisms of formation (Modified from Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfdpn" ;
     skos:prefLabel "depression"@en ;
 .
@@ -286,10 +289,10 @@ geof:Dome
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "An uplift or anticlinal structure, either circular or elliptical in outline, in which the rocks dip gently away in all directions. A dome may be small or many kilometers in diameter. Domes include diapirs, volcanic domes, and cratonic uplifts (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfdme" ;
     skos:prefLabel "dome"@en ;
 .
@@ -298,10 +301,10 @@ geof:DominantlyIgneousComplexRockUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "See usage of: Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:ComplexRockUnit ;
     skos:definition "A complex rock unit wherein the dominant rock type or types are igneous. See definition for Complex Rock Unit for further detail."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfcxi" ;
     skos:prefLabel "dominantly igneous complex rock unit"@en ;
 .
@@ -310,10 +313,10 @@ geof:DominantlyStratifiedComplexRockUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "See usage of: Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:ComplexRockUnit ;
     skos:definition "A complex rock unit wherein the dominant rock type or types are stratified. See definition for Complex Rock Unit for further detail."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfcxs" ;
     skos:prefLabel "dominantly stratified complex rock unit"@en ;
 .
@@ -322,10 +325,10 @@ geof:Duplex
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A structural complex consisting of a roof thrust at the top and a floor thrust at the base, within which a suite of more steeply dipping imbricate thrust faults thicken and shorten the intervening panel of rock (Neuendorf et al. (2011), citing Dahlstrom (1970), Boyer (1976))."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfdpx" ;
     skos:prefLabel "duplex"@en ;
 .
@@ -336,13 +339,13 @@ geof:DuricrustRelict
     dcterms:references
         "Anand, R.R. & Paine, M. 2002: Regolith geology of the Yilgarn Craton, Western Australia: Implications for exploration. Australian Journal of Earth Sciences, 49(1), 3-162. <https://doi.org/10.1046/j.1440-0952.2002.00912.x>"@en ,
         "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel
         "relict duricrust"@en ,
         "transported duricrust"@en ;
     skos:broader geof:ResidualRelictUnit ;
     skos:definition "A secondary landform unit/element comprising duricrust developed from transported material that has little direct relationship with the underlying bedrock (Geological Survey of Western Australia, 2013; Anand & Paine, 2002; and cited references)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrdrl" ;
     skos:prefLabel "duricrust (relict/transported) landform element"@en ;
     skos:related geof:DuricrustResidualRelict ;
@@ -355,13 +358,13 @@ geof:DuricrustResidual
     dcterms:references
         "Anand, R.R. & Paine, M. 2002: Regolith geology of the Yilgarn Craton, Western Australia: Implications for exploration. Australian Journal of Earth Sciences, 49(1), 3-162. <https://doi.org/10.1046/j.1440-0952.2002.00912.x>"@en ,
         "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel
         "in situ duricrust"@en ,
         "residual duricrust"@en ;
     skos:broader geof:ResidualRelictUnit ;
     skos:definition "A secondary landform unit/element comprising duricrust formed from underlying bedrock by essentially residual processes (Geological Survey of Western Australia, 2013; Anand & Paine, 2002; and cited references)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrdrs" ;
     skos:prefLabel "duricrust (residual/in situ) landform element"@en ;
     skos:related geof:DuricrustResidualRelict ;
@@ -371,10 +374,10 @@ geof:Embayment
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A downwarped area containing stratified rocks, either sedimentary or volcanic or both, that extends into a terrain of other rocks (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfeby" ;
     skos:prefLabel "embayment"@en ;
 .
@@ -383,10 +386,10 @@ geof:EolianUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "A primary regolith-landform unit/setting generally embracing dunes, interdune areas, and sandplains resulting from wind action. More comprehensively, regolith elements associated with this primary (eolian) regolith- landform mapping unit encompass parabolic dunefields, blow-outs, dunefields, dunes, deflation basins, interdune flats, mobile dunes, longitudinal dunefields, net-like dunefields, sand-and-playa terrains, eolian veneers over colluvium and/or alluvium, lunette or fringing dunes, interdune pavements, swampy swales, and stabilized dunes (GSWA, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfreo" ;
     skos:prefLabel "eolian regolith-landform unit"@en ;
 .
@@ -395,10 +398,10 @@ geof:Escarpment
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "(a) A long, more or less continuous cliff or relatively steep slope facing in one general direction, breaking the continuity of the land by separating two levels of gently sloping surfaces, and produced by erosion or faulting. The term is often used synonymously with scarp, although escarpment is more often applied to a cliff formed by differential erosion;  (b) A steep, abrupt face of rock, often presented by the highest strata in a line of cliffs, and generally marking the outcrop of a resistant layer occurring in a series of gently dipping softer strata, specifically the steep face of a cuesta; (c) A term used loosely in Great Britain as a synonym of cuesta (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfecp" ;
     skos:prefLabel "escarpment"@en ;
 .
@@ -407,10 +410,10 @@ geof:ExposedUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "A primary regolith-landform unit/setting with regolith elements comprising exposed or and weathered rock. Elements also include subcrop and bouldery lag and embrace badlands, escarpments, hills, rises, erosional plains, etc. (GSWA, 2013; and cited references)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrex" ;
     skos:prefLabel "exposed regolith-landform unit"@en ;
 .
@@ -418,10 +421,10 @@ geof:ExposedUnit
 geof:ExtendedCrustProvince
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A province of thinned crust due to extension (e.g., the Basin and Range Province of the Western United States and northwestern Mexico (e.g., Wikipedia, March 2022))."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfxcp" ;
     skos:prefLabel "extended crust province"@en ;
 .
@@ -430,10 +433,10 @@ geof:Fault
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A discrete surface or zone of discrete surfaces separating two rock masses across which one mass has slid past the other (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfflt" ;
     skos:prefLabel "fault"@en ;
 .
@@ -442,10 +445,10 @@ geof:FaultScarp
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "(a) A steep slope or cliff formed directly by movement along a fault and representing the exposed surface of the fault before modification by erosion and weathering. It is an initial landform; (b) A term used loosely in England for any scarp that is due to the presence of a fault, even though the relief may be erosional (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfflp" ;
     skos:prefLabel "fault scarp"@en ;
 .
@@ -454,10 +457,10 @@ geof:FaultSet
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A group of faults that are parallel or nearly so, and that are related to a particular deformational episode (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gffts" ;
     skos:prefLabel "fault set"@en ;
 .
@@ -466,10 +469,10 @@ geof:FaultSystem
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "(a) An array of interconnected and kinematically related faults; (b) Two or more geometrically related fault sets, e.g., a conjugate fault system (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfflm" ;
     skos:prefLabel "fault system"@en ;
 .
@@ -478,10 +481,10 @@ geof:FaultZone
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A fault that is expressed as a zone of numerous small fractures, breccia, and/or fault gouge. A fault zone may be as wide as hundreds of metres (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfflz" ;
     skos:prefLabel "fault zone"@en ;
 .
@@ -490,10 +493,10 @@ geof:Flow
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:LithostratigraphicUnit ;
     skos:definition "A discrete extrusive volcanic body distinguishable by texture, composition, or other objective criteria (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfflw" ;
     skos:prefLabel "flow"@en ;
 .
@@ -502,10 +505,10 @@ geof:Fold
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A curve or bend of a planar structure, such as rock strata, bedding planes, foliation or cleavage. A fold is usually the product of deformation, involving the compression of strata, but may include primary structures, as its definition is descriptive, not genetic (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gffld" ;
     skos:prefLabel "fold"@en ;
 .
@@ -516,10 +519,10 @@ geof:FoldBelt
     dcterms:references
         <http://www.glossaryofgeology.org> ,
         <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A region in Earth’s lithosphere characterised by compressional tectonics, involving folding (usually parellel) and thrusting (both causing crustal shortening). Fold belts generally develop in the foreland bordering an ogogenic zone that was initiated by convergence between two tectonic plates or major crustal blocks (Modified from: Neuendorf et al., 2011; Allaby, 2013 (Oxford Dictionary of Geology and Earth Sciences))."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gffdb" ;
     skos:prefLabel "fold belt"@en ;
 .
@@ -528,10 +531,10 @@ geof:Formation
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:LithostratigraphicUnit ;
     skos:definition "The primary formal unit of lithostratigraphic classification. Formations are the only formal lithostratigraphic units into which the stratigraphic column everywhere should be divided completely on the basis of lithology (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gffrm" ;
     skos:prefLabel "formation"@en ;
 .
@@ -539,19 +542,19 @@ geof:Formation
 geof:GeoResourceAccumulation
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "Georesource accumulations are naturally occurring masses, volumes or concentrations of geological materials that have existing or potential economic value. These resources may include, but are not limited to, minerals (including coal), hydrocarbons, quarry resources and groundwater."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:prefLabel "georesource accumulation"@en ;
 .
 
 geof:GeologicalHeritageSite
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:GeologicallySignificantSite ;
     skos:definition "Geological Heritage Sites (formerly known as Geological Monuments) display geological features that are so outstanding or so rare that they form part of our natural heritage, requiring recognition, description and protection, for education, research and their geotourism potential. They show evidence of the geological processes that have occurred on Earth, and of the plants and animals that have lived on it. These sites include landforms, rock outcrops, river banks, sea cliffs and shore platforms, and are, in part, represented in road cuttings, mines, quarries and other excavations (Geological Society of Australia)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfghs" ;
     skos:prefLabel "geological heritage site"@en ;
 .
@@ -560,10 +563,10 @@ geof:Geopark
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://unesdoc.unesco.org/ark:/48223/pf0000150007> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:GeologicallySignificantSite ;
     skos:definition "A Geopark is a nationally protected area containing a number of geological heritage sites of particular importance, rarity or aesthetic appeal. These Earth heritage sites are part of an integrated concept of protection, education and sustainable development (UNESCO; December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfgpk" ;
     skos:prefLabel "geopark"@en ;
 .
@@ -571,10 +574,10 @@ geof:Geopark
 geof:Geotrail
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:GeologicallySignificantSite ;
     skos:definition "Geotrails aim to provide a tourism experience linking an area’s geology and landscape (i.e., its geological heritage features, including mining heritage) to its biodiversity and cultural history (Geological Society of Australia)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfgtl" ;
     skos:prefLabel "geotrail"@en ;
 .
@@ -583,10 +586,10 @@ geof:Graben
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "An elongate trough or basin, bounded on both sides by high-angle normal faults that dip toward one another. It is a structural form that may or may not be geomorphologically expressed as a rift valley (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfgbn" ;
     skos:prefLabel "graben"@en ;
 .
@@ -595,10 +598,10 @@ geof:Group
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:LithostratigraphicUnit ;
     skos:definition "A succession of two or more contiguous or associated formations with significant and diagnostic lithologic properties in common (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfgrp" ;
     skos:prefLabel "group"@en ;
 .
@@ -607,10 +610,10 @@ geof:HalfGraben
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "An elongate, asymmetric trough or basin bounded on one side by a normal fault (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfhgn" ;
     skos:prefLabel "half graben"@en ;
 .
@@ -619,10 +622,10 @@ geof:Horst
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "An elongate block that is bounded on both sides by normal faults that dip away from one another. It is a structural form and may or may not be expressed geomorphologically (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfhrt" ;
     skos:prefLabel "horst"@en ;
 .
@@ -631,10 +634,10 @@ geof:IgneousAssociation
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "See usage of: Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A term employed by Jell (2013: Geology of Queensland), essentially without definition, for an association of igneous rocks where their differentiation remained uncertain and the geodynamic environment of their magmatism remained not well understood. In such instances, the term replaced the previous use of igneous provinces for such ‘igneous associations’, although the latter were subdivided into the previously recognized igneous subprovinces, and not into redefined igneous sub-associations (if this is at all an issue)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfiga" ;
     skos:prefLabel "igneous association"@en ;
 .
@@ -643,10 +646,10 @@ geof:IgneousIntrusiveRockUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "After: Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:IntrusiveRockUnit ;
     skos:definition "A unit formed by the emplacement of magma which solidifies before reaching Earth's surface (After: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfiir" ;
     skos:prefLabel "igneous intrusive rock unit"@en ;
 .
@@ -655,10 +658,10 @@ geof:IgneousProvince
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A broad area in which similar igneous rocks are considered to have been formed during the same period of (igneous) activity (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfigp" ;
     skos:prefLabel "igneous province"@en ;
 .
@@ -666,10 +669,10 @@ geof:IgneousProvince
 geof:IgneousSubprovince
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "To be provided later, as there is an issue here with Igneous Associations and daughter subprovinces."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfisp" ;
     skos:prefLabel "igneous subprovince"@en ;
 .
@@ -678,10 +681,10 @@ geof:Inlier
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:DenudationalFeature ;
     skos:definition "An area or group of rocks surrounded by younger rocks, e.g., an eroded anticlinal crest (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfinl" ;
     skos:prefLabel "inlier"@en ;
 .
@@ -690,10 +693,10 @@ geof:IntervalZone
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:BiostratigraphicUnit ;
     skos:definition "The body of fossiliferous strata between two specified biohorizons (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfinz" ;
     skos:prefLabel "interval zone"@en ;
 .
@@ -702,10 +705,10 @@ geof:Klippe
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:DenudationalFeature ;
     skos:definition "An isolated rock unit that is an erosional remnant or outlier of a nappe. Plural: klippen (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfklp" ;
     skos:prefLabel "klippe"@en ;
 .
@@ -714,10 +717,10 @@ geof:LacustrineUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "A primary regolith-landform unit/setting generally embracing inland lakes, dune-and-playa terrains, and some coastal lakes; includes saline and freshwater playas and claypans, and minor eolian deposits directly associated with a lake system (e.g., fringing gypsiferous dunes) [GSWA, 2013]."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrla" ;
     skos:prefLabel "lacustrine regolith-landform unit"@en ;
     skos:scopeNote "More comprehensively, secondary regolith elements associated with this primary (lacustrine) regolith-landform mapping unit encompass fringing dunes, freshwater-lake deposits, fringing bedded deposits, halophyte-bearing flats, freshwater-lake excluding fringing deposits, dune-and-playa terrains, playas, saline lakes, swamp deposits around lakes, and subcropping bedrock in lakes (GSWA, 2013)."@en ;
@@ -727,11 +730,11 @@ geof:LargeIgneousProvince
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "LIP"@en ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A region characterized by massive crustal emplacements of predominantly mafic (Mg- and Fe-rich) extrusive and intrusive rocks which originated through processes other than \"normal\" seafloor spreading (Coffin & Eldholm, 1994); includes continental flood basalt provinces (e.g., Deccan Traps), oceanic plateaus (e.g., Ontong & Java Oceanic Plateaus), and North Atlantic volcanic passive margins (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gflip" ;
     skos:prefLabel "large igneous province"@en ;
 .
@@ -740,10 +743,10 @@ geof:LineageZone
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:BiostratigraphicUnit ;
     skos:definition "The body of strata containing specimens representing a specific segment of an evolutionary lineage (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gflnz" ;
     skos:prefLabel "lineage zone"@en ;
 .
@@ -754,10 +757,10 @@ geof:MagnetostratigraphicPolaritySubzone
     dcterms:references
         <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ,
         <https://doi.org/10.1130/9780813774022> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:MagnetostratigraphicUnit ;
     skos:definition "Polarity Zones may be subdivided into Polarity Suzones. The corresponding interval of geological time during which the rocks in the Polarity Subzone were deposited is referred to as its associated Polarity Subchron (Salvador, 2013; ICS, Online, December, 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfmpb" ;
     skos:prefLabel "magnetostratigraphic polarity subzone"@en ;
 .
@@ -769,10 +772,10 @@ geof:MagnetostratigraphicPolaritySuperzone
         <http://pid.geoscience.gov.au/dataset/ga/70149> ,
         <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ,
         <https://doi.org/10.1130/9780813774022> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:MagnetostratigraphicUnit ;
     skos:definition "Polarity Zones may be grouped into Polarity Superzones (Hyperzones in Russian literature). The corresponding interval of geological time during which the rocks in the Polarity Superzone were deposited is referred to as its associated Polarity Superchron. As an example of the latter, the mid-Carboniferous – Middle Permian Kiaman Superchron is the longest known period of predominantly reversed polarity, which was terminated by the Illawarra Geomagnetic Polarity Reversal near the base of the Capitanian (Salvador, 2013; ICS, Online, December, 2019; Gradstein et al., 2012)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfmpp" ;
     skos:prefLabel "magnetostratigraphic polarity superzone"@en ;
 .
@@ -783,10 +786,10 @@ geof:MagnetostratigraphicPolarityZone
     dcterms:references
         <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ,
         <https://doi.org/10.1130/9780813774022> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:MagnetostratigraphicUnit ;
     skos:definition "The basic formal unit in magnetostratigraphic polarity classification is the Magnetostratigraphic Polarity Zone (or Polarity Zone). The corresponding interval of geological time during which the rocks in the Polarity Zone were deposited is referred to as its associated Polarity Chron (Salvador, 2013; ICS, Online, December, 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfmpz" ;
     skos:prefLabel "magnetostratigraphic polarity zone"@en ;
 .
@@ -795,10 +798,10 @@ geof:MarineUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "A primary regolith-landform unit/setting generally embracing offshore marine deposits such as coralgal reefs, shell banks, and sea-grass banks (GSWA, 2013; see scopeNote herewith/below)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrma" ;
     skos:prefLabel "marine regolith-landform unit"@en ;
     skos:scopeNote "More comprehensively, secondary regolith elements associated with this primary marine regolith-landform mapping unit encompass: coral reefs/bioherms; reef flats, backreefs or rock flats; shell banks; plains, nearshore; plains, offshore; rocky reefs; shorefaces; talus slopes or footslopes; and relict channels (GSWA, 2013)."@en ;
@@ -808,10 +811,10 @@ geof:Member
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:LithostratigraphicUnit ;
     skos:definition "The formal lithostratigraphic unit next in rank below a formation (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfmbr" ;
     skos:prefLabel "member"@en ;
 .
@@ -820,11 +823,11 @@ geof:MineralProvince
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "metallogenic province"@en ;
     skos:broader geof:TectonicFeature ;
     skos:definition "An area characterized by a particular assemblage of mineral deposits, or by one or more characteristic types of mineralization; the province may have had more than one episode of mineralization (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfmnp" ;
     skos:prefLabel "mineral province"@en ;
 .
@@ -833,10 +836,10 @@ geof:Monocline
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A one-limbed flexure on either side of which the strata are horizontal or dip uniformly at low angles (Allaby, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfmnc" ;
     skos:prefLabel "monocline"@en ;
 .
@@ -847,10 +850,10 @@ geof:MyloniteZone
     dcterms:references
         <http://www.glossaryofgeology.org> ,
         <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "Usually found in narrow, planar zones of localised ductile deformation, although kilometre-scale zones exist. Mylonites form in shear zones by mechanical grinding, crushing and recrystallization of rock to produce a metamorphic rock that has foliation and is much finer grained than its precursor (Modified from: Neuendorf et al., 2011; Allaby, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfmyz" ;
     skos:prefLabel "mylonite zone"@en ;
 .
@@ -861,10 +864,10 @@ geof:Nappe
     dcterms:references
         <http://www.glossaryofgeology.org> ,
         <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonostratigraphicRockUnit ;
     skos:definition "A sheetlike, allochthonous rock unit, which has moved on a predominantly horizontal surface as a result of thrust faulting, recumbent folding, or both. Fold limbs and axes are approximately horizontal (After: Neuendorf et al., 2011; Allaby, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfnpp" ;
     skos:prefLabel "nappe"@en ;
 .
@@ -873,10 +876,10 @@ geof:NappeComplex
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://doi.org/10.1080/11035897.2016.1178666> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonostratigraphicRockUnit ;
     skos:definition "A nappe complex consists of two or more distinct nappes that are stacked upon, and related to, one another in some significant respect, e.g., shared general environment of origin, similar metamorphism and/or deformation (Kumpulainen, 2017)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfnpx" ;
     skos:prefLabel "nappe complex"@en ;
 .
@@ -885,10 +888,10 @@ geof:Non-IgneousIntrusiveRockUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "After: Gillespie et al., 2008: BGS classification of lithodemic units: Proposals for classifying units of intrusive rock. British Geological Survey Research Report RR/08/05. <http://nora.nerc.ac.uk/id/eprint/5226/1/RR08005.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:IntrusiveRockUnit ;
     skos:definition "A non-igneous intrusive rock unit such as a salt dome or a sediment-filled fracture (After: Gillespie & Leslie, 2008)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfnii" ;
     skos:prefLabel "non-igneous intrusive rock unit"@en ;
     skos:scopeNote "Note: As per Gillespie & Leslie (2021), the BGS no longer supports the lithodemic nomenclature of the North American Stratigraphic Code (2005), as also is the case here (see references and discussion elsewhere in this ontology)."@en ;
@@ -898,11 +901,11 @@ geof:Orogen
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "geosyncline"@en ;
     skos:broader geof:TectonicFeature ;
     skos:definition "An orogen (orogenic system, orogenic zone, orogenic belt) is a region in Earth’s lithosphere where a mountain belt is created by tectonic processes involving deformation, regional metamorphism, and associated magmatism, usually caused by convergence (± accretion and/or collision) between two tectonic plates or major crustal blocks; Alt obsolete term: geosyncline (Modified from: Neuendorf et al., 2011; Derek Hoy, pers. comm.)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gforn" ;
     skos:prefLabel "orogen"@en ;
 .
@@ -913,10 +916,10 @@ geof:OrogenicCollage
     dcterms:references
         <http://www.glossaryofgeology.org> ,
         <https://doi.org/10.1146/annurev-earth-082517-010146> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A patchwork-map pattern of accreted terranes, embracing a geotectonic assemblage of crustal blocks separated by major faults (Neuendorf et al., 2011). In eastern Australia, such a collage is represented by the Tasmanides, which is part of the larger-scale Terra Australis Orogen that developed along the southern Panthalassan (Paleo-Pacific) margin of Gondwana, and which comprises multiple metamorphic belts, fold-thrust belts, igneous provinces, and sedimentary basins that have been attributed to five Cambrian to Triassic subduction-related orogens: the Delamerian, Thomson, Lachlan, Mossman, and New England Orogens (Rosenbaum, 2018)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gforg" ;
     skos:prefLabel "orogenic collage"@en ;
 .
@@ -925,10 +928,10 @@ geof:Outlier
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:DenudationalFeature ;
     skos:definition "An area or group of rocks surrounded by older rocks (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfout" ;
     skos:prefLabel "outlier"@en ;
 .
@@ -937,10 +940,10 @@ geof:OverturnedFold
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A zone where folds in their axial planes are inclined so that the fold limbs dip in the same direction, although not necessarily by the same amount; for each fold, one limb is thus ‘overturned' (Allaby, 2008)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfofz" ;
     skos:prefLabel "overturned fold"@en ;
 .
@@ -951,10 +954,10 @@ geof:PedostratigraphicUnit
     dcterms:references
         <http://www.glossaryofgeology.org> ,
         <https://doi.org/10.1306/05230505015> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StratigraphicUnit ;
     skos:definition "A buried, traceable, three-dimensional body of rock (or sediment) that consists of one or more differentiated pedologic horizons developed in, and overlain by, one or more formally defined lithostratigraphic or allostratigraphic units (NACSN, 2005; Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "pdu" ;
     skos:prefLabel "pedostratigraphic unit"@en ;
 .
@@ -965,10 +968,10 @@ geof:Peneplain
     dcterms:references
         <http://www.glossaryofgeology.org> ,
         <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:DenudationalFeature ;
     skos:definition "A low, nearly featureless, gently undulating land surface of considerable area, which has been produced by the processes of prolonged subaerial erosion almost to base level; it is the end product of a cycle of erosion (Davis, 1889; Neuendorf et al., 2011; Allaby, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfpnn" ;
     skos:prefLabel "peneplain"@en ;
 .
@@ -976,20 +979,20 @@ geof:Peneplain
 geof:PresentContinent
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A large, existing landmass, comprising continental crust and embracing exposed land above sea level (Zealandia being an exception), and, below sea level, based on major differences in the inclination of the bathymetric surface, the attendant continental shelf, continental slope, and, if present, the continental rise (Modified and compiled from: Burke & Drake, 1974, Sheriff, 2002; Mortimer et al., 2017; Wikipedia, March 2020)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:prefLabel "present continent"@en ;
 .
 
 geof:Province
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A geologic province is a spatial entity with common geologic attributes, comprising a large area or region, which, considered as a whole, is characterised by similar geologic features or by a geologic history differing significantly from that of adjacent areas. (Modified from: Neuendorf et al. 2011; Geoscience Australia, USGS & Wikipedia, all accessed 13.05.2020)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfprv" ;
     skos:prefLabel "Province"@en ;
     skos:scopeNote "A geologic province may include a single dominant tectonic/structural entity such as a sedimentary basin or an association of genetically-related basins, but otherwise craton (including shields and platforms) or orogen, as well as specified types of provinces (viz., mineral province, igneous province, large igneous province, tectonised/metamorphosed province, extended-crust province) that are individually defined by a complex history of tectonics, metamorphism, magmatism and/or metallogenesis. A province may be divided into two or more subprovinces that may be further divided into geologic domains."@en ;
@@ -999,10 +1002,10 @@ geof:RangeZone
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:BiostratigraphicUnit ;
     skos:definition "The body of strata representing the known stratigraphic and geographic range of occurrence of a particular taxon or combination of two taxa of any rank. There are two principal types: taxon-range zones and concurrent-range zones. (ICS, Online, December 2019)"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrnz" ;
     skos:prefLabel "range zone"@en ;
 .
@@ -1011,11 +1014,11 @@ geof:RelictUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "relict regolith-landform unit"@en ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "Relict unit: A primary landform unit/setting embracing material that includes deposits of uncertain origin, either transported or residual, or a combination of both. Transported material may represent remnants of previous landforms. "@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrrl" ;
     skos:prefLabel "relict regolith-landform unit"@en ;
     skos:related geof:ResidualRelictUnit ;
@@ -1025,11 +1028,11 @@ geof:ResidualUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "residual regolith-landform unit"@en ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "Residual unit: A primary landform unit/setting comprising material derived by in situ weathering of the underlying rock, the regolith, and therefore, showing no evidence of having undergone significant transport (GSWA, 2013; and cited references). "@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrrs" ;
     skos:prefLabel "residual regolith-landform unit"@en ;
     skos:related geof:ResidualRelictUnit ;
@@ -1039,10 +1042,10 @@ geof:Ridge
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://en.wikipedia.org/wiki/Ridge> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A ridge or a mountain ridge is a geographical feature consisting of a chain of mountains or hills that form a continuous elevated crest for some distance. The sides of the ridge slope away from a narrow top on either side. The lines along the crest formed by the highest points, with the terrain dropping down on either sides, are called the ridgelines. Ridges are usually termed hills or mountains as well, depending on size (Adapted from: Wikipedia, accessed 13.05.2020)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrdg" ;
     skos:prefLabel "ridge"@en ;
 .
@@ -1051,10 +1054,10 @@ geof:SandplainUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "A primary regolith-landform unit/setting generally embracing sandplains of residual or sheetwash origin or variously of mixed origin: residual, sheetwash and eolian. More comprehensively, regolith elements associated with this primary (sandplain) regolith-landform mapping unit encompass blow-outs, dunes, gravel deflation pavements, longitudinal dunefields, net-like dunefields, sand-and-playa terrains, and undulating sandplains (GSWA, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrsp" ;
     skos:prefLabel "sandplain regolith-landform unit"@en ;
 .
@@ -1063,10 +1066,10 @@ geof:SedimentaryBasin
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://doi.org/10.1007/978-3-662-03999-1> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A low area in the Earth’s crust, of tectonic origin, in which sediments accumulate. Sedimentary basins range in size from small continental basins to large oceanic basins. The essential element of the concept is tectonic creation of relief, to provide both a source of sediment and a relatively low place for the deposition of that sediment (After: Miall, 2000)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfsdb" ;
     skos:prefLabel "sedimentary basin"@en ;
 .
@@ -1077,10 +1080,10 @@ geof:SeismicProvince
     dcterms:references
         <http://pid.geoscience.gov.au/dataset/ga/70149> ,
         <https://doi.org/10.1016/j.tecto.2012.02.022> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:GeophysicalDomain ;
     skos:definition "Representative of a discrete \"volume\" of middle to lower crust which cannot be traced to the surface, and whose crustal reflectivity is different to that of laterally or vertically adjoining provinces (in differing lithology, geological history, and/or structural architecture). A Seismic Province is a Geophysical Domain. In North Queensland, the Numil and Abingdon Seismic Provinces are two lower crustal sectors that have been interpreted to represent microcontinents that accreted to the eastern fringe of the North Australian Craton prior to the late Paleoproterozoic (Korsch et al., 2010, Korsch, 2012)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfssp" ;
     skos:prefLabel "seismic province"@en ;
 .
@@ -1091,10 +1094,10 @@ geof:SequenceStratigraphicUnit
     dcterms:references
         <https://doi.org/10.1080/11035897.2016.1178666> ,
         <https://doi.org/10.1127/0078-0421/2011/0011> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StratigraphicUnit ;
     skos:definition "A Sequence Stratigraphic Unit is an extensive, depositional unit that may be bounded by subaerial unconformities and their correlative conformities, by transgressive surfaces or by surfaces of maximum marine flooding. It documents changes in relative sea level, which may have been the result of eustasy, regional or local tectonic movements, compaction, isostasy or the combination of two or more of these factors (Kumpulainen, 2017; Catuneanu et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfsqu" ;
     skos:prefLabel "sequence stratigraphic unit"@en ;
 .
@@ -1103,10 +1106,10 @@ geof:ShearZone
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A region, narrow compared to its length, within which rocks have undergone intense deformation: viz. brecciation. There are two end-members: brittle shear zones (faults), marked by a surface of rupture, which are a common feature of higher crustal levels; and ductile shear zones in which deformation is continuous and characterized by high ductile strain due to the rocks having formed under high temperatures and pressures at deeper crustal levels. Both brittle and ductile shear zones may occur as subparallel or conjugate sets (After: Allaby, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfshz" ;
     skos:prefLabel "shear zone"@en ;
 .
@@ -1115,10 +1118,10 @@ geof:SheetwashUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "A primary regolith-landform unit/setting generally embracing distal slope deposits (including sheetflood) where the gradient is minimal, and the drainage is not clearly defined. More specifically, regolith elements/patterns associated with this primary regolith-landform mapping unit include transitional zones between pediment and transported regolith, sheetflood fans, playas/pans, scarp-foot slopes, and sheetwash plains with a tiger-bush pattern (GSWA, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrsw" ;
     skos:prefLabel "sheetwash regolith-landform unit"@en ;
 .
@@ -1127,10 +1130,10 @@ geof:Shield
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A large area of exposed basement rock in a craton, commonly with a very gently convex surface, surrounded by sediment covered platforms. The rocks of virtually all shield areas are Precambrian (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfshd" ;
     skos:prefLabel "shield"@en ;
 .
@@ -1139,10 +1142,10 @@ geof:StratigraphicEvent
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://doi.org/10.1080/11035897.2016.1178666> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StratigraphicFeature ;
     skos:definition "Stratigraphic Events reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (Kumpulainen, 2017)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfste" ;
     skos:prefLabel "stratigraphic event"@en ;
 .
@@ -1150,20 +1153,29 @@ geof:StratigraphicEvent
 geof:Subbasin
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A sedimentary basin may be subdivided into two or more subbasins that have separate depocentres and are separated from one another by some tectonic/structural element, such as a fault or basement high (Definition created here: Paul Blake, pers.comm; John McKellar)"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:prefLabel "subbasin"@en ;
+.
+
+geof:Subgroup
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A Subgroup is a part of a Group. (Definition created here: Paul Blake, pers.comm.; John McKellar)"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "subgroup"@en ;
 .
 
 geof:Subprovince
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "One of two or more divisions of a province, based on differences in geological character."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfsbp" ;
     skos:prefLabel "Subprovince"@en ;
 .
@@ -1171,10 +1183,10 @@ geof:Subprovince
 geof:Superbasin
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A superbasin is a hierarchial term applied to  a group of largely interconnected or associated sedimentary basins of the same or similar age. Its component basins may be separated or partially separated by tectonic elements that define 'boundaries'  between them, or they may have been subjected to somewhat different geological influences. In the Australian Mesozoic, the Great Australian Superbasin, composed of the Nambour, Clarence-Moreton, Surat, Eromanga, Carpentaria and other basins, is a prime example, variously covering a geographically-extensive area in parts of Queensland, the Northern Territory, New South Wales and South Australia (Definition created here)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:prefLabel "superbasin"@en ;
 .
 
@@ -1182,10 +1194,10 @@ geof:Supercontinent
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://doi.org/10.22459/SN.08.2012> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A large continent formed by the amalgamation of most or all of Earth’s continental landmasses (Blewett, 2012)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfspc" ;
     skos:prefLabel "supercontinent"@en ;
 .
@@ -1194,10 +1206,10 @@ geof:Supercraton
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://doi.org/10.22459/SN.08.2012> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A large, ancestral (largely Archean) landmass consisting of two or more cratons (Blewett, 2012)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfspn" ;
     skos:prefLabel "supercraton"@en ;
 .
@@ -1205,10 +1217,10 @@ geof:Supercraton
 geof:Superprovince
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A grouping of two or more like geologic provinces."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfspp" ;
     skos:prefLabel "Superprovince"@en ;
     skos:scopeNote "This highest-level root term was introduced by Mortimer et al. (2014), as the Austral Superprovince, to encompass all rocks of New Zealand’s Eastern Province and Western Province basement (providing a single stratigraphic search term for basement rocks in digital databases). In Queensland, for example, the term has application with the Tasmanides Orogenic Collage, the Great Australian Superbasin, and the Centralian Superbasin."@en ;
@@ -1218,10 +1230,10 @@ geof:Syncline
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A fold of which the core contains the stratigraphically younger rocks; it is generally concave upward (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfsyn" ;
     skos:prefLabel "syncline"@en ;
 .
@@ -1230,10 +1242,10 @@ geof:Synclinorium
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "A composite synclinal structure of regional extent composed of lesser folds (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfsyc" ;
     skos:prefLabel "synclinorium"@en ;
 .
@@ -1242,10 +1254,10 @@ geof:Synform
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "Any fold whose limbs close at the bottom. The term is usually used when the folded layers do not possess a stratigraphic order, when the stratigraphic order of the folded layers is not known, or when the fold core also contains the stratigraphically older rock (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfsyf" ;
     skos:prefLabel "synform"@en ;
 .
@@ -1254,10 +1266,10 @@ geof:TaxonRangeZone
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:BiostratigraphicUnit ;
     skos:definition "The body of strata representing the known range of stratigraphic and geographic occurrence of specimens of a particular taxon (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gftrz" ;
     skos:prefLabel "taxon range zone"@en ;
 .
@@ -1266,10 +1278,10 @@ geof:TectonicPlate
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://pubs.usgs.gov/gip/dynamic/tectonic.html> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "The lithosphere is divided into a number of discrete tectonic plates each of which has motion relative to other plates. Tectonic plates vary significantly in size and thickness, with boundaries marked by seismic and volcanic activity. They move slowly relative to one another due to convection currents in the Upper Mantle, and may slide on a boundary with another along transform faults. A tectonic plate comprising oceanic lithosphere (entirely or partly thereof), can sink/subduct in a subduction zone below another, usually a lighter, continental plate. Along mid-ocean ridges and major rifts, tectonic plates separate and new crust is formed by the upwelling of basaltic magma (Adapted from: Sheriff, 2002; USGS, 1999)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfplt" ;
     skos:prefLabel "tectonic plate"@en ;
 .
@@ -1277,10 +1289,10 @@ geof:TectonicPlate
 geof:TectonisedMetomorphosedProvince
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A Tectonised and/or Metamorphosed Province is generally an old sedimentary basin that has been strongly tectonised and/or metamorphosed, so that its original basin extent and form are no longer preserved. Such provinces may have associated magmatism and metallogenesis (Definition created here)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:prefLabel "tectonised metomorphosed province"@en ;
 .
 
@@ -1291,10 +1303,10 @@ geof:TectonometamorphicRockUnit
         "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ,
         "See and compare: Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ,
         "See and compare: Nystuen, J.P. (Editor), 1989: Rules and recommendations of naming geological units in Norway. Norsk Geologisk Tidskrift 69 (Supplement 2), 1–111. <https://foreninger.uio.no/ngf/ngt/pdfs/NGT_69_supplement1.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "Tectonometamorphic rock units are defined bodies of rock that cannot reliably be classified as accumulated (stratiform, lithostratigraphic) rock units or as intrusive rock units, as a result of superimposed deformation and/or metamorphism (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gftme" ;
     skos:prefLabel "tectonometamorphic rock unit"@en ;
     skos:scopeNote "Separated out from tectonometamorphic rock units are tectonostratigraphic rock units which embrace tectonically-displaced, allochthonous sheets (Nystuen, 1989; Kumpulainen, 2017; also see and compare: Gillespie & Leslie, 2021, pp. 16–17). In GSQ’s associated rock-unit-rank vocabulary, the terminology applied therein to tectonometamorphic rock units, as per Gillespie & Leslie (2021), in the development by these authors of the British Geological Survey’s new Rock Unit Classification System/BRUCS), is currently not well progressed, apart from application of the term ‘ophiolite’. The BRUCS tectonometamorphic nomenclature has merit but requires consideration for its potential in application in Queensland (and Australia) to tectonometamorphic bodies of rock, the nomenclature of which, in terms of rank, is presently assessed (here) as being in need of revision."@en ;
@@ -1304,10 +1316,10 @@ geof:Terrane
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A fault-bounded body of rock of regional extent, characterised by a geologic history different from that of contiguous terranes or bounding continents. A terrane is generally considered to be a discrete allochthonous fragment of oceanic or continental material added to a craton (or continental plate) at an active margin by accretion (After: Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gftrn" ;
     skos:prefLabel "terrane"@en ;
 .
@@ -1315,10 +1327,10 @@ geof:Terrane
 geof:Trough
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:TectonicFeature ;
     skos:definition "A trough (in the continental realm) is an elongate region of the lithosphere that has undergone subsidence because of faulting along one or both of its elongate margins, permitting the accumulation of sediments and the subsequent formation of sedimentary rocks. Troughs are generally grabens or half-grabens, sometimes associated with initial magmatism, that have formed under extensional or transtensional tectonic conditions and may be part of, or associated with, the formation, and subsequent evolution, of larger sedimentary-basin/rifting systems or basin-and-range (western-North-America) type settings (Definition created here)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gftrh" ;
     skos:prefLabel "trough"@en ;
 .
@@ -1329,10 +1341,10 @@ geof:Unconformity
     dcterms:references
         <http://www.glossaryofgeology.org> ,
         <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:DenudationalFeature ;
     skos:definition "The surface of contact between rock strata that represents a lack of continuity in deposition, encompassing a period of nondeposition or weathering/erosion prior to the deposition of younger rocks, sometimes, in the case of sedimentary rocks, marked by the absence of conformity between the dip and strike of underlying and overlying strata (Modified from: Neuendorf et al., 2011; Allaby, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfunc" ;
     skos:prefLabel "unconformity"@en ;
 .
@@ -1341,10 +1353,10 @@ geof:WaterBody
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://www.usgs.gov/special-topics/water-science-school/science/freshwater-lakes-and-rivers-and-water-cycle> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:LandformFeature ;
     skos:definition "A feature produced by the accumulation of water at surface. These features may be liquid water in the form of lakes, rivers, and streams, or as ice in the form of ice sheets and glaciers. Considered part of the set of geologic features due to their role in geological processes and due to their intersection and coverage of other geologic features and important topographical relationships."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gflwb" ;
     skos:prefLabel "water body"@en ;
 .
@@ -1353,10 +1365,10 @@ geof:Window
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:DenudationalFeature ;
     skos:definition "An eroded area of a thrust sheet or nappe that displays the rocks beneath the thrust sheet (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfwnw" ;
     skos:prefLabel "window"@en ;
 .
@@ -1371,10 +1383,10 @@ geof:GeophysicalFeature
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "A feature associated with, and interpreted from, the physical properties and processes of the Earth, e.g., seismology (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfgpf" ;
     skos:prefLabel "geophysical feature"@en ;
 .
@@ -1388,10 +1400,10 @@ geof:LandformFeature
         "After and modified from: <https://examples.yourdictionary.com/examples-of-landforms.html> (accessed 05.10.22)." ,
         "After and modified from: <https://oceanservice.noaa.gov/facts/bathymetry.html> (accessed 05.10.22)." ,
         "After and modified from: <https://sciencing.com/common-landforms-8727172.html>  (accessed 05.10.22)." ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "Overall, any physical feature on the Earth’s surface (here excluding consideration of anthropogenic-landform features and natural-landform features on other planets) that is part of the terrain represents a landform, including: alluvial fans, braided channels, abyssal plains, atolls, beaches, cliffs, hills, mid-ocean ridges, volcanic arcs, wave-cut platforms, canyons, gullies, valleys, hoodoos, badlands, salt pans, etc., as well as all other surface bodies of water, such as rivers, lakes, marshes, glaciers and ice sheets."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gflfe" ;
     skos:prefLabel "landform feature"@en ;
     skos:related geof:RegolithLandformUnit ;
@@ -1408,10 +1420,10 @@ geof:RegolithFeature
         "Gray, J.M. & Murphy, B. W. 1999: Parent Material and Soils: a guide to the influence of parent material on soil distribution in eastern Australia. Technical Report No. 45 (Reprinted 2002), NSW Department of Land and Water Conservation, Sydney, 122 pages. <https://www.researchgate.net/publication/277013099_Parent_Material_and_Soils_a_guide_to_the_influence_of_parent_material_on_soil_distribution_in_eastern_Australia>"@en ,
         "Hocking, R. M. et al., 2007: A classification system for regolith in Western Australia (March 2007 update). Geological Survey of Western Australia/GSWA, Record 2007/8, 19 pages (This Record is an update of Record 2005/10). <https://dmpbookshop.eruditetechnologies.com.au/product/a-classification-system-for-regolith-in-western-australia-march-2007-update.do>"@en ,
         "Little, D. & Field, B., 2003: The rhyzosphere, biology and the regolith. In: Roach, I.C. (Editor): Advances in Regolith. Cooperative Research Centre for Landscape Evolution & Mineral Exploration (CRC LEME), Bentley, W.A., 271–273. <http://crcleme.org.au/Pubs/Advancesinregolith/Little_Field.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "Anything, of diverse origin, embraced by the layer of mineral and organic material that nearly everywhere forms the surface of the land and rests on more coherent bedrock, having been formed by weathering, erosion, transport and/or deposition of the older material (Eggleton, 2001; Hocking et al., 2007; Anand & Butt, 2010). Its formation, embracing a multidisciplinary science, is driven by a number of factors including climate, geology, topography, biological activity, and time (Gray & Murphy, 1999; Little & Field, 2003)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrft" ;
     skos:prefLabel "regolith feature"@en ;
     skos:scopeNote "Understanding the character of Australia’s extensive regolith cover is crucial to the continuing success of mineral exploration (de Caritat et al., 2017)."@en ;
@@ -1428,13 +1440,13 @@ geof:ComplexRockUnit
         "After and compare: Subcommission on Quaternary Stratigraphy — Lithodemic Stratigraphy. Accessed online 04.11.2021. <http://quaternary.stratigraphy.org/stratigraphic-guide/lithodemic-stratigraphy/>"@en ,
         "Compare: Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ,
         "See usage of: Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel
         "complex unit"@en ,
         "composite unit"@en ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "A rock unit that embraces a mixture composed of diverse types of any genetic (sedimentary, igneous, metamorphic) class of rocks or a mixture of two or more genetic classes, and characterised by irregularly-mixed lithology or by highly-complicated structural relations (Rephrased from: Salvador, 2013; Murphy & Salvador, Online)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfcru" ;
     skos:prefLabel "complex rock unit"@en ;
     skos:scopeNote "The ISG definition is followed, with minor rewording (and without any change of meaning), although a complex unit is not here classified as a lithostratigraphic unit (as per the ISG). The NASC (2005) and Kumpulainen (2017), together with other Scandinavian guides, preferably adhere to a more specific definition, restricting a complex to a mixture of two or more genetic classes, albeit regarding a complex as a non-ranked lithodemic unit (generally, a defined, nonstratiform/non-stratified body of predominantly intrusive or highly deformed and/or highly metamorphosed rock). However, as the ISG usage better suits the nomenclature applied to some complex rock units in Queensland, it is therefore provisionally followed. A complex, although unranked in the NASC, was considered to be ‘commonly comparable to suite or supersuite’, such that two or more associated complexes could be grouped in a supersuite. This problematical application of lithodemic nomenclature was addressed by the Subcommission on Quaternary Stratigraphy with their introduction of the term ‘supercomplex’ and attendant recommendation for a two-fold hierarchy of rank for lithodemic rock units: lithodeme, suite and supersuite; and complex and supercomplex. Here, complex rock units are separated from lithostratigraphic and other single-class units (e.g., intrusive rock units) and broadly treated as stand-alone, largely nonstratiform, mixed-class units, thus reflecting the approach of Gillespie & Leslie (2021) in their construction of the British Geological Survey’s rock classification system (BRUCS). [Also, following Gillespie & Leslie, the NASC lithodemic terminology is not followed, and ‘suite’ rankings are applied solely to intrusive rock units (not also to metamorphic units)]. However, as indicated, nomenclatural usage in Queensland is not true to the more restricted definition of rock complexes comprising more than one genetic class of rocks (e.g., Jell, 2013)."@en ;
@@ -1447,11 +1459,11 @@ geof:DuricrustResidualRelict
         "Anand, R.R. & Paine, M. 2002: Regolith geology of the Yilgarn Craton, Western Australia: Implications for exploration. Australian Journal of Earth Sciences, 49(1), 3-162. <https://doi.org/10.1046/j.1440-0952.2002.00912.x>"@en ,
         "Eggleton, R.A. (Editor), 2001: The Regolith Glossary: Surficial Geology, Soils and Landscapes. Cooperative Research Centre for Landscape Evolution & Mineral Exploration (CRC LEME), Floreat Park, W.A., 144 pages. <http://crcleme.org.au/Pubs/Monographs/RegolithGlossary.pdf>"@en ,
         "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "residual or relict duricrust"@en ;
     skos:broader geof:ResidualRelictUnit ;
     skos:definition "Duricrust (residual or relict): A secondary landform unit/element comprising in-situ or transported regolith material indurated by a cement, or the cement only, occurring at or near the surface, or as a layer in the upper part of the regolith. The cement may be, e.g., siliceous (silcrete), ferruginous (ferricrete/lateritic duricrust), aluminous (alcrete), gypseous (gypcrete), manganiferous (manganocrete), calcareous (calcrete), dolomitic (dolocrete), salty (salcrete) or a combination of these (After and modified from: Eggleton, 2001; GSWA, 2013)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrdrr" ;
     skos:prefLabel "duricrust (residual or relict) landform element"@en ;
     skos:scopeNote "Duricrust may be ‘residual/in-situ’ where it has formed from underlying bedrock by essentially residual processes or ‘relict/transported’ where it has developed from transported material that has little direct relationship with the underlying bedrock (GSWA, 2013; Anand & Paine, 2002; and cited references)."@en ;
@@ -1463,10 +1475,10 @@ geof:GeophysicalDomain
     dcterms:references
         <http://pid.geoscience.gov.au/dataset/ga/14909> ,
         <https://doi.org/10.1016/j.tecto.2012.02.022> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:GeophysicalFeature ;
     skos:definition "Geophysical Domains are Geologic Features delimited by their geophysical properties, primarily magnetic and gravity properties or, in the case of Seismic Provinces, their crustal reflectivity. They represent discrete \"volumes\" of middle to lower crust (Terminology based on usage of: Shaw et al., 1996; Korsch et al., 2012)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfgpd" ;
     skos:prefLabel "geophysical domain"@en ;
 .
@@ -1477,10 +1489,10 @@ geof:IntrusiveRockUnit
     dcterms:references
         "Modified from: Gillespie et al., 2008: BGS classification of lithodemic units: Proposals for classifying units of intrusive rock. British Geological Survey Research Report RR/08/05. <http://nora.nerc.ac.uk/id/eprint/5226/1/RR08005.pdf>"@en ,
         "Modified from: Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "Includes: (1) Igneous intrusive rock-unit types (e.g., ranked under supersuite, suite, subsuite, etc. and, at lower rank levels, plutons, lopoliths, laccoliths, dykes, sills, etc.); and (2) Non-igneous intrusive rock-unit types (viz., salt domes, sediment-filled fractures, etc.) (Modified from: Gillespie et al., 2008; Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfiru" ;
     skos:prefLabel "intrusive rock unit"@en ;
 .
@@ -1491,10 +1503,10 @@ geof:StratigraphicFeature
     dcterms:references
         <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ,
         <https://doi.org/10.1080/11035897.2016.1178666> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "Stratigraphic Features embrace Stratigraphic Units, which are units of rock and/or sediment that conform to the Law of Superposition (e.g., lithostratigraphic units, biostratigraphic units, chronostratigraphic units), and Stratigraphic Events which reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (Kumpulainen, 2017; cf. Salvador, 2013; cf. Murphy & Salvador, Online; see references elsewhere herein)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfstf" ;
     skos:prefLabel "stratigraphic feature"@en ;
 .
@@ -1503,10 +1515,10 @@ geof:TectonostratigraphicRockUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "Tectonostratigraphic rock units encompass generally flat-lying, scale-independent, tectonic rock units that are bounded by zones of high strain (ductile shear zone, deformation zone or belt, fault, fault zone, etc.). They include tectonically-displaced allochthonous sheets that are represented by nappes (thrust sheets) and nappe complexes (After: Kumpulainen, 2017)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gftsu" ;
     skos:prefLabel "tectonostratigraphic rock unit"@en ;
 .
@@ -1541,12 +1553,12 @@ geof:GeologicallySignificantSite
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/frequently-asked-questions/what-is-a-unesco-global-geopark/> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader
         <http://sweetontology.net/realmGeol/GeologicFeature> ,
         <http://www.opengis.net/ont/geosparql#Feature> ;
     skos:definition "Single, unified geographical areas where sites and landscapes of international geological significance are managed with a holistic concept of protection, education and sustainable development."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfgss" ;
     skos:prefLabel "geologically significant site"@en ;
 .
@@ -1557,10 +1569,10 @@ geof:MagnetostratigraphicUnit
     dcterms:references
         <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ,
         <https://doi.org/10.1130/9780813774022> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StratigraphicUnit ;
     skos:definition "A Magnetostratigraphic Unit (Magnetozone) is a body of rocks unified by similar magnetic characteristics which allow it to be differentiated from adjacent rock bodies.  The term is collectively applied to the different kinds of stratigraphic units that are identified by their measurable magnetic properties (Salvador, 2013; ICS, Online, December, 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfmsu" ;
     skos:prefLabel "magnetostratigraphic unit"@en ;
 .
@@ -1569,11 +1581,11 @@ geof:ResidualRelictUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "residual or relict regolith-landform unit"@en ;
     skos:broader geof:RegolithLandformUnit ;
     skos:definition "Residual or relict unit: A primary landform unit/setting comprising remnant material (undivided residual and relict materials) overlying an ancient land surface. Residual material is derived by in situ weathering of the underlying rock, the regolith; therefore, it shows no evidence of having undergone significant transport. Relict material includes deposits of uncertain origin, either transported or residual, or a combination of both. Transported material may represent remnants of previous landforms (GSWA, 2013; and cited references)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrrr" ;
     skos:prefLabel "residual or relict regolith-landform unit"@en ;
 .
@@ -1591,10 +1603,10 @@ geof:DenudationalFeature
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://doi.org/10.1080/11035897.2016.1178666> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StructuralFeature ;
     skos:definition "Structures shaped by weathering and erosion; include inlier, outlier, window, klippe, unconformity and peneplain (Kumpulainen, 2017)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfdnf" ;
     skos:prefLabel "denudational feature"@en ;
 .
@@ -1609,13 +1621,13 @@ geof:LithostratigraphicUnit
         "Compare: Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022> "@en ,
         "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ,
         "Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel
         "accumulated unit"@en ,
         "stratiform unit"@en ;
     skos:broader geof:StratigraphicUnit ;
     skos:definition "Lithostratigraphic units are bodies of rocks, bedded or unbedded, that are defined and characterized on the basis of their lithologic properties and their stratigraphic relations, but conforming to the Law of Superposition (Steno, 1669) [NASC, 2005, Kulpmainen, 2017; cf. Salvador, 2013; cf. Murphy & Salvador, Online]."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gflsu" ;
     skos:prefLabel "lithostratigraphic unit"@en ;
 .
@@ -1630,10 +1642,10 @@ geof:StratigraphicUnit
         "Compare: Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022> "@en ,
         "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ,
         "Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StratigraphicFeature ;
     skos:definition "A stratigraphic unit is a distinct and definable body of layered rock that conforms with the Law of Superposition (Steno, 1669) and is variously described and differentiated, in each case from the same unit type, by: its lithologic properties (lithostratigraphic unit); its fossil content (biostratigraphic unit); its magnetic properties (magnetostratigraphic unit); the time interval during which it was formed (chronostratigraphic unit); by its bounding subaerial unconformities and their correlative conformities (sequence stratigraphic unit); or by one or more pedologic horizons buried in one or more lithic units (pedostratigraphic unit) [modified variously from: NASC, 2005; Kumpulainen, 2017; cf.: Salvador, 2013; cf: Murphy & Salvador, Online]."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfstu" ;
     skos:prefLabel "stratigraphic unit"@en ;
     skos:scopeNote "Followed here are the definitions applied to ‘stratigraphy’ and ‘stratigraphic unit’ by the North American Stratigraphic Code (NASC, 2005) and Kumpulainen (2017). This approach thus differs from that proffered by the International Commission on Stratigraphy in the ‘International Stratigraphic Guide’/ISG (e.g., Salvador, 2013; Murphy & Salvador, Online), which regards ‘stratigraphy’ as embracing the description of all classes of rocks (sedimentary, igneous, metamorphic) forming the Earth’s crust and their organisation/classification into distinctive, useful, mappable units based on their inherent properties or attributes, in order to establish their distribution and relationship in space and their succession in time. The NASC (2005) introduced the term ‘lithodemic unit’ to encompass (predominantly intrusive, highly metamorphosed, or intensely deformed) rocks that do not obey Steno’s (1669) Law of Superposition (as opposed to a ‘lithostratigraphic unit’ which encompasses rocks that conform to this Law). The NASC lithodemic classification for non-stratified (nonstratiform) rocks, employing the terms ‘Lithodeme’, ‘Suite’ and ‘Supersuite’, was accepted by Kumpulainen (2017), such that lithodemic (non-stratified/nonstratiform) rocks and lithostratigraphic (stratified/stratiform) rocks were considered to be different, requiring different approaches to their classification. But, lithodemic terminology, per se, has not been embraced here, as it was also used to incorporate a rock ‘complex’(as a non-ranked, lithodemic unit). Rock complexes are here separated from other rock types (and, in an associated rock-unit-rank ontology, accorded rank: supercomplex, complex, etc.), with a comparable approach being adopted by Gillespie & Leslie (2021) in the British Geological Survey’s Rock Unit Classification System (BRUCS). The rank terms ‘Suite’ and ‘Supersuite’ are applied to (nonstratiform) intrusive rock units, as per BRUCS, contrasting with the NASC (2005), which also applied these rankings to metamorphic rock types."@en ;
@@ -1643,10 +1655,10 @@ geof:BiostratigraphicUnit
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader geof:StratigraphicUnit ;
     skos:definition "Biostratigraphic units/Biostratigraphic Zones (biozones) are bodies of strata that are defined or characterized on the basis of their contained fossils.  The different types have no hierarchical significance, and are not based on mutually exclusive criteria (ICS, Online, December 2019)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfbst" ;
     skos:prefLabel "biostratigraphic unit"@en ;
 .
@@ -1654,9 +1666,9 @@ geof:BiostratigraphicUnit
 <http://sweetontology.net/realmGeol/GeologicFeature>
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A geologic feature is a conceptual feature a that is hypothesized to exist coherently in the Earth that results from geological processes."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:prefLabel "geologic feature"@en ;
 .
 
@@ -1670,11 +1682,11 @@ geof:RegolithLandformUnit
         "Geological Survey of Western Australia/GSWA, 2013: A revised classification system for regolith in Western Australia, and the recommended approach to regolith mapping. Geological Survey of Western Australia, Record 2013/7, 26 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/revised-classification-system-for-regolith-in-western-australia-and-the-recommended-approach-to-regolith-mapping.do>"@en ,
         "Hocking, R. M. et al., 2007: A classification system for regolith in Western Australia (March 2007 update). Geological Survey of Western Australia/GSWA, Record 2007/8, 19 pages (This Record is an update of Record 2005/10). <https://dmpbookshop.eruditetechnologies.com.au/product/a-classification-system-for-regolith-in-western-australia-march-2007-update.do>"@en ,
         "Jakica, S. et al., 2020: 1:500 000 State regolith geology of Western Australia — compilation methodologies. Geological Survey of Western Australia/GSWA, Record 2020/10, 22 pages. <https://dmpbookshop.eruditetechnologies.com.au/product/1500-000-state-regolith-geology-of-western-australia-compilation-methodologies.do>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "regolith-landform mapping unit"@en ;
     skos:broader geof:RegolithFeature ;
     skos:definition "One of a set of regolith-landform mapping units that that can be used to collectively classify and characterize the regolith (GSWA, 2013). Individual units (coded in the GSWA scheme and employed to embrace areas delineated on a map with similar landform and regolith characteristics), are composed of three parts: a primary landform part/code that specifies the environment (landform position) and/or process responsible for the formation or deposition of the regolith (e.g., alluvial/fluvial, lacustrine or eolian); a secondary part/code for landform qualifers (for landform element or pattern); and a tertiary part/code identifying the parent rock or cement (also see and compare previous version of Hocking et al., 2007)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfrlu" ;
     skos:prefLabel "regolith-landform unit"@en ;
     skos:scopeNote "The classification of regolith-landform mapping units referred to here was devised by Anand et al. (1993) in a restricted and unpublished report, which was subsequently published as Anand et al. (1998) and then revised several times (e.g., Hocking et al., 2007), leading to the revision of it by the Geological Survey of Western Australia (GSWA, 2013; and cited references); further revision is currently under way (indicated by de Souza Kovacs & Cudahy, 2022). In GSWA (2013), 11 landforms/primary codes were assigned to regolith units, comprising areas of outcrop, residual or relict units, and nine transported units (also see Jakica et al., 2020). Here, in this GSQ vocabulary, which is incompletely documented (after GSWA, and without classification coding), mainly only the primary subdivisions are dealt with, largely not the associated secondary landform elements/patterns (e.g., alluvial plain, stream channel, playa, freshwater lake, estuary, mangrove flat, etc.), although they are referred to in definition/notation under the primary units; these secondary units (landform qualifers) will be added subsequently. Even though this classification scheme was developed for the Yilgarn Craton and its periphery in Western Australia, its research findings have had application in other parts of Australia (Northern Territory and Queensland) and overseas, including western Africa, southern Asia, and South America (Anand et al., 1998)."@en ;
@@ -1684,10 +1696,10 @@ geof:TectonicFeature
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <https://doi.org/10.1080/11035897.2016.1178666> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "Tectonic Features (Tectonic Units, Tectonic Entities) include the lithosphere, including the continental and oceanic crust, tectonic plates (that the lithosphere is subdivided into), mid-ocean ridges, orogens, subduction zones, volcanic arcs, continents, cratons/shields, extended crust provinces, tectonised and or metamorphosed provinces, metallogenic (mineral) provinces, igneous provinces (including large igneous provinces), and sedimentary basins; collectively, they include continents, past and present, and, when previously formed, supercontinents (Modified and extended from: Kumpulainen, 2017; Wikipedia, March 2022)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gftcr" ;
     skos:prefLabel "tectonic feature"@en ;
 .
@@ -1696,15 +1708,15 @@ geof:StructuralFeature
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:references <http://www.glossaryofgeology.org> ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/geofeatures> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "A feature produced by deformation or displacement of rocks, such as a fold or fault (Neuendorf et al., 2011)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/geofeatures> ;
+    skos:inScheme cs: ;
     skos:notation "gfstr" ;
     skos:prefLabel "structural feature"@en ;
 .
 
-<https://linked.data.gov.au/def/geofeatures>
+cs:
     a
         owl:NamedIndividual ,
         owl:Ontology ,
@@ -1728,6 +1740,7 @@ geof:StructuralFeature
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     owl:imports
         <http://www.opengis.net/ont/geosparql> ,
         <http://www.w3.org/2004/02/skos/core> ;

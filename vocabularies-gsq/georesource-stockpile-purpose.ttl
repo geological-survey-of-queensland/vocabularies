@@ -1,6 +1,9 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/resource-stockpile-purpose>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX rsp: <http://linked.data.gov.au/def/resource-stockpile-purpose/>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -21,57 +24,57 @@ rsp:min-raw-stockpile
 rsp:transport-capacity
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rsp:capacity ;
     skos:definition "A stockpile kept due to capacity constraints in the ability to transport material to a processing or sales site."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Transport Capacity"@en ;
 .
 
 rsp:met-characteristics
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rsp:material-characteristics ;
     skos:definition "A stockpile kept due to the metallurgic charactieristics of a metallic ore not being suitable for the configuration or capability of the processing plant."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Metallurgical Characteristics"@en ;
 .
 
 rsp:processing-capacity
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rsp:capacity ;
     skos:definition "A stockpile kept due to capacity constraints to process raw material, such as where the raw output from a mine exceeds the throughput capacity of the associated processing plant."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Processing Capacity"@en ;
 .
 
 rsp:economics
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A stockpile kept due to economic considerations such as a commodity price or cost of processing that makes a raw material sub-economic to process and prepare for sale."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Economics"@en ;
 .
 
 rsp:material-characteristics
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A stockpile kept due to the physical or chemical properties of a raw material not being suitable for the specification of the available or allocated processing plant."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Material Characteristics"@en ;
 .
 
 rsp:other
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A stockpile kept due to a reason other than those otherwise listed."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Other"@en ;
 .
 
@@ -84,13 +87,13 @@ rsp:other
 rsp:capacity
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A stockpile kept due to capacity constraints in the lifecycle of a georesource material from raw material to saleable product."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/resource-stockpile-purpose> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Capacity"@en ;
 .
 
-<http://linked.data.gov.au/def/resource-stockpile-purpose>
+cs:
     a
         owl:Ontology ,
         skos:ConceptScheme ;
@@ -99,6 +102,7 @@ rsp:capacity
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "The purpose or reason for holding a stockpile of a georesource raw material or product."@en ;
     skos:hasTopConcept
         rsp:capacity ,

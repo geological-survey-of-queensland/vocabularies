@@ -1,7 +1,10 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/geometry-roles>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX grole: <http://linked.data.gov.au/def/geometry-roles/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -10,7 +13,7 @@ grole:bounding-box
     a skos:Concept ;
     dcterms:provenance "Defined by GSQ" ;
     dcterms:source "http://en.wikipedia.org/wiki/Minimum_bounding_box"^^xsd:anyURI ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geometry-roles> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel
         "bounding rectangle"@en ,
         "enclosing box"@en ,
@@ -18,7 +21,7 @@ grole:bounding-box
         "smallest bounding box"@en ;
     skos:broader grole:boundary ;
     skos:definition "The box (rectangle) with the smallest area that contains all the Points in a Feature's Geometry."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Bounding box"@en ;
 .
 
@@ -26,20 +29,20 @@ grole:bounding-circle
     a skos:Concept ;
     dcterms:provenance "Defined by GSQ" ;
     dcterms:source "http://en.wikipedia.org/wiki/Smallest-circle_problem"^^xsd:anyURI ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geometry-roles> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader grole:boundary ;
     skos:definition "The circle with the smallest area that contains all the Points in a Feature's Geometry."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Bounding circle"@en ;
 .
 
 grole:concave-hull
     a skos:Concept ;
     dcterms:provenance "Defined by GSQ" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geometry-roles> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader grole:boundary ;
     skos:definition "The minimum bounding Polygon encompassing all the Points in a Features Geometry, based on a user-defined distance threshold for vectors between Points."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Concave hull"@en ;
 .
 
@@ -47,10 +50,10 @@ grole:convex-hull
     a skos:Concept ;
     dcterms:provenance "Defined by GSQ" ;
     dcterms:source "http://www.arcgis.com/home/item.html?id=a6129839e96d4c0682250673cd89589d"^^xsd:anyURI ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geometry-roles> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader grole:boundary ;
     skos:definition "The minimum bounding Polygon encompassing all the all Points in a Feature's Geometry."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Convex hull"@en ;
 .
 
@@ -58,24 +61,24 @@ grole:centroid
     a skos:Concept ;
     dcterms:provenance "Defined by GSQ" ;
     dcterms:source "http://en.wikipedia.org/wiki/Centroid"^^xsd:anyURI ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geometry-roles> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Barycenter"@en ;
     skos:definition "The arithmetic mean position of all the Points in a Feature's Geometry, expressed as a single Point."@en ;
     skos:hiddenLabel "center of mass"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Centroid"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geometry-roles> ;
+    skos:topConceptOf cs: ;
 .
 
 grole:detailed-geometry
     a skos:Concept ;
     dcterms:provenance "Defined by GSQ" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geometry-roles> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Precise location"@en ;
     skos:definition "A Feature's Geometry in detail. It may be regular or irrigular but it does not constitute a Boundary for the Feature."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Detailed geometry"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geometry-roles> ;
+    skos:topConceptOf cs: ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -87,14 +90,14 @@ grole:detailed-geometry
 grole:boundary
     a skos:Concept ;
     dcterms:provenance "Defined by GSQ" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/geometry-roles> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A polygon which denotes the extent of a Feature's Geometry."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/geometry-roles> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Boundary"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/geometry-roles> ;
+    skos:topConceptOf cs: ;
 .
 
-<http://linked.data.gov.au/def/geometry-roles>
+cs:
     a
         owl:Ontology ,
         skos:ConceptScheme ;
@@ -103,6 +106,7 @@ grole:boundary
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Defined by GSQ" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "A Geometry Role is the function a Geometry plays in relation to the Feature it is a Geometry for, where Feature and Geometry are defined by the GeoSPARQL Ontology. Geometry Role is not geometry type and does not indicate sub classes of geometry. Well known Geometry types or subclasses of geometry include Point, Polygon, LineString MultiPolygon, etc."@en ;
     skos:hasTopConcept
         grole:boundary ,

@@ -1,6 +1,9 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/gsq-sample-facility>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sampfac: <http://linked.data.gov.au/def/gsq-sample-facility/>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -9,27 +12,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 sampfac:exploration-data-centre
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-sample-facility> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "EDC"@en ;
     skos:definition "The Exploration Data Centre is a warehouse and viewing facility for geological exploration materials and media based at 68 Pineapple Street, Zillmere, Queensland"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-sample-facility> ;
+    skos:inScheme cs: ;
     skos:notation "EDC" ;
     skos:prefLabel "Exploration Data Centre"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-sample-facility> ;
+    skos:topConceptOf cs: ;
 .
 
 sampfac:john-campbell-miles-facility
     a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/gsq-sample-facility> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel
         "John Campbell Miles Drill Core Storage Facility"@en ,
         "MIDCF"@en ;
     skos:definition "The John Campbell Miles Drill Core Storage Facility is a warehouse and viewing facility for geological exploration materials and media based at Killara Crescent, Kalkadoon Industrial Estate, Mount Isa, Queensland"@en ;
-    skos:inScheme <http://linked.data.gov.au/def/gsq-sample-facility> ;
+    skos:inScheme cs: ;
     skos:notation "MIDCF" ;
     skos:prefLabel "Mount Isa Drill Core Facility"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/gsq-sample-facility> ;
+    skos:topConceptOf cs: ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -38,7 +41,7 @@ sampfac:john-campbell-miles-facility
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
 .
 
-<http://linked.data.gov.au/def/gsq-sample-facility>
+cs:
     a
         owl:Ontology ,
         skos:ConceptScheme ;
@@ -47,6 +50,7 @@ sampfac:john-campbell-miles-facility
     dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "Facilities in Queensland which store geological samples."@en ;
     skos:hasTopConcept
         sampfac:exploration-data-centre ,

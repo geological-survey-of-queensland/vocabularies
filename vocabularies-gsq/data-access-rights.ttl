@@ -1,6 +1,9 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/data-access-rights>
 PREFIX da: <http://linked.data.gov.au/def/data-access-rights/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -30,27 +33,27 @@ da:conditional
     a skos:Concept ;
     dcterms:provenance "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
     skos:definition "Conditionally protected access refers to a resource that is stored in a system but is not freely accessible and remains protected based on the satisfaction of other specified criteria. Access is limited to specific personnel or user groups. "@en ;
-    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Conditionally protected"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf cs: ;
 .
 
 da:embargoed
     a skos:Concept ;
     dcterms:provenance "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
     skos:definition "Embargoed access refers to a resource accessible as metadata only until released for open access on a specified date."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Embargoed access"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf cs: ;
 .
 
 da:metadata-only
     a skos:Concept ;
     dcterms:provenance "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
     skos:definition "Metadata only access refers to a resource in which access is limited to metadata only. Access to the resource requires granting of access rights."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Metadata only access"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf cs: ;
 .
 
 da:open
@@ -58,27 +61,27 @@ da:open
     dcterms:provenance "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
     skos:altLabel "Open file"@en ;
     skos:definition "Open access refers to a resource that is immediately and permanently online, and free for all on the Web, without financial and technical barriers."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Open access"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf cs: ;
 .
 
 da:protected
     a skos:Concept ;
     dcterms:provenance "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
     skos:definition "Protected access refers to a resource that is stored in a system but is not freely accessible due to specific legal or policy decisions, such as active legal proceedings or ministerial discretion. Access is limited to specific personnel or user groups. "@en ;
-    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Protected access"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf cs: ;
 .
 
 da:restricted
     a skos:Concept ;
     dcterms:provenance "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
     skos:definition "Restricted access refers to a resource that is stored in a system but is not freely accessible. Access is limited to specific personnel or user groups."@en ;
-    skos:inScheme <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Restricted access"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/data-access-rights> ;
+    skos:topConceptOf cs: ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -87,7 +90,7 @@ da:restricted
     sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
 .
 
-<http://linked.data.gov.au/def/data-access-rights>
+cs:
     a
         owl:Ontology ,
         skos:ConceptScheme ;
@@ -97,6 +100,7 @@ da:restricted
     dcterms:provenance "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "http://vocabularies.coar-repositories.org/documentation/access_rights/"^^xsd:anyURI ;
+    reg:status agldwgstatus:stable ;
     skos:definition "Data access rights control how users and systems access a data resource."@en ;
     skos:hasTopConcept
         da:conditional ,

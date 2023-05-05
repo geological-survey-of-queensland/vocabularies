@@ -1,8 +1,11 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/rock-unit-rank>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geof: <https://linked.data.gov.au/def/geofeatures/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX rur: <https://linked.data.gov.au/def/rock-unit-rank/>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -12,9 +15,9 @@ rur:Assemblage
     a skos:Concept ;
     dcterms:provenance "A rank term newly defined by Gillespie & Leslie (2021) for tectonometamorphic units, with potential for application to such rock types in Queensland and Australia. The BRUCS tectonometamorphic rank terminology is only partially introduced into this ontology."@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A group of two or more related tectonometamorphic units of lower rank (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrass" ;
     skos:prefLabel "assemblage"@en ;
     skos:related geof:TectonometamorphicRockUnit ;
@@ -24,9 +27,9 @@ rur:Batholith
     a skos:Concept ;
     dcterms:provenance "Wikipedia, accessed 07.09.2021"@en ;
     dcterms:references "Wikipedia (accessed 07.09.2021): Batholith <https://en.wikipedia.org/wiki/Batholith>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A large mass of intrusive igneous (plutonic) rock that is generally larger than 100 square kilometres in area and has cooled from magma deep in the Earth's crust (Wikipedia, accessed 07.09.2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrbth" ;
     skos:prefLabel "batholith"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -38,9 +41,9 @@ rur:Bed
     dcterms:references
         "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021. <https://stratigraphy.org/guide/>"@en ,
         "Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "Bed/Beds: The smallest formal unit in the hierarchy of sedimentary lithostratigraphic units, e.g. a single stratum lithologically distinguishable from other layers above and below (Salvador, 2013; Murphy & Salvador, Online)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrbed" ;
     skos:prefLabel "bed"@en ;
     skos:related geof:LithostratigraphicUnit ;
@@ -50,9 +53,9 @@ rur:Beds
     a skos:Concept ;
     dcterms:provenance "Staines (1985) and endorsed by the Stratigraphic Nomenclature Committee, Geological Society of Australia"@en ;
     dcterms:references "Staines, H.R.E., 1985: Field Geologist's Guide to Lithostratigraphic Nomenclature in Australia. Australian Journal of Earth Sciences, 32(2), 83-106. <https://doi.org/10.1080/08120098508729316>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "beds (uncapitalised): an informal, unranked unit applied to a sequence of poorly known strata until further work is carried out, as advised in the Field Geologist’s Guide to Lithostratigraphic Nomenclature in Australia (Staines, 1985), and endorsed by the Stratigraphic Nomenclature Committee, Geological Society of Australia."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrbds" ;
     skos:prefLabel "beds"@en ;
     skos:related geof:LithostratigraphicUnit ;
@@ -67,11 +70,11 @@ rur:CalderaComplex
         "McKee, E.H. et al., 1999: The Silent Canyon Caldera Complex — A Three-Dimensional Model Based on Drill-Hole Stratigraphy and Gravity Inversion. Report 99-555, USGS. <https://pubs.usgs.gov/of/1999/0555/>"@en ,
         "Purdy, D.J., 2009: Geology of the Late Triassic Agnes Water Volcanics, central Queensland. Record 2009/01, Geological Survey of Queensland. <https://geoscience.data.qld.gov.au/report/cr089821>"@en ,
         "Willman, C.E. et al., 1999: Omeo 1:100 000 Map Area Geological Report. Report 118, Geological Survey of Victoria. <http://earthresources.efirst.com.au/product.asp?pID=504&cID=39>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "caldera volcano-complex"@en ;
     skos:broader rur:Complex ;
     skos:definition "Rocks associated with a nested, multiple-collapse, caldera system that formed repeatedly during, and following, the eruptions of large-volume, ash-flow and air-fall tuffs. Intracaldera deposits include post-collapse subordinate volumes of lava flows that erupted from vents and small domes commonly located along ring faults. Lacustrine and laterally-resticted fluvial sediments, together with volcaniclastics including breccias formed by landslides, avalanches and rock fall from the caldera scarp, generally intertongue with the products of continued volcanic eruption (Here proposed after: McKee et al., 1999; Willman et al., 1999; Purdy, 2009)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrcac" ;
     skos:prefLabel "caldera complex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -81,10 +84,10 @@ rur:CentralComplex
     a skos:Concept ;
     dcterms:provenance "Examples in Queensland include the Mount Warning Central Complex and the Mount Barney Central Complex (Ewart et al, 1987: University of Queensland, Papers, 11(4), 1–82)."@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Complex ;
     skos:definition "A unit comprising multiple related intrusions, usually with screens and irregular masses of associated extrusive rocks and/or country rocks, and commonly but not necessarily arranged spatially around one or more focal points. Central complexes are commonly composed of two or more spatially associated (and commonly intersecting) centres, and may generally be considered to represent the roots of a central volcano at a relatively shallow crustal level; however, that association is not essential to this definition (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrcco" ;
     skos:prefLabel "central-complex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -94,9 +97,9 @@ rur:ConeSheet
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A sheet with a cone shape that dips inwards towards a central ‘focal’ point (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrics" ;
     skos:prefLabel "cone-sheet"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -106,10 +109,10 @@ rur:ConeSheetSwarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Swarm ;
     skos:definition "A group (two or more) of related cone sheets (Sensu: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrcss" ;
     skos:prefLabel "cone-sheet-swarm"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -119,9 +122,9 @@ rur:Diatreme
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A pipe filled with volcanic breccia that is inferred to form through gaseous disruption (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrdia" ;
     skos:prefLabel "diatreme"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -131,10 +134,10 @@ rur:Dyke
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Dike"@en ;
     skos:definition "A sheet emplaced along a steep to vertical fracture, normally discordant to the host-rock structure (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrdyk" ;
     skos:prefLabel "dyke"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -144,11 +147,11 @@ rur:DykeSwarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "dike-swarm"@en ;
     skos:broader rur:Swarm ;
     skos:definition "A group (two or more) of related dykes (After: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrdsw" ;
     skos:prefLabel "dyke-swarm"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -160,9 +163,9 @@ rur:Flow
     dcterms:references
         "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021.<https://stratigraphy.org/guide/>"@en ,
         "Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A discrete extrusive volcanic body distinguishable by texture, composition, or other objective criteria (Salvador, 2013; Murphy & Salvador, Online)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrflw" ;
     skos:prefLabel "flow"@en ;
     skos:related geof:LithostratigraphicUnit ;
@@ -174,9 +177,9 @@ rur:Formation
     dcterms:references
         "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021. <https://stratigraphy.org/guide/>"@en ,
         "Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "The primary formal unit of lithostratigraphic classification. Formations are the only formal lithostratigraphic units into which the stratigraphic column everywhere should be divided completely on the basis of lithology (Salvador, 2013; Murphy & Salvador, Online)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrfmn" ;
     skos:prefLabel "formation"@en ;
     skos:related geof:LithostratigraphicUnit ;
@@ -188,9 +191,9 @@ rur:Group
     dcterms:references
         "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021. <https://stratigraphy.org/guide/>"@en ,
         "Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A succession of two or more contiguous or associated formations with significant and diagnostic lithologic properties in common (Salvador, 2013; Murphy & Salvador, Online)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrgrp" ;
     skos:prefLabel "group"@en ;
     skos:related geof:LithostratigraphicUnit ;
@@ -200,10 +203,10 @@ rur:Intrusion
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Igneous Intrusion"@en ;
     skos:definition "A body of rock formed by the emplacement of magma which solidifies before reaching the Earth's surface (After: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rriin" ;
     skos:prefLabel "intrusion"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -213,9 +216,9 @@ rur:IntrusionCentre
     a skos:Concept ;
     dcterms:provenance "Igneous intrusions may be grouped in centres (or clusters), expressing genetic and spatial relationships, these groupings (centres/clusters) being classified at Rank 4 by Gillespie & Leslie (2021). Per the example of the cited authors, a centre could comprise two intersecting plutons, and several ring-dykes, a dyke-swarm and a number of pipes that intersect the plutons or are spatially closely associated with them."@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A group of two or more related intrusive units of lower rank (below suite and subsuite, respectively at Rank 2 and Rank 3 in BRUCS) focused tightly around a central point and usually intersecting to some degree (After: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrice" ;
     skos:prefLabel "centre"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -225,9 +228,9 @@ rur:IntrusionCluster
     a skos:Concept ;
     dcterms:provenance "Igneous intrusions may be grouped in clusters (or centres), expressing genetic and spatial relationships, these groupings (centres/clusters) being classified at Rank 4 by Gillespie & Leslie (2021). Per the example of the cited authors, a cluster could comprise two dyke-swarms, a sill-swarm and numerous pipes, which are related but scattered over a wide area (unlike intrusions that are tightly grouped as a centre around a central point)."@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A group of two or more related intrusive units of lower rank (below suite and subsuite, respectively at Rank 2 and Rank 3 in BRUCS) that are associated spatially but not focussed tightly (After: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rricl" ;
     skos:prefLabel "intrusion cluster"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -237,10 +240,10 @@ rur:IntrusionSwarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Swarm ;
     skos:definition "Broadly: A swarm of related intrusions, as exemplified by Garbh-choire Peridotite Intrusion-swarm of the Cullin Centre and the Skye Central Complex in the UK (See: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrisw" ;
     skos:prefLabel "intrusion-swarm"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -250,9 +253,9 @@ rur:Laccolith
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "An intrusion that is roughly circular in plan, generally with a planar floor and domed roof (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrlac" ;
     skos:prefLabel "laccolith"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -264,10 +267,10 @@ rur:Lens
     dcterms:references
         "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 21.02.2022. <https://stratigraphy.org/guide/>"@en ,
         "North American Stratigraphic Code, 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Lentil"@en ;
     skos:definition "A lens is a lens-shaped body of rock of different lithology than the unit that encloses it (Murphy & Salvador, Online, Accessed 21.02.2022); and similarly, a lens (lentil) has been defined as a geographically restricted member that terminates on all sides within a formation (NASC, 2005)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrlen" ;
     skos:prefLabel "lens"@en ;
     skos:related geof:LithostratigraphicUnit ;
@@ -277,9 +280,9 @@ rur:Lopolith
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "An intrusion that is kilometre-scale or larger and broadly saucer-shaped (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrlop" ;
     skos:prefLabel "lopolith"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -291,9 +294,9 @@ rur:Member
     dcterms:references
         "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021. <https://stratigraphy.org/guide/>"@en ,
         "Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "The formal lithostratigraphic unit next in rank below a formation (Salvador, 2013; Murphy & Salvador, Online)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrmbr" ;
     skos:prefLabel "member"@en ;
     skos:related geof:LithostratigraphicUnit ;
@@ -303,10 +306,10 @@ rur:MetamorphicComplex
     a skos:Concept ;
     dcterms:provenance "Examples in Queensland include the Kurbayia Metamorphic Complex (includes dioritic to granitic gneiss felsic gneiss, minor pelitic schist) and the Glen Eva Metamorphic Complex (foliated meta-igneous and metasedimentery rocks) [Jell, 2013: Geology of Queensland, Geological Survey of Queensland, 1063 pages.]."@en ;
     dcterms:references "This vocabulary"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Complex ;
     skos:definition "A coherent but varied group of metamorphic rocks, the term preferably applied to metamorphosed rocks derived from more than one genetic class of precursors (sedimentary, igneous, metamorphic), and preferably where the precursors cannot be reliably identified because of the degree of metamorphism and deformation."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrmco" ;
     skos:prefLabel "metamorphic complex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -319,10 +322,10 @@ rur:MetamorphicCoreComplex
         "Coney (1980):Cordilleran metamorphic core complexes: An overview. In: Crittenden, M.D. et al. (Editors): Cordilleran Metamorphic Core Complexes. GSA Memoirs, 153, 7–34. <https://pubs.geoscienceworld.org/books/book/162/chapter/3791265/Cordilleran-metamorphic-core-complexes-An-overview>"@en ,
         "Ring, U., 2014: Metamorphic Core Complexes. Encyclopedia of Marine Geosciences. Springer, Dordrecht. <http://people.geo.su.se/uwe/publications/Metamorphic-core-complexes.pdf>"@en ,
         "Wikipedia (accessed 07.09.2021): Metamorphic core complex. <https://en.wikipedia.org/wiki/Metamorphic_core_complex>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Complex ;
     skos:definition "Exhumed segments of deep, lower to middle, continental crust, embracing metamorphic-plutonic basement rocks, that have undergone relatively fast transport to the Earth’s surface as a result of major, deep-seated crustal extension; unmetamorphosed cover rocks are generally sliced by numerous, younger-on-older faults and are separated from the basement rocks by a decollement and/or a steep metamorphic gradient with much brecciation and kinematic structural relationships that indicate sliding or detachment (Coney, 1980; Ring, 2014; Wikipedia, accessed 07.09.2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrmcc" ;
     skos:prefLabel "metamorphic-core-complex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -334,10 +337,10 @@ rur:Nappe
     dcterms:references
         "Kumpulainen, R.A. (Editor.), 2017: Guide for geological nomenclature in Sweden, GFF, 139:1, 3-20. <https://www.tandfonline.com/doi/full/10.1080/11035897.2016.1178666>" ,
         "Nystuen, J.P. (Editor), 1989: Rules and recommendations of naming geological units in Norway. Norsk Geologisk Tidskrift 69 (Supplement 2), 1–111. <https://foreninger.uio.no/ngf/ngt/pdfs/NGT_69_supplement1.pdf>" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:NappeComplex ;
     skos:definition "The tectonic term ‘nappe’ refers to any allochthonous, sheet-like body that has been moved on a shallow-dipping high-strain zone, and, following Nystuen (1989), the term is non-genetic with respect to the transport mechanism of the nappe rocks (Kumpulainen, 2017)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrnap" ;
     skos:prefLabel "nappe"@en ;
     skos:related geof:TectonostratigraphicRockUnit ;
@@ -347,9 +350,9 @@ rur:Neck
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A pipe inferred to have fed a volcano, now infilled with collapsed material from the vent (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrnek" ;
     skos:prefLabel "neck"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -359,10 +362,10 @@ rur:NeckSwarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Swarm ;
     skos:definition "A group (two or more) of related pipes (Sensu: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrnsw" ;
     skos:prefLabel "neck-swarm"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -372,10 +375,10 @@ rur:NoRank
     a skos:Concept ;
     dcterms:provenance "Defined in this vocabulary" ;
     dcterms:references "This vocabulary"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Unranked"@en ;
     skos:definition "An unranked and unnamed rock unit or body of rocks."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrnor" ;
     skos:prefLabel "no rank"@en ;
 .
@@ -384,9 +387,9 @@ rur:Ophiolite
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie (2021), in BRUCS, accorded an ophiolite a Rank-4 position (Tectonometamorphic Units) in BRUCS, to permit individual related occurrences of ophiolite to be grouped in higher-rank associations (giving an example, in the Highland Border Fault Zone in Scotland, of a possible reclassification of the Highland Border Ophoilite under the Highland Border Ophiolite Assemblage (Rank 2) and potentially (at Rank 1) under the Iapetus Ocean Ophiolite Superassemblage.The BRUCS tectonometamorphic rank terminology is only partially introduced into this ontology."@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A unit formed of obducted oceanic crust, generally recognized as having a mixed-class character comprising several layers of ultrabasic and basic igneous rock, dykes and other intrusions, pillow lavas and sea-floor sediments, with or without subjacent mantle (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rroph" ;
     skos:prefLabel "ophiolite"@en ;
     skos:related geof:TectonometamorphicRockUnit ;
@@ -400,10 +403,10 @@ rur:OphioliteComplex
         "Gillespie et al, 2011: BGS classification of lithodemic units: a classification of onshore Phanerozoic intrusions in the UK, figure 1. <http://nora.nerc.ac.uk/id/eprint/18279/1/RR12001.pdf)>"@en ,
         "Harper et al., 2003, Geological Society of America, Field Guide 4, Evolution of a polygenetic ophiolite: The Jurassic Ingalls Ophiolite, Washington Cascades. <https://pubs.geoscienceworld.org/books/book/588/chapter/3804112/The-Ingalls-ophiolite-complex-central-Cascades>"@en ,
         "Kusky et al., 2001: The Archean Dongwanzi Ophiolite Complex, North China Craton: 2.505-Billion-Year-Old Oceanic Crust and Mantle. <https://www.science.org/doi/pdf/10.1126/science.1059426>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Complex ;
     skos:definition "A complex unit comprising a mixture of ophiolite (an uplifted mafic-ultramafic section of Earth’s oceanic crust and upper mantle) that has been metamorphosed and generally subjected to polyphase tectonism over an extended period of time; such units are variously associated with other rock types, including intrusive rocks and basaltic-tholeiitic sheeted-dyke complexes, extrusive rocks (e.g., pillow lavas) and younger (overlying) sedimentary rocks (e.g., chert, greywacke, black shale, pebble conglomerate, and lenses of ophiolite breccias) and/or thrust sheets (Here proposed after: Kusky et al., 2001; Harper et al., 2003; Gillespie et al., 2011; Fu et al., 2018)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rroco" ;
     skos:prefLabel "ophiolite-complex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -413,9 +416,9 @@ rur:Pipe
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "An intrusion sensu lato that is cylindrical and normally steeply orientated (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrpip" ;
     skos:prefLabel "pipe"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -425,10 +428,10 @@ rur:PipeSwarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Swarm ;
     skos:definition "A group (two or more) of related pipes (Sensu: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrpis" ;
     skos:prefLabel "pipe-swarm"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -438,9 +441,9 @@ rur:Plug
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A pipe inferred to have fed a volcano, but generally lacking collapsed material from the vent (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrplg" ;
     skos:prefLabel "plug"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -450,10 +453,10 @@ rur:PlugSwarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Swarm ;
     skos:definition "A group (two or more) of related plugs (Sensu: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrpls" ;
     skos:prefLabel "plug-swarm"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -463,9 +466,9 @@ rur:Pluton
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "An intrusion sensu lato that is kilometre-scale or larger, and cylindrical, lenticular or tabular (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrplu" ;
     skos:prefLabel "pluton"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -475,9 +478,9 @@ rur:PlutonCluster
     a skos:Concept ;
     dcterms:provenance "Jell, 2013, pp. 61, 80–81"@en ;
     dcterms:references "Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A cluster of related plutons [e.g., the Forsayth Batholith (of the Forsayth Supersuite, Forsayth Subprovince, Etheridge Province, northern Queensland)], although the term ‘pluton cluster’ has not been applied per se to the unit, although it ‘comprises ~30 individual plutons or clusters of plutons 2–10 km in diameter’ (Jell, 2013, pp. 61, 80–81)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrpcl" ;
     skos:prefLabel "pluton cluster"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -487,10 +490,10 @@ rur:Ring-dyke
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Ring-dike"@en ;
     skos:definition "A sheet that is arcuate or annular in plan, and usually vertical or inclined steeply outwards (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrrdy" ;
     skos:prefLabel "ring-dyke"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -500,10 +503,10 @@ rur:RingComplex
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Complex ;
     skos:definition "A unit comprising multiple ring-intrusions and/or ring-dykes, cone-sheets, ring-dyke-swarms and cone-sheet-swarms, and their country-rock (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrrco" ;
     skos:prefLabel "ring-complex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -513,10 +516,10 @@ rur:RingDykeSwarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Swarm ;
     skos:definition "A group (two or more) of related ring-dykes (Sensu: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrrds" ;
     skos:prefLabel "ring-dyke-swarm"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -526,9 +529,9 @@ rur:RingIntrusion
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "An intrusion that is emplaced within, or bounded by, a ring-fracture (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrrin" ;
     skos:prefLabel "ring-intrusion"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -538,9 +541,9 @@ rur:Sheet
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "An intrusion sensu lato with broadly parallel margins and one dimension much shorter than the other two (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrsht" ;
     skos:prefLabel "sheet"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -550,10 +553,10 @@ rur:SheetComplex
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Complex ;
     skos:definition "A unit comprising multiple sheets and their country-rock (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrshc" ;
     skos:prefLabel "sheet-complex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -563,10 +566,10 @@ rur:SheetSwarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Swarm ;
     skos:definition "A group (two or more) of related sheets (Sensu: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrshs" ;
     skos:prefLabel "sheet-swarm"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -576,9 +579,9 @@ rur:Sill
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A sheet emplaced along a gently inclined to horizontal fracture; normally broadly concordant in strata (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrsil" ;
     skos:prefLabel "sill"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -588,9 +591,9 @@ rur:SillCluster
     a skos:Concept ;
     dcterms:provenance "An example being the Borrowdale Sill Cluster in the UK (Gillespie et al., 2021, figure 4)."@en ;
     dcterms:references "After: Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212, figure 4. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A cluster of related sills."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrscl" ;
     skos:prefLabel "sill cluster"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -600,10 +603,10 @@ rur:SillComplex
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Complex ;
     skos:definition "A unit comprising multiple sills and their country-rock (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrslc" ;
     skos:prefLabel "sill-complex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -613,10 +616,10 @@ rur:SillSwarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Swarm ;
     skos:definition "A group (two or more) of related sills (after: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrsls" ;
     skos:prefLabel "sill-swarm"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -629,10 +632,10 @@ rur:StructuralComplex
         "Easton, R.M, 2009: A guide to the application of lithostratigraphic terminology in Precambrian terrains. Stratigrpahy, 6(2), 117–134. <https://nacsn.americangeosciences.org/sites/default/files/2018-01/48689_articles_article_file_1643.pdf>"@en ,
         "Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ,
         "North American Stratigraphic Code, 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Complex ;
     skos:definition "A unit comprising a heterogeneous mixture of tectonically-disrupted bodies of rock in which some individual components are too small to be mapped and consisting of two or more rock classes or a single class only (North American Stratigraphic Code, 2005; also see: Easton, 2009; Kumpulainen, 2017)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrstc" ;
     skos:prefLabel "stuctural-complex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -642,9 +645,9 @@ rur:Subassemblage
     a skos:Concept ;
     dcterms:provenance "A rank term newly defined by Gillespie & Leslie (2021) for tectonometamorphic units, with potential for application to such rock types in Queensland and Australia. The BRUCS tectonometamorphic rank terminology is only partially introduced into this ontology."@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A group of two or more tectonometamorphic units of lower rank that display shared characteristics and belong to the same assemblage (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrsba" ;
     skos:prefLabel "subassemblage"@en ;
     skos:related geof:TectonometamorphicRockUnit ;
@@ -654,9 +657,9 @@ rur:Subcomplex
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "One of two or more subdivisions of the same complex, with shared characteristics (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrsbc" ;
     skos:prefLabel "subcomplex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -668,9 +671,9 @@ rur:Subgroup
     dcterms:references
         "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021. <https://stratigraphy.org/guide/>"@en ,
         "Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A Group may be subdivided into subgroups (Salvador, 2013; Murphy & Salvador, Online)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrsbg" ;
     skos:prefLabel "subgroup"@en ;
     skos:related geof:LithostratigraphicUnit ;
@@ -683,10 +686,10 @@ rur:Subsuite
         "Compare: Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ,
         "Compare: North American Stratigraphic Code, 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>"@en ,
         "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Suite ;
     skos:definition "A group of two or more related igneous-intrusive rock units of lower rank that display shared characteristics and belong to the same suite (After: Gillespie & Leslie, 2021; cf. North American Stratigraphic Code, 2005; cf. Kumpulainen, 2017)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrsbs" ;
     skos:prefLabel "subsuite"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -696,10 +699,10 @@ rur:Superassemblage
     a skos:Concept ;
     dcterms:provenance "A rank term newly defined by Gillespie & Leslie (2021) for tectonometamorphic units, with potential for application to such rock types in Queensland and Australia. The BRUCS tectonometamorphic rank terminology is only partially introduced into this ontology."@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "A group of two or more related 'assemblages' of tectonometamorphic units with or without other units of lower rank that are not part of those 'assemblages' (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrspa" ;
     skos:prefLabel "superassemblage"@en ;
     skos:related geof:TectonometamorphicRockUnit ;
@@ -711,10 +714,10 @@ rur:Supercomplex
     dcterms:references
         "After and compare: Subcommission on Quaternary Stratigraphy — Lithodemic Stratigraphy. Accessed online 04.11.2021. <http://quaternary.stratigraphy.org/stratigraphic-guide/lithodemic-stratigraphy/>"@en ,
         "After: Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "A supercomplex consists of two or more complexes, having a degree of natural relationship with each other (After: The Subcommission on Quaternary Stratigraphy, Online)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrspc" ;
     skos:prefLabel "supercomplex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -726,10 +729,10 @@ rur:Supergroup
     dcterms:references
         "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021. <https://stratigraphy.org/guide/>"@en ,
         "Salvador, A., 2013: International Stratigraphic Guide. Reprinted Second Edition, The International Union of Geological Sciences and The Geological Society of America, 214 pages. <https://doi.org/10.1130/9780813774022>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "A lithostratigraphic Supergroup may contain several associated groups or associated groups and formations, all with significant lithologic properties in common (Salvador, 2013; Murphy & Salvador, Online)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrspg" ;
     skos:prefLabel "supergroup"@en ;
     skos:related geof:LithostratigraphicUnit ;
@@ -742,10 +745,10 @@ rur:Supersuite
         "Compare: Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ,
         "Compare: North American Stratigraphic Code, 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>"@en ,
         "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "A group of two or more related suites with or without other units of lower rank that are not part of those suites. For example, a supersuite may contain a central complex, comprising multiple related intrusions, and associated extrusive rocks and/or country rocks (after: Gillespie & Leslie, 2021; cf. North American Stratigraphic Code, 2005; cf. Kumpulainen, 2017)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrsps" ;
     skos:prefLabel "supersuite"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -757,9 +760,9 @@ rur:Tongue
     dcterms:references
         "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 21.02.2022. <https://stratigraphy.org/guide/>"@en ,
         "North American Stratigraphic Code, 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A tongue is a projecting part of a lithostratigraphic unit extending out beyond its main body (Murphy & Salvador, Online, Accessed 21.02.2022); and similarly: a wedging ‘member’ that extends outward beyond a formation or wedges (‘pinches’) out within another formation (NASC, 2005)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrton" ;
     skos:prefLabel "tongue"@en ;
     skos:related geof:LithostratigraphicUnit ;
@@ -769,9 +772,9 @@ rur:Vein
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "An intrusion that is sheet-like, but generally narrower and less regular than a sheet (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrvei" ;
     skos:prefLabel "vein"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -784,13 +787,13 @@ rur:VolcanicComplex
         "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ,
         "Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ,
         "North American Stratigraphic Code, 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel
         "volcanic complex"@en ,
         "volcano-complex"@en ;
     skos:broader rur:Complex ;
     skos:definition "A unit comprising all the related units, extrusive, intrusive and sedimentary, formed at a site of persistent volcanic activity (North American Stratigraphic Code, 2005; Kumpulainen, 2017; Gillespie & Leslie, 2021, for ‘volcano-complex’)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrvco" ;
     skos:prefLabel "volcanic-complex"@en ;
     skos:related geof:ComplexRockUnit ;
@@ -802,10 +805,10 @@ rur:NappeComplex
     dcterms:references
         "Kumpulainen, R.A. (Editor.), 2017: Guide for geological nomenclature in Sweden, GFF, 139:1, 3-20. <https://www.tandfonline.com/doi/full/10.1080/11035897.2016.1178666>" ,
         "Nystuen, J.P. (Editor), 1989: Rules and recommendations of naming geological units in Norway. Norsk Geologisk Tidskrift 69 (Supplement 2), 1–111. <https://foreninger.uio.no/ngf/ngt/pdfs/NGT_69_supplement1.pdf>" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader <http://sweetontology.net/realmGeol/GeologicFeature> ;
     skos:definition "A nappe complex consists of two or more distinct nappes that are stacked upon, and related to, one another in some significant respect, e.g., shared general environment of origin, similar metamorphism and/or deformation. (Kumpulainen, 2017)"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrnpc" ;
     skos:prefLabel "nappe complex"@en ;
     skos:related geof:TectonostratigraphicRockUnit ;
@@ -818,9 +821,9 @@ rur:Suite
         "Compare: Kumpulainen (Editor), 2017: Guide for Geological Nomenclature in Sweden. GFF, 139:1, 3-20. <https://doi.org/10.1080/11035897.2016.1178666>"@en ,
         "Compare: North American Stratigraphic Code, 2005: AAPG Bulletin, 89(11), 1547–1591. <https://doi.org/10.1306/05230505015>"@en ,
         "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A group of two or more related intrusive igneous rock units. Two or more related suites may form a supersuite, and a suite may be subdived into two or more subsuites (After: Gillespie & Leslie, 2021; cf. North American Stratigraphic Code, 2005; cf. Kumpulainen, 2017)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrsui" ;
     skos:prefLabel "suite"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -830,10 +833,10 @@ rur:Vein-complex
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:broader rur:Complex ;
     skos:definition "A unit comprising multiple veins and their country-rock, the whole being typically intermediate in character between a xenolith-rich intrusion and veined country-rock (Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrvnc" ;
     skos:prefLabel "vein-complex"@en ;
     skos:related
@@ -845,13 +848,13 @@ rur:VeinSwarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel
         "stockwork veins"@en ,
         "stockworks"@en ;
     skos:broader rur:Swarm ;
     skos:definition "A Network (system) of related veins (here delimited). Differs from the associated vein-complex, which comprises both the vein system and its country rock (see and compare: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrvsw" ;
     skos:prefLabel "vein-swarm"@en ;
     skos:related
@@ -865,7 +868,7 @@ rur:VeinSwarm
     rdfs:isDefinedBy <http://sweetontology.net> ;
     skos:definition "A geologic feature is a conceptual feature a that is hypothesized to exist coherently in the Earth that results from geological processes"@en ;
     skos:example "Individuals: Lake Eyre Basin, Sarmatian Craton, Victoria Point Sandbar, Mount Erebus Volcano. Subclasses: Basin, Craton, Shield, Province, Sub-Province."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:prefLabel "geologic feature"@en ;
 .
 
@@ -873,9 +876,9 @@ rur:Swarm
     a skos:Concept ;
     dcterms:provenance "Gillespie & Leslie, 2021"@en ;
     dcterms:references "Gillespie, M.R. & Leslie, A.G., 2021: BRUCS: a new system for classifying and naming mappable rock units. Journal of the Geological Society, 178(4), jgs2020-212. <https://jgs.lyellcollection.org/content/jgs/178/4/jgs2020-212.full.pdf>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "A group of two or more related intrusive units, such as cone-sheets, diatremes, dykes, laccoliths, necks, pipes, plugs, ring-dykes, sheets, sills and veins, that are spatially associated (After: Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrswm" ;
     skos:prefLabel "swarm"@en ;
     skos:related geof:IgneousIntrusiveRockUnit ;
@@ -892,15 +895,15 @@ rur:Complex
         "After and compare: Subcommission on Quaternary Stratigraphy — Lithodemic Stratigraphy. Accessed online 04.11.2021. <http://quaternary.stratigraphy.org/stratigraphic-guide/lithodemic-stratigraphy/>"@en ,
         "Jell, P.A. (Editor), 2013: Geology of Queensland. Geological Survey of Queensland, Brisbane, 1063 pages. <https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/reports-news/geology-queensland-book-map>"@en ,
         "Murphy, M.A. & Salvador, A. (Editors; revised by W.E. Piller & M-P Aubry), Online: International Stratigraphic Guide — An abridged version. Accessed online 04.11.2021. <https://stratigraphy.org/guide/>"@en ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/rock-unit-rank> ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "The rank of a rock unit that embraces a mixture of diverse types of any genetic (sedimentary, igneous, metamorphic) class of rocks or a mixture of two or more genetic classes, and characterised by irregularly-mixed lithology or by highly-complicated structural relations [rephrased from International Stratigraphic Guide/ISG (Salvador, 2013; Murphy & Salvador, Online)]. Two or more associated complex rock units may be grouped and ranked as a supercomplex, and a complex rock unit may be divided and ranked into two or more subcomplex rock units (Variously after: Subcommission on Quaternary Stratigraphy; Gillespie & Leslie, 2021)."@en ;
-    skos:inScheme <https://linked.data.gov.au/def/rock-unit-rank> ;
+    skos:inScheme cs: ;
     skos:notation "rrcom" ;
     skos:prefLabel "complex"@en ;
     skos:related geof:ComplexRockUnit ;
 .
 
-<https://linked.data.gov.au/def/rock-unit-rank>
+cs:
     a
         owl:Ontology ,
         skos:ConceptScheme ;
@@ -935,10 +938,10 @@ rur:Complex
         "Strand, K. et al. (Editors), 2010: Guidelines and Procedures for Naming Precambrian Geological Units in Finland. Stratigraphic Commission of Finland: Precambrian Sub-Commission. Geological Survey of Finland, Guide 55, 41 pages. <https://tupa.gtk.fi/julkaisu/opas/op_055.pdf>"@en ,
         "Subcommission on Quaternary Stratigraphy — Lithodemic Stratigraphy. Accessed online 04.11.2021. <http://quaternary.stratigraphy.org/stratigraphic-guide/lithodemic-stratigraphy/>"@en ;
     dcterms:title "Rock Unit Rank"@en ;
+    reg:status agldwgstatus:stable ;
     owl:imports
         <http://www.opengis.net/ont/geosparql> ,
         <http://www.w3.org/2004/02/skos/core> ;
-    owl:versionIRI geof:0.5 ;
     owl:versionInfo "Most ontology content but not complete diagrammatic coverage." ;
     skos:definition "This vocabulary lists types of rock unit ranks relevant to the Geological Survey of Queensland. It is automatically derived from GSQ's Geologic Features Ontology (https://linked.data.gov.au/def/geofeatures)"@en ;
     skos:editorialNote "Following Gillespie & Leslie (2017), the North-American-Stratigraphic-Code (2005) lithodemic nomenclature (supersuite, suite, lithodeme) for nonstratiform, ranked units of ‘intrusive, highly deformed and/or highly metamorphosed rock’; and for nonstratiform unranked complex units (a mixture of rocks of two or more genetic classes) is not followed, but only from the perspectives: (1) the terms ‘lithodeme’ and ‘lithodemic’ are not utilized; (2) the ‘subsuite’, ‘suite’ and ‘supersuite’ rankings are applied only to intrusive igneous rock units, not also to highly metamorphosed rock units (as also per Gillespie & Leslie, 2021); and complex rock units are treated separately and given rankings (after Gillespie & Leslie, 2021). Lithodemic nomenclature, which included rock complexes, was further advocated in the various Scandinavian nomenclatural guides (e.g., Kumpulainen, 2017); compare the ISG (Online, accessed 28.09.2021) for the little-followed recommendation: ‘use of the term \"suite\" seems inadvisable’. The ‘suite’ terminology is entrenched not only in Queensland/Australian rock nomenclature, but also that of elsewhere."@en ;
