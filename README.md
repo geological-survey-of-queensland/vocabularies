@@ -92,25 +92,9 @@ This code repository's content are licensed under the [Creative Commons Attribut
 
 
 ## Contacts
-*System owner*:  
-**Mark Gordon**,
+**Geoscience Information Team**,
 Geological Survey of Queensland,
 Department of Resources,
 Brisbane, QLD, Australia,
-<mark.gordon@resources.qld.gov.au>  
-
-*Contributors*:  
-**Vance Kelly**,
-Principal Data Manager,
-Geological Survey of Queensland,
-Department of Resources,
-Brisbane, QLD, Australia,  
-<vance.kelly@resources.qld.gov.au>
-
-**Luke Hauck**,
-Geoscientist,
-Geological Survey of Queensland,
-Department of Resources,
-Brisbane, QLD, Australia,
-<luke.hauck@resources.qld.gov.au>
+<geological_info@resources.qld.gov.au>
 
