@@ -1,0 +1,172 @@
+PREFIX : <https://linked.data.gov.au/def/road-surfaces/>
+PREFIX cs: <https://linked.data.gov.au/def/road-surfaces>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:access
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Access road"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Access"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:boardwalk
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Surface of planks or sleepers, usually of wood, between which water can usually drain"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Boardwalk"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:bridge
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Bridge"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Bridge"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:other
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Surface type not covered elsewhere"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Other"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:paper-road
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Road reserve only. No road constructed in cadastral designation"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Paper Road"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:ramp
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On-ramp or off-ramp"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Ramp"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:roundabout
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Roundabout"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Roundabout"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:sealed
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Surface of brick, concrete, or asphalt"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sealed"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:slip
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Slip road or slip lane"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Slip"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:tunnel
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Tunnel"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Tunnel"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:unknown
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Surface type not known"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Unknown"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:unsealed
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Surface with material other than brick, concrete or asphalt"@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Unsealed"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/qsi>
+    a prov:Agent ;
+    rdfs:label "Qsi" ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a prov:Agent ;
+    rdfs:label "Icsm" ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-05-17"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/qsi> ;
+    dcterms:identifier "road-surfaces"^^xsd:token ;
+    dcterms:modified "2023-05-17"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    owl:versionIRI <https://linked.data.gov.au/def/road-surfaces/1.0> ;
+    owl:versionInfo "1.0" ;
+    skos:definition "This vocabulary describes surfaces of roads"@en ;
+    skos:hasTopConcept
+        :access ,
+        :boardwalk ,
+        :bridge ,
+        :other ,
+        :paper-road ,
+        :ramp ,
+        :roundabout ,
+        :sealed ,
+        :slip ,
+        :tunnel ,
+        :unknown ,
+        :unsealed ;
+    skos:historyNote "This vocabulary contains surface type classifications for roads, sourced from Queensland Roads and Tracks data. "@en ;
+    skos:prefLabel "Road Surfaces"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent <https://linked.data.gov.au/org/icsm>
+        ] ;
+.
+
