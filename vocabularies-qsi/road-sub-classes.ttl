@@ -1,11 +1,13 @@
 PREFIX : <https://linked.data.gov.au/def/road-sub-classes/>
 PREFIX cs: <https://linked.data.gov.au/def/road-sub-classes>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -219,6 +221,7 @@ cs:
         :vehicular-ferry ;
     skos:historyNote "This vocabulary contains sub classification types for roads, sourced from Queensland Roads and Tracks data. "@en ;
     skos:prefLabel "Road Sub-Classes"@en ;
+    reg:status agldwgstatus:experimental ;
     prov:qualifiedAttribution [
             dcat:hadRole isoroles:custodian ;
             prov:agent <https://linked.data.gov.au/org/icsm>
