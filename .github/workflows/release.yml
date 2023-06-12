@@ -1,0 +1,36 @@
+name: Publish vocabularies to production database
+
+on:
+  release:
+    types: [released]
+
+env:
+  PYTHON_VERSION: "3.11"
+  REQUEST_TIMEOUT: "300"
+
+  # GitHub Actions secrets
+  FUSEKI_DATASET_URL: ${{ secrets.FUSEKI_DATASET_URL }}
+  FUSEKI_USERNAME: ${{ secrets.FUSEKI_USERNAME }}
+  FUSEKI_PASSWORD: ${{ secrets.FUSEKI_PASSWORD }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+
+      - name: Use Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - run: pip install https://github.com/Kurrawong/kurrawong-python/archive/refs/tags/0.1.1.zip
+
+      - name: Upload vocabularies
+        run: |
+          kurra fuseki upload vocabularies-des ${{ env.FUSEKI_DATASET_URL }} -u ${{ env.FUSEKI_USERNAME }} -p ${{ env.FUSEKI_PASSWORD }} -t ${{ env.REQUEST_TIMEOUT }}
+          kurra fuseki upload vocabularies-external ${{ env.FUSEKI_DATASET_URL }} -u ${{ env.FUSEKI_USERNAME }} -p ${{ env.FUSEKI_PASSWORD }} -t ${{ env.REQUEST_TIMEOUT }}
+          kurra fuseki upload vocabularies-gsq ${{ env.FUSEKI_DATASET_URL }} -u ${{ env.FUSEKI_USERNAME }} -p ${{ env.FUSEKI_PASSWORD }} -t ${{ env.REQUEST_TIMEOUT }}
+          kurra fuseki upload vocabularies-qldgov ${{ env.FUSEKI_DATASET_URL }} -u ${{ env.FUSEKI_USERNAME }} -p ${{ env.FUSEKI_PASSWORD }} -t ${{ env.REQUEST_TIMEOUT }}
