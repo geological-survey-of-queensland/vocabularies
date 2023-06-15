@@ -1,117 +1,158 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix stdt: <http://linked.data.gov.au/def/site-detail-type/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/site-detail-type>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX stdt: <http://linked.data.gov.au/def/site-detail-type/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://linked.data.gov.au/def/site-detail-type> a owl:Ontology,
+stdt:collaborative-drilling-initiative-well
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Collaborative Exploration Initiative Well"@en ;
+    skos:definition "Whether the borehole was partly or wholly funded through the Collaborative Drilling Initiative."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Collaborative Drilling Initiative Well"@en ;
+    skos:topConceptOf cs: ;
+.
+
+stdt:confidential
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Whether the details pertaining to the entity are confidential records."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Confidential"@en ;
+    skos:topConceptOf cs: ;
+.
+
+stdt:date-confidence
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The confidence in the accuracy of a recorded date or dates. Includes notes for where dates are estimated or calculated."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Date Confidence"@en ;
+    skos:topConceptOf cs: ;
+.
+
+stdt:drill-result
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The result of hydrocarbon shows, presence of water, or presence of coal in a borehole."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Drill Result"@en ;
+    skos:topConceptOf cs: ;
+.
+
+stdt:extent-of-workings
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The approximate spatial extent (length, width, and height) of mine works or diggings that exist at a site. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Extent of workings"@en ;
+    skos:scopeNote "May be an observation of a site, rather than a site attribute in future release."@en ;
+    skos:topConceptOf cs: ;
+.
+
+stdt:locality
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Approximate location with respect to a nearby landmark or feature, be it a homestead, crossroads, town or city."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Locality"@en ;
+    skos:topConceptOf cs: ;
+.
+
+stdt:location-accuracy
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The accuracy or uncertainty range for stated location i.e. the distance from which the stated location may diverge from the actual location."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Location Accuracy"@en ;
+    skos:scopeNote "May be a spatial, rather than a site attribute in a future release."@en ;
+    skos:topConceptOf cs: ;
+.
+
+stdt:location-method
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The survey or activity method that was used to locate the site."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Location Method"@en ;
+    skos:scopeNote "May be a spatial, rather than a site attribute in a future release."@en ;
+    skos:topConceptOf cs: ;
+.
+
+stdt:original-crs
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The original Coordinate Reference System of recorded location information."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Original CRS"@en ;
+    skos:scopeNote "For use in data migration. Used for data previously stored in MERLIN that was converted to GDA94 in 2005."@en ;
+    skos:topConceptOf cs: ;
+.
+
+stdt:reporting-site
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A yes/no, Y/N, True/False flag indicating that a site is considered a reporting entity. Used to indicate where a Project, mine complex, or site agglomeration, is used to report or refer to many sub-sites. For example where a mining project reports on multiple mines within and contributing to the project."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Reporting Site"@en ;
+    skos:topConceptOf cs: ;
+.
+
+stdt:site-phone
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The contact phone number associated with a site, such as a mine or quarry, during operation."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Site Contact Phone"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a
+        owl:Ontology ,
         skos:ConceptScheme ;
     dcterms:created "2020-03-30"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-01-04"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "Miscellaneous Site Details."@en ;
-    skos:prefLabel "Site Detail Type"@en ;
     skos:hasTopConcept
         stdt:collaborative-drilling-initiative-well ,
         stdt:confidential ,
         stdt:date-confidence ,
         stdt:drill-result ,
+        stdt:extent-of-workings ,
         stdt:locality ,
         stdt:location-accuracy ,
         stdt:location-method ,
-        stdt:extent-of-workings ,
-        stdt:original-crs,
-        stdt:reporting-site,
+        stdt:original-crs ,
+        stdt:reporting-site ,
         stdt:site-phone ;
+    skos:prefLabel "Site Detail Type"@en ;
 .
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
-
-stdt:collaborative-drilling-initiative-well a skos:Concept ;
-    skos:definition "Whether the borehole was partly or wholly funded through the Collaborative Drilling Initiative."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:altLabel "Collaborative Exploration Initiative Well"@en ;
-    skos:prefLabel "Collaborative Drilling Initiative Well"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
-
-stdt:confidential a skos:Concept ;
-    skos:definition "Whether the details pertaining to the entity are confidential records."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:prefLabel "Confidential"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
-
-stdt:date-confidence a skos:Concept ;
-    skos:definition "The confidence in the accuracy of a recorded date or dates. Includes notes for where dates are estimated or calculated."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:prefLabel "Date Confidence"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
-
-stdt:drill-result a skos:Concept ;
-    skos:definition "The result of hydrocarbon shows, presence of water, or presence of coal in a borehole."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:prefLabel "Drill Result"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
-
-stdt:locality a skos:Concept ;
-    skos:definition "Approximate location with respect to a nearby landmark or feature, be it a homestead, crossroads, town or city."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:prefLabel "Locality"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
-
-stdt:location-accuracy a skos:Concept ;
-    skos:definition "The accuracy or uncertainty range for stated location i.e. the distance from which the stated location may diverge from the actual location."@en ;
-    skos:scopeNote "May be a spatial, rather than a site attribute in a future release."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:prefLabel "Location Accuracy"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
-
-stdt:location-method a skos:Concept ;
-    skos:definition "The survey or activity method that was used to locate the site."@en ;
-    skos:scopeNote "May be a spatial, rather than a site attribute in a future release."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:prefLabel "Location Method"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
-
-stdt:extent-of-workings a skos:Concept ; 
-    skos:definition "The approximate spatial extent (length, width, and height) of mine works or diggings that exist at a site. "@en ; 
-    skos:scopeNote "May be an observation of a site, rather than a site attribute in future release."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:prefLabel "Extent of workings"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
-
-stdt:original-crs a skos:Concept ;
-    skos:definition "The original Coordinate Reference System of recorded location information."@en ; 
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:prefLabel "Original CRS"@en ;
-    skos:scopeNote "For use in data migration. Used for data previously stored in MERLIN that was converted to GDA94 in 2005."@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
-
-stdt:reporting-site a skos:Concept ;
-    skos:definition "A yes/no, Y/N, True/False flag indicating that a site is considered a reporting entity. Used to indicate where a Project, mine complex, or site agglomeration, is used to report or refer to many sub-sites. For example where a mining project reports on multiple mines within and contributing to the project."@en ; 
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:prefLabel "Reporting Site"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .
-
-stdt:site-phone a skos:Concept ;
-    skos:definition "The contact phone number associated with a site, such as a mine or quarry, during operation."@en ; 
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/site-detail-type> ;
-    skos:prefLabel "Site Contact Phone"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/site-detail-type> .

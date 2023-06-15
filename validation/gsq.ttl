@@ -1,0 +1,26 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+BASE <https://w3id.org/profile/gsq-vocabs/>
+
+
+<Requirement-GSQ-01>
+    a sh:NodeShape ;
+    sh:targetClass skos:ConceptScheme ;
+    sh:property [
+        sh:path dcterms:publisher ;
+        sh:in (
+            <https://linked.data.gov.au/org/gsq>
+            <https://linked.data.gov.au/org/des>
+        ) ;
+        sh:message "Requirement GSQ-01 Each Concept Scheme must state that it is published by GSQ, DES or .. by use of the predicate dcterms:publisher indicating one of the following IRI values: https://linked.data.gov.au/org/gsq, https://linked.data.gov.au/org/des, ..." ;
+    ] ;
+.

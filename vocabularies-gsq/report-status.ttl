@@ -1,56 +1,80 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rptst: <http://linked.data.gov.au/def/report-status/> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/report-status>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX rptst: <http://linked.data.gov.au/def/report-status/>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://linked.data.gov.au/def/report-status> a owl:Ontology , skos:ConceptScheme ;
-    dcterms:created "2020-03-03T13:30:19"^^xsd:dateTime ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-03-03T13:30:19"^^xsd:dateTime ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+rptst:abandoned
+    a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    skos:definition "The status of a report during the submission process in the GSQ Open Data Portal Lodegement System."@en ;
-    skos:hasTopConcept rptst:in-progress,
-        rptst:screening,
-        rptst:submitted ;
-    skos:prefLabel "Report Status"@en .
-
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
-
-rptst:abandoned a skos:Concept ;
-    skos:altLabel "Cancelled"@en;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Cancelled"@en ;
     skos:definition "The report was saved in the lodgement portal but not submitted within 90 days. Any S3 resources have been subsequently deleted."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-status> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-status> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Abandoned"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-status> .
+    skos:topConceptOf cs: ;
+.
 
-rptst:in-progress a skos:Concept ;
-    skos:altLabel "Pending"@en,
-        "Saved"@en,
+rptst:in-progress
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Pending"@en ,
+        "Saved"@en ,
         "Started"@en ;
     skos:definition "The report is in-progress and saved in the lodgement portal awaiting submission."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-status> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-status> ;
+    skos:inScheme cs: ;
     skos:prefLabel "In-Progress"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-status> .
+    skos:topConceptOf cs: ;
+.
 
-rptst:screening a skos:Concept ;
+rptst:screening
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "The report is held by the department for examination prior to submission being allowed"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-status> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-status> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Screening"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-status> .
+    skos:topConceptOf cs: ;
+.
 
-rptst:submitted a skos:Concept ;
+rptst:submitted
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "The report has been sucessfully submitted."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-status> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-status> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Submitted"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-status> .
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2020-03-03T13:30:19"^^xsd:dateTime ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-03-16"^^xsd:date ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
+    skos:definition "The status of a report during the submission process in the GSQ Open Data Portal Lodegement System."@en ;
+    skos:hasTopConcept
+        rptst:in-progress ,
+        rptst:screening ,
+        rptst:submitted ;
+    skos:prefLabel "Report Status"@en ;
+.
+

@@ -2,7 +2,7 @@
 ## Introduction
 The Geological Survey of Queensland (GSQ) publishes vocabularies - a way to describe things and the relationship between things.
 
-A vocabulary is a set of agreed terms:
+A vocabulary is a set of agreed terms:
 * In GSQ, a vocabulary defines the terms used to describe and represent things in the domain of economic resources, geoscience and data management.
 * Vocabularies align information within a business area or across systems.
 * Vocabularies can be very complex (with thousands of terms) or very simple (describing one or two concepts only).
@@ -49,7 +49,7 @@ For more detailed information, please read [Why Vocabularies?](https://github.co
         - This tests for SKOS conformance, missing language tags, valid label rules, and notation uniqueness
     2. The use the GSQ Vocab [SHACL](https://www.w3.org/TR/shacl/) Shapes files
         - This tests for GSQ requirements over and beyond SKOS, such as particular metadata for the vocab
-        - The files are stored in this repo, [shapes](shapes/)
+        - The files are stored in this repo, [shapes](validation/)
         - Use the [pySHACL](https://github.com/RDFLib/pySHACL) tool on your desktop to do the validation
 5. **Import the TTL file** into a development branch in Github. Name your branch *dev-vocabularyName*. See [how-to instructions here](https://guides.github.com/activities/hello-world/). 
 6. **Submit a pull request** to the vocabularies repository.
@@ -82,7 +82,7 @@ The steps outlined above are shown in workflow form at the [Vocabulary Review Wo
 
 ## Repository Contents
 * [vocabularies/](vocabularies/) - all GSQ's vocabularies, in RDF (Turtle) text files
-* [shapes/](shapes/) - SHACL graph shape files used to validate vocab files before publication
+* [shapes/](validation/) - SHACL graph shape files used to validate vocab files before publication
 * [scripts/](scripts/) - Python scripts to dump/load a GraphDB instance with these vocab files
 * [templates/](templates/) - Excel and other tools to help with vocab creation
 
@@ -92,25 +92,9 @@ This code repository's content are licensed under the [Creative Commons Attribut
 
 
 ## Contacts
-*System owner*:  
-**Mark Gordon**,
+**Geoscience Information Team**,
 Geological Survey of Queensland,
 Department of Resources,
 Brisbane, QLD, Australia,
-<mark.gordon@resources.qld.gov.au>  
-
-*Contributors*:  
-**Vance Kelly**,
-Principal Data Manager,
-Geological Survey of Queensland,
-Department of Resources,
-Brisbane, QLD, Australia,  
-<vance.kelly@resources.qld.gov.au>
-
-**Luke Hauck**,
-Geoscientist,
-Geological Survey of Queensland,
-Department of Resources,
-Brisbane, QLD, Australia,
-<luke.hauck@resources.qld.gov.au>
+<geological_info@resources.qld.gov.au>
 

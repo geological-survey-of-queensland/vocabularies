@@ -1,105 +1,147 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix trns: <http://linked.data.gov.au/def/transaction-type/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/transaction-type>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX trns: <http://linked.data.gov.au/def/transaction-type/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://linked.data.gov.au/def/transaction-type> a owl:Ontology , skos:ConceptScheme ;
-    dcterms:created "2022-01-10"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-08-24"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+trns:min-transfer
+    a skos:Collection ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    skos:definition "The types of transactions between parties as pertains to the provision of goods, materials, and services."@en ;
-    skos:hasTopConcept trns:sale,
-        trns:purchase,
-        trns:transfer-in,
-        trns:transfer-out,
-        trns:loan,
-        trns:borrow,
-        trns:exchange ;
-    skos:prefLabel "Transaction Type"@en .
+    skos:definition "The transfers of materials cthat may occur between mineral mines, typically between mines operated by the same parent company."@en ;
+    skos:member
+        trns:purchase ,
+        trns:purchase-feed ,
+        trns:transfer-in ,
+        trns:transfer-out ;
+    skos:prefLabel "Mineral Material Transfers"@en ;
+.
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
+trns:borrow
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The receipt of goods with the agreement that the goods will be returned at a later time, without financial recompense . Non-fungible goods must be borrowed and returned as individual entities, whereas fungible goods may be returned as a like-for-like replacement."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Borrow"@en ;
+    skos:topConceptOf cs: ;
+.
 
-trns:sale a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/transaction-type> ;
-    skos:definition "The supply of goods or provision of services from the subject party, in exchange for a currency value. Where the reporting or subject party has sold goods or services to another party. An exchange of goods or services for money"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
-    skos:prefLabel "Sale"@en .
+trns:exchange
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Swap"@en ,
+        "Trade"@en ;
+    skos:definition "The exchange of goods or services where the value of the transaction is balanced in the form of good-for-goods, goods-for-services, or services-for-services, rather than as a monetary exchange."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Exchange"@en ;
+    skos:topConceptOf cs: ;
+.
 
-trns:purchase a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/transaction-type> ;
-    skos:definition "A transaction of a currency value from the subject party in exchange for goods or the provision of services. Where the reporting or subject party has received goods or services from another party. An exchange of money for goods or services"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
-    skos:prefLabel "Purchase"@en .
+trns:loan
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The supply goods with the agreement that the goods will be returned at a later time, but without financial recompense. Non-fungible goods must be loaned out and returned as an individual entities, whereas fungible goods may be returned as a like-for-like replacement."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Loan"@en ;
+    skos:topConceptOf cs: ;
+.
 
-trns:purchase-feed a skos:Concept ;
+trns:purchase-feed
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Purchase (Raw)"@en ;
     skos:broader trns:purchase ;
     skos:definition "A type of purchase in which the goods exchanged will undergo further processing or refining by the buyer prior to onward sale. A purchase of good that will contribute to the feedstock to processing by the purchasing entity."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
-    skos:prefLabel "Purchase (Feedstock)"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Purchase (Feedstock)"@en ;
+.
 
-trns:transfer-in a skos:Concept ;
-    skos:altLabel "Inward Transfer"@en,
-        "Inbound Transfer"@en,
-        "Goods Received"@en ;
-    skos:hiddenLabel "In"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/transaction-type> ;
+trns:sale
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The supply of goods or provision of services from the subject party, in exchange for a currency value. Where the reporting or subject party has sold goods or services to another party. An exchange of goods or services for money"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sale"@en ;
+    skos:topConceptOf cs: ;
+.
+
+trns:transfer-in
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Goods Received"@en ,
+        "Inbound Transfer"@en ,
+        "Inward Transfer"@en ;
     skos:definition "A transfer of material to the subject party. Where the reporting or subject party has received goods or services from another party, without a financial component to the transaction. Such as where goods have been transferred from a separate part of the same single company."@en ;
     skos:example "Where a mine has recieved raw material from another mine owned by the same company for processing or amalgamated sale"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
-    skos:prefLabel "Transfer In"@en .
+    skos:hiddenLabel "In"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Transfer In"@en ;
+    skos:topConceptOf cs: ;
+.
 
-trns:transfer-out a skos:Concept ;
-    skos:altLabel "Outward Transfer"@en,
-        "Outbound Transfer"@en,
-        "Goods Dispatched"@en ;
-    skos:hiddenLabel "Out"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/transaction-type> ;
+trns:transfer-out
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Goods Dispatched"@en ,
+        "Outbound Transfer"@en ,
+        "Outward Transfer"@en ;
     skos:definition "A transfer of material from the subject party. Where the reporting or subject party has sent goods or services to another party, without a financial component to the transaction. Such as where goods have been transferred to a separate part of the same single company."@en ;
     skos:example "Where a mine has sent raw material to another mine owned by the same company for processing or amalgamated sale"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
-    skos:prefLabel "Transfer Out"@en .
+    skos:hiddenLabel "Out"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Transfer Out"@en ;
+    skos:topConceptOf cs: ;
+.
 
-trns:loan a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/transaction-type> ;
-    skos:definition "The supply goods with the agreement that the goods will be returned at a later time, but without financial recompense. Non-fungible goods must be loaned out and returned as an individual entities, whereas fungible goods may be returned as a like-for-like replacement."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
-    skos:prefLabel "Loan"@en .
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
 
-trns:borrow a skos:Concept ;
-    skos:topConceptOf <http://linked.data.gov.au/def/transaction-type> ;
-    skos:definition "The receipt of goods with the agreement that the goods will be returned at a later time, without financial recompense . Non-fungible goods must be borrowed and returned as individual entities, whereas fungible goods may be returned as a like-for-like replacement."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
-    skos:prefLabel "Borrow"@en .
+trns:purchase
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A transaction of a currency value from the subject party in exchange for goods or the provision of services. Where the reporting or subject party has received goods or services from another party. An exchange of money for goods or services"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Purchase"@en ;
+    skos:topConceptOf cs: ;
+.
 
-trns:exchange a skos:Concept ;
-    skos:altLabel "Trade"@en,
-        "Swap"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/transaction-type> ;
-    skos:definition "The exchange of goods or services where the value of the transaction is balanced in the form of good-for-goods, goods-for-services, or services-for-services, rather than as a monetary exchange."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/transaction-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/transaction-type> ;
-    skos:prefLabel "Exchange"@en .
+cs:
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2022-01-10"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-03-16"^^xsd:date ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
+    skos:definition "The types of transactions between parties as pertains to the provision of goods, materials, and services."@en ;
+    skos:hasTopConcept
+        trns:borrow ,
+        trns:exchange ,
+        trns:loan ,
+        trns:purchase ,
+        trns:sale ,
+        trns:transfer-in ,
+        trns:transfer-out ;
+    skos:prefLabel "Transaction Type"@en ;
+.
 
-trns:min-transfer a skos:Collection ;
-    skos:prefLabel "Mineral Material Transfers"@en ;
-    skos:definition "The transfers of materials cthat may occur between mineral mines, typically between mines operated by the same parent company."@en ;
-    skos:member
-        trns:transfer-in,
-        trns:transfer-out,
-        trns:purchase,
-        trns:purchase-feed .

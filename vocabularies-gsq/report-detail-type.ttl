@@ -1,133 +1,184 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rptdt: <http://linked.data.gov.au/def/report-detail-type/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/report-detail-type>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX rptdt: <http://linked.data.gov.au/def/report-detail-type/>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://linked.data.gov.au/def/report-detail-type> a owl:Ontology,
+rptdt:activities
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Activities Undertaken"@en ,
+        "Activities to be Undertaken"@en ,
+        "Plan"@en ,
+        "Planned Activities"@en ;
+    skos:definition "A description of the activities referred to in the report or form. This may be a summary of activities undertaken, or a summary of planned activities."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Activities"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:address
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The address of the company submitting the report or form."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Address"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:comments
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Description"@en ,
+        "Remarks"@en ,
+        "Summary"@en ;
+    skos:definition "Any general commentary regarding the report or form, not otherwise captured."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Comments"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:contact
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The name of the individual contact for the report or form."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Contact Name"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:contracting-company
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The name of the company who conducted the activities referred to in the report or form."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Contractor Name"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:email
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The contact email address for the submitter of the report or form."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "E-mail"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:operating-company
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The name of the company submitting the report or form."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Company Name"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:phone
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The contact phone number for the submitter of the report or form."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Phone Number"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:postcode
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The contact postcode for the submitter of the report or form."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Postcode"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:project-name
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The name of the project to which a report relates."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Project Name"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:reportable-incident
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "An indication of the occurrence of a reportable incident to be recorded in the report or form."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Reportable Incident"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:state
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The contact State for the submitter of the report or form."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "State"@en ;
+    skos:topConceptOf cs: ;
+.
+
+rptdt:suburb
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The contact suburb for the submitter of the report or form."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Suburb"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a
+        owl:Ontology ,
         skos:ConceptScheme ;
     dcterms:created "2020-04-29"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2020-07-07"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-03-16"^^xsd:date ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
     skos:definition "Miscellaneous details relating to reports and documents."@en ;
+    skos:hasTopConcept
+        rptdt:activities ,
+        rptdt:address ,
+        rptdt:comments ,
+        rptdt:contact ,
+        rptdt:contracting-company ,
+        rptdt:email ,
+        rptdt:operating-company ,
+        rptdt:phone ,
+        rptdt:postcode ,
+        rptdt:project-name ,
+        rptdt:reportable-incident ,
+        rptdt:state ,
+        rptdt:suburb ;
     skos:prefLabel "Report Detail Type"@en ;
-    skos:hasTopConcept rptdt:activities,
-            rptdt:address,
-            rptdt:comments,
-            rptdt:contact,
-            rptdt:contracting-company,
-            rptdt:email,
-            rptdt:operating-company,
-            rptdt:phone,
-            rptdt:state,
-            rptdt:suburb,
-            rptdt:postcode,
-            rptdt:project-name,
-            rptdt:reportable-incident .
+.
 
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
- 
-rptdt:activities a skos:Concept ;
-    skos:altLabel "Plan"@en,
-        "Planned Activities"@en,
-        "Activities Undertaken"@en,
-        "Activities to be Undertaken"@en ;
-    skos:definition "A description of the activities referred to in the report or form. This may be a summary of activities undertaken, or a summary of planned activities."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Activities"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-  
-rptdt:address a skos:Concept ;
-    skos:definition "The address of the company submitting the report or form."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Address"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:comments a skos:Concept ;
-    skos:altLabel "Description"@en,
-        "Remarks"@en,
-        "Summary"@en ;         ;
-    skos:definition "Any general commentary regarding the report or form, not otherwise captured."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Comments"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:contact a skos:Concept ;
-    skos:definition "The name of the individual contact for the report or form."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Contact Name"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-    
-rptdt:contracting-company a skos:Concept ;
-    skos:definition "The name of the company who conducted the activities referred to in the report or form."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Contractor Name"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:email a skos:Concept ;
-    skos:definition "The contact email address for the submitter of the report or form."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "E-mail"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:operating-company a skos:Concept ;
-    skos:definition "The name of the company submitting the report or form."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Company Name"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:suburb a skos:Concept ;
-    skos:definition "The contact suburb for the submitter of the report or form."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Suburb"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:postcode a skos:Concept ;
-    skos:definition "The contact postcode for the submitter of the report or form."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Postcode"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:state a skos:Concept ;
-    skos:definition "The contact State for the submitter of the report or form."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "State"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:phone a skos:Concept ;
-    skos:definition "The contact phone number for the submitter of the report or form."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Phone Number"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:project-name a skos:Concept ;
-    skos:definition "The name of the project to which a report relates."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Project Name"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .
-
-rptdt:reportable-incident a skos:Concept ;
-    skos:definition "An indication of the occurrence of a reportable incident to be recorded in the report or form."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:inScheme <http://linked.data.gov.au/def/report-detail-type> ;
-    skos:prefLabel "Reportable Incident"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/report-detail-type> .

@@ -1,0 +1,473 @@
+# baseURI: http://publications.europa.eu/ontology/skosShapes
+# imports: http://datashapes.org/dash
+# imports: http://publications.europa.eu/ontology/shapeview
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2008/05/skos-xl
+
+@prefix : <http://publications.europa.eu/ontology/skosShapes#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix euvocShapes: <http://publications.europa.eu/ontology/euvoc/euvocShapes#> .
+@prefix euvocShapesUtil: <http://eurovoc.europa.eu/euvocShapesUtil#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://publications.europa.eu/ontology/skosShapes>
+  rdf:type owl:Ontology ;
+  rdfs:comment """Implements the following SKOS constraint checks: 
+- S9	skos:ConceptScheme is disjoint with skos:Concept.  
+- S13 : skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties. 
+- S14	A resource has no more than one value of skos:prefLabel per language tag. 
+- S27	skos:related is disjoint with the property skos:broaderTransitive. 
+- S37	skos:Collection is disjoint with each of skos:Concept and skos:ConceptScheme.  
+- (9.6.4.) SKOS Concepts, Concept Collections and Semantic Relations  
+- S46	skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch. 
+- (10.6.2.) Clashes Between Hierarchical (skos:broadMatch skos:narrowMatch) and Associative (skos:relatedMatch, skos:closeMatch, skos:exactMatch) Mappings 
+- (B.3.4.2). SKOS+XL Labeling Integrity 
+Some warning and few error constraints are also taken from qSKOS validator [https://github.com/cmader/qSKOS/wiki/Quality-Issues#Labeling_and_Documentation_Issues] """ ;
+  rdfs:label "Constraints definitions for SKOS and SKOS-XL" ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://publications.europa.eu/ontology/shapeview> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2008/05/skos-xl> ;
+  owl:versionInfo "EuVoc 1.1" ;
+.
+:DisjointMappingRelations
+  rdf:type rdfs:Class ;
+  rdf:type sh:Shape ;
+  rdfs:comment "Disjoint mapping relations" ;
+  rdfs:label "Disjoint mapping relations" ;
+  rdfs:subClassOf rdfs:Resource ;
+  owl:versionInfo "EuVoc 1.1" ;
+  sh:property [
+      sh:predicate skos:closeMatch ;
+      sh:disjoint skos:broadMatch ;
+      sh:disjoint skos:exactMatch ;
+      sh:disjoint skos:narrowMatch ;
+      sh:disjoint skos:relatedMatch ;
+      sh:name "close match" ;
+    ] ;
+  sh:property [
+      sh:predicate skos:exactMatch ;
+      sh:disjoint skos:broadMatch ;
+      sh:disjoint skos:closeMatch ;
+      sh:disjoint skos:narrowMatch ;
+      sh:disjoint skos:relatedMatch ;
+      sh:name "exact match" ;
+    ] ;
+  sh:property [
+      sh:predicate skos:narrowMatch ;
+      sh:disjoint skos:broadMatch ;
+      sh:disjoint skos:closeMatch ;
+      sh:disjoint skos:exactMatch ;
+      sh:disjoint skos:relatedMatch ;
+      sh:name "narrow match" ;
+    ] ;
+  sh:property [
+      sh:predicate skos:relatedMatch ;
+      sh:disjoint skos:broadMatch ;
+      sh:disjoint skos:closeMatch ;
+      sh:disjoint skos:exactMatch ;
+      sh:disjoint skos:narrowMatch ;
+      sh:name "related match" ;
+    ] ;
+  sh:sparql [
+      sh:message "The domain and range of a Mapping Relations should be skos:Concept ." ;
+      sh:select """SELECT $this
+WHERE {
+    $this a skos:Concept .
+}""" ;
+    ] ;
+  sh:targetObjectsOf skos:broadMatch ;
+  sh:targetObjectsOf skos:closeMatch ;
+  sh:targetObjectsOf skos:exactMatch ;
+  sh:targetObjectsOf skos:narrowMatch ;
+  sh:targetObjectsOf skos:relatedMatch ;
+  sh:targetSubjectsOf skos:broadMatch ;
+  sh:targetSubjectsOf skos:closeMatch ;
+  sh:targetSubjectsOf skos:exactMatch ;
+  sh:targetSubjectsOf skos:narrowMatch ;
+  sh:targetSubjectsOf skos:relatedMatch ;
+.
+:SemanticRelations
+  rdf:type rdfs:Class ;
+  rdf:type sh:Shape ;
+  rdfs:comment "Semantic relations" ;
+  rdfs:label "Semantic relations" ;
+  rdfs:subClassOf rdfs:Resource ;
+  owl:versionInfo "EuVoc 1.1" ;
+  sh:sparql [
+      rdfs:comment "9.6.4. SKOS Concepts, Concept Collections and Semantic Relations" ;
+      sh:message "domain and range of SKOS semantic propoerties MUST be a skos:Concept . " ;
+      sh:select """SELECT $this
+WHERE {
+    FILTER NOT EXISTS{ $this a skos:Concept .}
+}""" ;
+    ] ;
+  sh:targetObjectsOf skos:broader ;
+  sh:targetObjectsOf skos:narrower ;
+  sh:targetObjectsOf skos:related ;
+  sh:targetSubjectsOf skos:broader ;
+  sh:targetSubjectsOf skos:narrower ;
+  sh:targetSubjectsOf skos:related ;
+.
+skos:Collection
+  rdf:type sh:Shape ;
+  sh:sparql [
+      sh:message "The domain of semantic properties cannot be skos:Collection" ;
+      sh:select """SELECT $this
+WHERE {
+    ?this skos:broader | skos:narrower | skos:related ?c .
+}""" ;
+    ] ;
+  sh:sparql [
+      sh:message "The range of semantic properties cannot be skos:Collection" ;
+      sh:select """SELECT $this
+WHERE {
+    ?c skos:broader | skos:narrower | skos:related ?this .
+}""" ;
+    ] ;
+  sh:sparql [
+      sh:message "skos:Collection is disjoint with each of skos:Concept and skos:ConceptScheme." ;
+      sh:select """SELECT $this
+WHERE {
+    $this a ?type .
+  FILTER (?type NOT IN (skos:Concept, skos:ConceptScheme) )
+}""" ;
+    ] ;
+.
+skos:Concept
+  rdf:type sh:Shape ;
+  sh:property [
+      sh:predicate owl:versionInfo ;
+      sh:maxCount 1 ;
+      sh:minCount 0 ;
+      sh:name "version info" ;
+    ] ;
+  sh:property [
+      sh:predicate skos:altLabel ;
+      sh:datatype rdf:langString ;
+      sh:name "alt label" ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:property [
+      sh:predicate skos:altLabel ;
+      sh:description "\"Constraint S13: skos:prefLabel, skos:altLabel and skos:hiddenLabel must be disjoint\"" ;
+      sh:disjoint skos:hiddenLabel ;
+      sh:disjoint skos:prefLabel ;
+      sh:name "alt label" ;
+    ] ;
+  sh:property [
+      sh:predicate skos:broader ;
+      sh:class skos:Concept ;
+      sh:name "broader" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:predicate skos:definition ;
+      sh:datatype rdf:langString ;
+      sh:name "definition" ;
+    ] ;
+  sh:property [
+      sh:predicate skos:definition ;
+      sh:minCount 1 ;
+      sh:name "definition" ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:property [
+      sh:predicate skos:hiddenLabel ;
+      sh:datatype rdf:langString ;
+      sh:name "hidden label" ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:property [
+      sh:predicate skos:inScheme ;
+      sh:class skos:ConceptScheme ;
+      sh:minCount 1 ;
+      sh:name "in scheme" ;
+      sh:nodeKind sh:IRI ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:property [
+      sh:predicate skos:narrower ;
+      sh:class skos:Concept ;
+      sh:name "narrower" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:predicate skos:prefLabel ;
+      sh:datatype rdf:langString ;
+      sh:minCount 1 ;
+      sh:name "pref label" ;
+    ] ;
+  sh:property [
+      sh:predicate skos:prefLabel ;
+      sh:datatype rdf:langString ;
+      sh:name "pref label" ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:property [
+      sh:predicate skos:prefLabel ;
+      sh:description "S14	A resource has no more than one value of skos:prefLabel per language tag." ;
+      sh:name "pref label" ;
+      sh:uniqueLang "true"^^xsd:boolean ;
+    ] ;
+  sh:property [
+      sh:predicate skos:prefLabel ;
+      sh:description "\"Constraint S13: skos:prefLabel, skos:altLabel and skos:hiddenLabel must be disjoint\"" ;
+      sh:disjoint skos:altLabel ;
+      sh:disjoint skos:hiddenLabel ;
+      sh:minCount 1 ;
+      sh:name "pref label" ;
+    ] ;
+  sh:property [
+      sh:predicate skos:related ;
+      sh:description "S27	skos:related is disjoint with the property skos:broaderTransitive." ;
+      sh:disjoint skos:broader ;
+      sh:disjoint skos:broaderTransitive ;
+      sh:disjoint skos:narrower ;
+      sh:disjoint skos:narrowerTransitive ;
+      sh:name "related" ;
+    ] ;
+  sh:property [
+      sh:predicate skos:relatedMatch ;
+      sh:class skos:Concept ;
+      sh:name "related match" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:predicate skos:relatedMatch ;
+      sh:disjoint skos:broadMatch ;
+      sh:disjoint skos:closeMatch ;
+      sh:disjoint skos:exactMatch ;
+      sh:disjoint skos:narrowMatch ;
+      sh:name "related match" ;
+    ] ;
+  sh:property [
+      sh:predicate skos:topConceptOf ;
+      sh:class skos:ConceptScheme ;
+      sh:name "top concept of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:predicate <http://www.w3.org/2008/05/skos-xl#prefLabel> ;
+      sh:class <http://www.w3.org/2008/05/skos-xl#Label> ;
+      sh:minCount 1 ;
+      sh:name "pref label" ;
+    ] ;
+  sh:scopeClass skos:Concept ;
+  sh:sparql [
+      rdfs:comment "Ambiguous Notation References" ;
+      sh:description "Concepts should not have identlical skos:notation literals." ;
+      sh:message "the concept has the same notation {$value} as {$path}" ;
+      sh:select """SELECT $this (?other as ?path) ?value
+WHERE {
+	$this skos:notation ?value  .
+	?other skos:notation ?value .
+	FILTER ($this != ?other)
+}""" ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:sparql [
+      rdfs:comment "Duplicate Notation References within Concept Scheme" ;
+      sh:description "Concepts within the same Concept Scheme should not have identlical skos:notation literals." ;
+      sh:message "the concept has the same notation {$value} as {$path}" ;
+      sh:select """SELECT $this (?other as ?path) ?value
+WHERE {
+	$this skos:notation ?value  .
+	?other skos:notation ?value .
+	 ?this skos:inScheme ?cs .
+	?other skos:inScheme ?cs .
+	FILTER ($this != ?other)
+}""" ;
+    ] ;
+  sh:sparql [
+      rdfs:comment "Empty Labels" ;
+      sh:description "Labels also need to contain textual information to be useful, thus we find all SKOS labels with length 0 (after removing whitespaces)." ;
+      sh:message "Label with an empty value detected" ;
+      sh:select """SELECT ?this ?path (?lab as ?value) (lang(?lab) as ?lang)
+WHERE {
+	?this a skos:Concept .
+	{
+	SELECT ?this ?path ?lab 
+	WHERE{
+	    ?this skos:prefLabel | skos:altLabel | skos:hiddenLabel ?lab .
+		?this ?path ?lab .
+		bind (strlen(  replace(?lab,\"\\\\s*\",\"\") ) as ?q )
+		FILTER ( ?q=0 )
+		}
+	}
+	UNION {
+  		SELECT ?this ?path ?lab {
+		?this skosxl:prefLabel| skosxl:altLabel | skosxl:hiddenLabel ?l .
+		?l skosxl:literalForm ?lab .
+		?this ?path ?l .
+		bind (strlen(  replace(?lab,\"\\\\s*\",\"\") ) as ?q )
+		FILTER ( ?q=0 )
+		}
+	}
+}""" ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:sparql [
+      rdfs:comment "Orphan Concept" ;
+      sh:description "An orphan concept is a concept without any associative or hierarchical relations. It might have attached literals like e.g., labels, but is not connected to any other resource, lacking valuable context information. A controlled vocabulary that contains many orphan concepts is less usable for search and retrieval use cases, because, e.g., no hierarchical query expansion can be performed on search terms to find documents with more general content." ;
+      sh:message "The conept is not a top concept of a Concept Scheme and neither has a broader or related concept . " ;
+      sh:select """SELECT $this 
+WHERE {
+	$this a skos:Concept .
+	FILTER NOT EXISTS {
+		?this skos:topConceptOf ?cs .
+	}
+	FILTER NOT EXISTS {
+	?this skos:broader | skos:broaderTransitive | skos:related ?other .
+	}
+}""" ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:sparql [
+      rdfs:comment "Overlapping Labels (concepts with the same label, independent of concept scheme )" ;
+      sh:description "This is a generalization of a recommendation in the SKOS primer, that “no two concepts have the same preferred lexical label in a given language when they belong to the same concept scheme”. This could indicate missing disambiguation information and thus lead to problems in autocompletion application." ;
+      sh:message "Overlapping Labels (there is concept \"{$value}\" with the same pref label in \"{$lang}\" language)" ;
+      sh:select """SELECT $this (skos:prefLabel AS ?path) (?other as ?value) (lang(?pl) as ?lang)
+WHERE {
+    ?this  skos:prefLabel ?pl .
+	?other skos:prefLabel ?opl .
+    ?other a skos:Concept .
+    FILTER ($this != ?other && ?pl = ?opl)
+}""" ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:sparql [
+      rdfs:comment "Overlapping Labels in the same Concept Scheme (concepts with the same label in the same concept scheme)" ;
+      sh:message "Overlapping Labels in the same Concept Scheme (there is concept \"{$value}\" with the same pref label in \"{$lang}\" language)" ;
+      sh:select """SELECT $this (skos:prefLabel AS ?path) (?other as ?value) (lang(?pl) as ?lang)
+WHERE {
+    ?this  skos:prefLabel ?pl .
+	?other skos:prefLabel ?opl .
+    ?other a skos:Concept .
+    ?this skos:inScheme ?cs .
+	?other skos:inScheme ?cs .
+    FILTER ($this != ?other && ?pl = ?opl)
+}""" ;
+    ] ;
+  sh:sparql [
+      rdfs:comment "Top Concept Having Broader Concept" ;
+      sh:message "The top concept has a broader concept" ;
+      sh:select """SELECT DISTINCT $this
+WHERE {
+	$this skos:broader | skos:broaderTransitive ?other .
+	?this skos:topConceptOf ?cs .
+}""" ;
+    ] ;
+  sh:sparql [
+      rdfs:comment "disjointness of skos-xl labels" ;
+      sh:message "the labels ( {$path} and {$value} ) are note dijoint for language \"{$lang}\"" ;
+      sh:select """SELECT ?this (?predicate as ?path) ?value ?lang {
+	{
+	  SELECT ?this (skosxl:prefLabel as ?predicate) (skosxl:hiddenLabel as ?value) (lang(?pl) as ?lang)
+		{
+		?this skosxl:prefLabel/skosxl:literalForm ?pl .
+		  optional {
+		?this skosxl:altLabel/skosxl:literalForm ?al .	
+		 }
+	 FILTER (?pl = ?al )
+	} }
+	UNION{
+	  SELECT ?this (skosxl:prefLabel as ?predicate) (skosxl:altLabel as ?value) (lang(?pl) as ?lang)
+		{
+		?this skosxl:prefLabel/skosxl:literalForm ?pl .
+		  optional {
+		?this skosxl:hiddenLabel/skosxl:literalForm ?hl .	
+		 }
+	 FILTER (?pl = ?hl )
+	} }
+	UNION{
+	  SELECT ?this (skosxl:altLabel as ?predicate) (skosxl:hiddenLabel as ?value) (lang(?al) as ?lang)
+		{
+		?this skosxl:altLabel/skosxl:literalForm ?al .
+		  optional {
+		?this skosxl:hiddenLabel/skosxl:literalForm ?hl .	
+		 }
+	 FILTER (?al = ?hl )
+	} }
+} 
+""" ;
+    ] ;
+  sh:sparql [
+      rdfs:comment "skos-xl pref label in the same language " ;
+      sh:message "multiple skos-xl preferred label for language \"{$lang}\"" ;
+      sh:select """SELECT $this ?lang (skosxl:prefLabel as ?path) (?l1f as ?value)
+WHERE {
+    $this skosxl:prefLabel ?l1 .
+	?l1 skosxl:literalForm ?l1f .
+	$this skosxl:prefLabel ?l2 .
+	?l2 skosxl:literalForm ?l2f .
+	FILTER ( ?l1 != ?l2 && lang(?l1f) = lang(?l2f) )
+	BIND (lang(?l1f) as ?lang)
+}""" ;
+    ] ;
+  sh:sparql [
+      rdfs:label "Undocumented Concept (no concept meaning description)" ;
+      sh:description """The SKOS \"standard\" defines a number of properties useful for documenting the meaning of the concepts in a thesaurus (section 7) also in a human-readable form. Intense use of these properties leads to a well-documented thesaurus which should also improve its quality. 
+Iteration over all concepts in the vocabulary and find those not using one of skos:note, skos:changeNote, skos:definition, skos:editorialNote, skos:example, skos:historyNote, or skos:scopeNote""" ;
+      sh:message "undocumented concept - none of the skos:notes is used to describe the meaning " ;
+      sh:select """SELECT DISTINCT $this
+WHERE {
+  	$this a skos:Concept .
+    FILTER NOT EXISTS {?this skos:definition|skos:note|skos:example|skos:historyNote|skos:scopeNote ?note}
+}""" ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:sparql [
+      sh:message "A Concept cannot be also a ConceptScheme " ;
+      sh:select """SELECT $this
+WHERE {
+    $this a skos:ConceptScheme . 
+}""" ;
+    ] ;
+.
+skos:ConceptScheme
+  rdf:type sh:Shape ;
+.
+<http://www.w3.org/2008/05/skos-xl#Label>
+  rdf:type sh:Shape ;
+  sh:property [
+      sh:predicate owl:versionInfo ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 0 ;
+      sh:name "version info" ;
+    ] ;
+  sh:property [
+      sh:predicate <http://www.w3.org/2008/05/skos-xl#literalForm> ;
+      sh:datatype rdf:langString ;
+      sh:name "literal form" ;
+      sh:severity sh:Warning ;
+    ] ;
+  sh:property [
+      sh:predicate <http://www.w3.org/2008/05/skos-xl#literalForm> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "literal form" ;
+    ] ;
+  sh:sparql [
+      rdfs:comment "Orphan Label" ;
+      sh:message "The skos-xl label is not attached to any skos:Concept " ;
+      sh:select """SELECT $this
+WHERE {
+    	$this a skosxl:Label .
+	FILTER NOT EXISTS {
+		?c skosxl:prefLabel | skosxl:hiddenLabel |skosxl:altLabel  $this .
+	}
+}""" ;
+      sh:severity sh:Warning ;
+    ] ;
+.

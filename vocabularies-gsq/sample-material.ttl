@@ -1,854 +1,1158 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix spmt: <http://linked.data.gov.au/def/sample-material/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <http://linked.data.gov.au/def/sample-material>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX spmt: <http://linked.data.gov.au/def/sample-material/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://linked.data.gov.au/def/sample-material> a owl:Ontology , skos:ConceptScheme ;
-    dcterms:created "2020-02-08"^^xsd:date ;
-    dcterms:creator <http://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2022-10-18"^^xsd:date ;
-    dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
+spmt:animal-material
+    a skos:Concept ;
     dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
-    skos:definition "Types of materials of which samples can consist of in Geoscience."@en ;
-    skos:hasTopConcept spmt:air,
-        spmt:earth-material,
-        spmt:digital,
-        spmt:fluid,
-        spmt:metallic-material,
-        spmt:non-metallic-material,
-        spmt:unknown ;
-    skos:prefLabel "Sample Material"@en .
-
-<http://linked.data.gov.au/org/gsq> a sdo:Organization ;
-    sdo:name "Geological Survey of Queensland" ;
-    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI .
-
-spmt:aerated-mud a skos:Concept ;
-    skos:broader spmt:mud ;
-    skos:definition "Fluid consisting of a mud whose density has been decreased by the process of aeration. Typically used as a drilling fluid."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Aerated Mud"@en .
-
-spmt:alluvial-wash a skos:Concept ;
-    skos:altLabel "Alluvial Ore"@en ;
-    skos:broader spmt:alluvium ;
-    skos:definition "Unconsolidated sediment primarily deposited by the action of fluid flow that contains, or is suspected to contain, an economic quantity of a commodity. Typically associated with Gold, Tin, and Corundum"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Alluvial Wash"@en .
-
-spmt:alluvium a skos:Concept ;
-    skos:broader spmt:sediment ;
-    skos:definition "Unconsolidated sediment primarily deposited by the action of fluid flow in a non-marine setting."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Alluvium"@en .
-
-spmt:air a skos:Concept ;
-    skos:definition "The composite gas comprising the Earth's atmosphere."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/air> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Air"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
-
-spmt:animal-material a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
     skos:broader spmt:biological ;
     skos:definition "Any material of or excreted from an animal. eg; animal tissue, faeces, hair"@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/animal_material> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Animal Material"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Animal Material"@en ;
+.
 
-spmt:biological a skos:Concept ;
-    skos:broader spmt:organic-material ;
-    skos:definition "Any carbon-based material of a living or recently living organism."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Biological"@en .
-
-spmt:bitumen a skos:Concept ;
-    skos:broader spmt:hydrocarbon-material ;
-    skos:definition "Solid organic material that forms part of a rock. It can usually be extracted from the rock with organic solvent."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/bitumen> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Bitumen"@en .
-
-spmt:bulk-metal a skos:Concept ;
-    skos:altLabel "Ingot"@en ;
-    skos:broader spmt:metal ;
-    skos:definition "Bulk Metal is refined ferrous or non-ferrous metal that is not necessarily to the high elemental purity required for bullion. Typically non-precious metals sold and transacted in larger volumes than bullion.."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Bulk Metal"@en .
-
-spmt:bulk-mineral a skos:Concept ;
-    skos:altLabel "Bulk Minerals"@en ;
-    skos:broader spmt:mineral ;
-    skos:definition "Bulk minerals are minerals that are not derived from mineral sand deposits and may be sold in bulk as a refined product. Bulk minerals include agricultural lime, gypsum, perlite, and wollastonite."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Bulk Mineral"@en .
-
-spmt:bulk-rock a skos:Concept ;
-    skos:altLabel "Bulk Rocks"@en ;
-    skos:broader spmt:rock ;
-    skos:definition "Bulk rock is a rock sold in bulk but not as construction material such as aggregate, raw stone, or dimension stone. Bulk rock is primarily mined and sold due to its chemcial and physical properties, such as limestone, peat, phosphate rock, diatomite, and lump silica."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Bulk Rock"@en .
-
-spmt:bullion a skos:Concept ;
-    skos:broader spmt:metal ;
-    skos:definition "Bullion is non-ferrous metal, typically Gold or Silver, that has been refined to a high standard of elemental purity."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Bullion"@en .
-
-spmt:cement a skos:Concept ;
+spmt:cement
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:broader spmt:fluid ;
     skos:definition "A cement is a binder, a substance used for construction that sets, hardens, and adheres to other materials to bind them together."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Cement"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Cement"@en ;
+.
 
-spmt:clay a skos:Concept ;
-    skos:broader spmt:mineral ;
-    skos:definition "A fine-grained natural sediment that comprises mostly one or more clay minerals or clays such as kaolinite, smectite and illite. Or a refined material consisting of a purified clay mineral or minerals."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Clay"@en .
+spmt:coal-materials
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Types of coal that describe different stages in the coal mining, processing, and sales lifecycle."@en ;
+    skos:member
+        spmt:coal-raw ,
+        spmt:coal-sales ,
+        spmt:coal-unwashed ,
+        spmt:coal-washed ;
+    skos:prefLabel "Coal Mining Materials"@en ;
+.
 
-spmt:coal a skos:Concept ;
-    skos:broader spmt:organic-material,
-        spmt:rock ;
-    skos:definition "A readily combustible organic rock containing more than 50% by weight and more than 70% by volume of carbonaceous material."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/coal> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Coal"@en .
-
-spmt:coal-raw a skos:Concept ;
-    skos:altLabel "Raw Coal"@en ;
-    skos:broader spmt:coal ;
-    skos:definition "Coal as mined from a seam prior to any quality assessment or processing."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Coal - Raw"@en .
-
-spmt:coal-washed a skos:Concept ;
-    skos:altLabel "Washed Coal"@en ;
-    skos:broader spmt:coal ;
-    skos:definition "Coal that has been washed in a coal-wash plant in preparation for sale. Referred to as an output of mining and processing by a mine, independent of any sale or transaction."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Coal - Washed"@en .
-
-spmt:coal-unwashed a skos:Concept ;
-    skos:altLabel "Coal - Unwashed"@en,
-        "Unwashed Coal"@en,
-        "Bypass Coal"@en ;
-    skos:broader spmt:coal ;
-    skos:definition "Coal that does not require washing as part of any processing in preparation for sale, i.e. coal that is of high enough quality that it has bypassed the wash process. Referred to as an output of mining processing by a mine, independent of any sale or transaction."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Coal - Bypass"@en .
-
-spmt:coal-sales a skos:Concept ;
-    skos:altLabel "Sales Coal"@en ;
-    skos:broader spmt:coal ;
-    skos:definition "Coal as a saleable product that can be transferred between companies or sold to a buyer."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Coal - Sales"@en .
-
-spmt:coke a skos:Concept ;
-    skos:broader spmt:organic-material,
+spmt:coke
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader
+        spmt:organic-material ,
         spmt:rock ;
     skos:definition "A solid of carbonaceous material derived from the destructive distillation of low-ash, low-sulphur bituminous coal."@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/coke> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Coke"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Coke"@en ;
+.
 
-spmt:colluvium a skos:Concept ;
+spmt:colluvium
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:broader spmt:sediment ;
     skos:definition "Unconsolidated sediment primarily deposited by the action of gravity, such as sheetwash, rainwash, and downslop creep."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Colluvium"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Colluvium"@en ;
+.
 
-spmt:condensate a skos:Concept ;
-    skos:broader spmt:fluid-hydrocarbon ;
-    skos:definition "A material that exists as gas in the subsurface but condenses into liquid at the surface."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/condensate> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Condensate"@en .
+spmt:drilling-fluid
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Fluid used for drill bit lubrication and return of ground rock material from the drill bit, e.g. mud."@en ;
+    skos:member
+        spmt:aerated-mud ,
+        spmt:air ,
+        spmt:foam ,
+        spmt:mist ,
+        spmt:mud ,
+        spmt:water ;
+    skos:prefLabel "Drilling Fluid"@en ;
+.
 
-spmt:crude-oil a skos:Concept ;
-    skos:broader spmt:oil ;
-    skos:definition "A naturally occurring complex liquid hydrocarbon, typically found as part of drilling activity, which after distillation and removal of impurities yields a range of combustible fuels, petrochemicals and lubricants."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/crude_oil> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Crude Oil"@en .
-
-spmt:digital a skos:Concept ;
-    skos:definition "An output from an electronic system such as a photograph, file, or electronic document."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Digital"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
-
-spmt:dimension-stone a skos:Concept ;
-    skos:broader spmt:stone ;
-    skos:definition "Natural rock selected and extracted from the earth and has been fabricated (i.e., trimmed, cut, drilled, ground, or otherwised processed) into specific sizes or shapes."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Dimension Stone"@en .
-
-spmt:direct-shipping-ore a skos:Concept ;
-    skos:broader spmt:ore ;
-    skos:definition "An ore that can be shipped and sold as a product in its raw and unprocessed form. Typically limited to bauxite, iron ores, and manganese ore."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Direct Shipping Ore"@en .
-
-spmt:dore a skos:Concept ;
-    skos:broader spmt:metal ;
-    skos:definition "Dore is non-ferrous metal, typically Gold or Silver, that has been refined to a semi-pure state, but not to the high (~99%) purity of bullion. Dore commonly contains 50-75% pure precious metal"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Dore"@en .
-
-spmt:dross a skos:Concept ;
-    skos:broader spmt:metal ;
-    skos:definition "A material mass of solid impurities generated by floation on a molten metal during metal refining. Depending on composition, dross may be a waste material or may be recovered for secondary processes or metal production such as Lead and Aluminium."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Dross"@en .
-
-spmt:earth-material a skos:Concept ;
-    skos:altLabel "Bulk Material"@en,
-        "Earth Material"@en ;
-    skos:definition "Solid materials in a natural or minimially altered state derived from the earth. Encompasses minerals, organic material, regolith, ock, and specifically includes undifferentiated material derived from the solid earth that may contain economic quantities of a commodity."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Bulk Earth Material"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
-
-spmt:estuarine-water a skos:Concept ;
+spmt:estuarine-water
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:broader spmt:water ;
     skos:definition "Water from an estuary. Depending on the nature of the estuary, the salinity may vary spatially and temporally and range from fresh, brackish, seawater or hypersaline."@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/estuarine_water> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Estuarine Water"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Estuarine Water"@en ;
+.
 
-spmt:fluid a skos:Concept ;
-    skos:definition "A substance that has no fixed shape and yields easily to external pressure."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/fluid> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Fluid"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
-
-spmt:fluid-hydrocarbon a skos:Concept ;
-    skos:broader spmt:hydrocarbon-material,
-        spmt:fluid ;
-    skos:definition "Any carbon-hydrogen fluid material"@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/fluid_hydrocarbon> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Fluid Hydrocarbon"@en .
-
-spmt:foam a skos:Concept ;
-    skos:broader spmt:fluid ;
-    skos:definition "A sample of foam. A mass of small bubbles from an aerated fluid."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Foam"@en .
-
-spmt:fungi a skos:Concept ;
+spmt:fungi
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:broader spmt:biological ;
     skos:definition "Any part of a fungus."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Fungi"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Fungi"@en ;
+.
 
-spmt:gemstone a skos:Concept ;
-    skos:altLabel "Gemstones"@en,
-        "Gem"@en,
-        "Gems"@en,
-        "Precious Stone"@en,
-        "Precious Stones"@en,
-        "Semi-Precious Stone"@en,
-        "Semi-Precious Stones"@en,
-        "Jewel"@en,
-        "Jewels"@en ;
-    skos:broader spmt:mineral ;
-    skos:definition "A gemstone or gem (also called a precious or semi-precious stone, a fine gem, or jewel) is a piece of mineral, which, in cut and polished form, is used to make jewelry or other adornments"@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Gemstone"@en .
-
-spmt:gem-rock a skos:Concept ;
-    skos:altLabel "Gem Rock"@en,
-        "Gem Ore"@en,
-        "Gem Bearing Rock"@en ;
-    skos:broader spmt:ore ;
-    skos:definition "Any rock containing gemstones."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Gem-Bearing Rock"@en .
-
-spmt:groundwater a skos:Concept ;
+spmt:groundwater
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Formation Water"@en ;
     skos:broader spmt:water ;
     skos:definition "Part of the subsurface water that is in the zone of saturation, i.e., below the water table. Can be located in one or several aquifers, aquicludes or aquitards."@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/groundwater> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Groundwater"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Groundwater"@en ;
+.
 
-spmt:heavy-mineral a skos:Concept ;
+spmt:hydraulic-fracturing-fluid
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:fluid ;
+    skos:definition "Fluid used in the hydraulic fracturing process."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Hydraulic Fracturing Fluid"@en ;
+.
+
+spmt:kerogen
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:hydrocarbon-material ;
+    skos:definition "Immobile organic matter that forms part of a rock. Kerogen cannot be extracted from the rock with organic solvents. Kerogen is concentrated in a pure form by removal of the mineral matter with strong acids (HCl, HF)."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/kerogen> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Kerogen"@en ;
+.
+
+spmt:lag
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:regolith ;
+    skos:definition "Deposit, commonly thin, or fragments of larger than sand size, spread over the land surface. Its most common origin is as the coarse material left behind after fine material has been transported away by wind, or less commonly, sheet flow."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/lag> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Lag"@en ;
+.
+
+spmt:leachate
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:fluid ;
+    skos:definition "The substance recovered from a material subsequent to its leaching."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Leachate"@en ;
+.
+
+spmt:lpg
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Liquid Petroleum Gas"@en ;
+    skos:broader spmt:fluid-hydrocarbon ;
+    skos:definition "A flammable mixture of hydrocarbon gases used as fuel in heating appliances, cooking equipment, and vehicles.Typically propane (C3H8) and butane (C4H10), produced during the refining of natural gas."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "LPG"@en ;
+.
+
+spmt:microbiological-material
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:biological ;
+    skos:definition "Any sample of a microbial organism or organisms."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Microbiological Material"@en ;
+.
+
+spmt:min-process-inputs
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Types of raw materials, semi-processed materials, and by-products processed by mineral mines to generate saleable products."@en ;
+    skos:member
+        spmt:alluvial-wash ,
+        spmt:bulk-metal ,
+        spmt:clay ,
+        spmt:dore ,
+        spmt:dross ,
+        spmt:earth-material ,
+        spmt:gem-rock ,
+        spmt:lateritic-ore ,
+        spmt:metal-concentrate ,
+        spmt:metallic-ore ,
+        spmt:mineral-sand ,
+        spmt:reclaimed-metal ,
+        spmt:slag ,
+        spmt:slime ,
+        spmt:stone ,
+        spmt:tailings ;
+    skos:prefLabel "Mineral Mining Processing Inputs"@en ;
+.
+
+spmt:min-products
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Types of saleable product materials that result from the processing of extracted raw material by mineral miners and operators under Mineral Resources legislation and regulation."@en ;
+    skos:member
+        spmt:bulk-metal ,
+        spmt:bulk-mineral ,
+        spmt:bulk-rock ,
+        spmt:bullion ,
+        spmt:clay ,
+        spmt:dimension-stone ,
+        spmt:direct-shipping-ore ,
+        spmt:dore ,
+        spmt:dross ,
+        spmt:gemstone ,
+        spmt:heavy-mineral ,
+        spmt:metal-cathode ,
+        spmt:metal-concentrate ,
+        spmt:metal-hydroxide ,
+        spmt:metal-sulphate ,
+        spmt:non-metal ,
+        spmt:silica-sand ,
+        spmt:slag ,
+        spmt:slime ;
+    skos:prefLabel "Mineral Mining Product Materials"@en ;
+.
+
+spmt:min-raw-materials
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Types of raw materials extracted from the earth by mineral miners and operators under Mineral Resources legislation and regulation."@en ;
+    skos:member
+        spmt:alluvial-wash ,
+        spmt:clay ,
+        spmt:earth-material ,
+        spmt:gem-rock ,
+        spmt:lateritic-ore ,
+        spmt:metallic-ore ,
+        spmt:mineral-sand ,
+        spmt:stone ;
+    skos:prefLabel "Mineral Mining Raw Materials"@en ;
+.
+
+spmt:petroleum-materials
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Petroleum resurce material types from the extraction, processing, and sales lifecycle."@en ;
+    skos:member
+        spmt:bitumen ,
+        spmt:condensate ,
+        spmt:crude-oil ,
+        spmt:hydrocarbon-gas ,
+        spmt:refined-oil ,
+        spmt:water ,
+        spmt:wax ;
+    skos:prefLabel "Petroleum Materials"@en ;
+.
+
+spmt:pitch
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:hydrocarbon-material ;
+    skos:definition "Any of the various dark heavy viscous and resinous substances obtained as a residue from the distillation of coal-tar or crude oil."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/pitch> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Pitch"@en ;
+.
+
+spmt:porewater
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:water ;
+    skos:definition "Subsurface water in an interstice between grains in a marine sediment."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/porewater> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Porewater"@en ;
+.
+
+spmt:qld-georesources-products
+    a skos:Collection ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    skos:definition "Saleable georesource product forms present within the Queensland resources industry. Product forms in some cases intersect and mirror the contained commodity."@en ;
+    skos:member
+        spmt:bitumen ,
+        spmt:bulk-metal ,
+        spmt:bulk-mineral ,
+        spmt:bulk-rock ,
+        spmt:bullion ,
+        spmt:clay ,
+        spmt:coal-sales ,
+        spmt:condensate ,
+        spmt:crude-oil ,
+        spmt:dimension-stone ,
+        spmt:direct-shipping-ore ,
+        spmt:dore ,
+        spmt:dross ,
+        spmt:gemstone ,
+        spmt:heavy-mineral ,
+        spmt:hydrocarbon-gas ,
+        spmt:metal-cathode ,
+        spmt:metal-concentrate ,
+        spmt:metal-hydroxide ,
+        spmt:metal-sulphate ,
+        spmt:non-metal ,
+        spmt:refined-oil ,
+        spmt:silica-sand ,
+        spmt:slag ,
+        spmt:slime ,
+        spmt:wax ;
+    skos:prefLabel "Queensland Georesources Products"@en ;
+.
+
+spmt:rain-water
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:water ;
+    skos:definition "Rain water, collected before it hits the Earth's surface."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/rain_water> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Rain Water"@en ;
+.
+
+spmt:resin
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:hydrocarbon-material ;
+    skos:definition "Solid organic material that forms part of a rock. It is usually associated with coal and derived from the resinous material exuded from land plants."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/resin> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Resin"@en ;
+.
+
+spmt:sandstone
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Sand-grade-sedimentary-rock"@en ;
+    skos:broader spmt:rock ;
+    skos:definition "A sand-grade clastic-sedimentary-rock."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sandstone"@en ;
+.
+
+spmt:sea-water
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:water ;
+    skos:definition "Saline water from the Earth's seas and oceans."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/sea_water> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sea Water"@en ;
+.
+
+spmt:shale
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Schluffstein"@en ;
+    skos:broader spmt:rock ;
+    skos:definition "A fine-grained detrital sedimentary rock, formed by the consolidation (esp. by compression) of clay, silt, or mud. It is characterized by finely laminated structure, which imparts a fissility approx. parallel to the bedding, along which the rock breaks readily into thin layers, and by an appreciable content of clay minerals and detrital quartz; a thinly laminated or fissile claystone, siltstone, or mudstone."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Shale"@en ;
+.
+
+spmt:siltstone
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Siltite"@en ;
+    skos:broader spmt:rock ;
+    skos:definition "A mudstone with silt-grade clasts. An indurated silt having the texture and composition of shale but lacking its fine lamination or fissility; a massive mudstone in which the silt predominates over clay; a nonfissile silty shale. It tends to be flaggy, containing hard, durable, generally thin layers, and often showing various primary current structures."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Siltstone"@en ;
+.
+
+spmt:soil
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:regolith ;
+    skos:definition "Unconsolidated mineral or organic material on the Earth's surface that serves as a natural medium for the growth of land plants."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/soil> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Soil"@en ;
+.
+
+spmt:surface-water
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:water ;
+    skos:definition "Fresh or brackish water which occurs on the surface of a land mass (eg, rivers, creeks, lakes)."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/surface_water> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Surface Water"@en ;
+.
+
+spmt:vegetation
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:biological ;
+    skos:definition "Any part of a plant whether it be moss, grass, sedge, or the roots, bark, twigs or leaves of trees and shrubs."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/vegetation> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Vegetation"@en ;
+.
+
+spmt:aerated-mud
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:mud ;
+    skos:definition "Fluid consisting of a mud whose density has been decreased by the process of aeration. Typically used as a drilling fluid."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Aerated Mud"@en ;
+.
+
+spmt:coal-raw
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Raw Coal"@en ;
+    skos:broader spmt:coal ;
+    skos:definition "Coal as mined from a seam prior to any quality assessment or processing."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Coal - Raw"@en ;
+.
+
+spmt:coal-unwashed
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Bypass Coal"@en ,
+        "Coal - Unwashed"@en ,
+        "Unwashed Coal"@en ;
+    skos:broader spmt:coal ;
+    skos:definition "Coal that does not require washing as part of any processing in preparation for sale, i.e. coal that is of high enough quality that it has bypassed the wash process. Referred to as an output of mining processing by a mine, independent of any sale or transaction."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Coal - Bypass"@en ;
+.
+
+spmt:coal-washed
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Washed Coal"@en ;
+    skos:broader spmt:coal ;
+    skos:definition "Coal that has been washed in a coal-wash plant in preparation for sale. Referred to as an output of mining and processing by a mine, independent of any sale or transaction."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Coal - Washed"@en ;
+.
+
+spmt:digital
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "An output from an electronic system such as a photograph, file, or electronic document."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Digital"@en ;
+    skos:topConceptOf cs: ;
+.
+
+spmt:foam
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:fluid ;
+    skos:definition "A sample of foam. A mass of small bubbles from an aerated fluid."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Foam"@en ;
+.
+
+spmt:mist
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:fluid ;
+    skos:definition "A suspension of liquid droplets in a gas. Typically water droplets suspended in air."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Mist"@en ;
+.
+
+spmt:reclaimed-metal
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Metal Scrap"@en ,
+        "Scrap"@en ,
+        "Scrap Metal"@en ;
+    skos:broader spmt:metal ;
+    skos:definition "Metal reclaimed from a prior use e.g. copper wire or tubing, fabricated aluminium, reclaimed lead from batteries."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Reclaimed Metal"@en ;
+.
+
+spmt:tailings
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:earth-material ;
+    skos:definition "The materials left over after the process of separating the valuable fraction from the uneconomic fraction (gangue) of an ore."@en ;
+    skos:hiddenLabel
+        "Gangue"@en ,
+        "Mine Waste"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Tailings"@en ;
+.
+
+spmt:unknown
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Material type is unknown"@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/unknown> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Unknown"@en ;
+    skos:topConceptOf cs: ;
+.
+
+spmt:air
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The composite gas comprising the Earth's atmosphere."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/air> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Air"@en ;
+    skos:topConceptOf cs: ;
+.
+
+spmt:alluvial-wash
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Alluvial Ore"@en ;
+    skos:broader spmt:alluvium ;
+    skos:definition "Unconsolidated sediment primarily deposited by the action of fluid flow that contains, or is suspected to contain, an economic quantity of a commodity. Typically associated with Gold, Tin, and Corundum"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Alluvial Wash"@en ;
+.
+
+spmt:bitumen
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:hydrocarbon-material ;
+    skos:definition "Solid organic material that forms part of a rock. It can usually be extracted from the rock with organic solvent."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/bitumen> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Bitumen"@en ;
+.
+
+spmt:bulk-mineral
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Bulk Minerals"@en ;
+    skos:broader spmt:mineral ;
+    skos:definition "Bulk minerals are minerals that are not derived from mineral sand deposits and may be sold in bulk as a refined product. Bulk minerals include agricultural lime, gypsum, perlite, and wollastonite."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Bulk Mineral"@en ;
+.
+
+spmt:bulk-rock
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Bulk Rocks"@en ;
+    skos:broader spmt:rock ;
+    skos:definition "Bulk rock is a rock sold in bulk but not as construction material such as aggregate, raw stone, or dimension stone. Bulk rock is primarily mined and sold due to its chemcial and physical properties, such as limestone, peat, phosphate rock, diatomite, and lump silica."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Bulk Rock"@en ;
+.
+
+spmt:bullion
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:metal ;
+    skos:definition "Bullion is non-ferrous metal, typically Gold or Silver, that has been refined to a high standard of elemental purity."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Bullion"@en ;
+.
+
+spmt:coal-sales
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Sales Coal"@en ;
+    skos:broader spmt:coal ;
+    skos:definition "Coal as a saleable product that can be transferred between companies or sold to a buyer."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Coal - Sales"@en ;
+.
+
+spmt:condensate
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:fluid-hydrocarbon ;
+    skos:definition "A material that exists as gas in the subsurface but condenses into liquid at the surface."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/condensate> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Condensate"@en ;
+.
+
+spmt:crude-oil
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:oil ;
+    skos:definition "A naturally occurring complex liquid hydrocarbon, typically found as part of drilling activity, which after distillation and removal of impurities yields a range of combustible fuels, petrochemicals and lubricants."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/crude_oil> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Crude Oil"@en ;
+.
+
+spmt:dimension-stone
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:stone ;
+    skos:definition "Natural rock selected and extracted from the earth and has been fabricated (i.e., trimmed, cut, drilled, ground, or otherwised processed) into specific sizes or shapes."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Dimension Stone"@en ;
+.
+
+spmt:direct-shipping-ore
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:ore ;
+    skos:definition "An ore that can be shipped and sold as a product in its raw and unprocessed form. Typically limited to bauxite, iron ores, and manganese ore."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Direct Shipping Ore"@en ;
+.
+
+spmt:gem-rock
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Gem Bearing Rock"@en ,
+        "Gem Ore"@en ,
+        "Gem Rock"@en ;
+    skos:broader spmt:ore ;
+    skos:definition "Any rock containing gemstones."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gem-Bearing Rock"@en ;
+.
+
+spmt:gemstone
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Gem"@en ,
+        "Gems"@en ,
+        "Gemstones"@en ,
+        "Jewel"@en ,
+        "Jewels"@en ,
+        "Precious Stone"@en ,
+        "Precious Stones"@en ,
+        "Semi-Precious Stone"@en ,
+        "Semi-Precious Stones"@en ;
+    skos:broader spmt:mineral ;
+    skos:definition "A gemstone or gem (also called a precious or semi-precious stone, a fine gem, or jewel) is a piece of mineral, which, in cut and polished form, is used to make jewelry or other adornments"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gemstone"@en ;
+.
+
+spmt:heavy-mineral
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Heavy Minerals"@en ;
     skos:broader spmt:mineral ;
     skos:definition "Heavy minerals are minerals with a high density and found in mineral sand deposits as a source of of zirconium, titanium, thorium, tungsten, rare-earth elements, and industrial minerals such as corundum and garnet."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Heavy Mineral"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Heavy Mineral"@en ;
+.
 
-spmt:hydraulic-fracturing-fluid a skos:Concept ;
-    skos:broader spmt:fluid ;
-    skos:definition "Fluid used in the hydraulic fracturing process."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Hydraulic Fracturing Fluid"@en .
-
-spmt:hydrocarbon-gas a skos:Concept ;
-    skos:altLabel "Gas"@en,
+spmt:hydrocarbon-gas
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Gas"@en ,
         "Natural Gas"@en ;
     skos:broader spmt:fluid-hydrocarbon ;
     skos:definition "A fluid hydrocarbon that is a gas at the surface. In the subsurface this sample maybe be free of liquid hydrocarbons, contain dissolved liquid hydrocarbons, or be dissolved in oil."@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/hydrocarbon_gas> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Hydrocarbon Gas"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Hydrocarbon Gas"@en ;
+.
 
-spmt:hydrocarbon-material a skos:Concept ;
-    skos:broader spmt:organic-material ;
-    skos:definition "Any carbon-hydrogen based material."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/hydrocarbon_material> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Hydrocarbon Material"@en .
-
-spmt:kerogen a skos:Concept ;
-    skos:broader spmt:hydrocarbon-material ;
-    skos:definition "Immobile organic matter that forms part of a rock. Kerogen cannot be extracted from the rock with organic solvents. Kerogen is concentrated in a pure form by removal of the mineral matter with strong acids (HCl, HF)."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/kerogen> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Kerogen"@en .
-
-spmt:lag a skos:Concept ;
-    skos:broader spmt:regolith ;
-    skos:definition "Deposit, commonly thin, or fragments of larger than sand size, spread over the land surface. Its most common origin is as the coarse material left behind after fine material has been transported away by wind, or less commonly, sheet flow."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/lag> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Lag"@en .
-
-spmt:lateritic-ore a skos:Concept ;
+spmt:lateritic-ore
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Laterite Ore"@en ;
     skos:broader spmt:ore ;
     skos:definition "Laterite ores are formed by the process of weathering and normally found in tropical regions where weathering extracts and deposits minerals of value in layers at varying depths below the ground surface."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Lateritic Ore"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Lateritic Ore"@en ;
+.
 
-spmt:leachate a skos:Concept ;
-    skos:broader spmt:fluid ;
-    skos:definition "The substance recovered from a material subsequent to its leaching."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Leachate"@en .
-
-spmt:lpg a skos:Concept ;
-    skos:altLabel "Liquid Petroleum Gas"@en ;
-    skos:broader spmt:fluid-hydrocarbon ;
-    skos:definition "A flammable mixture of hydrocarbon gases used as fuel in heating appliances, cooking equipment, and vehicles.Typically propane (C3H8) and butane (C4H10), produced during the refining of natural gas."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "LPG"@en .
-
-spmt:metal a skos:Concept ;
-    skos:definition "A material that is a pure or close-to-pure form of a metallic element such as Gold, Copper, and Lead."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Metal"@en ;
-    skos:broader spmt:metallic-material .
-
-spmt:metallic-material a skos:Concept ;
-    skos:definition "A substance that has an economically useful high metal content as a result of refining and beneficiation. Including pure and close-to-pure materials such as bullion, and concentrates and compounds that have been processed from a raw material to yield a metal-rich substance."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Metallic Material"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
-
-spmt:metallic-ore a skos:Concept ;
-    skos:altLabel "Mineral Ore"@en ;
-    skos:broader spmt:ore ;
-    skos:definition "Natural rock that contains one or more valuable minerals, typically containing metals, that can be mined, processed, and sold at a profit."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Metallic Ore"@en .
-
-spmt:metal-cathode a skos:Concept ;
+spmt:metal-cathode
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Cathode"@en ;
     skos:broader spmt:metal ;
     skos:definition "A high purity metal refined by electrolysis and precipitation of a target metal from solution or molten metal. Most commonly associated with Copper Cathode."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Metal Cathode"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Metal Cathode"@en ;
+.
 
-spmt:metal-compound a skos:Concept ;
+spmt:metal-compound
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Metallic Compound"@en ;
     skos:broader spmt:metallic-material ;
     skos:definition "A compound that contains one or more metal elements bonded to another element."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Metal Compound"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Metal Compound"@en ;
+.
 
-spmt:metal-concentrate a skos:Concept ;
-    skos:altLabel "Concentrate"@en,
-        "Ore Concentrate"@en,
-        "Dressed Ore"@en ;
-    skos:broader spmt:metallic-material ;
-    skos:definition """A substance generated by the processing of a metallic ore to remove waste (gangue) and concentrate the metallic content. Used as a transportable intermediary product for transport to further physical and chemical processing and refining techniques."""@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Metal Concentrate"@en .
-
-spmt:metal-hydroxide a skos:Concept ;
+spmt:metal-hydroxide
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:altLabel "Hydroxide"@en ;
     skos:broader spmt:metal-compound ;
     skos:definition "A compound that contains one or more metal elements bonded to a hydroxide anion."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Metal Hydroxide"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Metal Hydroxide"@en ;
+.
 
-spmt:metal-sulphate a skos:Concept ;
-    skos:altLabel "Sulphate"@en,
-        "Sulfate"@en,
-        "Metal Sulfate"@en ;
+spmt:metal-sulphate
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Metal Sulfate"@en ,
+        "Sulfate"@en ,
+        "Sulphate"@en ;
     skos:broader spmt:metal-compound ;
     skos:definition "A compound that contains one or more metal elements bonded to a sulphate anion."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Metal Sulphate"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Metal Sulphate"@en ;
+.
 
-spmt:microbiological-material a skos:Concept ;
-    skos:broader spmt:biological ;
-    skos:definition "Any sample of a microbial organism or organisms."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Microbiological Material"@en .
+spmt:metallic-ore
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Mineral Ore"@en ;
+    skos:broader spmt:ore ;
+    skos:definition "Natural rock that contains one or more valuable minerals, typically containing metals, that can be mined, processed, and sold at a profit."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Metallic Ore"@en ;
+.
 
-spmt:mineral a skos:Concept ;
-    skos:definition "A naturally occurring inorganic, crystalline, element or compound"@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/mineral> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Mineral"@en ;
-    skos:broader spmt:earth-material .
-
-spmt:mineral-sand a skos:Concept ;
-    skos:altLabel "Mineral Sands"@en,
-        "Heavy Mineral Sand"@en,
-        "Heavy Mineral Sands"@en,
-        "Heavy Mineral Sands Ore Deposits"@en ;
+spmt:mineral-sand
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Heavy Mineral Sand"@en ,
+        "Heavy Mineral Sands"@en ,
+        "Heavy Mineral Sands Ore Deposits"@en ,
+        "Mineral Sands"@en ;
     skos:broader spmt:alluvium ;
     skos:definition "Unconsolidated sediment primarily deposited as placer deposits formed in beach environments where the density of heavy minerals increases their concentration within the sediment to economically significant levels. Less commonly resulting from fluvial action. A primary source of heavy minerals."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Mineral Sand"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Mineral Sand"@en ;
+.
 
-spmt:mist a skos:Concept ;
-    skos:broader spmt:fluid ;
-    skos:definition "A suspension of liquid droplets in a gas. Typically water droplets suspended in air."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Mist"@en .
-
-spmt:mud a skos:Concept ;
+spmt:mud
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:broader spmt:fluid ;
     skos:definition "A mixture of water, clay, and/or chemicals."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Mud"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Mud"@en ;
+.
 
-spmt:non-metallic-material a skos:Concept ;
-    skos:definition "A material that has an economically useful high non-metal content as a result of refining and beneficiation. Includes any material used as a source for non-metals such as Bromine, Iodine, Phosphorus and Sulfur including pure forms of non-metallic elements."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Non-Metallic Material"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
-
-spmt:non-metal a skos:Concept ;
+spmt:non-metal
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:non-metallic-material ;
     skos:definition "A material that is a pure or close-to-pure form of a non-metallic element such as Bromine, Iodine, Phosphorus and Sulfur."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
+    skos:inScheme cs: ;
     skos:prefLabel "Non-Metal"@en ;
-    skos:broader spmt:non-metallic-material .
+.
 
-spmt:oil a skos:Concept ;
+spmt:non-metallic-material
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A material that has an economically useful high non-metal content as a result of refining and beneficiation. Includes any material used as a source for non-metals such as Bromine, Iodine, Phosphorus and Sulfur including pure forms of non-metallic elements."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Non-Metallic Material"@en ;
+    skos:topConceptOf cs: ;
+.
+
+spmt:oil
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:broader spmt:fluid-hydrocarbon ;
     skos:definition "A naturally occuring liquid hydrocarbon."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Oil"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Oil"@en ;
+.
 
-spmt:ore a skos:Concept ;
-    skos:broader spmt:rock ;
-    skos:definition "A deposit in Earth's crust of one or more valuable minerals. Within the context of material types this is constrained to solid rock ores. Alluvial wash, also known as alluvial ore, is economically considered an ore, but is within a separate material category."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Ore"@en .
-
-spmt:organic-material a skos:Concept ;
-    skos:definition "Any carbon-based material."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/organic_material> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Organic Material"@en ;
-    skos:broader spmt:earth-material .
-
-spmt:pitch a skos:Concept ;
-    skos:broader spmt:hydrocarbon-material ;
-    skos:definition "Any of the various dark heavy viscous and resinous substances obtained as a residue from the distillation of coal-tar or crude oil."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/pitch> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Pitch"@en .
-
-spmt:porewater a skos:Concept ;
-    skos:broader spmt:water ;
-    skos:definition "Subsurface water in an interstice between grains in a marine sediment."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/porewater> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Porewater"@en .
-
-spmt:rain-water a skos:Concept ;
-    skos:broader spmt:water ;
-    skos:definition "Rain water, collected before it hits the Earth's surface."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/rain_water> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Rain Water"@en .
-
-spmt:reclaimed-metal a skos:Concept ;
-    skos:altLabel "Metal Scrap"@en,
-        "Scrap Metal"@en,
-        "Scrap"@en ;
-    skos:definition "Metal reclaimed from a prior use e.g. copper wire or tubing, fabricated aluminium, reclaimed lead from batteries."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Reclaimed Metal"@en ;
-    skos:broader spmt:metal .
-
-spmt:regolith a skos:Concept ;
-    skos:definition "Typically unconsolidated or fragmental material, either transported or residual origin, which covers bedrock. Includes surficial duricrusts that cap bedrock."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/regolith> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Regolith"@en ;
-    skos:broader spmt:earth-material .
-
-spmt:refined-oil a skos:Concept ;
+spmt:refined-oil
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:broader spmt:oil ;
     skos:definition "Oil that has been processed in an oil refinery."@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/refined_oil> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Refined Oil"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Refined Oil"@en ;
+.
 
-spmt:resin a skos:Concept ;
-    skos:broader spmt:hydrocarbon-material ;
-    skos:definition "Solid organic material that forms part of a rock. It is usually associated with coal and derived from the resinous material exuded from land plants."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/resin> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Resin"@en .
-
-spmt:rock a skos:Concept ;
-    skos:hiddenLabel "Rock (Undiff.)"@en ;
-    skos:definition "A consolidated aggregate of one or more minerals or other rocks."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/rock> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Rock"@en ;
-    skos:broader spmt:earth-material .
-
-spmt:sandstone a skos:Concept ;
-    skos:definition "A sand-grade clastic-sedimentary-rock."@en ;
-    skos:broader spmt:rock ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:altLabel "Sand-grade-sedimentary-rock"@en ;
-    skos:prefLabel "Sandstone"@en .
-
-spmt:sea-water a skos:Concept ;
-    skos:broader spmt:water ;
-    skos:definition "Saline water from the Earth's seas and oceans."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/sea_water> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Sea Water"@en .
-
-spmt:sediment a skos:Concept ;
+spmt:sediment
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:broader spmt:regolith ;
     skos:definition "Unconsolidated sedimentary material."@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/sediment> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Sediment"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Sediment"@en ;
+.
 
-spmt:shale a skos:Concept ;
-    skos:definition "A fine-grained detrital sedimentary rock, formed by the consolidation (esp. by compression) of clay, silt, or mud. It is characterized by finely laminated structure, which imparts a fissility approx. parallel to the bedding, along which the rock breaks readily into thin layers, and by an appreciable content of clay minerals and detrital quartz; a thinly laminated or fissile claystone, siltstone, or mudstone."@en ;
-    skos:broader spmt:rock ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:altLabel "Schluffstein"@en ;
-    skos:prefLabel "Shale"@en .
-
-spmt:silica-sand a skos:Concept ;
-    skos:altLabel "Silica Sands"@en,
-        "Quartz Sand"@en,
-        "White Sand"@en,
-        "Industrial Sand"@en ;
+spmt:silica-sand
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Industrial Sand"@en ,
+        "Quartz Sand"@en ,
+        "Silica Sands"@en ,
+        "White Sand"@en ;
     skos:broader spmt:alluvium ;
     skos:definition "Unconsolidated sand that has very few impurities, with compositions of 90% silica or greater. Common uses of silica sand include glass making and as a feed stock for industrial processes."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Silica Sand"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Silica Sand"@en ;
+.
 
-spmt:siltstone a skos:Concept ;
-    skos:definition "A mudstone with silt-grade clasts. An indurated silt having the texture and composition of shale but lacking its fine lamination or fissility; a massive mudstone in which the silt predominates over clay; a nonfissile silty shale. It tends to be flaggy, containing hard, durable, generally thin layers, and often showing various primary current structures."@en ;
-    skos:broader spmt:rock ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:altLabel "Siltite"@en ;
-    skos:prefLabel "Siltstone"@en .
-
-spmt:slag a skos:Concept ;
-    skos:broader spmt:metal ;
-    skos:definition "A material mass of molten impurities generated by during pyrometallurgical refining."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Slag"@en .
-
-spmt:slime a skos:Concept ;
-    skos:altLabel "Slime"@en ;
-    skos:broader spmt:fluid ;
-    skos:definition "A by-product of metal processing consisting of a fluid, commonly water, with a large concentration of suspended and dissolved waste material."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Tankhouse Slime"@en .
-
-spmt:soil a skos:Concept ;
-    skos:broader spmt:regolith ;
-    skos:definition "Unconsolidated mineral or organic material on the Earth's surface that serves as a natural medium for the growth of land plants."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/soil> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Soil"@en .
-
-spmt:stone a skos:Concept ;
-    skos:broader spmt:rock ;
-    skos:definition "Natural rock selected and extracted from the earth to be used as cut stone in building and construction, excluding aggregates and crushed material."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Stone"@en .
-
-spmt:surface-water a skos:Concept ;
-    skos:broader spmt:water ;
-    skos:definition "Fresh or brackish water which occurs on the surface of a land mass (eg, rivers, creeks, lakes)."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/surface_water> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Surface Water"@en .
-
-spmt:tailings a skos:Concept ;
-    skos:hiddenLabel "Mine Waste"@en,
-        "Gangue"@en ;
-    skos:definition "The materials left over after the process of separating the valuable fraction from the uneconomic fraction (gangue) of an ore."@en ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Tailings"@en ;
-    skos:broader spmt:earth-material .
-
-spmt:unknown a skos:Concept ;
-    skos:definition "Material type is unknown"@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/unknown> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Unknown"@en ;
-    skos:topConceptOf <http://linked.data.gov.au/def/sample-material> .
-
-spmt:vegetation a skos:Concept ;
-    skos:broader spmt:biological ;
-    skos:definition "Any part of a plant whether it be moss, grass, sedge, or the roots, bark, twigs or leaves of trees and shrubs."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/vegetation> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Vegetation"@en .
-
-spmt:water a skos:Concept ;
-    skos:broader spmt:fluid ;
-    skos:definition "A sample of water from a borehole, tailings dam or other body of water."@en ;
-    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/water> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Water"@en .
-
-spmt:wax a skos:Concept ;
+spmt:wax
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
     skos:broader spmt:hydrocarbon-material ;
     skos:definition "A light coloured solid precipitated from either a hydrocarbon gas or oil"@en ;
     skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/wax> ;
-    rdfs:isDefinedBy <http://linked.data.gov.au/def/sample-material> ;
-    skos:inScheme <http://linked.data.gov.au/def/sample-material> ;
-    skos:prefLabel "Wax"@en .
+    skos:inScheme cs: ;
+    skos:prefLabel "Wax"@en ;
+.
 
-spmt:drilling-fluid a skos:Collection ;
-    skos:definition "Fluid used for drill bit lubrication and return of ground rock material from the drill bit, e.g. mud."@en ;
-    skos:member spmt:mud,
-        spmt:water,
-        spmt:aerated-mud,
-        spmt:foam,
-        spmt:mist,
-        spmt:air ;
-    skos:prefLabel "Drilling Fluid"@en .
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
 
-spmt:drilling-fluid a skos:Collection ;
-    skos:definition "Fluid used for drill bit lubrication and return of ground rock material from the drill bit, e.g. mud."@en ;
-    skos:member spmt:mud,
-        spmt:water,
-        spmt:aerated-mud,
-        spmt:foam,
-        spmt:mist,
-        spmt:air ;
-    skos:prefLabel "Drilling Fluid"@en .
+spmt:alluvium
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:sediment ;
+    skos:definition "Unconsolidated sediment primarily deposited by the action of fluid flow in a non-marine setting."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Alluvium"@en ;
+.
 
-spmt:coal-materials a skos:Collection ;
-    skos:definition "Types of coal that describe different stages in the coal mining, processing, and sales lifecycle."@en ;
-    skos:member spmt:coal-raw,
-        spmt:coal-washed,
-        spmt:coal-unwashed,
-        spmt:coal-sales ;
-    skos:prefLabel "Coal Mining Materials"@en .
+spmt:bulk-metal
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Ingot"@en ;
+    skos:broader spmt:metal ;
+    skos:definition "Bulk Metal is refined ferrous or non-ferrous metal that is not necessarily to the high elemental purity required for bullion. Typically non-precious metals sold and transacted in larger volumes than bullion.."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Bulk Metal"@en ;
+.
 
-spmt:min-raw-materials a skos:Collection ;
-    skos:definition "Types of raw materials extracted from the earth by mineral miners and operators under Mineral Resources legislation and regulation."@en ;
-    skos:member spmt:alluvial-wash,
-        spmt:clay,
-        spmt:earth-material,
-        spmt:gem-rock,
-        spmt:lateritic-ore,
-        spmt:metallic-ore,  
-        spmt:mineral-sand,
-        spmt:stone ;
-    skos:prefLabel "Mineral Mining Raw Materials"@en .
+spmt:dore
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:metal ;
+    skos:definition "Dore is non-ferrous metal, typically Gold or Silver, that has been refined to a semi-pure state, but not to the high (~99%) purity of bullion. Dore commonly contains 50-75% pure precious metal"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Dore"@en ;
+.
 
-spmt:min-process-inputs a skos:Collection ;
-    skos:definition "Types of raw materials, semi-processed materials, and by-products processed by mineral mines to generate saleable products."@en ;
-    skos:member spmt:alluvial-wash,
-        spmt:bulk-metal,
-        spmt:clay,
-        spmt:dore,
-        spmt:dross,
-        spmt:earth-material,
-        spmt:gem-rock,
-        spmt:lateritic-ore,
-        spmt:metal-concentrate,
-        spmt:metallic-ore,  
-        spmt:mineral-sand,
-        spmt:reclaimed-metal,
-        spmt:slag,
-        spmt:slime,
-        spmt:stone,
-        spmt:tailings;
-    skos:prefLabel "Mineral Mining Processing Inputs"@en .
+spmt:dross
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:metal ;
+    skos:definition "A material mass of solid impurities generated by floation on a molten metal during metal refining. Depending on composition, dross may be a waste material or may be recovered for secondary processes or metal production such as Lead and Aluminium."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Dross"@en ;
+.
 
-spmt:min-products a skos:Collection ;
-    skos:definition "Types of saleable product materials that result from the processing of extracted raw material by mineral miners and operators under Mineral Resources legislation and regulation."@en ;
-    skos:member spmt:bulk-metal,
-        spmt:bulk-mineral,
-        spmt:bulk-rock,
-        spmt:bullion,
-        spmt:clay,
-        spmt:dimension-stone,
-        spmt:direct-shipping-ore,
-        spmt:dore,
-        spmt:dross,
-        spmt:gemstone,
-        spmt:heavy-mineral,
-        spmt:metal-cathode,
-        spmt:metal-concentrate,
-        spmt:metal-hydroxide,
-        spmt:metal-sulphate,
-        spmt:non-metal,
-        spmt:silica-sand,
-        spmt:slag,
-        spmt:slime ;
-    skos:prefLabel "Mineral Mining Product Materials"@en .
+spmt:metal-concentrate
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Concentrate"@en ,
+        "Dressed Ore"@en ,
+        "Ore Concentrate"@en ;
+    skos:broader spmt:metallic-material ;
+    skos:definition "A substance generated by the processing of a metallic ore to remove waste (gangue) and concentrate the metallic content. Used as a transportable intermediary product for transport to further physical and chemical processing and refining techniques."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Metal Concentrate"@en ;
+.
 
+spmt:regolith
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:earth-material ;
+    skos:definition "Typically unconsolidated or fragmental material, either transported or residual origin, which covers bedrock. Includes surficial duricrusts that cap bedrock."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/regolith> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Regolith"@en ;
+.
 
-spmt:petroleum-materials a skos:Collection ;
-    skos:definition "Petroleum resurce material types from the extraction, processing, and sales lifecycle."@en ;
-    skos:member spmt:bitumen,
-        spmt:condensate,
-        spmt:crude-oil,
-        spmt:hydrocarbon-gas,
-        spmt:refined-oil,
-        spmt:water,
-        spmt:wax ;
-    skos:prefLabel "Petroleum Materials"@en .
+spmt:slag
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:metal ;
+    skos:definition "A material mass of molten impurities generated by during pyrometallurgical refining."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Slag"@en ;
+.
 
-spmt:qld-georesources-products a skos:Collection ;
-    skos:definition "Saleable georesource product forms present within the Queensland resources industry. Product forms in some cases intersect and mirror the contained commodity."@en ;
-    skos:member spmt:bulk-metal,
-        spmt:bulk-mineral,
-        spmt:bulk-rock,
-        spmt:bullion,
-        spmt:clay,
-        spmt:coal-sales,
-        spmt:dimension-stone,
-        spmt:direct-shipping-ore,
-        spmt:dore,
-        spmt:dross,
-        spmt:gemstone,
-        spmt:heavy-mineral,
-        spmt:metal-cathode,
-        spmt:metal-concentrate,
-        spmt:metal-hydroxide,
-        spmt:metal-sulphate,
-        spmt:non-metal,
-        spmt:silica-sand,
-        spmt:slag,
-        spmt:slime,
-        spmt:bitumen,
-        spmt:condensate,
-        spmt:crude-oil,
-        spmt:hydrocarbon-gas,
-        spmt:refined-oil,
-        spmt:wax ;
-    skos:prefLabel "Queensland Georesources Products"@en .
+spmt:slime
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Slime"@en ;
+    skos:broader spmt:fluid ;
+    skos:definition "A by-product of metal processing consisting of a fluid, commonly water, with a large concentration of suspended and dissolved waste material."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Tankhouse Slime"@en ;
+.
+
+spmt:stone
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:rock ;
+    skos:definition "Natural rock selected and extracted from the earth to be used as cut stone in building and construction, excluding aggregates and crushed material."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Stone"@en ;
+.
+
+spmt:biological
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:organic-material ;
+    skos:definition "Any carbon-based material of a living or recently living organism."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Biological"@en ;
+.
+
+spmt:clay
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:mineral ;
+    skos:definition "A fine-grained natural sediment that comprises mostly one or more clay minerals or clays such as kaolinite, smectite and illite. Or a refined material consisting of a purified clay mineral or minerals."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Clay"@en ;
+.
+
+spmt:coal
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader
+        spmt:organic-material ,
+        spmt:rock ;
+    skos:definition "A readily combustible organic rock containing more than 50% by weight and more than 70% by volume of carbonaceous material."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/coal> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Coal"@en ;
+.
+
+spmt:fluid-hydrocarbon
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader
+        spmt:fluid ,
+        spmt:hydrocarbon-material ;
+    skos:definition "Any carbon-hydrogen fluid material"@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/fluid_hydrocarbon> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Fluid Hydrocarbon"@en ;
+.
+
+spmt:metallic-material
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A substance that has an economically useful high metal content as a result of refining and beneficiation. Including pure and close-to-pure materials such as bullion, and concentrates and compounds that have been processed from a raw material to yield a metal-rich substance."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Metallic Material"@en ;
+    skos:topConceptOf cs: ;
+.
+
+spmt:mineral
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:earth-material ;
+    skos:definition "A naturally occurring inorganic, crystalline, element or compound"@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/mineral> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Mineral"@en ;
+.
+
+spmt:ore
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:rock ;
+    skos:definition "A deposit in Earth's crust of one or more valuable minerals. Within the context of material types this is constrained to solid rock ores. Alluvial wash, also known as alluvial ore, is economically considered an ore, but is within a separate material category."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Ore"@en ;
+.
+
+spmt:organic-material
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:earth-material ;
+    skos:definition "Any carbon-based material."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/organic_material> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Organic Material"@en ;
+.
+
+spmt:hydrocarbon-material
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:organic-material ;
+    skos:definition "Any carbon-hydrogen based material."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/hydrocarbon_material> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Hydrocarbon Material"@en ;
+.
+
+spmt:metal
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:metallic-material ;
+    skos:definition "A material that is a pure or close-to-pure form of a metallic element such as Gold, Copper, and Lead."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Metal"@en ;
+.
+
+spmt:earth-material
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Bulk Material"@en ,
+        "Earth Material"@en ;
+    skos:definition "Solid materials in a natural or minimially altered state derived from the earth. Encompasses minerals, organic material, regolith, ock, and specifically includes undifferentiated material derived from the solid earth that may contain economic quantities of a commodity."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Bulk Earth Material"@en ;
+    skos:topConceptOf cs: ;
+.
+
+spmt:rock
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:earth-material ;
+    skos:definition "A consolidated aggregate of one or more minerals or other rocks."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/rock> ;
+    skos:hiddenLabel "Rock (Undiff.)"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Rock"@en ;
+.
+
+spmt:water
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader spmt:fluid ;
+    skos:definition "A sample of water from a borehole, tailings dam or other body of water."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/water> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Water"@en ;
+.
+
+spmt:fluid
+    a skos:Concept ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A substance that has no fixed shape and yields easily to external pressure."@en ;
+    skos:exactMatch <http://pid.geoscience.gov.au/def/voc/ga/materialtype/fluid> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Fluid"@en ;
+    skos:topConceptOf cs: ;
+.
+
+cs:
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2020-02-08"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-03-16"^^xsd:date ;
+    dcterms:provenance "Compiled by the Geological Survey of Queensland" ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
+    skos:definition "Types of materials of which samples can consist of in Geoscience."@en ;
+    skos:hasTopConcept
+        spmt:air ,
+        spmt:digital ,
+        spmt:earth-material ,
+        spmt:fluid ,
+        spmt:metallic-material ,
+        spmt:non-metallic-material ,
+        spmt:unknown ;
+    skos:prefLabel "Sample Material"@en ;
+.
+
