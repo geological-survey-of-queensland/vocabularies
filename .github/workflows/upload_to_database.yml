@@ -1,0 +1,45 @@
+name: Upload data to database
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      request_timeout:
+        required: false
+        type: number
+    secrets:
+      database_url:
+        required: true
+      database_username:
+        required: true
+      database_password:
+        required: true
+
+env:
+  PYTHON_VERSION: "3.11"
+  REQUEST_TIMEOUT: ${{ inputs.request_timeout }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+
+      - name: Use Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - run: pip install https://github.com/Kurrawong/kurrawong-python/archive/refs/tags/0.1.1.zip
+
+      - name: Upload vocabularies
+        run: |
+          kurra fuseki upload vocabularies-des ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
+          kurra fuseki upload vocabularies-external$ {{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
+          kurra fuseki upload vocabularies-gsq ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
+          kurra fuseki upload vocabularies-qldgov ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
