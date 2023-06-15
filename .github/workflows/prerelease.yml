@@ -11,6 +11,7 @@ jobs:
   publish:
     uses: geological-survey-of-queensland/vocabularies/.github/workflows/upload_to_database.yml@master
     with:
+      environment: uat
       request_timeout: ${{ env.REQUEST_TIMEOUT }}
     secrets:
       database_url: ${{ secrets.FUSEKI_DATASET_URL }}

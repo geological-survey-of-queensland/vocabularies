@@ -3,6 +3,9 @@ name: Upload data to database
 on:
   workflow_call:
     inputs:
+      environment:
+        required: true
+        type: string
       request_timeout:
         required: false
         type: number
@@ -21,6 +24,7 @@ env:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
 
     steps:
       - name: Checkout the repo
