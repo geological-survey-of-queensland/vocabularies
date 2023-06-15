@@ -1,4 +1,4 @@
-name: Upload data to RDF database
+name: Upload data to database
 
 on:
   workflow_call:
@@ -36,6 +36,6 @@ jobs:
       - name: Upload vocabularies
         run: |
           kurra fuseki upload vocabularies-des ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
-          kurra fuseki upload vocabularies-external${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
+          kurra fuseki upload vocabularies-external$ {{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
           kurra fuseki upload vocabularies-gsq ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
           kurra fuseki upload vocabularies-qldgov ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
