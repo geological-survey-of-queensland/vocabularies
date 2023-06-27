@@ -1,0 +1,335 @@
+PREFIX : <https://linked.data.gov.au/def/geocode-types/>
+PREFIX cs: <https://linked.data.gov.au/def/geocode-types>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:building-access-point
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "BAP"@en ;
+    skos:definition "Point of access to the building."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Building Access Point"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:building-centroid
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "BC"@en ;
+    skos:definition "Point as centre of building and lying within its bounds (e.g. for u-shaped building)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Building Centroid"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:centreline-dropped-frontage
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "CDF"@en ;
+    skos:definition "A point on the road centre-line opposite the centre of the road frontage of an address site."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Centreline Dropped Frontage"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:driveway-frontage
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "DF"@en ;
+    skos:definition "Centre of driveway on address site frontage."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Driveway Frontage"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:electricity-connection-point
+    a skos:Concept ;
+    dcterms:provenance "G-NAF" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "ECP"@en ;
+    skos:definition "Electricity connection point (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Electricity Connection Point"@en ;
+.
+
+:electricity-meter
+    a skos:Concept ;
+    dcterms:provenance "G-NAF" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "EM"@en ;
+    skos:definition "Electricity meter point (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Electricity Meter"@en ;
+.
+
+:emergency-access
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "EA"@en ;
+    skos:definition "Specific building or address site access point for emergency services."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Emergency Access"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:emergency-access-secondary
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "EAS"@en ;
+    skos:definition "Specific building or address site secondary access point for emergency services."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Emergency Access Secondary"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:front-door-access
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "FDA"@en ;
+    skos:definition "Front door of building."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Front Door Access"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:frontage-centre
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "FC"@en ;
+    skos:definition "Point on the centre of the address site frontage."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Frontage Centre"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:frontage-centre-setback
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "FCS"@en ;
+    skos:definition "A point set back from the centre of the road frontage within an address site."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Frontage Centre Setback"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:gas-connection-point
+    a skos:Concept ;
+    dcterms:provenance "G-NAF" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "GCP"@en ;
+    skos:definition "Gas connection point (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gas Connection Point"@en ;
+.
+
+:gas-meter
+    a skos:Concept ;
+    dcterms:provenance "G-NAF" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "GM"@en ;
+    skos:definition "Gas meter point (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gas Meter"@en ;
+.
+
+:internet-connection-point
+    a skos:Concept ;
+    dcterms:provenance "G-NAF" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "ICP"@en ;
+    skos:definition "Internet connection point (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Internet Connection Point"@en ;
+.
+
+:letterbox
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "LB"@en ;
+    skos:definition "Place where mail is deposited."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Letterbox"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:property-access-point
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "PAP"@en ;
+    skos:definition "Access point (centre of) at the road frontage of the address site."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Property Access Point"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:property-access-point-setback
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "PAPS"@en ;
+    skos:definition "Centre of driveway on address site frontage."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Property Access Point Setback"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:property-centroid
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "PC"@en ;
+    skos:definition "Point of centre of parcels making up an address site and lying within its boundaries (e.g. for l-shaped address site)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Property Centroid"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:service-connection-point
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "SCP"@en ;
+    skos:definition "The utility connection point (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:narrower
+        :electricity-connection-point ,
+        :gas-connection-point ,
+        :internet-connection-point ,
+        :sewerage-connection-point ,
+        :telephone-connection-point ,
+        :water-connection-point ;
+    skos:prefLabel "Service Connection Point"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:service-meter
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "SM"@en ;
+    skos:definition "The utility meter (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:narrower
+        :electricity-meter ,
+        :gas-meter ,
+        :water-meter ;
+    skos:prefLabel "Service Meter"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:sewerage-connection-point
+    a skos:Concept ;
+    dcterms:provenance "G-NAF" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "SCP"@en ;
+    skos:definition "Sewerage connection point (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sewerage Connection Point"@en ;
+.
+
+:telephone-connection-point
+    a skos:Concept ;
+    dcterms:provenance "G-NAF" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "TCP"@en ;
+    skos:definition "Telephone connection point (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Telephone Connection Point"@en ;
+.
+
+:unit-centroid
+    a skos:Concept ;
+    dcterms:provenance "AS 4590.1:2017 | Standards Australia" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "UC"@en ;
+    skos:definition "Point at centre of unit and lying within its bounds (e.g. for u-shaped unit)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Unit Centroid"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:water-connection-point
+    a skos:Concept ;
+    dcterms:provenance "G-NAF" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "WCP"@en ;
+    skos:definition "Water connection point (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Water Connection Point"@en ;
+.
+
+:water-meter
+    a skos:Concept ;
+    dcterms:provenance "G-NAF" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "WM"@en ;
+    skos:definition "Water meter point (e.g. box, or underground chamber)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Water Meter"@en ;
+.
+
+<https://linked.data.gov.au/org/qsi>
+    a prov:Agent ;
+    rdfs:label "Queensland Spatial Information" ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a prov:Agent ;
+    rdfs:label "Intergovernmental Committee on Surveying & Mapping" ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-05-11"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/qsi> ;
+    dcterms:identifier "geocode-types"^^xsd:token ;
+    dcterms:modified "2023-05-11"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    owl:versionIRI :0.1 ;
+    owl:versionInfo "0.1" ;
+    skos:definition "This vocabulary describes types of geocode. A geocode is a point location with a specialised type or a role which can be assigned to position something. "@en ;
+    skos:hasTopConcept
+        :building-access-point ,
+        :building-centroid ,
+        :centreline-dropped-frontage ,
+        :driveway-frontage ,
+        :emergency-access ,
+        :emergency-access-secondary ,
+        :front-door-access ,
+        :frontage-centre ,
+        :frontage-centre-setback ,
+        :letterbox ,
+        :property-access-point ,
+        :property-access-point-setback ,
+        :property-centroid ,
+        :service-connection-point ,
+        :service-meter ,
+        :unit-centroid ;
+    skos:historyNote "This vocabulary has been derived from the AS 4590 standard and codelists of Geocode Types as uses in the G-NAF database" ;
+    skos:prefLabel "Geocode Types"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label <https://linked.data.gov.au/org/icsm>
+                ]
+        ] ;
+.
