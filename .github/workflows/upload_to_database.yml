@@ -7,9 +7,11 @@ on:
         required: true
         type: string
       request_timeout:
-        required: false
+        required: true
         type: number
     secrets:
+      prez_url:
+        required: true
       database_url:
         required: true
       database_username:
@@ -19,7 +21,6 @@ on:
 
 env:
   PYTHON_VERSION: "3.11"
-  REQUEST_TIMEOUT: ${{ inputs.request_timeout }}
 
 jobs:
   publish:
@@ -39,7 +40,10 @@ jobs:
 
       - name: Upload vocabularies
         run: |
-          kurra fuseki upload vocabularies-des ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
-          kurra fuseki upload vocabularies-external ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
-          kurra fuseki upload vocabularies-gsq ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
-          kurra fuseki upload vocabularies-qldgov ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ env.REQUEST_TIMEOUT }}
+          kurra fuseki upload vocabularies-des ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ inputs.request_timeout }}
+          kurra fuseki upload vocabularies-external ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ inputs.request_timeout }}
+          kurra fuseki upload vocabularies-gsq ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ inputs.request_timeout }}
+          kurra fuseki upload vocabularies-qldgov ${{ secrets.database_url }} -u ${{ secrets.database_username }} -p ${{ secrets.database_password }} -t ${{ inputs.request_timeout }}
+
+      - name: Purge Prez cache
+        run: curl -fsSL ${{ secrets.prez_url }}

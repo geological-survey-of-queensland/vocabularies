@@ -11,6 +11,7 @@ jobs:
       environment: production
       request_timeout: 300
     secrets:
+      prez_url: ${{ secrets.PREZ_URL }}
       database_url: ${{ secrets.FUSEKI_DATASET_URL }}
       database_username: ${{ secrets.FUSEKI_USERNAME }}
       database_password: ${{ secrets.FUSEKI_PASSWORD }}
