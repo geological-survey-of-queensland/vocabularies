@@ -1,0 +1,81 @@
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX crudstatus: <http://linked.data.gov.au/def/crudstatus/>
+PREFIX cs: <http://linked.data.gov.au/def/crudstatus>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+crudstatus:started
+    a skos:Concept ;
+    dcterms:provenance "Developed by the Geological Survey of Queensland." ;
+    skos:definition "A bulk crud operation which has commenced."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Started"@en ;
+    skos:topConceptOf cs: ;
+.
+
+crudstatus:pending
+    a skos:Concept ;
+    dcterms:provenance "Developed by the Geological Survey of Queensland." ;
+    skos:altLabel "Pending"@en ;
+    skos:definition "A bulk crud operation which has yet to commence."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Not Started"@en ;
+    skos:topConceptOf cs: ;
+.
+
+crudstatus:inprogress
+    a skos:Concept ;
+    dcterms:provenance "Developed by the Geological Survey of Queensland." ;
+    skos:definition "A bulk crud operation which is in progress."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "In Progress"@en ;
+    skos:topConceptOf cs: ;
+.
+
+crudstatus:completed
+    a skos:Concept ;
+    dcterms:provenance "Developed by the Geological Survey of Queensland." ;
+    skos:definition "A bulk crud operation which has been completed without error."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Completed"@en ;
+    skos:topConceptOf cs: ;
+.
+
+crudstatus:completederror
+    a skos:Concept ;
+    dcterms:provenance "Developed by the Geological Survey of Queensland." ;
+    skos:definition "A bulk crud operation which has been completed with error(s)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Completed with Error"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2023-06-20T11:24:51"^^xsd:dateTime ;
+    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:modified "2023-06-20"^^xsd:date ;
+    dcterms:provenance "Developed by the Geological Survey of Queensland." ;
+    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
+    reg:status agldwgstatus:stable ;
+    skos:definition "A description of the state of a bulk CRUD operation."@en ;
+    skos:hasTopConcept
+        crudstatus:started ,
+        crudstatus:pending ,
+        crudstatus:inprogress ,
+        crudstatus:completed ,
+        crudstatus:completederror ;
+    skos:prefLabel "Bulk CRUD Status"@en ;
+.
