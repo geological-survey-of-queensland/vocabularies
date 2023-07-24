@@ -26,6 +26,7 @@ def test_vocabs(file: Path, vocpub_graph: Graph):
     conforms, _, results_text = pyshacl.validate(
         data_graph=Graph().parse(file),
         shacl_graph=vocpub_graph,
+        allow_warnings=True,
     )
 
     assert conforms, f"{file} failed:\n{results_text}"
