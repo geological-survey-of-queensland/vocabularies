@@ -1,0 +1,108 @@
+PREFIX : <https://linked.data.gov.au/def/road-operational-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/road-operational-statuses>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:closed
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The road has been closed."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Closed"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:operational
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The road is in use."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Operational"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:paper-road
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Road reserve only. No road constructed in cadastral designation."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Paper Road"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:proposed
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The road is in a proposal stage."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Proposed"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:under-construction
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The road is under construction."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Under Construction"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:unknown
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The operational status is not known."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Unknown"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/qsi>
+    a prov:Agent ;
+    rdfs:label "Qsi" ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a prov:Agent ;
+    rdfs:label "Icsm" ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-05-17"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/qsi> ;
+    dcterms:modified "2023-05-17"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    owl:versionIRI <https://linked.data.gov.au/def/road-operational-statuses/1.0> ;
+    owl:versionInfo "1.0" ;
+    skos:definition "This vocabulary describes the operational status for roads"@en ;
+    skos:hasTopConcept
+        :closed ,
+        :operational ,
+        :paper-road ,
+        :proposed ,
+        :under-construction ,
+        :unknown ;
+    skos:historyNote "This vocabulary contains operational status indicators for roads, sourced from Queensland Roads and Tracks data. "@en ;
+    skos:prefLabel "Road Operational Statuses"@en ;
+    reg:status agldwgstatus:experimental ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent <https://linked.data.gov.au/org/icsm>
+        ] ;
+.
+
