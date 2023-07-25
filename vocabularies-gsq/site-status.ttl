@@ -11,7 +11,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ststs:borehole-status
     a skos:Collection ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "Project statuses pertaining to the construction, usage, maintenance and abandonment of a well or bore."@en ;
     skos:member
         ststs:cased-and-suspended ,
@@ -31,7 +31,7 @@ ststs:borehole-status
 
 ststs:minocc
     a skos:Collection ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "Project statuses pertaining to the operational lifecycle of a mineral occurence or mine."@en ;
     skos:member
         ststs:abandoned ,
@@ -56,7 +56,7 @@ ststs:minocc
 
 ststs:minprodstat
     a skos:Collection ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "The coarse status of a mineral mine as pertains to activity on a reporting basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
     skos:member
         ststs:not-producing ,
@@ -68,7 +68,7 @@ ststs:minprodstat
 
 ststs:processing
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:secondary-operation ;
     skos:definition "A site such as a mine or quarry which is processing but not mining raw material throughout the reporting period."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/retention> ;
@@ -78,7 +78,7 @@ ststs:processing
 
 ststs:prodstat
     a skos:Collection ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "The coarse status of a coal mine as pertains to activity on a reporting basis. Such as the status of a mine sub-site, e.g. Mining Lease X is currently not producing and contributing to mine production within Mine A, which is still an active project."@en ;
     skos:member
         ststs:not-producing ,
@@ -88,7 +88,7 @@ ststs:prodstat
 
 ststs:quarry-status
     a skos:Collection ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "The valid site statuses as applies to quarries in Queensland."@en ;
     skos:member
         ststs:active ,
@@ -101,7 +101,7 @@ ststs:quarry-status
 
 ststs:care-and-maintenance
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:inactive ;
     skos:definition "A non-operational mine site where production is stopped but the site is managed to ensure it remains in a safe and stable condition. Typically where there is potential to recommence works at a later date such as improved economic conditions."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/care-and-maintenance> ;
@@ -111,7 +111,7 @@ ststs:care-and-maintenance
 
 ststs:cased-and-suspended
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:inactive ;
     skos:definition "A well in which casing has been installed but is suspended and inactive pending installation of completion, monitoring, or other equipment."@en ;
     skos:inScheme cs: ;
@@ -120,7 +120,7 @@ ststs:cased-and-suspended
 
 ststs:completed
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:inactive ;
     skos:definition "A well that has had all relevant casing, tubing, and completion equipment such as pumps installed, but is not in an active state of producing, injecting, or monitoring."@en ;
     skos:inScheme cs: ;
@@ -129,7 +129,7 @@ ststs:completed
 
 ststs:monitoring
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:active ;
     skos:definition "A well that is actively monitoring reservoir, aquifer, or other geological parameters."@en ;
     skos:inScheme cs: ;
@@ -138,7 +138,7 @@ ststs:monitoring
 
 ststs:on-injection
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:active ;
     skos:definition "A well that is injecting fluids such as water or hydrocarbons into a reservoir for disposal or future production."@en ;
     skos:inScheme cs: ;
@@ -147,7 +147,7 @@ ststs:on-injection
 
 ststs:plugged-and-abandoned
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel
         "Capped and Abandoned"@en ,
         "P&A"@en ;
@@ -159,7 +159,7 @@ ststs:plugged-and-abandoned
 
 ststs:water-supply
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:active ;
     skos:definition "A well that is primarily producing water"@en ;
     skos:inScheme cs: ;
@@ -168,7 +168,7 @@ ststs:water-supply
 
 ststs:application
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:proposed ;
     skos:definition "A mine, quarry, or well that is intended and has had an application for activity submitted to the governing authority that is pending assessment and outcome."@en ;
     skos:inScheme cs: ;
@@ -177,7 +177,7 @@ ststs:application
 
 ststs:approved
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader
         ststs:active ,
         ststs:proposed ;
@@ -189,7 +189,7 @@ ststs:approved
 
 ststs:on-hold
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel "On Hold"@en ;
     skos:broader ststs:inactive ;
     skos:definition "A mine or project that has been closed but not abandoned and where there are no active and care-and-maintenance works."@en ;
@@ -200,7 +200,7 @@ ststs:on-hold
 
 ststs:operational-non-prod
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel
         "Excavation"@en ,
         "Non-Productive Operation"@en ,
@@ -214,7 +214,7 @@ ststs:operational-non-prod
 
 ststs:rehabilitation
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     rdfs:isDefinedBy cs: ;
     skos:definition "The stage in the life-cycle of a project or mine where the resources have been extracted and the site is being rehabilitated back to its original condition or an acceptable environmental standard."@en ;
     skos:inScheme cs: ;
@@ -230,7 +230,7 @@ ststs:rehabilitation
 
 ststs:abandoned
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel "Concluded"@en ;
     skos:definition "A project or activity that has been abandoned without the intention and/or requirement to undertake further work."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/abandoned> ;
@@ -241,7 +241,7 @@ ststs:abandoned
 
 ststs:construction
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel "Drilling"@en ;
     skos:definition "A mine, quarry, or well that is being constructed or drilled e.g. a well between spud date and rig release."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/construction> ;
@@ -252,7 +252,7 @@ ststs:construction
 
 ststs:never-used
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel "Never Drilled"@en ;
     skos:definition "A project that was once proposed but was never constructed and is no longer intended to be constructed."@en ;
     skos:inScheme cs: ;
@@ -262,7 +262,7 @@ ststs:never-used
 
 ststs:not-producing
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:broader ststs:active ;
     skos:definition "A site that is part of a project or operation that is not currently contributing to production and is not conducting other operational activities. Such as a well undergoing routine maintenance that is not suspended, or a Mining Lease that is part of an active mine but is temporarily not contributing to mine production."@en ;
     skos:inScheme cs: ;
@@ -271,7 +271,7 @@ ststs:not-producing
 
 ststs:secondary-operation
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel
         "Other Purpose"@en ,
         "Secondary Operations"@en ;
@@ -283,7 +283,7 @@ ststs:secondary-operation
 
 ststs:suspended
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel
         "Drilled"@en ,
         "Retention"@en ;
@@ -296,7 +296,7 @@ ststs:suspended
 
 ststs:unknown
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "A mine, quarry, or well that has been constructed but whose further status is unknown."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Unknown"@en ;
@@ -305,7 +305,7 @@ ststs:unknown
 
 ststs:on-production
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel
         "Extraction"@en ,
         "Mining"@en ,
@@ -318,7 +318,7 @@ ststs:on-production
 
 ststs:proposed
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:definition "A mine, quarry, or well that is intended but has not yet been constructed."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Proposed"@en ;
@@ -327,7 +327,7 @@ ststs:proposed
 
 ststs:inactive
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel "Not Operating"@en ;
     skos:definition "A project that has been constructed and not yet abandoned but is not in an active state."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/not-operating> ;
@@ -338,7 +338,7 @@ ststs:inactive
 
 ststs:active
     a skos:Concept ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     skos:altLabel "Active"@en ;
     skos:definition "A mine, quarry, or well that is in the active phase of resource exploitation as a direct extraction or associated activity i.e. producing, monitoring, injecting, mining, or processing."@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/mine-status/operating> ;
@@ -354,7 +354,7 @@ cs:
     dcterms:created "2020-02-28"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2023-03-16"^^xsd:date ;
-    dcterms:provenance "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland. Mapped to GeoSciML Mine Status and amalgamation with Borehole status." ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     reg:status agldwgstatus:stable ;
     skos:altLabel "Resource Project Status"@en ;
