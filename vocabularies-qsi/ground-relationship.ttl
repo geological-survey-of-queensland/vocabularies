@@ -1,0 +1,89 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX gr: <https://linked.data.gov.au/def/ground-relationship>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+gr:above
+    a skos:Concept ;
+    skos:definition "On bridge or above ground."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme gr: ;
+    skos:prefLabel "Above"@en ;
+.
+
+gr:ground
+    a skos:Concept ;
+    skos:definition "On ground."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme gr: ;
+    skos:prefLabel "Ground"@en ;
+.
+
+gr:other
+    a skos:Concept ;
+    skos:definition "Other e.g., causeway, dam wall."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme gr: ;
+    skos:prefLabel "Other"@en ;
+.
+
+gr:under
+    a skos:Concept ;
+    skos:definition "Below ground or water e.g., in tunnel."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme gr: ;
+    skos:prefLabel "Under"@en ;
+.
+
+gr:unknown
+    a skos:Concept ;
+    skos:definition "Unknown."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme gr: ;
+    skos:prefLabel "Unknown"@en ;
+.
+
+gr:water
+    a skos:Concept ;
+    skos:definition "On water e.g., for ferry route."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme gr: ;
+    skos:prefLabel "Water"@en ;
+.
+
+gr:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-05-30"^^xsd:date ;
+    dcterms:creator [
+            a prov:Agent ;
+            rdfs:label "Department Of Resources"
+        ] ;
+    dcterms:identifier "ground-relationship"^^xsd:token ;
+    dcterms:modified "2023-05-30"^^xsd:date ;
+    dcterms:publisher [
+            a prov:Agent ;
+            rdfs:label "Icsm"
+        ] ;
+    skos:definition "This vocabulary describes relationships of a feature to the ground."@en ;
+    skos:hasTopConcept
+        gr:above ,
+        gr:ground ,
+        gr:other ,
+        gr:under ,
+        gr:unknown ,
+        gr:water ;
+    skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
+    skos:prefLabel "Ground Relationship"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Icsm"
+                ]
+        ] ;
+.
+
