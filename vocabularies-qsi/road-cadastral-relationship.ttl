@@ -1,0 +1,74 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rcr: <https://linked.data.gov.au/def/road-cadastral-relationship>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+rcr:not-related
+    a skos:Concept ;
+    skos:definition "Road segment is not related to an area of road in the cadastre."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme rcr: ;
+    skos:prefLabel "No Relationship To Cadastral Road Area"@en ;
+.
+
+rcr:related-off
+    a skos:Concept ;
+    skos:definition "Road segment is related to an area of road in the cadastre, but part of the centreline lies outside of this area."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme rcr: ;
+    skos:prefLabel "Off Alignment To Cadastral Road Area"@en ;
+.
+
+rcr:related-within
+    a skos:Concept ;
+    skos:definition "Road segment is related to an area of road in the cadastre, and the centreline lies inside of this area."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme rcr: ;
+    skos:prefLabel "Within Cadastral Road Area"@en ;
+.
+
+rcr:unknown
+    a skos:Concept ;
+    skos:altLabel
+        "U"@en ,
+        "Unknown"@en ;
+    skos:definition "Unknown if the road segment is related to an area of road in the cadastre."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme rcr: ;
+    skos:prefLabel "Unknown Relationship To Cadastral Road Area"@en ;
+.
+
+rcr:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-05-31"^^xsd:date ;
+    dcterms:creator [
+            a prov:Agent ;
+            rdfs:label "Department Of Resources"
+        ] ;
+    dcterms:identifier "road-cadastral-relationship"^^xsd:token ;
+    dcterms:modified "2023-05-31"^^xsd:date ;
+    dcterms:publisher [
+            a prov:Agent ;
+            rdfs:label "Icsm"
+        ] ;
+    skos:definition "This vocabulary describes the relationship, or alignment, of a road to a cadastral road area."@en ;
+    skos:hasTopConcept
+        rcr:not-related ,
+        rcr:related-off ,
+        rcr:related-within ,
+        rcr:unknown ;
+    skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
+    skos:prefLabel "Road Cadastral Relationship"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Icsm"
+                ]
+        ] ;
+.
+
