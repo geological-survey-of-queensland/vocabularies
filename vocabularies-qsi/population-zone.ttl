@@ -1,0 +1,71 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX pz: <https://linked.data.gov.au/def/population-zone>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+pz:both
+    a skos:Concept ;
+    skos:definition "Road crosses through both urban and rural areas."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme pz: ;
+    skos:prefLabel "Both"@en ;
+.
+
+pz:rural
+    a skos:Concept ;
+    skos:definition "Road is in a rural area."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme pz: ;
+    skos:prefLabel "Rural"@en ;
+.
+
+pz:unknown
+    a skos:Concept ;
+    skos:definition "Zone of road is not currently known."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme pz: ;
+    skos:prefLabel "Unknown"@en ;
+.
+
+pz:urban
+    a skos:Concept ;
+    skos:definition "Road is in an urban area."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme pz: ;
+    skos:prefLabel "Urban"@en ;
+.
+
+pz:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-05-30"^^xsd:date ;
+    dcterms:creator [
+            a prov:Agent ;
+            rdfs:label "Department Of Resources"
+        ] ;
+    dcterms:identifier "population-zone"^^xsd:token ;
+    dcterms:modified "2023-05-30"^^xsd:date ;
+    dcterms:publisher [
+            a prov:Agent ;
+            rdfs:label "Icsm"
+        ] ;
+    skos:definition "This vocabulary describes the population zone of rural or urban in which the entity is located. This has also been referred to as zone or road zone."@en ;
+    skos:hasTopConcept
+        pz:both ,
+        pz:rural ,
+        pz:unknown ,
+        pz:urban ;
+    skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
+    skos:prefLabel "Population Zone"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Icsm"
+                ]
+        ] ;
+.
+
