@@ -1,0 +1,93 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX td: <https://linked.data.gov.au/def/road-travel-direction>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+td:bi-directional
+    a skos:Concept ;
+    skos:altLabel "Two way"@en ;
+    skos:definition "Traffic can flow in either (both) directions."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme td: ;
+    skos:prefLabel "Bi directional"@en ;
+.
+
+td:none
+    a skos:Concept ;
+    skos:definition "No traffic flow in either direction."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme td: ;
+    skos:prefLabel "None"@en ;
+.
+
+td:one-way
+    a skos:Concept ;
+    skos:altLabel "One way"@en ;
+    skos:definition "Traffic can only flow in one direction (direction unknown)."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme td: ;
+    skos:prefLabel "One Way"@en ;
+.
+
+td:one-way-against-vector
+    a skos:Concept ;
+    skos:altLabel "One way against vector"@en ;
+    skos:definition "Traffic can only flow in one direction (in the opposite direction of the vector)."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme td: ;
+    skos:prefLabel "One Way From To"@en ;
+.
+
+td:one-way-with-vector
+    a skos:Concept ;
+    skos:altLabel "One way with vector"@en ;
+    skos:definition "Traffic can only flow in one direction (in the direction of the vector)."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme td: ;
+    skos:prefLabel "One Way To From"@en ;
+.
+
+td:unknown
+    a skos:Concept ;
+    skos:definition "The travel direction is not currently known."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme td: ;
+    skos:prefLabel "Unknown"@en ;
+.
+
+td:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-05-30"^^xsd:date ;
+    dcterms:creator [
+            a prov:Agent ;
+            rdfs:label "Department Of Resources"
+        ] ;
+    dcterms:identifier "road-travel-direction"^^xsd:token ;
+    dcterms:modified "2023-05-30"^^xsd:date ;
+    dcterms:publisher [
+            a prov:Agent ;
+            rdfs:label "Icsm"
+        ] ;
+    skos:definition "This vocabulary describes the travel direction assigned to a section of a road. "@en ;
+    skos:hasTopConcept
+        td:bi-directional ,
+        td:none ,
+        td:one-way ,
+        td:one-way-against-vector ,
+        td:one-way-with-vector ,
+        td:unknown ;
+    skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
+    skos:prefLabel "Road Travel Direction"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Icsm"
+                ]
+        ] ;
+.
+
