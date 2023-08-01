@@ -1,0 +1,122 @@
+PREFIX at: <https://linked.data.gov.au/def/address-classes>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+at:street
+    a skos:Concept ;
+    skos:altLabel "ST"@en ;
+    skos:definition "Address assigned according to one of the standards for a site accessed from a road."@en ;
+    skos:historyNote "Queensland address data" ;
+    skos:inScheme at: ;
+    skos:narrower
+        at:street-rural ,
+        at:street-urban ;
+    skos:prefLabel "Street"@en ;
+.
+
+at:unknown
+    a skos:Concept ;
+    skos:altLabel "U"@en ;
+    skos:definition "Unknown address assignation standard."@en ;
+    skos:historyNote "Queensland address data" ;
+    skos:inScheme at: ;
+    skos:prefLabel "Unknown"@en ;
+.
+
+at:water
+    a skos:Concept ;
+    skos:altLabel "WA"@en ;
+    skos:definition "Address assigned according to one of the standards for a site accessed from a water feature or island."@en ;
+    skos:historyNote "Queensland address data" ;
+    skos:inScheme at: ;
+    skos:narrower
+        at:water-inlet ,
+        at:water-island ,
+        at:water-river ;
+    skos:prefLabel "Water"@en ;
+.
+
+at:street-rural
+    a skos:Concept ;
+    skos:altLabel "RU"@en ;
+    skos:definition "Address assigned according to the standard for a site accessed from a rural road."@en ;
+    skos:historyNote "Queensland address data" ;
+    skos:inScheme at: ;
+    skos:prefLabel "Rural"@en ;
+.
+
+at:street-urban
+    a skos:Concept ;
+    skos:altLabel "UR"@en ;
+    skos:definition "Address assigned according to the standard for a site accessed from an urban road."@en ;
+    skos:historyNote "Queensland address data" ;
+    skos:inScheme at: ;
+    skos:prefLabel "Urban"@en ;
+.
+
+at:water-inlet
+    a skos:Concept ;
+    skos:altLabel "IN"@en ;
+    skos:definition "Address assigned according to the standard for a site accessed from an inlet or bay."@en ;
+    skos:historyNote "Queensland address data" ;
+    skos:inScheme at: ;
+    skos:prefLabel "Inlet"@en ;
+.
+
+at:water-island
+    a skos:Concept ;
+    skos:altLabel "IS"@en ;
+    skos:definition "Address assigned according to the standard for a site on an island with no road access."@en ;
+    skos:historyNote "Queensland address data" ;
+    skos:inScheme at: ;
+    skos:prefLabel "Island"@en ;
+.
+
+at:water-river
+    a skos:Concept ;
+    skos:altLabel "RI"@en ;
+    skos:definition "Address assigned according to the standard for a site accessed from a river or creek."@en ;
+    skos:historyNote "Queensland address data" ;
+    skos:inScheme at: ;
+    skos:prefLabel "River"@en ;
+.
+
+at:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-06-01"^^xsd:date ;
+    dcterms:creator [
+            a prov:Agent ;
+            rdfs:label "Department Of Resources"
+        ] ;
+    dcterms:identifier "address-classes"^^xsd:token ;
+    dcterms:modified "2023-06-01"^^xsd:date ;
+    dcterms:publisher [
+            a prov:Agent ;
+            rdfs:label "Icsm"
+        ] ;
+    skos:definition "This vocabulary describes the address classes used in address allocation. "@en ;
+    skos:hasTopConcept
+        at:street ,
+        at:street-rural ,
+        at:street-urban ,
+        at:unknown ,
+        at:water ,
+        at:water-inlet ,
+        at:water-island ,
+        at:water-river ;
+    skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
+    skos:prefLabel "Address Classes"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Icsm"
+                ]
+        ] ;
+.
+
