@@ -14,10 +14,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
   dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
     skos:prefLabel "Proposed"@en ;
-    skos:definition "A (pre-application) concept/intention or application exists to drill a borehole, but drilling has not yet been approved."@en ;
-    dcterms:provenance "Modified from Geoscience Australia (2021)." ;
+    skos:definition "A (pre-application) concept/intention or application exists to drill a borehole/well, but drilling has not yet been approved/assessed by the relevant authority."@en ;
+    skos:historyNote "Modified from Geoscience Australia (2021)." ;
     skos:scopeNote "Similar to usage by GA & QLD. Also, (1) cf. VIC (rephrased without change of meaning): ‘Well status for a proposed well, i.e., for a well that has not been drilled or for which a WCR, providing well co-ordinates, has not been received; (2) cf. WA (GSWA Borehole Status): Suggesting ‘planned’ for intention prior to application, and ‘proposed’ for a submitted application that has yet to be approved." ;
-    skos:altLabel "New Well"^^:NT ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
@@ -26,10 +25,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :application
     a skos:Concept ;
     skos:prefLabel "Application"@en ;
-    skos:definition "A borehole that is intended and for which an application for activity has been submitted to, and is pending assessment and outcome by, the governing authority."@en ;
-    dcterms:provenance "After GSQ." ;
-    skos:scopeNote "Only used in QLD." ;
-    skos:altLabel "Planned"^^:NOPSEMA ;
+    skos:definition "A borehole/well for which an application for activity (including a well-operations-management plan) has been submitted to, and is pending assessment and outcome by, the relevant authority."@en ;
+    skos:historyNote "Modified from GSQ." ;
+    skos:scopeNote "Used in QLD and equivalent to NOPSEMA’s ‘planned’ where a well-operations-management plan has been submitted to NOPSEMA and is pending assessment prior to approval for spudding. Differs from WA’s (GSWA Borehole Status Vocabulary) where ‘planned’ refers to the stated intention of drilling a borehole which has yet to be submitted for approval from the relevant authorities." ;
+    skos:altLabel "Planned"^^:NOPSEMA , "Well Operations Management Plan" ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :proposed ;
@@ -38,8 +37,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :approved
     a skos:Concept ;
     skos:prefLabel "Approved"@en ;
-    skos:definition "Drilling of a borehole has not yet commenced, but has been approved by the relevant authorities, whether within a resource company, a government regulatory agency (e.g., as part of government-supported exploration drilling initiatives or for research purposes), indigenous representative groups, a research organisation, or as part of geotechnical investigations and/or infrastructure programs."@en ;
-    dcterms:provenance "Derived from a modified combination of WA (GSWA Borehole Status) & QLD terms." ;
+    skos:definition "Drilling/spudding of a borehole/well has not yet commenced, but has been approved by the relevant authorities, whether within a resource company, a government regulatory agency (e.g., as part of government-supported exploration drilling initiatives or for research purposes), indigenous representative groups, a research organisation, or as part of geotechnical investigations and/or infrastructure programs."@en ;
+    skos:historyNote "Derived from a modified combination of WA (GSWA Borehole Status) & QLD terms." ;
     skos:scopeNote "Used in QLD & WA." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
@@ -50,7 +49,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     skos:prefLabel "Not Drilled"@en ;
     skos:definition "A borehole that was proposed in concept or approved on application, but was never drilled. This does not include the circumstance where the status is unknown."@en ;
-    dcterms:provenance "From WA, VIC, and modified after QLD for ‘never used’, an altLabel in the latter jurisdiction being ‘never drilled’." ;
+    skos:historyNote "From WA, VIC, and modified after QLD for ‘never used’, an altLabel in the latter jurisdiction being ‘never drilled’." ;
     skos:scopeNote "Used by VIC; supported by WA." ;
     skos:altLabel "Never Used"^^:QLD, "Never Drilled" ;
     rdfs:isDefinedBy cs: ;
@@ -62,7 +61,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     skos:prefLabel "Not Approved"@en ;
     skos:definition "A application was submitted to drill a borehole, but was not approved, encompassing outright dismissal or requiring amendment."@en ;
-    dcterms:provenance "Created for the Borehole Status Vocabulary Harmonisation Initiative in 2023." ;
+    skos:historyNote "Created in this ontology for the Borehole Status Vocabulary Harmonisation Initiative in 2023." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :proposed ;
@@ -70,24 +69,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :drilling-in-progress
     a skos:Concept ;
-  dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
-  dcterms:references "PPDM, 2014: Well Status and Classification (superseded by PPDM, 2020). Professional Petroleum Data Management Association."@en ;
-  dcterms:references "PPDM, 2020: Well Status & Classification v3. Professional Petroleum Data Management Association. <https://ppdm.org/ppdm>"@en ;
+  dcterms:references "Cf. Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
+  dcterms:references "Cf. PPDM, 2014: Well Status and Classification (superseded by PPDM, 2020). Professional Petroleum Data Management Association."@en ;
+  dcterms:references "Cf. PPDM, 2020: Well Status & Classification v3. Professional Petroleum Data Management Association. <https://ppdm.org/ppdm>"@en ;
     skos:prefLabel "Drilling In Progress"@en ;
     skos:definition """The status of a borehole when it is being constructed, from its spud date to its rig release date [after QLD for ‘construction’ (= altLabel ‘Drilling’); similar to ‘drilling’ (GSWA Borehole Status, April 2023), but until the borehole has reached its intended target/depth zone. Also, (1) cf. Geoscience Australia (2021) for ‘in progress’: ‘The status of a borehole commencing from the rig being moved onsite to the time that drilling operations are completed’, likened by GA to PPDM's (2014) ‘drilling’ term, now equivalent to PPDM’s (2020) ‘constructing’ facet value; and (2) cf. NZ for ‘active’: A well is considered active from the commencement of drilling through to the well being completed and capable of fulfilling its intended purpose]. """@en ;
-    dcterms:provenance "After QLD." ;
-    skos:scopeNote "Used by NOPSEMA & CoalLog (as ‘in progress’)." ;
+    skos:historyNote "After NT & QLD." ;
+    skos:scopeNote "Used by NT as ‘Drilling in Progress’ (Petroleum Boreholes) and NOPSEMA & CoalLog (as ‘in progress’), here with ‘operational’ as broader." ;
     skos:altLabel "Construction"^^:QLD , "Drilling"^^:QLD , "In Progress"^^:NOPSEMA , "In Progress"^^:CoalLog ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    skos:broader :operational ;
 .
 
 :reaming
     a skos:Concept ;
     skos:prefLabel "Reaming"@en ;
     skos:definition "The process of enlarging a borehole, for example, when: a drilling bit has worn down from its original size; or lithological plastic flow into the wellbore requires the reinstatement of the original hole size."@en ;
-    dcterms:provenance "From WA (GSWA Borehole Status vocabulary, April 2023)." ;
+    skos:historyNote "From WA (GSWA Borehole Status Vocabulary, April 2023)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :drilling-in-progress ;
@@ -100,8 +99,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
     skos:prefLabel "Drilling Temporarily Suspended"@en ;
     skos:definition "Drilling operations have been temporarily suspended (e.g., for weather, maintenance, or other reasons)."@en ;
-    dcterms:provenance "Sourced from Geoscience Australia (2021) for ‘Drilling Suspended’, adapted here for ‘Drilling Temporarily Suspended’." ;
-    skos:scopeNote """Used by GA & WA (‘drilling suspended’), NT (Energy Division DB: ‘suspended’, but without definition); differs from ‘suspended’ (Geoscience Australia, 2021), as used also by NZ (all following PPDM, 2014), but here adapted to ‘borehole operations suspended’, involving cessation of borehole operations for a significant period of time or in a manner that requires significant effort for the resumption of activities"; similar to ‘suspended’ (QLD) for ‘A site … that is temporarily not active …’ """ ;
+    skos:historyNote "Sourced from Geoscience Australia (2021) for ‘Drilling Suspended’, adapted here for ‘Drilling Temporarily Suspended’." ;
+    skos:scopeNote """Used by GA & WA (‘drilling suspended’); differs from ‘suspended’ (Geoscience Australia, 2021), as used also by NZ (all following PPDM, 2014), but here adapted to ‘borehole operations suspended’, involving cessation of borehole operations for a significant period of time or in a manner that requires significant effort for the resumption of activities"; similar to ‘suspended’ (QLD) for ‘A site … that is temporarily not active …’ """ ;
     skos:altLabel "Drilling Suspended"^^:GA , "Drilling Suspended"^^:WA ; 
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
@@ -110,13 +109,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :drilling-completed
     a skos:Concept ;
-  dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
+  dcterms:references "Cf. Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
   dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
     skos:prefLabel "Drilling Completed"@en ;
-    skos:definition "Drilling is completed. Production infrastructure may be installed (petroleum wells). The borehole has not necessarily been abandoned. Note that the CoalLog 'completed' status (Larkin & Green, 2021) is similar to 'abandoned' in this vocabulary (modified from Geoscience Australia, 2021)."@en ;
-    dcterms:provenance "Modified from Geoscience Australia (2021: Given as ‘completed’)." ;
-    skos:scopeNote """Used by WA (GSWA Borehole Status) as opposed to ‘completed’, the term ‘drilling completed’ being more specific in terms of what has been completed; ‘completed’ also used by QLD & NT (Energy Division DB; cf. NT Minerals & Geochemistry DB: ‘completed drillhole’).""" ;
-    skos:altLabel "Completed"^^:QLD , "Completed Drillhole"^^:NT ;
+    skos:definition "Drilling is completed. Production infrastructure may be installed (petroleum wells). Note that the CoalLog 'completed' status (Larkin & Green, 2021) is similar to 'permanently abandoned and rehabilitated' in this vocabulary."@en ;
+    skos:historyNote "Modified from Geoscience Australia (2021: Given as ‘completed’)." ;
+    skos:scopeNote "Used by WA (GSWA Borehole Status Vocabulary) as opposed to ‘completed’, the term ‘drilling completed’ being more specific in terms of what has been completed; ‘completed’ also used by QLD & NT (the latter for both mineral & petroleum boreholes). Also note: CoalLog’s ‘completed’ term includes all necessary cementing and borehole rehabilitation, but not site rehabilitation, for which CoalLog’s status term ‘Rehabilitated’ is indicated. As a borehole/well can have only one status, it is assumed that CoalLog’s ‘Rehabilitated’ term (for site) includes borehole cementing and rehabilitation. Cf. ‘well completion’ where a ‘completion’ has been run in a petroleum or gas well, permitting it to be ‘operational’, involving perforation and stimulation, as required." ;
+    skos:altLabel "Completed"^^:QLD , "Completed"^^:GA , "Completed"^^:NT ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :not-operational ;
@@ -124,9 +123,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :completed-blade-refusal
     a skos:Concept ;
+  dcterms:references "Look, B. et al., 2014: Assessment of Geotechnical Parameters via use of Drill Bit Refusal as an Index Value. Fourth International Conference on Geotechnique, Construction Materials and Environment (GEOMATE 2014), Brisbane, Australia. <https://www.researchgate.net/publication/315572776_Assessment_of_Geotechnical_Parameters_via_use_of_Drill_Bit_Refusal_as_an_Index_Value>"@en ;
     skos:prefLabel "Completed—Blade Refusal"@en ;
-    skos:definition "Nil provided by NT."@en ;
-    dcterms:provenance "From NT." ;
+    skos:definition " Drilling was completed/terminated because of blade/drilling-bit refusal (e.g., when wear and tear on the drill bits exceeds the productive rate of borehole advancement, when the refusal depth is assessed as being the founding depth for pile foundation, etc., varying with bit types and rock properties (Look et al., 2014)."@en ;
+# Need a better definition please, as I made this one up from the cited reference. The term is used in literature and reports, but I could not readily find a definition for it. #
+    skos:historyNote "From NT." ;
+    skos:scopeNote "Generally a mineral industry and a geotechnical term." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :drilling-completed ;
@@ -135,18 +137,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :completed-failed-to-reach-bedrock
     a skos:Concept ;
     skos:prefLabel "Completed—Failed to Reach Bedrock"@en ;
-    skos:definition "Nil provided by NT, but label self-explanatory."@en ;
-    dcterms:provenance "From NT." ;
+    skos:definition "Label is self-explanatory."@en ;
+    skos:historyNote "From NT." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :drilling-completed ;
 .
 
-:completed-failed-to-reach-target
+:failed-to-reach-target
     a skos:Concept ;
-    skos:prefLabel "Completed—Failed to Reach Geo Target"@en ;
-    skos:definition "Nil provided by NT, but label self-explanatory."@en ;
-    dcterms:provenance "From NT." ;
+    skos:prefLabel "Failed to Reach Geo Target"@en ;
+    skos:definition "Label is self-explanatory."@en ;
+    skos:historyNote "From NT." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :drilling-completed ;
@@ -155,10 +157,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :operational
     a skos:Concept ;
     skos:prefLabel "Operational"@en ;
-    skos:definition "Borehole is producing, injecting or monitoring (investigating, observational)."@en ;
-    dcterms:provenance "Modified from NOPSEMA, to include monitoring." ;
+    skos:definition "Borehole is being drilled or is producing, injecting or monitoring (investigating, observational)."@en ;
+    skos:historyNote "Modified from NOPSEMA, to include ‘drilling in progress’ and ‘monitoring’." ;
     skos:altLabel "Operating"^^:QLD , "Active"^^:QLD ;
-    skos:scopeNote "Used by NOPSEMA (not including a monitoring function); equivalent to ‘operating’ (QLD), with altLabel ‘active’. NZ has ‘active’, with definition: ‘A well is considered active from the commencement of drilling through to the well being completed and capable of fulfilling its intended purpose.’ (referring to PPDM, 2016: not cited here)." ;
+    skos:scopeNote "Used by NOPSEMA for a well that is producing or injecting; equivalent to ‘operating’ (QLD), with altLabel ‘active’. NZ has ‘active’, with definition: ‘A well is considered active from the commencement of drilling through to the well being completed and capable of fulfilling its intended purpose.’ (referring to PPDM, 2016: reference not provided here)." ;
    rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
@@ -168,8 +170,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
   dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
     skos:prefLabel "Producing"@en ;
-    skos:definition "The status of a borehole during which liquids or gas are being extracted from the borehole."@en ;
-    dcterms:provenance "Sourced from Geoscience Australia (2021)." ;
+    skos:definition "The status of a borehole during which liquids (including groundwater), gas (both conventional and unconventional), or geothermal energy are being extracted from the borehole."@en ;
+    skos:historyNote "Modified from Geoscience Australia (2021) for groundwater and geothermal-energy extraction." ;
     skos:scopeNote "Used by GA, QLD, NZ, WA." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
@@ -181,21 +183,71 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     skos:prefLabel "Operational Not Producing"@en ;
     skos:definition "A borehole that is an active part of a project or operation that typically contributes to production, but is not currently doing so, such as a well that is undergoing routine maintenance."@en ;
-    dcterms:provenance "Modified from QLD." ;
+    skos:historyNote "Modified from QLD." ;
     skos:scopeNote "Similar to ‘suspended’ VIC, with definition: Producer, temporarily closed." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :operational ;
+#What’s the distinction from ‘shut-in’?#
+.
+
+:producing-csg
+    a skos:Concept ;
+    skos:prefLabel "Producing CSG"@en ;
+    skos:definition "Coal seam gas well producing gas."@en ;
+    skos:historyNote "Sourced from NSW." ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:broader :producing ;
 .
 
 :producing-gas
     a skos:Concept ;
-    skos:prefLabel "Producing CSG"@en ;
-    skos:definition "Coal seam gas wells producing gas."@en ;
-    dcterms:provenance "Sourced from NSW." ;
+    skos:prefLabel "Producing Conventional Gas"@en ;
+    skos:definition "Petroleum well producing gas."@en ;
+    skos:historyNote "Created for the Borehole Status Vocabulary Harmonisation Initiative in 2023." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:altLabel "On Production"^^:QLD , "Producer"^^:VIC ;
+    skos:broader :producing ;
+.
+
+:producing-oil
+    a skos:Concept ;
+    skos:prefLabel "Producing Oil"@en ;
+    skos:definition "Petroleum well producing oil."@en ;
+    skos:historyNote "Created for the Borehole Status Vocabulary Harmonisation Initiative in 2023." ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:broader :producing ;
+.
+
+:producing-shale-gas
+    a skos:Concept ;
+    skos:prefLabel "Producing Shale Gas"@en ;
+    skos:definition "Borehole/well producing shale gas."@en ;
+    skos:historyNote "Created for the Borehole Status Vocabulary Harmonisation Initiative in 2023." ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:broader :producing ;
+.
+
+:producing-geothermal-energy
+    a skos:Concept ;
+    skos:prefLabel "Producing Geothermal Energy"@en ;
+    skos:definition "Borehole/well from which geothermal energy is being extracted."@en ;
+    skos:historyNote "Created for the Borehole Status Vocabulary Harmonisation Initiative in 2023." ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:broader :producing ;
+.
+
+:producing-tight-gas
+    a skos:Concept ;
+    skos:prefLabel "Producing Tight Gas"@en ;
+    skos:definition "Borehole/well producing tight gas."@en ;
+    skos:historyNote "Created for the Borehole Status Vocabulary Harmonisation Initiative in 2023." ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
     skos:broader :producing ;
 .
 
@@ -203,19 +255,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     skos:prefLabel "Not Producing CSG"@en ;
     skos:definition "Coal seam gas wells not producing gas."@en ;
-    dcterms:provenance "Sourced from NSW." ;
+    skos:historyNote "Sourced from NSW." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :not-operational ;
+#This is a NSW term, to be included or not, and, if so, should it be modified or extended in concept?#
 .
 
 :injecting
     a skos:Concept ;
+  dcterms:references "Pasikki et al., 2011: Studies and Implementation of Injector Well Conversion During Salak Field Operation. Proceedings, Thirty-Sixth Workshop on Geothermal Reservoir Engineering, Stanford University, Stanford, California, January 31 – February 2, 2011. <https://es.stanford.edu/ERE/pdf/IGAstandard/SGW/2011/pasikki.pdf>"@en ;
+  dcterms:references "PPDM, 2014: Well Status and Classification. Professional Petroleum Data Management Association. [Superseded by PPDM, 2020: Well Status & Classification v3 (Note: Membership required to access resources)] <https://ppdm.org/ppdm/PPDM/Member/PPDM_Publications.aspx>"@en ;
+  dcterms:references "Hashed, A. & Hasiholan, B., 2019: Producer-to-Injector Conversion to Enhance Oil Productivity and Profitability. International Journal of Innovative Technology, 8(4), 118–123. <https://www.ijitee.org/wp-content/uploads/papers/v8i4s/DS2847028419.pdf>"@en ;
   dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
-  dcterms:references """PPDM, 2014: Well Status and Classification. Professional Petroleum Data Management Association. [Superseded by PPDM, 2020: Well Status & Classification v3 (Note: Membership required to access resources)] <https://ppdm.org/ppdm/PPDM/Member/PPDM_Publications.aspx>"""@en ;
+  dcterms:references "SLB Energy Glossary, 2023: Schlumberger Limited, SLB 57.26. <https://glossary.slb.com/en/terms/i/injection_well>"@en ;
+  dcterms:references "Rigzone Training (accessed 26.07.2023): Water Injection Methods. <https://www.rigzone.com/training/insight?insight_id=341&c_id=#:~:text=While%20production%20wells%20can%20be,the%20liquid%20into%20the%20formation>"@en ;
     skos:prefLabel "Injecting"@en ;
-    skos:definition "The status of a borehole during which liquids or gas are being pumped into a reservoir. The purpose of this activity may be to enhance production of petroleum, provide for storage of petroleum, provide for storage of gas such as hydrogen, provide for storage/disposal of treated waste liquids or gas, such as carbon dioxide, recharge aquifers, tap geothermal energy, or assist environmental remediation for the clean-up of contaminated groundwater."@en ;
-    dcterms:provenance "Modified from Geoscience Australia (2021, after usage of PPDM Wellbore Status vocabulary, 2014), to encompass non-petroleum-injection activities (per WA, for ‘injection’), and partially after QLD for ‘on-injection’." ;
+    skos:definition "The status of a borehole during which liquids or gas are being pumped into a reservoir. The purpose of this activity may be to enhance production of petroleum, provide for storage of petroleum, provide for storage of gas such as hydrogen, provide for storage/disposal of treated waste liquids or gas, such as carbon dioxide, recharge aquifers, tap geothermal energy, or assist environmental remediation for the clean-up of contaminated groundwater. Boreholes/wells are specifically designed/drilled for this purpose, although a production well can be converted into an injection well and vice versa."@en ;
+    skos:historyNote "Modified from Geoscience Australia (2021, after usage of PPDM Wellbore Status Vocabulary, 2014), to encompass non-petroleum-injection activities (per GSWA’s Borehole Status Vocabulary, for ‘injection’), and partially after QLD for ‘on-injection’; also see SLB Energy Glossary (2023), and, for wells that are converted from/to injection: Ahmen & Hasiholan (2019); Riza et al. (2011); Rigzone Training (webpage, link above, accessed 26.07.2023)." ;
     skos:scopeNote "Used by GA, NZ (both with limited definitions, per PPDM)." ;
     skos:altLabel "Injector"^^:NT , "Injection"^^:WA , "INJ"^^:VIC, "On Injection"^^:QLD ;
     rdfs:isDefinedBy cs: ;
@@ -225,11 +282,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :injecting-gas
     a skos:Concept ;
+  dcterms:references "SLB Energy Glossary, 2023: Schlumberger Limited, SLB 57.26. <https://glossary.slb.com/en/terms/g/gas_injection>"@en ;
     skos:prefLabel "Injecting Gas"@en ;
     skos:definition "A reservoir maintenance or secondary recovery method that uses injected gas to supplement the pressure in an oil reservoir or field."@en ;
-    dcterms:provenance "From WA (GSWA Borehole Status)." ;
+    skos:historyNote "From WA GSWA Borehole Status Vocabulary (April, 2023: citing SLB Energy Glossary, 2023)." ;
     skos:scopeNote "Used by WA (for ‘gas injection’)." ;
-    skos:altLabel "Gas Injection"^^:WA , "INJ"^^:VIC, "On Injection"^^:QLD ;
+    skos:altLabel "Gas Injection"^^:GSWA , "INJ"^^:VIC, "On Injection"^^:QLD ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :injecting ;
@@ -240,22 +298,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   dcterms:references "Water injection (oil production). Wikipedia, accessed by WA, April 2023 <https://en.wikipedia.org/wiki/Water_injection_(oil_production)>"@en ;
     skos:prefLabel "Injecting Water"@en ;
     skos:definition "Waterflooding or water injection is where water is injected into the oil reservoir, to maintain pressure (also known as voidage replacement) or to drive oil towards the wells, and thereby increase production. Water-injection wells are common offshore, where filtered and treated seawater is injected into a lower water-bearing section of the reservoir. "@en ;
-    dcterms:provenance """From WA [GSWA Borehole Status, quoting Wikipedia for ‘Water injection (oil production)’; April 2023].""" ;
+    skos:historyNote "From WA [GSWA Borehole Status, quoting Wikipedia for ‘Water injection (oil production)’; April 2023]." ;
     skos:scopeNote "Used by WA (for ‘water injection’)." ;
     skos:altLabel "Water Injection"^^:WA ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :injecting ;
-.
-
-:reinjecting
-    a skos:Concept ;
-    skos:prefLabel "Re-injecting"@en ;
-    skos:definition "Nil provided by NT."@en ;
-    dcterms:provenance "From NT." ;
-    rdfs:isDefinedBy cs: ;
-    skos:inScheme cs: ;
-    skos:broader :operational ;
 .
 
 :producing-and-injecting
@@ -264,8 +312,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   dcterms:references """PPDM, 2014: Well Status and Classification. Professional Petroleum Data Management Association. [Superseded by PPDM, 2020: Well Status & Classification v3 (Note: Membership required to access resources)]. <https://ppdm.org/ppdm/PPDM/Member/PPDM_Publications.aspx>"""@en ;
     skos:prefLabel "Producing and Injecting"@en ;
     skos:definition "The status of a borehole that alternately produces and injects liquid or gas into a borehole."@en ;
-    dcterms:provenance "Sourced from Geoscience Australia (2021, after usage of PPDM Wellbore Status Vocabulary, 2014)." ;
-    skos:scopeNote "Used by GA & WA (GSWA Borehole Status vocabulary, April 2023)." ;
+    skos:historyNote "Sourced from Geoscience Australia (2021, after usage of PPDM Wellbore Status Vocabulary, 2014)." ;
+    skos:scopeNote "Used by GA & WA (GSWA Borehole Status Vocabulary, April 2023)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :operational ;
@@ -273,58 +321,41 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :monitoring
     a skos:Concept ;
-    skos:prefLabel "Monitoring"@en ;
-    skos:definition "A borehole/well that is actively monitoring reservoir, aquifer or other geological parameters."@en ;
-    dcterms:provenance "Modified after QLD." ;
-    skos:scopeNote """Used by GA, QLD, WA, NT (PostDrillWellType) & SA; cf. NSW: ‘When a drillhole or well is suspended during drilling for an extended period, measures should be put in place to monitor the status of the hole during the suspension … .’ NT Energy Division DB uses ‘monitoring/observation’.""" ;
-    skos:altLabel "Monitoring/Observation"^^:NT , "UCG Investigation/Monitoring"^^:SA , "Observation"^^:VIC ; 
+  dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
+    skos:prefLabel "Monitoring/Observation"@en ;
+    skos:definition "A borehole/well that is actively monitoring reservoir, aquifer or other geological parameters (e.g., water level, water quality, fluid pressure), providing the basis for observations and investigations."@en ;
+    skos:historyNote "Modified after QLD, GA (2021) & GSWA Borehole Status Vocabulary (April 2023)." ;
+    skos:scopeNote "Used by GA, QLD, NSW, WA & SA; NT uses ‘Monitoring/Observation’ for petroleum boreholes/wells and, separately, ‘Monitoring’ and ‘Investigation’ for water boreholes." ;
+    skos:altLabel "Monitoring/Observation"^^:NT , "Monitoring"^^:NT , "Investigation"^^:NT ,  "Observation"^^:VIC ; 
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :operational ;
+#Should investigation be separated from monitoring?#
 .
 
-:ucg-investigation-monitoring
+:producing-water
     a skos:Concept ;
-    skos:prefLabel "UCG Investigation/Monitoring"@en ;
-    skos:definition "Nil provided by SA."@en ;
-    dcterms:provenance "From SA." ;
-    skos:scopeNote "Used by SA under Completion Status Collection." ;
-    rdfs:isDefinedBy cs: ;
-    skos:inScheme cs: ;
-    skos:broader :monitoring ;
-.
-
-:water-supply
-    a skos:Concept ;
-  dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
-    skos:prefLabel "Functioning Water Bore"@en ;
-    skos:definition "A borehole that has been left open for use as a water bore and is functional (producing water)."@en ;
-    dcterms:provenance "Modified from CoalLog (Larkins & Green, 2021), to embrace only functioning water bores." ;
-    skos:altLabel "Water Supply"^^:QLD ,"Water Well"^^:SA , "Water"^^:VIC , "Functioning"^^:TAS ; 
+  dcterms:references "After: Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
+  dcterms:references "NGIS, 2021: National Groundwater Information System Data Dictionary. Bureau of Meteorology/BOM (Australian Government). <http://www.bom.gov.au/water/groundwater/ngis/documents/NgisDataDictionary.pdf>"@en ;
+  dcterms:references "Mallants, D. et al., 2017: Deeper groundwater hazard screening research: National assessment of chemicals associated with coal seam gas extraction in Australia. CSIRO, Canberra. <https://publications.csiro.au/rpr/pub?pid=csiro:EP167880>"@en ;
+    skos:prefLabel "Producing Water"@en ;
+    skos:definition "A borehole/well that is producing water, including a borehole/well that has been converted for use as a water bore and is functional (producing water)."@en ;
+    skos:historyNote "Modified from GSQ for ‘Water Supply" ;
+    skos:altLabel "Water Supply"^^:QLD ,"Water Well"^^:SA , "Water"^^:VIC , "Water Bore"^^:CoalLog , "Functional"^^:BOM ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :producing ;
-    skos:scopeNote "Currently, BOM & NGIS have not been largely referred to in this ontology, as the term ‘groundwater feature’, albeit widely used, is generally lacking in definition." ;
-.
-
-:reconditioned
-    a skos:Concept ;
-    skos:prefLabel "Reconditioned"@en ;
-    skos:definition "Borehole (e.g., groundwater feature) has been reconditioned so that functionality has improved."@en ;
-    dcterms:provenance "Modified from BOM." ;
-    rdfs:isDefinedBy cs: ;
-    skos:inScheme cs: ;
-    skos:broader :operational ;
+    skos:scopeNote "BOM’s National Groundwater Information System/NGIS terminology (e.g., NGIS, 2021) has not been largely referred to in this ontology, as the term ‘groundwater feature’, albeit widely used, is generally lacking in definition and embraces groundwater features other than water bores, including aquifers, groundwater management zones (alluvium or stratum), and ‘non-water-dependent assets’ (geological features/formations) [e.g., Mallants et al., 2017]. For BOM, where the ‘Groundwater feature is in working order’, its assigned status is ‘Functional’ (FUN)." ;
 .
 
 :not-operational
     a skos:Concept ;
   dcterms:references "OPGGS (RMA) Regs. 5.03A, 2023: Compilation No. 14 (March 2023), Offshore Petroleum and Greenhouse Gas Storage (Resource Management and Administration) Regulations 2011. <https://www.legislation.gov.au/Details/F2023C00260>"@en ;
-  dcterms:references "OGUK WLCIG Issue 4: Well Life Cycle Integrity Guidelines – Issue 4. Guidelines, Offshore Operations and Technology. Offshore Energies UK/OEUK (website accessed 17.05.2023). <https://oeuk.org.uk/product/well-life-cycle-integrity-guidelines-issue-4/>"@en ;
+  dcterms:references "OEUK (OGUK) WLCIG Issue 4: Well Life Cycle Integrity Guidelines – Issue 4. Guidelines, Offshore Operations and Technology. Offshore Energies UK/OEUK (website accessed 17.05.2023). <https://oeuk.org.uk/product/well-life-cycle-integrity-guidelines-issue-4/>"@en ;
     skos:prefLabel "Not Operational"@en ;
-    skos:definition """A well that is not operating nor permanently abandoned. Such a well is either shut-in or suspended. A well that is no longer operating but is not fully decommissioned has one of 3 (three) statuses: Shut-in, Plugged, Suspended [OPGGS (RMA) Regs. 5.03A, 2023 ; OGUK WLCIG Issue 4]."""@en ;
-    dcterms:provenance "Sourced from NOPSEMA." ;
-    skos:scopeNote "NOPSEMA prefers to avoid using the term 'suspended' as it has a variety of definitions, but the term is intended to reflect the wording in the regulations. For well integrity monitoring purposes, the distinction between ‘shut in’ and ‘suspended’ is critical. Also for: ‘not operational shut in’, ‘not operational plugged’, and ‘not operational suspended’, the latter two terms are held to be equivalent by NOPSEMA (in notes provided for 'not operational suspended'). ‘Not operational suspended’ is also held by NOPSEMA to be equivalent to 'plugged', as defined in Section 10.11.2 of OGUK Well Lifecycle Integrity Guidelines Issue 4."@en ;
+    skos:definition "A well that is not operating nor permanently abandoned. Such a well is either shut-in or suspended; it is not in the post-operational/abandonment phase of its lifecycle. A well that is no longer operating but is not fully decommissioned has one of 3 (three) statuses: Shut-in, Plugged, Suspended [OPGGS (RMA) Regs. 5.03A, 2023 ; OGUK (OEUK) WLCIG Issue 4]."@en ;
+    skos:historyNote "Sourced from NOPSEMA." ;
+    skos:scopeNote "NOPSEMA prefers to avoid using the term 'suspended' as it has a variety of definitions, but the term is intended to reflect the wording in the regulations. For well integrity monitoring purposes, the distinction between ‘shut in’ and ‘suspended’ is critical. Also for: ‘not operational shut in’, ‘not operational plugged’, and ‘not operational suspended’, the latter two terms are held to be equivalent by NOPSEMA (in notes provided for 'not operational suspended' and referring to Section 10.11.2 of OEUL (OGUK) Well Lifecycle Integrity Guidelines Issue 4. Note: OEUK = Offshore Energies UK, formerly OGUK = Oil & Gas UK."@en ;
     skos:altLabel "Inactive"^^:QLD ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
@@ -333,13 +364,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :suspended
     a skos:Concept ;
+  dcterms:references "PPDM, 2014: Well Status and Classification. Professional Petroleum Data Management Association. [Superseded by PPDM, 2020: Well Status & Classification v3 (Note: Membership required to access resources)]. <https://ppdm.org/ppdm/PPDM/Member/PPDM_Publications.aspx>"@en ;
   dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
-  dcterms:references """PPDM, 2014: Well Status and Classification. Professional Petroleum Data Management Association. [Superseded by PPDM, 2020: Well Status & Classification v3 (Note: Membership required to access resources)]. <https://ppdm.org/ppdm/PPDM/Member/PPDM_Publications.aspx>"""@en ;
-    skos:prefLabel "Borehole Operations Suspended"@en ;
-    skos:definition "Borehole operations have been halted for a significant period of time or in a manner that requires significant effort for the resumption of activities. The borehole can be plugged downhole and fluids injected on top of the plug in order to create a temporary seal to prevent hydrocarbon leakage. The surface equipment remains in place. Suspended is never the final status of a borehole."@en ;
-    dcterms:provenance "Adapted from Geoscience Australia (2021), for ‘suspended’, where modified from PPDM Wellbore Status Vocabulary (2014); NT uses ‘suspended’ without definition; Similar to ‘suspended’ NSW: A well that is shut-in for an extended period of time with two tested barriers in place; Differs from ‘suspended’ VIC: Producer, temporarily closed." ;
-    skos:scopeNote "Used by GA, WA, NZ (all for ‘Suspended’); similar to ‘plugged & suspended’/’P&S’ (VIC)." ;
-    skos:altLabel "Suspended"^^:GA , "Suspended"^^:WA ;
+  dcterms:references "SLB Energy Glossary, 2023: Schlumberger Limited, SLB 57.26. <https://glossary.slb.com/en/terms/i/injection_well>"@en ;
+    skos:prefLabel "Operations Suspended"@en ;
+    skos:definition "Borehole/well operations have been halted, with the surface equipment remaining in place and with one or more qualified barriers installed/injected, specifically either on a ‘temporary or permanent’ basis, to prevent the leakage of fluids. The borehole/well is not shut-in (one or more valves being temporarily closed in the direction of flow), the distinction between ‘suspended’ and ‘shut-in’ being critical to NOPSEMA. Included (in this vocabulary) under ‘operations suspended’ is the concept of a ‘workover’: The process of performing major maintenance or remedial treatments on an oil or gas well."@en ;
+    skos:historyNote "For the term ‘suspended’: Modified here largely from the (previous?) usage of NOPSEMA (for ‘not operational suspended’), also from that of Geoscience Australia [2021; following the PPDM Wellbore Status Vocabulary (2014). Here includes the concept of a ‘workover’ after GA (2021) and the SLB Energy Glossary (2023)." ;
+    skos:scopeNote "Used as ‘Suspended’ by GA, NSW, WA & NZ; similar to ‘plugged & suspended’/’P&S’ (VIC)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :not-operational ;
@@ -347,64 +378,154 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :shut-in
     a skos:Concept ;
+  dcterms:references "ISO 16530‐1, 2017: Petroleum and natural gas industries – Well integrity – Part 1: Life cycle governance. ISO 16530‐1. International Organization for Standards, ISO 16530‐1:2017. <https://www.iso.org/standard/63192.html>"@en ;
+  dcterms:references """Huddlestone-Holmes, C. et al., 2017: Report into the shale gas well life cycle and well integrity. EP179028, CSIRO, Australia. <https://publications.csiro.au/rpr/download?pid=csiro:EP179028&dsid=DS2 >"""@en ;
+   dcterms:references "OEUK Well Lifecycle Integrity Guidelines Issue 4: Well Life Cycle Integrity Guidelines – Issue 4. Guidelines, Offshore Operations and Technology. Offshore Energies UK/OEUK (website accessed 17.05.2023). <https://oeuk.org.uk/product/well-life-cycle-integrity-guidelines-issue-4/>"@en ;
+  dcterms:references "Oil & Gas Drilling Glossary — IADC Lexicon (accessed July 2023). <https://iadclexicon.org/shut-in-well/>"@en ;
     skos:prefLabel "Shut In"@en ;
-    skos:definition "A borehole/well with one or more valves temporarily closed in the direction of flow."@en ;
-    dcterms:provenance "Modified from NOPSEMA." ;
-    skos:scopeNote "Used by NZ, VIC & WA (GSWA Borehole Status vocabulary, April 2023)." ;
+    skos:definition "A borehole/well with one or more valves temporarily/briefly closed in the direction of flow, closing or partially closing a producing well/borehole, e.g., for a few days for reservoir management."@en ; 
+    skos:historyNote "Modified from NOPSEMA after OEUK Well Lifecycle Integrity Guidelines Issue 4, and Oil & Gas Drilling Glossary, citing ISO 16530-1:2017, Petroleum and natural gas industries—Well integrity–Part 1: Life cycle governance, First Edition, March 2017; also NZ referring to PPDM, 2016: reference not provided here." ;
+    skos:scopeNote "Used by NZ, VIC & WA (GSWA Borehole Status Vocabulary, April 2023) & NOPSEMA. The term ‘shut-in’ is here placed under ‘operational’ rather than ‘suspended’, as the borehole/well may remain partially operational during the shut-in procedure (as opposed to being non-operational), and the ‘shut-in’ period is brief." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :not-operational ;
+    skos:broader :operational ;
+    skos:scopeNote "Used by GA, WA, NZ (all for ‘Suspended’); similar to ‘plugged & suspended’/’P&S’ (VIC)." ;
 .
 
 :cased-and-suspended
     a skos:Concept ;
     skos:prefLabel "Cased and Suspended"@en ;
     skos:definition "A well in which casing has been installed, but is suspended and inactive pending installation of completion, monitoring or other equipment."@en ;
-    dcterms:provenance "From QLD." ;
+    skos:historyNote "From QLD." ;
     skos:altLabel "C&S"^^:VIC , "C&S"^^:WA ;
-    skos:scopeNote "Used by QLD & VIC (although the latter jurisdiction provides no definition), and encompassed by GSWA’s Borehole Status vocabulary (April 2023)." ;
+    skos:scopeNote "Used by QLD & VIC, and encompassed by GSWA’s Borehole Status Vocabulary (April 2023)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :not-operational ;
+.
+
+:post-operational
+    a skos:Concept ;
+  dcterms:references "ISO 16530‐1, 2017: Petroleum and natural gas industries – Well integrity – Part 1: Life cycle governance. ISO 16530‐1. International Organization for Standards, ISO 16530‐1:2017. <https://www.iso.org/standard/63192.html>"@en ;
+  dcterms:references """Huddlestone-Holmes, C. et al., 2017: Report into the shale gas well life cycle
+and well integrity. EP179028, CSIRO, Australia. <https://publications.csiro.au/rpr/download?pid=csiro:EP179028&dsid=DS2 >"""@en ;
+  dcterms:references "PPDM, 2020: Well Status & Classification v3. Professional Petroleum Data Management Association. <https://ppdm.org/ppdm>"@en ;
+    skos:prefLabel "Post-Operational"@en ;
+    skos:definition "The borehole/well is in the post-operational phase/stage of its lifecycle where it is incapable of performing any role."@en ; 
+    skos:historyNote "The ‘Post-Operational’ concept has been drawn from GSWA’s Borehole Status Vocabulary (April, 2023), and part of the definition provided here derives from PPDM (2020) for its ‘closed’ facet value and definition." ;
+    skos:scopeNote "Introducing this high-level concept (‘Post-Operational Phase’ vs ‘Abandonment Phase’) has been prompted by the varying connotations applied to the term ‘abandoned’ by the petroleum and mineral industries, per the opinion/suggestion of GSWA. Nonetheless, the terms ‘abandoned’ and ‘abandonment’ are entrenched in the various jurisdictional legislation, regulations, guidelines, etc. for all types of boreholes/wells, and, therefore, cannot be readily dismissed." ;
+  skos:altLabel "Abandonment" , "Abandonment Phase"^^:CSIRO-2017 , "Abandonment Phase"^^:ISO16530-1 ;
+   rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+.
+
+:decommissioned
+    a skos:Concept ;
+  dcterms:references "GISERA, 2018: Decommissioning coal seam gas wells. Gas Industry and Environmental Research Alliance (GISERA). CSIRO Factsheet. <https://gisera.csiro.au/wp-content/uploads/2018/08/18-00394_GISERA_FACTSHEET_SE_DecommissioningCSGWells4pp_WEB.pdf>"@en ;
+  dcterms:references "Huddlestone-Holmes, C.R. et al., 2018: Decommissioning coal seam gas wells - Final Report of GISERA Project S.9: Decommissioning CSG wells. CSIRO, Brisbane. (GISERA: Gas Industry and Environmental Research Alliance). <https://gisera.csiro.au/wp-content/uploads/2018/08/Social-9-Final-Report.pdf>"@en ;
+  dcterms:references "PAGIQ, 2019: Code of Practice: For the construction and abandonment of petroleum wells and associated bores in Queensland. Version 2, Petroleum and Gas Inspectorate Queensland/PAGIQ. Department of Natural Resources, Mines and Energy, Queensland (Now: Department of Resources). <https://www.resources.qld.gov.au/__data/assets/pdf_file/0006/1461093/code-of-practice-petroleum-wells-bores.pdf>"@en ;
+  dcterms:references "Hall, P., 2020 (Chair): Minimum Construction Requirements for Water Bores in Australia. Fourth Edition, National Uniform Drillers Licensing Committee. <https://adia.com.au/wp-content/uploads/2020/09/Minimum-Construction-Requirements-Edition-4.pdf>"@en ;
+  dcterms:references "IESC, 2014: Bore integrity, Background Review. Department of Environment, Commonwealth of Australia, 2014 (Review commissioned on the advice of the Interim ‘Independent Expert Scientific Committee on Coal Seam Gas and Large Coal Mining Development’/IESC). <https://www.dcceew.gov.au/sites/default/files/documents/background-review-bore-integrity.pdf>"@en ;
+  dcterms:references "NGIS, 2021: National Groundwater Information System Data Dictionary. Bureau of Meteorology/BOM (Australian Government). <http://www.bom.gov.au/water/groundwater/ngis/documents/NgisDataDictionary.pdf>"@en ;
+  dcterms:references "NOPSEMA, 2021: Planning for proactive decommissioning. Information Paper, Document No: N-00500-IP2002 A816565, National Offshore Petroleum Safety and Environmental Management Authority (NOPSEMA). <https://www.nopsema.gov.au/sites/default/files/documents/2021-12/A816565.pdf>"@en ;
+  dcterms:references "NOPTA, 2022: Guideline: Offshore petroleum decommissioning. <https://www.nopta.gov.au/_documents/guidelines/Offshore-Petroleum-Decommissioning-guideline.pdf>"@en ;
+    skos:prefLabel "Decommissioned"@en ;
+    skos:definition "The status applied to a borehole/well (per the relevant jurisdictional requirements pertaining to applicable legislation, regulations, guidelines, etc.) following completion and jurisdictional verification/acceptance of final decommissioning activities) when the borehole/well: (1) has been permanently shut down and permanently plugged/sealed (as its purpose and use have been permanently discontinued); and (2) has undergone full rehabilitation/remediation of its site (above and below ground, or on the seabed and in its ‘subsoil’) and any associated surface or seabed disturbance, in a safe, environmentally-responsible, and timely manner; this includes the process of finally decommissioning/removing any waste products and all surface infrastructure and other property (unless otherwise approved: e.g., a wellhead approved to remain in situ or where an approved alternative decommissioning approach delivers equal or better outcomes compared to complete removal) [IESC, 2014; PAGIQ, 2019; NOPSEMA, 2021; NOPTA, 2022]."@en ; 
+    skos:historyNote "Modified after: BOM (NGIS, 2021) where the ‘Groundwater feature has been permanently discontinued e.g. plugged’; WA (GSWA Borehole Status Vocabulary, April 2023); and the cited references (including the in-progress decommissioning review of NOPSEMA)." ;
+    skos:scopeNote "‘There is no one-size fits all approach to decommissioning’ (NOPSEMA, 2021). This applies not only within a specific jurisdiction, as per the NOPSEMA quote for offshore petroleum wells, but both also between jurisdictions for the same borehole type and within a single jurisdiction for different borehole types (petroleum wells, water bores, etc.). Also note: (1) In Queensland (PAGIQ, 2019), ‘decommissioning’ is equated to ‘plug and abandonment’; (2) The ultimate authority to decide if the decommissioning and remediation/rehabilitation of a borehole/well have been properly completed (and to assign ‘decommissioned’ status to it) lies with the jurisdictional regulator, following submission and verification of required environmental and decommissioning reports or notices. Such verification is designed to ensure that decommissioned boreholes/wells do not give rise to legacy problems that require subsequent further action (Huddlestone-Holmes et al., 2018; GISERA, 2018, both with reference to CSG wells). Qualifying these CSG reports was the cited need for more research on well-decommissioning methods and their effectiveness, although some jurisdictions may require necessary borehole/well monitoring following decommissioning (e.g., NOPTA, 2022, for offshore petroleum wells) or following plugging and abandonment (prior to being decommissioned). For water bores, decommissioning should be undertaken for those bores that are unwanted, have failed or deteriorated, or have been abandoned, as they threaten contamination of the groundwater resource and pose a potential hazard to public health and safety; they should be decommissioned to restore, as far as possible, the aquifer isolation that existed in the hydrogeological environment before the bore was drilled and constructed (Hall, 2020)." ;
+   rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:broader :post-operational ;
+.
+
+:abandoned
+    a skos:Concept ;
+  dcterms:references "PPDM, 2014: Well Status and Classification. Professional Petroleum Data Management Association."@en ;
+  dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
+  dcterms:references "Cf. Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
+  dcterms:references "NGIS, 2021: National Groundwater Information System Data Dictionary. Bureau of Meteorology/BOM (Australian Government). <http://www.bom.gov.au/water/groundwater/ngis/documents/NgisDataDictionary.pdf>"@en ;
+  dcterms:references "DECCA, 2022: Guidelines for abandonment of mineral drillholes. Webpage updated 08.06.2022 & accessed 31.08.2023. <https://earthresources.vic.gov.au/legislation-and-regulations/guidelines-and-codes-of-practice/guidelines-abandonment-of-mineral-drillholes>"@en ;
+      skos:prefLabel "Abandoned"@en ;
+    skos:definition "All operations and activities are terminated. The operator has left the site with no intention of returning to the borehole/well. The borehole/well is not necessarily plugged, and its site may not have been properly rehabilitated/remediated (e.g., may include boreholes drilled prior to mandatory rehabilitation legislation coming into effect)."@en ; 
+    skos:historyNote "From GA (vocabulary notes for ‘abandoned’ in terms of: ‘borehole not necessarily plugged’) & Geoscience Australia [2021, as modified from PPDM Wellbore Status Vocabulary (PPDM, 2014)]. The potential for non-rehabilitation of the site has been added here." ;
+    skos:scopeNote "Used by GA, NT (for both mineral & petroleum boreholes), SA, BOM (NGIS, 2021: For where a ‘Groundwater feature has been abandoned but the functionality is unknown’). Note: The definition above contrasts with that of VIC (DECCA, 2022), specifically for guidelines for the abandonment of mineral drillholes, which deem a drillhole to be ‘abandoned’ after it has been drilled to total depth and any initial sampling and testing is completed." ; 
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:broader :post-operational ;
+.
+
+:permanently-abandoned
+    a skos:Concept ;
+  dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
+  dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
+  dcterms:references "PPDM, 2014: Well Status and Classification. Professional Petroleum Data Management Association. [Superseded by PPDM, 2020: Well Status & Classification v3 (Note: Membership required to access resources)]. <https://ppdm.org/ppdm/PPDM/Member/PPDM_Publications.aspx>"@en ;
+  dcterms:references "DECCA, 2022: Guidelines for abandonment of mineral drillholes. Webpage updated 08.06.2022 & accessed 31.08.2023. <https://earthresources.vic.gov.au/legislation-and-regulations/guidelines-and-codes-of-practice/guidelines-abandonment-of-mineral-drillholes>"@en ;
+  dcterms:references "OEUK Well Decommissioning Guidelines, Issue 7 (available for purchased download). <https://oeuk.org.uk/product/oeuk-well-decommissioning-guidelines-issue/>"@en ;
+  dcterms:references "NOPSEMA, 2020: Reinforcing Responsibilities Offshore — Decommissioning Obligations and Compliance Receive Greater Scrutiny. The Regulator, 2020(4). NOPSEMA, Perth. <https://www.nopsema.gov.au/sites/default/files/documents/2021-04/A759732.pdf> "@en ;
+    skos:prefLabel "Permanently Abandoned and Rehabilitated"@en ;
+    skos:definition "An abandoned borehole/well that has been permanently plugged/sealed and thus permanently closed. The extent of seal may vary from just plugged near the surface (e.g., many coal boreholes) to plugged to prevent the migration of oil, gas, water or other substance from one stratum to another (PPDM definition, cited by Geoscience Australia, 2021). The surface infrastructure has been removed unless it has been approved to be left in situ (e.g., a well head) and the borehole/well site has been fully remediated/rehabilitated. This status is assigned by the regulatory authority when the permanent sealing and rehabilitation/remediation criteria have been met. A ‘permanently abandoned and rehabilitated’ borehole/well may be designated subsequently by the regulator as being ‘decommissioned’, thus changing its status to this term."@en ;
+    skos:historyNote "Modified from: Geoscience Australia (2021) for definition of ‘plugged and abandoned’, and from NOPSEMA for ‘permanently abandoned’ to include: (1) ‘rehabilitated’, which, as indicated by GA (2021), is encompassed by the PPDM definition of ‘plugged and abandoned’, here regarded as an altLabel of the status at hand (Permanently Abandoned and Rehabilitated); and (2) acceptance of the status at hand by the regulatory authority (e.g., NOPSEMA)." ;
+    skos:scopeNote "Used (as ‘Plugged and Abandoned’) by NZ, GA, VIC, WA (the latter for Energy boreholes), QLD & NT (the latter for Energy Division DB/Petroleum Boreholes); cf. NSW: ‘decommissioning’ (i.e., the act of decommissioning vs decommissioned). NOPSEMA uses ‘permanently abandoned / abandoned’, deferring to OEUK Well Decommissioning Guidelines (referenced above). Similar to CoalLog status 'completed’: ‘Borehole has been completed, with all necessary cementing and rehabilitation carried out’ (Larkin & Green, 2021); and embraces CoalLog’s ‘rehabilitated’ term embracing full rehabilitation of the borehole site (not just the borehole). Differs from QLD’s ‘completed’ = ‘drilling completed’ in this vocabulary. The ‘permanently abandoned’ nomenclature of NOPSEMA is followed here, but qualified by the addition of ‘Rehabilitated’, although the process of rehabilitation/remediation is encompassed by NOPSEMA’s usage of the term. This (‘Rehabilitated’) qualification is thus redundant, but it is employed to conciliate any misconception that a ‘permanently abandoned’ borehole/well has not been properly dealt with from contamination (borehole/well integrity), health & safety, and environmental perspectives. It is therefore used to unite, as far as possible, terminology across jurisdictions and terminology applied to different types of boreholes (energy, mineral, etc.), even variously for the same type of borehole between jurisdictions. For example, compare GSWA’s terminology: ‘rehabilitated’, applied only to mineral boreholes [‘In the mineral industry, the borehole site has been fully rehabilitated and the operator has left the site. Note that this status is similar to the PPDM definitions of 'abandoned' as used by the energy industry’] to GSWA’s usage of ‘plugged and abandoned’ [‘An abandoned borehole that has also been plugged. The extent of seal may vary from just plugged near the surface (e.g. many coal boreholes) to plugged to prevent the migration of oil, gas, water or other substance from one stratum to another (i.e. PPDM definition). Note that 'plugged and abandoned ' is similar to 'plugged' as used by the mineral resources industry’ (GSWA definition after Geoscience Australia, 2021)]. Also compare VIC’s (DECCA, 2022) usage of the term ‘abandoned’, with application to not only mineral drillholes, but also unconventional oil and gas drillholes [‘A drillhole is deemed to be “abandoned” after it has been drilled to total depth and any initial sampling and testing completed‘ (with attendant guidelines for sealing, eliminating physical hazards, and protecting the groundwater)]. In this vocabulary, the status of a ‘permanently abandoned’ borehole/well is essentially equivalent to that of a ‘decommissioned’ borehole/well, but the two terms have been separately retained here, as assignment of ‘decommissioned’ status may potentially follow a period of borehole/well monitoring after a borehole/well has been accepted by the regulator as being ‘permanently abandoned and rehabilitated/remediated’. For example, in Commonwealth offshore waters, up to 300 non-operational petroleum wells are awaiting permanent abandonment, and, in anticipation of increased decommissioning activity, as only a small number of decommissioning activities have taken place to date in Australia for offshore petroleum wells (NOPSEMA, 2020)." ;
+    skos:altLabel "Permanently Abandoned and Remediated" , "Plugged and Abandoned" , "P&A" , "Permanently Abandoned" , "Permanent Abandonment" , "Permanently Sealed" , "Plugged and Permanently Abandoned" , "Rehabilitated" , "Capped and Abandoned" ; 
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:broader :abandoned ;
+.
+
+:wellhead-retrieved
+    a skos:Concept ;
+    skos:prefLabel "Permanently Abandoned Wellhead Retrieved"@en ;
+    skos:definition "Borehole/well has been abandoned and the wellhead has been retrieved. It has been accepted by the jurisdictional authority (e.g., NOPSEMA) as being abandoned."@en ;
+    skos:historyNote "After NOPSEMA." ;
+    skos:altLabel "Abandoned – wellhead retrieved" ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:broader :permanently-abandoned ;
+.
+
+:wellhead-in-situ
+    a skos:Concept ;
+    skos:prefLabel "Permanently Abandoned Wellhead In Situ"@en ;
+    skos:definition "Borehole/well has been abandoned and the wellhead has not been retrieved and is left in situ, approved by the jurisdictional authority (e.g., NOPSEMA, under the attendant Environmental Plan/EP)."@en ;
+    skos:historyNote "After NOPSEMA." ;
+    skos:altLabel "Abandoned – wellhead in situ" ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:broader :permanently-abandoned ;
 .
 
 :casing-removed
     a skos:Concept ;
   dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
     skos:prefLabel "Casing Removed"@en ;
-    skos:definition "All casing has been removed from the borehole."@en ;
-    dcterms:provenance "CoalLog (Larkin & Green, 2021)." ;
-    skos:scopeNote "Used by CoalLog (2021)." ;
+    skos:definition "All casing has been removed from the borehole. Part of the post-operational phase of abandonment"@en ;
+    skos:historyNote "From CoalLog (Larkin & Green, 2021)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :not-operational ;
+    skos:broader :post-operational ;
 .
 
 :cemented
     a skos:Concept ;
   dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
     skos:prefLabel "Cemented"@en ;
-    skos:definition "Borehole has been cemented."@en ;
-    dcterms:provenance "CoalLog (Larkin & Green, 2021)." ;
-    skos:scopeNote "Used by CoalLog (2021)." ;
+    skos:definition "Borehole has been cemented. Part of the process of post-operational phase of abandonment."@en ;
+    skos:historyNote "From CoalLog (Larkin & Green, 2021)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :not-operational ;
+    skos:broader :post-operational ;
 .
 
-:abandoned
+:prematurely-terminated-mineral
     a skos:Concept ;
-  dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
-  dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
-  dcterms:references "PPDM, 2014: Well Status and Classification. Professional Petroleum Data Management Association."@en ;
-    skos:prefLabel "Abandoned"@en ;
-    skos:definition "All operations and activities are terminated. The operator has left the site with no intention of returning to the borehole. The borehole is not necessarily plugged."@en ;
-    dcterms:provenance """From GA (notes) & Geoscience Australia [2021, as modified from PPDM Wellbore Status Vocabulary (PPDM, 2014)]. NT MineralsGeochemistryDB uses ‘abandoned drillhole’. """ ;
-    skos:altLabel "Decommissioned"^^:BOM , "Concluded"^^:QLD , "Abandoned Drillhole"^^:NT ;
-    skos:scopeNote "Used by GA, VIC, TAS, NT (Energy Division DB) & QLD (with altLabel ‘concluded’). Includes WA’s ‘abandoned-energy’ and ‘abandoned-mineral’ terms (GSWA Borehole Status vocabulary, April 2023). Similar to CoalLog status 'completed’: ‘Borehole has been completed, with all necessary cementing and rehabilitation carried out.’ (Larkin & Green, 2020). Differs slightly from CoalLog’s (2021) ‘rehabilitated’ term embracing full rehabilitation of the borehole site (not just the borehole). Differs from QLD’s ‘completed’ = ‘drilling completed’ in this vocabulary." ;
+    skos:prefLabel "Prematurely Terminated Mineral"@en ;
+    skos:definition "All borehole operations and activities are prematurely terminated due to unforeseen circumstances, e.g., surface-ground failure or borehole collapse (with or without equipment being stuck in the borehole), bad weather, etc. The borehole should undergo necessary rehabilitation [After GSWA Borehole Status Vocabulary (April, 2023) for ‘abandoned – mineral’ borehole; and NT for ‘Terminated — Bad Weather]."@en ;
+    skos:historyNote "Modified from GSWA’s Borehole Status Vocabulary (April, 2023)." ;
+    skos:altLabel "Abandoned-Mineral"^^:WA ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    skos:broader :post-operational ;
 .
 
 :equipment-in-borehole
@@ -412,7 +533,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
     skos:prefLabel "Equipment in Borehole"@en ;
     skos:definition "Equipment has been left in the borehole — the nature of the equipment and the depth should be recorded."@en ;
-    dcterms:provenance "From CoalLog (Larkin & Green, 2021)." ;
+    skos:historyNote "From CoalLog (Larkin & Green, 2021)." ;
+    skos:scopeNote "Provisionally placed under ‘Abandoned’ as a narrower concept." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :abandoned ;
@@ -423,18 +545,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
     skos:prefLabel "Hazard in Borehole"@en ;
     skos:definition "An object has been left in the borehole which may need to be avoided, mitigated or removed prior to mining."@en ;
-    dcterms:provenance "From CoalLog (Larkin & Green, 2021)." ;
-    rdfs:isDefinedBy cs: ;
-    skos:inScheme cs: ;
-    skos:broader :not-operational ;
-.
-
-:abandoned-waterbore
-    a skos:Concept ;
-    skos:prefLabel "Abandoned Waterbore"@en ;
-    skos:definition "Nil provided by NT, but label is self-explanatory."@en ;
-    dcterms:provenance "From NT." ;
-    skos:scopeNote "Used NT (Energy Division DB)." ;
+    skos:historyNote "From CoalLog (Larkin & Green, 2021)." ;
+    skos:scopeNote "Provisionally placed under ‘abandoned’ as a narrower concept." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :abandoned ;
@@ -444,147 +556,138 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     skos:prefLabel "Abandoned-Bogged"@en ;
     skos:definition "Nil provided by NT"@en ;
-    dcterms:provenance "From NT." ;
-    skos:scopeNote "Used by NT (Minerals & Geochemistry DB)." ;
+    skos:historyNote "From NT." ;
+    skos:scopeNote "Used by NT (for Mineral Borehole: Minerals & Geochemistry DB)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :abandoned ;
+    skos:broader :prematurely-terminated-mineral ;
 .
 
 :abandoned-caving-broken-ground
     a skos:Concept ;
     skos:prefLabel "Abandoned-Caving/Broken Ground"@en ;
     skos:definition "Nil provided by NT."@en ;
-    dcterms:provenance "From NT." ;
-    skos:scopeNote "Used NT (Minerals & Geochemistry DB)." ;
+    skos:historyNote "From NT." ;
+    skos:scopeNote "Used NT (for Mineral Borehole: Minerals & Geochemistry DB)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :abandoned ;
+    skos:broader :prematurely-terminated-mineral ;
 .
 
 :abandoned-mechanical-reason
     a skos:Concept ;
     skos:prefLabel "Abandoned—Mechanical Reason"@en ;
-    skos:definition "Nil provided by NT, albeit the label is self-explanatory."@en ;
-    dcterms:provenance "From NT." ;
-    skos:scopeNote "Used NT (Minerals & Geochemistry DB)." ;
+    skos:definition "The label is self-explanatory."@en ;
+    skos:historyNote "From NT." ;
+    skos:scopeNote "Used NT (for Mineral Borehole: Minerals & Geochemistry DB)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :abandoned ;
+    skos:broader :prematurely-terminated-mineral ;
 .
 
 :abandoned-no-recovery
     a skos:Concept ;
     skos:prefLabel "Abandoned—No Recovery"@en ;
     skos:definition "Nil provided by NT."@en ;
-    dcterms:provenance "From NT." ;
-    skos:scopeNote "Used by NT (Minerals & Geochemistry DB)." ;
+    skos:historyNote "From NT." ;
+    skos:scopeNote "Used by NT (for Mineral Borehole: Minerals & Geochemistry DB)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :abandoned ;
+    skos:broader :prematurely-terminated-mineral ;
 .
 
 :abandoned-too-deep
     a skos:Concept ;
     skos:prefLabel "Abandoned—Too Deep"@en ;
     skos:definition "Nil provided by NT."@en ;
-    dcterms:provenance "From NT." ;
-    skos:scopeNote "Used by NT (Minerals & Geochemistry DB)." ;
+    skos:historyNote "From NT." ;
+    skos:scopeNote "Used by NT (for Mineral Borehole: Minerals & Geochemistry DB)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :abandoned ;
+    skos:broader :prematurely-terminated-mineral ;
 .
 
 :abandoned-too-hard
     a skos:Concept ;
     skos:prefLabel "Abandoned—Too Hard"@en ;
     skos:definition "Nil provided by NT."@en ;
-    dcterms:provenance "From NT." ;
-    skos:scopeNote "Used by NT (Minerals & Geochemistry DB)." ;
+    skos:historyNote "From NT." ;
+    skos:scopeNote "Used by NT (for Mineral Borehole: Minerals & Geochemistry DB)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :abandoned ;
+    skos:broader :prematurely-terminated-mineral ;
 .
 
 :abandoned-water-table
     a skos:Concept ;
     skos:prefLabel "Abandoned—Water Table"@en ;
     skos:definition "Nil provided by NT."@en ;
-    dcterms:provenance "From NT." ;
-    skos:scopeNote "Used by NT (Minerals & Geochemistry DB)." ;
+    skos:historyNote "From NT." ;
+    skos:scopeNote "Used by NT (for Mineral Borehole: Minerals & Geochemistry DB)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :abandoned ;
+    skos:broader :prematurely-terminated-mineral ;
 .
 
 :plugged
     a skos:Concept ;
   dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
   dcterms:references "PPDM, 2014: Well Status and Classification. Professional Petroleum Data Management Association."@en ;
+  dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
     skos:prefLabel "Plugged"@en ;
     skos:definition "The borehole has been permanently filled or sealed. The extent of seal may vary from just plugged near the surface (e.g., many coal boreholes) to plugged in order to prevent the migration of oil, gas, water or other substance from one stratum to another."@en ;
-    dcterms:provenance "After Geoscience Australia (2021), as modified from PPDM Wellbore Status Vocabulary (2014); and GSWA Borehole Status vocabulary (April 2023)." ;
-    skos:scopeNote "Used by GA, WA & NZ." ;
-    skos:altLabel "Plugged Drill Collar" , "Plugged Below Ground" ;
+    skos:historyNote "After Geoscience Australia (2021), as modified from PPDM Wellbore Status Vocabulary (2014); GSWA Borehole Status Vocabulary (April 2023); and CoalLog (Larkin & Green, 2021)." ;
+    skos:altLabel "Permanently Plugged" ,"Plugged Drill Collar" , "Plugged Below Ground" ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :abandoned ;
+    skos:broader :post-operational ;
 .
 
 :backfilled
     a skos:Concept ;
   dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
+  dcterms:references "Cf. NGIS, 2021: National Groundwater Information System Data Dictionary. Bureau of Meteorology/BOM (Australian Government). <http://www.bom.gov.au/water/groundwater/ngis/documents/NgisDataDictionary.pdf>"@en ;
     skos:prefLabel "Backfilled"@en ;
     skos:definition "Borehole has been backfilled from the surface (Larkin & Green, 2014)."@en ;
-    dcterms:provenance "From BOM & CoalLog (Larkin & Green, 2021)." ;
+    skos:historyNote "From CoalLog (Larkin & Green, 2021) & BOM (NGIS, 2021), the latter in terms of application to a ‘groundwater feature’ which includes a waterbore (e.g., NGIS, 2021; clarified elsewhere in this ontology)." ;
+    skos:scopeNote "Cf: ‘Plugged and Backfilled’." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :abandoned ;
+    skos:broader :post-operational ;
 .
 
 :plugged-and-backfilled
     a skos:Concept ;
-  dcterms:references "DMIRS, 2022: Exploration and Prospecting Rehabilitation Guidance. Western Australia Department of Mines, Industry Regulation and Safety. Draft, Version 0.1. <Exploration and Prospecting Rehabilitation Guidance (dmirs.wa.gov.au)>"@en ;
+  dcterms:references "DMIRS, 2022: Exploration and Prospecting Rehabilitation Guidance. Western Australia Department of Mines, Industry Regulation and Safety. Draft, Version 0.1. <https://www.dmirs.wa.gov.au/sites/default/files/atoms/files/exploration_and_prospecting_rehabilitation_guidance.pdf>"@en ;
     skos:prefLabel "Plugged and Backfilled"@en ;
     skos:definition "A borehole that has been securely plugged below ground, with the remaining void backfilled to the surface with low permeability material, and with a mound of low permeability material (approximately 250 mm high by 800 mm wide and up to 2 m for large diameter drillholes) covered with topsoil, to facilitate water shedding away from the drillhole and prevent subsidence."@en ;
-    dcterms:provenance "From WA (DMIRS, 2022; GSWA Borehole Status vocabulary, April 2023)." ;
+    skos:historyNote "From GSWA’s Borehole Status Vocabulary (April 2023), a mineral industry concept." ;
+    skos:scopeNote "Cf: ‘Backfilled’." ;
+    skos:altLabel "Mounded Drillhole" ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :plugged ;
+    skos:broader :post-operational ;
 .
 
 :technically-abandoned
     a skos:Concept ;
+    skos:altLabel "Permanently Suspended" ;
     skos:prefLabel "Technically Abandoned"@en ;
-    skos:definition "A borehole/well in which all penetrated zones with flow potential have been permanently isolated from surface and from lower pressured zones. Wellhead/conductor has been removed unless approved to leave in situ. Well has not yet been accepted by the regulatory authority (e.g., NOPSEMA, state regulators for CSG wells, etc.) as abandoned."@en ;
-    dcterms:provenance "After NOPSEMA" ;
-    skos:altLabel "Decommissioning^^:NSW" ;
+    skos:definition "A borehole/well in which all penetrated zones with flow potential have been permanently isolated from surface and from lower pressured zones. Wellhead/conductor has been removed unless approved to leave in situ. Well has not yet been accepted by the regulatory authority (e.g., NOPSEMA, state regulators for CSG wells, etc.) as abandoned. The borehole/well at this stage in its life cycle is effectively ‘permanently suspended’."@en ;
+    skos:historyNote "After NOPSEMA" ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :abandoned ;
-.
-
-:plugged-and-abandoned
-    a skos:Concept ;
-  dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
-  dcterms:references "PPDM, 2014: Well Status and Classification. Professional Petroleum Data Management Association."@en ;
-  dcterms:references " OEUK Well Decommissioning Guidelines, Issue 7 (available for purchased download). <https://oeuk.org.uk/product/oeuk-well-decommissioning-guidelines-issue/> "@en ;
-    skos:prefLabel "Plugged and Abandoned"@en ;
-    skos:definition "An abandoned borehole that has also been plugged. The extent of seal may vary from just plugged near the surface (e.g., many coal boreholes) to plugged to prevent the migration of oil, gas, water or other substance from one stratum to another (i.e., PPDM definition). The borehole/well has been accepted by the regulatory authority as being abandoned."@en ;
-    dcterms:provenance "Modified from: Geoscience Australia (2021) & PPDM Wellbore Status vocabulary (2014), to include acceptance of abandonment by the regulatory authority." ;
-    skos:scopeNote "Used by NZ, GA, VIC, WA, QLD & NT (Energy Division DB); cf. NSW: ‘decommissioning’ (i.e., the act of decommissioning vs decommissioned). NOPSEMA uses ‘permanently abandoned / abandoned’, deferring to OEUK Well Decommissioning Guidelines (referenced above)." ; 
-    skos:altLabel "P&A" , "Permanently Abandoned" , "Permanent Abandonment" , "Permanently Sealed" , "Plugged and Permanently Abandoned" , "Capped and Abandoned" , "Permanently Plugged" ;
-    rdfs:isDefinedBy cs: ;
-    skos:inScheme cs: ;
-    skos:broader :abandoned ; 
+    skos:broader :suspended ; 
 .
 
 :capped
     a skos:Concept ;
+  dcterms:references "NGIS, 2021: National Groundwater Information System Data Dictionary. Bureau of Meteorology/BOM (Australian Government). <http://www.bom.gov.au/water/groundwater/ngis/documents/NgisDataDictionary.pdf>"@en ;
+  dcterms:references "Mallants, D. et al., 2017: Deeper groundwater hazard screening research: National assessment of chemicals associated with coal seam gas extraction in Australia. CSIRO, Canberra. <https://publications.csiro.au/rpr/pub?pid=csiro:EP167880>"@en ;
     skos:prefLabel "Capped"@en ;
     skos:definition "A borehole where a cap (usually a PVC cap secured with a screw) or a plug have been put temporarily in place during interim rehabilitation or to allow for the possibility of re-entering the hole (e.g., during a pause in operations and/or maintenance), e.g., to prevent fauna from falling into the hole. A permanent rehabilitation should follow at the completion of the operations."@en ;
-    dcterms:provenance "From WA (GSWA Borehole Status vocabulary, April 2023)." ;
-    skos:scopeNote "Used by BOM: ‘Groundwater feature has been capped’; and encompassed by GSWA’s Borehole Status vocabulary (April 2023, definition above); also used by TAS." ; 
+    skos:historyNote "From NGIS (2012); WA (GSWA Borehole Status Vocabulary, April 2023)." ;
+    skos:scopeNote "Encompassed by GSWA’s Borehole Status Vocabulary (April 2023, definition above); also used by TAS & BOM’s NGIS Data Dictionary (NGIS, 2021), the latter for where a ‘Groundwater feature has been capped’. But a ‘groundwater feature’ is only one of several features encompassed by this term, together with aquifers, groundwater management zones (alluvium or stratum), and ‘non-water-dependent assets’ (geological features/formations) [e.g., Mallants et al., 2017]." ;
     skos:altLabel "Temporarily Plugged"^^:WA , "Plugged Above Ground"^^:WA ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
@@ -595,32 +698,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     skos:prefLabel "Permanently Sealed CSG Well"@en ;
     skos:definition "Coal seam gas well that has been permanently sealed."@en ;
-    dcterms:provenance "Sourced from NSW." ;
+    skos:historyNote "Sourced from NSW." ;
     skos:scopeNote "Used by NSW." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :abandoned ;
 .
 
-:rehabilitated
-    a skos:Concept ;
-  dcterms:references "Larkin, B.J & Green, D.R., 2021: CoalLog Manual (Version 3.1 — Borehole Data Standard for the Australian Coal Industry). Australian Institute of Mining and Metallurgy. <https://www.ausimm.com/insights-and-resources/resources/codes-and-standards/coallog/>"@en ;
-  dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
-    skos:prefLabel "Borehole Site Rehabilitated"@en ;
-    skos:definition "The borehole site has been fully rehabilitated."@en ;
-    dcterms:provenance "From: Geoscience Australia (2021) & CoalLog (Larkin & Green, 2021)." ;
-    skos:scopeNote "Used by GA & CoalLog." ; 
-    rdfs:isDefinedBy cs: ;
-    skos:inScheme cs: ;
-    skos:broader :abandoned ; 
-.
-
 :unrehabilitated
     a skos:Concept ;
-  dcterms:references "DMIRS, 2022: Exploration and Prospecting Rehabilitation Guidance. Western Australia Department of Mines, Industry Regulation and Safety. Draft, Version 0.1. <Exploration and Prospecting Rehabilitation Guidance (dmirs.wa.gov.au)>"@en ;
+  dcterms:references "DMIRS, 2022: Exploration and Prospecting Rehabilitation Guidance. Western Australia Department of Mines, Industry Regulation and Safety. Draft, Version 0.1. <https://www.dmirs.wa.gov.au/sites/default/files/atoms/files/exploration_and_prospecting_rehabilitation_guidance.pdf>"@en ;
     skos:prefLabel "Unrehabilated"@en ;
     skos:definition "A borehole that has not been rehabilitated. Typically includes boreholes drilled prior to mandatory rehabilitation legislation coming into effect."@en ;
-    dcterms:provenance "From WA (referring to DMIRS, 2022)." ;
+    skos:historyNote "From WA (referring to DMIRS, 2022)." ;
     skos:altLabel "Open Drillhole"^^:WA , "Unplugged Drillhole"^^:WA ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
@@ -630,20 +720,22 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :workover
     a skos:Concept ;
   dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
+  dcterms:references "SLB Energy Glossary, 2023: Schlumberger Limited, SLB 57.26. <https://glossary.slb.com/en/terms/i/injection_well>"@en ;
     skos:prefLabel "Workover"@en ;
-    skos:definition "Activities relating to production wells, etc., for example: logging activities, recompletion, testing, repairs, maintenance, plug and abandonment and demobilisation."@en ;
-    dcterms:provenance "From: Geoscience Australia (2021) citing NOPTA (the latter organization otherwise following the borehole status vocabulary of NOPSEMA, in which this term is not used)." ;
-    skos:scopeNote "Used by NOPTA & encompassed by Geoscience Australia’s Borehole Status vocabulary, with application in WA’s new GSWA Borehole Status vocabulary (April 2023)." ; 
+    skos:definition "Activities relating to petroleum production wells, etc., for example: logging activities, recompletion, testing, repairs and maintenance. Includes the process of performing major maintenance or remedial treatments on an oil or gas well."@en ;
+    skos:historyNote "After Geoscience Australia (2021) and SLB Energy Glossary (2023)." ;
+    skos:scopeNote "Encompassed by Geoscience Australia’s Borehole Status Vocabulary, with application in WA’s new GSWA Borehole Status Vocabulary (April 2023)." ; 
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
-    skos:broader :not-operational ; 
+    skos:broader :suspended ; 
 .
 
 :cased-and-abandoned
     a skos:Concept ;
+  dcterms:references "IESC, 2014: Bore integrity, Background Review. Department of Environment, Commonwealth of Australia, 2014 (Review commissioned on the advice of the Interim ‘Independent Expert Scientific Committee on Coal Seam Gas and Large Coal Mining Development’/IESC). <https://www.dcceew.gov.au/sites/default/files/documents/background-review-bore-integrity.pdf>"@en ;
     skos:prefLabel "Cased and Abandoned"@en ;
-    skos:definition "Definition not provided by VIC, but label self-explanatory."@en ;
-    dcterms:provenance "From VIC." ;
+    skos:definition "An abandoned borehole/well that has been cased. Boreholes with poor integrity, such as corroded casing, have the potential to provide a pathway for gases and/or liquids to migrate into or between aquifers or to the surface. [e.g., IESC, 2014]"@en ;
+    skos:historyNote "From VIC." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader :abandoned ;
@@ -652,11 +744,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :unknown
     a skos:Concept ;
   dcterms:references "Geoscience Australia, 2021: Borehole (Well) Status Vocabulary. <https://db-content.ga.gov.au/data_dictionary/Borehole_Status_vocabulary_2021.pdf>"@en ;
+  dcterms:references "NGIS, 2021: National Groundwater Information System Data Dictionary. Bureau of Meteorology/BOM (Australian Government). <http://www.bom.gov.au/water/groundwater/ngis/documents/NgisDataDictionary.pdf>"@en ;
     skos:prefLabel "Unknown"@en ;
     skos:definition "The drilling status of the borehole is unknown."@en ;
-    dcterms:provenance "Sourced from Geoscience Australia (2021)." ;
-    skos:scopeNote "Used by WA, TAS, NZ & NT (Energy Division DB; cf. ‘not recorded’ in NT Minerals & Geochemistry DB); QLD uses similar (for ‘A … well that has been constructed but whose further status is unknown’); BOM (for where the ‘status of groundwater feature is unknown’)." ;
-    skos:altLabel "Not Recorded"^^:NT ;
+    skos:historyNote "Sourced from Geoscience Australia (2021)." ;
+    skos:scopeNote "Used by WA, TAS, NZ & NT (for mineral and water boreholes); QLD uses similar (for ‘A … well that has been constructed but whose further status is unknown’); BOM (NGIS, 2021:  for where the ‘status of groundwater feature is unknown’)." ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
@@ -677,9 +769,10 @@ cs:
     reg:status agldwgstatus:experimental ;
     skos:definition "The current state of a borehole within its lifecycle from proposed through operational through to abandoned. Borehole status also applies to wells or boreholes comprised of multiple wellbores."@en ;
     skos:hasTopConcept
+        :proposed ,
         :operational ,
         :not-operational ,
+        :post-operational ,
         :unknown ;
     skos:prefLabel "Borehole Status"@en ;
 .
-
