@@ -1,0 +1,69 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX scr: <https://linked.data.gov.au/def/scr-indicator>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+scr:not-state-controlled-road
+    a skos:Concept ;
+    skos:altLabel
+        "F"@en ,
+        "False"@en ;
+    skos:definition "Road is not designated as a State Controlled Road."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scr: ;
+    skos:prefLabel "Not State Controlled Road"@en ;
+.
+
+scr:state-controlled-road
+    a skos:Concept ;
+    skos:altLabel
+        "T"@en ,
+        "True"@en ;
+    skos:definition "Road is designated as a State Controlled Road."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scr: ;
+    skos:prefLabel "State Controlled Road"@en ;
+.
+
+scr:unknown
+    a skos:Concept ;
+    skos:altLabel "U"@en ;
+    skos:definition "Unknown - It is not known if the road is a State Controlled Road."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scr: ;
+    skos:prefLabel "Unknown"@en ;
+.
+
+scr:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-05-31"^^xsd:date ;
+    dcterms:creator [
+            a prov:Agent ;
+            rdfs:label "Department Of Resources"
+        ] ;
+    dcterms:identifier "scr-indicator"^^xsd:token ;
+    dcterms:modified "2023-05-31"^^xsd:date ;
+    dcterms:publisher [
+            a prov:Agent ;
+            rdfs:label "Icsm"
+        ] ;
+    skos:definition "This vocabulary describes whether a road is designated as a state controlled road (SCR)."@en ;
+    skos:hasTopConcept
+        scr:not-state-controlled-road ,
+        scr:state-controlled-road ,
+        scr:unknown ;
+    skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
+    skos:prefLabel "State Controlled Road Indicator"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Icsm"
+                ]
+        ] ;
+.
+

@@ -1,0 +1,143 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX t: <https://linked.data.gov.au/def/road-trafficability>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+t:2wd
+    a skos:Concept ;
+    skos:definition "Suitable for minimum two-wheel drive vehicles."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "2WD"@en ;
+.
+
+t:4wd
+    a skos:Concept ;
+    skos:definition "Suitable for only four-wheel drive (high clearance) vehicles."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "4WD"@en ;
+.
+
+t:bicycle
+    a skos:Concept ;
+    skos:definition "Designated primarily for bicycle use."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "Bicycle"@en ;
+.
+
+t:bus
+    a skos:Concept ;
+    skos:definition "Designated for bus use only."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "Bus"@en ;
+.
+
+t:closed
+    a skos:Concept ;
+    skos:definition "Inaccessible by all vehicles, pedestrians and animals."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "Closed"@en ;
+.
+
+t:ferry
+    a skos:Concept ;
+    skos:definition "Ferry route."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "Ferry"@en ;
+.
+
+t:horse
+    a skos:Concept ;
+    skos:definition "Designated primarily for access by horse and rider."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "Horse"@en ;
+.
+
+t:motorway
+    a skos:Concept ;
+    skos:definition "Suitable for all vehicles permitted on a motorway."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "Motorway"@en ;
+.
+
+t:pedestrian
+    a skos:Concept ;
+    skos:definition "Designated primarily for pedestrian use."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "Pedestrian"@en ;
+.
+
+t:regular-vehicle
+    a skos:Concept ;
+    skos:definition "Suitable for all conventional road-based vehicles. Does not imply suitability for heavy, oversize or high sided vehicles."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "Regular vehicle"@en ;
+.
+
+t:shared
+    a skos:Concept ;
+    skos:definition "Designated as a shared track, path or trail."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "Shared"@en ;
+.
+
+t:unknown
+    a skos:Concept ;
+    skos:definition "The road usage is not known."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme t: ;
+    skos:prefLabel "Unknown"@en ;
+.
+
+t:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-05-30"^^xsd:date ;
+    dcterms:creator [
+            a prov:Agent ;
+            rdfs:label "Department Of Resources"
+        ] ;
+    dcterms:identifier "road-trafficability"^^xsd:token ;
+    dcterms:modified "2023-05-30"^^xsd:date ;
+    dcterms:publisher [
+            a prov:Agent ;
+            rdfs:label "Icsm"
+        ] ;
+    skos:definition "This vocabulary describes the the primary vehicle type that can utilise the road. "@en ;
+    skos:hasTopConcept
+        t:2wd ,
+        t:4wd ,
+        t:bicycle ,
+        t:bus ,
+        t:closed ,
+        t:ferry ,
+        t:horse ,
+        t:motorway ,
+        t:pedestrian ,
+        t:regular-vehicle ,
+        t:shared ,
+        t:unknown ;
+    skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
+    skos:prefLabel "Road Trafficability"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Icsm"
+                ]
+        ] ;
+.
+

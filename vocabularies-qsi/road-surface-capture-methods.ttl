@@ -1,0 +1,165 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX scm: <https://linked.data.gov.au/def/surface-capture-method>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+scm:imagery-auto
+    a skos:Concept ;
+    skos:altLabel "Imagery auto"@en ;
+    skos:definition "Automatic extraction from imagery."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Imagery Automated"@en ;
+.
+
+scm:imagery-manual
+    a skos:Concept ;
+    skos:altLabel "Imagery manual"@en ;
+    skos:definition "Manually assessed from imagery."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Imagery Manual"@en ;
+.
+
+scm:inherited
+    a skos:Concept ;
+    skos:altLabel "BRAT"@en ;
+    skos:definition "Inherited with BRAT 20200930."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Inherited"@en ;
+.
+
+scm:lg
+    a skos:Concept ;
+    skos:altLabel "LG"@en ;
+    skos:definition "Supplied by Local Government."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Local Government"@en ;
+.
+
+scm:other
+    a skos:Concept ;
+    skos:altLabel "Other"@en ;
+    skos:definition "Other."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Other"@en ;
+.
+
+scm:port-authority
+    a skos:Concept ;
+    skos:altLabel "PA"@en ;
+    skos:definition "Supplied by Port Authority."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Port Authority"@en ;
+.
+
+scm:private-entity
+    a skos:Concept ;
+    skos:altLabel "PE"@en ;
+    skos:definition "Supplied by private entity e.g. developer, land owner."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Private Entity"@en ;
+.
+
+scm:qpws
+    a skos:Concept ;
+    skos:altLabel "QPWS"@en ;
+    skos:definition "Supplied by Queensland Parks and Wildlife Service."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Queensland Parks and Wildlife Service"@en ;
+.
+
+scm:state
+    a skos:Concept ;
+    skos:altLabel "STATE"@en ;
+    skos:definition "Supplied by other state authority."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "State Department"@en ;
+.
+
+scm:tmr
+    a skos:Concept ;
+    skos:altLabel "TMR"@en ;
+    skos:definition "Supplied by Department of Transport and Main Roads."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Department of Transport and Main Roads"@en ;
+.
+
+scm:unknown
+    a skos:Concept ;
+    skos:altLabel "Unknown"@en ;
+    skos:definition "Unknown."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Unknown"@en ;
+.
+
+scm:utility-provider
+    a skos:Concept ;
+    skos:altLabel "UP"@en ;
+    skos:definition "Supplied by utility provider."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Utility Provider"@en ;
+.
+
+scm:water-authority
+    a skos:Concept ;
+    skos:altLabel "WA"@en ;
+    skos:definition "Supplied by Water Authority."@en ;
+    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:inScheme scm: ;
+    skos:prefLabel "Water Authority"@en ;
+.
+
+scm:
+    a skos:ConceptScheme ;
+    dcterms:created "2023-05-30"^^xsd:date ;
+    dcterms:creator [
+            a prov:Agent ;
+            rdfs:label "Department Of Resources"
+        ] ;
+    dcterms:identifier "surface-capture-method"^^xsd:token ;
+    dcterms:modified "2023-05-30"^^xsd:date ;
+    dcterms:publisher [
+            a prov:Agent ;
+            rdfs:label "Icsm"
+        ] ;
+    skos:definition "This vocabulary describes the method in which road surface type was captured. "@en ;
+    skos:hasTopConcept
+        scm:imagery-auto ,
+        scm:imagery-manual ,
+        scm:inherited ,
+        scm:lg ,
+        scm:other ,
+        scm:port-authority ,
+        scm:private-entity ,
+        scm:qpws ,
+        scm:state ,
+        scm:tmr ,
+        scm:unknown ,
+        scm:utility-provider ,
+        scm:water-authority ;
+    skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
+    skos:prefLabel "Surface capture method"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Icsm"
+                ]
+        ] ;
+.
+
