@@ -1,72 +1,80 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX ra: <https://linked.data.gov.au/def/record-access>
+PREFIX : <https://linked.data.gov.au/def/record-access/>
+PREFIX cs: <https://linked.data.gov.au/def/record-access>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-ra:closed
+:closed
     a skos:Concept ;
     skos:definition "Internal use only"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ra: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Closed"@en ;
 .
 
-ra:emergency-services
+:emergency-services
     a skos:Concept ;
     skos:altLabel "ES"@en ;
     skos:definition "Emergency services use only"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ra: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Emergency Services"@en ;
 .
 
-ra:open
+:open
     a skos:Concept ;
     skos:definition "Suitable for open data"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ra: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Open"@en ;
 .
 
-ra:restricted
+:restricted
     a skos:Concept ;
     skos:definition "Restricted usage"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ra: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Restricted"@en ;
 .
 
-ra:
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/qsi>
+    a sdo:Organization ;
+    sdo:name "Queensland Spatial Information" ;
+    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
+.
+
+cs:
     a skos:ConceptScheme ;
     dcterms:created "2023-05-17"^^xsd:date ;
-    dcterms:creator [
-            a prov:Agent ;
-            rdfs:label "Department Of Resources"
-        ] ;
+    dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:identifier "record-access"^^xsd:token ;
-    dcterms:modified "2023-05-17"^^xsd:date ;
-    dcterms:publisher [
-            a prov:Agent ;
-            rdfs:label "Icsm"
-        ] ;
+    dcterms:modified "2023-11-30"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0" ;
     skos:definition "This vocabulary describes the access suitability of a record. "@en ;
     skos:hasTopConcept
-        ra:closed ,
-        ra:emergency-services ,
-        ra:open ,
-        ra:restricted ;
+        :closed ,
+        :emergency-services ,
+        :open ,
+        :restricted ;
     skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
     skos:prefLabel "Record Access"@en ;
     prov:qualifiedAttribution [
             dcat:hadRole isoroles:custodian ;
-            prov:agent [
-                    a prov:Agent ;
-                    rdfs:label "Icsm"
-                ]
+            prov:agent <https://linked.data.gov.au/org/icsm> ;
         ] ;
 .
 

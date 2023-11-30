@@ -4,6 +4,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -2298,23 +2299,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Landform"@en ;
 .
 
-<https://linked.data.gov.au/org/qsi>
-    a prov:Agent ;
-    rdfs:label "Queensland Spatial Information" ;
+<https://linked.data.gov.au/org/ga>
+    a sdo:Organization ;
+    sdo:name "Geoscience Australia" ;
+    sdo:url "https://www.ga.gov.au"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/icsm>
-    a prov:Agent ;
-    rdfs:label "Intergovernmental Committee on Surveying & Mapping" ;
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
 cs:
     a skos:ConceptScheme ;
     dcterms:created "2015-01-01"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/ga> ;
-    dcterms:modified "2023-06-12"^^xsd:date ;
+    dcterms:modified "2023-11-30"^^xsd:date ;
     skos:historyNote "This vocabulary was generated from the Place Names database" ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0" ;
     owl:versionInfo "1.0"^^xsd:string ;
     skos:definition "A 3-level hierarchy of Geographical (Place) Object categories"@en ;
     skos:hasTopConcept

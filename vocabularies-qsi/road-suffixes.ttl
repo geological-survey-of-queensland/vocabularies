@@ -8,6 +8,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -155,23 +156,25 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-<https://linked.data.gov.au/org/qsi>
-    a prov:Agent ;
-    rdfs:label "Qsi" ;
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/org/icsm>
-    a prov:Agent ;
-    rdfs:label "Icsm" ;
+<https://linked.data.gov.au/org/qsi>
+    a sdo:Organization ;
+    sdo:name "Queensland Spatial Information" ;
+    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
 .
 
 cs:
     a skos:ConceptScheme ;
     dcterms:created "2023-05-15"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/qsi> ;
-    dcterms:modified "2023-05-15"^^xsd:date ;
+    dcterms:modified "2023-11-30"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
-    owl:versionIRI <https://linked.data.gov.au/def/road-suffixes/1.0> ;
+    owl:versionIRI :1.0 ;
     owl:versionInfo "1.0" ;
     skos:definition "This vocabulary described values of suffixes used in road naming"@en ;
     skos:hasTopConcept

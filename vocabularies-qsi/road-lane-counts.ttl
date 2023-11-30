@@ -1,62 +1,70 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
-PREFIX lc: <https://linked.data.gov.au/def/road-lane-count>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <https://linked.data.gov.au/def/road-lane-count/>
+PREFIX cs: <https://linked.data.gov.au/def/road-lane-count>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-lc:one
+:one
     a skos:Concept ;
     skos:definition "Two vehicles cannot pass each other without both having to move off the formed surface."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme lc: ;
+    skos:inScheme cs: ;
     skos:prefLabel "One"@en ;
 .
 
-lc:two-or-more
+:two-or-more
     a skos:Concept ;
     skos:definition "Two vehicles can pass each other without having to move off the formed surface."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme lc: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Two or more"@en ;
 .
 
-lc:unknown
+:unknown
     a skos:Concept ;
     skos:definition "The lane count is not currently known."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme lc: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Unknown"@en ;
 .
 
-lc:
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/qsi>
+    a sdo:Organization ;
+    sdo:name "Queensland Spatial Information" ;
+    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
+.
+
+cs:
     a skos:ConceptScheme ;
     dcterms:created "2023-05-30"^^xsd:date ;
-    dcterms:creator [
-            a prov:Agent ;
-            rdfs:label "Department Of Resources"
-        ] ;
+    dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:identifier "road-lane-count"^^xsd:token ;
-    dcterms:modified "2023-05-30"^^xsd:date ;
-    dcterms:publisher [
-            a prov:Agent ;
-            rdfs:label "Icsm"
-        ] ;
+    dcterms:modified "2023-11-30"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0" ;
     skos:definition "This vocabulary describes the number of lanes that indicate whether vehicles are able to travel past each other on the formed surface of the road. "@en ;
     skos:hasTopConcept
-        lc:one ,
-        lc:two-or-more ,
-        lc:unknown ;
+        :one ,
+        :two-or-more ,
+        :unknown ;
     skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
     skos:prefLabel "Road Lane Count"@en ;
     prov:qualifiedAttribution [
             dcat:hadRole isoroles:custodian ;
-            prov:agent [
-                    a prov:Agent ;
-                    rdfs:label "Icsm"
-                ]
+            prov:agent <https://linked.data.gov.au/org/icsm> ;
         ] ;
 .
 

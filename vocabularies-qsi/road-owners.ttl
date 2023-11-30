@@ -1,129 +1,138 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX ro: <https://linked.data.gov.au/def/road-owner>
+PREFIX : <https://linked.data.gov.au/def/road-owner/>
+PREFIX cs: <https://linked.data.gov.au/def/road-owner>
+PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-ro:local-government
+:local-government
     a skos:Concept ;
     skos:altLabel "LG"@en ;
     skos:definition "Local Government."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ro: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Local Government"@en ;
 .
 
-ro:other
+:other
     a skos:Concept ;
     skos:definition "Road is owned by another group."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ro: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Other"@en ;
 .
 
-ro:port-authority
+:port-authority
     a skos:Concept ;
     skos:altLabel "PA"@en ;
     skos:definition "Port Authority."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ro: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Port Authority"@en ;
 .
 
-ro:private
+:private
     a skos:Concept ;
     skos:definition "The owner of the land parcel in which the road passes through."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ro: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Private"@en ;
 .
 
-ro:qpws
+:qpws
     a skos:Concept ;
     skos:definition "Queensland Parks and Wildlife Service."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ro: ;
+    skos:inScheme cs: ;
     skos:prefLabel "QPWS"@en ;
 .
 
-ro:state
+:state
     a skos:Concept ;
     skos:definition "Other state authority."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ro: ;
+    skos:inScheme cs: ;
     skos:prefLabel "STATE"@en ;
 .
 
-ro:tmr
+:tmr
     a skos:Concept ;
     skos:definition "Department of Transport and Main Roads."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ro: ;
+    skos:inScheme cs: ;
     skos:prefLabel "TMR"@en ;
 .
 
-ro:unknown
+:unknown
     a skos:Concept ;
     skos:definition "The road owner is unknown."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ro: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Unknown"@en ;
 .
 
-ro:utility-provider
+:utility-provider
     a skos:Concept ;
     skos:altLabel "UP"@en ;
     skos:definition "Utility provider."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ro: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Utility Provider"@en ;
 .
 
-ro:water-authority
+:water-authority
     a skos:Concept ;
     skos:altLabel "WA"@en ;
     skos:definition "Water Authority."@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme ro: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Water Authority"@en ;
 .
 
-ro:
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/qsi>
+    a sdo:Organization ;
+    sdo:name "Queensland Spatial Information" ;
+    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
+.
+
+
+cs:
     a skos:ConceptScheme ;
     dcterms:created "2023-05-31"^^xsd:date ;
-    dcterms:creator [
-            a prov:Agent ;
-            rdfs:label "Department Of Resources"
-        ] ;
+    dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:identifier "road-owner"^^xsd:token ;
-    dcterms:modified "2023-05-31"^^xsd:date ;
-    dcterms:publisher [
-            a prov:Agent ;
-            rdfs:label "Icsm"
-        ] ;
+    dcterms:modified "2023-11-30"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0" ;
     skos:definition "This vocabulary describes the owner of a road."@en ;
     skos:hasTopConcept
-        ro:local-government ,
-        ro:other ,
-        ro:port-authority ,
-        ro:private ,
-        ro:qpws ,
-        ro:state ,
-        ro:tmr ,
-        ro:unknown ,
-        ro:utility-provider ,
-        ro:water-authority ;
+        :local-government ,
+        :other ,
+        :port-authority ,
+        :private ,
+        :qpws ,
+        :state ,
+        :tmr ,
+        :unknown ,
+        :utility-provider ,
+        :water-authority ;
     skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
     skos:prefLabel "Road Owner"@en ;
     prov:qualifiedAttribution [
             dcat:hadRole isoroles:custodian ;
-            prov:agent [
-                    a prov:Agent ;
-                    rdfs:label "Icsm"
-                ]
+            prov:agent <https://linked.data.gov.au/org/icsm> ;
         ] ;
 .
 
