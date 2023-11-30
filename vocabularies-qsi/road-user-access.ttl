@@ -1,18 +1,19 @@
+PREFIX : <https://linked.data.gov.au/def/road-user-access/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/road-user-access>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX : <https://linked.data.gov.au/def/road-user-access/>
-PREFIX cs: <https://linked.data.gov.au/def/road-user-access>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :private
     a skos:Concept ;
-    skos:definition "Restricted for the use of a group. Sometimes referred to as ‘authorised’."@en ;
+    skos:definition "Restricted for the use of a group. Sometimes referred to as ‘authorised’"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Private"@en ;
@@ -20,7 +21,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :public
     a skos:Concept ;
-    skos:definition "For general public use."@en ;
+    skos:definition "For general public use"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Public"@en ;
@@ -28,7 +29,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :restricted
     a skos:Concept ;
-    skos:definition "A road or track not intended for general use. Restricted to use by the responsible authority only."@en ;
+    skos:definition "A road or track not intended for general use. Restricted to use by the responsible authority only"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Restricted"@en ;
@@ -36,7 +37,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :tollway
     a skos:Concept ;
-    skos:definition "Usually open to public but requires payment for access."@en ;
+    skos:definition "Usually open to public but requires payment for access"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Tollway"@en ;
@@ -44,22 +45,22 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :unknown
     a skos:Concept ;
-    skos:definition "The user accessibility is not currently known."@en ;
+    skos:definition "The user accessibility is not currently known"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Unknown"@en ;
-.
-
-<https://linked.data.gov.au/org/icsm>
-    a sdo:Organization ;
-    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
-    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/qsi>
     a sdo:Organization ;
     sdo:name "Queensland Spatial Information" ;
     sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
 cs:
@@ -69,6 +70,7 @@ cs:
     dcterms:identifier "road-user-access"^^xsd:token ;
     dcterms:modified "2023-11-30"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    reg:status agldwgstatus:experimental ;
     owl:versionIRI :1.0 ;
     owl:versionInfo "1.0" ;
     skos:definition "This vocabulary describes the user access for roads. "@en ;
@@ -80,9 +82,10 @@ cs:
         :unknown ;
     skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
     skos:prefLabel "Road User Access"@en ;
-    prov:qualifiedAttribution [
+    prov:qualifiedAttribution
+        [
             dcat:hadRole isoroles:custodian ;
-            prov:agent <https://linked.data.gov.au/org/icsm> ;
+            prov:agent <https://linked.data.gov.au/org/icsm>
         ] ;
 .
 

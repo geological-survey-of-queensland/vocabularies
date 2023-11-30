@@ -1,6 +1,5 @@
 PREFIX : <https://linked.data.gov.au/def/road-surfaces/>
 PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
-PREFIX : <https://linked.data.gov.au/def/road-surfaces/>
 PREFIX cs: <https://linked.data.gov.au/def/road-surfaces>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -56,7 +55,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :unformed
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Surface that is not a formed, unsealed, or sealed pavement road, but is in use."@en ;
+    skos:definition "Surface that is not a formed, unsealed, or sealed pavement road, but is in use"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Unformed"@en ;
@@ -83,16 +82,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-<https://linked.data.gov.au/org/icsm>
-    a sdo:Organization ;
-    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
-    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
-.
-
 <https://linked.data.gov.au/org/qsi>
     a sdo:Organization ;
     sdo:name "Queensland Spatial Information" ;
     sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
 cs:
@@ -115,8 +114,10 @@ cs:
         :unsealed ;
     skos:historyNote "This vocabulary contains surface type classifications for roads, sourced from Queensland Roads and Tracks data. "@en ;
     skos:prefLabel "Road Surfaces"@en ;
-    prov:qualifiedAttribution [
+    prov:qualifiedAttribution
+        [
             dcat:hadRole isoroles:custodian ;
             prov:agent <https://linked.data.gov.au/org/icsm>
         ] ;
 .
+

@@ -1,9 +1,13 @@
 PREFIX : <https://linked.data.gov.au/def/go-categories/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/go-categories>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -1888,6 +1892,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Waste"@en ;
 .
 
+<https://linked.data.gov.au/org/ga>
+    a sdo:Organization ;
+    sdo:name "Geoscience Australia" ;
+    sdo:url "https://www.ga.gov.au"^^xsd:anyURI ;
+.
+
 :accommodation
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -1977,6 +1987,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Taken from ICSM's Place Names Categories vocabulary" ;
     skos:inScheme cs: ;
     skos:prefLabel "Vegetation"@en ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
 :energy
@@ -2299,28 +2315,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Landform"@en ;
 .
 
-<https://linked.data.gov.au/org/ga>
-    a sdo:Organization ;
-    sdo:name "Geoscience Australia" ;
-    sdo:url "https://www.ga.gov.au"^^xsd:anyURI ;
-.
-
-<https://linked.data.gov.au/org/icsm>
-    a sdo:Organization ;
-    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
-    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
-.
-
 cs:
     a skos:ConceptScheme ;
     dcterms:created "2015-01-01"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/ga> ;
     dcterms:modified "2023-11-30"^^xsd:date ;
-    skos:historyNote "This vocabulary was generated from the Place Names database" ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    reg:status agldwgstatus:experimental ;
     owl:versionIRI :1.0 ;
-    owl:versionInfo "1.0" ;
-    owl:versionInfo "1.0"^^xsd:string ;
+    owl:versionInfo
+        "1.0" ,
+        "1.0"^^xsd:string ;
     skos:definition "A 3-level hierarchy of Geographical (Place) Object categories"@en ;
     skos:hasTopConcept
         :administration ,
@@ -2334,5 +2339,11 @@ cs:
         :transport ,
         :unclassified ,
         :utilities ;
+    skos:historyNote "This vocabulary was generated from the Place Names database" ;
     skos:prefLabel "Geographical Object Categories"@en ;
+    prov:qualifiedAttribution [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent <https://linked.data.gov.au/org/icsm>
+        ] ;
 .
+

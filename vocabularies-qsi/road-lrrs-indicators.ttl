@@ -1,11 +1,12 @@
 PREFIX : <https://linked.data.gov.au/def/lrrs-indicator/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/lrrs-indicator>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -15,7 +16,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:altLabel
         "T"@en ,
         "True"@en ;
-    skos:definition "Road is designated as a Local Road of Regional Significance."@en ;
+    skos:definition "Road is designated as a Local Road of Regional Significance"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Local Road of Regional Significance"@en ;
@@ -26,7 +27,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:altLabel
         "F"@en ,
         "False"@en ;
-    skos:definition "Road is not designated as a Local Road of Regional Significance."@en ;
+    skos:definition "Road is not designated as a Local Road of Regional Significance"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Not Local Road of Regional Significance"@en ;
@@ -35,16 +36,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :unknown
     a skos:Concept ;
     skos:altLabel "U"@en ;
-    skos:definition "Unknown - It is not known if the road is designated as a Local Road of Regional Significance."@en ;
+    skos:definition "Unknown - It is not known if the road is designated as a Local Road of Regional Significance"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Unknown"@en ;
-.
-
-<https://linked.data.gov.au/org/icsm>
-    a sdo:Organization ;
-    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
-    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/qsi>
@@ -60,18 +55,26 @@ cs:
     dcterms:identifier "lrrs-indicator"^^xsd:token ;
     dcterms:modified "2023-11-30"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    reg:status agldwgstatus:experimental ;
     owl:versionIRI :1.0 ;
     owl:versionInfo "1.0" ;
-    skos:definition "This vocabulary describes whether a road is designated as a local road of regional significance (LRSS)."@en ;
+    skos:definition "This vocabulary describes whether a road is designated as a local road of regional significance (LRSS)"@en ;
     skos:hasTopConcept
         :local-road-of-regional-significance ,
         :not-local-road-of-regional-significance ,
         :unknown ;
     skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
     skos:prefLabel "Local Road of Regional Significance Indicator"@en ;
-    prov:qualifiedAttribution [
+    prov:qualifiedAttribution
+        [
             dcat:hadRole isoroles:custodian ;
-            prov:agent <https://linked.data.gov.au/org/icsm> ;
+            prov:agent <https://linked.data.gov.au/org/icsm>
         ] ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 

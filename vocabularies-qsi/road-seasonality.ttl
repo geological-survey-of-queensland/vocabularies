@@ -1,11 +1,12 @@
+PREFIX : <https://linked.data.gov.au/def/road-seasonality/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/road-seasonality>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX : <https://linked.data.gov.au/def/road-seasonality/>
-PREFIX cs: <https://linked.data.gov.au/def/road-seasonality>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -15,7 +16,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:altLabel
         "F"@en ,
         "False"@en ;
-    skos:definition "False - no seasonal restrictions."@en ;
+    skos:definition "False - no seasonal restrictions"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "No Seasonal Closure"@en ;
@@ -26,7 +27,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:altLabel
         "T"@en ,
         "True"@en ;
-    skos:definition "True - subject to seasonal closure."@en ;
+    skos:definition "True - subject to seasonal closure"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Seasonal Closure"@en ;
@@ -35,16 +36,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :unknown
     a skos:Concept ;
     skos:altLabel "U"@en ;
-    skos:definition "Unknown – it is unknown if this road is affected by seasonal closures."@en ;
+    skos:definition "Unknown – it is unknown if this road is affected by seasonal closures"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Unknown"@en ;
-.
-
-<https://linked.data.gov.au/org/icsm>
-    a sdo:Organization ;
-    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
-    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/qsi>
@@ -60,18 +55,26 @@ cs:
     dcterms:identifier "road-seasonality"^^xsd:token ;
     dcterms:modified "2023-11-30"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    reg:status agldwgstatus:experimental ;
     owl:versionIRI :1.0 ;
     owl:versionInfo "1.0" ;
-    skos:definition "This vocabulary describes whether a road may be subjected to seasonal road closures."@en ;
+    skos:definition "This vocabulary describes whether a road may be subjected to seasonal road closures"@en ;
     skos:hasTopConcept
         :no-seasonal-closure ,
         :seasonal-closure ,
         :unknown ;
     skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
     skos:prefLabel "Road Seasonality"@en ;
-    prov:qualifiedAttribution [
+    prov:qualifiedAttribution
+        [
             dcat:hadRole isoroles:custodian ;
-            prov:agent <https://linked.data.gov.au/org/icsm> ;
+            prov:agent <https://linked.data.gov.au/org/icsm>
         ] ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
