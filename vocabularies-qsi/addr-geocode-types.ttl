@@ -10,6 +10,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :building-access-point
@@ -303,6 +304,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
+    dcat:theme themes:geocoded-addressing ;
     dcterms:created "2023-05-11"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:identifier "geocode-types"^^xsd:token ;

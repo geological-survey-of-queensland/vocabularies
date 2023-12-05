@@ -9,36 +9,33 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :both
     a skos:Concept ;
-    skos:definition "Road crosses through both urban and rural areas"@en ;
-    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:definition "Entity crosses through both urban and rural areas"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Both"@en ;
 .
 
 :rural
     a skos:Concept ;
-    skos:definition "Road is in a rural area"@en ;
-    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:definition "Entity is in a rural area"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Rural"@en ;
 .
 
 :unknown
     a skos:Concept ;
-    skos:definition "Zone of road is not currently known"@en ;
-    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:definition "Zone of entity is not currently known"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Unknown"@en ;
 .
 
 :urban
     a skos:Concept ;
-    skos:definition "Road is in an urban area"@en ;
-    skos:historyNote "Queensland Roads and Tracks dataset" ;
+    skos:definition "Entity is in an urban area"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Urban"@en ;
 .
@@ -57,6 +54,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
+    dcat:theme themes:population-distributions ;
     dcterms:created "2023-05-30"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:identifier "population-zone"^^xsd:token ;
@@ -65,7 +63,7 @@ cs:
     reg:status agldwgstatus:experimental ;
     owl:versionIRI :1.0 ;
     owl:versionInfo "1.0" ;
-    skos:definition "This vocabulary describes the population zone of rural or urban in which the entity is located. This has also been referred to as zone or road zone"@en ;
+    skos:definition "This vocabulary describes the population zone of rural or urban in which the entity is located. This has also been referred to as zone or entity zone"@en ;
     skos:hasTopConcept
         :both ,
         :rural ,

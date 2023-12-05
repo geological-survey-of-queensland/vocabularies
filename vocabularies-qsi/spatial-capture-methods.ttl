@@ -9,6 +9,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :cadastre
@@ -115,6 +116,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
+    dcat:theme themes:spatial ;
     dcterms:created "2023-05-30"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:identifier "spatial-capture-method"^^xsd:token ;
