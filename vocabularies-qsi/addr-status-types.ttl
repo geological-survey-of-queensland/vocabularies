@@ -1,7 +1,6 @@
 PREFIX : <https://linked.data.gov.au/def/address-status-type/>
 PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/address-status-type>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -71,7 +70,7 @@ cs:primary
 
 cs:
     a skos:ConceptScheme ;
-    dcat:theme themes:geocoded-addressing ;
+    sdo:keywords themes:geocoded-addressing ;
     dcterms:created "2023-06-05"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:identifier "address-status-type"^^xsd:token ;
@@ -91,7 +90,7 @@ cs:
     skos:prefLabel "Address Status Type"@en ;
     prov:qualifiedAttribution
         [
-            dcat:hadRole isoroles:custodian ;
+            prov:hadRole isoroles:custodian ;
             prov:agent <https://linked.data.gov.au/org/icsm>
         ] ;
 .

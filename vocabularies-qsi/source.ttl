@@ -1,7 +1,6 @@
 PREFIX : <https://linked.data.gov.au/def/source/>
 PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/source>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isorolecs: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -137,7 +136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
-    dcat:theme themes:spatial ;
+    sdo:keywords themes:spatial ;
     dcterms:created "2023-05-31"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:identifier "source"^^xsd:token ;
@@ -165,11 +164,11 @@ cs:
     skos:prefLabel "Source"@en ;
     prov:qualifiedAttribution
         [
-            dcat:hadRole isorolecs:custodian ;
+            prov:hadRole isorolecs:custodian ;
             prov:agent <https://linked.data.gov.au/org/icsm>
         ] ,
         [
-            dcat:hadRole isorolecs:custodian ;
+            prov:hadRole isorolecs:custodian ;
             prov:agent <https://linked.data.gov.au/org/icsm>
         ] ;
 .

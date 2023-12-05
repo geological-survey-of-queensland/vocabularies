@@ -1,7 +1,6 @@
 PREFIX : <https://linked.data.gov.au/def/road-surfaces/>
 PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/road-surfaces>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -97,7 +96,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
-    dcat:theme themes:transport ;
+    sdo:keywords themes:transport ;
     dcterms:created "2023-05-17"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:modified "2023-11-30"^^xsd:date ;
@@ -118,7 +117,7 @@ cs:
     skos:prefLabel "Road Surfaces"@en ;
     prov:qualifiedAttribution
         [
-            dcat:hadRole isoroles:custodian ;
+            prov:hadRole isoroles:custodian ;
             prov:agent <https://linked.data.gov.au/org/icsm>
         ] ;
 .
