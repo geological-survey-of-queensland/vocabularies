@@ -1,0 +1,173 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/structural-feature/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/structural-feature>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:bedding
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for bedding"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "BEDDING" ;
+    skos:prefLabel "bedding"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:boudinage
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for boudinage"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "BOUDINAGE" ;
+    skos:prefLabel "boudinage"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:cleavage
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for cleavage"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "CLEAVAGE" ;
+    skos:prefLabel "cleavage"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for contact"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "CONTACT" ;
+    skos:prefLabel "contact"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:drilling-induced-tensile-fracture
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for drilling induced tensile fracture"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "DRILLING INDUCED TENSILE FRACTURE" ;
+    skos:prefLabel "drilling induced tensile fracture"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:fault
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for fault"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "FAULT" ;
+    skos:prefLabel "fault"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:fold-axis
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for fold axis"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "FOLD AXIS" ;
+    skos:prefLabel "fold axis"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:foliation
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for foliation"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "FOLIATION" ;
+    skos:prefLabel "foliation"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:fracture-cleavage
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for fracture cleavage"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "FRACTURE CLEAVAGE" ;
+    skos:prefLabel "fracture cleavage"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:lineation
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for lineation"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "LINEATION" ;
+    skos:prefLabel "lineation"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:shear
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for shear"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "SHEAR" ;
+    skos:prefLabel "shear"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:vein
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for vein"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "VEIN" ;
+    skos:prefLabel "vein"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Structural Feature"@en ;
+    skos:hasTopConcept
+        :bedding ,
+        :boudinage ,
+        :cleavage ,
+        :contact ,
+        :drilling-induced-tensile-fracture ,
+        :fault ,
+        :fold-axis ,
+        :foliation ,
+        :fracture-cleavage ,
+        :lineation ,
+        :shear ,
+        :vein ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list STRUCTURAL_FEATURE November 2023" ;
+    skos:notation "STRUCTURAL_FEATURE" ;
+    skos:prefLabel "Structural Feature"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    sdo:dateCreated "2023-11-11"^^xsd:date ;
+    sdo:dateModified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

@@ -1,0 +1,113 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/rpt-survey-type/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/rpt-survey-type>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:gyroscopic
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for gyroscopic"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "GYROSCOPIC" ;
+    skos:prefLabel "gyroscopic"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:magnetic
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for magnetic"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "MAGNETIC" ;
+    skos:prefLabel "magnetic"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:multishot-camera
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for multishot camera"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "MULTISHOT CAMERA" ;
+    skos:prefLabel "multishot camera"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:mwd
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for mwd"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "MWD" ;
+    skos:prefLabel "mwd"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:singleshot-camera
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for singleshot camera"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "SINGLESHOT CAMERA" ;
+    skos:prefLabel "singleshot camera"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:totco
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for totco"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "TOTCO" ;
+    skos:prefLabel "totco"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:wireline
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for wireline"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "WIRELINE" ;
+    skos:prefLabel "wireline"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Rpt Survey Type"@en ;
+    skos:hasTopConcept
+        :gyroscopic ,
+        :magnetic ,
+        :multishot-camera ,
+        :mwd ,
+        :singleshot-camera ,
+        :totco ,
+        :wireline ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list RPT_SURVEY_TYPE November 2023" ;
+    skos:notation "RPT_SURVEY_TYPE" ;
+    skos:prefLabel "Rpt Survey Type"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    sdo:dateCreated "2023-11-11"^^xsd:date ;
+    sdo:dateModified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

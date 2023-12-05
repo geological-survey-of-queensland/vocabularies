@@ -1,0 +1,77 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/lease-name/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/lease-name>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:epc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for epc"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "EPC" ;
+    skos:prefLabel "epc"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:epm
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for epm"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "EPM" ;
+    skos:prefLabel "epm"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:mdl
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for mdl"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "MDL" ;
+    skos:prefLabel "mdl"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:ml
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for ml"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "ML" ;
+    skos:prefLabel "ml"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Lease Name"@en ;
+    skos:hasTopConcept
+        :epc ,
+        :epm ,
+        :mdl ,
+        :ml ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list LEASE_NAME November 2023" ;
+    skos:notation "LEASE_NAME" ;
+    skos:prefLabel "Lease Name"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    sdo:dateCreated "2023-11-11"^^xsd:date ;
+    sdo:dateModified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

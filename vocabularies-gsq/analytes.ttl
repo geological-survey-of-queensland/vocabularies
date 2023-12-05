@@ -1,0 +1,78 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/analytes/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/analytes>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+:amount-of-ag
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The rate of presence of elemental silver within another substance"@en ;
+    skos:historyNote "Created for the Geochemistry data exchange Excel Template v3 based on common analytes" ;
+    skos:inScheme cs: ;
+    skos:notation "Ag" ;
+    skos:prefLabel "Amount of silver"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:amount-of-al
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The rate of presence of elemental aluminium within another substance"@en ;
+    skos:historyNote "Created for the Geochemistry data exchange Excel Template v3 based on common analytes" ;
+    skos:inScheme cs: ;
+    skos:notation "Al" ;
+    skos:prefLabel "Amount of aluminium"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:amount-of-as
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The rate of presence of elemental arsenic within another substance"@en ;
+    skos:historyNote "Created for the Geochemistry data exchange Excel Template v3 based on common analytes" ;
+    skos:inScheme cs: ;
+    skos:notation "As" ;
+    skos:prefLabel "Amount of arsenic"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:amount-of-au
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The rate of presence of elemental gold within another substance"@en ;
+    skos:historyNote "Created for the Geochemistry data exchange Excel Template v3 based on common analytes" ;
+    skos:inScheme cs: ;
+    skos:notation "Au" ;
+    skos:prefLabel "Amount of gold"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "A substance or sample being analyzed, usually by means of a laboratory procedure or test"@en ;
+    skos:hasTopConcept
+        :Ag ,
+        :Al ,
+        :As ,
+        :Au ;
+    skos:historyNote "Created for the Geochemistry data exchange Excel Template v3 based on common analytes" ;
+    skos:notation "ANALYTE" ;
+    skos:prefLabel "Analytes"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    sdo:dateCreated "2023-12-30"^^xsd:date ;
+    sdo:dateModified "2023-12-30"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

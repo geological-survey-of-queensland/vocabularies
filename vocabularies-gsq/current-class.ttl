@@ -1,0 +1,125 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/current-class/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/current-class>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:appraisal
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for appraisal"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "APPRAISAL CLASS" ;
+    skos:prefLabel "appraisal"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:bedrock
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for bedrock"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "BEDROCK CLASS" ;
+    skos:prefLabel "bedrock"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:development
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for development"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "DEVELOPMENT CLASS" ;
+    skos:prefLabel "development"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:exploration
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for exploration"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "EXPLORATION CLASS" ;
+    skos:prefLabel "exploration"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:geotechnical
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for geotechnical"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "GEOTECHNICAL CLASS" ;
+    skos:prefLabel "geotechnical"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:metallurgical
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for metallurgical"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "METALLURGICAL CLASS" ;
+    skos:prefLabel "metallurgical"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:trenching
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for trenching"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "TRENCHING CLASS" ;
+    skos:prefLabel "trenching"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:water
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for water"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "WATER CLASS" ;
+    skos:prefLabel "water"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Current Class"@en ;
+    skos:hasTopConcept
+        :appraisal ,
+        :bedrock ,
+        :development ,
+        :exploration ,
+        :geotechnical ,
+        :metallurgical ,
+        :trenching ,
+        :water ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list CURRENT_CLASS November 2023" ;
+    skos:notation "CURRENT_CLASS" ;
+    skos:prefLabel "Current Class"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    sdo:dateCreated "2023-11-11"^^xsd:date ;
+    sdo:dateModified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

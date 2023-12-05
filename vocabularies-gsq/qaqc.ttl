@@ -1,0 +1,137 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/qaqc/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/qaqc>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:average-assay-as-qc-sample
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for average assay as qc sample"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "AVERAGE ASSAY AS QC SAMPLE" ;
+    skos:prefLabel "average assay as qc sample"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:blank
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for blank"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "BLANK" ;
+    skos:prefLabel "blank"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:field-duplicate
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for field duplicate"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "FIELD DUPLICATE " ;
+    skos:prefLabel "field duplicate"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:laboratory-duplicate
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for laboratory duplicate"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "LABORATORY DUPLICATE" ;
+    skos:prefLabel "laboratory duplicate"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:laboratory-standard
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for laboratory standard"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "LABORATORY STANDARD" ;
+    skos:prefLabel "laboratory standard"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:qa-qc-of-known-value
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for qa/qc of known value"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "QA/QC OF KNOWN VALUE" ;
+    skos:prefLabel "qa/qc of known value"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:re-assayed-sample
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for re-assayed sample"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "RE-ASSAYED SAMPLE" ;
+    skos:prefLabel "re-assayed sample"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:re-split
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for re-split"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "RE-SPLIT" ;
+    skos:prefLabel "re-split"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:standard
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for standard"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "STANDARD" ;
+    skos:prefLabel "standard"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Qaqc"@en ;
+    skos:hasTopConcept
+        :average-assay-as-qc-sample ,
+        :blank ,
+        :field-duplicate ,
+        :laboratory-duplicate ,
+        :laboratory-standard ,
+        :qa-qc-of-known-value ,
+        :re-assayed-sample ,
+        :re-split ,
+        :standard ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list QAQC November 2023" ;
+    skos:notation "QAQC" ;
+    skos:prefLabel "Qaqc"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    sdo:dateCreated "2023-11-11"^^xsd:date ;
+    sdo:dateModified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

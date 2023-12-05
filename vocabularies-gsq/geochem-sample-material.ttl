@@ -1,0 +1,102 @@
+PREFIX : <http://linked.data.gov.au/def/sample-material/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/sample-material>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sm: <http://linked.data.gov.au/def/sample-material>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:air
+    a skos:Concept ;
+    rdfs:isDefinedBy sm: ;
+    skos:definition "Definition for air"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "AIR" ;
+    skos:prefLabel "air"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:rock
+    a skos:Concept ;
+    rdfs:isDefinedBy sm: ;
+    skos:definition "Definition for rock"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "ROCK" ;
+    skos:prefLabel "rock"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:sediment
+    a skos:Concept ;
+    rdfs:isDefinedBy sm: ;
+    skos:definition "Definition for sediment"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "SEDIMENT" ;
+    skos:prefLabel "sediment"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:soil
+    a skos:Concept ;
+    rdfs:isDefinedBy sm: ;
+    skos:definition "Definition for soil"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "SOIL" ;
+    skos:prefLabel "soil"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:vegetation
+    a skos:Concept ;
+    rdfs:isDefinedBy sm: ;
+    skos:definition "Definition for vegetation"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "VEGETATION" ;
+    skos:prefLabel "vegetation"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:water
+    a skos:Concept ;
+    rdfs:isDefinedBy sm: ;
+    skos:definition "Definition for water"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "WATER" ;
+    skos:prefLabel "water"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Sample Material"@en ;
+    skos:hasTopConcept
+        :air ,
+        :rock ,
+        :sediment ,
+        :soil ,
+        :vegetation ,
+        :water ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list SAMPLE_MATERIAL November 2023" ;
+    skos:notation "SAMPLE_MATERIAL" ;
+    skos:prefLabel "Geochemistry Sample Material"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    sdo:dateCreated "2023-11-11"^^xsd:date ;
+    sdo:dateModified "2023-12-05"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+
