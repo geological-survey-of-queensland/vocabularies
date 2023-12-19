@@ -2,6 +2,7 @@ PREFIX : <http://linked.data.gov.au/def/borehole-status/>
 PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <http://linked.data.gov.au/def/borehole-status>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX mode: <https://linked.data.gov.au/def/vocdermods/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -764,7 +765,7 @@ cs:
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     prov:qualifiedDerivation [
         prov:entity <http://linked.data.gov.au/def/site-status> ;
-        prov:hadRole <http://linked.data.gov.au/def/vocab-derivation-modes/subsetting-and-extension> ;
+        prov:hadRole mode:subsetting-and-extension ;
     ] ;
     reg:status agldwgstatus:experimental ;
     skos:definition "The current state of a borehole within its lifecycle from proposed through operational through to abandoned. Borehole status also applies to wells or boreholes comprised of multiple wellbores."@en ;
