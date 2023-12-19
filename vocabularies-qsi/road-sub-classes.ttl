@@ -1,20 +1,21 @@
 PREFIX : <https://linked.data.gov.au/def/road-sub-classes/>
-PREFIX cs: <https://linked.data.gov.au/def/road-sub-classes>
 PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX cs: <https://linked.data.gov.au/def/road-sub-classes>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :4wd
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Track suitable for 4WD vehicles."@en ;
+    skos:definition "Track suitable for 4WD vehicles"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "4WD"@en ;
@@ -24,7 +25,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :access
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Access road."@en ;
+    skos:definition "Access road"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Access"@en ;
@@ -34,7 +35,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :bridge
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Bridge."@en ;
+    skos:definition "Bridge"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Bridge"@en ;
@@ -44,7 +45,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :causeway
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "A raised thoroughfare across low or wet ground."@en ;
+    skos:definition "A raised thoroughfare across low or wet ground"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Causeway"@en ;
@@ -54,7 +55,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :crossover
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Crossover, predominantly used for emergency service use."@en ;
+    skos:definition "Crossover, predominantly used for emergency service use"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Crossover"@en ;
@@ -64,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :level-crossing
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Level crossing."@en ;
+    skos:definition "Level crossing"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Level Crossing"@en ;
@@ -74,7 +75,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :na
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Not applicable."@en ;
+    skos:definition "Not applicable"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "NA"@en ;
@@ -84,7 +85,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :non-vehicular-track
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Track not for vehicle use."@en ;
+    skos:definition "Track not for vehicle use"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Non vehicular track"@en ;
@@ -94,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :passenger-ferry
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Passenger only ferry."@en ;
+    skos:definition "Passenger only ferry"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Passenger ferry"@en ;
@@ -104,7 +105,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :ramp
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "On-ramp or off-ramp."@en ;
+    skos:definition "On-ramp or off-ramp"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Ramp"@en ;
@@ -114,7 +115,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :roundabout
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Roundabout."@en ;
+    skos:definition "Roundabout"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Roundabout"@en ;
@@ -124,7 +125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :shared-use-track
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Shared track for vehicular and non-vehicular users."@en ;
+    skos:definition "Shared track for vehicular and non-vehicular users"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Shared use track"@en ;
@@ -134,7 +135,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :slip
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Slip road or slip lane."@en ;
+    skos:definition "Slip road or slip lane"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Slip"@en ;
@@ -144,7 +145,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :tunnel
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Tunnel."@en ;
+    skos:definition "Tunnel"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Tunnel"@en ;
@@ -154,7 +155,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :u-turn
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "U-turn bay."@en ;
+    skos:definition "U-turn bay"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "U turn"@en ;
@@ -164,7 +165,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :unknown
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Unknown."@en ;
+    skos:definition "Unknown"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Unknown"@en ;
@@ -174,7 +175,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :vehicular-ferry
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Ferry that a vehicle can be transported on."@en ;
+    skos:definition "Ferry that a vehicle can be transported on"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
     skos:inScheme cs: ;
     skos:prefLabel "Vehicular ferry"@en ;
@@ -182,22 +183,26 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <https://linked.data.gov.au/org/qsi>
-    a prov:Agent ;
-    rdfs:label "Qsi" ;
+    a sdo:Organization ;
+    sdo:name "Queensland Spatial Information" ;
+    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/icsm>
-    a prov:Agent ;
-    rdfs:label "Icsm" ;
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
 cs:
     a skos:ConceptScheme ;
+    sdo:keywords themes:transport ;
     dcterms:created "2023-05-17"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/qsi> ;
-    dcterms:modified "2023-05-17"^^xsd:date ;
+    dcterms:modified "2023-11-30"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
-    owl:versionIRI <https://linked.data.gov.au/def/road-sub-classes/1.0> ;
+    reg:status agldwgstatus:experimental ;
+    owl:versionIRI :1.0 ;
     owl:versionInfo "1.0" ;
     skos:definition "This vocabulary describes sub classes of roads"@en ;
     skos:hasTopConcept
@@ -220,9 +225,9 @@ cs:
         :vehicular-ferry ;
     skos:historyNote "This vocabulary contains sub classification types for roads, sourced from Queensland Roads and Tracks data. "@en ;
     skos:prefLabel "Road Sub-Classes"@en ;
-    reg:status agldwgstatus:experimental ;
-    prov:qualifiedAttribution [
-            dcat:hadRole isoroles:custodian ;
+    prov:qualifiedAttribution
+        [
+            prov:hadRole isoroles:custodian ;
             prov:agent <https://linked.data.gov.au/org/icsm>
         ] ;
 .

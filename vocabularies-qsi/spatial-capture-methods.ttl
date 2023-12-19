@@ -1,135 +1,147 @@
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX : <https://linked.data.gov.au/def/spatial-capture-method/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/spatial-capture-method>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX scm: <https://linked.data.gov.au/def/spatial-capture-method>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-scm:cadastre
+:cadastre
     a skos:Concept ;
     skos:altLabel "1"@en ;
-    skos:definition "Derived from cadastre."@en ;
+    skos:definition "Derived from cadastre"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme scm: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Cadastre"@en ;
 .
 
-scm:estimate
+:estimate
     a skos:Concept ;
     skos:altLabel "7"@en ;
-    skos:definition "Estimate."@en ;
+    skos:definition "Estimate"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme scm: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Estimate"@en ;
 .
 
-scm:gps
+:gps
     a skos:Concept ;
     skos:altLabel "6"@en ;
-    skos:definition "Global Positioning System (GPS)."@en ;
+    skos:definition "Global Positioning System (GPS)"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme scm: ;
+    skos:inScheme cs: ;
     skos:prefLabel "GPS"@en ;
 .
 
-scm:imagery-automated
+:imagery-automated
     a skos:Concept ;
     skos:altLabel "3"@en ;
-    skos:definition "Extracted from imagery."@en ;
+    skos:definition "Extracted from imagery"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme scm: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Imagery automated"@en ;
 .
 
-scm:imagery-manual
+:imagery-manual
     a skos:Concept ;
     skos:altLabel "2"@en ;
-    skos:definition "Digitised from imagery."@en ;
+    skos:definition "Digitised from imagery"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme scm: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Imagery manual"@en ;
 .
 
-scm:map-digitised
+:map-digitised
     a skos:Concept ;
     skos:altLabel "4"@en ;
-    skos:definition "Digitised from scanned map."@en ;
+    skos:definition "Digitised from scanned map"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme scm: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Map digitised"@en ;
 .
 
-scm:non-spatial
+:non-spatial
     a skos:Concept ;
     skos:altLabel "NS"@en ;
-    skos:definition "Not spatial - provided as scanned map."@en ;
+    skos:definition "Not spatial - provided as scanned map"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme scm: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Non spatial"@en ;
 .
 
-scm:other
+:other
     a skos:Concept ;
     skos:altLabel "8"@en ;
-    skos:definition "Other."@en ;
+    skos:definition "Other"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme scm: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Other"@en ;
 .
 
-scm:survey-data
+:survey-data
     a skos:Concept ;
     skos:altLabel "5"@en ;
-    skos:definition "Digitised from engineering/survey data."@en ;
+    skos:definition "Digitised from engineering/survey data"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme scm: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Survey data"@en ;
 .
 
-scm:unknown
+:unknown
     a skos:Concept ;
     skos:altLabel "U"@en ;
-    skos:definition "Unknown."@en ;
+    skos:definition "Unknown"@en ;
     skos:historyNote "Queensland Roads and Tracks dataset" ;
-    skos:inScheme scm: ;
+    skos:inScheme cs: ;
     skos:prefLabel "Unknown"@en ;
 .
 
-scm:
+<https://linked.data.gov.au/org/qsi>
+    a sdo:Organization ;
+    sdo:name "Queensland Spatial Information" ;
+    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
+.
+
+cs:
     a skos:ConceptScheme ;
+    sdo:keywords themes:spatial ;
     dcterms:created "2023-05-30"^^xsd:date ;
-    dcterms:creator [
-            a prov:Agent ;
-            rdfs:label "Department Of Resources"
-        ] ;
+    dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:identifier "spatial-capture-method"^^xsd:token ;
-    dcterms:modified "2023-05-30"^^xsd:date ;
-    dcterms:publisher [
-            a prov:Agent ;
-            rdfs:label "Icsm"
-        ] ;
+    dcterms:modified "2023-11-30"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    reg:status agldwgstatus:experimental ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0" ;
     skos:definition "This vocabulary describes the method in which geometry was captured. "@en ;
     skos:hasTopConcept
-        scm:cadastre ,
-        scm:estimate ,
-        scm:gps ,
-        scm:imagery-automated ,
-        scm:imagery-manual ,
-        scm:map-digitised ,
-        scm:non-spatial ,
-        scm:other ,
-        scm:survey-data ,
-        scm:unknown ;
+        :cadastre ,
+        :estimate ,
+        :gps ,
+        :imagery-automated ,
+        :imagery-manual ,
+        :map-digitised ,
+        :non-spatial ,
+        :other ,
+        :survey-data ,
+        :unknown ;
     skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
     skos:prefLabel "Spatial capture method"@en ;
-    prov:qualifiedAttribution [
-            dcat:hadRole isoroles:custodian ;
-            prov:agent [
-                    a prov:Agent ;
-                    rdfs:label "Icsm"
-                ]
+    prov:qualifiedAttribution
+        [
+            prov:hadRole isoroles:custodian ;
+            prov:agent <https://linked.data.gov.au/org/icsm>
         ] ;
 .
 

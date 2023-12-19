@@ -1,85 +1,97 @@
-PREFIX ast: <https://linked.data.gov.au/def/address-status-type>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX : <https://linked.data.gov.au/def/address-status-type/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/address-status-type>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+cs:alternative
+    a skos:Concept ;
+    dcterms:source "https://store.standards.org.au/product/as-nzs-iso-19160-1-2018"^^xsd:anyURI ;
+    skos:definition "An additional address that refers to the same physical location as a Primary Address. This may relate to an alternative access point to the same address site"@en ;
+    skos:historyNote "AS/NZS4819:2011" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "alternative"@en ;
+.
+
+cs:primary
+    a skos:Concept ;
+    dcterms:source "https://store.standards.org.au/product/as-nzs-iso-19160-1-2018"^^xsd:anyURI ;
+    skos:definition "The main officially recognised address for an address site"@en ;
+    skos:historyNote "AS/NZS4819:2011" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "primary"@en ;
+.
 
 <http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/official>
     a skos:Concept ;
-    skos:definition "An official addressing authority assigned the address."@en ;
+    skos:definition "An official addressing authority assigned the address"@en ;
     skos:historyNote "Presented in the original ISO19160-1 standard’s AddressStatus codelist" ;
-    skos:inScheme ast: ;
+    skos:inScheme cs: ;
     skos:narrower
-        ast:alternative ,
-        ast:primary ;
+        :alternative ,
+        :primary ;
     skos:prefLabel "official"@en ;
 .
 
 <http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/unknown>
     a skos:Concept ;
-    skos:definition "The status of the address is unknown."@en ;
+    skos:definition "The status of the address is unknown"@en ;
     skos:historyNote "Presented in the original ISO19160-1 standard’s AddressStatus codelist" ;
-    skos:inScheme ast: ;
+    skos:inScheme cs: ;
     skos:prefLabel "unknown"@en ;
 .
 
 <http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/unofficial>
     a skos:Concept ;
-    skos:definition "The address was not assigned by an official addressing authority."@en ;
+    skos:definition "The address was not assigned by an official addressing authority"@en ;
     skos:historyNote "Presented in the original ISO19160-1 standard’s AddressStatus codelist" ;
-    skos:inScheme ast: ;
+    skos:inScheme cs: ;
     skos:prefLabel "unofficial"@en ;
 .
 
-ast:alternative
-    a skos:Concept ;
-    dcterms:source "https://store.standards.org.au/product/as-nzs-iso-19160-1-2018"^^xsd:anyURI ;
-    skos:definition "An additional address that refers to the same physical location as a Primary Address. This may relate to an alternative access point to the same address site."@en ;
-    skos:historyNote "AS/NZS4819:2011" ;
-    skos:inScheme ast: ;
-    skos:prefLabel "alternative"@en ;
+<https://linked.data.gov.au/org/qsi>
+    a sdo:Organization ;
+    sdo:name "Queensland Spatial Information" ;
+    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
 .
 
-ast:primary
-    a skos:Concept ;
-    dcterms:source "https://store.standards.org.au/product/as-nzs-iso-19160-1-2018"^^xsd:anyURI ;
-    skos:definition "The main officially recognised address for an address site."@en ;
-    skos:historyNote "AS/NZS4819:2011" ;
-    skos:inScheme ast: ;
-    skos:prefLabel "primary"@en ;
+<https://linked.data.gov.au/org/icsm>
+    a sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
+    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
-ast:
+cs:
     a skos:ConceptScheme ;
+    sdo:keywords themes:geocoded-addressing ;
     dcterms:created "2023-06-05"^^xsd:date ;
-    dcterms:creator [
-            a prov:Agent ;
-            rdfs:label "Department Of Resources"
-        ] ;
+    dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:identifier "address-status-type"^^xsd:token ;
-    dcterms:modified "2023-06-05"^^xsd:date ;
-    dcterms:publisher [
-            a prov:Agent ;
-            rdfs:label "Icsm"
-        ] ;
+    dcterms:modified "2023-11-30"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    reg:status agldwgstatus:experimental ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0" ;
     skos:definition "This vocabulary describes types of address status. "@en ;
     skos:hasTopConcept
         <http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/official> ,
         <http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/unknown> ,
         <http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/unofficial> ,
-        ast:alternative ,
-        ast:primary ;
+        :alternative ,
+        :primary ;
     skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
     skos:prefLabel "Address Status Type"@en ;
-    prov:qualifiedAttribution [
-            dcat:hadRole isoroles:custodian ;
-            prov:agent [
-                    a prov:Agent ;
-                    rdfs:label "Icsm"
-                ]
+    prov:qualifiedAttribution
+        [
+            prov:hadRole isoroles:custodian ;
+            prov:agent <https://linked.data.gov.au/org/icsm>
         ] ;
 .
 
