@@ -1,0 +1,114 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/resource-status/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/resource-status>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:alienated
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for alienated"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "ALIENATED" ;
+    skos:prefLabel "alienated"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:resource-being-mined
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for resource being mined"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "RESOURCE BEING MINED" ;
+    skos:prefLabel "resource being mined"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:resource-mined-out
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for resource mined out"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "RESOURCE MINED OUT" ;
+    skos:prefLabel "resource mined out"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:resource-unalienated
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for resource unalienated"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "RESOURCE UNALIENATED" ;
+    skos:prefLabel "resource unalienated"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:sterilised
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for sterilised"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "STERILISED" ;
+    skos:prefLabel "sterilised"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:stockpile-mineralised-material
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for stockpile (mineralised material)"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "STOCKPILE (MINERALISED MATERIAL)" ;
+    skos:prefLabel "stockpile (mineralised material)"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:tailings-dam
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for tailings dam"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "TAILINGS DAM" ;
+    skos:prefLabel "tailings dam"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Resource Status"@en ;
+    skos:hasTopConcept
+        :alienated ,
+        :resource-being-mined ,
+        :resource-mined-out ,
+        :resource-unalienated ,
+        :sterilised ,
+        :stockpile-mineralised-material ,
+        :tailings-dam ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list RESOURCE_STATUS November 2023" ;
+    skos:notation "RESOURCE_STATUS" ;
+    skos:prefLabel "Resource Status"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    dcterms:created "2023-11-11"^^xsd:date ;
+    dcterms:modified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

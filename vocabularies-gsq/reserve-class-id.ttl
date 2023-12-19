@@ -1,0 +1,90 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/reserve-class-id/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/reserve-class-id>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:indicated-resource
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for indicated resource"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "INDICATED RESOURCE" ;
+    skos:prefLabel "indicated resource"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:inferred-resource
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for inferred resource"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "INFERRED RESOURCE" ;
+    skos:prefLabel "inferred resource"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:measured-resource
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for measured resource"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "MEASURED RESOURCE" ;
+    skos:prefLabel "measured resource"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:probable-reserves
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for probable reserves"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "PROBABLE RESERVES" ;
+    skos:prefLabel "probable reserves"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:proved-reserves
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for proved reserves"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "PROVED RESERVES" ;
+    skos:prefLabel "proved reserves"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Reserve Class Id"@en ;
+    skos:hasTopConcept
+        :indicated-resource ,
+        :inferred-resource ,
+        :measured-resource ,
+        :probable-reserves ,
+        :proved-reserves ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list RESERVE_CLASS_ID November 2023" ;
+    skos:notation "RESERVE_CLASS_ID" ;
+    skos:prefLabel "Reserve Class Id"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    dcterms:created "2023-11-11"^^xsd:date ;
+    dcterms:modified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+
