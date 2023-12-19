@@ -1,0 +1,138 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/sample-type-drilling/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/sample-type-drilling>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:core
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for core"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "CORE" ;
+    skos:prefLabel "core"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:cuttings
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for cuttings"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "CUTTINGS" ;
+    skos:prefLabel "cuttings"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:hcore
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for hcore"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "HCORE" ;
+    skos:prefLabel "hcore"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:percussion
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for percussion"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "PERCUSSION" ;
+    skos:prefLabel "percussion"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:pulp
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for pulp"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "PULP" ;
+    skos:prefLabel "pulp"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:qcore
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for qcore"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "QCORE" ;
+    skos:prefLabel "qcore"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:rab-sample
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for rab sample"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "RAB SAMPLE" ;
+    skos:prefLabel "rab sample"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:rc-sample
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for rc sample"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "RC SAMPLE" ;
+    skos:prefLabel "rc sample"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:water-sample
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for water sample"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "WATER SAMPLE" ;
+    skos:prefLabel "water sample"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Sample Type Drilling"@en ;
+    skos:hasTopConcept
+        :core ,
+        :cuttings ,
+        :hcore ,
+        :percussion ,
+        :pulp ,
+        :qcore ,
+        :rab-sample ,
+        :rc-sample ,
+        :water-sample ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list SAMPLE_TYPE_DRILLING November 2023" ;
+    skos:notation "SAMPLE_TYPE_DRILLING" ;
+    skos:prefLabel "Sample Type Drilling"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    dcterms:created "2023-11-11"^^xsd:date ;
+    dcterms:modified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

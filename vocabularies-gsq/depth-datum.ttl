@@ -1,0 +1,90 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/depth-datum/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/depth-datum>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:drillpipe-collar-dc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for drillpipe collar (dc)"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "DRILLPIPE COLLAR (DC)" ;
+    skos:prefLabel "drillpipe collar (dc)"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:ground-level-gl
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for ground level (gl)"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "GROUND LEVEL (GL)" ;
+    skos:prefLabel "ground level (gl)"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:kelly-bushing-kb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for kelly bushing (kb)"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "KELLY BUSHING (KB)" ;
+    skos:prefLabel "kelly bushing (kb)"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:other
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for other"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "OTHER" ;
+    skos:prefLabel "other"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:rotary-table-rt
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for rotary table (rt)"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "ROTARY TABLE (RT)" ;
+    skos:prefLabel "rotary table (rt)"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Depth Datum"@en ;
+    skos:hasTopConcept
+        :drillpipe-collar-dc ,
+        :ground-level-gl ,
+        :kelly-bushing-kb ,
+        :other ,
+        :rotary-table-rt ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list DEPTH_DATUM November 2023" ;
+    skos:notation "DEPTH_DATUM" ;
+    skos:prefLabel "Depth Datum"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    dcterms:created "2023-11-11"^^xsd:date ;
+    dcterms:modified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

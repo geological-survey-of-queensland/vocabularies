@@ -1,0 +1,162 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/grain-size/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/grain-size>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:boulder
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for boulder"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "BOULDER" ;
+    skos:prefLabel "boulder"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:c-sand
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for c. sand"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "C. SAND" ;
+    skos:prefLabel "c. sand"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:clay
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for clay"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "CLAY" ;
+    skos:prefLabel "clay"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:cobble
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for cobble"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "COBBLE" ;
+    skos:prefLabel "cobble"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:f-sand
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for f. sand"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "F. SAND" ;
+    skos:prefLabel "f. sand"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:granule
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for granule"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "GRANULE" ;
+    skos:prefLabel "granule"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:m-sand
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for m. sand"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "M. SAND" ;
+    skos:prefLabel "m. sand"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:pebble
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for pebble"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "PEBBLE" ;
+    skos:prefLabel "pebble"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:silt
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for silt"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "SILT" ;
+    skos:prefLabel "silt"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:vc-sand
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for vc. sand"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "VC. SAND" ;
+    skos:prefLabel "vc. sand"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:vf-sand
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for vf. sand"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "VF. SAND" ;
+    skos:prefLabel "vf. sand"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Grain Size"@en ;
+    skos:hasTopConcept
+        :boulder ,
+        :c-sand ,
+        :clay ,
+        :cobble ,
+        :f-sand ,
+        :granule ,
+        :m-sand ,
+        :pebble ,
+        :silt ,
+        :vc-sand ,
+        :vf-sand ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list GRAIN_SIZE November 2023" ;
+    skos:notation "GRAIN_SIZE" ;
+    skos:prefLabel "Grain Size"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    dcterms:created "2023-11-11"^^xsd:date ;
+    dcterms:modified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

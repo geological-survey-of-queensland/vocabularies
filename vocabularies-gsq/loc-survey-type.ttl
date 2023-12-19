@@ -1,0 +1,126 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/loc-survey-type/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/loc-survey-type>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:agps
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for agps"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "AGPS" ;
+    skos:prefLabel "agps"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:dgps
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for dgps"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "DGPS" ;
+    skos:prefLabel "dgps"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:drone
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for drone"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "DRONE" ;
+    skos:prefLabel "drone"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:estimate
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for estimate"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "ESTIMATE" ;
+    skos:prefLabel "estimate"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:gps
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for gps"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "GPS" ;
+    skos:prefLabel "gps"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:lidar
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for lidar"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "LIDAR" ;
+    skos:prefLabel "lidar"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:pace-and-compass
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for pace and compass"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "PACE AND COMPASS" ;
+    skos:prefLabel "pace and compass"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:theodolite
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for theodolite"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "THEODOLITE" ;
+    skos:prefLabel "theodolite"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Loc Survey Type"@en ;
+    skos:hasTopConcept
+        :agps ,
+        :dgps ,
+        :drone ,
+        :estimate ,
+        :gps ,
+        :lidar ,
+        :pace-and-compass ,
+        :theodolite ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list LOC_SURVEY_TYPE November 2023" ;
+    skos:notation "LOC_SURVEY_TYPE" ;
+    skos:prefLabel "Loc Survey Type"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    dcterms:created "2023-11-11"^^xsd:date ;
+    dcterms:modified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

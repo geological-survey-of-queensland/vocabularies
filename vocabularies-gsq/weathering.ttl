@@ -1,0 +1,102 @@
+PREFIX : <https://linked.data.gov.au/def/gsq-geochem/weathering/>
+PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/weathering>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:completely-oxidised
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for completely oxidised"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "COMPLETELY OXIDISED" ;
+    skos:prefLabel "completely oxidised"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:completely-weathered
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for completely weathered"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "COMPLETELY WEATHERED" ;
+    skos:prefLabel "completely weathered"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:fresh
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for fresh"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "FRESH" ;
+    skos:prefLabel "fresh"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:moderately-weathered
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for moderately weathered"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "MODERATELY WEATHERED" ;
+    skos:prefLabel "moderately weathered"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:partially-weathered
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for partially weathered"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "PARTIALLY WEATHERED" ;
+    skos:prefLabel "partially weathered"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:strongly-weathered
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Definition for strongly weathered"@en ;
+    skos:historyNote "Taken from Geochem Excel exchange template v2" ;
+    skos:inScheme cs: ;
+    skos:notation "STRONGLY WEATHERED" ;
+    skos:prefLabel "strongly weathered"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.dat.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    skos:definition "Weathering"@en ;
+    skos:hasTopConcept
+        :completely-oxidised ,
+        :completely-weathered ,
+        :fresh ,
+        :moderately-weathered ,
+        :partially-weathered ,
+        :strongly-weathered ;
+    skos:historyNote "Created from the Geochemistry data exchange Excel Template v2, list WEATHERING November 2023" ;
+    skos:notation "WEATHERING" ;
+    skos:prefLabel "Weathering"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
+    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    dcterms:created "2023-11-11"^^xsd:date ;
+    dcterms:modified "2023-11-11"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+.
+

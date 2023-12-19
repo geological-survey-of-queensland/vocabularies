@@ -19,14 +19,14 @@ rdfs:Class a rdfs:Class ;
 
 rdfs:subClassOf a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "subClassOf" ;
+	rdfs:label "subclass of" ;
 	rdfs:comment "The subject is a subclass of a class." ;
 	rdfs:range rdfs:Class ;
 	rdfs:domain rdfs:Class .
 
 rdfs:subPropertyOf a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "subPropertyOf" ;
+	rdfs:label "subproperty of" ;
 	rdfs:comment "The subject is a subproperty of a property." ;
 	rdfs:range rdf:Property ;
 	rdfs:domain rdf:Property .
@@ -61,7 +61,7 @@ rdfs:range a rdf:Property ;
 
 rdfs:seeAlso a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "seeAlso" ;
+	rdfs:label "see also" ;
 	rdfs:comment "Further information about the subject resource." ;
 	rdfs:range rdfs:Resource ;
 	rdfs:domain rdfs:Resource .
@@ -69,7 +69,7 @@ rdfs:seeAlso a rdf:Property ;
 rdfs:isDefinedBy a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
 	rdfs:subPropertyOf rdfs:seeAlso ;
-	rdfs:label "isDefinedBy" ;
+	rdfs:label "is defined by" ;
 	rdfs:comment "The defininition of the subject resource." ;
 	rdfs:range rdfs:Resource ;
 	rdfs:domain rdfs:Resource .
@@ -88,7 +88,7 @@ rdfs:Container a rdfs:Class ;
 
 rdfs:ContainerMembershipProperty a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "ContainerMembershipProperty" ;
+	rdfs:label "Container Membership Property" ;
 	rdfs:comment """The class of container membership properties, rdf:_1, rdf:_2, ...,
                     all of which are sub-properties of 'member'.""" ;
 	rdfs:subClassOf rdf:Property .
