@@ -1,6 +1,8 @@
 PREFIX : <https://linked.data.gov.au/def/gsq-geochem/structural-feature/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/gsq-geochem/structural-feature>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -138,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-<https://linked.dat.gov.au/org/gsq>
+<https://linked.data.gov.au/org/gsq>
     a sdo:Organization ;
     sdo:name "Geological Survey of Queensland" ;
     sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
@@ -147,6 +149,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 cs:
     a skos:ConceptScheme ;
     sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geochemistry> ;
+    reg:status agldwgstatus:experimental ;
     skos:definition "Structural Feature"@en ;
     skos:hasTopConcept
         :bedding ,
@@ -165,10 +168,10 @@ cs:
     skos:notation "STRUCTURAL_FEATURE" ;
     skos:prefLabel "Structural Feature"@en ;
     sdo:copyrightNotice "(c) Geological Survey of Queensland, 2023" ;
-    sdo:creator <https://linked.dat.gov.au/org/gsq> ;
+    sdo:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:created "2023-11-11"^^xsd:date ;
     dcterms:modified "2023-11-11"^^xsd:date ;
     sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
-    sdo:publisher <https://linked.dat.gov.au/org/gsq> ;
+    sdo:publisher <https://linked.data.gov.au/org/gsq> ;
 .
 
