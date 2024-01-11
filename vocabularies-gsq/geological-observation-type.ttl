@@ -90,7 +90,8 @@ obstp:seismic-obs
     skos:member
         obstp:seismic-2d ,
         obstp:seismic-3d ,
-        obstp:seismic-4d ;
+        obstp:seismic-4d ,
+        obstp:seismic-passive ;
     skos:prefLabel "Seismic Observations"@en ;
 .
 
@@ -164,7 +165,8 @@ obstp:survey-obs
         obstp:radiometric ,
         obstp:seismic-2d ,
         obstp:seismic-3d ,
-        obstp:seismic-4d ;
+        obstp:seismic-4d ,
+        obstp:seismic-passive ;
     skos:prefLabel "Survey Observations"@en ;
 .
 
@@ -670,6 +672,20 @@ obstp:seismic-4d
     skos:topConceptOf cs: ;
 .
 
+obstp:seismic-passive
+    a skos:Concept ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Passive Seismic Survey"@en ,
+         "Ambient Noise Tomography"@en ;
+    skos:definition "Passive seismic is the detection of natural, usually low frequency earth movements, with the purpose of discerning geological structure or resources"@en ;
+    skos:inScheme cs: ;
+    skos:notation "PS" ;
+    skos:prefLabel "Passive Seismic"@en ;
+    skos:topConceptOf cs: ;
+.
+
 obstp:tectonic-structures
     a skos:Concept ;
     skos:historyNote "Compiled by the Geological Survey of Queensland" ;
@@ -969,6 +985,7 @@ cs:
         obstp:seismic-2d ,
         obstp:seismic-3d ,
         obstp:seismic-4d ,
+        obstp:seismic-passive ,
         obstp:strat-int ,
         obstp:tectonic-structures ,
         obstp:textures ,
