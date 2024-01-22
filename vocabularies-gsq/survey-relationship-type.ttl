@@ -122,13 +122,19 @@ cs:
         skos:ConceptScheme ;
     dcterms:created "2020-04-08"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2023-03-16"^^xsd:date ;
+    dcterms:modified "2024-01-23"^^xsd:date ;
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     reg:status agldwgstatus:stable ;
     skos:definition "The relationships that exist between surveys."@en ;
     skos:hasTopConcept
+        srt:dependent ,
+        srt:extension ,
         srt:follow-up ,
+        srt:independent ,
+        srt:infill ,
+        srt:repeat ,
+        srt:reprocessed-from ,
         srt:reprocessing ,
         srt:resampling ,
         srt:same-project ;
