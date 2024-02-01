@@ -314,6 +314,15 @@ crudtype:geological_property
     skos:topConceptOf cs: ;
 .
 
+crudtype:geological_property_result
+    a skos:Concept ;
+    dcterms:provenance"Developed by the Geological Survey of Queensland." ;
+    skos:definition"A csv file with a name of geological_property_result.csv"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel"geological_property_result.csv"@en ;
+    skos:topConceptOf cs: ;
+.
+
 crudtype:observation_feature
     a skos:Concept ;
     dcterms:provenance"Developed by the Geological Survey of Queensland." ;
@@ -365,6 +374,15 @@ crudtype:party_role
     skos:definition"A csv file with a name of party_role.csv"@en ;
     skos:inScheme cs: ;
     skos:prefLabel"party_role.csv"@en ;
+    skos:topConceptOf cs: ;
+.
+
+crudtype:person_detail 
+    a skos:Concept ;
+    dcterms:provenance"Developed by the Geological Survey of Queensland." ;
+    skos:definition"A csv file with a name of person_detail.csv"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel"person_detail.csv"@en ;
     skos:topConceptOf cs: ;
 .
 
@@ -499,13 +517,15 @@ cs:
                 crudtype:feature , 
                 crudtype:feature_alias , 
                 crudtype:feature_relationship , 
-                crudtype:geological_property , 
+                crudtype:geological_property ,
+                crudtype:geological_property_result,
                 crudtype:observation_feature , 
                 crudtype:organisation_detail , 
                 crudtype:party , 
                 crudtype:party_identifier , 
                 crudtype:party_relationship , 
                 crudtype:party_role , 
+                crudtype:person_detail,
                 crudtype:phone , 
                 crudtype:phone_detail , 
                 crudtype:report_feature , 
