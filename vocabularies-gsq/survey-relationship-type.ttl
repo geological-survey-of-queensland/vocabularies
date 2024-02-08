@@ -63,31 +63,31 @@ srt:reprocessing
     a skos:Concept ;
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
     rdfs:isDefinedBy cs: ;
+    skos:broader srt:follow-up ;
     skos:definition "The relationship type applied to a related reprocessed survey to indicate that survey is the reprocessing job. Only used for related surveys within an original survey record to identify a related reprocessed survey."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Reprocessing"@en ;
-    skos:topConceptOf cs: ;
 .
 
 srt:reprocessed-from
     a skos:Concept ;
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
     rdfs:isDefinedBy cs: ;
+    skos:broader srt:follow-up ;
     skos:definition "The relationship type applied to a related original survey to indicate that survey is an original acquisition. Only used for related surveys within a reprocessing survey record to identify the original survey(s) utilised in the reprocessing job."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Reprocessed From"@en ;
-    skos:topConceptOf cs: ;
 .
 
 srt:resampling
     a skos:Concept ;
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
     rdfs:isDefinedBy cs: ;
+    skos:broader srt:follow-up ;
     skos:altLabel "subsampling"@en ;
     skos:definition "Generating a new physical sample from an existing sample."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Resampling"@en ;
-    skos:topConceptOf cs: ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -122,21 +122,13 @@ cs:
         skos:ConceptScheme ;
     dcterms:created "2020-04-08"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2024-01-23"^^xsd:date ;
+    dcterms:modified "2024-02-08"^^xsd:date ;
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     reg:status agldwgstatus:stable ;
     skos:definition "The relationships that exist between surveys."@en ;
     skos:hasTopConcept
-        srt:dependent ,
-        srt:extension ,
         srt:follow-up ,
-        srt:independent ,
-        srt:infill ,
-        srt:repeat ,
-        srt:reprocessed-from ,
-        srt:reprocessing ,
-        srt:resampling ,
         srt:same-project ;
     skos:prefLabel "Survey relationship type"@en ;
 .
