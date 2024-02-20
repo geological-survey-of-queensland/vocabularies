@@ -16,7 +16,7 @@ srt:dependent
     skos:broader srt:same-project ;
     skos:definition "A survey that was conducted during the course of a single project that was dependent on the completion of the referenced survey, i.e. a survey that is part of the same project as another survey but is reliant on the other survey has been conducted."@en ;
     skos:inScheme cs: ;
-    skos:prefLabel "Same Project - Dependent"@en ;
+    skos:prefLabel "Same Project - dependent"@en ;
 .
 
 srt:extension
@@ -63,6 +63,7 @@ srt:reprocessing
     a skos:Concept ;
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
     rdfs:isDefinedBy cs: ;
+    skos:broader srt:follow-up ;
     skos:definition "The relationship type applied to a related reprocessed survey to indicate that survey is the reprocessing job. Only used for related surveys within an original survey record to identify a related reprocessed survey."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Reprocessing"@en ;
@@ -73,6 +74,7 @@ srt:reprocessed-from
     a skos:Concept ;
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
     rdfs:isDefinedBy cs: ;
+    skos:broader srt:follow-up ;
     skos:definition "The relationship type applied to a related original survey to indicate that survey is an original acquisition. Only used for related surveys within a reprocessing survey record to identify the original survey(s) utilised in the reprocessing job."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Reprocessed From"@en ;
@@ -83,6 +85,7 @@ srt:resampling
     a skos:Concept ;
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
     rdfs:isDefinedBy cs: ;
+    skos:broader srt:follow-up ;
     skos:altLabel "subsampling"@en ;
     skos:definition "Generating a new physical sample from an existing sample."@en ;
     skos:inScheme cs: ;
@@ -129,8 +132,6 @@ cs:
     skos:definition "The relationships that exist between surveys."@en ;
     skos:hasTopConcept
         srt:follow-up ,
-        srt:reprocessing ,
-        srt:resampling ,
         srt:same-project ;
     skos:prefLabel "Survey relationship type"@en ;
 .
