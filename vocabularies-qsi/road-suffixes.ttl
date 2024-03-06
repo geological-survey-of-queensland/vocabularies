@@ -12,6 +12,33 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<https://linked.data.gov.au/def/qld-road-suffixes>
+    a skos:Collection ;
+    skos:definition "Queensland specific road suffixes." ;
+    skos:inScheme cs: ;
+    skos:member
+        :central ,
+        :east ,
+        :extension ,
+        :lower ,
+        :north ,
+        :north-east ,
+        :north-west ,
+        :south ,
+        :south-east ,
+        :south-west ,
+        :upper ,
+        :west ;
+    skos:prefLabel "Queensland Road Suffixes" ;
+    prov:wasDerivedFrom cs: ;
+.
+
+<https://linked.data.gov.au/org/qsi>
+    a sdo:Organization ;
+    sdo:name "Queensland Spatial Information" ;
+    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
+.
+
 :central
     a skos:Concept ;
     dcterms:source "AS 4590.1:2017 | Standards Australia"^^xsd:anyURI ;
@@ -156,12 +183,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-<https://linked.data.gov.au/org/qsi>
-    a sdo:Organization ;
-    sdo:name "Queensland Spatial Information" ;
-    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
-.
-
 <https://linked.data.gov.au/org/icsm>
     a sdo:Organization ;
     sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
@@ -170,7 +191,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
-    sdo:keywords themes:transport ;
     dcterms:created "2023-05-15"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:modified "2023-11-30"^^xsd:date ;
@@ -194,10 +214,10 @@ cs:
         :west ;
     skos:historyNote "This vocabulary contains road suffixes in common usage at the time of publishing. These are sourced from standard AS4590.1:2017"@en ;
     skos:prefLabel "Road Suffixes"@en ;
-    prov:qualifiedAttribution
-        [
-            prov:hadRole isoroles:custodian ;
-            prov:agent <https://linked.data.gov.au/org/icsm>
+    prov:qualifiedAttribution [
+            prov:agent <https://linked.data.gov.au/org/icsm> ;
+            prov:hadRole isoroles:custodian
         ] ;
+    sdo:keywords themes:transport ;
 .
 
