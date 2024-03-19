@@ -1,4 +1,5 @@
 PREFIX cs: <https://linked.data.gov.au/def/go-categories>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
@@ -5797,6 +5798,8 @@ cs:deep
 
 cs:
     a skos:ConceptScheme ;
+    dcterms:created "2015-01-01"^^xsd:date ;
+    dcterms:modified "2024-03-19"^^xsd:date ;
     reg:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     owl:versionIRI <https://linked.data.gov.au/def/go-categories/1.0.1> ;
     skos:definition "A hierarchy of Geographical (Place) Object categories"@en ;
@@ -5822,23 +5825,20 @@ cs:
         cs:waterbody ;
     skos:historyNote "This vocabulary was originally generated from the Geoscience Australia's Composite Gazetteer of Australia, and has been amended by the Department of Resources to refine and expand the vocabulary."@en ;
     skos:prefLabel "Geographical Object Categories"@en ;
-    schema:creator
-        [
+    schema:creator [
             a schema:Organization ;
             schema:name "Place Names Working Group" ;
-            schema:url ""^^xsd:anyURI ;
+            schema:url ""^^xsd:anyURI
         ] ;
-    schema:dateCreated "2015-01-01"^^xsd:date ;
-    schema:dateModified "2024-03-19"^^xsd:date ;
     schema:keywords
         "Geographic Names" ,
         "Geographic Objects" ,
         "Place Names" ;
-    schema:publisher
-        [
+    schema:publisher [
             a schema:Organization ;
             schema:name "Department Of Resources" ;
-            schema:url ""^^xsd:anyURI ;
+            schema:url ""^^xsd:anyURI
         ] ;
     schema:version "1.0.1" ;
 .
+
