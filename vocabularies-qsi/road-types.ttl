@@ -12,6 +12,154 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<https://linked.data.gov.au/def/qld-road-types>
+    a skos:Collection ;
+    skos:definition "Queensland specific road types." ;
+    skos:inScheme cs: ;
+    skos:member
+        :alley ,
+        :anchorage ,
+        :annex ,
+        :approach ,
+        :arcade ,
+        :artery ,
+        :avenue ,
+        :bank ,
+        :beach ,
+        :boardwalk ,
+        :boulevard ,
+        :break ,
+        :broadwalk ,
+        :busway ,
+        :bypass ,
+        :byway ,
+        :centre ,
+        :centreway ,
+        :chase ,
+        :circle ,
+        :circlet ,
+        :circuit ,
+        :close ,
+        :cluster ,
+        :colonnade ,
+        :concord ,
+        :concourse ,
+        :course ,
+        :court ,
+        :crescent ,
+        :crest ,
+        :crief ,
+        :crook ,
+        :cruiseway ,
+        :cul-de-sac ,
+        :dash ,
+        :dene ,
+        :dip ,
+        :distributor ,
+        :divide ,
+        :dock ,
+        :domain ,
+        :down ,
+        :drive ,
+        :entrance ,
+        :esplanade ,
+        :estate ,
+        :firetrack ,
+        :firetrail ,
+        :flat ,
+        :flats ,
+        :footway ,
+        :ford ,
+        :foreshore ,
+        :fork ,
+        :freeway ,
+        :front ,
+        :garden ,
+        :glade ,
+        :grange ,
+        :green ,
+        :greens ,
+        :grove ,
+        :harbour ,
+        :highroad ,
+        :highway ,
+        :hollow ,
+        :hub ,
+        :keys ,
+        :knoll ,
+        :ladder ,
+        :lane ,
+        :leader ,
+        :loop ,
+        :lynne ,
+        :mall ,
+        :manor ,
+        :mead ,
+        :mew ,
+        :mews ,
+        :parade ,
+        :parkway ,
+        :part ,
+        :passage ,
+        :path ,
+        :piazza ,
+        :place ,
+        :plaza ,
+        :pocket ,
+        :precinct ,
+        :promenade ,
+        :pursuit ,
+        :quad ,
+        :quay ,
+        :quays ,
+        :ramp ,
+        :range ,
+        :reach ,
+        :reef ,
+        :reserve ,
+        :rest ,
+        :retreat ,
+        :return ,
+        :ride ,
+        :ridge ,
+        :ring ,
+        :rise ,
+        :rising ,
+        :road ,
+        :roads ,
+        :rue ,
+        :serviceway ,
+        :siding ,
+        :skyline ,
+        :square ,
+        :steps ,
+        :straight ,
+        :strand ,
+        :street ,
+        :subway ,
+        :terrace ,
+        :tollway ,
+        :track ,
+        :trail ,
+        :traverse ,
+        :triangle ,
+        :trunkway ,
+        :twist ,
+        :viaduct ,
+        :view ,
+        :vista ,
+        :vue ,
+        :wade ,
+        :walk ,
+        :way ,
+        :wharf ,
+        :wood ,
+        :woods ,
+        :yard ;
+    skos:prefLabel "Queensland Road Types" ;
+    prov:wasDerivedFrom cs: ;
+.
+
 :access
     a skos:Concept ;
     dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
@@ -37,22 +185,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Access Road"@en ;
     skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:alley
-    a skos:Concept ;
-    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "ALLY"@en-AU ,
-        "Ally"@en-AU ,
-        "ALY"@en-NZ ,
-        "Aly"@en-NZ ;
-    skos:definition "Usually narrow roadway in cities or towns, often through city blocks or squares"@en ;
-    skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, VIC, WA, NZ roads data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Alley"@en ;
     skos:topConceptOf cs: ;
 .
 
@@ -86,43 +218,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:anchorage
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "ANCG"@en ;
-    skos:definition "Anchorage"@en ;
-    skos:historyNote "VIC address data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Anchorage"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:annex
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "ANNX"@en ;
-    skos:definition "Annex"@en ;
-    skos:historyNote "QLD address data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Annex"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:approach
-    a skos:Concept ;
-    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "APP"@en ,
-        "App"@en ;
-    skos:definition "Roadway leading to an area of community interest (e.g. public open space, commercial area, beach etc.). Should be an open ended thoroughfare"@en ;
-    skos:historyNote "AS/NZS4819:2011 (Australia only), AS4590.1:2017, NSW, QLD, VIC, WA roads data. Definition from AS/NZS4819:2011." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Approach"@en ;
-    skos:scopeNote "Australia only" ;
-    skos:topConceptOf cs: ;
-.
-
 :ara
     a skos:Concept ;
     dcterms:source "https://www.linz.govt.nz/resources/regulatory/guidelines-addressing-fill-developments-2019-linz-op-g-01245"^^xsd:anyURI ;
@@ -138,20 +233,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:arcade
-    a skos:Concept ;
-    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "ARC"@en ,
-        "Arc"@en ;
-    skos:definition "Passage having an arched roof, or any covered passageway, especially one with shops along the sides. Indicates a pedestrian only thoroughfare"@en ;
-    skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Arcade"@en ;
-    skos:topConceptOf cs: ;
-.
-
 :arterial
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -163,33 +244,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Arterial"@en ;
     skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:artery
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "ARTY"@en ;
-    skos:definition "Artery"@en ;
-    skos:historyNote "VIC address data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Artery"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:avenue
-    a skos:Concept ;
-    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "AV"@en-AU ,
-        "Av"@en-AU ,
-        "AVE"@en-NZ ,
-        "Ave"@en-NZ ;
-    skos:definition "Broad roadway, usually planted on each side with trees. Should be an open ended thoroughfare"@en ;
-    skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Avenue"@en ;
     skos:topConceptOf cs: ;
 .
 
@@ -208,17 +262,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:bank
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "BANK"@en ;
-    skos:definition "Bank"@en ;
-    skos:historyNote "VIC address data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Bank"@en ;
-    skos:topConceptOf cs: ;
-.
-
 :bay
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -228,17 +271,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Bay"@en ;
     skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:beach
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "BCH"@en ;
-    skos:definition "Beach"@en ;
-    skos:historyNote "QLD, VIC address data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Beach"@en ;
     skos:topConceptOf cs: ;
 .
 
@@ -268,37 +300,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Bend"@en ;
     skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:boardwalk
-    a skos:Concept ;
-    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "BWLK"@en ,
-        "Bwlk"@en ;
-    skos:definition "Promenade or path, especially of wooden planks, for pedestrians and sometimes vehicles, along or overlooking a beach or waterfront. Indicates a pedestrian only thoroughfare"@en ;
-    skos:historyNote "AS/NZS4819:2011 (Australia only), AS4590.1:2017, NSW, QLD, TAS, VIC, WA roads data. Definition from AS/NZS4819:2011." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Boardwalk"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:boulevard
-    a skos:Concept ;
-    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "Boulevarde"@en ,
-        "BVD"@en-AU ,
-        "Bvd"@en-AU ,
-        "BLVD"@en-NZ ,
-        "Blvd"@en-NZ ;
-    skos:definition "Wide roadway, well paved, usually ornamented with trees and grass plots. Should be an open ended thoroughfare"@en ;
-    skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Boulevard"@en ;
     skos:topConceptOf cs: ;
 .
 
@@ -346,20 +347,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:break
-    a skos:Concept ;
-    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "BRK"@en ,
-        "Brk"@en ;
-    skos:definition "Vehicular access on a formed or unformed surface, which was originally prepared as a firebreak. Should be an open ended thoroughfare"@en ;
-    skos:historyNote "AS/NZS4819:2011 (Australia only), AS4590.1:2017, NSW, QLD, VIC, WA roads data. Definition from AS/NZS4819:2011." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Break"@en ;
-    skos:topConceptOf cs: ;
-.
-
 :bridge
     a skos:Concept ;
     dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
@@ -374,17 +361,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Bridge"@en ;
     skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:broadwalk
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "BRDWLK"@en ;
-    skos:definition "Broadwalk"@en ;
-    skos:historyNote "G-NAF address data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Broadwalk"@en ;
     skos:topConceptOf cs: ;
 .
 
@@ -412,6 +388,1453 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Brow"@en ;
     skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:causeway
+    a skos:Concept ;
+    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CSWY"@en ,
+        "Cswy"@en ;
+    skos:definition "A raised road that passes across low or swampy ground or water"@en ;
+    skos:historyNote "VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Causeway"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:circus
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CRCS"@en ,
+        "Crcs"@en ;
+    skos:definition "A round open area where several streets join together"@en ;
+    skos:historyNote "QLD, TAS, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Circus"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:common
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CMMN"@en ,
+        "CMN"@en ,
+        "Cmmn"@en ,
+        "Cmn"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "VIC, NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Common"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:connection
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CNTN"@en ,
+        "Cntn"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Connection"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:copse
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CPS"@en ,
+        "Cps"@en ;
+    skos:definition "A roadway running through or to a public open space"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Copse"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:corner
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CNR"@en ,
+        "Cnr"@en ;
+    skos:definition "A roadway containing a sharp bend or corner"@en ;
+    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Corner"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:corso
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CSO"@en ,
+        "Cso"@en ;
+    skos:definition "A main central street, usually lined with shops, cafe and restaurants. An Italian road type"@en ;
+    skos:historyNote "QLD, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Corso"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:courts
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CRTSCrts"@en ,
+        "CTS"@en ,
+        "Cts"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Courts"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:courtyard
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CTYD"@en ,
+        "Ctyd"@en ;
+    skos:definition "An enclosed area"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Courtyard"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:cove
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "COVE"@en ,
+        "CV"@en ,
+        "Cv"@en ;
+    skos:definition "A short-enclosed roadway"@en ;
+    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Cove"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:cross
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CRSS"@en ,
+        "Crss"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Cross"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:crossing
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CRSG"@en ,
+        "Crsg"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Crossing"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:cutting
+    a skos:Concept ;
+    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "CUTT"@en ,
+        "Cutt"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Cutting"@en ;
+    skos:scopeNote "Victoria only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:dale
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "DALE"@en ;
+    skos:definition "A roadway situated between hills"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Dale"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:dell
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "DEL"@en ,
+        "DELL"@en ,
+        "Del"@en ,
+        "Dell"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "VIC, NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Dell"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:deviation
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "DE"@en ,
+        "De"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Deviation"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:downs
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "DWNS"@en ,
+        "Dwns"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Downs"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:driveway
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "DVWY"@en ,
+        "Dvwy"@en ;
+    skos:definition "Usually a private road giving access from a public way to a building on abutting grounds"@en ;
+    skos:historyNote "QLD, VIC roads data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Driveway"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:easement
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "EASE"@en ,
+        "Ease"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Easement"@en ;
+    skos:scopeNote "Queensland only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:edge
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "EDGE"@en ;
+    skos:definition "A roadway constructed along the edge of a cliff or ridge"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Edge"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:elbow
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "ELB"@en ,
+        "Elb"@en ;
+    skos:definition "A roadway containing a sharp bend or turn"@en ;
+    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Elbow"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:end
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "END"@en ;
+    skos:definition "A short enclosed roadway"@en ;
+    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "End"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:expressway
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "EXP"@en ,
+        "EXPY"@en ,
+        "Exp"@en ,
+        "Expy"@en ;
+    skos:definition "A highway planned for high-speed traffic, usually having few if any intersections, limited points of access or exits"@en ;
+    skos:historyNote "VIC, NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Expressway"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:fairway
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "FAWA"@en ,
+        "FAWY"@en ,
+        "Fawa"@en ,
+        "Fawy"@en ;
+    skos:definition "A short open roadway between other roadways"@en ;
+    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Fairway"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:firebreak
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "FBRK"@en ,
+        "Fbrk"@en ;
+    skos:definition "Access on a formed or unformed surface, which was originally prepared as a firebreak"@en ;
+    skos:historyNote "QLD, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Firebreak"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:fireline
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "FLNE"@en ,
+        "Flne"@en ;
+    skos:definition "Access on a formed or unformed surface, which was originally prepared as a firebreak"@en ;
+    skos:historyNote "QLD, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Fireline"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:follow
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "FOLW"@en ,
+        "Folw"@en ;
+    skos:definition "A roadway meandering through wooded or undulating country"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Follow"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:formation
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "FORM"@en ,
+        "Form"@en ;
+    skos:definition "A formed surface, once a timber railway which now provides vehicular access"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Formation"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:frontage
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "FRTG"@en ,
+        "Frtg"@en ;
+    skos:definition "A roadway passing a point of interest or significance with lots fronting only one side, eg, Public Open Space, coastline, etc"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Frontage"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:gap
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "GAP"@en ;
+    skos:definition "A roadway that traverses a passage or pass through a ridge or hill"@en ;
+    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gap"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:gardens
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "GDNS"@en ,
+        "Gdns"@en ;
+    skos:definition "A roadway with special plantings of trees, flowers, etc, and often leading to a place for public enjoyment"@en ;
+    skos:historyNote "QLD, TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gardens"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:gate
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "GTE"@en ,
+        "Gte"@en ;
+    skos:definition "A roadway leading into an estate, main entrance to a focal point, Public Open Space, shopping area, etc"@en ;
+    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gate"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:gateway
+    a skos:Concept ;
+    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "GTWY"@en ,
+        "Gtwy"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gateway"@en ;
+    skos:scopeNote "Victoria only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:glen
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "GLEN"@en ,
+        "GLN"@en ,
+        "Gln"@en ;
+    skos:definition "A roadway usually in a valley of trees"@en ;
+    skos:historyNote "QLD, TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Glen"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:gully
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "GLY"@en ,
+        "Gly"@en ;
+    skos:definition "A short roadway through a steep valley or gully"@en ;
+    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gully"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:haven
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "HVN"@en ,
+        "Hvn"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD, VIC, NZ roads data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Haven"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:heath
+    a skos:Concept ;
+    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "HTH"@en ,
+        "Hth"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Heath"@en ;
+    skos:scopeNote "Victoria only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:heights
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "HTS"@en ,
+        "Hts"@en ;
+    skos:definition "A roadway traversing high ground"@en ;
+    skos:historyNote "QLD, TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Heights"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:hill
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "HI"@en ,
+        "HILL"@en ,
+        "Hi"@en ;
+    skos:definition "A roadway going up a natural rise"@en ;
+    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Hill"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:interchange
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "INTG"@en ,
+        "Intg"@en ;
+    skos:definition "A highway or freeway junction designed so that traffic streams do not intersect"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Interchange"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:junction
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "JNC"@en ,
+        "Jnc"@en ;
+    skos:definition "A roadway making a transition from a major to a minor road in an estate, etc. A through road leading from one minor road to another as a link"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Junction"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:key
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "KEY"@en ,
+        "Key"@en ;
+    skos:definition "A roadway which serves as an entry to an estate or stage of development as a feature or landscaped entry with controlled access"@en ;
+    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Key"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:landing
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "LDG"@en ,
+        "LNDG"@en ,
+        "Ldg"@en ,
+        "Lndg"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD, VIC, NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Landing"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:laneway
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "LNWY"@en ,
+        "Lnwy"@en ;
+    skos:definition "Narrow lane or path"@en ;
+    skos:historyNote "QLD, VIC roads data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Laneway"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:line
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "LINE"@en ;
+    skos:definition "A generally long and straight road"@en ;
+    skos:historyNote "VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Line"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:link
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "LINK"@en ;
+    skos:definition "A roadway which links similar land uses, ie pockets of residential, other roadways, etc"@en ;
+    skos:historyNote "QLD, TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Link"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:lookout
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "LKT"@en ;
+    skos:definition "A roadway leading to or having a view of fine natural scenery"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Lookout"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:loop-road
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Loop Rd"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "NZ roads data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Loop Road"@en ;
+    skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:meander
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "MNDR"@en ;
+    skos:definition "A sinuous winding roadway, wandering at random through an area or subdivision"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Meander"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:mile
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "MILE"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Mile"@en ;
+    skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:motorway
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "MWY"@en ,
+        "Mwy"@en ;
+    skos:definition "A dual-carriageway roadway designed for fast traffic, with relatively few places for joining or leaving"@en ;
+    skos:historyNote "QLD, VIC, NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Motorway"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:nook
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "NOOK"@en ;
+    skos:definition "A short, secluded roadway with limited frontage indicating privacy"@en ;
+    skos:historyNote "TAS, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Nook"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:oaks
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "OAKS"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Oaks"@en ;
+    skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:outlet
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "OTLT"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "TAS, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Outlet"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:outlook
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "OTLK"@en ;
+    skos:definition "A roadway leading to an area which affords a view across surrounding areas"@en ;
+    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Outlook"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:paddock
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "PADK"@en ,
+        "Padk"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Paddock"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:park
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "PARK"@en ,
+        "PK"@en ,
+        "Pk"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD, TAS, VIC, NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Park"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:pass
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "PASS"@en ;
+    skos:definition "A roadway connecting major thoroughfares or running through hills"@en ;
+    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Pass"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:pathway
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "PHWY"@en ,
+        "PWAY"@en ,
+        "Phwy"@en ,
+        "Pway"@en ;
+    skos:definition "A narrow roadway of any length meandering through an estate"@en ;
+    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Pathway"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:point
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "PNT"@en ,
+        "PT"@en ,
+        "Pnt"@en ,
+        "Pt"@en ;
+    skos:definition "A roadway leading to a focal point or river frontage"@en ;
+    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Point"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:port
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "PORT"@en ;
+    skos:definition "A small roadway abutting a harbour, inlet, marina etc, in a coastal development"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Port"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:quadrant
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "QDRT"@en ,
+        "Qdrt"@en ;
+    skos:definition "A loop road forming a circular path or a curved deviation from another road"@en ;
+    skos:historyNote "TAS, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Quadrant"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:ramble
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "RMBL"@en ,
+        "Rmbl"@en ;
+    skos:definition "A roadway that meanders from place to place"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Ramble"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:roadway
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "RDWY"@en ,
+        "Rdwy"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Roadway"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:rotary
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "RTY"@en ,
+        "Rty"@en ;
+    skos:definition "An intersection of two or more carriageways at a common level where all traffic travels around a central island"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Rotary"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:round
+    a skos:Concept ;
+    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "RND"@en ,
+        "Rnd"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Round"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:route
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "RTE"@en ,
+        "Rte"@en ;
+    skos:definition "A roadway, allowing steady traffic flow with limited cross streets"@en ;
+    skos:historyNote "TAS, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Route"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:row
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "ROW"@en ;
+    skos:definition "A roadway with a line of professional buildings on either side"@en ;
+    skos:historyNote "QLD, TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Row"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:run
+    a skos:Concept ;
+    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "RUN"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Run"@en ;
+    skos:scopeNote "Victoria only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:shunt
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "SHUN"@en ,
+        "Shun"@en ;
+    skos:definition "A short, dead end track used in State Forests only"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Shunt"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:side-road
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Side Rd"@en ;
+    skos:definition "A minor or subsidiary road, especially one joining or diverging from a main road. Usually accessed from a road with the same name"@en ;
+    skos:historyNote "NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Side Road"@en ;
+    skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:slope
+    a skos:Concept ;
+    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "SLPE"@en ,
+        "Slpe"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Slope"@en ;
+    skos:scopeNote "Victoria only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:spur
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "SPUR"@en ;
+    skos:definition "A minor roadway running off at less than 45 degrees"@en ;
+    skos:historyNote "TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Spur"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:strait
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "STRI"@en ,
+        "Stri"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD address data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Strait"@en ;
+    skos:scopeNote "Queensland only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:strip
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "STRP"@en ,
+        "Strp"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Strip"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:tarn
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "TARN"@en ;
+    skos:definition "A roadway surrounding or leading to a lake or some other water feature"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Tarn"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:te-ara
+    a skos:Concept ;
+    dcterms:source "https://www.linz.govt.nz/resources/regulatory/guidelines-addressing-fill-developments-2019-linz-op-g-01245"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "TE ARA"@en ;
+    skos:definition "Roadway"@en ;
+    skos:historyNote "NZ address data. Definition from NZ guidelines for addressing in-fill developments." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Te Ara"@en ;
+    skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:top
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "TOP"@en ;
+    skos:definition "A roadway constructed at the highest part of an area"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Top"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:tor
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "TOR"@en ;
+    skos:definition "A roadway along a rocky height or hillside"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Tor"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:tunnel
+    a skos:Concept ;
+    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "TUNL"@en ,
+        "Tunl"@en ;
+    skos:definition "Roadway through an underground passageway"@en ;
+    skos:historyNote "VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Tunnel"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:turn
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "TURN"@en ;
+    skos:definition "A roadway containing a sharp bend or turn"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Turn"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:underpass
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "UPAS"@en ,
+        "Upas"@en ;
+    skos:definition "A roadway passing under another road, railway, bridge, etc"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Underpass"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:vale
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "VALE"@en ;
+    skos:definition "A roadway along low ground between hills"@en ;
+    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Vale"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:valley
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "VLLY"@en ,
+        "VLY"@en ,
+        "Vlly"@en ,
+        "Vly"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "VIC, NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Valley"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:views
+    a skos:Concept ;
+    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "VEWS"@en ,
+        "VWS"@en ,
+        "Vews"@en ,
+        "Vws"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "VIC, NZ roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Views"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:walkway
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "WKWY"@en ,
+        "Wkwy"@en ;
+    skos:definition "A roadway on which traffic travels at a slow pace. A meandering tree-lined road"@en ;
+    skos:historyNote "TAS, VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Walkway"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:waters
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "WAT"@en ,
+        "Wat"@en ;
+    skos:definition "No known definition"@en ;
+    skos:historyNote "QLD, VIC roads data." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Waters"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+:wynd
+    a skos:Concept ;
+    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "WYND"@en ;
+    skos:definition "A short narrow roadway or alley"@en ;
+    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Wynd"@en ;
+    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/qsi>
+    a sdo:Organization ;
+    sdo:name "Queensland Spatial Information" ;
+    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
+.
+
+:alley
+    a skos:Concept ;
+    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "ALLY"@en-AU ,
+        "Ally"@en-AU ,
+        "ALY"@en-NZ ,
+        "Aly"@en-NZ ;
+    skos:definition "Usually narrow roadway in cities or towns, often through city blocks or squares"@en ;
+    skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, VIC, WA, NZ roads data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Alley"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:anchorage
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "ANCG"@en ;
+    skos:definition "Anchorage"@en ;
+    skos:historyNote "VIC address data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Anchorage"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:annex
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "ANNX"@en ;
+    skos:definition "Annex"@en ;
+    skos:historyNote "QLD address data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Annex"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:approach
+    a skos:Concept ;
+    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "APP"@en ,
+        "App"@en ;
+    skos:definition "Roadway leading to an area of community interest (e.g. public open space, commercial area, beach etc.). Should be an open ended thoroughfare"@en ;
+    skos:historyNote "AS/NZS4819:2011 (Australia only), AS4590.1:2017, NSW, QLD, VIC, WA roads data. Definition from AS/NZS4819:2011." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Approach"@en ;
+    skos:scopeNote "Australia only" ;
+    skos:topConceptOf cs: ;
+.
+
+:arcade
+    a skos:Concept ;
+    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "ARC"@en ,
+        "Arc"@en ;
+    skos:definition "Passage having an arched roof, or any covered passageway, especially one with shops along the sides. Indicates a pedestrian only thoroughfare"@en ;
+    skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Arcade"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:artery
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "ARTY"@en ;
+    skos:definition "Artery"@en ;
+    skos:historyNote "VIC address data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Artery"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:avenue
+    a skos:Concept ;
+    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "AV"@en-AU ,
+        "Av"@en-AU ,
+        "AVE"@en-NZ ,
+        "Ave"@en-NZ ;
+    skos:definition "Broad roadway, usually planted on each side with trees. Should be an open ended thoroughfare"@en ;
+    skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Avenue"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:bank
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "BANK"@en ;
+    skos:definition "Bank"@en ;
+    skos:historyNote "VIC address data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Bank"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:beach
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "BCH"@en ;
+    skos:definition "Beach"@en ;
+    skos:historyNote "QLD, VIC address data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Beach"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:boardwalk
+    a skos:Concept ;
+    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "BWLK"@en ,
+        "Bwlk"@en ;
+    skos:definition "Promenade or path, especially of wooden planks, for pedestrians and sometimes vehicles, along or overlooking a beach or waterfront. Indicates a pedestrian only thoroughfare"@en ;
+    skos:historyNote "AS/NZS4819:2011 (Australia only), AS4590.1:2017, NSW, QLD, TAS, VIC, WA roads data. Definition from AS/NZS4819:2011." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Boardwalk"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:boulevard
+    a skos:Concept ;
+    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Boulevarde"@en ,
+        "BVD"@en-AU ,
+        "Bvd"@en-AU ,
+        "BLVD"@en-NZ ,
+        "Blvd"@en-NZ ;
+    skos:definition "Wide roadway, well paved, usually ornamented with trees and grass plots. Should be an open ended thoroughfare"@en ;
+    skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Boulevard"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:break
+    a skos:Concept ;
+    dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "BRK"@en ,
+        "Brk"@en ;
+    skos:definition "Vehicular access on a formed or unformed surface, which was originally prepared as a firebreak. Should be an open ended thoroughfare"@en ;
+    skos:historyNote "AS/NZS4819:2011 (Australia only), AS4590.1:2017, NSW, QLD, VIC, WA roads data. Definition from AS/NZS4819:2011." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Break"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:broadwalk
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "BRDWLK"@en ;
+    skos:definition "Broadwalk"@en ;
+    skos:historyNote "G-NAF address data" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Broadwalk"@en ;
     skos:topConceptOf cs: ;
 .
 
@@ -450,21 +1873,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "VIC address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Byway"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:causeway
-    a skos:Concept ;
-    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CSWY"@en ,
-        "Cswy"@en ;
-    skos:definition "A raised road that passes across low or swampy ground or water"@en ;
-    skos:historyNote "VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Causeway"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -543,20 +1951,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:circus
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CRCS"@en ,
-        "Crcs"@en ;
-    skos:definition "A round open area where several streets join together"@en ;
-    skos:historyNote "QLD, TAS, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Circus"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :close
     a skos:Concept ;
     dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
@@ -593,22 +1987,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:common
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CMMN"@en ,
-        "CMN"@en ,
-        "Cmmn"@en ,
-        "Cmn"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "VIC, NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Common"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :concord
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -632,64 +2010,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Concourse"@en ;
     skos:scopeNote "Australia only" ;
-    skos:topConceptOf cs: ;
-.
-
-:connection
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CNTN"@en ,
-        "Cntn"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Connection"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:copse
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CPS"@en ,
-        "Cps"@en ;
-    skos:definition "A roadway running through or to a public open space"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Copse"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:corner
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CNR"@en ,
-        "Cnr"@en ;
-    skos:definition "A roadway containing a sharp bend or corner"@en ;
-    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Corner"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:corso
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CSO"@en ,
-        "Cso"@en ;
-    skos:definition "A main central street, usually lined with shops, cafe and restaurants. An Italian road type"@en ;
-    skos:historyNote "QLD, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Corso"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -717,53 +2037,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "AS/NZS4819:2011, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
     skos:inScheme cs: ;
     skos:prefLabel "Court"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:courts
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CRTSCrts"@en ,
-        "CTS"@en ,
-        "Cts"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Courts"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:courtyard
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CTYD"@en ,
-        "Ctyd"@en ;
-    skos:definition "An enclosed area"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Courtyard"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:cove
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "COVE"@en ,
-        "CV"@en ,
-        "Cv"@en ;
-    skos:definition "A short-enclosed roadway"@en ;
-    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Cove"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -819,34 +2092,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:cross
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CRSS"@en ,
-        "Crss"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Cross"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:crossing
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CRSG"@en ,
-        "Crsg"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Crossing"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :cruiseway
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -869,34 +2114,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:cutting
-    a skos:Concept ;
-    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "CUTT"@en ,
-        "Cutt"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Cutting"@en ;
-    skos:scopeNote "Victoria only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:dale
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "DALE"@en ;
-    skos:definition "A roadway situated between hills"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Dale"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :dash
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -908,23 +2125,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:dell
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "DEL"@en ,
-        "DELL"@en ,
-        "Del"@en ,
-        "Dell"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "VIC, NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Dell"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :dene
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -933,20 +2133,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "VIC address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Dene"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:deviation
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "DE"@en ,
-        "De"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Deviation"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -1016,21 +2202,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:downs
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "DWNS"@en ,
-        "Dwns"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Downs"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :drive
     a skos:Concept ;
     dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
@@ -1042,75 +2213,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
     skos:inScheme cs: ;
     skos:prefLabel "Drive"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:driveway
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "DVWY"@en ,
-        "Dvwy"@en ;
-    skos:definition "Usually a private road giving access from a public way to a building on abutting grounds"@en ;
-    skos:historyNote "QLD, VIC roads data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Driveway"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:easement
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "EASE"@en ,
-        "Ease"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Easement"@en ;
-    skos:scopeNote "Queensland only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:edge
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "EDGE"@en ;
-    skos:definition "A roadway constructed along the edge of a cliff or ridge"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Edge"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:elbow
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "ELB"@en ,
-        "Elb"@en ;
-    skos:definition "A roadway containing a sharp bend or turn"@en ;
-    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Elbow"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:end
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "END"@en ;
-    skos:definition "A short enclosed roadway"@en ;
-    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "End"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -1150,67 +2252,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "VIC address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Estate"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:expressway
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "EXP"@en ,
-        "EXPY"@en ,
-        "Exp"@en ,
-        "Expy"@en ;
-    skos:definition "A highway planned for high-speed traffic, usually having few if any intersections, limited points of access or exits"@en ;
-    skos:historyNote "VIC, NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Expressway"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:fairway
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "FAWA"@en ,
-        "FAWY"@en ,
-        "Fawa"@en ,
-        "Fawy"@en ;
-    skos:definition "A short open roadway between other roadways"@en ;
-    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Fairway"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:firebreak
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "FBRK"@en ,
-        "Fbrk"@en ;
-    skos:definition "Access on a formed or unformed surface, which was originally prepared as a firebreak"@en ;
-    skos:historyNote "QLD, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Firebreak"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:fireline
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "FLNE"@en ,
-        "Flne"@en ;
-    skos:definition "Access on a formed or unformed surface, which was originally prepared as a firebreak"@en ;
-    skos:historyNote "QLD, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Fireline"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -1261,21 +2302,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:follow
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "FOLW"@en ,
-        "Folw"@en ;
-    skos:definition "A roadway meandering through wooded or undulating country"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Follow"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :footway
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -1320,21 +2346,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:formation
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "FORM"@en ,
-        "Form"@en ;
-    skos:definition "A formed surface, once a timber railway which now provides vehicular access"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Formation"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :freeway
     a skos:Concept ;
     dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
@@ -1361,34 +2372,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:frontage
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "FRTG"@en ,
-        "Frtg"@en ;
-    skos:definition "A roadway passing a point of interest or significance with lots fronting only one side, eg, Public Open Space, coastline, etc"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Frontage"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:gap
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "GAP"@en ;
-    skos:definition "A roadway that traverses a passage or pass through a ridge or hill"@en ;
-    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Gap"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :garden
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -1397,51 +2380,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "TAS, VIC address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Garden"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:gardens
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "GDNS"@en ,
-        "Gdns"@en ;
-    skos:definition "A roadway with special plantings of trees, flowers, etc, and often leading to a place for public enjoyment"@en ;
-    skos:historyNote "QLD, TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Gardens"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:gate
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "GTE"@en ,
-        "Gte"@en ;
-    skos:definition "A roadway leading into an estate, main entrance to a focal point, Public Open Space, shopping area, etc"@en ;
-    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Gate"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:gateway
-    a skos:Concept ;
-    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "GTWY"@en ,
-        "Gtwy"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Gateway"@en ;
-    skos:scopeNote "Victoria only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -1458,22 +2396,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
     skos:inScheme cs: ;
     skos:prefLabel "Glade"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:glen
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "GLEN"@en ,
-        "GLN"@en ,
-        "Gln"@en ;
-    skos:definition "A roadway usually in a valley of trees"@en ;
-    skos:historyNote "QLD, TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Glen"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -1536,21 +2458,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:gully
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "GLY"@en ,
-        "Gly"@en ;
-    skos:definition "A short roadway through a steep valley or gully"@en ;
-    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Gully"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :harbour
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -1559,50 +2466,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "QLD address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Harbour"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:haven
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "HVN"@en ,
-        "Hvn"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD, VIC, NZ roads data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Haven"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:heath
-    a skos:Concept ;
-    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "HTH"@en ,
-        "Hth"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Heath"@en ;
-    skos:scopeNote "Victoria only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:heights
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "HTS"@en ,
-        "Hts"@en ;
-    skos:definition "A roadway traversing high ground"@en ;
-    skos:historyNote "QLD, TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Heights"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -1631,22 +2494,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:hill
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "HI"@en ,
-        "HILL"@en ,
-        "Hi"@en ;
-    skos:definition "A roadway going up a natural rise"@en ;
-    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Hill"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :hollow
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -1666,51 +2513,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "VIC address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Hub"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:interchange
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "INTG"@en ,
-        "Intg"@en ;
-    skos:definition "A highway or freeway junction designed so that traffic streams do not intersect"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Interchange"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:junction
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "JNC"@en ,
-        "Jnc"@en ;
-    skos:definition "A roadway making a transition from a major to a minor road in an estate, etc. A through road leading from one minor road to another as a link"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Junction"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:key
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "KEY"@en ,
-        "Key"@en ;
-    skos:definition "A roadway which serves as an entry to an estate or stage of development as a feature or landscaped entry with controlled access"@en ;
-    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Key"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -1747,23 +2549,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:landing
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "LDG"@en ,
-        "LNDG"@en ,
-        "Ldg"@en ,
-        "Lndg"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD, VIC, NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Landing"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :lane
     a skos:Concept ;
     dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
@@ -1776,20 +2561,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:laneway
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "LNWY"@en ,
-        "Lnwy"@en ;
-    skos:definition "Narrow lane or path"@en ;
-    skos:historyNote "QLD, VIC roads data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Laneway"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :leader
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -1798,45 +2569,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "VIC address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Leader"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:line
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "LINE"@en ;
-    skos:definition "A generally long and straight road"@en ;
-    skos:historyNote "VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Line"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:link
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "LINK"@en ;
-    skos:definition "A roadway which links similar land uses, ie pockets of residential, other roadways, etc"@en ;
-    skos:historyNote "QLD, TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Link"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:lookout
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "LKT"@en ;
-    skos:definition "A roadway leading to or having a view of fine natural scenery"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Lookout"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -1852,19 +2584,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
     skos:inScheme cs: ;
     skos:prefLabel "Loop"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:loop-road
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "Loop Rd"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "NZ roads data" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Loop Road"@en ;
-    skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -1913,19 +2632,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:meander
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "MNDR"@en ;
-    skos:definition "A sinuous winding roadway, wandering at random through an area or subdivision"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Meander"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :mew
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -1949,99 +2655,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:mile
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "MILE"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Mile"@en ;
-    skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:motorway
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "MWY"@en ,
-        "Mwy"@en ;
-    skos:definition "A dual-carriageway roadway designed for fast traffic, with relatively few places for joining or leaving"@en ;
-    skos:historyNote "QLD, VIC, NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Motorway"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:nook
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "NOOK"@en ;
-    skos:definition "A short, secluded roadway with limited frontage indicating privacy"@en ;
-    skos:historyNote "TAS, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Nook"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:oaks
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "OAKS"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Oaks"@en ;
-    skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:outlet
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "OTLT"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "TAS, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Outlet"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:outlook
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "OTLK"@en ;
-    skos:definition "A roadway leading to an area which affords a view across surrounding areas"@en ;
-    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Outlook"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:paddock
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "PADK"@en ,
-        "Padk"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Paddock"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :parade
     a skos:Concept ;
     dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
@@ -2053,21 +2666,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
     skos:inScheme cs: ;
     skos:prefLabel "Parade"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:park
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "PARK"@en ,
-        "PK"@en ,
-        "Pk"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD, TAS, VIC, NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Park"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -2098,19 +2696,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:pass
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "PASS"@en ;
-    skos:definition "A roadway connecting major thoroughfares or running through hills"@en ;
-    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Pass"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :passage
     a skos:Concept ;
     dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
@@ -2134,23 +2719,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "AS/NZS4819:2011, AS4590.1:2017, NSW, QLD, VIC, WA roads data. Definition from AS/NZS4819:2011." ;
     skos:inScheme cs: ;
     skos:prefLabel "Path"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:pathway
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "PHWY"@en ,
-        "PWAY"@en ,
-        "Phwy"@en ,
-        "Pway"@en ;
-    skos:definition "A narrow roadway of any length meandering through an estate"@en ;
-    skos:historyNote "QLD, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Pathway"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -2210,36 +2778,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:point
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "PNT"@en ,
-        "PT"@en ,
-        "Pnt"@en ,
-        "Pt"@en ;
-    skos:definition "A roadway leading to a focal point or river frontage"@en ;
-    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Point"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:port
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "PORT"@en ;
-    skos:definition "A small roadway abutting a harbour, inlet, marina etc, in a coastal development"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Port"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :precinct
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -2287,21 +2825,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:quadrant
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "QDRT"@en ,
-        "Qdrt"@en ;
-    skos:definition "A loop road forming a circular path or a curved deviation from another road"@en ;
-    skos:historyNote "TAS, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Quadrant"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :quay
     a skos:Concept ;
     dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
@@ -2328,21 +2851,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Quays"@en ;
     skos:scopeNote "Australia only" ;
-    skos:topConceptOf cs: ;
-.
-
-:ramble
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "RMBL"@en ,
-        "Rmbl"@en ;
-    skos:definition "A roadway that meanders from place to place"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Ramble"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -2526,79 +3034,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:roadway
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "RDWY"@en ,
-        "Rdwy"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Roadway"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:rotary
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "RTY"@en ,
-        "Rty"@en ;
-    skos:definition "An intersection of two or more carriageways at a common level where all traffic travels around a central island"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Rotary"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:round
-    a skos:Concept ;
-    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "RND"@en ,
-        "Rnd"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Round"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:route
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "RTE"@en ,
-        "Rte"@en ;
-    skos:definition "A roadway, allowing steady traffic flow with limited cross streets"@en ;
-    skos:historyNote "TAS, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Route"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:row
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "ROW"@en ;
-    skos:definition "A roadway with a line of professional buildings on either side"@en ;
-    skos:historyNote "QLD, TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Row"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :rue
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -2610,19 +3045,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:run
-    a skos:Concept ;
-    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "RUN"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Run"@en ;
-    skos:scopeNote "Victoria only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :serviceway
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -2631,34 +3053,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "VIC address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Serviceway"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:shunt
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "SHUN"@en ,
-        "Shun"@en ;
-    skos:definition "A short, dead end track used in State Forests only"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Shunt"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:side-road
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "Side Rd"@en ;
-    skos:definition "A minor or subsidiary road, especially one joining or diverging from a main road. Usually accessed from a road with the same name"@en ;
-    skos:historyNote "NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Side Road"@en ;
-    skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -2681,34 +3075,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "G-NAF address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Skyline"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:slope
-    a skos:Concept ;
-    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "SLPE"@en ,
-        "Slpe"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Slope"@en ;
-    skos:scopeNote "Victoria only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:spur
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "SPUR"@en ;
-    skos:definition "A minor roadway running off at less than 45 degrees"@en ;
-    skos:historyNote "TAS, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Spur"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -2751,20 +3117,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:strait
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "STRI"@en ,
-        "Stri"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD address data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Strait"@en ;
-    skos:scopeNote "Queensland only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :strand
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -2790,20 +3142,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:strip
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "STRP"@en ,
-        "Strp"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Strip"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :subway
     a skos:Concept ;
     dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
@@ -2816,32 +3154,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Subway"@en ;
     skos:scopeNote "Australia only" ;
-    skos:topConceptOf cs: ;
-.
-
-:tarn
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "TARN"@en ;
-    skos:definition "A roadway surrounding or leading to a lake or some other water feature"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Tarn"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:te-ara
-    a skos:Concept ;
-    dcterms:source "https://www.linz.govt.nz/resources/regulatory/guidelines-addressing-fill-developments-2019-linz-op-g-01245"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "TE ARA"@en ;
-    skos:definition "Roadway"@en ;
-    skos:historyNote "NZ address data. Definition from NZ guidelines for addressing in-fill developments." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Te Ara"@en ;
-    skos:scopeNote "New Zealand only. Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -2867,32 +3179,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "VIC address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Tollway"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:top
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "TOP"@en ;
-    skos:definition "A roadway constructed at the highest part of an area"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Top"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:tor
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "TOR"@en ;
-    skos:definition "A roadway along a rocky height or hillside"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Tor"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -2958,34 +3244,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:tunnel
-    a skos:Concept ;
-    dcterms:source "https://discover.data.vic.gov.au/dataset/vicmap-transport-road-and-paper-road-line2"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "TUNL"@en ,
-        "Tunl"@en ;
-    skos:definition "Roadway through an underground passageway"@en ;
-    skos:historyNote "VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Tunnel"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:turn
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "TURN"@en ;
-    skos:definition "A roadway containing a sharp bend or turn"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Turn"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :twist
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -2994,51 +3252,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "VIC address data" ;
     skos:inScheme cs: ;
     skos:prefLabel "Twist"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:underpass
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "UPAS"@en ,
-        "Upas"@en ;
-    skos:definition "A roadway passing under another road, railway, bridge, etc"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Underpass"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:vale
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "VALE"@en ;
-    skos:definition "A roadway along low ground between hills"@en ;
-    skos:historyNote "QLD, VIC, WA, NZ roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Vale"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:valley
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "VLLY"@en ,
-        "VLY"@en ,
-        "Vlly"@en ,
-        "Vly"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "VIC, NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Valley"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -3065,23 +3278,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "AS/NZS4819:2011 (Australia only), AS4590.1:2017, NSW, QLD, TAS, VIC, WA, NZ roads data. Definition from AS/NZS4819:2011." ;
     skos:inScheme cs: ;
     skos:prefLabel "View"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:views
-    a skos:Concept ;
-    dcterms:source "https://data.linz.govt.nz/table/53376-nz-roads-road-name-type/data/"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "VEWS"@en ,
-        "VWS"@en ,
-        "Vews"@en ,
-        "Vws"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "VIC, NZ roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Views"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
     skos:topConceptOf cs: ;
 .
 
@@ -3138,35 +3334,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:walkway
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "WKWY"@en ,
-        "Wkwy"@en ;
-    skos:definition "A roadway on which traffic travels at a slow pace. A meandering tree-lined road"@en ;
-    skos:historyNote "TAS, VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Walkway"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
-:waters
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel
-        "WAT"@en ,
-        "Wat"@en ;
-    skos:definition "No known definition"@en ;
-    skos:historyNote "QLD, VIC roads data." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Waters"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :way
     a skos:Concept ;
     dcterms:source "AS/NZS 4819:2011 - Standards Australia"^^xsd:anyURI ;
@@ -3215,19 +3382,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:wynd
-    a skos:Concept ;
-    dcterms:source "https://www0.landgate.wa.gov.au/__data/assets/pdf_file/0018/52380/Property-Street-address-Data-Dictionary.pdf"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "WYND"@en ;
-    skos:definition "A short narrow roadway or alley"@en ;
-    skos:historyNote "VIC, WA roads data. Definition from WA property street address data dictionary." ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Wynd"@en ;
-    skos:scopeNote "Not to be used for roads named after 2011 (AS/NZS2819:2011). " ;
-    skos:topConceptOf cs: ;
-.
-
 :yard
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -3239,12 +3393,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-<https://linked.data.gov.au/org/qsi>
-    a sdo:Organization ;
-    sdo:name "Queensland Spatial Information" ;
-    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
-.
-
 <https://linked.data.gov.au/org/icsm>
     a sdo:Organization ;
     sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
@@ -3253,7 +3401,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
-    sdo:keywords themes:transport ;
     dcterms:created "2023-05-11"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/qsi> ;
     dcterms:modified "2023-11-30"^^xsd:date ;
@@ -3508,10 +3655,10 @@ cs:
         :yard ;
     skos:historyNote "This vocabulary contains road types in common usage at the time of publishing. These are sourced from standards including AS/NZS4819:2011, AS4590.1:2017 and jurisdictional datasets across Australia and New Zealand. "@en ;
     skos:prefLabel "Road Types"@en ;
-    prov:qualifiedAttribution
-        [
-            prov:hadRole isoroles:custodian ;
-            prov:agent <https://linked.data.gov.au/org/icsm>
+    prov:qualifiedAttribution [
+            prov:agent <https://linked.data.gov.au/org/icsm> ;
+            prov:hadRole isoroles:custodian
         ] ;
+    sdo:keywords themes:transport ;
 .
 
