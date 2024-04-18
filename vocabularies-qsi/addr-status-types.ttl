@@ -11,7 +11,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-cs:alternative
+:alternative
     a skos:Concept ;
     dcterms:source "https://store.standards.org.au/product/as-nzs-iso-19160-1-2018"^^xsd:anyURI ;
     skos:definition "An additional address that refers to the same physical location as a Primary Address. This may relate to an alternative access point to the same address site"@en ;
@@ -20,7 +20,7 @@ cs:alternative
     skos:prefLabel "alternative"@en ;
 .
 
-cs:primary
+:primary
     a skos:Concept ;
     dcterms:source "https://store.standards.org.au/product/as-nzs-iso-19160-1-2018"^^xsd:anyURI ;
     skos:definition "The main officially recognised address for an address site"@en ;
@@ -29,7 +29,7 @@ cs:primary
     skos:prefLabel "primary"@en ;
 .
 
-<http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/official>
+:official
     a skos:Concept ;
     skos:definition "An official addressing authority assigned the address"@en ;
     skos:historyNote "Presented in the original ISO19160-1 standard’s AddressStatus codelist" ;
@@ -40,7 +40,7 @@ cs:primary
     skos:prefLabel "official"@en ;
 .
 
-<http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/unknown>
+:unknown
     a skos:Concept ;
     skos:definition "The status of the address is unknown"@en ;
     skos:historyNote "Presented in the original ISO19160-1 standard’s AddressStatus codelist" ;
@@ -48,7 +48,7 @@ cs:primary
     skos:prefLabel "unknown"@en ;
 .
 
-<http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/unofficial>
+:unofficial
     a skos:Concept ;
     skos:definition "The address was not assigned by an official addressing authority"@en ;
     skos:historyNote "Presented in the original ISO19160-1 standard’s AddressStatus codelist" ;
@@ -81,11 +81,9 @@ cs:
     owl:versionInfo "1.0" ;
     skos:definition "This vocabulary describes types of address status. "@en ;
     skos:hasTopConcept
-        <http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/official> ,
-        <http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/unknown> ,
-        <http://def.isotc211.org/iso19160/-1/2015/Address/code/AnzAddressStatusTypes/unofficial> ,
-        :alternative ,
-        :primary ;
+        :official ,
+        :unknown ,
+        :unofficial ;
     skos:historyNote "This vocabulary was created by the Queensland Spatial Information services." ;
     skos:prefLabel "Address Status Type"@en ;
     prov:qualifiedAttribution

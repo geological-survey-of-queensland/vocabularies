@@ -78,7 +78,25 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "The name is used but it is not official"@en ;
     skos:historyNote "Taken from the Place Names Ontology but with a definition added here" ;
     skos:inScheme cs: ;
+    skos:narrower
+        :historical ,
+        :indigenous ;
     skos:prefLabel "Informal"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:official
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The name has been sanctioned by an authoritative institution"@en ;
+    skos:historyNote "Taken from the Place Names Ontology but with a definition added here" ;
+    skos:inScheme cs: ;
+    skos:narrower
+        :gazetted ,
+        :published ,
+        :released ,
+        :retired ;
+    skos:prefLabel "Official"@en ;
     skos:topConceptOf cs: ;
 .
 
@@ -94,16 +112,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
-:official
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:definition "The name has been sanctioned by an authoritative institution"@en ;
-    skos:historyNote "Taken from the Place Names Ontology but with a definition added here" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Official"@en ;
-    skos:topConceptOf cs: ;
-.
-
 cs:
     a skos:ConceptScheme ;
     sdo:keywords themes:place-names ;
@@ -116,7 +124,6 @@ cs:
     owl:versionInfo "1.0" ;
     skos:definition "This vocabulary contains classifications of how official, or otherwise, a Geographical Name is"@en ;
     skos:hasTopConcept
-        :historical ,
         :indigenous ,
         :informal ,
         :official ;
