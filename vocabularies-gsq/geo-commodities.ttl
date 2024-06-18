@@ -208,6 +208,7 @@ cdt:lodgement-form
         cdt:chromite ,
         cdt:chromium ,
         cdt:chrysoberyl ,
+        cdt:chrysocolla ,
         cdt:chrysoprase ,
         cdt:chrysotile ,
         cdt:citrine ,
@@ -342,6 +343,7 @@ cdt:lodgement-form
         cdt:neodymium ,
         cdt:nepheline-syenite ,
         cdt:nickel ,
+        cdt:nickel-ore ,
         cdt:niobium ,
         cdt:niobium-pentoxide ,
         cdt:nitrate ,
@@ -804,12 +806,13 @@ cdt:material-directshippingore
     skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The commodities relevant, applicable, and selectable as part of the material type direct shipping ore."@en ;
     skos:member
-        cdt:bauxite ,
+        cdt:alumina ,
         cdt:cassiterite-ore ,
         cdt:hematite-ore ,
         cdt:iron-ore ,
         cdt:magnetite-ore ,
-        cdt:manganese-ore ;
+        cdt:manganese-ore ,
+        cdt:nickel-ore;
     skos:notation "MLDSHO" ;
     skos:prefLabel "Material: Direct Shipping Ore"@en ;
 .
@@ -896,6 +899,7 @@ cdt:material-gemrock
         cdt:cassiterite-gemstone ,
         cdt:chalcedony ,
         cdt:chrysoberyl ,
+        cdt:chrysocolla ,
         cdt:chrysoprase ,
         cdt:citrine ,
         cdt:cordierite ,
@@ -969,6 +973,7 @@ cdt:material-gemstone
         cdt:cassiterite-gemstone ,
         cdt:chalcedony ,
         cdt:chrysoberyl ,
+        cdt:chrysocolla ,
         cdt:chrysoprase ,
         cdt:citrine ,
         cdt:cordierite ,
@@ -2897,7 +2902,7 @@ cdt:laterite
     skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     rdfs:isDefinedBy cs: ;
     skos:broader cdt:industrial-rock ;
-    skos:definition "A highly weathered, generally indurated, red subsoil nearly devoid of primary silicates, rich in hydrous iron oxides, +/- kaolinite +/- quartz +/- gibbsite. Red residual soil developed in humid, tropical, and subtropical regions of good drainage. It is leached of silica and contains concentrations particularly of iron oxides and hydroxides and aluminum hydroxides. It may be an ore of iron, aluminum, manganese, or nickel. Adj. lateritic. Synonym of: latosol"@en ;
+    skos:definition "A highly weathered, generally indurated, red subsoil nearly devoid of primary silicates, rich in hydrous iron oxides, +/- kaolinite +/- quartz +/- gibbsite. Red residual soil developed in humid, tropical, and subtropical regions of good drainage. It is leached of silica and contains concentrations particularly of iron oxides and hydroxides and aluminum hydroxides. It may be an ore of iron, aluminium, manganese, or nickel. Adj. lateritic. Synonym of: latosol"@en ;
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/laterite> ;
     skos:inScheme cs: ;
     skos:notation "LTR" ;
@@ -2985,6 +2990,17 @@ cdt:nitrate
     skos:prefLabel "Nitrate"@en ;
 .
 
+cdt:nickel-ore
+    a skos:Concept ;
+    skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader cdt:direct-shipping-ore ;
+    skos:definition "An ore which bears nickel."@en ;
+    skos:inScheme cs: ;
+    skos:notation "NICO" ;
+    skos:prefLabel "Nickel Ore"@en ;
+.
+    
 cdt:olivine
     a skos:Concept ;
     skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
@@ -3763,6 +3779,16 @@ cdt:chrysoberyl
     skos:prefLabel "Chrysoberyl"@en ;
 .
 
+cdt:chrysocolla
+    a skos:Concept ;
+    skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader cdt:gemstone ;
+    skos:definition "Chrysocolla (Cu2-xAlx(H2-xSi2O5)(OH)4 · nH2O, x < 1) is a secondary copper mineral often found in association with other secondary copper minerals. Chrysocolla typically presents as glassy botryoidal or rounded masses, bubbly crusts, and as vein fillings."@en ;
+    skos:inScheme cs: ;
+    skos:notation "CSC" ;
+    skos:prefLabel "Chrysocolla"@en ;
+.
 cdt:chrysoprase
     a skos:Concept ;
     skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
@@ -6637,4 +6663,3 @@ cs:
         cdt:undefined ;
     skos:prefLabel "Geoscience Commodities"@en ;
 .
-
