@@ -32,6 +32,8 @@ grt:activity-summary-reports
         grt:petroleum-report-other ,
         grt:petroleum-report-production-information ,
         grt:petroleum-report-resource-and-reserves-information ,
+        grt:petroleum-report-production-information-public ,
+        grt:petroleum-report-resource-and-reserves-information-public ,
         grt:production-petroleum ,
         grt:reserves-petroleum ;
     skos:prefLabel "Activity Summary Reports"@en ;
@@ -180,6 +182,8 @@ grt:lodgement-portal-internal
         grt:petroleum-report-production-information ,
         grt:petroleum-report-relinquishment ,
         grt:petroleum-report-resource-and-reserves-information ,
+        grt:petroleum-report-production-information-public ,
+        grt:petroleum-report-resource-and-reserves-information-public ,
         grt:petroleum-report-surrender ,
         grt:petroleum-report-transmission ,
         grt:pggd-01 ,
@@ -347,6 +351,8 @@ grt:permit-reports
         grt:petroleum-report-other ,
         grt:petroleum-report-production-information ,
         grt:petroleum-report-resource-and-reserves-information ,
+        grt:petroleum-report-production-information-public ,
+        grt:petroleum-report-resource-and-reserves-information-public ,
         grt:petroleum-report-transmission ,
         grt:production-petroleum ,
         grt:reserves-petroleum ,
@@ -380,6 +386,8 @@ grt:petroleum-reports
         grt:petroleum-report-production-information ,
         grt:petroleum-report-relinquishment ,
         grt:petroleum-report-resource-and-reserves-information ,
+        grt:petroleum-report-production-information-public ,
+        grt:petroleum-report-resource-and-reserves-information-public ,
         grt:petroleum-report-surrender ,
         grt:petroleum-report-transmission ,
         grt:pipeline-report-surrender ,
@@ -403,6 +411,8 @@ grt:production-and-reserves-reports
         grt:petroleum-report-cumulative-water-production ,
         grt:petroleum-report-production-information ,
         grt:petroleum-report-resource-and-reserves-information ,
+        grt:petroleum-report-production-information-public ,
+        grt:petroleum-report-resource-and-reserves-information-public ,
         grt:production-petroleum ,
         grt:reserves-petroleum ;
     skos:prefLabel "Production and Reserves Reports"@en ;
@@ -1503,6 +1513,29 @@ grt:petroleum-report-resource-and-reserves-information
     skos:topConceptOf cs: ;
 .
 
+grt:petroleum-report-production-information-public
+    a skos:Concept ;
+    skos:historyNote "Developed by the Geological Survey of Queensland." ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Petroleum Production Information (Good Practice)"@en ;
+    skos:definition "A report detailing the quantity, quality and other parameters of the production of petroleum and gas products from an ATP as required by the Petroleum and Gas Act and General Provisions. Confidential data has been removed. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline. These reports are submitted using the Queensland Government templates."@en ;
+    skos:inScheme cs: ;
+    skos:notation "PROINF" ;
+    skos:prefLabel "Petroleum Report - Petroleum Production Report - Public"@en ;
+    skos:topConceptOf cs: ;
+.
+
+grt:petroleum-report-resource-and-reserves-information-public
+    a skos:Concept ;
+    skos:historyNote "Developed by the Geological Survey of Queensland." ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Petroleum Reserves and Resources Information (Good Practice)"@en ;
+    skos:definition "A report detailing the quantity, quality and other parameters of the reserves of petroleum and gas on an ATP, as required by the Petroleum and Gas Act and General Provisions.  Confidential data has been removed. Defined in greater detail as a part of the Petroleum and Gas Reporting Guideline. These reports are submitted using the Queensland Government templates."@en ;
+    skos:inScheme cs: ;
+    skos:notation "RESINF" ;
+    skos:prefLabel "Petroleum Report - Petroleum Resources and Reserves Report - Public"@en ;
+    skos:topConceptOf cs: ;
+.
 cs:
     a
         owl:Ontology ,
@@ -1606,4 +1639,3 @@ cs:
         grt:wra-05A ;
     skos:prefLabel "Georesource Report"@en ;
 .
-
