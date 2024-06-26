@@ -2,8 +2,10 @@ PREFIX : <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://linked.data.gov.au/def/fsdf/themes>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX droles: <https://linked.data.gov.au/def/data-roles/>
 PREFIX fsdf: <https://linked.data.gov.au/def/fsdf/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sdo: <https://schema.org/>
@@ -670,4 +672,9 @@ cs:
     dcterms:modified "2021-04-21"^^xsd:date ;
     sdo:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
+    prov:qualifiedAttribution
+        [
+            prov:hadRole droles:custodian ;
+            prov:agent <https://linked.data.gov.au/org/icsm>
+        ] ;
 .
