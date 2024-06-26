@@ -33,8 +33,8 @@ validators_dir = Path(__file__).parent
 
 validators = [
     "vocpub",
-    "vocpub-4.6",
-    # "gsq",
+    "vocpub-4.10",
+    "gsq",
     "combined",
     "skosShapes.shapes",
 ]
