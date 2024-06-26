@@ -20,7 +20,7 @@ import json
 import sys
 
 # set this to the vocab folder
-voc_dir = Path("../vocabularies-gsq")
+voc_dir = Path(__file__).parent.parent / "vocabularies-gsq"
 p = voc_dir.glob("*.ttl")
 validity_state = {}
 
@@ -29,9 +29,12 @@ commands = [
     "onebyone"
 ]
 
+validators_dir = Path(__file__).parent
+
 validators = [
     "vocpub",
-    "gsq",
+    "vocpub-4.6",
+    # "gsq",
     "combined",
     "skosShapes.shapes",
 ]
@@ -74,17 +77,19 @@ if sys.argv[1] == "report":
         json.dump(validity_state, f, indent=4)
 
 elif sys.argv[1] == "onebyone":
+    print(f"Validating one by one in directory {voc_dir}")
     for f in sorted(p):
         print(f)
         try:
-            v = validate(str(f), shacl_graph=f"{validator}.ttl")
+            v = validate(str(f), shacl_graph=f"{validators_dir / validator}.ttl", allow_warnings=True)
             if not v[0]:
                 print("Invalid")
                 print(v[2])
                 exit()
             else:
                 print("Valid")
-        except:
+        except Exception as e:
+            print(e)
             exit()
 
 print(f"Total errors:", total_error_count)
