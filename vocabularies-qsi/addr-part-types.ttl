@@ -13,15 +13,27 @@ PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
+:geographicalObject
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    reg:status agldwgstatus:experimental ;
+    skos:definition "A reference to a geographical object"@en ;
+    skos:historyNote "Created for the Address Model" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "geographical object type"@en ;
+    skos:scopeNote "This replaces several ISO19160-1 & GNAF values as this reference can be used to any category of Geographical Object with the name for the object used within the address this part is part of. Geographical Object categories are assgned to the Geographical Object, not any part of this address part or the address it is part of." ;
+    skos:topConceptOf cs: ;
+.
+
 :subaddressType
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     reg:status agldwgstatus:experimental ;
-    skos:definition "sub-address type"@en ;
+    skos:definition "The type of the sub-address part"@en ;
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "sub-address type"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's flatTypeCode" ;
     skos:topConceptOf cs: ;
 .
 
@@ -29,11 +41,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     reg:status agldwgstatus:experimental ;
-    skos:definition "sub-address number"@en ;
+    skos:definition "The number of the sub-address part"@en ;
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "sub-address number"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's flatNumber" ;
     skos:topConceptOf cs: ;
 .
 
@@ -45,7 +57,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "sub-address number prefix"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's flatNumberPrefix" ;
     skos:topConceptOf cs: ;
 .
 
@@ -57,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "sub-address number suffix"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's flatNumberSuffix" ;
     skos:topConceptOf cs: ;
 .
 
@@ -69,7 +81,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "building level type"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's levelTypeCode" ;
     skos:topConceptOf cs: ;
 .
 
@@ -81,7 +93,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "building level number"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's levelNumber" ;
     skos:topConceptOf cs: ;
 .
 
@@ -93,7 +105,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "building level number prefix"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's levelNumberPrefix" ;
     skos:topConceptOf cs: ;
 .
 
@@ -105,7 +117,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "building level number suffix"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's levelNumberSuffix" ;
     skos:topConceptOf cs: ;
 .
 
@@ -117,7 +129,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "street number first"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's numberFirst" ;
     skos:topConceptOf cs: ;
 .
 
@@ -129,7 +141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "street number first prefix"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's numberFirstPrefix" ;
     skos:topConceptOf cs: ;
 .
 
@@ -141,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "street number first suffix"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's numberFirstSuffix" ;
     skos:topConceptOf cs: ;
 .
 
@@ -153,7 +165,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "street number last"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's numberLast" ;
     skos:topConceptOf cs: ;
 .
 
@@ -165,7 +177,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "street number last prefix"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's numberLastPrefix" ;
     skos:topConceptOf cs: ;
 .
 
@@ -177,7 +189,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "street number last suffix"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's numberLastSuffix" ;
     skos:topConceptOf cs: ;
 .
 
@@ -185,11 +197,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     reg:status agldwgstatus:experimental ;
-    skos:definition "street"@en ;
+    skos:definition "Reference to a Street object"@en ;
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "street"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces GNAF's streetLocality & streetType as type is a property of a street object" ;
     skos:topConceptOf cs: ;
 .
 
@@ -197,7 +209,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     reg:status agldwgstatus:experimental ;
-    skos:definition "water feature"@en ;
+    skos:definition "Reference to a Water Feature object"@en ;
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "water feature"@en ;
@@ -213,7 +225,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "locality"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces ISO19160-1's localityName" ;
     skos:topConceptOf cs: ;
 .
 
@@ -225,7 +237,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "state or territory"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces ISO19160-1's administrativeAreaName" ;
     skos:topConceptOf cs: ;
 .
 
@@ -237,7 +249,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "indigenous country name"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "A reference to a Geographical Object may be used instead of this direct quoting of a place name" ;
     skos:topConceptOf cs: ;
 .
 
@@ -249,7 +261,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "postcode"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Is equivalent to ISO19160-1's postcode" ;
     skos:topConceptOf cs: ;
 .
 
@@ -261,7 +273,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for the Address Model" ;
     skos:inScheme cs: ;
     skos:prefLabel "country"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:scopeNote "Replaces ISO19160-1's countryCode" ;
     skos:topConceptOf cs: ;
 .
 
@@ -289,6 +301,7 @@ cs:
     owl:versionInfo "1.0" ;
     skos:definition "This vocabulary describes types of name part types used in addressing"@en ;
     skos:hasTopConcept
+        :geographicalObject ,
         :subaddressType ,
         :subaddressNumber ,
         :subaddressNumberPrefix ,
