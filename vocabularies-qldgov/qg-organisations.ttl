@@ -16,11 +16,11 @@ qgorg:11338
         org:OrganizationalUnit ;
     dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
-    skos:altLabel "Science Delivery and Knowledge"@en ;
+    skos:altLabel "Water & Catchments"@en ;
     skos:broader qgorg:10157 ;
-    skos:definition "Science Delivery and Knowledge"@en ;
+    skos:definition "Water & Catchments"@en ;
     skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
-    skos:prefLabel "Science Delivery & Knowledge"@en ;
+    skos:prefLabel "Water & Catchments"@en ;
     org:hasPrimarySite qgsite:Ecosciences ;
     org:hasSite qgsite:Ecosciences ;
     org:unitOf qgorg:10157 ;
@@ -33,11 +33,27 @@ qgorg:11339
         org:OrganizationalUnit ;
     dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
-    skos:altLabel "Science Strategy and Partnerships"@en ;
+    skos:altLabel "Science Development and Office of the Qld Chief Scientist"@en ;
     skos:broader qgorg:10157 ;
-    skos:definition "Science Strategy and Partnerships"@en ;
+    skos:definition "Science Development and Office of the Qld Chief Scientist"@en ;
     skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
-    skos:prefLabel "Science Strategy & Partnerships"@en ;
+    skos:prefLabel "Science Development and Office of the Qld Chief Scientist"@en ;
+    org:hasSite qgsite:Ecosciences ;
+    org:unitOf qgorg:10157 ;
+.
+
+qgorg:15176
+    a
+        owl:NamedIndividual ,
+        skos:Concept ,
+        org:OrganizationalUnit ;
+    dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
+    skos:altLabel "Coastal Biodiversity & Information"@en ;
+    skos:broader qgorg:10157 ;
+    skos:definition "Coastal Biodiversity & Information"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
+    skos:prefLabel "Coastal Biodiversity & Information"@en ;
     org:hasSite qgsite:Ecosciences ;
     org:unitOf qgorg:10157 ;
 .
@@ -103,6 +119,24 @@ qgorg:DES
     org:hasSite qgsite:Ecosciences ;
 .
 
+qgorg:DESI
+    a
+        owl:NamedIndividual ,
+        skos:Concept ,
+        org:FormalOrganization ,
+        prov:Organization ;
+    dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
+    skos:altLabel "DESI"@en ;
+    skos:definition "Department of Environment, Science and Innovation"@en ;
+    skos:exactMatch <https://linked.data.gov.au/org/desi> ;
+    skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
+    skos:prefLabel "Department of Environment, Science and Innovation"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/qg-agent> ;
+    org:hasPrimarySite qgsite:400GeorgeSt ;
+    org:hasSite qgsite:Ecosciences ;
+.
+
 qgorg:10157
     a
         owl:NamedIndividual ,
@@ -110,11 +144,11 @@ qgorg:10157
         org:OrganizationalUnit ;
     dcterms:source "https://www.qld.gov.au/about/how-government-works/government-responsibilities"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/qg-agent> ;
-    skos:altLabel "Science and Technology Division"@en ;
+    skos:altLabel "Science Division"@en ;
     skos:broader qgorg:DES ;
-    skos:definition "Science and Technology"@en ;
+    skos:definition "Science"@en ;
     skos:inScheme <https://linked.data.gov.au/def/qg-agent> ;
-    skos:prefLabel "Science and Technology"@en ;
+    skos:prefLabel "Science"@en ;
     org:hasSite qgsite:Ecosciences ;
     org:unitOf qgorg:DES ;
 .
@@ -137,6 +171,7 @@ qgorg:10157
     skos:definition "A list of Queensland Government organisations which may include some departmental divisions (sub-organisations)"@en ;
     skos:hasTopConcept
         qgorg:DES ,
+        qgorg:DESI ,
         qgorg:DNRME ,
         qgorg:DOR ;
     skos:prefLabel "Queensland Government Organisations"@en ;
