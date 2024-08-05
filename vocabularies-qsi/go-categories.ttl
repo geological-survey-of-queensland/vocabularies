@@ -1,6 +1,8 @@
 PREFIX cs: <https://linked.data.gov.au/def/go-categories>
+PREFIX droles: <https://linked.data.gov.au/def/data-roles/>
 PREFIX go: <https://linked.data.gov.au/def/go-categories/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
@@ -7182,11 +7184,17 @@ cs:
         "Geographic Names" ,
         "Geographic Objects" ,
         "Place Names" ;
-    schema:publisher
-        [
-            a schema:Organization ;
-            schema:name "Department Of Resources" ;
-            schema:url ""^^xsd:anyURI ;
-        ] ;
+    schema:publisher <https://linked.data.gov.au/org/qld-resources> ;
     schema:version "1.0.1" ;
+    prov:qualifiedAttribution
+        [
+            prov:hadRole droles:custodian ;
+            prov:agent <https://linked.data.gov.au/org/icsm>
+        ] ;
+.
+
+<https://linked.data.gov.au/org/qld-resources>
+    a schema:Organization ;
+    schema:name "Queensland Department of Resources" ;
+    schema:url "https://www.resources.qld.gov.au"^^xsd:anyURI ;
 .
