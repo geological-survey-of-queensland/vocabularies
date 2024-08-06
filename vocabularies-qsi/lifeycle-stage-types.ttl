@@ -1,18 +1,24 @@
-PREFIX cs: <https://linked.data.gov.au/def/lifeycle-stage-types>
+PREFIX ls: <https://linked.data.gov.au/def/lifecycle-stage-types/>
+PREFIX cs: <https://linked.data.gov.au/def/lifecycle-stage-types>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX isoroles: <https://linked.data.gov.au/def/data-roles/>
-PREFIX ls: <https://linked.data.gov.au/def/lifeycle-stage-types/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
+PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 
 ls:current
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "The feature or feature label is recognised by the authoritative jurisdiction and is in use."@en ;
+	skos:historyNote "Adapted from ISO19160-1's AddressLifecycleStage vocabulary. " ;
     skos:inScheme cs: ;
     skos:prefLabel "Current"@en ;
     skos:topConceptOf cs: ;
@@ -22,6 +28,7 @@ ls:proposed
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "The feature or feature label has been suggested for use but not yet accepted."@en ;
+	skos:historyNote "Adapted from ISO19160-1's AddressLifecycleStage vocabulary. " ;
     skos:inScheme cs: ;
     skos:prefLabel "Proposed"@en ;
     skos:topConceptOf cs: ;
@@ -31,6 +38,7 @@ ls:rejected
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "The feature or feature label has been ruled not for use."@en ;
+	skos:historyNote "Adapted from ISO19160-1's AddressLifecycleStage vocabulary. " ;
     skos:inScheme cs: ;
     skos:prefLabel "Rejected"@en ;
     skos:topConceptOf cs: ;
@@ -40,6 +48,7 @@ ls:reserved
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "The feature or feature label is recognised by the authoritative jurisdiction but is not yet in use."@en ;
+	skos:historyNote "Adapted from ISO19160-1's AddressLifecycleStage vocabulary. " ;
     skos:inScheme cs: ;
     skos:prefLabel "Reserved"@en ;
     skos:topConceptOf cs: ;
@@ -49,6 +58,7 @@ ls:retired
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "The feature or feature label was recognised by the authoritative jurisdiction but is no longer in use."@en ;
+	skos:historyNote "Adapted from ISO19160-1's AddressLifecycleStage vocabulary. " ;
     skos:inScheme cs: ;
     skos:prefLabel "Retired"@en ;
     skos:topConceptOf cs: ;
@@ -58,6 +68,7 @@ ls:unknown
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "The stage of this feature or feature label's life is unknown, therefore it is assumed to be unofficial."@en ;
+	skos:historyNote "Adapted from ISO19160-1's AddressLifecycleStage vocabulary. " ;
     skos:inScheme cs: ;
     skos:prefLabel "Unknown"@en ;
     skos:topConceptOf cs: ;
@@ -92,8 +103,8 @@ cs:
             schema:name "Department Of Resources" ;
             schema:url ""^^xsd:anyURI ;
         ] ;
-    schema:dateCreated "2024-06-12"^^xsd:date ;
-    schema:dateModified "2024-06-12"^^xsd:date ;
+    dcterms:created "2024-06-12"^^xsd:date ;
+	dcterms:modified "2024-06-12"^^xsd:date ;
     schema:publisher
         [
             a schema:Organization ;

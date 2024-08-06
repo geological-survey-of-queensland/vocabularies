@@ -8,6 +8,11 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
+PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 
 :central
     a skos:Concept ;
@@ -244,8 +249,8 @@ cs:
             schema:name "Department Of Resources" ;
             schema:url ""^^xsd:anyURI ;
         ] ;
-    schema:dateCreated "2024-06-11"^^xsd:date ;
-    schema:dateModified "2024-06-11"^^xsd:date ;
+    dcterms:created "2024-06-11"^^xsd:date ;
+	dcterms:modified "2024-06-11"^^xsd:date ;
     schema:keywords
         "Affix" ,
         "Geographical Names" ,
