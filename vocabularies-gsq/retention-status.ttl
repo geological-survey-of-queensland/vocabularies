@@ -1,0 +1,118 @@
+PREFIX : <https://linked.data.gov.au/def/retention-status/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/retention-status>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:gsq-hold
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "To be held until the requesting officer or their director relinquishes the hold."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "gsq-hold" ;
+    skos:prefLabel "GSQ Hold"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:type-section
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "To be held indefinitely or until replaced by a sample which meets the strict criteria set for type sections. Type sections are the part of the definition of a lithostratigraphic unit, without a type section the unit is considered invalid and has no official standing. Refer to https://www.ga.gov.au/data-pubs/datastandards/stratigraphic-units/stratigraphic-type-sections"@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "type-section" ;
+    skos:alias "reference-section"
+    skos:prefLabel "Type Section"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:university-hold
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Held by the Gelogical Survey of Queensland on behalf of a university. Not to be disposed of until the requesting acadameic relinquishes the hold, or the hold is released by a GSQ Director."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "approved-access-only" ;
+    skos:prefLabel "Approved Access Only"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:proposed-disposal
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "This sample has been proposed to be disposed."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "radioactive" ;
+    skos:prefLabel "Radioactive"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:approved-disposal
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "This sample has been approved for and is now pending disposal."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "hazardous-asbestos" ;
+    skos:prefLabel "Hazardous: Asbestos"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:disposed
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "This sample has been disposed of and no longer exists in the collection."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "sampling" ;
+    skos:prefLabel "Open for Sampling"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:permanent-collection
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "To be held indefinitely, or until a director approves its disposal."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "gsq-eyes-only" ;
+    skos:prefLabel "GSQ Eyes Only"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geology-not-elsewhere-classified> ;
+    reg:status agldwgstatus:experimental ;
+    skos:definition "Retention Status"@en ;
+    skos:hasTopConcept
+        :gsq-hold ,
+        :type-section ,
+        :university-hold ,
+        :proposed-disposal ,
+        :approved-disposal ,
+        :disposed ,
+        :permanent-collection ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:notation "Viewing Status" ;
+    skos:prefLabel "Viewing Status"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2024" ;
+    sdo:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:created "2024-08-06"^^xsd:date ;
+    dcterms:modified "2024-08-06"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.data.gov.au/org/gsq> ;
+.
+
