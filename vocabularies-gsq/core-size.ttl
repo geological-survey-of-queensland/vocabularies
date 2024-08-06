@@ -1,0 +1,153 @@
+PREFIX : <https://linked.data.gov.au/def/core-size/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/core-size>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:AQ
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard Q sized bit with an outside diameter of 48mm and an inside diameter of 27mm."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "AQ" ;
+    skos:prefLabel "AQ"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:BQ
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard Q sized bit with an outside diameter of 60mm and an inside diameter of 36.5mm."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "BQ" ;
+    skos:prefLabel "BQ"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:NQ
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard Q sized bit with an outside diameter of 75.7mm and an inside diameter of 47.6mm."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "NQ" ;
+    skos:prefLabel "NQ"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:HQ
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard Q sized bit with an outside diameter of 96mm and an inside diameter of 63.5mm."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "HQ" ;
+    skos:prefLabel "HQ"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:HQ3
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard Q sized bit with an outside diameter of 96mm and an inside diameter of 61.1mm."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "HQ3" ;
+    skos:prefLabel "HQ3"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:PQ
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard Q sized bit with an outside diameter of 122.6mm and an inside diameter of 85mm."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "PQ" ;
+    skos:prefLabel "PQ"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:PQ3
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard Q sized bit with an outside diameter of 122.6mm and an inside diameter of 83mm."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "PQ3" ;
+    skos:prefLabel "PQ3"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:CHD76
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard Q sized bit with an outside diameter of 75.7mm and an inside diameter of 43.5mm."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "CHD76" ;
+    skos:prefLabel "CHD76"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:CHD101
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard Q sized bit with an outside diameter of 101.3mm and an inside diameter of 63.5mm."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "CHD101" ;
+    skos:prefLabel "CHD101"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:CHD134
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard Q sized bit with an outside diameter of 134.0mm and an inside diameter of 85mm."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "CHD134" ;
+    skos:prefLabel "CHD134"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geology-not-elsewhere-classified> ;
+    reg:status agldwgstatus:experimental ;
+    skos:definition "Viewing Status"@en ;
+    skos:hasTopConcept
+        :AQ ,
+        :BQ ,
+        :NQ ,
+        :HQ ,
+        :HQ3 ,
+        :PQ ,
+        :PQ3 ,
+        :CHD76 ,
+        :CHD101 ,
+        :CHD134 ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:notation "core-size" ;
+    skos:prefLabel "Core Size"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2024" ;
+    sdo:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:created "2024-08-07"^^xsd:date ;
+    dcterms:modified "2024-08-07"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.data.gov.au/org/gsq> ;
+.
+
