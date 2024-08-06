@@ -1,0 +1,117 @@
+PREFIX : <https://linked.data.gov.au/def/viewing-status/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/viewing-status>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:confidential
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Held in confidence by the Gelogical Survey of Queensland. Not to be displayed publicly. Available for layout for any Departmental persons."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "confidential" ;
+    skos:prefLabel "confidential"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:open
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Held openly by the Gelogical Survey of Queensland. Available for layout for any persons."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "open" ;
+    skos:prefLabel "open"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:approved-access-only
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Held by the Gelogical Survey of Queensland. Available for layout for any persons after approvals are given by Geological Survey of Queensland custodians."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "approved-access-only" ;
+    skos:prefLabel "Approved Access Only"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:radioactive
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "This object emits radiation in amounts considered hazardous, and must be handled in accordance with the appropriate IAEA standards. Available for layout for any persons after approvals are given by Geological Survey of Queensland custodians and a risk waiver and mitigation strategy are signed off."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "radioactive" ;
+    skos:prefLabel "Radioactive"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:hazardous-asbestos
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "This object is comprised of one or many forms of asbestos in amounts which can be considered hazardous, and must be handled in accordance with the appropriate safety standards and guidelines. Available for layout for any persons after approvals are given by Geological Survey of Queensland custodians and a risk waiver and mitigation strategy are signed off."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "hazardous-asbestos" ;
+    skos:prefLabel "Hazardous: Asbestos"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:sampling
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Held openly by the Gelogical Survey of Queensland. Able to be displayed publicly and sampled in accordance with the standard sampling guidelines."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "sampling" ;
+    skos:prefLabel "Open for Sampling"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:gsq-eyes-only
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Held confidentially by the Gelogical Survey of Queensland. Not available for layout for any persons outside of the Geological Suvey of Queensland."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "gsq-eyes-only" ;
+    skos:prefLabel "GSQ Eyes Only"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geology-not-elsewhere-classified> ;
+    reg:status agldwgstatus:experimental ;
+    skos:definition "Viewing Status"@en ;
+    skos:hasTopConcept
+        :confidential ,
+        :open ,
+        :approved-access-only ,
+        :radioactive ,
+        :hazardous-asbestos ,
+        :sampling ,
+        :gsq-eyes-only ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:notation "Viewing Status" ;
+    skos:prefLabel "Viewing Status"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2024" ;
+    sdo:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:created "2024-08-06"^^xsd:date ;
+    dcterms:modified "2024-08-06"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.data.gov.au/org/gsq> ;
+.
+

@@ -1,0 +1,165 @@
+PREFIX : <https://linked.data.gov.au/def/object-condition/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/object-condition>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:pristine
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 100 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "pristine" ;
+    skos:prefLabel "Pristine"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:scuffed
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 90 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "scuffed" ;
+    skos:prefLabel "Scuffed"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:durable
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 80 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "durable" ;
+    skos:prefLabel "Durable"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:tested
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 70 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "tested" ;
+    skos:prefLabel "Tested"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:battered
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 60 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "battered" ;
+    skos:prefLabel "Battered"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:worn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 50 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "worn" ;
+    skos:prefLabel "Worn"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:damaged
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 40 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "damaged" ;
+    skos:prefLabel "Damaged"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:weakened
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 30 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "weakened" ;
+    skos:prefLabel "Weakened"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:fragile
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 20 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "fragile" ;
+    skos:prefLabel "Fragile"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:compromised
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 10 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "compromised" ;
+    skos:prefLabel "Compromised"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:unusable
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "On a scale of 1-100 for condition, with 100 being the best, this object scores 0 points."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "unusable" ;
+    skos:prefLabel "Unusable"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geology-not-elsewhere-classified> ;
+    reg:status agldwgstatus:experimental ;
+    skos:definition "Object Condition"@en ;
+    skos:hasTopConcept
+        :pristine ,
+        :scuffed ,
+        :durable ,
+        :tested ,
+        :battered ,
+        :worn ,
+        :damaged ,
+        :weakened ,
+        :fragile ,
+        :compromised ,
+        :unusable ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:notation "Object Condition" ;
+    skos:prefLabel "Object Condition"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2024" ;
+    sdo:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:created "2024-08-06"^^xsd:date ;
+    dcterms:modified "2024-08-06"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.data.gov.au/org/gsq> ;
+.
+
