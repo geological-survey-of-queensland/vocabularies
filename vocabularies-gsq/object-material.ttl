@@ -1,0 +1,128 @@
+PREFIX : <https://linked.data.gov.au/def/object-material/>
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://linked.data.gov.au/def/object-material>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:corflute
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Cardboard."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "corflute" ;
+    skos:prefLabel "corflute"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:steel
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Carbon enriched iron."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "steel" ;
+    skos:prefLabel "steel"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:polymer
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A substance or material consisting of very large molecules linked together into chains of repeating subunits."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "polymer" ;
+    skos:prefLabel "polymer"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:wood
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The structural tissue found in the stems and roots of trees and some bushes."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "wood" ;
+    skos:prefLabel "wood"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:tin
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The 50th element on the periodic table."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "tin" ;
+    skos:prefLabel "tin"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:lead
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The 82nd element on the periodic table."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "lead" ;
+    skos:prefLabel "lead"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:paper
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Paper is a thin sheet material produced by mechanically or chemically processing cellulose fibres derived from wood, rags, grasses, or other vegetable sources in water, draining the water through a fine mesh leaving the fibre evenly distributed on the surface, followed by pressing and drying. (https://en.wikipedia.org/wiki/Paper)"@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "paper" ;
+    skos:prefLabel "paper"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:glass
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "An amorphous (non-crystalline) solid."@en ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:inScheme cs: ;
+    skos:notation "glass" ;
+    skos:prefLabel "glass"@en ;
+    skos:topConceptOf cs: ;
+.
+<https://linked.data.gov.au/org/gsq>
+    a sdo:Organization ;
+    sdo:name "Geological Survey of Queensland" ;
+    sdo:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    sdo:keywords <http://linked.data.gov.au/def/earth-science-data-category/geology-not-elsewhere-classified> ;
+    reg:status agldwgstatus:experimental ;
+    skos:definition "Object Material"@en ;
+    skos:hasTopConcept
+        :corflute ,
+        :steel ,
+        :polymer ,
+        :wood ,
+        :tin ,
+        :lead ,
+        :paper ,
+        :glass ;
+    skos:historyNote "Created from the WIMS MIRO brainstorming session" ;
+    skos:notation "Object material" ;
+    skos:prefLabel "Object Material"@en ;
+    sdo:copyrightNotice "(c) Geological Survey of Queensland, 2024" ;
+    sdo:creator <https://linked.data.gov.au/org/gsq> ;
+    dcterms:created "2024-08-06"^^xsd:date ;
+    dcterms:modified "2024-08-06"^^xsd:date ;
+    sdo:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:publisher <https://linked.data.gov.au/org/gsq> ;
+.
+
