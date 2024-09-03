@@ -1,0 +1,352 @@
+#TODO - PLACEHOLDER
+PREFIX : <http://linked.data.gov.au/def/geologic-feature-contact-type/>
+# <<< To register #
+PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
+
+PREFIX cgicon: <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype>
+
+PREFIX cs: <http://linked.data.gov.au/def/geologic-feature-contact-type>
+# <<< To register #
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+>>>>>>>>> DEFINITION OF VOCAB
+The contact between geological features .....
+For rock units:
+1. Where the contact is an erosional or non-depositional contact/surface separating rock units of different ages.  Referred to as an unconformity, the term being applied to both the contact and the 'missing' rocks, from either erosion and/or non-deposition. The time interval representing the 'missing' rocks is termed a hiatus. 
+
+see Govindarajan pdf
+
+Wiki >>> https://en.wikipedia.org/wiki/Contact_%28geology%29  >>> A contact in geology is a boundary which separates one rock body from another
+
+
+
+>>>>>>>>>>>>>>>> WORKING 
+
+:fault-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+            "faulted contact"@en ,
+            "fault interface"@en ,
+            "faulted interface"@en ,
+            "fault surface"@en ,
+            "faulted surface"@en ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/faulted_contact> ;
+    skos:definition "A contact (surface) representing a fracture between two blocks of rock, such that the blocks have moved relative to each other (after USGS,2024)."@en ;
+    skos:scopeNote "After USGS: A fault movement may occur rapidly, in the form of an earthquake, or may occur slowly, in the form of creep. Faults may range in length from a few millimetres to thousands of kilometres. Most faults produce repeated displacements over geologic time. The fault surface can be horizontal or vertical or some arbitrary angle in between." ;
+    dcterms:references "USGS, 2024: What is a fault and what are the different types (Webpage accessed 08.08.2024)? <https://www.usgs.gov/faqs/what-a-fault-and-what-are-different-types#:~:text=A%20fault%20is%20a%20fracture,millimeters%20to%20thousands%20of%20kilometers>"@en ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Fault Contact"@en ;
+    skos:topConceptOf cs: ; <<<<<<<<< add USGS reference
+.
+
+
+
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+XXXXXXXXXXXXXXXXXXXXXXXX
+TEMPLATE
+
+
+>>>>>>>>>>>>>>>>>>>> COMPLETED
+
+
+:angular-unconformity-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+            "angular unconformity"@en ,
+            "angular unconformity surface"@en ,
+            "angular unconformity boundary"@en ,
+            "angular unconformable contact"@en ,
+            "angular unconformable surface"@en ,
+            "angular unconformable boundary"@en ;
+            "discordance"@en ,
+            "discordance contact"@en ,
+            "discordance surface"@en ,
+            "discordance boundary"@en ,
+            "angular discordance"@en ,
+            "angular discordance contact"@en ,
+            "angular discordance surface"@en ,
+            "angular discordance boundary"@en ,
+            "clinounconformity"@en ,
+            "clino-unconformity"@en ,
+            "clinunconformity"@en ,
+            "structural unconformity"@en ,
+            "structural unconformity contact"@en ,
+            "structural unconformity surface"@en ,
+            "structural unconformity boundary"@en ;    
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/angular_unconformable_contact> ;      
+    skos:broader :unconformity-contact ;
+    skos:definition "A type of unconformity contact embracing both hiatus and angular discordance between two rock units where the bedding of the younger rocks is not parallel to the bedding of the older rock unit; the surface of the latter has been eroded and its bedding dips at a different and often steeper angle, having been tilted and/or folded consequent to tectonism."@en ;
+    skos:scopeNote "The younger rocks may be flat lying, but also may be tilted subsequent to their deposition and consequent to a subsequent phase of tectonism, the key characteristic of the angular unconformity being the difference in the angle of tilting (the angular discordance) between the older and younger layers of rock. An angular unconformity may occur between: two sedimentary rock units; between a sedimentary rock unit and an extrusive igneous (volcanic) rock unit; or between an older metasedimentary rock unit and a younger sedimentary rock unit." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Angular Unconformity Contact"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation
+            "Neuendorf, K.K.E. et al., 2011: Glossary of Geology (5th Edition). American Geosciences Institute. <https://www.americangeosciences.org/pubs/glossary>"^^xsd:anyURI ,
+            "Wikipedia: Unconformity. <https://en.wikipedia.org/wiki/Unconformity>"^^xsd:anyURI ,
+            "Crosby, W.O., 1912: Dynamic Relations and Terminology of Stratigraphic Conformity and Unconformity. Journal of Geology, 20(4), 289 299. <https://www.journals.uchicago.edu/doi/epdf/10.1086/621968>"^^xsd:anyURI ;
+.
+
+:blended-unconformity-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+            "blended unconformity"@en ,
+            "graded unconformity"@en ;
+    skos:broader :unconformity-contact ;
+    skos:definition "A type of unconformity  contact  associated with either a disconformity or a nonconformity but where there is no distinct contact or surface of separation, e.g., an erosion surface covered by thick residual soil that grades down into the underlying rocks from which it was derived. The upper layer may have paleosols, soils or pebble beds and may grade into the lower layer, such that a contact surface cannot be determined."@en ;
+    skos:scopeNote "Blended unconformities differ from other unconformities in lacking a clear contact surface of separation between the units below and above them. They signify a slow change in depositional environments." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Blended Unconformity"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation
+            "Neuendorf, K.K.E. et al., 2011: Glossary of Geology (5th Edition). American Geosciences Institute. <https://www.americangeosciences.org/pubs/glossary>"^^xsd:anyURI ,
+            "Wikipedia: Unconformity. <https://en.wikipedia.org/wiki/Unconformity>"^^xsd:anyURI ;
+.
+
+:conformable-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/conformable_contact> ;      
+    skos:definition "A contact (surface) between rocks or rock units where there was continual, uninterrupted deposition of the rocks across the contact such that the layer  above  the contact (i.e., the younger layer) is deposited on the layer  below  (i.e., the older layer) without the occurrence of any significant time gap (hiatus)."@en ;
+    skos:scopeNote "Conformable contacts may be considered to exist in the succession of different types of rock units: stratigraphic, tectonostratigraphic, tectonometamorphic, and even intrusive rock units. The term is generally applied to lithostratigraphic units, but also has application to other types of stratigraphic units, such as biostratigraphic and magnetostratigraphic rock units." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Conformable Contact"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation
+            "Neuendorf, K.K.E. et al., 2011: Glossary of Geology (5th Edition). American Geosciences Institute. <https://www.americangeosciences.org/pubs/glossary>"^^xsd:anyURI ,
+            "Wikipedia: Contact (geology). <https://en.wikipedia.org/wiki/Contact_(geology)>"^^xsd:anyURI ;
+.
+
+:deformation-zone-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/deformation_zone_contact> ;      
+    skos:definition "A contact (boundary) within a deformation zone, delineating different degrees of deformation/structuring in the zone, or on the margin of a deformation zone where different rock masses meet, separating deformed from undeformed or relatively undeformed rocks outside the zone."@en ;
+    skos:scopeNote "Concept defined here; cf. CGI: 'A lithogenetic bundary (sic) separating rock masses that have different deformation structure, e.g. sheared rock against non sheared rock, brecciated rock against non-brecciated rock'. ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Deformation Zone Contact"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:deformation-zone-internal-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/deformation_zone_contact> ;
+    skos:broader :deformation-zone-contact ;
+    skos:definition "A contact (boundary) internal to a deformation zone where different rock masses or structures meet. This includes contacts in a deformation zone between rocks that have experienced different types or intensities of deformation, such as within a shear zone, where there may be contacts between highly sheared rocks and less deformed rocks."@en ;
+    skos:scopeNote "Concept defined here; cf. CGI for 'deformation zone contact: 'A lithogenetic bundary (sic) separating rock masses that have different deformation structure, e.g. sheared rock against non sheared rock, brecciated rock against non-brecciated rock'. ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Deformation Zone Internal Contact"@en ;
+.
+
+:deformation-zone-margin-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/deformation_zone_contact> ;      
+    skos:broader :deformation-zone-contact ;
+    skos:definition "A contact (boundary) on the margin/edge of a deformation zone that separates deformed rocks within the zone from undeformed or relatively undeformed rocks outside the zone."@en ;
+    skos:scopeNote "Concept defined here; cf. CGI for 'deformation zone contact: 'A lithogenetic bundary (sic) separating rock masses that have different deformation structure, e.g. sheared rock against non sheared rock, brecciated rock against non-brecciated rock'. ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Deformation Zone Margin Contact"@en ;
+.
+
+:depositional-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/depositional_contact> ;      
+    skos:definition "A contact (surface) separating one sedimentary rock unit from another. These units include lithostratigraphic rock units (including extrusive igneous rocks), tectonostratigraphic rock units, and tectometamorphic rock units of sedimentary origin. A depositional contact results from the deposition (sedimentation) of one unit upon another, irrespective of their structural and/or temporal relationships, such that conformity or unconformity (including angular unconformity) may exist between them. Not all contacts involving tectonostratigraphic rock units are depositional, especially when the original stratigraphy has been altered by processes such as thrusting or nappe stacking."@en ;
+    skos:scopeNote "Definition extended here from CGI." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Depositional Contact"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:diastem-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "diastem"@en ;
+    skos:broader :unconformity-contact ;
+    skos:definition "A type of unconformity contact representing a minor or relatively short interruption in sedimentation, involving only a brief or temporary interval of time (hiatus), with little or no erosion before deposition is resumed; a depositional break of less magnitude than a paraconformity, or a paraconformity of very small time value."@en ;
+    skos:scopeNote "Diastems are representative of time intervals (hiatuses) that are so short (several hundreds to several thousands of years) that they are generally delineated only by detailed stratigraphic analysis, such as by high-resolution biostratigraphy." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Diastem"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation
+            "Neuendorf, K.K.E. et al., 2011: Glossary of Geology (5th Edition). American Geosciences Institute. <https://www.americangeosciences.org/pubs/glossary>"^^xsd:anyURI ,
+            "Wikipedia: Diastem. <https://en.wikipedia.org/wiki/Diastem>"^^xsd:anyURI ;
+.
+
+:disconformity-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+            "disconformity"@en ,
+            "disconformity surface"@en ,
+            "disconformity boundary"@en ,
+            "disconformable contact"@en ,
+            "disconformable surface"@en ,
+            "disconformable boundary"@en ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/disconformable_contact> ;
+    skos:broader :unconformity-contact ;
+    skos:definition "A type of unconformity contact, representing a period of erosion and/or deposition, but where: (1) the rock units below and above the contact (surface/boundary) have the same orientation and thus embrace parallel layers of sedimentary rock with no angular discordance between them; and (2) the disconformity surface is usually marked by features of subaerial exposure or erosion (such as soil horizons, weathering profiles, stream channelling) in the older, generally-irregular, rock-unit surface."@en ;
+    skos:scopeNote "A disconformity contact differs from a paraconformity contact where the unconformity contact is indiscernible or is not readily discernible; it is not represented by an irregular erosion surface, and the contact may be coincident with a bedding plane. In a borehole, differentiating between a disconformity contact and a paraconformity contact may be difficult." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Disconformity Contact"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation
+            "Neuendorf, K.K.E. et al., 2011: Glossary of Geology (5th Edition). American Geosciences Institute. <https://www.americangeosciences.org/pubs/glossary>"^^xsd:anyURI ,
+            "Wikipedia: Unconformity. <https://en.wikipedia.org/wiki/Unconformity>"^^xsd:anyURI ;
+.
+
+:fault-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+            "faulted contact"@en ,
+            "fault interface"@en ,
+            "faulted interface"@en ,
+            "fault surface"@en ,
+            "faulted surface"@en ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/faulted_contact> ;
+    skos:definition "A contact (surface) representing a fracture between two blocks of rock, such that the blocks have moved relative to each other (after USGS,2024)."@en ;
+    skos:scopeNote "After USGS: A fault movement may occur rapidly, in the form of an earthquake, or may occur slowly, in the form of creep. Faults may range in length from a few millimetres to thousands of kilometres. Most faults produce repeated displacements over geologic time. The fault surface can be horizontal or vertical or some arbitrary angle in between." ;
+    dcterms:references "USGS, 2024: What is a fault and what are the different types (Webpage accessed 08.08.2024)? <https://www.usgs.gov/faqs/what-a-fault-and-what-are-different-types#:~:text=A%20fault%20is%20a%20fracture,millimeters%20to%20thousands%20of%20kilometers>"@en ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Fault Contact"@en ;
+    skos:topConceptOf cs: ; <<<<<<<<< add USGS reference
+.
+
+:nonconformity-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+       "nonconformity"@en ,
+        "nonconformity surface"@en ,
+        "nonconformity boundary"@en ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/nonconformable_contact> ;      
+    skos:broader :unconformity-contact ;
+    skos:definition "A type of unconformity contact between sedimentary rocks and older, eroded, intrusive igneous or massive metamorphic rocks the latter including metamorphic rocks where bedding has been lost consequent to metamorphism."@en ;
+    skos:scopeNote "Although the term  nonconformable  pertains to a nonconformity (Jackson J.A. et al., 2011), usage of the term  nonconformable contact  (as per CGI) may vary depending on the context, and preferably should be avoided to prevent confusion; it can be taken to refer to a (not-conformable) boundary/surface between two rock units where there is a gap in the geological record and the strata are not parallel." ;
+    # <<<< need to check this in 2011 edition, as was taken from the 1977 edition #  
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Nonconformity Contact"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation
+        "Neuendorf, K.K.E. et al., 2011: Glossary of Geology (5th Edition). American Geosciences Institute. <https://www.americangeosciences.org/pubs/glossary>"^^xsd:anyURI ,
+        "Wikipedia: Unconformity. <https://en.wikipedia.org/wiki/Unconformity>"^^xsd:anyURI ;
+.
+
+:onlap-unconformity-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+            "onlap unconformity"@en ,
+            "onlap unconformity surface"@en ,
+            "onlap unconformity boundary"@en ,
+            "onlap unconformable contact"@en ,
+            "onlap unconformable surface"@en ,
+            "onlap unconformable boundary"@en ,
+            "buttress unconformity"@en ,
+            "buttress unconformity contact"@en ,
+            "buttress unconformity surface"@en ,
+            "buttress unconformity boundary"@en ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/buttress_unconformity> ;      
+    skos:broader :unconformity-contact ;
+    skos:definition "A type of unconformity contact, also known as a buttress unconformity (contact), formed when sedimentary deposition extends beyond the pre-existing topography s underlying strata, resulting in a unique contact between the sedimentary layers and the underlying strata."@en ;    
+    skos:scopeNote "Such a surface forms when base level has increased and/or there is an increased supply of sediment. An onlap unconformity differs from an angular unconformity, as the younger sedimentary layers of the former are truncated at the onlap-unconformity surface. The term  onlap unconformity  is preferred here over application of the term  buttress unconformity , as it is slightly more intuitive, in directly referring to the process of younger strata lapping onto (onlapping) older topography. The term  buttress unconformity  is also descriptive, as it elicits the image of younger strata buttressing against the older topography but is less self-explanatory in meaning." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Onlap Unconformity Contact"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation
+            "Neuendorf, K.K.E. et al., 2011: Glossary of Geology (5th Edition). American Geosciences Institute. <https://www.americangeosciences.org/pubs/glossary>"^^xsd:anyURI ,
+            "Wikipedia: Unconformity. <https://en.wikipedia.org/wiki/Unconformity>"^^xsd:anyURI ;
+.
+
+:paraconformity-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+            "paraconformity"@en ,
+            "paraconformity surface"@en ,
+            "paraconformity boundary"@en ,
+            "paraconformable contact"@en ,
+            "paraconformable surface"@en ,
+            "paraconformable boundary"@en ;
+            "nondepositional unconformity"@en ,
+            "nondepositional unconformity contact"@en ,
+            "nondepositional unconformity surface"@en ,
+            "nondepositional unconformity boundary"@en ,
+            "pseudoconformity"@en ,
+            "pseudoconformity contact"@en ,
+            "pseudoconformity surface"@en ,
+            "pseudoconformity boundary"@en ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/paraconformable_contact> ;      
+    skos:broader :unconformity-contact ;
+    skos:definition "A type of unconformity contact, representing a period of erosion and/or deposition, but where: (1) the rock units below and above the contact (surface/boundary) have the same orientation and thus embrace parallel layers of sedimentary rock with no angular discordance between them; and (2) the unconformity contact is indiscernible or is not readily discernible and may be coincident with a bedding plane (i.e., the strata above and below the contact appear conformable)."@en ;
+    skos:scopeNote "In a borehole, differentiating between a disconformity contact and a paraconformity contact may be difficult, as also may be the case of recognising either. Other methods, based solely on determination of the ages of the strata above and below the contact (to determine hiatus, such as by employing palynological age assessment) may assist with the delineation of, or narrowing down the interval containing, such a contact (although not permitting the differentiation between the two types)." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Paraconformity Contact"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation
+            "Neuendorf, K.K.E. et al., 2011: Glossary of Geology (5th Edition). American Geosciences Institute. <https://www.americangeosciences.org/pubs/glossary>"^^xsd:anyURI ,
+            "Wikipedia: Unconformity. <https://en.wikipedia.org/wiki/Unconformity>"^^xsd:anyURI ;
+.
+
+:unconformity-contact
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "unconformity"@en ,
+        "unconformable contact"@en ,
+        "unconformable surface"@en ,
+        "unconformity surface"@en ,
+        "unconformable boundary"@en ,
+        "unconformity boundary"@en ;
+    skos:definition "An  unconformity contact  is a surface or boundary that signifies a gap of quite varying, sometimes minor, magnitude in the depositional record between older and younger rocks."@en ;
+    skos:scopeNote "The term  unconformity  has been applied to refer not only the contact/boundary/surface (here referred to as an  unconformity contact  between the older and younger rocks), but also the physical gap represented by the  missing  rocks. The period (time) associated with this gap in the rock record, i.e., the temporal gap, is referred to as a hiatus. It signifies the period during which no rocks were preserved, being either not deposited or deposited but subsequently eroded. The various types of unconformity contacts (based on the various types of unconformities) are defined as narrower concepts of  unconformity-contact  in this vocabulary. They embrace: disconformity-contact, nonconformity-contact, angular-unconformity-contact, paraconformity-contact, onlap-unconformity-contact (=buttress-unconformity-contact), and blended-unconformity-contact. Also included in the spectrum of unconformity-contact types is the concept of a  diastem-contact , a diastem being a minor interruption in sedimentation with little or no erosion; its contact surface separates strata of distinct lithology and signifies a change in depositional environments, with little or no erosion and brief hiatus. A diastem can be regarded as a  minor paraconformity  compared to other depositional interruptions. Recognition of a diastem and its contact surface can be difficult and generally requires detailed stratigraphic analysis (e.g., high-resolution biostratigraphy). In applying the term  unconformity contact  to interruptions in the deposition of stratigraphic rock units (as opposed to non-stratigraphic rock units), unconformity contacts are not only recognised between lithostratigraphic units, but also between biostratigraphic units and between magnetostratigraphic units. For the latter two types of rock units, delineating the precise location/position of the unconformity contact may be challenging." ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    skos:closeMatch <https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/contacttype/unconformable_contact> ;      
+    skos:inScheme cs: ;
+    skos:prefLabel "Unconformity Contact"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation
+        "Neuendorf, K.K.E. et al., 2011: Glossary of Geology (5th Edition). American Geosciences Institute. <https://www.americangeosciences.org/pubs/glossary>"^^xsd:anyURI ,
+        "Wikipedia: Unconformity. <https://en.wikipedia.org/wiki/Unconformity>"^^xsd:anyURI ,
+        "Wikipedia: Diastem. <https://en.wikipedia.org/wiki/Diastem>"^^xsd:anyURI ,
+        "Stratigraphic Guide, International Commission on Stratigraphy. <https://stratigraphy.org/guide/uncon>"^^xsd:anyURI ;
+.
+
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<< COMPLETED
+
+
