@@ -1,6 +1,5 @@
 PREFIX : <https://linked.data.gov.au/def/addr-part-types/>
 PREFIX agldwgstatus: <https://linked.data.gov.au/def/reg-statuses/>
-PREFIX cs: <https://linked.data.gov.au/def/addr-part-types>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX droles: <https://linked.data.gov.au/def/data-roles/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -11,324 +10,280 @@ PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX apt: <https://linked.data.gov.au/def/addr-part-types/>
+PREFIX cs: <https://linked.data.gov.au/def/addr-part-types>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX isoroles: <https://linked.data.gov.au/def/data-roles/>
 
 
-:geographicalObject
+apt:addressNumberFirst
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "A reference to a geographical object"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "Either the house number, or the lowest in a range where the Address Site has a range of numbers. Usually, street numbers are odd on the left side of the road, and even on the right."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "geographical object type"@en ;
-    skos:scopeNote "This replaces several ISO19160-1 & GNAF values as this reference can be used to any category of Geographical Object with the name for the object used within the address this part is part of. Geographical Object categories are assgned to the Geographical Object, not any part of this address part or the address it is part of." ;
+    skos:prefLabel "Address Number First"@en ;
     skos:topConceptOf cs: ;
 .
 
-:subaddressType
+apt:addressNumberFirstSuffix
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "The type of the sub-address part"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "Alphabetical suffix to streetNumberFirst. Requires streetNumberFirst to have a value."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "sub-address type"@en ;
-    skos:scopeNote "Replaces GNAF's flatTypeCode" ;
+    skos:prefLabel "Address Number First Suffix"@en ;
     skos:topConceptOf cs: ;
 .
 
-:subaddressNumber
+apt:addressNumberLast
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "The number of the sub-address part"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "This is the upper number range if an Address Site has a range of numbers. Requires streetNumberFirst to have a value."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "sub-address number"@en ;
-    skos:scopeNote "Replaces GNAF's flatNumber" ;
+    skos:prefLabel "Address Number Last"@en ;
     skos:topConceptOf cs: ;
 .
 
-:subaddressNumberPrefix
+apt:addressNumberLastSuffix
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "sub-address number prefix"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "Alphabetical suffix to streetNumberLast. Requires streetNumberLast to have a value."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "sub-address number prefix"@en ;
-    skos:scopeNote "Replaces GNAF's flatNumberPrefix" ;
+    skos:prefLabel "Address Number Last Suffix"@en ;
     skos:topConceptOf cs: ;
 .
 
-:subaddressNumberSuffix
+apt:buildingLevelNumber
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "sub-address number suffix"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "The number assigned to the floor of type specified in buildingLevelType."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "sub-address number suffix"@en ;
-    skos:scopeNote "Replaces GNAF's flatNumberSuffix" ;
+    skos:prefLabel "Building Level Number"@en ;
     skos:topConceptOf cs: ;
 .
 
-:buildingLevelType
+apt:buildingLevelNumberSuffix
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "building level type"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "Alphabetical suffix to buildingLevelNumber. Requires buildingLevelNumber to have a value."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "building level type"@en ;
-    skos:scopeNote "Replaces GNAF's levelTypeCode" ;
+    skos:prefLabel "Building Level Number Suffix"@en ;
     skos:topConceptOf cs: ;
 .
 
-:buildingLevelNumber
+apt:buildingLevelType
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "building level number"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "The type of floor or level, within a multi-storey building. One of the concepts from https://linked.data.gov.au/def/building-level-types."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "building level number"@en ;
-    skos:scopeNote "Replaces GNAF's levelNumber" ;
+    skos:prefLabel "Building Level Type"@en ;
     skos:topConceptOf cs: ;
 .
 
-:buildingLevelNumberPrefix
+apt:countryName
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "building level number prefix"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "The country name from ISO-3166. One of the concepts from http://linked.data.gov.au/def/countries."@en ;
+    skos:historyNote "Original concept of country name from ISO19160-1." ;
     skos:inScheme cs: ;
-    skos:prefLabel "building level number prefix"@en ;
-    skos:scopeNote "Replaces GNAF's levelNumberPrefix" ;
+    skos:prefLabel "Country"@en ;
     skos:topConceptOf cs: ;
 .
 
-:buildingLevelNumberSuffix
+apt:geographicName
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "building level number suffix"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "An official geographic name or culturally accepted common usage name for an addressable object of a suitable type from https://linked.data.gov.au/def/address-geographic-name-types."@en ;
+    skos:historyNote "From Queensland address data. This replaces several ISO19160-1 & GNAF values as this reference can be used to any category of Geographical Object with the name for the object used within the address this part is part of. Geographical Object categories are assgned to the Geographical Object, not any part of this address part or the address it is part of." ;
     skos:inScheme cs: ;
-    skos:prefLabel "building level number suffix"@en ;
-    skos:scopeNote "Replaces GNAF's levelNumberSuffix" ;
+    skos:prefLabel "Geographic Name"@en ;
     skos:topConceptOf cs: ;
 .
 
-:streetNumberFirst
+<https://linked.data.gov.au/def/addr-part-types/https://linked.data.gov.au/def/addr-part-types/buildingName>
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "street number first"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "The official name or culturally accepted common usage name for a building as defined by https://linked.data.gov.au/def/go-categories/building."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "street number first"@en ;
-    skos:scopeNote "Replaces GNAF's numberFirst" ;
+    skos:prefLabel "Building Name"@en ;
     skos:topConceptOf cs: ;
 .
 
-:streetNumberFirstPrefix
+apt:indigenousCountryName
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "street number first prefix"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "A name used in association with traditional lands or water to which Aboriginal peoples are ancestrally and spiritually connected."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "street number first prefix"@en ;
-    skos:scopeNote "Replaces GNAF's numberFirstPrefix" ;
+    skos:prefLabel "Indigenous Country Name"@en ;
     skos:topConceptOf cs: ;
 .
 
-:streetNumberFirstSuffix
+apt:locality
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "street number first suffix"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "A reference to a Locality object. A bounded area distinguished for its community and/or landscape characteristics: in metropolitan areas it is commonly referred to as a ‘suburb’; it provides an official reference point for addressing purposes. Defined by https://linked.data.gov.au/def/go-categories/locality."@en ;
+    skos:historyNote "Original concept of locality name from ISO19160-1." ;
     skos:inScheme cs: ;
-    skos:prefLabel "street number first suffix"@en ;
-    skos:scopeNote "Replaces GNAF's numberFirstSuffix" ;
+    skos:prefLabel "Locality"@en ;
     skos:topConceptOf cs: ;
 .
 
-:streetNumberLast
+apt:postcode
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "street number last"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "The relevant postcode allocated by Australia Post to the locality utilised in the address."@en ;
+    skos:historyNote "Original concept of postcode from ISO19160-1." ;
     skos:inScheme cs: ;
-    skos:prefLabel "street number last"@en ;
-    skos:scopeNote "Replaces GNAF's numberLast" ;
+    skos:prefLabel "Postcode"@en ;
     skos:topConceptOf cs: ;
 .
 
-:streetNumberLastPrefix
+apt:propertyName
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "street number last prefix"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "The official name or culturally accepted common usage name for a property, including a rural or agricultural property, as defined by https://linked.data.gov.au/def/go-categories/property."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "street number last prefix"@en ;
-    skos:scopeNote "Replaces GNAF's numberLastPrefix" ;
+    skos:prefLabel "Property Name"@en ;
     skos:topConceptOf cs: ;
 .
 
-:streetNumberLastSuffix
+apt:road
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "street number last suffix"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:altLabel "Street"@en ;
+    skos:broader apt:thoroughfareName ;
+    skos:definition "The name of the road from which the address site is accessed. A reference to a road object."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "street number last suffix"@en ;
-    skos:scopeNote "Replaces GNAF's numberLastSuffix" ;
+    skos:prefLabel "Road"@en ;
+.
+
+apt:stateOrTerritory
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "State"@en ,
+        "Territory"@en ;
+    skos:definition "Any of the sixteen major divisions which contribute to the federated Commonwealth of Australia. One of the concepts from https://linked.data.gov.au/dataset/asgsed3/STE that indicates the state or territory in which the address site is located."@en ;
+    skos:historyNote "Original concept of administrative area name from ISO19160-1." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "State Or Territory"@en ;
     skos:topConceptOf cs: ;
 .
 
-:street
+apt:subaddressNumber
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "A reference to a Street object"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "The number assigned to a subaddress of that of type specified in subaddressType."@en ;
+    skos:historyNote "Replaces GNAF’s flatNumber." ;
     skos:inScheme cs: ;
-    skos:prefLabel "street"@en ;
-    skos:scopeNote "Replaces GNAF's streetLocality & streetType as type is a property of a street object" ;
+    skos:prefLabel "Subaddress Number"@en ;
     skos:topConceptOf cs: ;
 .
 
-:waterFeature
+apt:subaddressNumberSuffix
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "A reference to a Water Feature object"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "Alphabetical suffix to subaddressNumber. Requires subaddressNumber to have a value."@en ;
+    skos:historyNote "Replaces GNAF’s flatNumberSuffix." ;
     skos:inScheme cs: ;
-    skos:prefLabel "water feature"@en ;
-    skos:scopeNote "Replaces GNAF's " ;
+    skos:prefLabel "Subaddress Number Suffix"@en ;
     skos:topConceptOf cs: ;
 .
 
-:locality
+apt:subaddressType
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "A reference to a Locality object"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "The type that distinguishes the separately identifiable portion of the address within a building, complex or marina. One of the concepts from https://linked.data.gov.au/def/subaddress-types."@en ;
+    skos:historyNote "Replaces GNAF’s flatTypeCode." ;
     skos:inScheme cs: ;
-    skos:prefLabel "locality"@en ;
-    skos:scopeNote "Replaces ISO19160-1's localityName" ;
+    skos:prefLabel "Subaddress Type"@en ;
     skos:topConceptOf cs: ;
 .
 
-:stateOrTerritory
+apt:waterFeature
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "state or territory"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:broader apt:thoroughfareName ;
+    skos:definition "The name of the water feature from which the address site is accessed. A reference to  Water Feature object."@en ;
+    skos:historyNote "From Queensland address data." ;
     skos:inScheme cs: ;
-    skos:prefLabel "state or territory"@en ;
-    skos:scopeNote "Replaces ISO19160-1's administrativeAreaName" ;
-    skos:topConceptOf cs: ;
+    skos:prefLabel "Water Feature Name"@en ;
 .
 
-:indigenousCountryName
+apt:thoroughfareName
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "indigenous country name"@en ;
-    skos:historyNote "Created for the Address Model" ;
+    skos:definition "The name of the thoroughfare from which the address site is accessed."@en ;
+    skos:historyNote "Original concept of thoroughfare name from ISO19160-1." ;
     skos:inScheme cs: ;
-    skos:prefLabel "indigenous country name"@en ;
-    skos:scopeNote "A reference to a Geographical Object may be used instead of this direct quoting of a place name" ;
+    skos:narrower
+        apt:road ,
+        apt:waterFeature ;
+    skos:prefLabel "Thoroughfare Name"@en ;
     skos:topConceptOf cs: ;
-.
-
-:postcode
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "postcode"@en ;
-    skos:historyNote "Created for the Address Model" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "postcode"@en ;
-    skos:scopeNote "Is equivalent to ISO19160-1's postcode" ;
-    skos:topConceptOf cs: ;
-.
-
-:country
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    reg:status agldwgstatus:experimental ;
-    skos:definition "country"@en ;
-    skos:historyNote "Created for the Address Model" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "country"@en ;
-    skos:scopeNote "Replaces ISO19160-1's countryCode" ;
-    skos:topConceptOf cs: ;
-.
-
-<https://linked.data.gov.au/org/qsi>
-    a sdo:Organization ;
-    sdo:name "Queensland Spatial Information" ;
-    sdo:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
-.
-
-<https://linked.data.gov.au/org/icsm>
-    a sdo:Organization ;
-    sdo:name "Intergovernmental Committee on Surveying & Mapping" ;
-    sdo:url "https://icsm.gov.au"^^xsd:anyURI ;
 .
 
 cs:
     a skos:ConceptScheme ;
-    sdo:keywords themes:place-names ;
-    dcterms:created "2023-05-25"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/qsi> ;
-    dcterms:modified "2024-06-26"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/icsm> ;
-    reg:status agldwgstatus:experimental ;
-    owl:versionIRI :1.0 ;
-    owl:versionInfo "1.0" ;
-    skos:definition "This vocabulary describes types of name part types used in addressing"@en ;
+    owl:versionIRI apt:None ;
+    skos:definition "This vocabulary describes the components for addresses. It is an extended version of ISO19160-1's Address Component Type vocabulary. "@en ;
     skos:hasTopConcept
-        :geographicalObject ,
-        :subaddressType ,
-        :subaddressNumber ,
-        :subaddressNumberPrefix ,
-        :subaddressNumberSuffix ,
-        :buildingLevelType ,
-        :buildingLevelNumber ,
-        :buildingLevelNumberPrefix ,
-        :buildingLevelNumberSuffix ,
-        :streetNumberFirst ,
-        :streetNumberFirstPrefix ,
-        :streetNumberFirstSuffix ,
-        :streetNumberLast ,
-        :streetNumberLastPrefix ,
-        :streetNumberLastSuffix ,
-        :street ,
-        :waterFeature ,
-        :locality ,
-        :stateOrTerritory ,
-        :indigenousCountryName ,
-        :postcode ,
-        :country ;
-    skos:historyNote "This vocabulary replaces Address Component Types in ISO19160-1. It is also derived from elements within the Austrlaian Geocoded National Address File (GNAF)."@en ;
-    skos:prefLabel "Address Name Part Types"@en ;
+        apt:addressNumberFirst ,
+        apt:addressNumberFirstSuffix ,
+        apt:addressNumberLast ,
+        apt:addressNumberLastSuffix ,
+        apt:buildingLevelNumber ,
+        apt:buildingLevelNumberSuffix ,
+        apt:buildingLevelType ,
+        apt:countryName ,
+        apt:geographicName ,
+        <https://linked.data.gov.au/def/addr-part-types/https://linked.data.gov.au/def/addr-part-types/buildingName> ,
+        apt:indigenousCountryName ,
+        apt:locality ,
+        apt:postcode ,
+        apt:propertyName ,
+        apt:stateOrTerritory ,
+        apt:subaddressNumber ,
+        apt:subaddressNumberSuffix ,
+        apt:subaddressType ,
+        apt:thoroughfareName ;
+    skos:historyNote "This vocabulary is an extended version of ISO19160-1's Address Component Type vocabulary, with additional components provided by Queensland."@en ;
+    skos:prefLabel "Address Part Types"@en ;
     prov:qualifiedAttribution
         [
-            prov:hadRole droles:custodian ;
-            prov:agent <https://linked.data.gov.au/org/icsm>
+            dcat:hadRole isoroles:custodian ;
+            prov:agent
+                [
+                    a schema:Person ;
+                    schema:email ""^^xsd:anyURI ;
+                    schema:name "Icsm" ;
+                ] ;
         ] ;
+    schema:creator
+        [
+            a schema:Organization ;
+            schema:name "Department Of Resources" ;
+            schema:url ""^^xsd:anyURI ;
+        ] ;
+    dcterms:created "2024-09-18"^^xsd:date ;
+	dcterms:modified "2024-09-18"^^xsd:date ;
+    schema:keywords "Address" ;
+    schema:publisher
+        [
+            a schema:Organization ;
+            schema:name "Icsm" ;
+            schema:url ""^^xsd:anyURI ;
+        ] ;
+    schema:version "None" ;
 .
 
