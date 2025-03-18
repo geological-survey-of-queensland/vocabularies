@@ -359,6 +359,7 @@ cdt:lodgement-form
         cdt:orthoclase ,
         cdt:osmium ,
         cdt:packing-sand ,
+        cdt:palagonite ,
         cdt:palladium ,
         cdt:palygorskite ,
         cdt:peat ,
@@ -555,6 +556,16 @@ cdt:material-alluvialwash
     skos:prefLabel "Material: Alluvial Wash"@en ;
 .
 
+cdt:material-bauxite
+    a skos:Collection ;
+    skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type bauxite."@en ;
+    skos:member
+        cdt:alumina ;
+    skos:notation "MBAUX" ;
+    skos:prefLabel "Material: Bauxite"@en ;
+.
+
 cdt:material-bulkmetal
     a skos:Collection ;
     skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
@@ -731,12 +742,12 @@ cdt:material-bulkrock
     skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The commodities relevant, applicable, and selectable as part of the material type bulk rock."@en ;
     skos:member
-        cdt:bauxite ,
+        cdt:alumina ,
         cdt:diatomite ,
         cdt:flux-silica ,
         cdt:limestone ,
         cdt:peat ,
-        cdt:phosphate-rock ,
+        cdt:phosphorous-pentoxide ,
         cdt:silica-rock ;
     skos:notation "MLBRCK" ;
     skos:prefLabel "Material: Bulk Rock"@en ;
@@ -808,12 +819,11 @@ cdt:material-directshippingore
     skos:definition "The commodities relevant, applicable, and selectable as part of the material type direct shipping ore."@en ;
     skos:member
         cdt:alumina ,
-        cdt:cassiterite-ore ,
-        cdt:hematite-ore ,
-        cdt:iron-ore ,
-        cdt:magnetite-ore ,
-        cdt:manganese-ore ,
-        cdt:nickel-ore;
+        cdt:hematite ,
+        cdt:magnetite ,
+        cdt:manganese ,
+        cdt:tin ,
+        cdt:nickel ;
     skos:notation "MLDSHO" ;
     skos:prefLabel "Material: Direct Shipping Ore"@en ;
 .
@@ -869,6 +879,7 @@ cdt:material-earthmaterial
         cdt:magnesite ,
         cdt:other-industrial-mineral ,
         cdt:other-industrial-rock ,
+        cdt:Palagonite ,
         cdt:peat ,
         cdt:perlite ,
         cdt:phosphate-rock ,
@@ -1115,6 +1126,7 @@ cdt:material-metalhydroxide
         cdt:iron ,
         cdt:lead ,
         cdt:lithium ,
+        cdt:magnesium ,
         cdt:mercury ,
         cdt:nickel ,
         cdt:potassium ,
@@ -1126,6 +1138,21 @@ cdt:material-metalhydroxide
         cdt:zinc ,
         cdt:zirconium ;
     skos:notation "MLMTOH" ;
+    skos:prefLabel "Material: Metal Hydroxide"@en ;
+.
+
+cdt:material-oxide
+    a skos:Collection ;
+    skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type metal oxide."@en ;
+    skos:member
+        cdt:alumina ,
+        cdt:hematite ,
+        cdt:magnetite ,
+        cdt:manganese ,
+        cdt:tin ,
+        cdt:nickel ;
+    skos:notation "MLMTO" ;
     skos:prefLabel "Material: Metal Hydroxide"@en ;
 .
 
@@ -1189,6 +1216,16 @@ cdt:material-mineralsand
         cdt:zircon ;
     skos:notation "MLMNSD" ;
     skos:prefLabel "Material: Mineral Sand"@en ;
+.
+
+cdt:material-phosphate-rock
+    a skos:Collection ;
+    skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
+    skos:definition "The commodities relevant, applicable, and selectable as part of the material type mineral sand."@en ;
+    skos:member
+        cdt:phosphorous-pentoxide ;
+    skos:notation "MLMPHR" ;
+    skos:prefLabel "Material: Phosphate Rock"@en ;
 .
 
 cdt:material-nonmetal
@@ -1936,7 +1973,7 @@ cdt:magnetite
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/magnetite> ;
     skos:inScheme cs: ;
     skos:notation "MT" ;
-    skos:prefLabel "Magnetite"@en ;
+    skos:prefLabel "Magnetite Fe3O4"@en ;
 .
 
 cdt:natural-secondary-aggregate
@@ -2825,7 +2862,7 @@ cdt:hematite
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/hematite> ;
     skos:inScheme cs: ;
     skos:notation "HEM" ;
-    skos:prefLabel "Hematite"@en ;
+    skos:prefLabel "Hematite Fe2O3"@en ;
 .
 
 cdt:horticultural-sand
@@ -3076,7 +3113,7 @@ cdt:phosphorous-pentoxide
     skos:exactMatch <http://resource.geosciml.org/classifier/cgi/commodity-code/phosphorous-pentoxide> ;
     skos:inScheme cs: ;
     skos:notation "PO" ;
-    skos:prefLabel "Phosphorous Pentoxide"@en ;
+    skos:prefLabel "Phosphorous Pentoxide P2O5"@en ;
 .
 
 cdt:plaster-sand
@@ -4318,6 +4355,16 @@ cdt:onyx
     skos:prefLabel "Onyx"@en ;
 .
 
+cdt:palagonite
+    a skos:Concept ;
+    skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader cdt:industrial-rock ;
+    skos:definition "Palagonite is a term used loosely for variable alteration products of volcanic glass, typically a result of the interaction between water and basalt melt, but also applied to powdery yellow-brown weathering products of basaltic glass. It is a heterogeneous material, usually with highly variable optical and structural properties, ranging from a clear, transparent, isotropic, smooth and commonly concentrically banded material, commonly called gel-palagonite, to a translucent, anisotropic, slightly to strongly birefringent material of fibrous, lath-like or granular structure, commonly called fibro-palagonite (Stroncik & Schmincke, 2002). Usually yellow-orange to brown. (Mindat.org)"@en ;
+    skos:inScheme cs: ;
+    skos:notation "PGNT" ;
+    skos:prefLabel "Palagonite"@en ;
+.
 cdt:peat
     a skos:Concept ;
     skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
