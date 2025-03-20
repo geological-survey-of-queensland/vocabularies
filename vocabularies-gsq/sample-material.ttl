@@ -20,6 +20,16 @@ spmt:animal-material
     skos:prefLabel "Animal Material"@en ;
 .
 
+spmt:bauxite
+    a skos:Concept ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Bauxite"@en ;
+    skos:broader spmt:lateritic-ore ;
+    skos:definition "Laterite ores are formed by the process of weathering and normally found in tropical regions where weathering extracts and deposits minerals of value in layers at varying depths below the ground surface."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Bauxite"@en ;
+.
 spmt:cement
     a skos:Concept ;
     skos:historyNote "Compiled by the Geological Survey of Queensland" ;
@@ -181,6 +191,7 @@ spmt:min-process-inputs
     skos:definition "Types of raw materials, semi-processed materials, and by-products processed by mineral mines to generate saleable products."@en ;
     skos:member
         spmt:alluvial-wash ,
+        spmt:bauxite ,
         spmt:bulk-metal ,
         spmt:clay ,
         spmt:dore ,
@@ -191,6 +202,7 @@ spmt:min-process-inputs
         spmt:metal-concentrate ,
         spmt:metallic-ore ,
         spmt:mineral-sand ,
+        spmt:phosphate-rock ,
         spmt:reclaimed-metal ,
         spmt:slag ,
         spmt:slime ,
@@ -218,6 +230,7 @@ spmt:min-products
         spmt:metal-cathode ,
         spmt:metal-concentrate ,
         spmt:metal-hydroxide ,
+        spmt:metal-oxide ,
         spmt:metal-sulphate ,
         spmt:non-metal ,
         spmt:silica-sand ,
@@ -232,12 +245,14 @@ spmt:min-raw-materials
     skos:definition "Types of raw materials extracted from the earth by mineral miners and operators under Mineral Resources legislation and regulation."@en ;
     skos:member
         spmt:alluvial-wash ,
+        spmt:bauxite ,
         spmt:clay ,
         spmt:earth-material ,
         spmt:gem-rock ,
         spmt:lateritic-ore ,
         spmt:metallic-ore ,
         spmt:mineral-sand ,
+        spmt:phosphate-rock ,
         spmt:stone ;
     skos:prefLabel "Mineral Mining Raw Materials"@en ;
 .
@@ -255,6 +270,17 @@ spmt:petroleum-materials
         spmt:water ,
         spmt:wax ;
     skos:prefLabel "Petroleum Materials"@en ;
+.
+
+spmt:phosphate-rock
+    a skos:Concept ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Sand-grade-sedimentary-rock"@en ;
+    skos:broader spmt:rock ;
+    skos:definition "Any rock that contains one or more phosphatic minerals of sufficient purity and quantity to permit its commercial use as a source of phosphatic compounds or elemental phosphorus. About 90% of the world's production is sedimentary phosphate rock, or phosphorite; the remainder is igneous rock rich in apatite."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Phosphate Rock"@en ;
 .
 
 spmt:pitch
@@ -759,6 +785,17 @@ spmt:metal-sulphate
     skos:definition "A compound that contains one or more metal elements bonded to a sulphate anion."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Metal Sulphate"@en ;
+.
+
+spmt:metal-oxide
+    a skos:Concept ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Oxide"@en ;
+    skos:broader spmt:metal-compound ;
+    skos:definition "A compound that contains one or more metal elements bonded to an oxide anion."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Metal Oxide"@en ;
 .
 
 spmt:metallic-ore
