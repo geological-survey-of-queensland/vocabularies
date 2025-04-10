@@ -365,6 +365,7 @@ cdt:lodgement-form
         cdt:peat ,
         cdt:perlite ,
         cdt:phenakite ,
+        cdt:phosphate ,
         cdt:phosphate-rock ,
         cdt:phosphorous ,
         cdt:phosphorous-pentoxide ,
@@ -702,6 +703,7 @@ cdt:material-bulkmineral
         cdt:orthoclase ,
         cdt:palagonite ,
         cdt:perlite ,
+        cdt:phosphate ,
         cdt:phosphorous-pentoxide ,
         cdt:potash ,
         cdt:pyrite ,
@@ -1222,6 +1224,7 @@ cdt:material-phosphaterock
     skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     skos:definition "The commodities relevant, applicable, and selectable as part of the material type phosphate rock."@en ;
     skos:member
+        cdt:phosphate ,
         cdt:phosphorous-pentoxide ;
     skos:notation "MPHR" ;
     skos:prefLabel "Material: Phosphate Rock"@en ;
@@ -5070,12 +5073,23 @@ cdt:organic-material
     skos:prefLabel "Organic Material"@en ;
 .
 
+cdt:phosphate
+    a skos:Concept ;
+    skos:historyNote "Defined in wikipedia, augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "PO4"@en ;
+    skos:broader cdt:phosphate-rock ;
+    skos:definition "In chemistry, a phosphate is an anion, salt, functional group or ester derived from a phosphoric acid. It most commonly means orthophosphate, a derivative of orthophosphoric acid, a.k.a. phosphoric acid H3PO4."@en ;
+    skos:inScheme cs: ;
+    skos:notation "PHPT" ;
+    skos:prefLabel "Phosphate (PO4)"@en ;
+.
 cdt:phosphate-rock
     a skos:Concept ;
     skos:historyNote "CGI Commodity code, adapted and augmented by the Geological Survey of Queensland with information from industry specfic requirements and from the Australian Uniform Code of Nomenclature for Reporting Production of Industrial Minerals by DNREV, 1996" ;
     rdfs:isDefinedBy cs: ;
     skos:altLabel
-        "Phosphate"@en ,
         "Phosphorite"@en ;
     skos:broader cdt:industrial-rock ;
     skos:definition "Any rock that contains one or more phosphatic minerals of sufficient purity and quantity to permit its commercial use as a source of phosphatic compounds or elemental phosphorus. About 90% of the world's production is sedimentary phosphate rock, or phosphorite; the remainder is igneous rock rich in apatite."@en ;
