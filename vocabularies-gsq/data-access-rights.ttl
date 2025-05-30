@@ -9,8 +9,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 da:closed-access-rights
-    a skos:Collection ;
-    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
+    a skos:Collection ;    
     skos:definition "Selective restriction of access to data that is OFFICIAL (low or negligible confidentiality impact), SENSITIVE (moderate confidentiality impact) or PROTECTED (high confidentiality impact)."@en ;
     skos:member
         da:conditional ,
@@ -23,25 +22,27 @@ da:closed-access-rights
 
 da:open-access-rights
     a skos:Collection ;
-    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
-    skos:definition "Data that is non-sensitive, freely available, easily discovered and accessed, and published in ways and with licences that allow easy reuse."@en ;
+    skos:definition "Data that is non-sensitive, freely available, easily discovered and accessed, and published in ways and with licenses that allow easy reuse."@en ;
     skos:member da:open ;
     skos:prefLabel "Open data access rights"@en ;
 .
 
 da:conditional
     a skos:Concept ;
-    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
-    skos:definition "Conditionally protected access refers to a resource that is stored in a system but is not freely accessible and remains protected based on the satisfaction of other specified criteria. Access is limited to specific personnel or user groups. "@en ;
+    skos:historyNote "The concept ‘conditional’ (conditionally restricted access) has been introduced here, being otherwise captured by the more broadly-defined COAR ‘restricted access’ concept ‘that can occur in a number of different situations’ (COAR ‘Access Rights Ver. 1.1’ vocabulary viewed on 06.01.2024 via: <https://vocabularies.coar-repositories.org/access_rights/c_16ec/>)."@en ;
+    skos:definition "Conditionally restricted access refers to a resource that is stored in a system but is not freely accessible and remains restricted based on the satisfaction of other specified/conditional criteria. Access is limited to specific personnel or user groups."@en ;
+    skos:scopeNote "Departmental employees only. Samples with this status are not for public viewing, nor should the availability, or other metadata, of the sample be advertised via GRG. A party who already has this privileged information may apply to the department for additional access rights."@en ;   
     skos:inScheme cs: ;
-    skos:prefLabel "Conditionally protected"@en ;
+    skos:prefLabel "Conditionally restricted access"@en ;
+    skos:related <https://vocabularies.coar-repositories.org/access_rights/c_16ec/> ;
     skos:topConceptOf cs: ;
 .
 
 da:embargoed
     a skos:Concept ;
-    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
+    skos:historyNote "This concept is based fundamentally on the ‘embargoed access’ concept in the ‘Access Rights Ver. 1.1’ controlled vocabulary of the Confederation of Open Access Repositories (COAR), accessed and viewed on 06.01.2024. <https://vocabularies.coar-repositories.org/access_rights/c_f1cf/>"@en ;
     skos:definition "Embargoed access refers to a resource accessible as metadata only until released for open access on a specified date."@en ;
+    skos:scopeNote "Departmental employees only. Samples with this status are not for public viewing, nor should the sample-site location, storage location, availability, and other metadata be advertised via GRG until released for open access. Granting of additional access rights is by periodic data-management activities by GSQ."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Embargoed access"@en ;
     skos:topConceptOf cs: ;
@@ -49,8 +50,9 @@ da:embargoed
 
 da:metadata-only
     a skos:Concept ;
-    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
+    skos:historyNote "This concept is based fundamentally on the ‘metadata only access’ concept in the ‘Access Rights Ver. 1.1’ controlled vocabulary of the Confederation of Open Access Repositories (COAR), accessed and viewed on 06.01.2024. <https://vocabularies.coar-repositories.org/access_rights/c_14cb/>"@en ;
     skos:definition "Metadata only access refers to a resource in which access is limited to metadata only. Access to the resource requires granting of access rights."@en ;
+    skos:scopeNote "Departmental employees only. Samples with this status are not for public viewing. The sample-site location, storage location, availability, and other metadata may be advertised via GRG. Granting of additional access rights is an ad-hoc decision by GSQ."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Metadata only access"@en ;
     skos:topConceptOf cs: ;
@@ -58,27 +60,33 @@ da:metadata-only
 
 da:open
     a skos:Concept ;
-    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
+    skos:historyNote "This concept is based fundamentally on the ‘open access’ concept in the ‘Access Rights Ver. 1.1’ controlled vocabulary of the Confederation of Open Access Repositories (COAR), accessed and viewed on 06.01.2024. <https://vocabularies.coar-repositories.org/access_rights/c_abf2/>"@en ;
     skos:altLabel "Open file"@en ;
     skos:definition "Open access refers to a resource that is immediately and permanently online, and free for all on the Web, without financial and technical barriers."@en ;
-    skos:inScheme cs: ;
+    skos:scopeNote "The lowest classification of a data/physical asset. For samples: Open for public viewing, and the sample-site location, storage location, availability, and other metadata may be advertised via GRG."@en ; 
+     skos:inScheme cs: ;
     skos:prefLabel "Open access"@en ;
+    skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/arche_access_restrictions/en/page/public> ;
+    skos:relatedMatch <http://www.ukoln.ac.uk/repositories/digirep/index/Eprints_AccessRights_Vocabulary_Encoding_Scheme#OpenAccess> ;
     skos:topConceptOf cs: ;
 .
 
 da:protected
     a skos:Concept ;
-    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
-    skos:definition "Protected access refers to a resource that is stored in a system but is not freely accessible due to specific legal or policy decisions, such as active legal proceedings or ministerial discretion. Access is limited to specific personnel or user groups. "@en ;
+    skos:historyNote "The concept ‘protected’ (protected access) has been introduced here, being otherwise captured by the more broadly-defined COAR ‘restricted access’ concept ‘that can occur in a number of different situations’ (COAR ‘Access Rights’ vocabulary accessed and viewed on 06.01.2024: <https://vocabularies.coar-repositories.org/access_rights/c_16ec/>)."@en ;
+    skos:definition "Protected access refers to a resource that is stored in a system but is not freely accessible due to specific legal or policy decisions, such as active legal proceedings or ministerial discretion. Access is limited to specific personnel or user groups."@en ;
+    skos:scopeNote "The highest classification of a data asset: Departmental employees only. Samples with this status are not for public viewing, nor should the sample-site location, storage location, availability, and other metadata be advertised via GRG."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Protected access"@en ;
+    skos:related < https://vocabularies.coar-repositories.org/access_rights/c_16ec/> ;
     skos:topConceptOf cs: ;
 .
 
 da:restricted
     a skos:Concept ;
-    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
+    skos:historyNote "This concept is based on the ‘restricted access’ concept in the ‘Access Rights Ver. 1.1’ controlled vocabulary of the Confederation of Open Access Repositories (COAR), but its context/circumscription, in this vocabulary, is limited by the definition provided. Note that the concepts ‘conditionally restricted access’ and ‘protected access’ have been introduced in this vocabulary, these concepts being otherwise captured by the more broadly-defined COAR ‘restricted access’ concept ‘that can occur in a number of different situations’ (accessed and viewed on 06.01.2024) per: <https://vocabularies.coar-repositories.org/access_rights/c_16ec/>"@en ;
     skos:definition "Restricted access refers to a resource that is stored in a system but is not freely accessible. Access is limited to specific personnel or user groups."@en ;
+    skos:scopeNote "Departmental employees only. Samples with this status are not for public viewing, nor should the sample-site location, storage location, availability, and other metadata be advertised via GRG. Granting of additional rights is by periodic data-management activities by GSQ."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Restricted access"@en ;
     skos:topConceptOf cs: ;
@@ -97,7 +105,7 @@ cs:
     dcterms:created "2019-04-03"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
     dcterms:modified "2023-03-16"^^xsd:date ;
-    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
+    skos:historyNote "This vocabulary is based largely on the ‘Access Rights Ver. 1.1’ controlled vocabulary of the Confederation of Open Access Repositories (COAR), viewed on 06.01.2024. Definitions have been variously, albeit slightly, modified and some additional concepts have been introduced here. Cf. <https://vocabularies.coar-repositories.org/access_rights/>"@en ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "http://vocabularies.coar-repositories.org/documentation/access_rights/"^^xsd:anyURI ;
     reg:status agldwgstatus:stable ;
@@ -111,4 +119,3 @@ cs:
         da:restricted ;
     skos:prefLabel "Data Access Rights"@en ;
 .
-
