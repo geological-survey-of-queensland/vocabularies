@@ -23,6 +23,7 @@ svydt:airborne-geophysics
         svydt:survey-height-m ,
         svydt:tie-interval-m ,
         svydt:tie-line-direction-degrees ,
+        svydt:total-area-square-kilometres,
         svydt:total-line-kilometres ,
         svydt:vessel-name ;
     skos:prefLabel "Airborne Geophysics"@en ;
@@ -41,6 +42,7 @@ svydt:airborne-spectral
         svydt:survey-height-m ,
         svydt:tie-interval-m ,
         svydt:tie-line-direction-degrees ,
+        svydt:total-area-square-kilometres,
         svydt:total-line-kilometres ,
         svydt:vessel-name ;
     skos:prefLabel "Airborne Spectral"@en ;
@@ -69,6 +71,7 @@ svydt:seismic-surveys
         svydt:funding-program ,
         svydt:job-number ,
         svydt:survey-line ,
+        svydt:total-area-square-kilometres,
         svydt:total-line-kilometres ;
     skos:prefLabel "Seismic Surveys"@en ;
 .
@@ -272,6 +275,16 @@ svydt:interval-m
     skos:topConceptOf cs: ;
 .
 
+svydt:total-area-square-kilometres
+    a skos:Concept ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Total surface areal coverage of the survey in square kilometres."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Total Area Square Kilometres"@en ;
+    skos:topConceptOf cs: ;
+.
+
 svydt:total-line-kilometres
     a skos:Concept ;
     skos:historyNote "Compiled by the Geological Survey of Queensland" ;
@@ -318,7 +331,7 @@ cs:
         skos:ConceptScheme ;
     dcterms:created "2020-03-30"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2023-03-16"^^xsd:date ;
+    dcterms:modified "2025-06-17"^^xsd:date ;
     skos:historyNote "Compiled by the Geological Survey of Queensland" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     reg:status agldwgstatus:stable ;
@@ -341,6 +354,7 @@ cs:
         svydt:survey-line ,
         svydt:tie-interval-m ,
         svydt:tie-line-direction-degrees ,
+        svydt:total-area-square-kilometres,
         svydt:total-line-kilometres ,
         svydt:total-stations ,
         svydt:vessel-name ;
