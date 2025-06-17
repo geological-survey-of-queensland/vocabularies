@@ -88,6 +88,7 @@ grt:geophysics-reports
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
     skos:definition "Reports that detail the acquisition, results or processing of geophysical data."@en ;
     skos:member
+        grt:geophysical-survey-notification-report ,
         grt:geophysical-survey-report-acquisition ,
         grt:geophysical-survey-report-final ,
         grt:geophysical-survey-report-logistics ,
@@ -138,6 +139,7 @@ grt:lodgement-portal-internal
         grt:departmental-drilling ,
         grt:geological-survey-of-queensland-publication ,
         grt:geological-survey-of-queensland-record ,
+        grt:geophysical-survey-notification-report ,
         grt:geophysical-survey-report-final ,
         grt:geothermal-end-tenure ,
         grt:geothermal-report-annual ,
@@ -217,7 +219,7 @@ grt:lodgement-portal-reports
     skos:definition "Reports accepted by the DNRME Geoscience Open Data Portal Lodgement site."@en ;
     skos:member
         grt:coal-quarterly-statistics ,
-        grt:geophysical-survey-report-final ,
+        grt:geophysical-survey-notification-report ,
         grt:geothermal-end-tenure ,
         grt:geothermal-report-annual-reserves ,
         grt:geothermal-report-injection ,
@@ -233,8 +235,6 @@ grt:lodgement-portal-reports
         grt:mine-plan-lodgement ,
         grt:minerals-annual-statistics ,
         grt:mmol-44 ,
-        grt:pa-21A ,
-        grt:pa-22A ,
         grt:pa-42 ,
         grt:permit-report-annual ,
         grt:permit-report-annual-ml ,
@@ -258,11 +258,6 @@ grt:lodgement-portal-reports
         grt:pggd-03 ,
         grt:pggd-04 ,
         grt:pipeline-report-surrender ,
-        grt:pm-1-2013 ,
-        grt:scientific-or-technical-survey-report ,
-        grt:seismic-survey-report-final ,
-        grt:seismic-survey-report-other ,
-        grt:seismic-survey-report-reprocessing ,
         grt:survey-plan ,
         grt:water-report-other ,
         grt:water-report-performance-review ,
@@ -279,9 +274,17 @@ grt:non-current-reports
     skos:definition "Reports that have been superceded or discontinued."@en ;
     skos:member
         grt:converted-from-qerd ,
+        grt:geophysical-survey-report-final ,
+        grt:pa-21A ,
+        grt:pa-22A ,
         grt:permit-report-six-month ,
         grt:petroleum-report-field-information ,
         grt:petroleum-report-transmission ,
+        grt:pm-1-2013 ,
+        grt:scientific-or-technical-survey-report ,
+        grt:seismic-survey-report-final ,
+        grt:seismic-survey-report-other ,
+        grt:seismic-survey-report-reprocessing ,
         grt:well-proposal ;
     skos:prefLabel "Non-Current Reports"@en ;
 .
@@ -317,6 +320,7 @@ grt:permit-reports
         grt:collaborative-drilling-initiative-proposals ,
         grt:collaborative-exploration-initiative-final ,
         grt:converted-from-qerd ,
+        grt:geophysical-survey-notification-report ,
         grt:geophysical-survey-report-final ,
         grt:geothermal-end-tenure ,
         grt:geothermal-report-annual-reserves ,
@@ -375,6 +379,7 @@ grt:petroleum-reports
     skos:definition "Reports governed by the Petroleum and Gas Act of Queensland."@en ;
     skos:member
         grt:hydraulic-fracturing-activity-report ,
+        grt:geophysical-survey-notification-report ,
         grt:permit-report-surrender ,
         grt:petroleum-end-authority ,
         grt:petroleum-end-tenure ,
@@ -1027,6 +1032,17 @@ grt:any-other-report
     skos:topConceptOf cs: ;
 .
 
+grt:geophysical-survey-notification-report
+    a skos:Concept ;
+    skos:historyNote "Developed by the Geological Survey of Queensland." ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A notification or report detailing anticipated or actual geophysical survey activities."@en ;
+    skos:inScheme cs: ;
+    skos:notation "GEOSNR" ;
+    skos:prefLabel "Geophysical Survey Notification or Report"@en ;
+    skos:topConceptOf cs: ;
+.
+
 grt:geophysical-survey-report-final
     a skos:Concept ;
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
@@ -1542,7 +1558,7 @@ cs:
         skos:ConceptScheme ;
     dcterms:created "2019-10-09"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2023-03-16"^^xsd:date ;
+    dcterms:modified "2025-06-18"^^xsd:date ;
     skos:historyNote "Developed by the Geological Survey of Queensland." ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     reg:status agldwgstatus:stable ;
@@ -1562,6 +1578,7 @@ cs:
         grt:extractives-annual-statistics ,
         grt:geological-survey-of-queensland-publication ,
         grt:geological-survey-of-queensland-record ,
+        grt:geophysical-survey-notification-report ,
         grt:geophysical-survey-report-acquisition ,
         grt:geophysical-survey-report-final ,
         grt:geophysical-survey-report-logistics ,
