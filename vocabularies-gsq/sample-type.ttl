@@ -50,6 +50,17 @@ sampty:qcore
     skos:inScheme cs: ;
     skos:notation "QCORE" ;
     skos:prefLabel "Quarter Core"@en ;
+
+.
+sampty:slab
+    a skos:Concept ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader sampty:core ;
+    skos:definition "A thin, approximately 5mm slice, cut from the flat face of halved drill core."@en ;
+    skos:inScheme cs: ;
+    skos:notation "SLAB" ;
+    skos:prefLabel "Slab"@en ;
 .
 
 sampty:blasted-sample
@@ -685,7 +696,7 @@ cs:
         skos:ConceptScheme ;
     dcterms:created "2020-02-07"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2023-03-16"^^xsd:date ;
+    dcterms:modified "2025-10-31"^^xsd:date ;
     skos:historyNote "Compiled by the Geological Survey of Queensland" ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     reg:status agldwgstatus:stable ;
@@ -734,6 +745,7 @@ cs:
         sampty:selected-sample ,
         sampty:side-wall-core ,
         sampty:sieved-stream-sediment-sample ,
+        sampty:slab ,
         sampty:sledge-hammer-sample ,
         sampty:soil-sample ,
         sampty:stream-sediment-sample ,
