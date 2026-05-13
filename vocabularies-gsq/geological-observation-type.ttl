@@ -150,6 +150,7 @@ obstp:survey-obs
         obstp:directional ,
         obstp:electrical ,
         obstp:electromagnetic ,
+        obstp:elevation ,
         obstp:geochemical-signature ,
         obstp:geothermics ,
         obstp:gravity ,
@@ -921,6 +922,23 @@ obstp:photographic
     skos:topConceptOf cs: ;
 .
 
+obstp:elevation
+    a skos:Concept ;
+    skos:historyNote "Compiled by the Geological Survey of Queensland" ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Altitude Observation"@en ,
+        "Height Measurement"@en ,
+        "Vertical Position"@en ,
+        "Elevation Survey"@en ,
+        "Topographic Height"@en ;
+    skos:definition "An observation of the vertical spatial properties of a physical object or location relative to a known datum, such as height or elevation above mean sea level or another reference surface."@en ;
+    skos:inScheme cs: ;
+    skos:notation "ELEV" ;
+    skos:prefLabel "Elevation"@en ;
+    skos:topConceptOf cs: ;
+.
+
 cs:
     a
         owl:Ontology ,
@@ -945,6 +963,7 @@ cs:
         obstp:drilling-int ,
         obstp:electrical ,
         obstp:electromagnetic ,
+        obstp:elevation ,
         obstp:fabric ,
         obstp:fossils ,
         obstp:geochemical-signature ,
