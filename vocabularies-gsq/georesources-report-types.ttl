@@ -77,6 +77,7 @@ grt:external-reports
     skos:member
         grt:any-other-report ,
         grt:article ,
+        grt:core-store-sampling-data-report , 
         grt:presentation ,
         grt:technical-report ,
         grt:thesis ;
@@ -136,6 +137,7 @@ grt:lodgement-portal-internal
         grt:collaborative-exploration-initiative-final ,
         grt:collaborative-exploration-initiative-proposals ,
         grt:commissioned-industry-study-or-report ,
+        grt:core-store-sampling-data-report ,
         grt:departmental-drilling ,
         grt:geological-survey-of-queensland-publication ,
         grt:geological-survey-of-queensland-record ,
@@ -219,6 +221,7 @@ grt:lodgement-portal-reports
     skos:definition "Reports accepted by the DNRME Geoscience Open Data Portal Lodgement site."@en ;
     skos:member
         grt:coal-quarterly-statistics ,
+        grt:core-store-sampling-data-report , 
         grt:geothermal-end-tenure ,
         grt:geothermal-report-annual-reserves ,
         grt:geothermal-report-injection ,
@@ -291,6 +294,7 @@ grt:non-permit-reports
         grt:any-other-report ,
         grt:article ,
         grt:commissioned-industry-study-or-report ,
+        grt:core-store-sampling-data-report , 
         grt:departmental-drilling ,
         grt:geological-survey-of-queensland-publication ,
         grt:geological-survey-of-queensland-record ,
@@ -426,6 +430,20 @@ grt:water-reports
         grt:petroleum-report-non-associated-water ,
         grt:water-report-performance-review ;
     skos:prefLabel "Water Reports"@en ;
+.
+
+grt:core-store-sampling-data-report 
+    a skos:Concept ; 
+    skos:historyNote "Developed by the Geological Survey of Queensland." ;
+    skos:definition "A report documenting the outcome of sampling of geological material held by the Geological Survey of Queensland core store, including the borehole(s) sampled, samples taken, methods of examination or analysis, and the data or results generated from those samples. "@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:scopeNote "Used for the lodgement of information and data generated from material obtained under a core store sampling request. A report may relate to material from one or more boreholes associated with the sampling request and should include sample descriptions, analytical or examination methods, quality assurance and quality control information, discussion or interpretation, and associated results data."@en ;
+    skos:notation "CSSAMPDR" ;
+    skos:prefLabel "Core Store Sampling Data Report"@en ;
+    skos:altLabel
+        "Core Store Sampling Results"@en ,
+        "Core Store Analysis Report"@en ; 
+    skos:topConceptOf cs: ;
 .
 
 grt:collaborative-exploration-initiative-proposals
@@ -1567,6 +1585,7 @@ cs:
         grt:collaborative-exploration-initiative-proposals ,
         grt:commissioned-industry-study-or-report ,
         grt:converted-from-qerd ,
+        grt:core-store-sampling-data-report , 
         grt:departmental-drilling ,
         grt:extractives-annual-statistics ,
         grt:geological-survey-of-queensland-publication ,
